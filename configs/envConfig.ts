@@ -20,7 +20,7 @@ const envConfig: EnvConfig = {
   blockchains: {
     ethereum: {
       name: 'ethereum',
-      nodeRpcs: String(process.env.RANTOM_ETHEREUM_NODES).split(','),
+      nodeRpc: String(process.env.RANTOM_ETHEREUM_NODES),
     },
   },
   ipfs: {

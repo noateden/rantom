@@ -25,7 +25,7 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
       return this._erc20MetadataCache[key];
     }
 
-    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpcs[0]);
+    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
     const contract = new web3.eth.Contract(Erc20Abi as any, tokenAddress);
     try {
       const [symbol, decimals] = await Promise.all([

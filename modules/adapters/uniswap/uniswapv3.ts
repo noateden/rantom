@@ -34,7 +34,7 @@ export class Uniswapv3Adapter extends Adapter {
       signature === Signatures.Burn ||
       signature === Signatures.Collect
     ) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpcs[0]);
+      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const poolContract = new web3.eth.Contract(UniswapV3PoolAbi as any, address);
 
       let factoryAddress;

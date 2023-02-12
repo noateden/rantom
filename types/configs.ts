@@ -2,7 +2,7 @@ export type ChainName = 'ethereum';
 
 export interface Blockchain {
   name: ChainName;
-  nodeRpcs: Array<string>;
+  nodeRpc: string;
 }
 
 export interface Token {

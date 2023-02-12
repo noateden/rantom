@@ -50,7 +50,7 @@ export class ParserProvider implements IParserProvider {
         transfers: [],
       };
 
-      const web3 = new Web3(blockchain.nodeRpcs[0]);
+      const web3 = new Web3(blockchain.nodeRpc);
       const receipt = await web3.eth.getTransactionReceipt(options.hash);
 
       // for every log, we try to found the signature

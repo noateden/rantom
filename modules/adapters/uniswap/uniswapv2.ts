@@ -28,7 +28,7 @@ export class Uniswapv2Adapter extends Adapter {
     const { chain, address, signature, event } = options;
 
     if (signature === Signatures.Swap || signature === Signatures.Mint || signature === Signatures.Burn) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpcs[0]);
+      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const poolContract = new web3.eth.Contract(UniswapV2PairAbi as any, address);
 
       let factoryAddress;
