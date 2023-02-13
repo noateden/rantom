@@ -81,3 +81,21 @@ export const Aavev3Configs: ProtocolConfig = {
     ],
   },
 };
+
+export const ShibaswapConfigs: ProtocolConfig = {
+  protocol: 'shibaswap',
+  contracts: {
+    ethereum: [
+      '0x115934131916c8b277dd010ee02de363c09d037c', // uni v2 Factory
+    ],
+  },
+};
+
+export const FraxswapConfigs: ProtocolConfig = {
+  protocol: 'fraxswap',
+  contracts: {
+    ethereum: [
+      '0x43ec799eadd63848443e2347c49f5f52e8fe0f6f', // uni v2 Factory
+    ],
+  },
+};

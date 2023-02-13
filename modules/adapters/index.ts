@@ -3,8 +3,10 @@ import {
   Aavev2Configs,
   Aavev3Configs,
   BalancerConfigs,
+  FraxswapConfigs,
   LidoConfigs,
   PancakeswapConfigs,
+  ShibaswapConfigs,
   SushiConfigs,
   Uniswapv2Configs,
   Uniswapv3Configs,
@@ -24,6 +26,8 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new Uniswapv2Adapter(Uniswapv2Configs, providers),
     new Uniswapv2Adapter(SushiConfigs, providers),
     new Uniswapv2Adapter(PancakeswapConfigs, providers),
+    new Uniswapv2Adapter(ShibaswapConfigs, providers),
+    new Uniswapv2Adapter(FraxswapConfigs, providers),
 
     new LidoAdapter(LidoConfigs, providers),
 
