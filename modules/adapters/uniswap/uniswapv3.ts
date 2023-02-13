@@ -115,14 +115,14 @@ export class Uniswapv3Adapter extends Adapter {
               return {
                 protocol: this.config.protocol,
                 action: 'addLiquidity',
-                addresses: [owner, sender],
+                addresses: [sender, owner],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
                 readableString: `${owner} adds ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
               };
             }
             case Signatures.Burn: {
-              const owner = normalizeAddress(options.sender);
+              const owner = normalizeAddress(event.owner);
 
               const amount0 = new BigNumber(event.amount0.toString())
                 .dividedBy(new BigNumber(10).pow(token0.decimals))
@@ -134,7 +134,7 @@ export class Uniswapv3Adapter extends Adapter {
               return {
                 protocol: this.config.protocol,
                 action: 'removeLiquidity',
-                addresses: [owner],
+                addresses: [options.sender, owner],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
                 readableString: `${owner} removes ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
