@@ -115,10 +115,10 @@ export class Uniswapv3Adapter extends Adapter {
               return {
                 protocol: this.config.protocol,
                 action: 'addLiquidity',
-                addresses: [sender, owner],
+                addresses: [owner, sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
-                readableString: `${sender} adds ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
+                readableString: `${owner} adds ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
               };
             }
             case Signatures.Burn: {
