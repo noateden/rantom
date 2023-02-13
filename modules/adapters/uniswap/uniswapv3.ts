@@ -102,7 +102,7 @@ export class Uniswapv3Adapter extends Adapter {
               };
             }
             case Signatures.Mint: {
-              const sender = normalizeAddress(event.sender);
+              const sender = normalizeAddress(options.sender);
               const owner = normalizeAddress(event.owner);
 
               const amount0 = new BigNumber(event.amount0.toString())
@@ -122,7 +122,7 @@ export class Uniswapv3Adapter extends Adapter {
               };
             }
             case Signatures.Burn: {
-              const owner = normalizeAddress(event.owner);
+              const owner = normalizeAddress(options.sender);
 
               const amount0 = new BigNumber(event.amount0.toString())
                 .dividedBy(new BigNumber(10).pow(token0.decimals))
@@ -154,7 +154,7 @@ export class Uniswapv3Adapter extends Adapter {
               return {
                 protocol: this.config.protocol,
                 action: 'collect',
-                addresses: [owner, recipient],
+                addresses: [recipient, owner],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
                 readableString: `${owner} collects ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
