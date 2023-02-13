@@ -12,6 +12,13 @@ export const Tokens: { [key: string]: { [key: string]: Token } } = {
 };
 
 export const HardCodeTokens: { [key: string]: Token } = {
+  'ethereum:0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee': {
+    chain: 'ethereum',
+    address: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+    symbol: 'ETH',
+    decimals: 18,
+  },
+
   // Maker: I don't know why they make things to be complicated :(
   'ethereum:0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2': {
     chain: 'ethereum',

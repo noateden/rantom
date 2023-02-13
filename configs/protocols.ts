@@ -54,3 +54,30 @@ export const BalancerConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const Aavev1Configs: ProtocolConfig = {
+  protocol: 'aavev1',
+  contracts: {
+    ethereum: [
+      '0x24a42fd28c976a61df5d00d0599c34c4f90748c8', // lending pool v1
+    ],
+  },
+};
+
+export const Aavev2Configs: ProtocolConfig = {
+  protocol: 'aavev2',
+  contracts: {
+    ethereum: [
+      '0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9', // lending pool v2
+    ],
+  },
+};
+
+export const Aavev3Configs: ProtocolConfig = {
+  protocol: 'aavev3',
+  contracts: {
+    ethereum: [
+      '0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2', // lending pool v3
+    ],
+  },
+};

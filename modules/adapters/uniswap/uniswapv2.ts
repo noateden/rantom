@@ -42,14 +42,14 @@ export class Uniswapv2Adapter extends Adapter {
           poolContract.methods.token1().call(),
         ]);
       } catch (e: any) {
-        logger.onError({
+        logger.onDebug({
           service: this.name,
-          message: 'failed to get pool info',
+          message: 'ignore to get pool info',
           props: {
             protocol: this.config.protocol,
             pool: normalizeAddress(address),
+            signature: signature,
           },
-          error: e,
         });
       }
 
