@@ -367,4 +367,72 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
     ],
     signature: '0x2170c741c41531aec20e7c107c24eecfdd15e69c9bb0a8dd37b1840b9e0b207b',
   },
+
+  // FlashLoan(address,address,uint256,uint256)
+  '0x0d7d75e01ab95780d3cd1c8ec0dd6c2ce19e3a20427eec8bf53283b6fb8e95f0': {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'contract IFlashLoanRecipient',
+        name: 'recipient',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'contract IERC20',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'feeAmount',
+        type: 'uint256',
+      },
+    ],
+    signature: '0x0d7d75e01ab95780d3cd1c8ec0dd6c2ce19e3a20427eec8bf53283b6fb8e95f0',
+  },
+
+  // PoolBalanceChanged(bytes32,address,address[],int256[],uint256[])
+  '0xe5ce249087ce04f05a957192435400fd97868dba0e6a4b4c049abf8af80dae78': {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'poolId',
+        type: 'bytes32',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'liquidityProvider',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'contract IERC20[]',
+        name: 'tokens',
+        type: 'address[]',
+      },
+      {
+        indexed: false,
+        internalType: 'int256[]',
+        name: 'deltas',
+        type: 'int256[]',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256[]',
+        name: 'protocolFeeAmounts',
+        type: 'uint256[]',
+      },
+    ],
+    signature: '0xe5ce249087ce04f05a957192435400fd97868dba0e6a4b4c049abf8af80dae78',
+  },
 };
