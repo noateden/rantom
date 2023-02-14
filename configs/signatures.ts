@@ -52,4 +52,14 @@ export const Signatures: { [key: string]: string } = {
     '0x56864757fd5b1fc9f38f5f3a981cd8ae512ce41b902cf73fc506ee369c6bc237',
   'LiquidationCall(address,address,address,uint256,uint256,address,bool)':
     '0xe413a321e8681d831f4dbccbca790d2952b56f977908e45be37335533e005286',
+  'Supply(address,address,uint)': '0xac6c0802d8d928235a39ae3ea13005d29082f0b74791e03f417418bb7f578f5f',
+  'Withdraw(address,address,uint)': '0x4d120bbe462babe2ed9cf21623974e4044baad94ad9934364afeb94af19d54bb',
+  'SupplyCollateral(address,address,address,uint)':
+    '0x10357f491404d0565e9e4b4457694a4f0389284da3c4b1284aedd9033b92c270',
+  'WithdrawCollateral(address,address,address,uint)':
+    '0x22d4332f9e3a165c94107ee9c6805f4119587e0ab1164b17fcfd448b7aa4680b',
+  'DistributedSupplierComp(address,address,uint256,uint256)':
+    '0x2caecd17d02f56fa897705dcc740da2d237c373f70686f4e0d9bd3bf0400ea7a',
+  'DistributedBorrowerComp(address,address,uint256,uint256)':
+    '0x1fc3ecc087d8d2d15e23d0032af5a47059c3892d003d8e139fdcb6bb327c99a6',
 };

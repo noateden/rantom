@@ -10,5 +10,11 @@
     "symbol": "ETH",
     "decimals": 18,
     "address": "0x0000000000000000000000000000000000000000"
+  },
+  "COMP": {
+    "chain": "ethereum",
+    "symbol": "COMP",
+    "decimals": 18,
+    "address": "0xc00e94cb662c3520282e6f5717214004a7f26888"
   }
 }
