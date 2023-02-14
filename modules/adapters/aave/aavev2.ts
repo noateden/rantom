@@ -1,5 +1,7 @@
 import BigNumber from 'bignumber.js';
+import Web3 from 'web3';
 
+import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
@@ -16,16 +18,26 @@ const Signatures = {
 };
 
 export class Aavev2Adapter extends Adapter {
-  public readonly name: string = 'adapter.aavev1';
+  public readonly name: string = 'adapter.aavev2';
 
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers);
+    super(config, providers, {
+      [Signatures.Deposit]: EventSignatureMapping[Signatures.Deposit],
+      [Signatures.Withdraw]: EventSignatureMapping[Signatures.Withdraw],
+      [Signatures.Borrow]: EventSignatureMapping[Signatures.Borrow],
+      [Signatures.Repay]: EventSignatureMapping[Signatures.Repay],
+      [Signatures.FlashLoan]: EventSignatureMapping[Signatures.FlashLoan],
+    });
   }
 
   public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, signature, event } = options;
+    const { chain, address, topics, data } = options;
 
-    if (this.config.contracts[chain].indexOf(address) !== -1) {
+    const signature = topics[0];
+    if (this.config.contracts[chain].indexOf(address) !== -1 && EventSignatureMapping[signature]) {
+      const web3 = new Web3();
+      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+
       switch (signature) {
         case Signatures.Deposit:
         case Signatures.Withdraw:

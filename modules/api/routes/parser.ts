@@ -10,6 +10,7 @@ export function getRouter(providers: GlobalProviders): Router {
 
   router.get('/parse/:hash', async (request, response) => {
     const { hash } = request.params;
+    const { force } = request.query;
 
     if (!hash) {
       writeResponseError(response, {
@@ -19,7 +20,7 @@ export function getRouter(providers: GlobalProviders): Router {
     } else {
       try {
         const parser = new ParserProvider(providers);
-        const transaction = await parser.parseTransaction({ hash });
+        const transaction = await parser.parseTransaction({ hash, force: Boolean(force) });
 
         response.status(200).json(transaction).end();
       } catch (e: any) {

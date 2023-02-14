@@ -3,6 +3,7 @@ import Web3 from 'web3';
 
 import UniswapV2PairAbi from '../../../configs/abi/uniswap/UniswapV2Pair.json';
 import EnvConfig from '../../../configs/envConfig';
+import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
 import logger from '../../../lib/logger';
 import { ProtocolConfig } from '../../../types/configs';
@@ -21,12 +22,17 @@ export class Uniswapv2Adapter extends Adapter {
   public readonly name: string = 'adapter.uniswapv2';
 
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers);
+    super(config, providers, {
+      [Signatures.Swap]: EventSignatureMapping[Signatures.Swap],
+      [Signatures.Mint]: EventSignatureMapping[Signatures.Mint],
+      [Signatures.Burn]: EventSignatureMapping[Signatures.Burn],
+    });
   }
 
   public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, signature, event } = options;
+    const { chain, address, topics, data } = options;
 
+    const signature = topics[0];
     if (signature === Signatures.Swap || signature === Signatures.Mint || signature === Signatures.Burn) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const poolContract = new web3.eth.Contract(UniswapV2PairAbi as any, address);
@@ -51,8 +57,10 @@ export class Uniswapv2Adapter extends Adapter {
             signature: signature,
           },
         });
+        return null;
       }
 
+      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
       if (this.config.contracts[chain].indexOf(normalizeAddress(factoryAddress)) !== -1) {
         const token0 = await this.getWeb3Helper().getErc20Metadata(chain, token0Address);
         const token1 = await this.getWeb3Helper().getErc20Metadata(chain, token1Address);

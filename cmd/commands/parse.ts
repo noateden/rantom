@@ -13,7 +13,7 @@ export class ParseCommand extends BasicCommand {
   public async execute(argv: any) {
     const parserProvider = new ParserProvider(null);
 
-    const transactions: Array<Transaction> = await parserProvider.parseTransaction({ hash: argv.hash });
+    const transactions: Array<Transaction> = await parserProvider.parseTransaction({ hash: argv.hash, force: true });
 
     console.info(JSON.stringify(transactions));
 

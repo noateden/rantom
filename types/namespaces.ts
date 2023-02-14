@@ -2,7 +2,7 @@ import { Collection } from 'mongodb';
 
 import { EventMapping, ProtocolConfig, Token } from './configs';
 import { MongoCollections, Transaction, TransactionAction, TransactionTransfer } from './domains';
-import { AdapterParseLogOptions, LogParserOptions, ParseTransactionOptions, TransferParseLogOptions } from './options';
+import { AdapterParseLogOptions, ParseTransactionOptions, TransferParseLogOptions } from './options';
 
 export interface IProvider {
   name: string;
@@ -20,6 +20,7 @@ export interface ISentryProvider extends IProvider {
 
 export interface IWeb3HelperProvider extends IProvider {
   getErc20Metadata: (chain: string, tokenAddress: string) => Promise<Token | null>;
+  getErc721Metadata: (chain: string, tokenAddress: string) => Promise<Token | null>;
 }
 
 export interface GlobalProviders {
@@ -31,7 +32,9 @@ export interface GlobalProviders {
 export interface IAdapter extends IProvider {
   config: ProtocolConfig;
   providers: GlobalProviders | null;
+  eventMappings: { [key: string]: EventMapping };
 
+  supportedSignature(signature: string): boolean;
   tryParsingActions: (options: AdapterParseLogOptions) => Promise<TransactionAction | null>;
 }
 
@@ -41,17 +44,10 @@ export interface ITransferParser extends IProvider {
   tryParsingTransfers: (options: TransferParseLogOptions) => Promise<TransactionTransfer | null>;
 }
 
-export interface ILogParser extends IProvider {
-  mapping: { [key: string]: EventMapping };
-
-  tryParsingLogs(options: LogParserOptions): Promise<any>;
-}
-
 export interface IParserProvider extends IProvider {
   providers: GlobalProviders | null;
   adapters: Array<IAdapter>;
   transferParser: ITransferParser;
-  logParser: ILogParser;
 
   parseTransaction: (options: ParseTransactionOptions) => Promise<Array<Transaction>>;
 }

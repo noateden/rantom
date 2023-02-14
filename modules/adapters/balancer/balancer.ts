@@ -1,5 +1,7 @@
 import BigNumber from 'bignumber.js';
+import Web3 from 'web3';
 
+import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig, Token } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
@@ -17,13 +19,21 @@ export class BalancerAdapter extends Adapter {
   public readonly name: string = 'adapter.uniswapv2';
 
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers);
+    super(config, providers, {
+      [Signatures.Swap]: EventSignatureMapping[Signatures.Swap],
+      [Signatures.FlashLoan]: EventSignatureMapping[Signatures.FlashLoan],
+      [Signatures.PoolChanges]: EventSignatureMapping[Signatures.PoolChanges],
+    });
   }
 
   public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, signature, event } = options;
+    const { chain, address, topics, data } = options;
 
-    if (this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
+    const signature = topics[0];
+    if (this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1 && EventSignatureMapping[signature]) {
+      const web3 = new Web3();
+      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+
       switch (signature) {
         case Signatures.Swap: {
           const tokenIn = await this.getWeb3Helper().getErc20Metadata(chain, event.tokenIn);

@@ -10,6 +10,7 @@ export interface Token {
   symbol: string;
   decimals: number;
   address: string;
+  erc721?: boolean;
 }
 
 export interface EnvConfig {
@@ -32,14 +33,16 @@ export interface EnvConfig {
   };
 }
 
+export interface EventMapping {
+  abi: Array<any>;
+}
+
 export interface ProtocolConfig {
   protocol: string; // protocol id, ex: uniswap, lido, ...
   contracts: {
     [key: string]: Array<string>;
   };
-}
-
-export interface EventMapping {
-  abi: Array<any>;
-  signature: string;
+  customEventMapping?: {
+    [key: string]: EventMapping;
+  };
 }

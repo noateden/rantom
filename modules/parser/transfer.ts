@@ -1,5 +1,7 @@
 import BigNumber from 'bignumber.js';
+import Web3 from 'web3';
 
+import { Signatures } from '../../configs/signatures';
 import { normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { Web3HelperProvider } from '../../services/web3';
@@ -26,10 +28,38 @@ export class TransferParser implements ITransferParser {
   }
 
   public async tryParsingTransfers(options: TransferParseLogOptions): Promise<TransactionTransfer | null> {
-    const { chain, address, signature, event } = options;
+    const { chain, address, topics, data } = options;
 
-    if (signature === '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef') {
+    const signature = topics[0];
+    if (signature === Signatures['Transfer(address,address,uint256)']) {
+      const web3 = new Web3();
+
       try {
+        // try with ERC20
+        const event = web3.eth.abi.decodeLog(
+          [
+            {
+              indexed: true,
+              internalType: 'address',
+              name: 'from',
+              type: 'address',
+            },
+            {
+              indexed: true,
+              internalType: 'address',
+              name: 'to',
+              type: 'address',
+            },
+            {
+              indexed: false,
+              internalType: 'uint256',
+              name: 'value',
+              type: 'uint256',
+            },
+          ],
+          data,
+          topics.slice(1)
+        );
         const token: Token | null = await this.getWeb3Helper().getErc20Metadata(options.chain, options.address);
         if (token) {
           return {
@@ -40,15 +70,53 @@ export class TransferParser implements ITransferParser {
           };
         }
       } catch (e: any) {
-        logger.onError({
-          service: this.name,
-          message: 'match transfer topic but can not parse data',
-          props: {
-            chain: chain,
-            address: address,
-            signature: signature,
-          },
-        });
+        try {
+          // try with ERC721
+          const event = web3.eth.abi.decodeLog(
+            [
+              {
+                indexed: true,
+                internalType: 'address',
+                name: 'from',
+                type: 'address',
+              },
+              {
+                indexed: true,
+                internalType: 'address',
+                name: 'to',
+                type: 'address',
+              },
+              {
+                indexed: true,
+                internalType: 'uint256',
+                name: 'tokenId',
+                type: 'uint256',
+              },
+            ],
+            data,
+            topics.slice(1)
+          );
+          const token: Token | null = await this.getWeb3Helper().getErc721Metadata(options.chain, options.address);
+          if (token) {
+            return {
+              token,
+              from: normalizeAddress(event.from),
+              to: normalizeAddress(event.to),
+              amount: '1',
+              tokenId: new BigNumber(event.tokenId).toNumber(),
+            };
+          }
+        } catch (e: any) {
+          logger.onError({
+            service: this.name,
+            message: 'match transfer topic but can not parse data',
+            props: {
+              chain: chain,
+              address: address,
+              signature: signature,
+            },
+          });
+        }
       }
     }
 

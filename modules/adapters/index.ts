@@ -3,6 +3,7 @@ import {
   Aavev2Configs,
   Aavev3Configs,
   BalancerConfigs,
+  CompoundConfigs,
   FraxswapConfigs,
   LidoConfigs,
   PancakeswapConfigs,
@@ -16,6 +17,7 @@ import { Aavev1Adapter } from './aave/aavev1';
 import { Aavev2Adapter } from './aave/aavev2';
 import { Aavev3Adapter } from './aave/aavev3';
 import { BalancerAdapter } from './balancer/balancer';
+import { CompoundAdapter } from './compound/compound';
 import { LidoAdapter } from './lido/lido';
 import { Uniswapv2Adapter } from './uniswap/uniswapv2';
 import { Uniswapv3Adapter } from './uniswap/uniswapv3';
@@ -36,5 +38,7 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new Aavev1Adapter(Aavev1Configs, providers),
     new Aavev2Adapter(Aavev2Configs, providers),
     new Aavev3Adapter(Aavev3Configs, providers),
+
+    new CompoundAdapter(CompoundConfigs, providers),
   ];
 }

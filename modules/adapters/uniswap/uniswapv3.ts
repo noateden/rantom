@@ -3,6 +3,7 @@ import Web3 from 'web3';
 
 import UniswapV3PoolAbi from '../../../configs/abi/uniswap/UniswapV3Pool.json';
 import EnvConfig from '../../../configs/envConfig';
+import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
 import logger from '../../../lib/logger';
 import { ProtocolConfig } from '../../../types/configs';
@@ -22,12 +23,18 @@ export class Uniswapv3Adapter extends Adapter {
   public readonly name: string = 'adapter.uniswapv3';
 
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers);
+    super(config, providers, {
+      [Signatures.Swap]: EventSignatureMapping[Signatures.Swap],
+      [Signatures.Mint]: EventSignatureMapping[Signatures.Mint],
+      [Signatures.Burn]: EventSignatureMapping[Signatures.Burn],
+      [Signatures.Collect]: EventSignatureMapping[Signatures.Collect],
+    });
   }
 
   public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, signature, event } = options;
+    const { chain, address, topics, data } = options;
 
+    const signature = topics[0];
     if (
       signature === Signatures.Swap ||
       signature === Signatures.Mint ||
@@ -48,17 +55,19 @@ export class Uniswapv3Adapter extends Adapter {
           poolContract.methods.token1().call(),
         ]);
       } catch (e: any) {
-        logger.onError({
+        logger.onDebug({
           service: this.name,
-          message: 'failed to get pool info',
+          message: 'ignore to get pool info',
           props: {
             protocol: this.config.protocol,
             pool: normalizeAddress(address),
+            signature: signature,
           },
-          error: e,
         });
+        return null;
       }
 
+      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
       if (this.config.contracts[chain].indexOf(normalizeAddress(factoryAddress)) !== -1) {
         const token0 = await this.getWeb3Helper().getErc20Metadata(chain, token0Address);
         const token1 = await this.getWeb3Helper().getErc20Metadata(chain, token1Address);
