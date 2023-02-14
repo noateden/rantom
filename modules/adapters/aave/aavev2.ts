@@ -15,6 +15,7 @@ const Signatures = {
   Borrow: '0xc6a898309e823ee50bac64e45ca8adba6690e99e7841c45d754e2a38e9019d9b',
   Repay: '0x4cdde6e09bb755c9a5589ebaec640bbfedff1362d4b255ebf8339782b9942faa',
   FlashLoan: '0x631042c832b07452973831137f2d73e395028b44b250dedc5abb0ee766e168ac',
+  Liquidate: '0xe413a321e8681d831f4dbccbca790d2952b56f977908e45be37335533e005286',
 };
 
 export class Aavev2Adapter extends Adapter {
@@ -27,6 +28,7 @@ export class Aavev2Adapter extends Adapter {
       [Signatures.Borrow]: EventSignatureMapping[Signatures.Borrow],
       [Signatures.Repay]: EventSignatureMapping[Signatures.Repay],
       [Signatures.FlashLoan]: EventSignatureMapping[Signatures.FlashLoan],
+      [Signatures.Liquidate]: EventSignatureMapping[Signatures.Liquidate],
     });
   }
 
@@ -97,6 +99,27 @@ export class Aavev2Adapter extends Adapter {
               tokens: [reserve],
               tokenAmounts: [amount],
               readableString: `${sender} flashloan ${amount} ${reserve.symbol} on ${this.config.protocol} chain ${chain}`,
+            };
+          }
+          break;
+        }
+        case Signatures.Liquidate: {
+          const collateral = await this.getWeb3Helper().getErc20Metadata(chain, event.collateralAsset);
+          if (collateral) {
+            const user = normalizeAddress(event.user);
+            const liquidator = normalizeAddress(event.liquidator);
+
+            const amount = new BigNumber(event.liquidatedCollateralAmount.toString())
+              .dividedBy(new BigNumber(10).pow(collateral.decimals))
+              .toString(10);
+
+            return {
+              protocol: this.config.protocol,
+              action: 'liquidate',
+              addresses: [liquidator, user],
+              tokens: [collateral],
+              tokenAmounts: [amount],
+              readableString: `${liquidator} flashloan ${amount} ${collateral.symbol} on ${this.config.protocol} chain ${chain}`,
             };
           }
         }

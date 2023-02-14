@@ -48,4 +48,8 @@ export const Signatures: { [key: string]: string } = {
     '0x1a2a22cb034d26d1854bdc6666a5b91fe25efbbb5dcad3b0355478d6f5c362a1',
   'LiquidateBorrow(address,address,uint256,address,uint256)':
     '0x298637f684da70674f26509b10f07ec2fbc77a335ab1e7d6215a4b2484d8bb52',
+  'LiquidationCall(address,address,address,uint256,uint256,uint256,address,bool,uint256)':
+    '0x56864757fd5b1fc9f38f5f3a981cd8ae512ce41b902cf73fc506ee369c6bc237',
+  'LiquidationCall(address,address,address,uint256,uint256,address,bool)':
+    '0xe413a321e8681d831f4dbccbca790d2952b56f977908e45be37335533e005286',
 };
