@@ -1,7 +1,7 @@
 {
   "name": "@rantomapp/rantom",
   "version": "1.0.0",
-  "description": "defi blockchain scanning service",
+  "description": "Blockchain transaction viewer",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./build && tsc",

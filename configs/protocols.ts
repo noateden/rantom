@@ -1,3 +1,4 @@
+import { normalizeAddress } from '../lib/helper';
 import { ProtocolConfig } from '../types/configs';
 import { Signatures } from './signatures';
 
@@ -160,5 +161,57 @@ export const Compoundv3Configs: ProtocolConfig = {
       '0xc3d688b66703497daa19211eedff47f25384cdc3', // v3 USDC
       '0xa17581a9e3356d9a858b789d68b4d866e593ae94', // v3 ETH
     ],
+  },
+};
+
+export const IronbankConfigs: ProtocolConfig = {
+  protocol: 'ironbank',
+  contracts: {
+    ethereum: [
+      normalizeAddress('0x41c84c0e2EE0b740Cf0d31F63f3B6F627DC6b393'), // iETH
+      normalizeAddress('0x8e595470ed749b85c6f7669de83eae304c2ec68f'), // iDAI
+      normalizeAddress('0xe7bff2da8a2f619c2586fb83938fa56ce803aa16'), // iLINK
+      normalizeAddress('0xfa3472f7319477c9bfecdd66e4b948569e7621b9'), // iYFI
+      normalizeAddress('0x12a9cc33a980daa74e00cc2d1a0e74c57a93d12c'), // iSNX
+      normalizeAddress('0x8fc8bfd80d6a9f17fb98a373023d72531792b431'), // iWBTC
+      normalizeAddress('0x48759f220ed983db51fa7a8c0d2aab8f3ce4166a'), // iUSDT
+      normalizeAddress('0x76eb2fe28b36b3ee97f3adae0c69606eedb2a37c'), // iUSDC
+      normalizeAddress('0xa7c4054afd3dbbbf5bfe80f41862b89ea05c9806'), // isUSD
+      normalizeAddress('0xa8caea564811af0e92b1e044f3edd18fa9a73e4f'), // iEURS
+      normalizeAddress('0xca55f9c4e77f7b8524178583b0f7c798de17fd54'), // isEUR
+      normalizeAddress('0x7736ffb07104c0c400bb0cc9a7c228452a732992'), // iDPI
+      normalizeAddress('0xFEEB92386A055E2eF7C2B598c872a4047a7dB59F'), // iUNI
+      normalizeAddress('0x226F3738238932BA0dB2319a8117D9555446102f'), // iSUSHI
+      normalizeAddress('0xB8c5af54bbDCc61453144CF472A9276aE36109F9'), // iCRV
+      normalizeAddress('0x30190a3B52b5AB1daF70D46D72536F5171f22340'), // iAAVE
+      normalizeAddress('0x9e8E207083ffd5BDc3D99A1F32D1e6250869C1A9'), // iMIM
+      normalizeAddress('0xE0B57FEEd45e7D908f2d0DaCd26F113Cf26715BF'), // iCVX
+
+      normalizeAddress('0xAB1c342C7bf5Ec5F02ADEA1c2270670bCa144CbB'), // Comptroller
+    ],
+  },
+  customEventMapping: {
+    [Signatures['Mint(address,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: false,
+          internalType: 'address',
+          name: 'minter',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'mintAmount',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'mintTokens',
+          type: 'uint256',
+        },
+      ],
+    },
   },
 };
