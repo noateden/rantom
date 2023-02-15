@@ -63,4 +63,6 @@ export const Signatures: { [key: string]: string } = {
   'DistributedBorrowerComp(address,address,uint256,uint256)':
     '0x1fc3ecc087d8d2d15e23d0032af5a47059c3892d003d8e139fdcb6bb327c99a6',
   'Flashloan(address,uint256,uint256,uint256)': '0x33c8e097c526683cbdb29adf782fac95e9d0fbe0ed635c13d8c75fdf726557d9',
+  'TokensMinted(address,uint256,uint256,uint256)': '0x6155cfd0fd028b0ca77e8495a60cbe563e8bce8611f0aad6fedbdaafc05d44a2',
+  'TokensBurned(address,uint256,uint256,uint256)': '0x19783b34589160c168487dc7f9c51ae0bcefe67a47d6708fba90f6ce0366d3d1',
 };

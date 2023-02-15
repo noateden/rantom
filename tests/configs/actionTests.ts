@@ -5,6 +5,7 @@ import { CompoundActionTestLogs } from './protocols/compound';
 import { IronbankActionTestLogs } from './protocols/ironbank';
 import { LidoActionTestLogs } from './protocols/lido';
 import { PancakeswapActionTestLogs } from './protocols/pancakeswap';
+import { RocketpoolActionTestLogs } from './protocols/rocketpool';
 import { SushiActionTestLogs } from './protocols/sushi';
 import { UniswapActionTestLogs } from './protocols/uniswap';
 
@@ -17,4 +18,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...AaveActionTestLogs,
   ...CompoundActionTestLogs,
   ...IronbankActionTestLogs,
+  ...RocketpoolActionTestLogs,
 ];

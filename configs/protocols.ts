@@ -215,3 +215,12 @@ export const IronbankConfigs: ProtocolConfig = {
     },
   },
 };
+
+export const RocketpoolConfigs: ProtocolConfig = {
+  protocol: 'rocketpool',
+  contracts: {
+    ethereum: [
+      '0xae78736cd615f374d3085123a210448e74fc6393', // rETH
+    ],
+  },
+};

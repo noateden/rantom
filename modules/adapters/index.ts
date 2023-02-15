@@ -8,6 +8,7 @@ import {
   IronbankConfigs,
   LidoConfigs,
   PancakeswapConfigs,
+  RocketpoolConfigs,
   ShibaswapConfigs,
   SushiConfigs,
   Uniswapv2Configs,
@@ -21,6 +22,7 @@ import { BalancerAdapter } from './balancer/balancer';
 import { CompoundAdapter } from './compound/compound';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { LidoAdapter } from './lido/lido';
+import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { Uniswapv2Adapter } from './uniswap/uniswapv2';
 import { Uniswapv3Adapter } from './uniswap/uniswapv3';
 
@@ -43,5 +45,7 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
 
     new CompoundAdapter(CompoundConfigs, providers),
     new IronbankAdapter(IronbankConfigs, providers),
+
+    new RocketpoolAdapter(RocketpoolConfigs, providers),
   ];
 }
