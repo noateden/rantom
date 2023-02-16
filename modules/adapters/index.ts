@@ -23,6 +23,7 @@ import { CompoundAdapter } from './compound/compound';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { LidoAdapter } from './lido/lido';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
+import { SushiAdapter } from './sushi/sushi';
 import { Uniswapv2Adapter } from './uniswap/uniswapv2';
 import { Uniswapv3Adapter } from './uniswap/uniswapv3';
 
@@ -30,11 +31,11 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
   return [
     new Uniswapv3Adapter(Uniswapv3Configs, providers),
     new Uniswapv2Adapter(Uniswapv2Configs, providers),
-    new Uniswapv2Adapter(SushiConfigs, providers),
     new Uniswapv2Adapter(PancakeswapConfigs, providers),
     new Uniswapv2Adapter(ShibaswapConfigs, providers),
     new Uniswapv2Adapter(FraxswapConfigs, providers),
 
+    new SushiAdapter(SushiConfigs, providers),
     new LidoAdapter(LidoConfigs, providers),
 
     new BalancerAdapter(BalancerConfigs, providers),
