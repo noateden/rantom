@@ -244,3 +244,12 @@ export const CowswapConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const LoopringConfigs: ProtocolConfig = {
+  protocol: 'loopring',
+  contracts: {
+    ethereum: [
+      '0x0baba1ad5be3a5c0a66e7ac838a129bf948f1ea4', // Exchange v2
+    ],
+  },
+};

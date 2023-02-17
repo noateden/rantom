@@ -9,6 +9,7 @@ import {
   FraxswapConfigs,
   IronbankConfigs,
   LidoConfigs,
+  LoopringConfigs,
   PancakeswapConfigs,
   RocketpoolConfigs,
   ShibaswapConfigs,
@@ -26,6 +27,7 @@ import { CowswapAdapter } from './cowswap/cowswap';
 import { CurveAdapter } from './curve/curve';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { LidoAdapter } from './lido/lido';
+import { LoopringAdapter } from './loopring/loopring';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SushiAdapter } from './sushi/sushi';
 import { Uniswapv2Adapter } from './uniswap/uniswapv2';
@@ -54,5 +56,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
 
     new RocketpoolAdapter(RocketpoolConfigs, providers),
     new CowswapAdapter(CowswapConfigs, providers),
+    new LoopringAdapter(LoopringConfigs, providers),
   ];
 }

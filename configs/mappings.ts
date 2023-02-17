@@ -1780,4 +1780,74 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+
+  [Signatures['DepositRequested(address,address,address,uint16,uint96)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'from',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'to',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint16',
+        name: 'tokenId',
+        type: 'uint16',
+      },
+      {
+        indexed: false,
+        internalType: 'uint96',
+        name: 'amount',
+        type: 'uint96',
+      },
+    ],
+  },
+
+  [Signatures['WithdrawalCompleted(uint8,address,address,address,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'uint8',
+        name: 'category',
+        type: 'uint8',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'from',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'to',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+    ],
+  },
 };

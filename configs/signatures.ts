@@ -92,4 +92,8 @@ export const Signatures: { [key: string]: string } = {
   'RemoveLiquidity(address,uint256[2],uint256)': '0xdd3c0336a16f1b64f172b7bb0dad5b2b3c7c76f91e8c4aafd6aae60dce800153',
   'Trade(address,address,address,uint256,uint256,uint256,bytes)':
     '0xa07a543ab8a018198e99ca0184c93fe9050a79400a0a723441f84de1d972cc17',
+  'DepositRequested(address,address,address,uint16,uint96)':
+    '0x73ff7b101bcdc22f199e8e1dd9893170a683d6897be4f1086ca05705abb886ae',
+  'WithdrawalCompleted(uint8,address,address,address,uint256)':
+    '0x0d22d7344fc6871a839149fd89f9fd88a6c29cf797a67114772a9d4df5f8c96b',
 };

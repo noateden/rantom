@@ -12,6 +12,7 @@ export type KnownAction =
   | 'removeLiquidity'
   | 'collect'
   | 'supply'
+  | 'deposit'
   | 'withdraw'
   | 'borrow'
   | 'repay'
