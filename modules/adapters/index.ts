@@ -4,6 +4,7 @@ import {
   Aavev3Configs,
   BalancerConfigs,
   CompoundConfigs,
+  CurveConfigs,
   FraxswapConfigs,
   IronbankConfigs,
   LidoConfigs,
@@ -20,6 +21,7 @@ import { Aavev2Adapter } from './aave/aavev2';
 import { Aavev3Adapter } from './aave/aavev3';
 import { BalancerAdapter } from './balancer/balancer';
 import { CompoundAdapter } from './compound/compound';
+import { CurveAdapter } from './curve/curve';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { LidoAdapter } from './lido/lido';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
@@ -37,6 +39,7 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
 
     new SushiAdapter(SushiConfigs, providers),
     new LidoAdapter(LidoConfigs, providers),
+    new CurveAdapter(CurveConfigs, providers),
 
     new BalancerAdapter(BalancerConfigs, providers),
 

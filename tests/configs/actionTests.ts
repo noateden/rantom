@@ -2,6 +2,7 @@ import { TestLog } from '../types';
 import { AaveActionTestLogs } from './protocols/aave';
 import { BalancerActionTestLogs } from './protocols/balancer';
 import { CompoundActionTestLogs } from './protocols/compound';
+import { CurveActionTestLogs } from './protocols/curve';
 import { IronbankActionTestLogs } from './protocols/ironbank';
 import { LidoActionTestLogs } from './protocols/lido';
 import { PancakeswapActionTestLogs } from './protocols/pancakeswap';
@@ -19,4 +20,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...CompoundActionTestLogs,
   ...IronbankActionTestLogs,
   ...RocketpoolActionTestLogs,
+  ...CurveActionTestLogs,
 ];

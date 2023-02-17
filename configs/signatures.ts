@@ -68,4 +68,26 @@ export const Signatures: { [key: string]: string } = {
   'Deposit(address,uint256,uint256)': '0x90890809c654f11d6e72a28fa60149770a0d11ec6c92319d6ceb2bb0a4ea1a15',
   'Withdraw(address,uint256,uint256)': '0xf279e6a1f5e320cca91135676d9cb6e44ca8a08c0b88342bcdb1144f6511b568',
   'EmergencyWithdraw(address,uint256,uint256)': '0xbb757047c2b5f3974fe26b7c10f732e7bce710b0952a71082702781e62ae0595',
+  'TokenExchange(address,int128,uint256,int128,uint256)':
+    '0x8b3e96f2b889fa771c53c981b40daf005f63f637f1869f707052d15a3dd97140',
+  'AddLiquidity(address,uint256[3],uint256[3],uint256,uint256)':
+    '0x423f6495a08fc652425cf4ed0d1f9e37e571d9b9529b1c1c23cce780b2e7df0d',
+  'RemoveLiquidity(address,uint256[3],uint256[3],uint256)':
+    '0xa49d4cf02656aebf8c771f5a8585638a2a15ee6c97cf7205d4208ed7c1df252d',
+  'RemoveLiquidityImbalance(address,uint256[3],uint256[3],uint256,uint256)':
+    '0x173599dbf9c6ca6f7c3b590df07ae98a45d74ff54065505141e7de6c46a624c2',
+  'TokenExchange(address,uint256,uint256,uint256,uint256)':
+    '0xb2e76ae99761dc136e598d4a629bb347eccb9532a5f8bbd72e18467c3c34cc98',
+  'AddLiquidity(address,uint256[3],uint256,uint256)':
+    '0x96b486485420b963edd3fdec0b0195730035600feb7de6f544383d7950fa97ee',
+  'RemoveLiquidity(address,uint256[3],uint256)': '0xd6cc314a0b1e3b2579f8e64248e82434072e8271290eef8ad0886709304195f5',
+  'AddLiquidity(address,uint256[2],uint256[2],uint256,uint256)':
+    '0x26f55a85081d24974e85c6c00045d0f0453991e95873f52bff0d21af4079a768',
+  'RemoveLiquidity(address,uint256[2],uint256[2],uint256)':
+    '0x7c363854ccf79623411f8995b362bce5eddff18c927edc6f5dbbb5e05819a82c',
+  'RemoveLiquidityImbalance(address,uint256[2],uint256[2],uint256,uint256)':
+    '0x2b5508378d7e19e0d5fa338419034731416c4f5b219a10379956f764317fd47e',
+  'AddLiquidity(address,uint256[2],uint256,uint256)':
+    '0x540ab385f9b5d450a27404172caade516b3ba3f4be88239ac56a2ad1de2a1f5a',
+  'RemoveLiquidity(address,uint256[2],uint256)': '0xdd3c0336a16f1b64f172b7bb0dad5b2b3c7c76f91e8c4aafd6aae60dce800153',
 };
