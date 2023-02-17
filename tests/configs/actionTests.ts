@@ -1,6 +1,7 @@
 import { TestLog } from '../types';
 import { AaveActionTestLogs } from './protocols/aave';
 import { BalancerActionTestLogs } from './protocols/balancer';
+import { BancorActionTestLogs } from './protocols/bancor';
 import { CompoundActionTestLogs } from './protocols/compound';
 import { CowswapActionTestLogs } from './protocols/cowswap';
 import { CurveActionTestLogs } from './protocols/curve';
@@ -25,4 +26,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...CurveActionTestLogs,
   ...CowswapActionTestLogs,
   ...LoopringActionTestLogs,
+  ...BancorActionTestLogs,
 ];

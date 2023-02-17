@@ -1850,4 +1850,180 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+
+  [Signatures['TokensTraded(bytes32,address,address,uint256,uint256,uint256,uint256,uint256,address)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'contextId',
+        type: 'bytes32',
+      },
+      {
+        indexed: true,
+        internalType: 'contract Token',
+        name: 'sourceToken',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'contract Token',
+        name: 'targetToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'sourceAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'targetAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'bntAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'targetFeeAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'bntFeeAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'trader',
+        type: 'address',
+      },
+    ],
+  },
+
+  [Signatures['TokensDeposited(bytes32,address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'contextId',
+        type: 'bytes32',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'provider',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'contract Token',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'baseTokenAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'poolTokenAmount',
+        type: 'uint256',
+      },
+    ],
+  },
+
+  [Signatures['TokensWithdrawn(bytes32,address,address,uint256,uint256,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'contextId',
+        type: 'bytes32',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'provider',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'contract Token',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'baseTokenAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'poolTokenAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'externalProtectionBaseTokenAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'bntAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'withdrawalFeeAmount',
+        type: 'uint256',
+      },
+    ],
+  },
+
+  [Signatures['FlashLoanCompleted(address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'contract Token',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'borrower',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'feeAmount',
+        type: 'uint256',
+      },
+    ],
+  },
 };

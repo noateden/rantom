@@ -3,6 +3,7 @@ import {
   Aavev2Configs,
   Aavev3Configs,
   BalancerConfigs,
+  BancorConfigs,
   CompoundConfigs,
   CowswapConfigs,
   CurveConfigs,
@@ -22,6 +23,7 @@ import { Aavev1Adapter } from './aave/aavev1';
 import { Aavev2Adapter } from './aave/aavev2';
 import { Aavev3Adapter } from './aave/aavev3';
 import { BalancerAdapter } from './balancer/balancer';
+import { BancorAdapter } from './bancor/bancor';
 import { CompoundAdapter } from './compound/compound';
 import { CowswapAdapter } from './cowswap/cowswap';
 import { CurveAdapter } from './curve/curve';
@@ -57,5 +59,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new RocketpoolAdapter(RocketpoolConfigs, providers),
     new CowswapAdapter(CowswapConfigs, providers),
     new LoopringAdapter(LoopringConfigs, providers),
+    new BancorAdapter(BancorConfigs, providers),
   ];
 }

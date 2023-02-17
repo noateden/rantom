@@ -253,3 +253,12 @@ export const LoopringConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const BancorConfigs: ProtocolConfig = {
+  protocol: 'bancor',
+  contracts: {
+    ethereum: [
+      '0xeef417e1d5cc832e619ae18d2f140de2999dd4fb', // BancorNetwork v3
+    ],
+  },
+};

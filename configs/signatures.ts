@@ -96,4 +96,12 @@ export const Signatures: { [key: string]: string } = {
     '0x73ff7b101bcdc22f199e8e1dd9893170a683d6897be4f1086ca05705abb886ae',
   'WithdrawalCompleted(uint8,address,address,address,uint256)':
     '0x0d22d7344fc6871a839149fd89f9fd88a6c29cf797a67114772a9d4df5f8c96b',
+  'TokensTraded(bytes32,address,address,uint256,uint256,uint256,uint256,uint256,address)':
+    '0x5c02c2bb2d1d082317eb23916ca27b3e7c294398b60061a2ad54f1c3c018c318',
+  'TokensDeposited(bytes32,address,address,uint256,uint256)':
+    '0xecb7e4cd1580472adaeba712b36acf94439b2e1760af55fedb61960ca4422af3',
+  'TokensWithdrawn(bytes32,address,address,uint256,uint256,uint256,uint256,uint256)':
+    '0xeab8ac9e9478a4b3c37a794ecef629b8a8bbcd96f9eaeac8ed26054d144da52d',
+  'FlashLoanCompleted(address,address,uint256,uint256)':
+    '0x0da3485ef1bb570df7bb888887eae5aa01d81b83cd8ccc80c0ea0922a677ecef',
 };
