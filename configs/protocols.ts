@@ -235,3 +235,12 @@ export const CurveConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const CowswapConfigs: ProtocolConfig = {
+  protocol: 'cowswap',
+  contracts: {
+    ethereum: [
+      '0x9008d19f58aabd9ed0d60971565aa8510560ab41', // GPv2Settlement
+    ],
+  },
+};

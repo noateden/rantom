@@ -1733,4 +1733,51 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+
+  [Signatures['Trade(address,address,address,uint256,uint256,uint256,bytes)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'owner',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'contract IERC20',
+        name: 'sellToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'contract IERC20',
+        name: 'buyToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'sellAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'buyAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'feeAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes',
+        name: 'orderUid',
+        type: 'bytes',
+      },
+    ],
+  },
 };
