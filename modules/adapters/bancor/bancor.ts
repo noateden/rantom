@@ -94,7 +94,7 @@ export class BancorAdapter extends Adapter {
 
           if (token) {
             const borrower = normalizeAddress(event.borrower);
-            const amount = new BigNumber(event.baseTokenAmount)
+            const amount = new BigNumber(event.amount)
               .dividedBy(new BigNumber(10).pow(token.decimals))
               .toString(10);
 
