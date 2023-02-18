@@ -48,4 +48,12 @@ export const HardCodeTokens: { [key: string]: Token } = {
     symbol: 'RING',
     decimals: 18,
   },
+
+  // https://etherscan.io/token/0x0000000000a39bb272e79075ade125fd351887ac
+  'ethereum:0x0000000000a39bb272e79075ade125fd351887ac': {
+    chain: 'ethereum',
+    address: '0x0000000000a39bb272e79075ade125fd351887ac',
+    symbol: 'BlurPool',
+    decimals: 18,
+  },
 };
