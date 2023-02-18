@@ -119,7 +119,7 @@ export class Aavev2Adapter extends Adapter {
               addresses: [liquidator, user],
               tokens: [collateral],
               tokenAmounts: [amount],
-              readableString: `${liquidator} flashloan ${amount} ${collateral.symbol} on ${this.config.protocol} chain ${chain}`,
+              readableString: `${liquidator} liquidate ${amount} ${collateral.symbol} on ${this.config.protocol} chain ${chain}`,
             };
           }
         }
