@@ -39,16 +39,18 @@ export class ParserProvider implements IParserProvider {
     // get actions from transaction receipt
     const transactions: Array<Transaction> = [];
     for (const [, blockchain] of Object.entries(EnvConfig.blockchains)) {
+      const web3 = new Web3(blockchain.nodeRpc);
+      const receipt = await web3.eth.getTransactionReceipt(options.hash);
+
       const transaction: Transaction = {
         chain: blockchain.name,
         hash: options.hash,
         version: ParserVersion,
+        from: receipt.from ? normalizeAddress(receipt.from) : '',
+        to: receipt.to ? normalizeAddress(receipt.to) : '',
         actions: [],
         transfers: [],
       };
-
-      const web3 = new Web3(blockchain.nodeRpc);
-      const receipt = await web3.eth.getTransactionReceipt(options.hash);
 
       // for every log, we try to found the signature
       for (const log of receipt.logs) {

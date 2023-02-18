@@ -41,6 +41,8 @@ export interface TransactionTransfer {
 export interface Transaction {
   chain: string;
   hash: string;
+  from: string; // sender address
+  to: string;
   version: string;
   actions: Array<TransactionAction>;
   transfers: Array<TransactionTransfer>;
