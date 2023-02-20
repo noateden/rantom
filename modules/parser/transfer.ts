@@ -103,7 +103,7 @@ export class TransferParser implements ITransferParser {
               from: normalizeAddress(event.from),
               to: normalizeAddress(event.to),
               amount: '1',
-              tokenId: new BigNumber(event.tokenId).toNumber(),
+              tokenId: new BigNumber(event.tokenId).toString(10),
             };
           }
         } catch (e: any) {

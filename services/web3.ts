@@ -3,12 +3,13 @@ import Web3 from 'web3';
 
 import Erc20Abi from '../configs/abi/ERC20.json';
 import Erc721Abi from '../configs/abi/ERC721.json';
-import { AddressZero, HardCodeTokens, Tokens } from '../configs/constants';
+import { AddressZero, HardCodeTokens, HardcodeNft, Tokens } from '../configs/constants';
 import EnvConfig from '../configs/envConfig';
 import { compareAddress, normalizeAddress } from '../lib/helper';
 import logger from '../lib/logger';
 import { Token } from '../types/configs';
 import { IWeb3HelperProvider } from '../types/namespaces';
+import SentryProvider from './sentry';
 
 export class Web3HelperProvider implements IWeb3HelperProvider {
   public readonly name: string = 'web3';
@@ -58,6 +59,8 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
         },
         error: e,
       });
+      const sentry = new SentryProvider(EnvConfig.sentry.dns);
+      await sentry.capture(e);
     }
 
     return null;
@@ -65,6 +68,10 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
 
   public async getErc721Metadata(chain: string, tokenAddress: string): Promise<Token | null> {
     const key = `${chain}:${normalizeAddress(tokenAddress)}`;
+
+    if (HardcodeNft[key]) {
+      return HardcodeNft[key];
+    }
 
     if (this._erc721MetadataCache[key]) {
       return this._erc721MetadataCache[key];
@@ -96,6 +103,8 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
         },
         error: e,
       });
+      const sentry = new SentryProvider(EnvConfig.sentry.dns);
+      await sentry.capture(e);
     }
 
     return null;

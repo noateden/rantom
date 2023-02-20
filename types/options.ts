@@ -17,3 +17,7 @@ export interface AdapterParseLogOptions {
   topics: Array<string>;
   data: string;
 }
+
+export interface ExploreLatestTransactionsOptions {
+  chain: string;
+}

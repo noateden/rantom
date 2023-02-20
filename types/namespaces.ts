@@ -2,7 +2,12 @@ import { Collection } from 'mongodb';
 
 import { EventMapping, ProtocolConfig, Token } from './configs';
 import { MongoCollections, Transaction, TransactionAction, TransactionTransfer } from './domains';
-import { AdapterParseLogOptions, ParseTransactionOptions, TransferParseLogOptions } from './options';
+import {
+  AdapterParseLogOptions,
+  ExploreLatestTransactionsOptions,
+  ParseTransactionOptions,
+  TransferParseLogOptions,
+} from './options';
 
 export interface IProvider {
   name: string;
@@ -50,4 +55,10 @@ export interface IParserProvider extends IProvider {
   transferParser: ITransferParser;
 
   parseTransaction: (options: ParseTransactionOptions) => Promise<Array<Transaction>>;
+}
+
+export interface IExplorerProvider extends IProvider {
+  parser: IParserProvider;
+
+  exploreLatestTransactions(options: ExploreLatestTransactionsOptions): Promise<Array<Transaction>>;
 }

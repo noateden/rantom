@@ -35,7 +35,7 @@ export interface TransactionTransfer {
   from: string;
   to: string;
   amount: string;
-  tokenId?: number;
+  tokenId?: string;
 }
 
 export interface Transaction {

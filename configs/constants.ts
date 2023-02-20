@@ -57,3 +57,13 @@ export const HardCodeTokens: { [key: string]: Token } = {
     decimals: 18,
   },
 };
+
+export const HardcodeNft: { [key: string]: Token } = {
+  'ethereum:0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85': {
+    chain: 'ethereum',
+    address: '0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85',
+    symbol: 'ENS',
+    decimals: 0,
+    erc721: true,
+  },
+};
