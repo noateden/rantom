@@ -18,7 +18,7 @@ const Signatures = {
   WithdrawCollateralV3: '0xd6d480d5b3068db003533b170d67561494d72e3bf9fa40a266471351ebba9e16',
 };
 
-export class Compound3Adapter extends Adapter {
+export class Compoundv3Adapter extends Adapter {
   public readonly name: string = 'adapter.compound3';
 
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
@@ -60,7 +60,7 @@ export class Compound3Adapter extends Adapter {
       }
 
       if (token) {
-        const user = normalizeAddress(event.from);
+        const user = event.from ? normalizeAddress(event.from) : normalizeAddress(event.src);
         const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
 
         return {

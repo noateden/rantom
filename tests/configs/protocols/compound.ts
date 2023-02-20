@@ -1,7 +1,7 @@
 import { CompoundConfigs, Compoundv3Configs } from '../../../configs/protocols';
 import { normalizeAddress } from '../../../lib/helper';
 import { CompoundAdapter } from '../../../modules/adapters/compound/compound';
-import { Compound3Adapter } from '../../../modules/adapters/compound/compound3';
+import { Compoundv3Adapter } from '../../../modules/adapters/compound/compoundv3';
 import { TestLog } from '../../types';
 
 export const CompoundActionTestLogs: Array<TestLog> = [
@@ -169,7 +169,7 @@ export const Compound3ActionTestLogs: Array<TestLog> = [
       logIndex: '0x5f',
       removed: false,
     },
-    adapter: new Compound3Adapter(Compoundv3Configs, null),
+    adapter: new Compoundv3Adapter(Compoundv3Configs, null),
     action: 'supply',
   },
   {
@@ -192,7 +192,7 @@ export const Compound3ActionTestLogs: Array<TestLog> = [
       logIndex: '0xd2',
       removed: false,
     },
-    adapter: new Compound3Adapter(Compoundv3Configs, null),
+    adapter: new Compoundv3Adapter(Compoundv3Configs, null),
     action: 'withdraw',
   },
   {
@@ -216,7 +216,7 @@ export const Compound3ActionTestLogs: Array<TestLog> = [
       logIndex: '0xde',
       removed: false,
     },
-    adapter: new Compound3Adapter(Compoundv3Configs, null),
+    adapter: new Compoundv3Adapter(Compoundv3Configs, null),
     action: 'supply',
   },
   {
@@ -240,7 +240,7 @@ export const Compound3ActionTestLogs: Array<TestLog> = [
       logIndex: '0xaf',
       removed: false,
     },
-    adapter: new Compound3Adapter(Compoundv3Configs, null),
+    adapter: new Compoundv3Adapter(Compoundv3Configs, null),
     action: 'withdraw',
   },
 ];
