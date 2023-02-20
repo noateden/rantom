@@ -3,3 +3,6 @@
 // Otherwise, Rantom will get transaction from blockchain, parse and save into database
 // If there is any updates or integrations, we need to increase this version value
 export const ParserVersion = '1.0.1';
+
+// return latest transactions on-chain
+export const MaxExploreTransactions = 3;

@@ -1,5 +1,6 @@
 import Web3 from 'web3';
 
+import { MaxExploreTransactions } from '../../configs';
 import EnvConfig from '../../configs/envConfig';
 import logger from '../../lib/logger';
 import { Transaction } from '../../types/domains';
@@ -30,7 +31,7 @@ export class ExplorerProvider implements IExplorerProvider {
           }
         }
 
-        if (transactions.length >= 10) {
+        if (transactions.length >= MaxExploreTransactions) {
           break;
         }
       }
