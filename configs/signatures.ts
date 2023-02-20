@@ -116,4 +116,6 @@ export const Signatures: { [key: string]: string } = {
   'NameRegistered(string,bytes32,address,uint256,uint256)':
     '0xca6abbe9d7f11422cb6ca7629fbf6fe9efb1c621f71ce8f02b9f2a230097404f',
   'NameRenewed(string,bytes32,uint256,uint256)': '0x3da24c024582931cfaf8267d8ed24d13a82a8068d5bd337d30ec45cea4e506ae',
+  'SequencerBatchAppended(uint256,uint256,uint256)':
+    '0x602f1aeac0ca2e7a13e281a9ef0ad7838542712ce16780fa2ecffd351f05f899',
 };

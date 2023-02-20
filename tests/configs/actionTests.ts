@@ -10,6 +10,7 @@ import { EnsActionTestLogs } from './protocols/ens';
 import { IronbankActionTestLogs } from './protocols/ironbank';
 import { LidoActionTestLogs } from './protocols/lido';
 import { LoopringActionTestLogs } from './protocols/loopring';
+import { OptimismActionTestLogs } from './protocols/optimism';
 import { PancakeswapActionTestLogs } from './protocols/pancakeswap';
 import { RocketpoolActionTestLogs } from './protocols/rocketpool';
 import { SushiActionTestLogs } from './protocols/sushi';
@@ -32,4 +33,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...BancorActionTestLogs,
   ...AurafinanceActionTestLogs,
   ...EnsActionTestLogs,
+  ...OptimismActionTestLogs,
 ];

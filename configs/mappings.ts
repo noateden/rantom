@@ -2257,4 +2257,27 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+
+  [Signatures['SequencerBatchAppended(uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_startingQueueIndex',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_numQueueElements',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_totalElements',
+        type: 'uint256',
+      },
+    ],
+  },
 };

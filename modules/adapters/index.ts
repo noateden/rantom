@@ -14,6 +14,7 @@ import {
   IronbankConfigs,
   LidoConfigs,
   LoopringConfigs,
+  OptimismConfigs,
   PancakeswapConfigs,
   RocketpoolConfigs,
   ShibaswapConfigs,
@@ -36,6 +37,7 @@ import { EnsAdapter } from './ens/ens';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { LidoAdapter } from './lido/lido';
 import { LoopringAdapter } from './loopring/loopring';
+import { OptimismAdapter } from './optimism/optimism';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SushiAdapter } from './sushi/sushi';
 import { Uniswapv2Adapter } from './uniswap/uniswapv2';
@@ -69,5 +71,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new BancorAdapter(BancorConfigs, providers),
     new AurafinanceAdapter(AurafinanceConfigs, providers),
     new EnsAdapter(EnsConfigs, providers),
+    new OptimismAdapter(OptimismConfigs, providers),
   ];
 }

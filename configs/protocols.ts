@@ -280,3 +280,12 @@ export const EnsConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const OptimismConfigs: ProtocolConfig = {
+  protocol: 'optimism',
+  contracts: {
+    ethereum: [
+      '0x5e4e65926ba27467555eb562121fac00d24e9dd2', // CanonicalTransactionChain
+    ],
+  },
+};

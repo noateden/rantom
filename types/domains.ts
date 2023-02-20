@@ -17,11 +17,16 @@ export type KnownAction =
   | 'borrow'
   | 'repay'
   | 'flashloan'
+  | 'liquidate'
   | 'stake'
   | 'unstake'
+
+  // use for ENS domains
   | 'register'
   | 'renew'
-  | 'liquidate';
+
+  // use for layer 2 batch transaction
+  | 'batch';
 
 export interface TransactionAction {
   protocol: string;
