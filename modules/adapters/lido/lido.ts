@@ -15,7 +15,7 @@ const Signatures: { [key: string]: string } = {
 };
 
 export class LidoAdapter extends Adapter {
-  public readonly name: string = 'adapter.uniswapv3';
+  public readonly name: string = 'adapter.lido';
 
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
     super(config, providers, {

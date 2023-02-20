@@ -19,6 +19,8 @@ export type KnownAction =
   | 'flashloan'
   | 'stake'
   | 'unstake'
+  | 'register'
+  | 'renew'
   | 'liquidate';
 
 export interface TransactionAction {
@@ -28,6 +30,7 @@ export interface TransactionAction {
   tokenAmounts: Array<string>; // should match with tokens
   addresses: Array<string>;
   readableString: string;
+  addition?: any;
 }
 
 export interface TransactionTransfer {

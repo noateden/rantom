@@ -1,0 +1,52 @@
+import { EnsConfigs } from '../../../configs/protocols';
+import { normalizeAddress } from '../../../lib/helper';
+import { EnsAdapter } from '../../../modules/adapters/ens/ens';
+import { TestLog } from '../../types';
+
+export const EnsActionTestLogs: Array<TestLog> = [
+  {
+    chain: 'ethereum',
+    hash: '0x7d475383c274b429ed62de06e83c28e737fb8e057705c1705041e4e8f3620510',
+    sender: normalizeAddress('0x191c3f38770b207f2d2848617f506cc6bb73f0ba'),
+    address: normalizeAddress('0x283af0b28c62c092c9727f1ee09c02ca627eb7f5'),
+    log: {
+      address: '0x283af0b28c62c092c9727f1ee09c02ca627eb7f5',
+      topics: [
+        '0xca6abbe9d7f11422cb6ca7629fbf6fe9efb1c621f71ce8f02b9f2a230097404f',
+        '0x7261ccbf9af64244788c3689a316cad35f1452d3e960ad629b84fcaaca192314',
+        '0x000000000000000000000000191c3f38770b207f2d2848617f506cc6bb73f0ba',
+      ],
+      data: '0x0000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000001f61be3215c52f0000000000000000000000000000000000000000000000000000000069984683000000000000000000000000000000000000000000000000000000000000000a30786b6c75696a76657200000000000000000000000000000000000000000000',
+      blockNumber: '0xfe62c2',
+      transactionHash: '0x7d475383c274b429ed62de06e83c28e737fb8e057705c1705041e4e8f3620510',
+      transactionIndex: '0x67',
+      blockHash: '0xb9789d24d9ca8ecc732819d4a5b572e7ff71df20a1ec51f3609f97989bc77b5e',
+      logIndex: '0xf4',
+      removed: false,
+    },
+    adapter: new EnsAdapter(EnsConfigs, null),
+    action: 'register',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0x68ebf44823fa8c6fa67da448f8e66922771688eade0a15d26769986fb81b7e4c',
+    sender: normalizeAddress('0x723f075802598fa2d033bd097173a6a97a500f3a'),
+    address: normalizeAddress('0x283af0b28c62c092c9727f1ee09c02ca627eb7f5'),
+    log: {
+      address: '0x283af0b28c62c092c9727f1ee09c02ca627eb7f5',
+      topics: [
+        '0x3da24c024582931cfaf8267d8ed24d13a82a8068d5bd337d30ec45cea4e506ae',
+        '0xd28bc5b54b040ac2b79eecaa943ba88e0adf956d615393b5fa3d5733693a523a',
+      ],
+      data: '0x000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000a75ea10b1decb20000000000000000000000000000000000000000000000000000000064b2e1cc000000000000000000000000000000000000000000000000000000000000000467616d7000000000000000000000000000000000000000000000000000000000',
+      blockNumber: '0xfe6330',
+      transactionHash: '0x68ebf44823fa8c6fa67da448f8e66922771688eade0a15d26769986fb81b7e4c',
+      transactionIndex: '0x69',
+      blockHash: '0x90243685f56b66a112df6d07e6ef7658dac5538604f3a93c8518e605e0d9d02b',
+      logIndex: '0x129',
+      removed: false,
+    },
+    adapter: new EnsAdapter(EnsConfigs, null),
+    action: 'renew',
+  },
+];

@@ -9,6 +9,7 @@ import {
   Compoundv3Configs,
   CowswapConfigs,
   CurveConfigs,
+  EnsConfigs,
   FraxswapConfigs,
   IronbankConfigs,
   LidoConfigs,
@@ -31,6 +32,7 @@ import { CompoundAdapter } from './compound/compound';
 import { Compoundv3Adapter } from './compound/compoundv3';
 import { CowswapAdapter } from './cowswap/cowswap';
 import { CurveAdapter } from './curve/curve';
+import { EnsAdapter } from './ens/ens';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { LidoAdapter } from './lido/lido';
 import { LoopringAdapter } from './loopring/loopring';
@@ -66,5 +68,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new LoopringAdapter(LoopringConfigs, providers),
     new BancorAdapter(BancorConfigs, providers),
     new AurafinanceAdapter(AurafinanceConfigs, providers),
+    new EnsAdapter(EnsConfigs, providers),
   ];
 }

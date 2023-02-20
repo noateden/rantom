@@ -6,6 +6,7 @@ import { BancorActionTestLogs } from './protocols/bancor';
 import { Compound3ActionTestLogs, CompoundActionTestLogs } from './protocols/compound';
 import { CowswapActionTestLogs } from './protocols/cowswap';
 import { CurveActionTestLogs } from './protocols/curve';
+import { EnsActionTestLogs } from './protocols/ens';
 import { IronbankActionTestLogs } from './protocols/ironbank';
 import { LidoActionTestLogs } from './protocols/lido';
 import { LoopringActionTestLogs } from './protocols/loopring';
@@ -30,4 +31,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...LoopringActionTestLogs,
   ...BancorActionTestLogs,
   ...AurafinanceActionTestLogs,
+  ...EnsActionTestLogs,
 ];
