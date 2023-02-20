@@ -1,6 +1,7 @@
-import { CompoundConfigs } from '../../../configs/protocols';
+import { CompoundConfigs, Compoundv3Configs } from '../../../configs/protocols';
 import { normalizeAddress } from '../../../lib/helper';
 import { CompoundAdapter } from '../../../modules/adapters/compound/compound';
+import { Compound3Adapter } from '../../../modules/adapters/compound/compound3';
 import { TestLog } from '../../types';
 
 export const CompoundActionTestLogs: Array<TestLog> = [
@@ -144,5 +145,102 @@ export const CompoundActionTestLogs: Array<TestLog> = [
     },
     adapter: new CompoundAdapter(CompoundConfigs, null),
     action: 'collect',
+  },
+];
+
+export const Compound3ActionTestLogs: Array<TestLog> = [
+  {
+    chain: 'ethereum',
+    hash: '0x6575c92fdc01047e5857f7a77d4af9f6f7493c42d52eeac331dad28627152b94',
+    sender: normalizeAddress('0xedcdf2e84f2a6ba94b557b03bdfb7d10eca5aa50'),
+    address: normalizeAddress('0xc3d688b66703497daa19211eedff47f25384cdc3'),
+    log: {
+      address: '0xc3d688b66703497daa19211eedff47f25384cdc3',
+      topics: [
+        '0xd1cf3d156d5f8f0d50f6c122ed609cec09d35c9b9fb3fff6ea0959134dae424e',
+        '0x000000000000000000000000edcdf2e84f2a6ba94b557b03bdfb7d10eca5aa50',
+        '0x000000000000000000000000edcdf2e84f2a6ba94b557b03bdfb7d10eca5aa50',
+      ],
+      data: '0x0000000000000000000000000000000000000000000000000000000005f5e127',
+      blockNumber: '0xfe609c',
+      transactionHash: '0x6575c92fdc01047e5857f7a77d4af9f6f7493c42d52eeac331dad28627152b94',
+      transactionIndex: '0x38',
+      blockHash: '0x1b1a50fdb20a94625d311ab9f566f24371cd2deb03ee282586ed225e1efa111e',
+      logIndex: '0x5f',
+      removed: false,
+    },
+    adapter: new Compound3Adapter(Compoundv3Configs, null),
+    action: 'supply',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0x6144b78628170c319923e048a949e37108f2cd004758f070f2868a16af0403a2',
+    sender: normalizeAddress('0xedcdf2e84f2a6ba94b557b03bdfb7d10eca5aa50'),
+    address: normalizeAddress('0xc3d688b66703497daa19211eedff47f25384cdc3'),
+    log: {
+      address: '0xc3d688b66703497daa19211eedff47f25384cdc3',
+      topics: [
+        '0x9b1bfa7fa9ee420a16e124f794c35ac9f90472acc99140eb2f6447c714cad8eb',
+        '0x000000000000000000000000edcdf2e84f2a6ba94b557b03bdfb7d10eca5aa50',
+        '0x000000000000000000000000edcdf2e84f2a6ba94b557b03bdfb7d10eca5aa50',
+      ],
+      data: '0x0000000000000000000000000000000000000000000000000000000005f5e100',
+      blockNumber: '0xfe607d',
+      transactionHash: '0x6144b78628170c319923e048a949e37108f2cd004758f070f2868a16af0403a2',
+      transactionIndex: '0x7a',
+      blockHash: '0x199c982416023c7640360530212bf533f4f2571391ee2b94408e950ca7f015f9',
+      logIndex: '0xd2',
+      removed: false,
+    },
+    adapter: new Compound3Adapter(Compoundv3Configs, null),
+    action: 'withdraw',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0x29402c4d94c0acba86fc95491ee5b28cdefb685239918482626854a47e7df2d3',
+    sender: normalizeAddress('0xedcdf2e84f2a6ba94b557b03bdfb7d10eca5aa50'),
+    address: normalizeAddress('0xc3d688b66703497daa19211eedff47f25384cdc3'),
+    log: {
+      address: '0xc3d688b66703497daa19211eedff47f25384cdc3',
+      topics: [
+        '0xfa56f7b24f17183d81894d3ac2ee654e3c26388d17a28dbd9549b8114304e1f4',
+        '0x000000000000000000000000a397a8c2086c554b531c02e29f3291c9704b00c7',
+        '0x00000000000000000000000099fd1378ca799ed6772fe7bcdc9b30b389518962',
+        '0x000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+      ],
+      data: '0x0000000000000000000000000000000000000000000000410d586a20a4c00000',
+      blockNumber: '0xfe5dc3',
+      transactionHash: '0x29402c4d94c0acba86fc95491ee5b28cdefb685239918482626854a47e7df2d3',
+      transactionIndex: '0x87',
+      blockHash: '0xf2474650163950c727908d6bf8d0c954b3da82c09d7233be634b959bbcd42630',
+      logIndex: '0xde',
+      removed: false,
+    },
+    adapter: new Compound3Adapter(Compoundv3Configs, null),
+    action: 'supply',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0x69bfdb6dd93ecae93beda2c8973058e715eb63da10436b4ca9dbb8ea7e738454',
+    sender: normalizeAddress('0x7f3bd73c598b5956440089fda4e99c950feb6a83'),
+    address: normalizeAddress('0xc3d688b66703497daa19211eedff47f25384cdc3'),
+    log: {
+      address: '0xc3d688b66703497daa19211eedff47f25384cdc3',
+      topics: [
+        '0xd6d480d5b3068db003533b170d67561494d72e3bf9fa40a266471351ebba9e16',
+        '0x0000000000000000000000007f3bd73c598b5956440089fda4e99c950feb6a83',
+        '0x0000000000000000000000007f3bd73c598b5956440089fda4e99c950feb6a83',
+        '0x000000000000000000000000514910771af9ca656af840dff83e8264ecf986ca',
+      ],
+      data: '0x000000000000000000000000000000000000000000000000c249fdd327780000',
+      blockNumber: '0xfe5723',
+      transactionHash: '0x69bfdb6dd93ecae93beda2c8973058e715eb63da10436b4ca9dbb8ea7e738454',
+      transactionIndex: '0x4c',
+      blockHash: '0xbd454cf04b7be1d0fd9031786a73ce3ad57b91468d3e5fde66c5c9dc84e89e24',
+      logIndex: '0xaf',
+      removed: false,
+    },
+    adapter: new Compound3Adapter(Compoundv3Configs, null),
+    action: 'withdraw',
   },
 ];

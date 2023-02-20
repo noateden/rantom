@@ -3,7 +3,7 @@ import { AaveActionTestLogs } from './protocols/aave';
 import { AurafinanceActionTestLogs } from './protocols/aurafinance';
 import { BalancerActionTestLogs } from './protocols/balancer';
 import { BancorActionTestLogs } from './protocols/bancor';
-import { CompoundActionTestLogs } from './protocols/compound';
+import { Compound3ActionTestLogs, CompoundActionTestLogs } from './protocols/compound';
 import { CowswapActionTestLogs } from './protocols/cowswap';
 import { CurveActionTestLogs } from './protocols/curve';
 import { IronbankActionTestLogs } from './protocols/ironbank';
@@ -22,6 +22,7 @@ export const ActionTestLogs: Array<TestLog> = [
   ...LidoActionTestLogs,
   ...AaveActionTestLogs,
   ...CompoundActionTestLogs,
+  ...Compound3ActionTestLogs,
   ...IronbankActionTestLogs,
   ...RocketpoolActionTestLogs,
   ...CurveActionTestLogs,

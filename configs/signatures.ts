@@ -107,4 +107,10 @@ export const Signatures: { [key: string]: string } = {
   'Deposited(address,uint256,uint256)': '0x73a19dd210f1a7f902193214c0ee91dd35ee5b4d920cba8d519eca65a7b488ca',
   'Withdrawn(address,uint256,uint256)': '0x92ccf450a286a957af52509bc1c9939d1a6a481783e142e41e2499f0bb66ebc6',
   'RewardPaid(address,uint256)': '0xe2403640ba68fed3a2f88b7557551d1993f84b99bb10ff833f0cf8db0c5e0486',
+  'Supply(address,address,uint256)': '0xd1cf3d156d5f8f0d50f6c122ed609cec09d35c9b9fb3fff6ea0959134dae424e',
+  'Withdraw(address,address,uint256)': '0x9b1bfa7fa9ee420a16e124f794c35ac9f90472acc99140eb2f6447c714cad8eb',
+  'SupplyCollateral(address,address,address,uint256)':
+    '0xfa56f7b24f17183d81894d3ac2ee654e3c26388d17a28dbd9549b8114304e1f4',
+  'WithdrawCollateral(address,address,address,uint256)':
+    '0xd6d480d5b3068db003533b170d67561494d72e3bf9fa40a266471351ebba9e16',
 };
