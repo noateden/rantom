@@ -93,9 +93,7 @@ export class ParserProvider implements IParserProvider {
           }
         }
 
-        if (transaction.actions.length > 0 || transaction.transfers.length > 0) {
-          transactions.push(transaction);
-        }
+        transactions.push(transaction);
       } catch (e: any) {}
     }
 
