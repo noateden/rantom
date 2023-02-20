@@ -262,3 +262,12 @@ export const BancorConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const AurafinanceConfigs: ProtocolConfig = {
+  protocol: 'aurafinance',
+  contracts: {
+    ethereum: [
+      '0xa57b8d98dae62b26ec3bcc4a365338157060b234', // Booster
+    ],
+  },
+};

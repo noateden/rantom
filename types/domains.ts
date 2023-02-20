@@ -43,7 +43,10 @@ export interface Transaction {
   hash: string;
   from: string; // sender address
   to: string;
+  input: string;
+  status: boolean;
   version: string;
+  timestamp: number;
   actions: Array<TransactionAction>;
   transfers: Array<TransactionTransfer>;
 }

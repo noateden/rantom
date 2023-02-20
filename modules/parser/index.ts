@@ -40,55 +40,63 @@ export class ParserProvider implements IParserProvider {
     const transactions: Array<Transaction> = [];
     for (const [, blockchain] of Object.entries(EnvConfig.blockchains)) {
       const web3 = new Web3(blockchain.nodeRpc);
-      const receipt = await web3.eth.getTransactionReceipt(options.hash);
 
-      const transaction: Transaction = {
-        chain: blockchain.name,
-        hash: options.hash,
-        version: ParserVersion,
-        from: receipt.from ? normalizeAddress(receipt.from) : '',
-        to: receipt.to ? normalizeAddress(receipt.to) : '',
-        actions: [],
-        transfers: [],
-      };
+      try {
+        const tx = await web3.eth.getTransaction(options.hash);
+        const block = await web3.eth.getBlock(Number(tx.blockNumber), false);
+        const receipt = await web3.eth.getTransactionReceipt(options.hash);
 
-      // for every log, we try to found the signature
-      for (const log of receipt.logs) {
-        // we parse token transfer if have
-        const transfer: TransactionTransfer | null = await this.transferParser.tryParsingTransfers({
+        const transaction: Transaction = {
           chain: blockchain.name,
-          address: normalizeAddress(log.address),
-          topics: log.topics,
-          data: log.data,
-        });
+          hash: options.hash,
+          input: tx.input,
+          timestamp: Number(block.timestamp),
+          status: receipt.status,
+          version: ParserVersion,
+          from: receipt.from ? normalizeAddress(receipt.from) : '',
+          to: receipt.to ? normalizeAddress(receipt.to) : '',
+          actions: [],
+          transfers: [],
+        };
 
-        if (transfer) {
-          transaction.transfers.push(transfer);
+        // for every log, we try to found the signature
+        for (const log of receipt.logs) {
+          // we parse token transfer if have
+          const transfer: TransactionTransfer | null = await this.transferParser.tryParsingTransfers({
+            chain: blockchain.name,
+            address: normalizeAddress(log.address),
+            topics: log.topics,
+            data: log.data,
+          });
 
-          // its a token transfer, ignore adapter parsers
-          continue;
-        }
+          if (transfer) {
+            transaction.transfers.push(transfer);
 
-        // now we try to pass log into adapters to get readable event data
-        for (const adapter of this.adapters) {
-          if (adapter.supportedSignature(log.topics[0])) {
-            const action: TransactionAction | null = await adapter.tryParsingActions({
-              chain: blockchain.name,
-              sender: normalizeAddress(receipt.from),
-              address: normalizeAddress(log.address),
-              topics: log.topics,
-              data: log.data,
-            });
-            if (action) {
-              transaction.actions.push(action);
+            // its a token transfer, ignore adapter parsers
+            continue;
+          }
+
+          // now we try to pass log into adapters to get readable event data
+          for (const adapter of this.adapters) {
+            if (adapter.supportedSignature(log.topics[0])) {
+              const action: TransactionAction | null = await adapter.tryParsingActions({
+                chain: blockchain.name,
+                sender: normalizeAddress(receipt.from),
+                address: normalizeAddress(log.address),
+                topics: log.topics,
+                data: log.data,
+              });
+              if (action) {
+                transaction.actions.push(action);
+              }
             }
           }
         }
-      }
 
-      if (transaction.actions.length > 0 || transaction.transfers.length > 0) {
-        transactions.push(transaction);
-      }
+        if (transaction.actions.length > 0 || transaction.transfers.length > 0) {
+          transactions.push(transaction);
+        }
+      } catch (e: any) {}
     }
 
     // save transactions info database

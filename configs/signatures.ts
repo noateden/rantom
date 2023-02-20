@@ -104,4 +104,7 @@ export const Signatures: { [key: string]: string } = {
     '0xeab8ac9e9478a4b3c37a794ecef629b8a8bbcd96f9eaeac8ed26054d144da52d',
   'FlashLoanCompleted(address,address,uint256,uint256)':
     '0x0da3485ef1bb570df7bb888887eae5aa01d81b83cd8ccc80c0ea0922a677ecef',
+  'Deposited(address,uint256,uint256)': '0x73a19dd210f1a7f902193214c0ee91dd35ee5b4d920cba8d519eca65a7b488ca',
+  'Withdrawn(address,uint256,uint256)': '0x92ccf450a286a957af52509bc1c9939d1a6a481783e142e41e2499f0bb66ebc6',
+  'RewardPaid(address,uint256)': '0xe2403640ba68fed3a2f88b7557551d1993f84b99bb10ff833f0cf8db0c5e0486',
 };
