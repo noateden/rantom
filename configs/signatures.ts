@@ -124,4 +124,7 @@ export const Signatures: { [key: string]: string } = {
     '0xaac9ce45fe3adf5143598c4f18a369591a20a3384aedaf1b525d29127e1fcd55',
   'LogAnySwapOut(address,address,address,uint256,uint256,uint256)':
     '0x97116cf6cd4f6412bb47914d6db18da9e16ab2142f543b86e207c24fbd16b23a',
+  'AddDeposit(address,address,uint32,uint256,uint256)':
+    '0xdbe49eaf5c2a8a7f65920c200ca5d47395540b884f6a1886fdb2611624f9981b',
+  'AddWithdrawal(address,address,uint32,uint256)': '0xad946216d2715ed9b769178b59b5bd1b1ee3a1ef3adbe82f17d30617109e96f3',
 };

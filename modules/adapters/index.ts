@@ -5,6 +5,7 @@ import {
   AurafinanceConfigs,
   BalancerConfigs,
   BancorConfigs,
+  BeanstalkConfigs,
   CompoundConfigs,
   Compoundv3Configs,
   CowswapConfigs,
@@ -31,6 +32,7 @@ import { Aavev3Adapter } from './aave/aavev3';
 import { AurafinanceAdapter } from './aurafinance/aurafinance';
 import { BalancerAdapter } from './balancer/balancer';
 import { BancorAdapter } from './bancor/bancor';
+import { BeanstalkAdapter } from './beanstalk/beanstalk';
 import { CompoundAdapter } from './compound/compound';
 import { Compoundv3Adapter } from './compound/compoundv3';
 import { CowswapAdapter } from './cowswap/cowswap';
@@ -78,5 +80,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new OptimismAdapter(OptimismConfigs, providers),
     new HopAdapter(HopConfigs, providers),
     new MultichainAdapter(MultichainConfigs, providers),
+    new BeanstalkAdapter(BeanstalkConfigs, providers),
   ];
 }

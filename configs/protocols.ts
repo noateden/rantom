@@ -316,3 +316,12 @@ export const MultichainConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const BeanstalkConfigs: ProtocolConfig = {
+  protocol: 'beanstalk',
+  contracts: {
+    ethereum: [
+      '0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5', // Beanstalk Protocol
+    ],
+  },
+};
