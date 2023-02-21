@@ -118,4 +118,10 @@ export const Signatures: { [key: string]: string } = {
   'NameRenewed(string,bytes32,uint256,uint256)': '0x3da24c024582931cfaf8267d8ed24d13a82a8068d5bd337d30ec45cea4e506ae',
   'SequencerBatchAppended(uint256,uint256,uint256)':
     '0x602f1aeac0ca2e7a13e281a9ef0ad7838542712ce16780fa2ecffd351f05f899',
+  'TransferSentToL2(uint256,address,uint256,uint256,uint256,address,uint256)':
+    '0x0a0607688c86ec1775abcdbab7b33a3a35a6c9cde677c9be880150c231cc6b0b',
+  'LogAnySwapIn(bytes32,address,address,uint256,uint256,uint256)':
+    '0xaac9ce45fe3adf5143598c4f18a369591a20a3384aedaf1b525d29127e1fcd55',
+  'LogAnySwapOut(address,address,address,uint256,uint256,uint256)':
+    '0x97116cf6cd4f6412bb47914d6db18da9e16ab2142f543b86e207c24fbd16b23a',
 };

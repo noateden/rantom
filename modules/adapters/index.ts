@@ -11,9 +11,11 @@ import {
   CurveConfigs,
   EnsConfigs,
   FraxswapConfigs,
+  HopConfigs,
   IronbankConfigs,
   LidoConfigs,
   LoopringConfigs,
+  MultichainConfigs,
   OptimismConfigs,
   PancakeswapConfigs,
   RocketpoolConfigs,
@@ -34,9 +36,11 @@ import { Compoundv3Adapter } from './compound/compoundv3';
 import { CowswapAdapter } from './cowswap/cowswap';
 import { CurveAdapter } from './curve/curve';
 import { EnsAdapter } from './ens/ens';
+import { HopAdapter } from './hop/hop';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { LidoAdapter } from './lido/lido';
 import { LoopringAdapter } from './loopring/loopring';
+import { MultichainAdapter } from './multichain/multichain';
 import { OptimismAdapter } from './optimism/optimism';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SushiAdapter } from './sushi/sushi';
@@ -72,5 +76,7 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new AurafinanceAdapter(AurafinanceConfigs, providers),
     new EnsAdapter(EnsConfigs, providers),
     new OptimismAdapter(OptimismConfigs, providers),
+    new HopAdapter(HopConfigs, providers),
+    new MultichainAdapter(MultichainConfigs, providers),
   ];
 }

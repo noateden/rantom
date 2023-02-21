@@ -289,3 +289,30 @@ export const OptimismConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const HopConfigs: ProtocolConfig = {
+  protocol: 'hop',
+  contracts: {
+    ethereum: [
+      '0x3666f603cc164936c1b87e207f36beba4ac5f18a', // USDC
+      '0x3e4a3a4796d16c0cd582c382691998f7c06420b6', // USDT
+      '0x22b1cbb8d98a01a3b71d034bb899775a76eb1cc2', // MATIC
+      '0x3d4cc8a61c7528fd86c55cfe061a78dcba48edd1', // DAI
+      '0xb8901acb165ed027e32754e0ffe830802919727f', // ETH
+      '0x914f986a44acb623a277d6bd17368171fcbe4273', // HOP
+      '0x893246facf345c99e4235e5a7bbee7404c988b96', // SNX
+    ],
+  },
+};
+
+export const MultichainConfigs: ProtocolConfig = {
+  protocol: 'multichain',
+  contracts: {
+    ethereum: [
+      '0xe95fd76cf16008c12ff3b3a937cb16cd9cc20284', // Router v3
+      '0x6b7a87899490ece95443e979ca9485cbe7e71522', // Router v4
+      '0x765277eebeca2e31912c9946eae1021199b39c61', // Router v4 2
+      '0xba8da9dcf11b50b03fd5284f164ef5cdef910705', // Router v6
+    ],
+  },
+};

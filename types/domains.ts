@@ -20,6 +20,7 @@ export type KnownAction =
   | 'liquidate'
   | 'stake'
   | 'unstake'
+  | 'bridge'
 
   // use for ENS domains
   | 'register'

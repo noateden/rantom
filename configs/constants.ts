@@ -11,6 +11,31 @@ export const Tokens: { [key: string]: { [key: string]: Token } } = {
   ethereum: EthereumTokens,
 };
 
+export const ChainIdMaps: { [key: number]: string } = {
+  1: 'ethereum',
+  56: 'bnbchain',
+  42161: 'arbitrum',
+  137: 'polygon',
+  43114: 'avalanche',
+  10: 'optimism',
+  250: 'fantom',
+  42220: 'celo',
+  25: 'cronos',
+  122: 'fuse',
+  32659: 'fusion',
+  4689: 'iotex',
+  1666600000: 'harmony',
+  128: 'huobi',
+  321: 'kucoin',
+  1285: 'moonriver',
+  1284: 'moonbeam',
+  66: 'okex',
+  336: 'shiden',
+  40: 'telos',
+  84: 'xdai',
+  288: 'boba',
+};
+
 export const HardCodeTokens: { [key: string]: Token } = {
   'ethereum:0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee': {
     chain: 'ethereum',

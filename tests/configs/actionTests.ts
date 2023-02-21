@@ -7,9 +7,11 @@ import { Compound3ActionTestLogs, CompoundActionTestLogs } from './protocols/com
 import { CowswapActionTestLogs } from './protocols/cowswap';
 import { CurveActionTestLogs } from './protocols/curve';
 import { EnsActionTestLogs } from './protocols/ens';
+import { HopActionTestLogs } from './protocols/hop';
 import { IronbankActionTestLogs } from './protocols/ironbank';
 import { LidoActionTestLogs } from './protocols/lido';
 import { LoopringActionTestLogs } from './protocols/loopring';
+import { MultichainActionTestLogs } from './protocols/multichain';
 import { OptimismActionTestLogs } from './protocols/optimism';
 import { PancakeswapActionTestLogs } from './protocols/pancakeswap';
 import { RocketpoolActionTestLogs } from './protocols/rocketpool';
@@ -34,4 +36,6 @@ export const ActionTestLogs: Array<TestLog> = [
   ...AurafinanceActionTestLogs,
   ...EnsActionTestLogs,
   ...OptimismActionTestLogs,
+  ...HopActionTestLogs,
+  ...MultichainActionTestLogs,
 ];
