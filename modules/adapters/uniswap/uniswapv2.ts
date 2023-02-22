@@ -93,7 +93,7 @@ export class Uniswapv2Adapter extends Adapter {
               return {
                 protocol: this.config.protocol,
                 action: 'swap',
-                addresses: [sender, to],
+                addresses: [to, sender],
                 tokens: [tokenIn, tokenOut],
                 tokenAmounts: [amountIn, amountOut],
                 readableString: `${sender} swaps ${amountIn} ${tokenIn.symbol} for ${amountOut} ${tokenOut.symbol} on ${this.config.protocol} chain ${chain}`,
@@ -129,7 +129,7 @@ export class Uniswapv2Adapter extends Adapter {
               return {
                 protocol: this.config.protocol,
                 action: 'removeLiquidity',
-                addresses: [sender, to],
+                addresses: [to, sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
                 readableString: `${sender} removes ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,

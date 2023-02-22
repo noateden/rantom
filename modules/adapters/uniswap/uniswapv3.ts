@@ -104,7 +104,7 @@ export class Uniswapv3Adapter extends Adapter {
               return {
                 protocol: this.config.protocol,
                 action: 'swap',
-                addresses: [sender, recipient],
+                addresses: [recipient, sender],
                 tokens: [tokenIn, tokenOut],
                 tokenAmounts: [amountIn, amountOut],
                 readableString: `${sender} swaps ${amountIn} ${tokenIn.symbol} for ${amountOut} ${tokenOut.symbol} on ${this.config.protocol} chain ${chain}`,
@@ -124,7 +124,7 @@ export class Uniswapv3Adapter extends Adapter {
               return {
                 protocol: this.config.protocol,
                 action: 'addLiquidity',
-                addresses: [sender, owner],
+                addresses: [owner, sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
                 readableString: `${owner} adds ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
@@ -143,7 +143,7 @@ export class Uniswapv3Adapter extends Adapter {
               return {
                 protocol: this.config.protocol,
                 action: 'removeLiquidity',
-                addresses: [options.sender, owner],
+                addresses: [owner, options.sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
                 readableString: `${owner} removes ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
