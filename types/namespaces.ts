@@ -7,6 +7,7 @@ import {
   ExploreLatestTransactionsOptions,
   ParseTransactionOptions,
   TransferParseLogOptions,
+  WorkerRunOptions,
 } from './options';
 
 export interface IProvider {
@@ -61,4 +62,12 @@ export interface IExplorerProvider extends IProvider {
   parser: IParserProvider;
 
   exploreLatestTransactions(options: ExploreLatestTransactionsOptions): Promise<Array<Transaction>>;
+}
+
+// worker fetch the latest transactions from chain, parses and saves them to database for exploring queries
+export interface IWorkerProvider extends IProvider {
+  parser: IParserProvider;
+  providers: GlobalProviders | null;
+
+  run: (options: WorkerRunOptions) => Promise<void>;
 }

@@ -21,3 +21,7 @@ export interface AdapterParseLogOptions {
 export interface ExploreLatestTransactionsOptions {
   chain: string;
 }
+
+export interface WorkerRunOptions {
+  chain: string;
+}

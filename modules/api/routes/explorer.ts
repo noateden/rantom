@@ -2,8 +2,6 @@ import { Router } from 'express';
 
 import logger from '../../../lib/logger';
 import { GlobalProviders } from '../../../types/namespaces';
-import { ExplorerProvider } from '../../explorer';
-import { ParserProvider } from '../../parser';
 import { writeResponseError } from '../helpers';
 
 export function getRouter(providers: GlobalProviders): Router {
@@ -15,10 +13,19 @@ export function getRouter(providers: GlobalProviders): Router {
     // support ethereum only for now
     if (chain === 'ethereum') {
       try {
-        const parser = new ParserProvider(providers);
-        const explorer = new ExplorerProvider(parser);
-        const transactions = await explorer.exploreLatestTransactions({ chain });
-        response.status(200).json(transactions).end();
+        const collections = await providers.mongodb.requireCollections();
+        const transactions = await collections.transactionsCollection
+          .find({ chain })
+          .sort({ timestamp: -1 })
+          .limit(100)
+          .toArray();
+        const dataReturns = [];
+        for (const transaction of transactions) {
+          delete (transaction as any)._id;
+          dataReturns.push(transaction);
+        }
+
+        response.status(200).json(dataReturns).end();
       } catch (e: any) {
         logger.onError({
           service: 'api',
