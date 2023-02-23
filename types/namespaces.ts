@@ -2,13 +2,7 @@ import { Collection } from 'mongodb';
 
 import { EventMapping, ProtocolConfig, Token } from './configs';
 import { MongoCollections, Transaction, TransactionAction, TransactionTransfer } from './domains';
-import {
-  AdapterParseLogOptions,
-  ExploreLatestTransactionsOptions,
-  ParseTransactionOptions,
-  TransferParseLogOptions,
-  WorkerRunOptions,
-} from './options';
+import { AdapterParseLogOptions, ParseTransactionOptions, TransferParseLogOptions, WorkerRunOptions } from './options';
 
 export interface IProvider {
   name: string;
@@ -56,12 +50,6 @@ export interface IParserProvider extends IProvider {
   transferParser: ITransferParser;
 
   parseTransaction: (options: ParseTransactionOptions) => Promise<Array<Transaction>>;
-}
-
-export interface IExplorerProvider extends IProvider {
-  parser: IParserProvider;
-
-  exploreLatestTransactions(options: ExploreLatestTransactionsOptions): Promise<Array<Transaction>>;
 }
 
 // worker fetch the latest transactions from chain, parses and saves them to database for exploring queries

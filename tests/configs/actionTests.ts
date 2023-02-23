@@ -4,6 +4,7 @@ import { AurafinanceActionTestLogs } from './protocols/aurafinance';
 import { BalancerActionTestLogs } from './protocols/balancer';
 import { BancorActionTestLogs } from './protocols/bancor';
 import { BeanstalkActionTestLogs } from './protocols/beanstalk';
+import { BlurActionTestLogs } from './protocols/blur';
 import { Compound3ActionTestLogs, CompoundActionTestLogs } from './protocols/compound';
 import { CowswapActionTestLogs } from './protocols/cowswap';
 import { CurveActionTestLogs } from './protocols/curve';
@@ -40,4 +41,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...HopActionTestLogs,
   ...MultichainActionTestLogs,
   ...BeanstalkActionTestLogs,
+  ...BlurActionTestLogs,
 ];

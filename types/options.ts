@@ -18,10 +18,6 @@ export interface AdapterParseLogOptions {
   data: string;
 }
 
-export interface ExploreLatestTransactionsOptions {
-  chain: string;
-}
-
 export interface WorkerRunOptions {
   chain: string;
 }

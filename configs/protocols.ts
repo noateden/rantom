@@ -325,3 +325,12 @@ export const BeanstalkConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const BlurConfigs: ProtocolConfig = {
+  protocol: 'blur',
+  contracts: {
+    ethereum: [
+      '0x000000000000ad05ccc4f10045630fb830b95127', // Blur Marketplace
+    ],
+  },
+};
