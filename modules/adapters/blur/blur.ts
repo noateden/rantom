@@ -38,6 +38,7 @@ export class BlurAdapter extends Adapter {
           const buyer = normalizeAddress((event.buy as any).trader);
           const seller = normalizeAddress((event.sell as any).trader);
           const tokenId = parseInt((event.sell as any).tokenId);
+          const amount = parseInt((event.sell as any).amount);
           const tokenPayAmount = new BigNumber((event.buy as any).price.toString())
             .dividedBy(new BigNumber(10).pow(token.decimals))
             .toString(10);
@@ -53,8 +54,9 @@ export class BlurAdapter extends Adapter {
                 ...nft,
               },
               tokenId: tokenId,
+              amount: amount,
             },
-            readableString: `${buyer} buy ${nft.symbol} [TokenId:${tokenId}] for ${tokenPayAmount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+            readableString: `${buyer} buy ${amount} [TokenId:${tokenId}] ${nft.symbol} for ${tokenPayAmount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
           };
         }
       }
