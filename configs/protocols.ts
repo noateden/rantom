@@ -343,3 +343,21 @@ export const LooksrareConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const OpenseaConfigs: ProtocolConfig = {
+  protocol: 'opensea',
+  contracts: {
+    ethereum: [
+      '0x00000000006c3852cbef3e08e8df289169ede581', // Seaport 1.1
+    ],
+  },
+};
+
+export const X2y2Configs: ProtocolConfig = {
+  protocol: 'x2y2',
+  contracts: {
+    ethereum: [
+      '0x74312363e45dcaba76c59ec49a7aa8a65a67eed3', // X2y2 Exchange
+    ],
+  },
+};

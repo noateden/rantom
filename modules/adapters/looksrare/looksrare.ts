@@ -69,7 +69,7 @@ export class LooksrareAdapter extends Adapter {
 
           return {
             protocol: this.config.protocol,
-            action: signature === Signatures.Ask ? 'ask' : 'buy',
+            action: 'buy',
             addresses: [taker, maker],
             tokens: [paymentToken],
             tokenAmounts: [price],
@@ -77,9 +77,7 @@ export class LooksrareAdapter extends Adapter {
               ...nftData,
               amount: event.amount.toString(),
             },
-            readableString: `${taker} ${signature === Signatures.Ask ? 'ask' : 'buy'} ${event.amount} [TokenId:${
-              event.tokenId
-            }] ${nftData.token.symbol} for ${price} ${paymentToken.symbol} on ${this.config.protocol} chain ${chain}`,
+            readableString: `${taker} buy ${event.amount} [TokenId:${event.tokenId}] ${nftData.token.symbol} for ${price} ${paymentToken.symbol} on ${this.config.protocol} chain ${chain}`,
           };
         }
       }

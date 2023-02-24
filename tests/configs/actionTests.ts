@@ -20,6 +20,7 @@ import { PancakeswapActionTestLogs } from './protocols/pancakeswap';
 import { RocketpoolActionTestLogs } from './protocols/rocketpool';
 import { SushiActionTestLogs } from './protocols/sushi';
 import { UniswapActionTestLogs } from './protocols/uniswap';
+import { X2y2ActionTestLogs } from './protocols/x2y2';
 
 export const ActionTestLogs: Array<TestLog> = [
   ...UniswapActionTestLogs,
@@ -44,4 +45,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...BeanstalkActionTestLogs,
   ...BlurActionTestLogs,
   ...LooksrareActionTestLogs,
+  ...X2y2ActionTestLogs,
 ];

@@ -3,6 +3,7 @@ import Web3 from 'web3';
 import { ParserVersion } from '../../configs';
 import EnvConfig from '../../configs/envConfig';
 import { normalizeAddress } from '../../lib/helper';
+import logger from '../../lib/logger';
 import { Transaction, TransactionAction, TransactionTransfer } from '../../types/domains';
 import { GlobalProviders, IAdapter, IParserProvider, ITransferParser } from '../../types/namespaces';
 import { ParseTransactionOptions } from '../../types/options';
@@ -24,18 +25,6 @@ export class ParserProvider implements IParserProvider {
   }
 
   public async parseTransaction(options: ParseTransactionOptions): Promise<Array<Transaction>> {
-    // if (this.providers && !options.force) {
-    //   const collections: MongoCollections = await this.providers.mongodb.requireCollections();
-    //
-    //   // query previous parsing data from database
-    //   const existedTransactions: Array<any> = await collections.transactionsCollection
-    //     .find({ hash: options.hash, version: ParserVersion })
-    //     .toArray();
-    //   if (existedTransactions.length > 0) {
-    //     return existedTransactions as Array<Transaction>;
-    //   }
-    // }
-
     // get actions from transaction receipt
     const transactions: Array<Transaction> = [];
     for (const [, blockchain] of Object.entries(EnvConfig.blockchains)) {
@@ -94,34 +83,23 @@ export class ParserProvider implements IParserProvider {
         }
 
         transactions.push(transaction);
-      } catch (e: any) {}
-    }
+      } catch (e: any) {
+        logger.onError({
+          service: this.name,
+          message: 'failed to parse transaction',
+          props: {
+            chain: blockchain.name,
+            rpc: blockchain.nodeRpc,
+            hash: options.hash,
+          },
+          error: e,
+        });
 
-    // save transactions info database
-    // if (this.providers && !options.force) {
-    //   const collections: MongoCollections = await this.providers.mongodb.requireCollections();
-    //   const operations: Array<any> = [];
-    //   for (const transaction of transactions) {
-    //     operations.push({
-    //       updateOne: {
-    //         filter: {
-    //           chain: transaction.chain,
-    //           hash: transaction.hash,
-    //         },
-    //         update: {
-    //           $set: {
-    //             ...transaction,
-    //           },
-    //         },
-    //         upsert: true,
-    //       },
-    //     });
-    //   }
-    //
-    //   if (operations.length > 0) {
-    //     await collections.transactionsCollection.bulkWrite(operations);
-    //   }
-    // }
+        if (this.providers) {
+          this.providers.sentry.capture(e);
+        }
+      }
+    }
 
     return transactions;
   }

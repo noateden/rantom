@@ -2839,4 +2839,256 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+
+  // Opensea.io
+  // OrderFulfilled event
+  '0x9d9af8e38d66c62e2c12f0225249fd9d721c54b83f48d9352c97c6cacdcb6f31': {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'orderHash',
+        type: 'bytes32',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'offerer',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'zone',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'recipient',
+        type: 'address',
+      },
+      {
+        components: [
+          {
+            internalType: 'enum ItemType',
+            name: 'itemType',
+            type: 'uint8',
+          },
+          {
+            internalType: 'address',
+            name: 'token',
+            type: 'address',
+          },
+          {
+            internalType: 'uint256',
+            name: 'identifier',
+            type: 'uint256',
+          },
+          {
+            internalType: 'uint256',
+            name: 'amount',
+            type: 'uint256',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct SpentItem[]',
+        name: 'offer',
+        type: 'tuple[]',
+      },
+      {
+        components: [
+          {
+            internalType: 'enum ItemType',
+            name: 'itemType',
+            type: 'uint8',
+          },
+          {
+            internalType: 'address',
+            name: 'token',
+            type: 'address',
+          },
+          {
+            internalType: 'uint256',
+            name: 'identifier',
+            type: 'uint256',
+          },
+          {
+            internalType: 'uint256',
+            name: 'amount',
+            type: 'uint256',
+          },
+          {
+            internalType: 'address payable',
+            name: 'recipient',
+            type: 'address',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct ReceivedItem[]',
+        name: 'consideration',
+        type: 'tuple[]',
+      },
+    ],
+  },
+
+  // x2y2 exchange: https://etherscan.io/address/0x74312363e45dcaba76c59ec49a7aa8a65a67eed3
+  // EvInventory event
+  '0x3cbb63f144840e5b1b0a38a7c19211d2e89de4d7c5faf8b2d3c1776c302d1d33': {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'itemHash',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'maker',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'taker',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'orderSalt',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'settleSalt',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'intent',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'delegateType',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'deadline',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'contract IERC20Upgradeable',
+        name: 'currency',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes',
+        name: 'dataMask',
+        type: 'bytes',
+      },
+      {
+        components: [
+          {
+            internalType: 'uint256',
+            name: 'price',
+            type: 'uint256',
+          },
+          {
+            internalType: 'bytes',
+            name: 'data',
+            type: 'bytes',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct Market.OrderItem',
+        name: 'item',
+        type: 'tuple',
+      },
+      {
+        components: [
+          {
+            internalType: 'enum Market.Op',
+            name: 'op',
+            type: 'uint8',
+          },
+          {
+            internalType: 'uint256',
+            name: 'orderIdx',
+            type: 'uint256',
+          },
+          {
+            internalType: 'uint256',
+            name: 'itemIdx',
+            type: 'uint256',
+          },
+          {
+            internalType: 'uint256',
+            name: 'price',
+            type: 'uint256',
+          },
+          {
+            internalType: 'bytes32',
+            name: 'itemHash',
+            type: 'bytes32',
+          },
+          {
+            internalType: 'contract IDelegate',
+            name: 'executionDelegate',
+            type: 'address',
+          },
+          {
+            internalType: 'bytes',
+            name: 'dataReplacement',
+            type: 'bytes',
+          },
+          {
+            internalType: 'uint256',
+            name: 'bidIncentivePct',
+            type: 'uint256',
+          },
+          {
+            internalType: 'uint256',
+            name: 'aucMinIncrementPct',
+            type: 'uint256',
+          },
+          {
+            internalType: 'uint256',
+            name: 'aucIncDurationSecs',
+            type: 'uint256',
+          },
+          {
+            components: [
+              {
+                internalType: 'uint256',
+                name: 'percentage',
+                type: 'uint256',
+              },
+              {
+                internalType: 'address',
+                name: 'to',
+                type: 'address',
+              },
+            ],
+            internalType: 'struct Market.Fee[]',
+            name: 'fees',
+            type: 'tuple[]',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct Market.SettleDetail',
+        name: 'detail',
+        type: 'tuple',
+      },
+    ],
+  },
 };

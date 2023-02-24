@@ -19,6 +19,7 @@ import {
   LooksrareConfigs,
   LoopringConfigs,
   MultichainConfigs,
+  OpenseaConfigs,
   OptimismConfigs,
   PancakeswapConfigs,
   RocketpoolConfigs,
@@ -26,6 +27,7 @@ import {
   SushiConfigs,
   Uniswapv2Configs,
   Uniswapv3Configs,
+  X2y2Configs,
 } from '../../configs/protocols';
 import { GlobalProviders, IAdapter } from '../../types/namespaces';
 import { Aavev1Adapter } from './aave/aavev1';
@@ -47,11 +49,13 @@ import { LidoAdapter } from './lido/lido';
 import { LooksrareAdapter } from './looksrare/looksrare';
 import { LoopringAdapter } from './loopring/loopring';
 import { MultichainAdapter } from './multichain/multichain';
+import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SushiAdapter } from './sushi/sushi';
 import { Uniswapv2Adapter } from './uniswap/uniswapv2';
 import { Uniswapv3Adapter } from './uniswap/uniswapv3';
+import { X2y2Adapter } from './x2y2/x2y2';
 
 export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> {
   return [
@@ -87,5 +91,7 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new BeanstalkAdapter(BeanstalkConfigs, providers),
     new LooksrareAdapter(LooksrareConfigs, providers),
     new BlurAdapter(BlurConfigs, providers),
+    new OpenseaAdapter(OpenseaConfigs, providers),
+    new X2y2Adapter(X2y2Configs, providers),
   ];
 }
