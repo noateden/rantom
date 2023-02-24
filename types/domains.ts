@@ -34,7 +34,7 @@ export type KnownAction =
 
 export interface NonFungibleTokenData {
   token: Token;
-  tokenId: number;
+  tokenId: string;
   image: string;
 }
 

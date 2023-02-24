@@ -24,7 +24,7 @@ export interface IWeb3HelperProvider extends IProvider {
   getNonFungibleTokenData: (
     chain: string,
     tokenAddress: string,
-    tokenId: number
+    tokenId: string
   ) => Promise<NonFungibleTokenData | null>;
 }
 

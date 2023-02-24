@@ -31,7 +31,7 @@ export class BlurAdapter extends Adapter {
       const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
       if (signature === Signatures.OrdersMatch) {
-        const tokenId = parseInt((event.sell as any).tokenId);
+        const tokenId = (event.sell as any).tokenId.toString();
         const nftData = await this.getWeb3Helper().getNonFungibleTokenData(
           chain,
           (event.buy as any).collection,
@@ -42,7 +42,7 @@ export class BlurAdapter extends Adapter {
         if (nftData && token) {
           const buyer = normalizeAddress((event.buy as any).trader);
           const seller = normalizeAddress((event.sell as any).trader);
-          const amount = parseInt((event.sell as any).amount);
+          const amount = (event.sell as any).amount.toString();
           const tokenPayAmount = new BigNumber((event.buy as any).price.toString())
             .dividedBy(new BigNumber(10).pow(token.decimals))
             .toString(10);

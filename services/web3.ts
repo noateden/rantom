@@ -115,7 +115,7 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
   public async getNonFungibleTokenData(
     chain: string,
     tokenAddress: string,
-    tokenId: number
+    tokenId: string
   ): Promise<NonFungibleTokenData | null> {
     try {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
@@ -123,7 +123,7 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
 
       const token: Token | null = await this.getErc721Metadata(chain, tokenAddress);
       if (token) {
-        const tokenUri = transformToHttpUrl(await contract.methods.tokenURI(tokenId).call());
+        const tokenUri = transformToHttpUrl(await contract.methods.tokenURI(new BigNumber(tokenId).toNumber()).call());
         const response = await axios.get(tokenUri);
         return {
           token: token,

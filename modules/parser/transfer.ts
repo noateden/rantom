@@ -6,7 +6,7 @@ import { normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { Web3HelperProvider } from '../../services/web3';
 import { Token } from '../../types/configs';
-import { TransactionTransfer } from '../../types/domains';
+import { NonFungibleTokenData, TransactionTransfer } from '../../types/domains';
 import { GlobalProviders, ITransferParser, IWeb3HelperProvider } from '../../types/namespaces';
 import { TransferParseLogOptions } from '../../types/options';
 
@@ -96,10 +96,14 @@ export class TransferParser implements ITransferParser {
             data,
             topics.slice(1)
           );
-          const token: Token | null = await this.getWeb3Helper().getErc721Metadata(options.chain, options.address);
+          const token: NonFungibleTokenData | null = await this.getWeb3Helper().getNonFungibleTokenData(
+            options.chain,
+            options.address,
+            new BigNumber(event.tokenId).toString(10)
+          );
           if (token) {
             return {
-              token,
+              ...token,
               from: normalizeAddress(event.from),
               to: normalizeAddress(event.to),
               amount: '1',
