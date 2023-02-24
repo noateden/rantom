@@ -16,6 +16,7 @@ import {
   HopConfigs,
   IronbankConfigs,
   LidoConfigs,
+  LooksrareConfigs,
   LoopringConfigs,
   MultichainConfigs,
   OptimismConfigs,
@@ -43,6 +44,7 @@ import { EnsAdapter } from './ens/ens';
 import { HopAdapter } from './hop/hop';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { LidoAdapter } from './lido/lido';
+import { LooksrareAdapter } from './looksrare/looksrare';
 import { LoopringAdapter } from './loopring/loopring';
 import { MultichainAdapter } from './multichain/multichain';
 import { OptimismAdapter } from './optimism/optimism';
@@ -83,6 +85,7 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new HopAdapter(HopConfigs, providers),
     new MultichainAdapter(MultichainConfigs, providers),
     new BeanstalkAdapter(BeanstalkConfigs, providers),
+    new LooksrareAdapter(LooksrareConfigs, providers),
     new BlurAdapter(BlurConfigs, providers),
   ];
 }

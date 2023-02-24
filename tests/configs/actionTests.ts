@@ -12,6 +12,7 @@ import { EnsActionTestLogs } from './protocols/ens';
 import { HopActionTestLogs } from './protocols/hop';
 import { IronbankActionTestLogs } from './protocols/ironbank';
 import { LidoActionTestLogs } from './protocols/lido';
+import { LooksrareActionTestLogs } from './protocols/looksrare';
 import { LoopringActionTestLogs } from './protocols/loopring';
 import { MultichainActionTestLogs } from './protocols/multichain';
 import { OptimismActionTestLogs } from './protocols/optimism';
@@ -42,4 +43,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...MultichainActionTestLogs,
   ...BeanstalkActionTestLogs,
   ...BlurActionTestLogs,
+  ...LooksrareActionTestLogs,
 ];

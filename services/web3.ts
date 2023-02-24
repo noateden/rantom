@@ -123,13 +123,23 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
 
       const token: Token | null = await this.getErc721Metadata(chain, tokenAddress);
       if (token) {
-        const tokenUri = transformToHttpUrl(await contract.methods.tokenURI(new BigNumber(tokenId).toNumber()).call());
-        const response = await axios.get(tokenUri);
-        return {
-          token: token,
-          tokenId: tokenId,
-          image: transformToHttpUrl(response.data.image),
-        };
+        try {
+          const tokenUri = transformToHttpUrl(
+            await contract.methods.tokenURI(new BigNumber(tokenId).toNumber()).call()
+          );
+          const response = await axios.get(tokenUri);
+          return {
+            token: token,
+            tokenId: tokenId,
+            image: transformToHttpUrl(response.data.image),
+          };
+        } catch (e: any) {
+          return {
+            token: token,
+            tokenId: tokenId,
+            image: '',
+          };
+        }
       }
     } catch (e: any) {
       logger.onError({

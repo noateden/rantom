@@ -27,6 +27,7 @@ export type KnownAction =
   | 'renew'
 
   // use for NFT trading
+  | 'ask'
   | 'buy'
 
   // use for layer 2 batch transaction

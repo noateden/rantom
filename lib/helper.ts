@@ -31,7 +31,7 @@ export function compareAddress(address1: string, address2: string): boolean {
 }
 
 export function transformToHttpUrl(url: string): string {
-  if (url.includes('ipfs')) {
+  if (url.includes('ipfs://')) {
     return `https://ipfs.io/ipfs/${url.split('://')[1]}`;
   }
 

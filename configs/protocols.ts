@@ -334,3 +334,12 @@ export const BlurConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const LooksrareConfigs: ProtocolConfig = {
+  protocol: 'looksrare',
+  contracts: {
+    ethereum: [
+      '0x59728544b08ab483533076417fbbb2fd0b17ce3a', // Looksrare Exchange
+    ],
+  },
+};
