@@ -1,3 +1,4 @@
+import axios from 'axios';
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
@@ -5,9 +6,10 @@ import Erc20Abi from '../configs/abi/ERC20.json';
 import Erc721Abi from '../configs/abi/ERC721.json';
 import { AddressZero, HardCodeTokens, HardcodeNft, Tokens } from '../configs/constants';
 import EnvConfig from '../configs/envConfig';
-import { compareAddress, normalizeAddress } from '../lib/helper';
+import { compareAddress, normalizeAddress, transformToHttpUrl } from '../lib/helper';
 import logger from '../lib/logger';
 import { Token } from '../types/configs';
+import { NonFungibleTokenData } from '../types/domains';
 import { IWeb3HelperProvider } from '../types/namespaces';
 import SentryProvider from './sentry';
 
@@ -100,6 +102,43 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
         props: {
           chain,
           token: normalizeAddress(tokenAddress),
+        },
+        error: e,
+      });
+      const sentry = new SentryProvider(EnvConfig.sentry.dns);
+      await sentry.capture(e);
+    }
+
+    return null;
+  }
+
+  public async getNonFungibleTokenData(
+    chain: string,
+    tokenAddress: string,
+    tokenId: number
+  ): Promise<NonFungibleTokenData | null> {
+    try {
+      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+      const contract = new web3.eth.Contract(Erc721Abi as any, tokenAddress);
+
+      const token: Token | null = await this.getErc721Metadata(chain, tokenAddress);
+      if (token) {
+        const tokenUri = transformToHttpUrl(await contract.methods.tokenURI(tokenId).call());
+        const response = await axios.get(tokenUri);
+        return {
+          token: token,
+          tokenId: tokenId,
+          image: transformToHttpUrl(response.data.image),
+        };
+      }
+    } catch (e: any) {
+      logger.onError({
+        service: this.name,
+        message: 'failed to get non-fungible token data',
+        props: {
+          chain,
+          token: normalizeAddress(tokenAddress),
+          tokenId: tokenId,
         },
         error: e,
       });

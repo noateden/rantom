@@ -29,3 +29,11 @@ export function normalizeAddress(address: string | undefined): string {
 export function compareAddress(address1: string, address2: string): boolean {
   return normalizeAddress(address1) === normalizeAddress(address2);
 }
+
+export function transformToHttpUrl(url: string): string {
+  if (url.includes('ipfs')) {
+    return `https://ipfs.io/ipfs/${url.split('://')[1]}`;
+  }
+
+  return url;
+}

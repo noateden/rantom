@@ -32,6 +32,12 @@ export type KnownAction =
   // use for layer 2 batch transaction
   | 'batch';
 
+export interface NonFungibleTokenData {
+  token: Token;
+  tokenId: number;
+  image: string;
+}
+
 export interface TransactionAction {
   protocol: string;
   action: KnownAction;

@@ -1,7 +1,7 @@
 import { Collection } from 'mongodb';
 
 import { EventMapping, ProtocolConfig, Token } from './configs';
-import { MongoCollections, Transaction, TransactionAction, TransactionTransfer } from './domains';
+import { MongoCollections, NonFungibleTokenData, Transaction, TransactionAction, TransactionTransfer } from './domains';
 import { AdapterParseLogOptions, ParseTransactionOptions, TransferParseLogOptions, WorkerRunOptions } from './options';
 
 export interface IProvider {
@@ -21,6 +21,11 @@ export interface ISentryProvider extends IProvider {
 export interface IWeb3HelperProvider extends IProvider {
   getErc20Metadata: (chain: string, tokenAddress: string) => Promise<Token | null>;
   getErc721Metadata: (chain: string, tokenAddress: string) => Promise<Token | null>;
+  getNonFungibleTokenData: (
+    chain: string,
+    tokenAddress: string,
+    tokenId: number
+  ) => Promise<NonFungibleTokenData | null>;
 }
 
 export interface GlobalProviders {

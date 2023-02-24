@@ -31,13 +31,17 @@ export class BlurAdapter extends Adapter {
       const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
       if (signature === Signatures.OrdersMatch) {
-        const nft = await this.getWeb3Helper().getErc721Metadata(chain, (event.buy as any).collection);
+        const tokenId = parseInt((event.sell as any).tokenId);
+        const nftData = await this.getWeb3Helper().getNonFungibleTokenData(
+          chain,
+          (event.buy as any).collection,
+          tokenId
+        );
         const token = await this.getWeb3Helper().getErc20Metadata(chain, (event.buy as any).paymentToken);
 
-        if (nft && token) {
+        if (nftData && token) {
           const buyer = normalizeAddress((event.buy as any).trader);
           const seller = normalizeAddress((event.sell as any).trader);
-          const tokenId = parseInt((event.sell as any).tokenId);
           const amount = parseInt((event.sell as any).amount);
           const tokenPayAmount = new BigNumber((event.buy as any).price.toString())
             .dividedBy(new BigNumber(10).pow(token.decimals))
@@ -50,13 +54,10 @@ export class BlurAdapter extends Adapter {
             tokens: [token],
             tokenAmounts: [tokenPayAmount],
             addition: {
-              token: {
-                ...nft,
-              },
-              tokenId: tokenId,
+              ...nftData,
               amount: amount,
             },
-            readableString: `${buyer} buy ${amount} [TokenId:${tokenId}] ${nft.symbol} for ${tokenPayAmount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+            readableString: `${buyer} buy ${amount} [TokenId:${tokenId}] ${nftData.token.symbol} for ${tokenPayAmount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
           };
         }
       }
