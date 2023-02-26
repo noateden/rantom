@@ -1,8 +1,9 @@
+import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
-import { ProtocolConfig } from '../../../types/configs';
+import { ProtocolConfig, Token } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { AdapterParseLogOptions } from '../../../types/options';
@@ -33,7 +34,70 @@ export class OpenseaAdapter extends Adapter {
       const web3 = new Web3();
       const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
-      console.info(event);
+      if (signature === Signatures.OrderFullFilled) {
+        const offer = event.offer[0] as any;
+        const considerations = event.consideration as any;
+        const offerAssetType = parseInt(offer.itemType);
+        const offerer = normalizeAddress(event.offerer);
+        const recipient = normalizeAddress(event.recipient);
+        if (offerAssetType === 0 || offerAssetType === 1) {
+          // buy offer
+          const nftData = await this.getWeb3Helper().getNonFungibleTokenData(
+            chain,
+            considerations[0].token,
+            considerations[0].identifier
+          );
+          const token = await this.getWeb3Helper().getErc20Metadata(chain, offer.token);
+          if (nftData && token) {
+            const amount = new BigNumber(offer.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
+            return {
+              protocol: this.config.protocol,
+              action: 'buy',
+              addresses: [offerer, recipient],
+              tokens: [token],
+              tokenAmounts: [amount],
+              addition: {
+                ...nftData,
+                amount: offer.amount,
+              },
+              readableString: `${offer} buy ${considerations[0].amount} [TokenId:${nftData.tokenId}] ${nftData.token.symbol} for ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+            };
+          }
+        } else {
+          // sell offer
+          const nftData = await this.getWeb3Helper().getNonFungibleTokenData(chain, offer.token, offer.identifier);
+
+          let token: Token | null = null;
+          let tokenAmount: BigNumber = new BigNumber(0);
+
+          for (const consideration of considerations) {
+            const payToken = await this.getWeb3Helper().getErc20Metadata(chain, consideration.token);
+            if (payToken) {
+              token = payToken;
+              tokenAmount = tokenAmount.plus(
+                new BigNumber(consideration.amount).dividedBy(new BigNumber(10).pow(payToken.decimals))
+              );
+            }
+          }
+
+          if (nftData && token) {
+            return {
+              protocol: this.config.protocol,
+              action: 'buy',
+              addresses: [recipient, offerer],
+              tokens: [token],
+              tokenAmounts: [tokenAmount.toString(10)],
+              addition: {
+                ...nftData,
+                amount: offer.amount,
+              },
+              readableString: `${recipient} buy ${offer.amount} [TokenId:${nftData.tokenId}] ${
+                nftData.token.symbol
+              } for ${tokenAmount.toString(10)} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+            };
+          }
+        }
+      }
     }
 
     return null;

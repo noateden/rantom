@@ -15,6 +15,7 @@ import { LidoActionTestLogs } from './protocols/lido';
 import { LooksrareActionTestLogs } from './protocols/looksrare';
 import { LoopringActionTestLogs } from './protocols/loopring';
 import { MultichainActionTestLogs } from './protocols/multichain';
+import { OpenseaActionTestLogs } from './protocols/opensea';
 import { OptimismActionTestLogs } from './protocols/optimism';
 import { PancakeswapActionTestLogs } from './protocols/pancakeswap';
 import { RocketpoolActionTestLogs } from './protocols/rocketpool';
@@ -46,4 +47,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...BlurActionTestLogs,
   ...LooksrareActionTestLogs,
   ...X2y2ActionTestLogs,
+  ...OpenseaActionTestLogs,
 ];
