@@ -63,21 +63,21 @@ export class LooksrareAdapter extends Adapter {
         );
         const paymentToken = await this.getWeb3Helper().getErc20Metadata(chain, event.currency);
         if (paymentToken && nftData) {
-          const taker = normalizeAddress(event.taker);
-          const maker = normalizeAddress(event.maker);
+          const seller = signature === Signatures.Bid ? normalizeAddress(event.maker) : normalizeAddress(event.taker);
+          const buyer = signature === Signatures.Bid ? normalizeAddress(event.taker) : normalizeAddress(event.maker);
           const price = new BigNumber(event.price).dividedBy(new BigNumber(10).pow(paymentToken.decimals)).toString(10);
 
           return {
             protocol: this.config.protocol,
             action: 'buy',
-            addresses: [taker, maker],
+            addresses: [buyer, seller],
             tokens: [paymentToken],
             tokenAmounts: [price],
             addition: {
               ...nftData,
               amount: event.amount.toString(),
             },
-            readableString: `${taker} buy ${event.amount} [TokenId:${event.tokenId}] ${nftData.token.symbol} for ${price} ${paymentToken.symbol} on ${this.config.protocol} chain ${chain}`,
+            readableString: `${buyer} buy ${event.amount} [TokenId:${event.tokenId}] ${nftData.token.symbol} for ${price} ${paymentToken.symbol} on ${this.config.protocol} chain ${chain}`,
           };
         }
       }
