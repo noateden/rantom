@@ -42,19 +42,19 @@ export class Compoundv3Adapter extends Adapter {
       const poolContract = new web3.eth.Contract(CometAbi as any, address);
 
       let token = null;
-      let action = 'supply';
+      let action: KnownAction = 'deposit';
       switch (signature) {
         case Signatures.SupplyV3:
         case Signatures.WithdrawV3: {
           const baseTokenAddr = await poolContract.methods.baseToken().call();
           token = await this.getWeb3Helper().getErc20Metadata(chain, baseTokenAddr);
-          action = signature === Signatures.SupplyV3 ? 'supply' : 'withdraw';
+          action = signature === Signatures.SupplyV3 ? 'deposit' : 'withdraw';
           break;
         }
         case Signatures.SupplyCollateralV3:
         case Signatures.WithdrawCollateralV3: {
           token = await this.getWeb3Helper().getErc20Metadata(chain, event.asset);
-          action = signature === Signatures.SupplyCollateralV3 ? 'supply' : 'withdraw';
+          action = signature === Signatures.SupplyCollateralV3 ? 'deposit' : 'withdraw';
           break;
         }
       }

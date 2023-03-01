@@ -110,7 +110,7 @@ export class Uniswapv2Adapter extends Adapter {
 
               return {
                 protocol: this.config.protocol,
-                action: 'addLiquidity',
+                action: 'deposit',
                 addresses: [sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
@@ -128,7 +128,7 @@ export class Uniswapv2Adapter extends Adapter {
               const to = normalizeAddress(event.to);
               return {
                 protocol: this.config.protocol,
-                action: 'removeLiquidity',
+                action: 'withdraw',
                 addresses: [to, sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],

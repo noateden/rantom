@@ -88,14 +88,14 @@ export class BalancerAdapter extends Adapter {
           }
 
           if (tokens.length > 0) {
-            let action: KnownAction = 'addLiquidity';
+            let action: KnownAction = 'deposit';
             const amounts: Array<string> = [];
             for (let i = 0; i < event.deltas.length; i++) {
               const amount = new BigNumber(event.deltas[i].toString()).dividedBy(
                 new BigNumber(10).pow(tokens[i].decimals)
               );
               if (amount.lt(0)) {
-                action = 'removeLiquidity';
+                action = 'withdraw';
               }
               amounts.push(amount.abs().toString(10));
             }
@@ -113,7 +113,7 @@ export class BalancerAdapter extends Adapter {
               addresses: [provider],
               tokens: tokens,
               tokenAmounts: amounts,
-              readableString: `${options.sender} ${action === 'addLiquidity' ? 'adds' : 'removes'} ${tokenAmount.slice(
+              readableString: `${options.sender} ${action === 'deposit' ? 'adds' : 'removes'} ${tokenAmount.slice(
                 2
               )} on ${this.config.protocol} chain ${chain}`,
             };

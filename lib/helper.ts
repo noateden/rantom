@@ -37,3 +37,11 @@ export function transformToHttpUrl(url: string): string {
 
   return url;
 }
+
+export const shortenAddress = (address: string, chars = 6) => {
+  return `${address.substring(0, chars + 2)}...${address.substring(42 - chars)}`;
+};
+
+export const shortenTxid = (txid: string, chars = 10) => {
+  return `${txid.substring(0, chars + 2)}...${txid.substring(txid.length - chars)}`;
+};

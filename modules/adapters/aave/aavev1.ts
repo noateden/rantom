@@ -55,9 +55,9 @@ export class Aavev1Adapter extends Adapter {
                   .dividedBy(new BigNumber(10).pow(reserve.decimals))
                   .toString(10);
 
-            let action = 'supply';
+            let action: KnownAction = 'deposit';
             if (signature === Signatures.Deposit) {
-              action = 'supply';
+              action = 'deposit';
             }
             if (signature === Signatures.Redeem) {
               action = 'withdraw';
@@ -71,7 +71,7 @@ export class Aavev1Adapter extends Adapter {
 
             return {
               protocol: this.config.protocol,
-              action: action as KnownAction,
+              action: action,
               addresses: [user, repayer],
               tokens: [reserve],
               tokenAmounts: [amount],

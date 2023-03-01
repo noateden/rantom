@@ -28,7 +28,7 @@ export const AaveActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new Aavev1Adapter(Aavev1Configs, null),
-    action: 'supply',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -172,7 +172,7 @@ export const AaveActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new Aavev2Adapter(Aavev2Configs, null),
-    action: 'supply',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -318,7 +318,7 @@ export const AaveActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new Aavev3Adapter(Aavev3Configs, null),
-    action: 'supply',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',

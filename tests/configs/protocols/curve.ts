@@ -46,7 +46,7 @@ export const CurveActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x9b',
     },
     adapter: new CurveAdapter(CurveConfigs, null),
-    action: 'addLiquidity',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -68,7 +68,7 @@ export const CurveActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x17',
     },
     adapter: new CurveAdapter(CurveConfigs, null),
-    action: 'removeLiquidity',
+    action: 'withdraw',
   },
   {
     chain: 'ethereum',
@@ -90,7 +90,7 @@ export const CurveActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x1f',
     },
     adapter: new CurveAdapter(CurveConfigs, null),
-    action: 'removeLiquidity',
+    action: 'withdraw',
   },
   {
     chain: 'ethereum',
@@ -134,7 +134,7 @@ export const CurveActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x42',
     },
     adapter: new CurveAdapter(CurveConfigs, null),
-    action: 'addLiquidity',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -156,7 +156,7 @@ export const CurveActionTestLogs: Array<TestLog> = [
       transactionIndex: '0xd',
     },
     adapter: new CurveAdapter(CurveConfigs, null),
-    action: 'removeLiquidity',
+    action: 'withdraw',
   },
   {
     chain: 'ethereum',
@@ -200,7 +200,7 @@ export const CurveActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x3f',
     },
     adapter: new CurveAdapter(CurveConfigs, null),
-    action: 'addLiquidity',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -222,7 +222,7 @@ export const CurveActionTestLogs: Array<TestLog> = [
       transactionIndex: '0xaf',
     },
     adapter: new CurveAdapter(CurveConfigs, null),
-    action: 'removeLiquidity',
+    action: 'withdraw',
   },
   {
     chain: 'ethereum',
@@ -244,7 +244,7 @@ export const CurveActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x5f',
     },
     adapter: new CurveAdapter(CurveConfigs, null),
-    action: 'removeLiquidity',
+    action: 'withdraw',
   },
   {
     chain: 'ethereum',
@@ -266,7 +266,7 @@ export const CurveActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x1f',
     },
     adapter: new CurveAdapter(CurveConfigs, null),
-    action: 'addLiquidity',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -288,6 +288,6 @@ export const CurveActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x105',
     },
     adapter: new CurveAdapter(CurveConfigs, null),
-    action: 'removeLiquidity',
+    action: 'withdraw',
   },
 ];

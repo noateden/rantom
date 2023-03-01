@@ -24,6 +24,6 @@ export const LidoActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new LidoAdapter(LidoConfigs, null),
-    action: 'stake',
+    action: 'deposit',
   },
 ];

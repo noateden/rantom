@@ -47,7 +47,7 @@ export const SushiActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new SushiAdapter(SushiConfigs, null),
-    action: 'addLiquidity',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -70,7 +70,7 @@ export const SushiActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new SushiAdapter(SushiConfigs, null),
-    action: 'removeLiquidity',
+    action: 'withdraw',
   },
   {
     chain: 'ethereum',
@@ -93,7 +93,7 @@ export const SushiActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x69',
     },
     adapter: new SushiAdapter(SushiConfigs, null),
-    action: 'stake',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -116,7 +116,7 @@ export const SushiActionTestLogs: Array<TestLog> = [
       transactionIndex: '0xa0',
     },
     adapter: new SushiAdapter(SushiConfigs, null),
-    action: 'unstake',
+    action: 'withdraw',
   },
   {
     chain: 'ethereum',
@@ -139,6 +139,6 @@ export const SushiActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x62',
     },
     adapter: new SushiAdapter(SushiConfigs, null),
-    action: 'unstake',
+    action: 'withdraw',
   },
 ];

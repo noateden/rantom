@@ -50,7 +50,7 @@ export const BancorActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x4b',
     },
     adapter: new BancorAdapter(BancorConfigs, null),
-    action: 'addLiquidity',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -74,7 +74,7 @@ export const BancorActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x3d',
     },
     adapter: new BancorAdapter(BancorConfigs, null),
-    action: 'removeLiquidity',
+    action: 'withdraw',
   },
   {
     chain: 'ethereum',

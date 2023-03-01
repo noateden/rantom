@@ -61,7 +61,7 @@ export class SushiAdapter extends Uniswapv2Adapter {
           const tokenSymbol = `${token0.symbol}-${token1.symbol} ${symbol}`;
           return {
             protocol: this.config.protocol,
-            action: signature === Signatures.MasterchefDeposit ? 'stake' : 'unstake',
+            action: signature === Signatures.MasterchefDeposit ? 'deposit' : 'withdraw',
             addresses: [options.sender],
             tokens: [
               {

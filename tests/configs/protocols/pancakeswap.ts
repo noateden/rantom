@@ -47,7 +47,7 @@ export const PancakeswapActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new Uniswapv2Adapter(PancakeswapConfigs, null),
-    action: 'addLiquidity',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -70,6 +70,6 @@ export const PancakeswapActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new Uniswapv2Adapter(PancakeswapConfigs, null),
-    action: 'removeLiquidity',
+    action: 'withdraw',
   },
 ];

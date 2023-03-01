@@ -8,18 +8,13 @@ export interface MongoCollections {
 
 export type KnownAction =
   | 'swap'
-  | 'addLiquidity'
-  | 'removeLiquidity'
-  | 'collect'
-  | 'supply'
   | 'deposit'
   | 'withdraw'
+  | 'collect'
   | 'borrow'
   | 'repay'
   | 'flashloan'
   | 'liquidate'
-  | 'stake'
-  | 'unstake'
   | 'bridge'
 
   // use for ENS domains
@@ -28,9 +23,10 @@ export type KnownAction =
 
   // use for NFT trading
   | 'buy'
+  | 'sell'
 
   // use for layer 2 batch transaction
-  | 'batch';
+  | 'update';
 
 export interface NonFungibleTokenData {
   token: Token;
@@ -45,6 +41,7 @@ export interface TransactionAction {
   tokenAmounts: Array<string>; // should match with tokens
   addresses: Array<string>;
   readableString: string;
+  logIndex?: number;
   addition?: any;
 }
 
@@ -53,6 +50,7 @@ export interface TransactionTransfer {
   from: string;
   to: string;
   amount: string;
+  logIndex?: number;
   tokenId?: string;
 }
 

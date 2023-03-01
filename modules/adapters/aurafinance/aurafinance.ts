@@ -77,11 +77,11 @@ export class AurafinanceAdapter extends Adapter {
 
                 return {
                   protocol: this.config.protocol,
-                  action: signature === Signatures.Deposit ? 'stake' : 'unstake',
+                  action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
                   tokens: [token],
                   tokenAmounts: [amount],
                   addresses: [user],
-                  readableString: `${user} ${signature === Signatures.Deposit ? 'stake' : 'unstake'} ${amount} ${
+                  readableString: `${user} ${signature === Signatures.Deposit ? 'deposit' : 'withdraw'} ${amount} ${
                     token.symbol
                   } on ${this.config.protocol} chain ${options.chain}`,
                 };

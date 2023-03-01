@@ -60,7 +60,7 @@ export interface IParserProvider extends IProvider {
 // worker fetch the latest transactions from chain, parses and saves them to database for exploring queries
 export interface IWorkerProvider extends IProvider {
   parser: IParserProvider;
-  providers: GlobalProviders | null;
+  providers: GlobalProviders;
 
   run: (options: WorkerRunOptions) => Promise<void>;
 }

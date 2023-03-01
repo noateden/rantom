@@ -40,7 +40,7 @@ export class LidoAdapter extends Adapter {
         const amount = new BigNumber(event.amount).dividedBy(1e18).toString(10);
         return {
           protocol: this.config.protocol,
-          action: 'stake',
+          action: 'deposit',
           tokens: [Tokens.ethereum.ETH],
           tokenAmounts: [amount],
           addresses: [normalizeAddress(event.sender), normalizeAddress(event.referral)],

@@ -22,7 +22,7 @@ export const CompoundActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new CompoundAdapter(CompoundConfigs, null),
-    action: 'supply',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -170,7 +170,7 @@ export const Compound3ActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new Compoundv3Adapter(Compoundv3Configs, null),
-    action: 'supply',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -217,7 +217,7 @@ export const Compound3ActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new Compoundv3Adapter(Compoundv3Configs, null),
-    action: 'supply',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',

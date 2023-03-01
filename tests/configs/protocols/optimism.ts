@@ -21,6 +21,6 @@ export const OptimismActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new OptimismAdapter(OptimismConfigs, null),
-    action: 'batch',
+    action: 'update',
   },
 ];

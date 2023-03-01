@@ -51,7 +51,7 @@ export const UniswapActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new Uniswapv3Adapter(Uniswapv3Configs, null),
-    action: 'addLiquidity',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -75,7 +75,7 @@ export const UniswapActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new Uniswapv3Adapter(Uniswapv3Configs, null),
-    action: 'removeLiquidity',
+    action: 'withdraw',
   },
   {
     chain: 'ethereum',
@@ -146,7 +146,7 @@ export const UniswapActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new Uniswapv2Adapter(Uniswapv2Configs, null),
-    action: 'addLiquidity',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -169,6 +169,6 @@ export const UniswapActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new Uniswapv2Adapter(Uniswapv2Configs, null),
-    action: 'removeLiquidity',
+    action: 'withdraw',
   },
 ];

@@ -72,7 +72,7 @@ export const BalancerActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new BalancerAdapter(BalancerConfigs, null),
-    action: 'addLiquidity',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -95,6 +95,6 @@ export const BalancerActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new BalancerAdapter(BalancerConfigs, null),
-    action: 'removeLiquidity',
+    action: 'withdraw',
   },
 ];

@@ -7,7 +7,7 @@ import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig, Token } from '../../../types/configs';
-import { TransactionAction } from '../../../types/domains';
+import { KnownAction, TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { AdapterParseLogOptions } from '../../../types/options';
 import { Adapter } from '../adapter';
@@ -85,8 +85,8 @@ export class CompoundAdapter extends Adapter {
                 .dividedBy(new BigNumber(10).pow(token.decimals))
                 .toString(10);
 
-              const action =
-                signature === Signatures.Mint ? 'supply' : signature === Signatures.Redeem ? 'withdraw' : 'borrow';
+              const action: KnownAction =
+                signature === Signatures.Mint ? 'deposit' : signature === Signatures.Redeem ? 'withdraw' : 'borrow';
 
               return {
                 protocol: this.config.protocol,

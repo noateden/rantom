@@ -21,7 +21,7 @@ export const IronbankActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new IronbankAdapter(IronbankConfigs, null),
-    action: 'supply',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',

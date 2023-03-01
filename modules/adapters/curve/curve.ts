@@ -162,8 +162,8 @@ export class CurveAdapter extends Adapter {
                   signature === Signatures.AddLiquidityVersion0212 ||
                   signature === Signatures.AddLiquidityVersion028 ||
                   signature === Signatures.AddLiquidityVersion030
-                    ? 'addLiquidity'
-                    : 'removeLiquidity',
+                    ? 'deposit'
+                    : 'withdraw',
                 addresses: [provider],
                 tokens: tokens,
                 tokenAmounts: amounts,
@@ -172,8 +172,8 @@ export class CurveAdapter extends Adapter {
                   signature === Signatures.AddLiquidityVersion0212 ||
                   signature === Signatures.AddLiquidityVersion028 ||
                   signature === Signatures.AddLiquidityVersion030
-                    ? 'addLiquidity'
-                    : 'removeLiquidity'
+                    ? 'deposit'
+                    : 'withdraw'
                 } ${tokenAmount.slice(2)} on ${this.config.protocol} chain ${chain}`,
               };
             }

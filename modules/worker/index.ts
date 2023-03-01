@@ -10,7 +10,7 @@ import { WorkerRunOptions } from '../../types/options';
 export class WorkerProvider implements IWorkerProvider {
   public readonly name: string = 'worker';
   public parser: IParserProvider;
-  public providers: GlobalProviders | null;
+  public providers: GlobalProviders;
 
   constructor(parser: IParserProvider, providers: GlobalProviders) {
     this.parser = parser;
@@ -67,10 +67,8 @@ export class WorkerProvider implements IWorkerProvider {
           }
         }
 
-        if (this.providers && operations.length > 0) {
-          const collections = await this.providers.mongodb.requireCollections();
-          await collections.transactionsCollection.bulkWrite(operations);
-        }
+        const collections = await this.providers.mongodb.requireCollections();
+        await collections.transactionsCollection.bulkWrite(operations);
 
         logger.onInfo({
           service: this.name,

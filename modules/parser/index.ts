@@ -59,7 +59,10 @@ export class ParserProvider implements IParserProvider {
           });
 
           if (transfer) {
-            transaction.transfers.push(transfer);
+            transaction.transfers.push({
+              ...transfer,
+              logIndex: log.logIndex,
+            });
 
             // its a token transfer, ignore adapter parsers
             continue;
@@ -76,7 +79,10 @@ export class ParserProvider implements IParserProvider {
                 data: log.data,
               });
               if (action) {
-                transaction.actions.push(action);
+                transaction.actions.push({
+                  ...action,
+                  logIndex: log.logIndex,
+                });
               }
             }
           }

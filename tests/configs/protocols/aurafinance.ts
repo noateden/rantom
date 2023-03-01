@@ -25,7 +25,7 @@ export const AurafinanceActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new AurafinanceAdapter(AurafinanceConfigs, null),
-    action: 'stake',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -48,7 +48,7 @@ export const AurafinanceActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new AurafinanceAdapter(AurafinanceConfigs, null),
-    action: 'unstake',
+    action: 'withdraw',
   },
   {
     chain: 'ethereum',

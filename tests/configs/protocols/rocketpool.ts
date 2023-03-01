@@ -24,7 +24,7 @@ export const RocketpoolActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x1',
     },
     adapter: new RocketpoolAdapter(RocketpoolConfigs, null),
-    action: 'stake',
+    action: 'deposit',
   },
   {
     chain: 'ethereum',
@@ -46,6 +46,6 @@ export const RocketpoolActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x1d',
     },
     adapter: new RocketpoolAdapter(RocketpoolConfigs, null),
-    action: 'unstake',
+    action: 'withdraw',
   },
 ];

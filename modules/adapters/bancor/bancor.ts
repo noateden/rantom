@@ -78,7 +78,7 @@ export class BancorAdapter extends Adapter {
 
             return {
               protocol: this.config.protocol,
-              action: signature === Signatures.Deposit ? 'addLiquidity' : 'removeLiquidity',
+              action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
               addresses: [provider],
               tokens: [token],
               tokenAmounts: [amount],

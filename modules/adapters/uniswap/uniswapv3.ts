@@ -123,7 +123,7 @@ export class Uniswapv3Adapter extends Adapter {
 
               return {
                 protocol: this.config.protocol,
-                action: 'addLiquidity',
+                action: 'deposit',
                 addresses: [owner, sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
@@ -142,7 +142,7 @@ export class Uniswapv3Adapter extends Adapter {
 
               return {
                 protocol: this.config.protocol,
-                action: 'removeLiquidity',
+                action: 'withdraw',
                 addresses: [owner, options.sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],

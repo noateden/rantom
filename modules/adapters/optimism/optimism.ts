@@ -36,7 +36,7 @@ export class OptimismAdapter extends Adapter {
 
       return {
         protocol: this.config.protocol,
-        action: 'batch',
+        action: 'update',
         tokens: [],
         tokenAmounts: [],
         addresses: [sender],

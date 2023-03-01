@@ -41,11 +41,11 @@ export class RocketpoolAdapter extends Adapter {
 
       return {
         protocol: this.config.protocol,
-        action: signature === Signatures.Deposit ? 'stake' : 'unstake',
+        action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
         addresses: [user],
         tokens: [Tokens.ethereum.NativeCoin],
         tokenAmounts: [amount],
-        readableString: `${user} ${signature === Signatures.Deposit ? 'stake' : 'unstake'} ${amount} ${
+        readableString: `${user} ${signature === Signatures.Deposit ? 'deposit' : 'withdraw'} ${amount} ${
           Tokens.ethereum.NativeCoin.symbol
         } on ${this.config.protocol} chain ${chain}`,
       };
