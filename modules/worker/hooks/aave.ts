@@ -30,7 +30,7 @@ export class AaveWorkerHook extends ContractWorker {
       let action: LendingAction = 'supply';
       const amount =
         event.event === 'LiquidationCall'
-          ? event.returnValues.amount.liquidatedCollateralAmount.toString()
+          ? event.returnValues.liquidatedCollateralAmount.toString()
           : event.returnValues.amount.toString();
       let caller = normalizeAddress(event.returnValues.user);
       let user = normalizeAddress(event.returnValues.onBehalfOf);
