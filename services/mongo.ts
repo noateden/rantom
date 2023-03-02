@@ -75,6 +75,7 @@ class MongodbProvider implements IMongodbProvider {
     const statesCollection = await this.getCollection(envConfig.mongodb.collections.states);
     const lendingActionsCollection = await this.getCollection(envConfig.mongodb.collections.lendingActions);
     const transactionsCollection = await this.getCollection(envConfig.mongodb.collections.transactions);
+    const marketplaceActionsCollection = await this.getCollection(envConfig.mongodb.collections.marketplaceActions);
 
     statesCollection.createIndex({ name: 1 }, { background: true });
 
@@ -85,12 +86,23 @@ class MongodbProvider implements IMongodbProvider {
     lendingActionsCollection.createIndex({ protocol: 1, action: 1, timestamp: 1 }, { background: true });
     lendingActionsCollection.createIndex({ protocol: 1, action: 1, 'token.symbol': 1 }, { background: true });
 
+    marketplaceActionsCollection.createIndex(
+      { chain: 1, contract: 1, transactionHash: 1, logIndex: 1 },
+      { background: true }
+    );
+    marketplaceActionsCollection.createIndex({ protocol: 1, action: 1, timestamp: 1 }, { background: true });
+    marketplaceActionsCollection.createIndex(
+      { protocol: 1, action: 1, 'nonFungibleToken.address': 1 },
+      { background: true }
+    );
+
     transactionsCollection.createIndex({ chain: 1, hash: 1 }, { background: true });
 
     return {
       statesCollection,
       lendingActionsCollection,
       transactionsCollection,
+      marketplaceActionsCollection,
     };
   }
 }

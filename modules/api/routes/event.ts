@@ -17,7 +17,7 @@ export function getRouter(providers: GlobalProviders): Router {
     ).toNumber();
     const skip = new BigNumber(request.query && request.query.skip ? request.query.skip.toString() : '0').toNumber();
 
-    if (family !== 'lending') {
+    if (family !== 'lending' && family !== 'marketplace') {
       writeResponseError(response, {
         status: 400,
         error: `unsupported family ${family}`,
@@ -25,7 +25,9 @@ export function getRouter(providers: GlobalProviders): Router {
     } else {
       try {
         const collections = await providers.mongodb.requireCollections();
-        const events: Array<any> = await collections.lendingActionsCollection
+        const collection =
+          family === 'lending' ? collections.lendingActionsCollection : collections.marketplaceActionsCollection;
+        const events: Array<any> = await collection
           .find({
             protocol: protocol,
           })

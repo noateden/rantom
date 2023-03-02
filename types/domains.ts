@@ -1,6 +1,6 @@
 import { Collection } from 'mongodb';
 
-import { Token } from './configs';
+import { NonFungibleToken, Token } from './configs';
 
 export interface MongoCollections {
   statesCollection: Collection;
@@ -8,6 +8,9 @@ export interface MongoCollections {
 
   // save action related to lending protocol: aave, compound, ...
   lendingActionsCollection: Collection;
+
+  // save action related to marketplace: opensea, looksrare, ...
+  marketplaceActionsCollection: Collection;
 }
 
 export type KnownAction =
@@ -71,8 +74,7 @@ export interface Transaction {
   transfers: Array<TransactionTransfer>;
 }
 
-export type LendingAction = 'supply' | 'withdraw' | 'borrow' | 'repay' | 'liquidate' | 'flashloan';
-export interface LendingEvent {
+export interface EventBase {
   // write index
   chain: string;
   contract: string;
@@ -82,7 +84,10 @@ export interface LendingEvent {
   protocol: string;
   timestamp: number;
   blockNumber: number;
+}
 
+export type LendingAction = 'supply' | 'withdraw' | 'borrow' | 'repay' | 'liquidate' | 'flashloan';
+export interface LendingEvent extends EventBase {
   action: LendingAction;
   token: Token;
   amount: string;
@@ -93,4 +98,15 @@ export interface LendingEvent {
   borrowRate?: string;
   debtToken?: Token;
   debtAmount?: string;
+}
+
+export type MarketplaceAction = 'buy' | 'bid' | 'cancel';
+export interface MarketplaceEvent extends EventBase {
+  action: MarketplaceAction;
+  nonFungibleToken: NonFungibleToken;
+  nonFungibleTokenAmount: string;
+  paymentToken: Token;
+  paymentTokenAmount: string;
+  seller: string;
+  buyer: string;
 }

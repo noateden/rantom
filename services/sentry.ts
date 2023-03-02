@@ -31,6 +31,17 @@ class SentryProvider implements ISentryProvider {
     });
     Sentry.captureException(e);
   }
+
+  public captureMessage(message: string) {
+    logger.onDebug({
+      service: this.name,
+      message: 'captured message',
+      props: {
+        message: message,
+      },
+    });
+    Sentry.captureMessage(message);
+  }
 }
 
 export default SentryProvider;

@@ -91,4 +91,11 @@ export const HardcodeNft: { [key: string]: Token } = {
     decimals: 0,
     erc721: true,
   },
+  'ethereum:0x3397e734f0a8f209a87f6ed929d5cb8519748e5e': {
+    chain: 'ethereum',
+    address: '0x3397e734f0a8f209a87f6ed929d5cb8519748e5e',
+    symbol: 'ERC1155',
+    decimals: 0,
+    erc721: true,
+  },
 };

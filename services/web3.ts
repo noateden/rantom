@@ -34,14 +34,14 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
         return this._blockTimes[key];
       }
     } catch (e: any) {
-      logger.onError({
+      logger.onWarn({
         service: this.name,
         message: 'failed to get block data',
         props: {
           chain,
           blockNumber,
+          error: e.message,
         },
-        error: e,
       });
     }
 
@@ -86,18 +86,18 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
       this._erc20MetadataCache[key] = token;
 
       return token;
-    } catch (e) {
-      logger.onError({
+    } catch (e: any) {
+      logger.onWarn({
         service: this.name,
         message: 'failed to get erc20 metadata',
         props: {
           chain,
           token: normalizeAddress(tokenAddress),
+          error: e.message,
         },
-        error: e,
       });
       const sentry = new SentryProvider(EnvConfig.sentry.dns);
-      await sentry.capture(e);
+      await sentry.captureMessage(`Cannot get ERC20 token data ${chain}:${tokenAddress} error:${e.message}`);
     }
 
     return null;
@@ -131,17 +131,17 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
 
       return token;
     } catch (e: any) {
-      logger.onError({
+      logger.onWarn({
         service: this.name,
         message: 'failed to get erc721 metadata',
         props: {
           chain,
           token: normalizeAddress(tokenAddress),
+          error: e.message,
         },
-        error: e,
       });
       const sentry = new SentryProvider(EnvConfig.sentry.dns);
-      await sentry.capture(e);
+      await sentry.captureMessage(`Cannot get ERC721 token data ${chain}:${tokenAddress} error:${e.message}`);
     }
 
     return null;
@@ -177,18 +177,20 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
         }
       }
     } catch (e: any) {
-      logger.onError({
+      logger.onWarn({
         service: this.name,
         message: 'failed to get non-fungible token data',
         props: {
           chain,
           token: normalizeAddress(tokenAddress),
           tokenId: tokenId,
+          error: e.message,
         },
-        error: e,
       });
       const sentry = new SentryProvider(EnvConfig.sentry.dns);
-      await sentry.capture(e);
+      await sentry.captureMessage(
+        `Cannot get NonFungible token data ${chain}:${tokenAddress}:${tokenId} error:${e.message}`
+      );
     }
 
     return null;

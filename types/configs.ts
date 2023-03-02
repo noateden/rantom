@@ -13,6 +13,14 @@ export interface Token {
   erc721?: boolean;
 }
 
+export interface NonFungibleToken {
+  chain: string;
+  symbol: string;
+  address: string;
+  tokenId: string;
+  image: string;
+}
+
 export interface Contract {
   chain: string;
   protocol: string;
@@ -31,6 +39,7 @@ export interface EnvConfig {
       transactions: string;
 
       lendingActions: string;
+      marketplaceActions: string;
     };
   };
   sentry: {
