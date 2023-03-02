@@ -4,6 +4,7 @@ import EnvConfig from '../../configs/envConfig';
 import { normalizeAddress, shortenAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { Contract } from '../../types/configs';
+import { MongoCollections } from '../../types/domains';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 
 export class ContractWorker implements IContractWorker {
@@ -86,6 +87,19 @@ export class ContractWorker implements IContractWorker {
           toBlock: toBlock,
         },
       });
+
+      // save state
+      const collections: MongoCollections = await this.providers.mongodb.requireCollections();
+      await collections.statesCollection.updateOne(
+        {
+          name: stateKey,
+        },
+        {
+          name: stateKey,
+          blockNumber: stateBlock,
+        },
+        { upsert: true }
+      );
 
       stateBlock += CHUNK;
     }
