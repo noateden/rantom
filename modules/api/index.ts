@@ -2,7 +2,7 @@ import { Router } from 'express';
 
 import { GlobalProviders } from '../../types/namespaces';
 import { logMiddleware } from './middleware';
-import * as explorerROuter from './routes/explorer';
+import * as eventRouter from './routes/event';
 import * as parserRouter from './routes/parser';
 
 export function getRouter(providers: GlobalProviders): Router {
@@ -11,7 +11,7 @@ export function getRouter(providers: GlobalProviders): Router {
   router.use('/', logMiddleware);
 
   router.use('/parser', parserRouter.getRouter(providers));
-  router.use('/explorer', explorerROuter.getRouter(providers));
+  router.use('/event', eventRouter.getRouter(providers));
 
   return router;
 }

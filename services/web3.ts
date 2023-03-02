@@ -16,8 +16,37 @@ import SentryProvider from './sentry';
 export class Web3HelperProvider implements IWeb3HelperProvider {
   public readonly name: string = 'web3';
 
+  private _blockTimes: { [key: string]: number } = {};
   private _erc20MetadataCache: { [key: string]: Token } = {};
   private _erc721MetadataCache: { [key: string]: Token } = {};
+
+  public async getBlockTime(chain: string, blockNumber: number): Promise<number> {
+    const key = `${chain}:${blockNumber}`;
+    if (this._blockTimes[key]) {
+      return this._blockTimes[key];
+    }
+
+    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+    try {
+      const block = await web3.eth.getBlock(blockNumber);
+      if (block) {
+        this._blockTimes[key] = new BigNumber(block.timestamp.toString()).toNumber();
+        return this._blockTimes[key];
+      }
+    } catch (e: any) {
+      logger.onError({
+        service: this.name,
+        message: 'failed to get block data',
+        props: {
+          chain,
+          blockNumber,
+        },
+        error: e,
+      });
+    }
+
+    return 0;
+  }
 
   public async getErc20Metadata(chain: string, tokenAddress: string): Promise<Token | null> {
     const key = `${chain}:${normalizeAddress(tokenAddress)}`;
@@ -28,6 +57,12 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
 
     if (HardCodeTokens[key]) {
       return HardCodeTokens[key];
+    }
+
+    for (const [, token] of Object.entries(Tokens[chain])) {
+      if (compareAddress(token.address, tokenAddress)) {
+        return token;
+      }
     }
 
     if (this._erc20MetadataCache[key]) {

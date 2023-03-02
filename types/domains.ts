@@ -3,7 +3,11 @@ import { Collection } from 'mongodb';
 import { Token } from './configs';
 
 export interface MongoCollections {
+  statesCollection: Collection;
   transactionsCollection: Collection;
+
+  // save action related to lending protocol: aave, compound, ...
+  lendingActionsCollection: Collection;
 }
 
 export type KnownAction =
@@ -65,4 +69,28 @@ export interface Transaction {
   timestamp: number;
   actions: Array<TransactionAction>;
   transfers: Array<TransactionTransfer>;
+}
+
+export type LendingAction = 'supply' | 'withdraw' | 'borrow' | 'repay' | 'liquidate' | 'flashloan';
+export interface LendingEvent {
+  // write index
+  chain: string;
+  contract: string;
+  transactionHash: string;
+  logIndex: number;
+
+  protocol: string;
+  timestamp: number;
+  blockNumber: number;
+
+  action: LendingAction;
+  token: Token;
+  amount: string;
+  caller: string;
+  user: string;
+
+  // optional metrics
+  borrowRate?: string;
+  debtToken?: Token;
+  debtAmount?: string;
 }

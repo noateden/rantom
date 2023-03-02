@@ -13,12 +13,24 @@ export interface Token {
   erc721?: boolean;
 }
 
+export interface Contract {
+  chain: string;
+  protocol: string;
+  abi: any;
+  address: string;
+  birthday: number;
+  events: Array<string>;
+}
+
 export interface EnvConfig {
   mongodb: {
     databaseName: string;
     connectionUri: string;
     collections: {
+      states: string;
       transactions: string;
+
+      lendingActions: string;
     };
   };
   sentry: {
@@ -45,4 +57,5 @@ export interface ProtocolConfig {
   customEventMapping?: {
     [key: string]: EventMapping;
   };
+  indexingContracts?: Array<Contract>;
 }

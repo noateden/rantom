@@ -17,7 +17,3 @@ export interface AdapterParseLogOptions {
   topics: Array<string>;
   data: string;
 }
-
-export interface WorkerRunOptions {
-  chain: string;
-}

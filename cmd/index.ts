@@ -1,10 +1,10 @@
 import dotenv from 'dotenv';
 import yargs from 'yargs/yargs';
 
+import { IndexCommand } from './commands';
 import { ParseCommand } from './commands/parse';
 import { ServeCommand } from './commands/serve';
 import { TestCommand } from './commands/test';
-import { WorkerCommand } from './commands/worker';
 
 (async function () {
   dotenv.config();
@@ -12,13 +12,13 @@ import { WorkerCommand } from './commands/worker';
   const testCmd = new TestCommand();
   const parseCmd = new ParseCommand();
   const serveCmd = new ServeCommand();
-  const workerCmd = new WorkerCommand();
+  const indexCmd = new IndexCommand();
 
   yargs(process.argv.slice(2))
     .scriptName('rantom')
     .command(testCmd.name, testCmd.describe, testCmd.setOptions, testCmd.execute)
     .command(parseCmd.name, parseCmd.describe, parseCmd.setOptions, parseCmd.execute)
     .command(serveCmd.name, serveCmd.describe, serveCmd.setOptions, serveCmd.execute)
-    .command(workerCmd.name, workerCmd.describe, workerCmd.setOptions, workerCmd.execute)
+    .command(indexCmd.name, indexCmd.describe, indexCmd.setOptions, indexCmd.execute)
     .help().argv;
 })();

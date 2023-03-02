@@ -1,8 +1,8 @@
 import { Collection } from 'mongodb';
 
-import { EventMapping, ProtocolConfig, Token } from './configs';
+import { Contract, EventMapping, ProtocolConfig, Token } from './configs';
 import { MongoCollections, NonFungibleTokenData, Transaction, TransactionAction, TransactionTransfer } from './domains';
-import { AdapterParseLogOptions, ParseTransactionOptions, TransferParseLogOptions, WorkerRunOptions } from './options';
+import { AdapterParseLogOptions, ParseTransactionOptions, TransferParseLogOptions } from './options';
 
 export interface IProvider {
   name: string;
@@ -19,6 +19,7 @@ export interface ISentryProvider extends IProvider {
 }
 
 export interface IWeb3HelperProvider extends IProvider {
+  getBlockTime: (chain: string, blockNumber: number) => Promise<number>;
   getErc20Metadata: (chain: string, tokenAddress: string) => Promise<Token | null>;
   getErc721Metadata: (chain: string, tokenAddress: string) => Promise<Token | null>;
   getNonFungibleTokenData: (
@@ -57,10 +58,11 @@ export interface IParserProvider extends IProvider {
   parseTransaction: (options: ParseTransactionOptions) => Promise<Array<Transaction>>;
 }
 
-// worker fetch the latest transactions from chain, parses and saves them to database for exploring queries
-export interface IWorkerProvider extends IProvider {
-  parser: IParserProvider;
+export interface IContractWorker extends IProvider {
+  contracts: Array<Contract>;
   providers: GlobalProviders;
 
-  run: (options: WorkerRunOptions) => Promise<void>;
+  // run indexer
+  run: () => Promise<void>;
+  processEvents: (contract: Contract, events: Array<any>) => Promise<any>;
 }
