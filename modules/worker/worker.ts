@@ -95,8 +95,10 @@ export class ContractWorker implements IContractWorker {
           name: stateKey,
         },
         {
-          name: stateKey,
-          blockNumber: stateBlock,
+          $set: {
+            name: stateKey,
+            blockNumber: stateBlock,
+          },
         },
         { upsert: true }
       );
