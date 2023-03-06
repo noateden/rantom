@@ -4,6 +4,7 @@ import Web3 from 'web3';
 
 import Erc20Abi from '../configs/abi/ERC20.json';
 import Erc721Abi from '../configs/abi/ERC721.json';
+import Erc1155Abi from '../configs/abi/ERC1155.json';
 import { AddressZero, HardCodeTokens, HardcodeNft, Tokens } from '../configs/constants';
 import EnvConfig from '../configs/envConfig';
 import { compareAddress, normalizeAddress, transformToHttpUrl } from '../lib/helper';
@@ -131,20 +132,17 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
 
       return token;
     } catch (e: any) {
-      logger.onWarn({
-        service: this.name,
-        message: 'failed to get erc721 metadata',
-        props: {
-          chain,
-          token: normalizeAddress(tokenAddress),
-          error: e.message,
-        },
-      });
-      const sentry = new SentryProvider(EnvConfig.sentry.dns);
-      await sentry.captureMessage(`Cannot get ERC721 token data ${chain}:${tokenAddress} error:${e.message}`);
-    }
+      const token: Token = {
+        chain,
+        address: normalizeAddress(tokenAddress),
+        symbol: 'NFT',
+        decimals: 0,
+        erc721: true,
+      };
+      this._erc721MetadataCache[key] = token;
 
-    return null;
+      return token;
+    }
   }
 
   public async getNonFungibleTokenData(
@@ -169,11 +167,25 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
             image: transformToHttpUrl(response.data.image),
           };
         } catch (e: any) {
-          return {
-            token: token,
-            tokenId: tokenId,
-            image: '',
-          };
+          // try with ERC1155
+          const erc1155Contract = new web3.eth.Contract(Erc1155Abi as any, tokenAddress);
+          try {
+            const tokenUri = transformToHttpUrl(
+              await erc1155Contract.methods.uri(new BigNumber(tokenId).toNumber()).call()
+            );
+            const response = await axios.get(tokenUri);
+            return {
+              token: token,
+              tokenId: tokenId,
+              image: transformToHttpUrl(response.data.image),
+            };
+          } catch (e: any) {
+            return {
+              token: token,
+              tokenId: tokenId,
+              image: '',
+            };
+          }
         }
       }
     } catch (e: any) {
