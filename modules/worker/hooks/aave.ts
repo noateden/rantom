@@ -47,6 +47,7 @@ export class AaveWorkerHook extends ContractWorker {
         action = 'repay';
         user = normalizeAddress(event.returnValues.repayer);
       } else if (event.event === 'LiquidationCall') {
+        action = 'liquidate';
         caller = normalizeAddress(event.returnValues.liquidator);
         user = normalizeAddress(event.returnValues.user);
       } else if (event.event === 'FlashLoan') {
