@@ -16,6 +16,7 @@ const envConfig: EnvConfig = {
 
       lendingActions: `${MongodbPrefix}.actions.lending`,
       marketplaceActions: `${MongodbPrefix}.actions.marketplace`,
+      stakingActions: `${MongodbPrefix}.actions.staking`,
     },
   },
   sentry: {

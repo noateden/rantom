@@ -4,7 +4,7 @@ import EnvConfig from '../../configs/envConfig';
 import { normalizeAddress, shortenAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { Contract } from '../../types/configs';
-import { LendingEvent, MongoCollections } from '../../types/domains';
+import { LendingEvent, MongoCollections, StakingEvent } from '../../types/domains';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 
 export class ContractWorker implements IContractWorker {
@@ -157,6 +157,53 @@ export class LendingWorker extends ContractWorker {
   }
 
   public async parseLendingEvent(contract: Contract, event: any): Promise<LendingEvent | null> {
+    return null;
+  }
+}
+
+export class StakingWorker extends ContractWorker {
+  public readonly name: string = 'worker.staking';
+
+  constructor(providers: GlobalProviders, contracts: Array<Contract>) {
+    super(providers, contracts);
+  }
+
+  public async processEvents(contract: Contract, events: Array<any>): Promise<any> {
+    const actions: Array<StakingEvent> = [];
+
+    for (const event of events) {
+      const transformedEvent: StakingEvent | null = await this.parseStakingEvent(contract, event);
+      if (transformedEvent) {
+        actions.push(transformedEvent);
+      }
+    }
+
+    const operations: Array<any> = [];
+    for (const action of actions) {
+      operations.push({
+        updateOne: {
+          filter: {
+            chain: action.chain,
+            contract: action.contract,
+            transactionHash: action.transactionHash,
+            logIndex: action.logIndex,
+          },
+          update: {
+            $set: {
+              ...action,
+            },
+          },
+          upsert: true,
+        },
+      });
+    }
+    if (operations.length > 0) {
+      const collections: MongoCollections = await this.providers.mongodb.requireCollections();
+      await collections.stakingActionsCollection.bulkWrite(operations);
+    }
+  }
+
+  public async parseStakingEvent(contract: Contract, event: any): Promise<StakingEvent | null> {
     return null;
   }
 }

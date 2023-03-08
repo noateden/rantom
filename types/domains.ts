@@ -11,6 +11,9 @@ export interface MongoCollections {
 
   // save action related to marketplace: opensea, looksrare, ...
   marketplaceActionsCollection: Collection;
+
+  // save action related to staking protocol: lido, ...
+  stakingActionsCollection: Collection;
 }
 
 export type KnownAction =
@@ -109,4 +112,13 @@ export interface MarketplaceEvent extends EventBase {
   paymentTokenAmount: string;
   seller: string;
   buyer: string;
+}
+
+export type StakingAction = 'deposit' | 'withdraw' | 'collect';
+export interface StakingEvent extends EventBase {
+  action: StakingAction;
+  token: Token;
+  amount: string;
+  caller: string;
+  user: string;
 }

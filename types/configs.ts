@@ -40,6 +40,7 @@ export interface EnvConfig {
 
       lendingActions: string;
       marketplaceActions: string;
+      stakingActions: string;
     };
   };
   sentry: {
