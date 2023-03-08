@@ -97,8 +97,6 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
           error: e.message,
         },
       });
-      const sentry = new SentryProvider(EnvConfig.sentry.dns);
-      await sentry.captureMessage(`Cannot get ERC20 token data ${chain}:${tokenAddress} error:${e.message}`);
     }
 
     return null;

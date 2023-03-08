@@ -1,12 +1,12 @@
 import { AaveContracts } from '../../configs/contracts/aave';
-import { MarketplaceContracts } from '../../configs/contracts/marketplace';
+import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 import { AaveWorkerHook } from './hooks/aave';
-import { MarketplaceWorkerHook } from './hooks/marketplace';
+import { OpenseaWorkerHook } from './hooks/opensea';
 
 export function getWorkers(providers: GlobalProviders): { [key: string]: IContractWorker } {
   return {
     aave: new AaveWorkerHook(providers, AaveContracts),
-    marketplace: new MarketplaceWorkerHook(providers, MarketplaceContracts),
+    opensea: new OpenseaWorkerHook(providers, OpenseaContracts),
   };
 }

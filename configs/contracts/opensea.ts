@@ -1,7 +1,7 @@
 import { Contract } from '../../types/configs';
 import OpenseaSeaportAbi from '../abi/opensea/Seaport.json';
 
-export const MarketplaceContracts: Array<Contract> = [
+export const OpenseaContracts: Array<Contract> = [
   {
     chain: 'ethereum',
     protocol: 'opensea',

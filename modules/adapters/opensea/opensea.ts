@@ -40,7 +40,7 @@ export class OpenseaAdapter extends Adapter {
         const offerAssetType = parseInt(offer.itemType);
         const offerer = normalizeAddress(event.offerer);
         const recipient = normalizeAddress(event.recipient);
-        if (offerAssetType === 0 || offerAssetType === 1) {
+        if ((offerAssetType === 0 || offerAssetType === 1) && considerations.length > 0) {
           // buy offer
           const nftData = await this.getWeb3Helper().getNonFungibleTokenData(
             chain,
