@@ -35,6 +35,9 @@ export type KnownAction =
   | 'buy'
   | 'sell'
 
+  // for beanstalk sow beans
+  | 'sow'
+
   // use for layer 2 batch transaction
   | 'update';
 
@@ -114,11 +117,12 @@ export interface MarketplaceEvent extends EventBase {
   buyer: string;
 }
 
-export type StakingAction = 'deposit' | 'withdraw' | 'collect';
+export type StakingAction = 'deposit' | 'withdraw' | 'collect' | 'sow';
 export interface StakingEvent extends EventBase {
   action: StakingAction;
   token: Token;
   amount: string;
   caller: string;
   user: string;
+  addition?: any;
 }

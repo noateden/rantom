@@ -47,6 +47,7 @@ export class BeanstalkWorkerHook extends StakingWorker {
           .toString(10),
         caller: action.addresses[0],
         user: action.addresses[0],
+        addition: action.addition ? action.addition : undefined,
       };
     }
 

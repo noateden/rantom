@@ -29,6 +29,12 @@
     "symbol": "BAT",
     "decimals": 18
   },
+  "BEAN": {
+    "chain": "ethereum",
+    "address": "0xbea0000029ad1c77d3d5d23ba2d8893db9d1efab",
+    "symbol": "BEAN",
+    "decimals": 6
+  },
   "BUSD": {
     "chain": "ethereum",
     "address": "0x4fabb145d64652a948d72533023f6e7a623c7c53",
