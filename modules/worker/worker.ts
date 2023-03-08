@@ -4,7 +4,7 @@ import EnvConfig from '../../configs/envConfig';
 import { normalizeAddress, shortenAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { Contract } from '../../types/configs';
-import { MongoCollections } from '../../types/domains';
+import { LendingEvent, MongoCollections } from '../../types/domains';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 
 export class ContractWorker implements IContractWorker {
@@ -111,5 +111,52 @@ export class ContractWorker implements IContractWorker {
     for (const contract of this.contracts) {
       await this.indexContract(contract);
     }
+  }
+}
+
+export class LendingWorker extends ContractWorker {
+  public readonly name: string = 'worker.lending';
+
+  constructor(providers: GlobalProviders, contracts: Array<Contract>) {
+    super(providers, contracts);
+  }
+
+  public async processEvents(contract: Contract, events: Array<any>): Promise<any> {
+    const actions: Array<LendingEvent> = [];
+
+    for (const event of events) {
+      const transformedEvent: LendingEvent | null = await this.parseLendingEvent(contract, event);
+      if (transformedEvent) {
+        actions.push(transformedEvent);
+      }
+    }
+
+    const operations: Array<any> = [];
+    for (const action of actions) {
+      operations.push({
+        updateOne: {
+          filter: {
+            chain: action.chain,
+            contract: action.contract,
+            transactionHash: action.transactionHash,
+            logIndex: action.logIndex,
+          },
+          update: {
+            $set: {
+              ...action,
+            },
+          },
+          upsert: true,
+        },
+      });
+    }
+    if (operations.length > 0) {
+      const collections: MongoCollections = await this.providers.mongodb.requireCollections();
+      await collections.lendingActionsCollection.bulkWrite(operations);
+    }
+  }
+
+  public async parseLendingEvent(contract: Contract, event: any): Promise<LendingEvent | null> {
+    return null;
   }
 }

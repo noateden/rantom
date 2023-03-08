@@ -15,14 +15,6 @@
     "resolveJsonModule": true,
     "noUnusedLocals": true
   },
-  "include": [
-    "lib/**/*.ts",
-    "configs/**/*.ts",
-    "cmd/**/*.ts",
-    "modules/**/*.ts",
-    "services/**/*.ts",
-    "types/**/*.ts",
-    "scripts/**/*.ts"
-  ],
+  "include": ["lib/**/*.ts", "configs/**/*.ts", "cmd/**/*.ts", "modules/**/*.ts", "services/**/*.ts", "types/**/*.ts"],
   "exclude": ["node_modules"]
 }

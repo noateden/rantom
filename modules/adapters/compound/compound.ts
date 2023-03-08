@@ -142,9 +142,15 @@ export class CompoundAdapter extends Adapter {
                   protocol: this.config.protocol,
                   action: 'liquidate',
                   addresses: [liquidator, borrower],
-                  tokens: [token],
+                  tokens: [collateral],
                   tokenAmounts: [amount],
                   readableString: `${liquidator} liquidate ${amount} ${collateral.symbol} on ${this.config.protocol} chain ${chain}`,
+                  addition: {
+                    debtToken: token,
+                    debtAmount: new BigNumber(event.repayAmount)
+                      .dividedBy(new BigNumber(10).pow(token.decimals))
+                      .toString(10),
+                  },
                 };
               }
               break;
