@@ -1,3 +1,5 @@
+import BigNumber from 'bignumber.js';
+
 import { AddressZero } from '../../../configs/constants';
 import { OpenseaConfigs } from '../../../configs/protocols';
 import { normalizeAddress } from '../../../lib/helper';
@@ -83,7 +85,9 @@ export class OpenseaWorkerHook extends ContractWorker {
         },
         nonFungibleTokenAmount: action.addition.amount,
         paymentToken: action.tokens[0],
-        paymentTokenAmount: action.tokenAmounts[0],
+        paymentTokenAmount: new BigNumber(action.tokenAmounts[0])
+          .multipliedBy(new BigNumber(10).pow(action.tokens[0].decimals))
+          .toString(10),
         buyer: action.addresses[0],
         seller: action.addresses[1],
       };
