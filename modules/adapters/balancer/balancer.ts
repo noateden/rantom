@@ -16,7 +16,7 @@ const Signatures = {
 };
 
 export class BalancerAdapter extends Adapter {
-  public readonly name: string = 'adapter.uniswapv2';
+  public readonly name: string = 'adapter.balancer';
 
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
     super(config, providers, {
