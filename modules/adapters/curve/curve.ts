@@ -29,6 +29,7 @@ const Signatures = {
   TokenExchangeVersion0212: '0xb2e76ae99761dc136e598d4a629bb347eccb9532a5f8bbd72e18467c3c34cc98',
   AddLiquidityVersion0212: '0x96b486485420b963edd3fdec0b0195730035600feb7de6f544383d7950fa97ee',
   RemoveLiquidityVersion0212: '0xd6cc314a0b1e3b2579f8e64248e82434072e8271290eef8ad0886709304195f5',
+  RemoveLiquidityOneVersion0212: '0x5ad056f2e28a8cec232015406b843668c1e36cda598127ec3b8c59b8c72773a0',
 
   // vyper version 0.3.0
   AddLiquidityVersion030: '0x540ab385f9b5d450a27404172caade516b3ba3f4be88239ac56a2ad1de2a1f5a',
@@ -54,6 +55,7 @@ export class CurveAdapter extends Adapter {
       [Signatures.TokenExchangeVersion0212]: EventSignatureMapping[Signatures.TokenExchangeVersion0212],
       [Signatures.AddLiquidityVersion0212]: EventSignatureMapping[Signatures.AddLiquidityVersion0212],
       [Signatures.RemoveLiquidityVersion0212]: EventSignatureMapping[Signatures.RemoveLiquidityVersion0212],
+      [Signatures.RemoveLiquidityOneVersion0212]: EventSignatureMapping[Signatures.RemoveLiquidityOneVersion0212],
 
       [Signatures.AddLiquidityVersion030]: EventSignatureMapping[Signatures.AddLiquidityVersion030],
       [Signatures.RemoveLiquidityVersion030]: EventSignatureMapping[Signatures.RemoveLiquidityVersion030],
@@ -76,6 +78,7 @@ export class CurveAdapter extends Adapter {
       signature === Signatures.TokenExchangeVersion0212 ||
       signature === Signatures.AddLiquidityVersion0212 ||
       signature === Signatures.RemoveLiquidityVersion0212 ||
+      signature === Signatures.RemoveLiquidityOneVersion0212 ||
       signature === Signatures.AddLiquidityVersion030 ||
       signature === Signatures.RemoveLiquidityVersion030
     ) {
@@ -120,7 +123,8 @@ export class CurveAdapter extends Adapter {
               break;
             }
 
-            case Signatures.RemoveLiquidityOne: {
+            case Signatures.RemoveLiquidityOne:
+            case Signatures.RemoveLiquidityOneVersion0212: {
               const provider = normalizeAddress(event.provider);
               const params = web3.eth.abi.decodeParameters(
                 ['address', 'uint256', 'uint256'],
