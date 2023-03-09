@@ -4,7 +4,6 @@ import { NonFungibleToken, Token } from './configs';
 
 export interface MongoCollections {
   statesCollection: Collection;
-  transactionsCollection: Collection;
 
   // save action related to lending protocol: aave, compound, ...
   lendingActionsCollection: Collection;
@@ -14,6 +13,9 @@ export interface MongoCollections {
 
   // save action related to staking protocol: lido, ...
   stakingActionsCollection: Collection;
+
+  // save action related to trading protocol: curve, cowswap, ...
+  tradingActionsCollection: Collection;
 }
 
 export type KnownAction =
@@ -122,6 +124,16 @@ export interface StakingEvent extends EventBase {
   action: StakingAction;
   token: Token;
   amount: string;
+  caller: string;
+  user: string;
+  addition?: any;
+}
+
+export type TradingAction = 'deposit' | 'withdraw' | 'collect' | 'swap';
+export interface TradingEvent extends EventBase {
+  action: TradingAction;
+  tokens: Array<Token>;
+  amounts: Array<string>;
   caller: string;
   user: string;
   addition?: any;

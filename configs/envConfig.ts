@@ -12,11 +12,11 @@ const envConfig: EnvConfig = {
     connectionUri: String(process.env.RANTOM_MONGODB_URI),
     collections: {
       states: `${MongodbPrefix}.states`,
-      transactions: `${MongodbPrefix}.transactions`,
 
       lendingActions: `${MongodbPrefix}.actions.lending`,
       marketplaceActions: `${MongodbPrefix}.actions.marketplace`,
       stakingActions: `${MongodbPrefix}.actions.staking`,
+      tradingActions: `${MongodbPrefix}.actions.trading`,
     },
   },
   sentry: {

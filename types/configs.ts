@@ -36,11 +36,11 @@ export interface EnvConfig {
     connectionUri: string;
     collections: {
       states: string;
-      transactions: string;
 
       lendingActions: string;
       marketplaceActions: string;
       stakingActions: string;
+      tradingActions: string;
     };
   };
   sentry: {
