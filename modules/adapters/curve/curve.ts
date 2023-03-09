@@ -17,6 +17,7 @@ const Signatures = {
   TokenExchange: '0x8b3e96f2b889fa771c53c981b40daf005f63f637f1869f707052d15a3dd97140',
   AddLiquidity: '0x423f6495a08fc652425cf4ed0d1f9e37e571d9b9529b1c1c23cce780b2e7df0d',
   RemoveLiquidity: '0xa49d4cf02656aebf8c771f5a8585638a2a15ee6c97cf7205d4208ed7c1df252d',
+  RemoveLiquidityOne: '0x9e96dd3b997a2a257eec4df9bb6eaf626e206df5f543bd963682d143300be310',
   RemoveLiquidityImbalance: '0x173599dbf9c6ca6f7c3b590df07ae98a45d74ff54065505141e7de6c46a624c2',
 
   // vyper version 0.2.8
@@ -42,6 +43,7 @@ export class CurveAdapter extends Adapter {
       [Signatures.TokenExchange]: EventSignatureMapping[Signatures.TokenExchange],
       [Signatures.AddLiquidity]: EventSignatureMapping[Signatures.AddLiquidity],
       [Signatures.RemoveLiquidity]: EventSignatureMapping[Signatures.RemoveLiquidity],
+      [Signatures.RemoveLiquidityOne]: EventSignatureMapping[Signatures.RemoveLiquidityOne],
       [Signatures.RemoveLiquidityImbalance]: EventSignatureMapping[Signatures.RemoveLiquidityImbalance],
 
       [Signatures.AddLiquidityVersion028]: EventSignatureMapping[Signatures.AddLiquidityVersion028],
@@ -66,6 +68,7 @@ export class CurveAdapter extends Adapter {
       signature === Signatures.TokenExchange ||
       signature === Signatures.AddLiquidity ||
       signature === Signatures.RemoveLiquidity ||
+      signature === Signatures.RemoveLiquidityOne ||
       signature === Signatures.RemoveLiquidityImbalance ||
       signature === Signatures.AddLiquidityVersion028 ||
       signature === Signatures.RemoveLiquidityVersion028 ||
@@ -116,6 +119,31 @@ export class CurveAdapter extends Adapter {
               }
               break;
             }
+
+            case Signatures.RemoveLiquidityOne: {
+              const provider = normalizeAddress(event.provider);
+              const params = web3.eth.abi.decodeParameters(
+                ['address', 'uint256', 'uint256'],
+                `0x${(options.input as string).slice(10)}`
+              );
+              const coinAddr = await poolContract.methods.coins(Number(params[1])).call();
+              const token = await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
+              if (token) {
+                const tokenAmount = new BigNumber(event.coin_amount)
+                  .dividedBy(new BigNumber(10).pow(token.decimals))
+                  .toString(10);
+                return {
+                  protocol: this.config.protocol,
+                  action: 'withdraw',
+                  addresses: [provider],
+                  tokens: [token],
+                  tokenAmounts: [tokenAmount],
+                  readableString: `${provider} withdraw ${tokenAmount} on ${this.config.protocol} chain ${chain}`,
+                };
+              }
+              break;
+            }
+
             case Signatures.AddLiquidity:
             case Signatures.RemoveLiquidity:
             case Signatures.RemoveLiquidityImbalance:

@@ -77,6 +77,7 @@ export class ParserProvider implements IParserProvider {
                 address: normalizeAddress(log.address),
                 topics: log.topics,
                 data: log.data,
+                input: transaction.input,
               });
               if (action) {
                 transaction.actions.push({

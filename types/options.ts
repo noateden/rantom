@@ -16,4 +16,6 @@ export interface AdapterParseLogOptions {
   address: string;
   topics: Array<string>;
   data: string;
+
+  input?: string;
 }

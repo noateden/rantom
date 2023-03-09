@@ -1529,6 +1529,26 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
     ],
   },
 
+  [Signatures['RemoveLiquidityOne(address,uint256,uint256)']]: {
+    abi: [
+      {
+        type: 'address',
+        name: 'provider',
+        indexed: true,
+      },
+      {
+        type: 'uint256',
+        name: 'token_amount',
+        indexed: false,
+      },
+      {
+        type: 'uint256',
+        name: 'coin_amount',
+        indexed: false,
+      },
+    ],
+  },
+
   [Signatures['TokenExchange(address,uint256,uint256,uint256,uint256)']]: {
     abi: [
       {
