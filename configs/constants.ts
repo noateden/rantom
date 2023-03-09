@@ -11,6 +11,10 @@ export const Tokens: { [key: string]: { [key: string]: Token } } = {
   ethereum: EthereumTokens,
 };
 
+export const MulticallContracts: { [key: string]: string } = {
+  ethereum: '0x5ba1e12693dc8f9c48aad8770482f4739beed696',
+};
+
 export const ChainIdMaps: { [key: number]: string } = {
   1: 'ethereum',
   56: 'bnbchain',

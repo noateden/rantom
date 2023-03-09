@@ -6,10 +6,11 @@ import UniswapV2PairAbi from '../../../configs/abi/uniswap/UniswapV2Pair.json';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
+import { multicallv2 } from '../../../lib/multicall';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
+import { AdapterParseLogOptions, MulticallCall } from '../../../types/options';
 import { Uniswapv2Adapter } from '../uniswap/uniswapv2';
 
 const Signatures = {
@@ -46,12 +47,29 @@ export class SushiAdapter extends Uniswapv2Adapter {
       const masterchefContract = new web3.eth.Contract(MasterchefAbi as any, address);
       try {
         const poolInfo = await masterchefContract.methods.poolInfo(event.pid).call();
-        const pairContract = new web3.eth.Contract(UniswapV2PairAbi as any, poolInfo.lpToken);
-        const [symbol, token0Addr, token1Addr] = await Promise.all([
-          pairContract.methods.symbol().call(),
-          pairContract.methods.token0().call(),
-          pairContract.methods.token1().call(),
-        ]);
+
+        const calls: Array<MulticallCall> = [
+          {
+            name: 'symbol',
+            address: poolInfo.lpToken,
+            params: [],
+          },
+          {
+            name: 'token0',
+            address: poolInfo.lpToken,
+            params: [],
+          },
+          {
+            name: 'token1',
+            address: poolInfo.lpToken,
+            params: [],
+          },
+        ];
+
+        const results: any = await multicallv2(chain, UniswapV2PairAbi, calls);
+        const symbol = results[0][0];
+        const token0Addr = results[1][0];
+        const token1Addr = results[2][0];
 
         const token0 = await this.getWeb3Helper().getErc20Metadata(chain, token0Addr);
         const token1 = await this.getWeb3Helper().getErc20Metadata(chain, token1Addr);
@@ -75,10 +93,18 @@ export class SushiAdapter extends Uniswapv2Adapter {
             readableString: `${options.sender} ${
               signature === Signatures.MasterchefDeposit ? 'stake' : 'unstake'
             } ${amount} ${tokenSymbol} on ${this.config.protocol} chain ${chain}`,
+            addition: {
+              lpToken: {
+                address: normalizeAddress(poolInfo.lpToken),
+                token0: token0,
+                token1: token1,
+              },
+            },
           };
         }
       } catch (e: any) {
         // ignore dummy pool
+        console.info(e);
       }
     }
 

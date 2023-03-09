@@ -19,3 +19,15 @@ export interface AdapterParseLogOptions {
 
   input?: string;
 }
+
+export type MultiCallResponse<T> = T | null;
+
+export interface MulticallCall {
+  address: string; // Address of the contract
+  name: string; // Function name on the contract (example: balanceOf)
+  params?: any[]; // Function params
+}
+
+export interface MulticallOptions {
+  requireSuccess?: boolean;
+}
