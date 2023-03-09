@@ -1,4 +1,4 @@
-import { sleep } from '../../lib/helper';
+import { sleep, stringReplaceAll } from '../../lib/helper';
 import { getWorkers } from '../../modules/worker';
 import { IContractWorker } from '../../types/namespaces';
 import { BasicCommand } from '../basic';
@@ -16,11 +16,16 @@ export class IndexCommand extends BasicCommand {
     const workers: { [key: string]: IContractWorker } = getWorkers(providers);
 
     if (argv.name) {
-      if (workers[argv.name]) {
-        while (true) {
-          await workers[argv.name].run();
-          await sleep(120);
+      const names: Array<string> = argv.name.split(',');
+
+      while (true) {
+        for (let name of names) {
+          name = stringReplaceAll(name, ' ', '');
+          if (workers[name]) {
+            await workers[name].run();
+          }
         }
+        await sleep(120);
       }
     } else {
       while (true) {
@@ -31,8 +36,6 @@ export class IndexCommand extends BasicCommand {
         await sleep(120);
       }
     }
-
-    process.exit(0);
   }
 
   public setOptions(yargs: any) {
@@ -40,7 +43,7 @@ export class IndexCommand extends BasicCommand {
       chain: {
         type: 'string',
         default: 'name',
-        describe: 'Run worker with given name: aave',
+        describe: 'Run worker with given name list: aave,lido',
       },
     });
   }
