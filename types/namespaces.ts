@@ -64,5 +64,5 @@ export interface IContractWorker extends IProvider {
 
   // run indexer
   run: (options: WorkerRunOptions) => Promise<void>;
-  processEvents: (contract: Contract, events: Array<any>) => Promise<any>;
+  processEvents: (contract: Contract, events: Array<any>, options: any) => Promise<any>;
 }

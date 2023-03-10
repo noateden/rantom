@@ -16,8 +16,15 @@ export class CompoundWorkerHook extends LendingWorker {
     super(providers, contracts);
   }
 
-  public async parseLendingEvent(contract: Contract, event: any): Promise<LendingEvent | null> {
-    const timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, event.blockNumber);
+  public async parseLendingEvent(contract: Contract, event: any, options: any): Promise<LendingEvent | null> {
+    let timestamp =
+      options && options.blockTimes && options.blockTimes[event.blockNumber.toString()]
+        ? Number(options.blockTimes[event.blockNumber.toString()].timestamp)
+        : null;
+    if (!timestamp) {
+      timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, event.blockNumber);
+    }
+
     const logIndex = event.logIndex;
     const transactionHash = event.transactionHash;
     const blockNumber = event.blockNumber;

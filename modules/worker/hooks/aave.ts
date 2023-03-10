@@ -11,7 +11,7 @@ export class AaveWorkerHook extends ContractWorker {
     super(providers, contracts);
   }
 
-  public async processEvents(contract: Contract, events: Array<any>): Promise<any> {
+  public async processEvents(contract: Contract, events: Array<any>, options: any): Promise<any> {
     const actions: Array<LendingEvent> = [];
 
     for (const event of events) {
@@ -35,7 +35,14 @@ export class AaveWorkerHook extends ContractWorker {
       let caller = normalizeAddress(event.returnValues.user);
       let user = normalizeAddress(event.returnValues.onBehalfOf);
       let borrowRate = '0';
-      const timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, event.blockNumber);
+
+      let timestamp =
+        options && options.blockTimes && options.blockTimes[event.blockNumber.toString()]
+          ? Number(options.blockTimes[event.blockNumber.toString()].timestamp)
+          : null;
+      if (!timestamp) {
+        timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, event.blockNumber);
+      }
 
       if (event.event === 'Withdraw') {
         action = 'withdraw';

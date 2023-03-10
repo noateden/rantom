@@ -2,11 +2,13 @@ import { AaveContracts } from '../../configs/contracts/aave';
 import { BeanstalkContracts } from '../../configs/contracts/beanstalk';
 import { CompoundContracts } from '../../configs/contracts/compound';
 import { CurveContracts } from '../../configs/contracts/curve';
+import { Erc20Contracts } from '../../configs/contracts/erc20';
 import { LidoContracts } from '../../configs/contracts/lido';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { RocketpoolContracts } from '../../configs/contracts/rocketpool';
 import { SushiContracts } from '../../configs/contracts/sushi';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
+import { Erc20SupplyWorker } from './extends/erc20';
 import { AaveWorkerHook } from './hooks/aave';
 import { BeanstalkWorkerHook } from './hooks/beanstalk';
 import { CompoundWorkerHook } from './hooks/compound';
@@ -26,5 +28,6 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     beanstalk: new BeanstalkWorkerHook(providers, BeanstalkContracts),
     curve: new CurveWorkerHook(providers, CurveContracts),
     sushi: new SushiWorkerHook(providers, SushiContracts),
+    erc20: new Erc20SupplyWorker(providers, Erc20Contracts),
   };
 }

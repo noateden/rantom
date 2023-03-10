@@ -41,6 +41,7 @@ export interface EnvConfig {
       marketplaceActions: string;
       stakingActions: string;
       tradingActions: string;
+      erc20SupplyActions: string;
     };
   };
   sentry: {

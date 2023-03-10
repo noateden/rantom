@@ -1,10 +1,11 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
-import { AddressZero } from '../../configs/constants';
+import { AddressZero, BlockSubgraphs } from '../../configs/constants';
 import EnvConfig from '../../configs/envConfig';
 import { normalizeAddress, shortenAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
+import { getBlockTimestamps } from '../../lib/subgraph';
 import { Contract } from '../../types/configs';
 import { KnownAction, LendingEvent, MongoCollections, StakingEvent, TradingEvent } from '../../types/domains';
 import { GlobalProviders, IAdapter, IContractWorker } from '../../types/namespaces';
@@ -20,7 +21,7 @@ export class ContractWorker implements IContractWorker {
     this.contracts = contracts;
   }
 
-  public async processEvents(contract: Contract, events: Array<any>): Promise<any> {
+  public async processEvents(contract: Contract, events: Array<any>, options: any): Promise<any> {
     return [];
   }
 
@@ -83,7 +84,13 @@ export class ContractWorker implements IContractWorker {
         events = events.concat(pastEvents);
       }
 
-      await this.processEvents(config, events);
+      const blockTimes = await getBlockTimestamps({
+        endpoint: BlockSubgraphs[config.chain],
+        fromBlock: stateBlock,
+        numberOfBlocks: CHUNK,
+      });
+
+      await this.processEvents(config, events, { blockTimes });
 
       const endExeTime = Math.floor(new Date().getTime() / 1000);
       const elapsed = endExeTime - startExeTime;
@@ -135,11 +142,11 @@ export class LendingWorker extends ContractWorker {
     super(providers, contracts);
   }
 
-  public async processEvents(contract: Contract, events: Array<any>): Promise<any> {
+  public async processEvents(contract: Contract, events: Array<any>, options: any): Promise<any> {
     const actions: Array<LendingEvent> = [];
 
     for (const event of events) {
-      const transformedEvent: LendingEvent | null = await this.parseLendingEvent(contract, event);
+      const transformedEvent: LendingEvent | null = await this.parseLendingEvent(contract, event, options);
       if (transformedEvent) {
         actions.push(transformedEvent);
       }
@@ -170,7 +177,7 @@ export class LendingWorker extends ContractWorker {
     }
   }
 
-  public async parseLendingEvent(contract: Contract, event: any): Promise<LendingEvent | null> {
+  public async parseLendingEvent(contract: Contract, event: any, options: any): Promise<LendingEvent | null> {
     return null;
   }
 }
@@ -186,7 +193,7 @@ export class StakingWorker extends ContractWorker {
     return null;
   }
 
-  public async processEvents(contract: Contract, events: Array<any>): Promise<any> {
+  public async processEvents(contract: Contract, events: Array<any>, options: any): Promise<any> {
     const actions: Array<StakingEvent> = [];
 
     for (const event of events) {
@@ -270,11 +277,11 @@ export class TradingWorker extends ContractWorker {
     super(providers, contracts);
   }
 
-  public async processEvents(contract: Contract, events: Array<any>): Promise<any> {
+  public async processEvents(contract: Contract, events: Array<any>, options: any): Promise<any> {
     const actions: Array<TradingEvent> = [];
 
     for (const event of events) {
-      const transformedEvent: TradingEvent | null = await this.parseTradingEvent(contract, event);
+      const transformedEvent: TradingEvent | null = await this.parseTradingEvent(contract, event, options);
       if (transformedEvent) {
         actions.push(transformedEvent);
       }
@@ -305,7 +312,7 @@ export class TradingWorker extends ContractWorker {
     }
   }
 
-  public async parseTradingEvent(contract: Contract, event: any): Promise<TradingEvent | null> {
+  public async parseTradingEvent(contract: Contract, event: any, options: any): Promise<TradingEvent | null> {
     return null;
   }
 }

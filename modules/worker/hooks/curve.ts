@@ -16,8 +16,15 @@ export class CurveWorkerHook extends TradingWorker {
     super(providers, contracts);
   }
 
-  public async parseTradingEvent(contract: Contract, event: any): Promise<TradingEvent | null> {
-    const timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, event.blockNumber);
+  public async parseTradingEvent(contract: Contract, event: any, options: any): Promise<TradingEvent | null> {
+    let timestamp =
+      options && options.blockTimes && options.blockTimes[event.blockNumber.toString()]
+        ? Number(options.blockTimes[event.blockNumber.toString()].timestamp)
+        : null;
+    if (!timestamp) {
+      timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, event.blockNumber);
+    }
+
     const logIndex = event.logIndex;
     const transactionHash = event.transactionHash;
     const blockNumber = event.blockNumber;

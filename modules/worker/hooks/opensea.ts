@@ -16,7 +16,7 @@ export class OpenseaWorkerHook extends ContractWorker {
     super(providers, contracts);
   }
 
-  public async processEvents(contract: Contract, events: Array<any>): Promise<any> {
+  public async processEvents(contract: Contract, events: Array<any>, options: any): Promise<any> {
     const actions: Array<MarketplaceEvent> = [];
 
     for (const event of events) {

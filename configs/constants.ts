@@ -15,6 +15,10 @@ export const MulticallContracts: { [key: string]: string } = {
   ethereum: '0x5ba1e12693dc8f9c48aad8770482f4739beed696',
 };
 
+export const BlockSubgraphs: { [key: string]: string } = {
+  ethereum: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
+};
+
 export const ChainIdMaps: { [key: number]: string } = {
   1: 'ethereum',
   56: 'bnbchain',

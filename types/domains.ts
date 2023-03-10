@@ -16,6 +16,9 @@ export interface MongoCollections {
 
   // save action related to trading protocol: curve, cowswap, ...
   tradingActionsCollection: Collection;
+
+  // save token mint/burn events
+  erc20SupplyActionsCollection: Collection;
 }
 
 export type KnownAction =
@@ -137,4 +140,24 @@ export interface TradingEvent extends EventBase {
   caller: string;
   user: string;
   addition?: any;
+}
+
+export interface Erc20SupplyEvent {
+  // write index
+  chain: string;
+  contract: string;
+  transactionHash: string;
+  logIndex: number;
+
+  action: 'mint' | 'burn';
+  timestamp: number;
+  blockNumber: number;
+
+  symbol: string;
+  decimals: number;
+  amount: string;
+
+  // to address for mint transaction
+  // from address for burn transaction
+  address: string;
 }
