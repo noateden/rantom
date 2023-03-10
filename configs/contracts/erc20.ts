@@ -34,4 +34,22 @@ export const Erc20Contracts: Array<Erc20Contract> = [
     token: Tokens.ethereum.DAI,
     events: ['Transfer'],
   },
+  {
+    chain: 'ethereum',
+    protocol: 'busd',
+    abi: Erc20Abi,
+    address: '0x4fabb145d64652a948d72533023f6e7a623c7c53',
+    birthday: 15291127,
+    token: Tokens.ethereum.BUSD,
+    events: ['Transfer'],
+  },
+  {
+    chain: 'ethereum',
+    protocol: 'tusd',
+    abi: Erc20Abi,
+    address: '0x0000000000085d4780b73119b644ae5ecd22b376',
+    birthday: 15291127,
+    token: Tokens.ethereum.TUSD,
+    events: ['Transfer'],
+  },
 ];

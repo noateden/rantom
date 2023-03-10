@@ -70,7 +70,7 @@ export class Erc20SupplyWorker extends ContractWorker {
         contract: contract.address,
         transactionHash: transactionHash,
         logIndex: logIndex,
-        action: compareAddress(event.returnValues.to, AddressZero) ? 'mint' : 'burn',
+        action: compareAddress(event.returnValues.from, AddressZero) ? 'mint' : 'burn',
         blockNumber: blockNumber,
         timestamp: timestamp,
         symbol: (contract as Erc20Contract).token.symbol,
