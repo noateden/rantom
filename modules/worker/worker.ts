@@ -73,6 +73,8 @@ export class ContractWorker implements IContractWorker {
 
     const CHUNK = 2000;
     while (stateBlock <= tip) {
+      const startExeTime = Math.floor(new Date().getTime() / 1000);
+
       const toBlock = stateBlock + CHUNK > tip ? tip : stateBlock + CHUNK;
 
       let events: Array<any> = [];
@@ -83,6 +85,8 @@ export class ContractWorker implements IContractWorker {
 
       await this.processEvents(config, events);
 
+      const endExeTime = Math.floor(new Date().getTime() / 1000);
+      const elapsed = endExeTime - startExeTime;
       logger.onInfo({
         service: this.name,
         message: 'got contract events',
@@ -91,8 +95,8 @@ export class ContractWorker implements IContractWorker {
           protocol: config.protocol,
           contract: shortenAddress(config.address),
           events: events.length,
-          fromBlock: stateBlock,
           toBlock: toBlock,
+          elapsed: `${elapsed}s`,
         },
       });
 
