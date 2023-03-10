@@ -16,4 +16,22 @@ export const Erc20Contracts: Array<Erc20Contract> = [
     token: Tokens.ethereum.USDT,
     events: ['Transfer'],
   },
+  {
+    chain: 'ethereum',
+    protocol: 'circle',
+    abi: Erc20Abi,
+    address: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+    birthday: 15291127,
+    token: Tokens.ethereum.USDC,
+    events: ['Transfer'],
+  },
+  {
+    chain: 'ethereum',
+    protocol: 'makerdao',
+    abi: Erc20Abi,
+    address: '0x6b175474e89094c44da98b954eedeac495271d0f',
+    birthday: 15291127,
+    token: Tokens.ethereum.DAI,
+    events: ['Transfer'],
+  },
 ];
