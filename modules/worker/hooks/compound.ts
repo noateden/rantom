@@ -4,7 +4,7 @@ import { AddressZero } from '../../../configs/constants';
 import { CompoundConfigs } from '../../../configs/protocols';
 import { normalizeAddress } from '../../../lib/helper';
 import { Contract } from '../../../types/configs';
-import { LendingAction, LendingEvent } from '../../../types/domains';
+import { KnownAction, LendingEvent } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { CompoundAdapter } from '../../adapters/compound/compound';
 import { LendingWorker } from '../worker';
@@ -40,7 +40,7 @@ export class CompoundWorkerHook extends LendingWorker {
         protocol: contract.protocol,
         timestamp,
         blockNumber: blockNumber,
-        action: action.action === 'deposit' ? 'supply' : (action.action as LendingAction),
+        action: action.action === 'deposit' ? 'supply' : (action.action as KnownAction),
         token: action.tokens[0],
         amount: new BigNumber(action.tokenAmounts[0])
           .multipliedBy(new BigNumber(10).pow(action.tokens[0].decimals))

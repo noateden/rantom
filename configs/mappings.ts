@@ -2548,6 +2548,87 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
     ],
   },
 
+  [Signatures['Harvest(address,uint256[],uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256[]',
+        name: 'plots',
+        type: 'uint256[]',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'beans',
+        type: 'uint256',
+      },
+    ],
+  },
+
+  [Signatures['RemoveWithdrawal(address,address,uint32,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint32',
+        name: 'season',
+        type: 'uint32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+    ],
+  },
+
+  [Signatures['RemoveWithdrawals(address,address,uint32[],uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint32[]',
+        name: 'seasons',
+        type: 'uint32[]',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+    ],
+  },
+
   // Blur.io https://etherscan.io/address/0x000000000000ad05ccc4f10045630fb830b95127
   // OrdersMatched event
   '0x61cbb2a3dee0b6064c2e681aadd61677fb4ef319f0b547508d495626f5a62f64': {

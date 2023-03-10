@@ -31,3 +31,7 @@ export interface MulticallCall {
 export interface MulticallOptions {
   requireSuccess?: boolean;
 }
+
+export interface WorkerRunOptions {
+  fromBlock: number;
+}

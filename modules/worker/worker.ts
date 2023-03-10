@@ -6,8 +6,9 @@ import EnvConfig from '../../configs/envConfig';
 import { normalizeAddress, shortenAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { Contract } from '../../types/configs';
-import { LendingEvent, MongoCollections, StakingAction, StakingEvent, TradingEvent } from '../../types/domains';
+import { KnownAction, LendingEvent, MongoCollections, StakingEvent, TradingEvent } from '../../types/domains';
 import { GlobalProviders, IAdapter, IContractWorker } from '../../types/namespaces';
+import { WorkerRunOptions } from '../../types/options';
 
 export class ContractWorker implements IContractWorker {
   public readonly name: string = 'worker';
@@ -23,17 +24,22 @@ export class ContractWorker implements IContractWorker {
     return [];
   }
 
-  private async indexContract(config: Contract): Promise<void> {
+  private async indexContract(config: Contract, options: WorkerRunOptions): Promise<void> {
     const web3 = new Web3(EnvConfig.blockchains[config.chain].nodeRpc);
     const contract = new web3.eth.Contract(config.abi, config.address);
 
-    const { statesCollection } = await this.providers.mongodb.requireCollections();
-    let stateBlock = config.birthday;
+    // if fromBlock was given, start sync from fromBlock value
+    // and do not save contract state
+    let stateBlock = options.fromBlock;
 
+    const { statesCollection } = await this.providers.mongodb.requireCollections();
     const stateKey = `index-${config.chain}-${normalizeAddress(config.address)}`;
-    const states = await statesCollection.find({ name: stateKey }).limit(1).toArray();
-    if (states.length > 0) {
-      stateBlock = states[0].blockNumber;
+    if (stateBlock === 0) {
+      stateBlock = config.birthday;
+      const states = await statesCollection.find({ name: stateKey }).limit(1).toArray();
+      if (states.length > 0) {
+        stateBlock = states[0].blockNumber;
+      }
     }
 
     let tip = 0;
@@ -90,28 +96,30 @@ export class ContractWorker implements IContractWorker {
         },
       });
 
-      // save state
-      const collections: MongoCollections = await this.providers.mongodb.requireCollections();
-      await collections.statesCollection.updateOne(
-        {
-          name: stateKey,
-        },
-        {
-          $set: {
+      // save state only when fromBlock was not given
+      if (options.fromBlock === 0) {
+        const collections: MongoCollections = await this.providers.mongodb.requireCollections();
+        await collections.statesCollection.updateOne(
+          {
             name: stateKey,
-            blockNumber: stateBlock,
           },
-        },
-        { upsert: true }
-      );
+          {
+            $set: {
+              name: stateKey,
+              blockNumber: stateBlock,
+            },
+          },
+          { upsert: true }
+        );
+      }
 
       stateBlock += CHUNK;
     }
   }
 
-  public async run(): Promise<void> {
+  public async run(options: WorkerRunOptions): Promise<void> {
     for (const contract of this.contracts) {
-      await this.indexContract(contract);
+      await this.indexContract(contract, options);
     }
   }
 }
@@ -236,7 +244,7 @@ export class StakingWorker extends ContractWorker {
         protocol: contract.protocol,
         timestamp,
         blockNumber: blockNumber,
-        action: action.action as StakingAction,
+        action: action.action as KnownAction,
         token: action.tokens[0],
         amount: new BigNumber(action.tokenAmounts[0])
           .multipliedBy(new BigNumber(10).pow(action.tokens[0].decimals))

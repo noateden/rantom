@@ -21,6 +21,7 @@ export interface MongoCollections {
 export type KnownAction =
   | 'swap'
   | 'deposit'
+  | 'supply'
   | 'withdraw'
   | 'collect'
   | 'borrow'
@@ -34,8 +35,11 @@ export type KnownAction =
   | 'renew'
 
   // use for NFT trading
+  | 'list'
   | 'buy'
   | 'sell'
+  | 'bid'
+  | 'cancel'
 
   // for beanstalk sow beans
   | 'sow'
@@ -94,9 +98,8 @@ export interface EventBase {
   blockNumber: number;
 }
 
-export type LendingAction = 'supply' | 'withdraw' | 'borrow' | 'repay' | 'liquidate' | 'flashloan';
 export interface LendingEvent extends EventBase {
-  action: LendingAction;
+  action: KnownAction;
   token: Token;
   amount: string;
   caller: string;
@@ -108,9 +111,8 @@ export interface LendingEvent extends EventBase {
   debtAmount?: string;
 }
 
-export type MarketplaceAction = 'buy' | 'bid' | 'cancel';
 export interface MarketplaceEvent extends EventBase {
-  action: MarketplaceAction;
+  action: KnownAction;
   nonFungibleToken: NonFungibleToken;
   nonFungibleTokenAmount: string;
   paymentToken: Token;
@@ -119,9 +121,8 @@ export interface MarketplaceEvent extends EventBase {
   buyer: string;
 }
 
-export type StakingAction = 'deposit' | 'withdraw' | 'collect' | 'sow';
 export interface StakingEvent extends EventBase {
-  action: StakingAction;
+  action: KnownAction;
   token: Token;
   amount: string;
   caller: string;
@@ -129,9 +130,8 @@ export interface StakingEvent extends EventBase {
   addition?: any;
 }
 
-export type TradingAction = 'deposit' | 'withdraw' | 'collect' | 'swap';
 export interface TradingEvent extends EventBase {
-  action: TradingAction;
+  action: KnownAction;
   tokens: Array<Token>;
   amounts: Array<string>;
   caller: string;

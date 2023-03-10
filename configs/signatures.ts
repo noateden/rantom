@@ -130,6 +130,11 @@ export const Signatures: { [key: string]: string } = {
   'AddDeposit(address,address,uint32,uint256,uint256)':
     '0xdbe49eaf5c2a8a7f65920c200ca5d47395540b884f6a1886fdb2611624f9981b',
   'AddWithdrawal(address,address,uint32,uint256)': '0xad946216d2715ed9b769178b59b5bd1b1ee3a1ef3adbe82f17d30617109e96f3',
+  'RemoveWithdrawal(address,address,uint32,uint256)':
+    '0xaa6a2412fe6f73e85c713779b0e5a0d7fe8c08cc03c3a7b397ef83a4c1dca538',
+  'RemoveWithdrawals(address,address,uint32[],uint256)':
+    '0x7c7b3f4a133861c092bfa3c8ba112156b88763da4e7ed69e50f617bc24c68c4e',
+  'Harvest(address,uint256[],uint256)': '0x2250a3497055c8a54223a5ea64f100a209e9c1c4ab39d3cae64c64a493065fa1',
   'Sow(address,uint256,uint256,uint256)': '0xdd43b982e9a6350577cad86db14e254b658fb741d7864a6860409c4526bcc641',
   'TakerAsk(bytes32,uint256,address,address,address,address,address,uint256,uint256,uint256)':
     '0x68cd251d4d267c6e2034ff0088b990352b97b2002c0476587d0c4da889c11330',

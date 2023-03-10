@@ -1,6 +1,6 @@
 import { normalizeAddress } from '../../../lib/helper';
 import { Contract, Token } from '../../../types/configs';
-import { LendingAction, LendingEvent, MongoCollections } from '../../../types/domains';
+import { KnownAction, LendingEvent, MongoCollections } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { ContractWorker } from '../worker';
 
@@ -27,7 +27,7 @@ export class AaveWorkerHook extends ContractWorker {
         continue;
       }
 
-      let action: LendingAction = 'supply';
+      let action: KnownAction = 'supply';
       const amount =
         event.event === 'LiquidationCall'
           ? event.returnValues.liquidatedCollateralAmount.toString()
