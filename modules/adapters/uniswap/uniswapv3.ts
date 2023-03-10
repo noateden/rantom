@@ -6,10 +6,11 @@ import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
 import logger from '../../../lib/logger';
+import { multicallv2 } from '../../../lib/multicall';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
+import { AdapterParseLogOptions, MulticallCall } from '../../../types/options';
 import { Adapter } from '../adapter';
 
 const Signatures = {
@@ -42,18 +43,35 @@ export class Uniswapv3Adapter extends Adapter {
       signature === Signatures.Collect
     ) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const poolContract = new web3.eth.Contract(UniswapV3PoolAbi as any, address);
 
       let factoryAddress;
       let token0Address;
       let token1Address;
 
       try {
-        [factoryAddress, token0Address, token1Address] = await Promise.all([
-          poolContract.methods.factory().call(),
-          poolContract.methods.token0().call(),
-          poolContract.methods.token1().call(),
-        ]);
+        const calls: Array<MulticallCall> = [
+          {
+            name: 'factory',
+            address: address,
+            params: [],
+          },
+          {
+            name: 'token0',
+            address: address,
+            params: [],
+          },
+          {
+            name: 'token1',
+            address: address,
+            params: [],
+          },
+        ];
+
+        const results = await multicallv2(chain, UniswapV3PoolAbi, calls);
+
+        factoryAddress = results[0][0];
+        token0Address = results[1][0];
+        token1Address = results[2][0];
       } catch (e: any) {
         logger.onDebug({
           service: this.name,
