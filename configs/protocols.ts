@@ -1,5 +1,6 @@
 import { normalizeAddress } from '../lib/helper';
 import { ProtocolConfig } from '../types/configs';
+import { CompoundContracts } from './contracts/compound';
 import { Signatures } from './signatures';
 
 export const Uniswapv2Configs: ProtocolConfig = {
@@ -152,6 +153,9 @@ export const CompoundConfigs: ProtocolConfig = {
         },
       ],
     },
+  },
+  staticData: {
+    pools: CompoundContracts,
   },
 };
 

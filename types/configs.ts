@@ -67,5 +67,5 @@ export interface ProtocolConfig {
   customEventMapping?: {
     [key: string]: EventMapping;
   };
-  indexingContracts?: Array<Contract>;
+  staticData?: any;
 }

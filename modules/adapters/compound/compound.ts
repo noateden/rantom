@@ -5,7 +5,7 @@ import cErc20Abi from '../../../configs/abi/compound/cErc20.json';
 import { Tokens } from '../../../configs/constants';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig, Token } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
@@ -67,12 +67,21 @@ export class CompoundAdapter extends Adapter {
         };
       } else {
         const poolContract = new web3.eth.Contract(cErc20Abi as any, address);
-        let token: Token | null;
-        try {
-          const underlyingAddr = await poolContract.methods.underlying().call();
-          token = await this.getWeb3Helper().getErc20Metadata(chain, underlyingAddr);
-        } catch (e: any) {
-          token = Tokens[chain].NativeCoin;
+
+        let token: Token | null = null;
+        if (this.config.staticData) {
+          for (const pool of this.config.staticData.pools) {
+            if (compareAddress(pool.address, address)) {
+              token = pool.underlying;
+            }
+          }
+        } else {
+          try {
+            const underlyingAddr = await poolContract.methods.underlying().call();
+            token = await this.getWeb3Helper().getErc20Metadata(chain, underlyingAddr);
+          } catch (e: any) {
+            token = Tokens[chain].NativeCoin;
+          }
         }
 
         if (token) {
