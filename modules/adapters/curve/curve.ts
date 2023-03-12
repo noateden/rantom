@@ -171,12 +171,18 @@ export class CurveAdapter extends Adapter {
               ['address', 'uint256', 'uint256'],
               `0x${(options.input as string).slice(10)}`
             );
+            let tokenIndex = Number(params[1]);
+
+            // check if this transaction call to meta pool, so we need to subtract tokenIndex to 1
+            if (!compareAddress(options.to ? options.to : address, address)) {
+              tokenIndex -= 1;
+            }
 
             let token;
             if (poolConfig) {
-              token = poolConfig.tokens[Number(params[1])];
+              token = poolConfig.tokens[tokenIndex];
             } else {
-              const coinAddr = await poolContract.methods.coins(Number(params[1])).call();
+              const coinAddr = await poolContract.methods.coins(tokenIndex).call();
               token = await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
             }
 

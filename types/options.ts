@@ -13,6 +13,7 @@ export interface TransferParseLogOptions {
 export interface AdapterParseLogOptions {
   chain: string;
   sender: string; // transaction caller address
+  to?: string; // transaction to address
   address: string;
   topics: Array<string>;
   data: string;

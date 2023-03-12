@@ -74,6 +74,7 @@ export class ParserProvider implements IParserProvider {
               const action: TransactionAction | null = await adapter.tryParsingActions({
                 chain: blockchain.name,
                 sender: normalizeAddress(receipt.from),
+                to: normalizeAddress(receipt.to),
                 address: normalizeAddress(log.address),
                 topics: log.topics,
                 data: log.data,
