@@ -1,4 +1,5 @@
 import { Contract, Token } from '../../types/configs';
+import CurvePool010Abi from '../abi/curve/pool-0.1.0.json';
 import CurvePool024Abi from '../abi/curve/pool-0.2.4.json';
 import CurvePool028Abi from '../abi/curve/pool-0.2.8.json';
 import CurvePool0212Abi from '../abi/curve/pool-0.2.12.json';
@@ -55,5 +56,14 @@ export const CurveContracts: Array<CurvePool> = [
     birthday: 13676995,
     events: ['TokenExchange', 'AddLiquidity', 'RemoveLiquidity', 'RemoveLiquidityOne'],
     tokens: [Tokens.ethereum.WETH, Tokens.ethereum.CRV],
+  },
+  {
+    chain: 'ethereum',
+    protocol: 'curve',
+    abi: CurvePool010Abi,
+    address: '0xa5407eae9ba41422680e2e00537571bcc53efbfd',
+    birthday: 13676995,
+    events: ['TokenExchange', 'AddLiquidity', 'RemoveLiquidity', 'RemoveLiquidityOne'],
+    tokens: [Tokens.ethereum.DAI, Tokens.ethereum.USDC, Tokens.ethereum.USDT, Tokens.ethereum.sUSD],
   },
 ];

@@ -2,10 +2,11 @@ import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import CurvePool024Abi from '../../../configs/abi/curve/pool-0.2.4.json';
+import { CurvePool } from '../../../configs/contracts/curve';
 // import CurvePool0212Abi from '../../../configs/abi/curve/pool-0.2.12.json';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig, Token } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
@@ -13,6 +14,11 @@ import { AdapterParseLogOptions } from '../../../types/options';
 import { Adapter } from '../adapter';
 
 const Signatures = {
+  // vyper version 0.1.0
+  RemoveLiquidityVersion010: '0x9878ca375e106f2a43c3b599fc624568131c4c9a4ba66a14563715763be9d59d',
+  TokenExchangeUnderlying: '0xd013ca23e77a65003c2c659c5442c00c805371b7fc1ebd4c206c41d1536bd90b',
+  AddLiquidityVersion010: '0x3f1915775e0c9a38a57a7bb7f1f9005f486fb904e1f84aa215364d567319a58d',
+
   // vyper version 0.2.4
   TokenExchange: '0x8b3e96f2b889fa771c53c981b40daf005f63f637f1869f707052d15a3dd97140',
   AddLiquidity: '0x423f6495a08fc652425cf4ed0d1f9e37e571d9b9529b1c1c23cce780b2e7df0d',
@@ -41,6 +47,10 @@ export class CurveAdapter extends Adapter {
 
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
     super(config, providers, {
+      [Signatures.AddLiquidityVersion010]: EventSignatureMapping[Signatures.AddLiquidityVersion010],
+      [Signatures.TokenExchangeUnderlying]: EventSignatureMapping[Signatures.TokenExchangeUnderlying],
+      [Signatures.RemoveLiquidityVersion010]: EventSignatureMapping[Signatures.RemoveLiquidityVersion010],
+
       [Signatures.TokenExchange]: EventSignatureMapping[Signatures.TokenExchange],
       [Signatures.AddLiquidity]: EventSignatureMapping[Signatures.AddLiquidity],
       [Signatures.RemoveLiquidity]: EventSignatureMapping[Signatures.RemoveLiquidity],
@@ -62,11 +72,26 @@ export class CurveAdapter extends Adapter {
     });
   }
 
+  private getPoolConfig(poolAddress: string): CurvePool | null {
+    if (this.config.staticData && this.config.staticData.pools) {
+      for (const pool of this.config.staticData.pools) {
+        if (compareAddress((pool as CurvePool).address, poolAddress)) {
+          return pool as CurvePool;
+        }
+      }
+    }
+
+    return null;
+  }
+
   public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
     if (
+      signature === Signatures.TokenExchangeUnderlying ||
+      signature === Signatures.AddLiquidityVersion010 ||
+      signature === Signatures.RemoveLiquidityVersion010 ||
       signature === Signatures.TokenExchange ||
       signature === Signatures.AddLiquidity ||
       signature === Signatures.RemoveLiquidity ||
@@ -82,8 +107,11 @@ export class CurveAdapter extends Adapter {
       signature === Signatures.AddLiquidityVersion030 ||
       signature === Signatures.RemoveLiquidityVersion030
     ) {
+      const poolConfig = this.getPoolConfig(address);
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const poolContract = new web3.eth.Contract(CurvePool024Abi as any, address);
+
+      const poolAbi = poolConfig ? poolConfig.abi : (CurvePool024Abi as any);
+      const poolContract = new web3.eth.Contract(poolAbi, address);
 
       try {
         const poolOwner = await poolContract.methods.owner().call();
@@ -93,14 +121,23 @@ export class CurveAdapter extends Adapter {
           // curve owns this pool
           switch (signature) {
             case Signatures.TokenExchange:
+            case Signatures.TokenExchangeUnderlying:
             case Signatures.TokenExchangeVersion0212: {
-              const [soldTokenAddr, buyTokenAddr] = await Promise.all([
-                poolContract.methods.coins(event.sold_id).call(),
-                poolContract.methods.coins(event.bought_id).call(),
-              ]);
+              let token0;
+              let token1;
 
-              const token0 = await this.getWeb3Helper().getErc20Metadata(chain, soldTokenAddr);
-              const token1 = await this.getWeb3Helper().getErc20Metadata(chain, buyTokenAddr);
+              if (poolConfig) {
+                token0 = poolConfig.tokens[Number(event.sold_id)];
+                token1 = poolConfig.tokens[Number(event.bought_id)];
+              } else {
+                const [soldTokenAddr, buyTokenAddr] = await Promise.all([
+                  poolContract.methods.coins(event.sold_id).call(),
+                  poolContract.methods.coins(event.bought_id).call(),
+                ]);
+
+                token0 = await this.getWeb3Helper().getErc20Metadata(chain, soldTokenAddr);
+                token1 = await this.getWeb3Helper().getErc20Metadata(chain, buyTokenAddr);
+              }
 
               if (token0 && token1) {
                 const buyer = normalizeAddress(event.buyer);
@@ -130,8 +167,15 @@ export class CurveAdapter extends Adapter {
                 ['address', 'uint256', 'uint256'],
                 `0x${(options.input as string).slice(10)}`
               );
-              const coinAddr = await poolContract.methods.coins(Number(params[1])).call();
-              const token = await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
+
+              let token;
+              if (poolConfig) {
+                token = poolConfig.tokens[Number(params[1])];
+              } else {
+                const coinAddr = await poolContract.methods.coins(Number(params[1])).call();
+                token = await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
+              }
+
               if (token) {
                 const tokenAmount = new BigNumber(event.coin_amount)
                   .dividedBy(new BigNumber(10).pow(token.decimals))
@@ -156,6 +200,8 @@ export class CurveAdapter extends Adapter {
             case Signatures.RemoveLiquidityImbalanceVersion028:
             case Signatures.AddLiquidityVersion0212:
             case Signatures.RemoveLiquidityVersion0212:
+            case Signatures.AddLiquidityVersion010:
+            case Signatures.RemoveLiquidityVersion010:
             case Signatures.AddLiquidityVersion030:
             case Signatures.RemoveLiquidityVersion030: {
               const provider = normalizeAddress(event.provider);
@@ -164,8 +210,14 @@ export class CurveAdapter extends Adapter {
               let coinIndex = 0;
               while (true) {
                 try {
-                  const coinAddr = await poolContract.methods.coins(coinIndex).call();
-                  const token = await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
+                  let token;
+                  if (poolConfig) {
+                    token = poolConfig.tokens[coinIndex];
+                  } else {
+                    const coinAddr = await poolContract.methods.coins(coinIndex).call();
+                    await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
+                  }
+
                   if (token) {
                     tokens.push(token);
                     amounts.push(
@@ -174,6 +226,8 @@ export class CurveAdapter extends Adapter {
                         .toString(10)
                     );
                   }
+
+                  if (poolConfig && coinIndex >= poolConfig.tokens.length) break;
                 } catch (e: any) {
                   // ignore when get coin failed
                   break;

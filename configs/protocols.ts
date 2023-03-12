@@ -1,6 +1,7 @@
 import { normalizeAddress } from '../lib/helper';
 import { ProtocolConfig } from '../types/configs';
 import { CompoundContracts } from './contracts/compound';
+import { CurveContracts } from './contracts/curve';
 import { Signatures } from './signatures';
 
 export const Uniswapv2Configs: ProtocolConfig = {
@@ -237,6 +238,9 @@ export const CurveConfigs: ProtocolConfig = {
       '0xecb456ea5365865ebab8a2661b0c503410e9b347', // Curve.fi pool owner
       '0xbabe61887f1de2713c6f97e567623453d3c79f67', // Curve.fi deployer 2
     ],
+  },
+  staticData: {
+    pools: CurveContracts,
   },
 };
 

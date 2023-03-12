@@ -1444,6 +1444,66 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
     ],
   },
 
+  [Signatures['TokenExchangeUnderlying(address,int128,uint256,int128,uint256)']]: {
+    abi: [
+      {
+        type: 'address',
+        name: 'buyer',
+        indexed: true,
+      },
+      {
+        type: 'int128',
+        name: 'sold_id',
+        indexed: false,
+      },
+      {
+        type: 'uint256',
+        name: 'tokens_sold',
+        indexed: false,
+      },
+      {
+        type: 'int128',
+        name: 'bought_id',
+        indexed: false,
+      },
+      {
+        type: 'uint256',
+        name: 'tokens_bought',
+        indexed: false,
+      },
+    ],
+  },
+
+  [Signatures['AddLiquidity(address,uint256[4],uint256[4],uint256,uint256)']]: {
+    abi: [
+      {
+        type: 'address',
+        name: 'provider',
+        indexed: true,
+      },
+      {
+        type: 'uint256[4]',
+        name: 'token_amounts',
+        indexed: false,
+      },
+      {
+        type: 'uint256[4]',
+        name: 'fees',
+        indexed: false,
+      },
+      {
+        type: 'uint256',
+        name: 'invariant',
+        indexed: false,
+      },
+      {
+        type: 'uint256',
+        name: 'token_supply',
+        indexed: false,
+      },
+    ],
+  },
+
   [Signatures['AddLiquidity(address,uint256[3],uint256[3],uint256,uint256)']]: {
     abi: [
       {
@@ -1774,6 +1834,31 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       {
         name: 'token_supply',
         type: 'uint256',
+        indexed: false,
+      },
+    ],
+  },
+
+  [Signatures['RemoveLiquidity(address,uint256[4],uint256[4],uint256)']]: {
+    abi: [
+      {
+        type: 'address',
+        name: 'provider',
+        indexed: true,
+      },
+      {
+        type: 'uint256[4]',
+        name: 'token_amounts',
+        indexed: false,
+      },
+      {
+        type: 'uint256[4]',
+        name: 'fees',
+        indexed: false,
+      },
+      {
+        type: 'uint256',
+        name: 'token_supply',
         indexed: false,
       },
     ],
