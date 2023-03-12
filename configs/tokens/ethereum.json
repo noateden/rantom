@@ -131,6 +131,12 @@
     "symbol": "MANA",
     "decimals": 18
   },
+  "MIM": {
+    "chain": "ethereum",
+    "address": "0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3",
+    "symbol": "MIM",
+    "decimals": 18
+  },
   "MKR": {
     "chain": "ethereum",
     "address": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
@@ -238,6 +244,24 @@
     "address": "0xe41d2489571d322189246dafa5ebde1f4699f498",
     "symbol": "ZRX",
     "decimals": 18
+  },
+  "aDAI": {
+    "chain": "ethereum",
+    "address": "0x028171bca77440897b824ca71d1c56cac55b68a3",
+    "symbol": "aDAI",
+    "decimals": 18
+  },
+  "aUSDC": {
+    "chain": "ethereum",
+    "address": "0xbcca60bb61934080951369a648fb03df4f96263c",
+    "symbol": "aUSDC",
+    "decimals": 6
+  },
+  "aUSDT": {
+    "chain": "ethereum",
+    "address": "0x3ed3b47dd13ec9a98b44e6204a523e766b225811",
+    "symbol": "aUSDT",
+    "decimals": 6
   },
   "renFIL": {
     "chain": "ethereum",

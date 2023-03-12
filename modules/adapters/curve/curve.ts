@@ -114,155 +114,158 @@ export class CurveAdapter extends Adapter {
       const poolContract = new web3.eth.Contract(poolAbi, address);
 
       try {
-        const poolOwner = await poolContract.methods.owner().call();
-        if (this.config.contracts[chain].indexOf(normalizeAddress(poolOwner)) !== -1) {
-          const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+        if (!poolConfig) {
+          const poolOwner = await poolContract.methods.owner().call();
+          if (this.config.contracts[chain].indexOf(normalizeAddress(poolOwner)) === -1) {
+            return null;
+          }
+        }
+        const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
-          // curve owns this pool
-          switch (signature) {
-            case Signatures.TokenExchange:
-            case Signatures.TokenExchangeUnderlying:
-            case Signatures.TokenExchangeVersion0212: {
-              let token0;
-              let token1;
+        // curve owns this pool
+        switch (signature) {
+          case Signatures.TokenExchange:
+          case Signatures.TokenExchangeUnderlying:
+          case Signatures.TokenExchangeVersion0212: {
+            let token0;
+            let token1;
 
-              if (poolConfig) {
-                token0 = poolConfig.tokens[Number(event.sold_id)];
-                token1 = poolConfig.tokens[Number(event.bought_id)];
-              } else {
-                const [soldTokenAddr, buyTokenAddr] = await Promise.all([
-                  poolContract.methods.coins(event.sold_id).call(),
-                  poolContract.methods.coins(event.bought_id).call(),
-                ]);
+            if (poolConfig) {
+              token0 = poolConfig.tokens[Number(event.sold_id)];
+              token1 = poolConfig.tokens[Number(event.bought_id)];
+            } else {
+              const [soldTokenAddr, buyTokenAddr] = await Promise.all([
+                poolContract.methods.coins(event.sold_id).call(),
+                poolContract.methods.coins(event.bought_id).call(),
+              ]);
 
-                token0 = await this.getWeb3Helper().getErc20Metadata(chain, soldTokenAddr);
-                token1 = await this.getWeb3Helper().getErc20Metadata(chain, buyTokenAddr);
-              }
-
-              if (token0 && token1) {
-                const buyer = normalizeAddress(event.buyer);
-                const amount0 = new BigNumber(event.tokens_sold.toString())
-                  .dividedBy(new BigNumber(10).pow(token0.decimals))
-                  .toString(10);
-                const amount1 = new BigNumber(event.tokens_bought.toString())
-                  .dividedBy(new BigNumber(10).pow(token1.decimals))
-                  .toString(10);
-
-                return {
-                  protocol: this.config.protocol,
-                  action: 'swap',
-                  addresses: [buyer],
-                  tokens: [token0, token1],
-                  tokenAmounts: [amount0, amount1],
-                  readableString: `${buyer} swaps ${amount0} ${token0.symbol} for ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
-                };
-              }
-              break;
+              token0 = await this.getWeb3Helper().getErc20Metadata(chain, soldTokenAddr);
+              token1 = await this.getWeb3Helper().getErc20Metadata(chain, buyTokenAddr);
             }
 
-            case Signatures.RemoveLiquidityOne:
-            case Signatures.RemoveLiquidityOneVersion0212: {
-              const provider = normalizeAddress(event.provider);
-              const params = web3.eth.abi.decodeParameters(
-                ['address', 'uint256', 'uint256'],
-                `0x${(options.input as string).slice(10)}`
-              );
-
-              let token;
-              if (poolConfig) {
-                token = poolConfig.tokens[Number(params[1])];
-              } else {
-                const coinAddr = await poolContract.methods.coins(Number(params[1])).call();
-                token = await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
-              }
-
-              if (token) {
-                const tokenAmount = new BigNumber(event.coin_amount)
-                  .dividedBy(new BigNumber(10).pow(token.decimals))
-                  .toString(10);
-                return {
-                  protocol: this.config.protocol,
-                  action: 'withdraw',
-                  addresses: [provider],
-                  tokens: [token],
-                  tokenAmounts: [tokenAmount],
-                  readableString: `${provider} withdraw ${tokenAmount} on ${this.config.protocol} chain ${chain}`,
-                };
-              }
-              break;
-            }
-
-            case Signatures.AddLiquidity:
-            case Signatures.RemoveLiquidity:
-            case Signatures.RemoveLiquidityImbalance:
-            case Signatures.AddLiquidityVersion028:
-            case Signatures.RemoveLiquidityVersion028:
-            case Signatures.RemoveLiquidityImbalanceVersion028:
-            case Signatures.AddLiquidityVersion0212:
-            case Signatures.RemoveLiquidityVersion0212:
-            case Signatures.AddLiquidityVersion010:
-            case Signatures.RemoveLiquidityVersion010:
-            case Signatures.AddLiquidityVersion030:
-            case Signatures.RemoveLiquidityVersion030: {
-              const provider = normalizeAddress(event.provider);
-              const tokens: Array<Token> = [];
-              const amounts: Array<string> = [];
-              let coinIndex = 0;
-              while (true) {
-                try {
-                  let token;
-                  if (poolConfig) {
-                    token = poolConfig.tokens[coinIndex];
-                  } else {
-                    const coinAddr = await poolContract.methods.coins(coinIndex).call();
-                    await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
-                  }
-
-                  if (token) {
-                    tokens.push(token);
-                    amounts.push(
-                      new BigNumber(event.token_amounts[coinIndex])
-                        .dividedBy(new BigNumber(10).pow(token.decimals))
-                        .toString(10)
-                    );
-                  }
-
-                  if (poolConfig && coinIndex >= poolConfig.tokens.length) break;
-                } catch (e: any) {
-                  // ignore when get coin failed
-                  break;
-                }
-
-                coinIndex++;
-              }
-
-              let tokenAmount: string = '';
-              for (let i = 0; i < tokens.length; i++) {
-                tokenAmount += `, ${amounts[i]} ${tokens[i].symbol}`;
-              }
+            if (token0 && token1) {
+              const buyer = normalizeAddress(event.buyer);
+              const amount0 = new BigNumber(event.tokens_sold.toString())
+                .dividedBy(new BigNumber(10).pow(token0.decimals))
+                .toString(10);
+              const amount1 = new BigNumber(event.tokens_bought.toString())
+                .dividedBy(new BigNumber(10).pow(token1.decimals))
+                .toString(10);
 
               return {
                 protocol: this.config.protocol,
-                action:
-                  signature === Signatures.AddLiquidity ||
-                  signature === Signatures.AddLiquidityVersion0212 ||
-                  signature === Signatures.AddLiquidityVersion028 ||
-                  signature === Signatures.AddLiquidityVersion030
-                    ? 'deposit'
-                    : 'withdraw',
-                addresses: [provider],
-                tokens: tokens,
-                tokenAmounts: amounts,
-                readableString: `${provider} ${
-                  signature === Signatures.AddLiquidity ||
-                  signature === Signatures.AddLiquidityVersion0212 ||
-                  signature === Signatures.AddLiquidityVersion028 ||
-                  signature === Signatures.AddLiquidityVersion030
-                    ? 'deposit'
-                    : 'withdraw'
-                } ${tokenAmount.slice(2)} on ${this.config.protocol} chain ${chain}`,
+                action: 'swap',
+                addresses: [buyer],
+                tokens: [token0, token1],
+                tokenAmounts: [amount0, amount1],
+                readableString: `${buyer} swaps ${amount0} ${token0.symbol} for ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
               };
             }
+            break;
+          }
+
+          case Signatures.RemoveLiquidityOne:
+          case Signatures.RemoveLiquidityOneVersion0212: {
+            const provider = normalizeAddress(event.provider);
+            const params = web3.eth.abi.decodeParameters(
+              ['address', 'uint256', 'uint256'],
+              `0x${(options.input as string).slice(10)}`
+            );
+
+            let token;
+            if (poolConfig) {
+              token = poolConfig.tokens[Number(params[1])];
+            } else {
+              const coinAddr = await poolContract.methods.coins(Number(params[1])).call();
+              token = await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
+            }
+
+            if (token) {
+              const tokenAmount = new BigNumber(event.coin_amount)
+                .dividedBy(new BigNumber(10).pow(token.decimals))
+                .toString(10);
+              return {
+                protocol: this.config.protocol,
+                action: 'withdraw',
+                addresses: [provider],
+                tokens: [token],
+                tokenAmounts: [tokenAmount],
+                readableString: `${provider} withdraw ${tokenAmount} on ${this.config.protocol} chain ${chain}`,
+              };
+            }
+            break;
+          }
+
+          case Signatures.AddLiquidity:
+          case Signatures.RemoveLiquidity:
+          case Signatures.RemoveLiquidityImbalance:
+          case Signatures.AddLiquidityVersion028:
+          case Signatures.RemoveLiquidityVersion028:
+          case Signatures.RemoveLiquidityImbalanceVersion028:
+          case Signatures.AddLiquidityVersion0212:
+          case Signatures.RemoveLiquidityVersion0212:
+          case Signatures.AddLiquidityVersion010:
+          case Signatures.RemoveLiquidityVersion010:
+          case Signatures.AddLiquidityVersion030:
+          case Signatures.RemoveLiquidityVersion030: {
+            const provider = normalizeAddress(event.provider);
+            const tokens: Array<Token> = [];
+            const amounts: Array<string> = [];
+            let coinIndex = 0;
+            while (true) {
+              try {
+                let token;
+                if (poolConfig) {
+                  token = poolConfig.tokens[coinIndex];
+                } else {
+                  const coinAddr = await poolContract.methods.coins(coinIndex).call();
+                  await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
+                }
+
+                if (token) {
+                  tokens.push(token);
+                  amounts.push(
+                    new BigNumber(event.token_amounts[coinIndex])
+                      .dividedBy(new BigNumber(10).pow(token.decimals))
+                      .toString(10)
+                  );
+                }
+
+                if (poolConfig && coinIndex >= poolConfig.tokens.length) break;
+              } catch (e: any) {
+                // ignore when get coin failed
+                break;
+              }
+
+              coinIndex++;
+            }
+
+            let tokenAmount: string = '';
+            for (let i = 0; i < tokens.length; i++) {
+              tokenAmount += `, ${amounts[i]} ${tokens[i].symbol}`;
+            }
+
+            return {
+              protocol: this.config.protocol,
+              action:
+                signature === Signatures.AddLiquidity ||
+                signature === Signatures.AddLiquidityVersion0212 ||
+                signature === Signatures.AddLiquidityVersion028 ||
+                signature === Signatures.AddLiquidityVersion030
+                  ? 'deposit'
+                  : 'withdraw',
+              addresses: [provider],
+              tokens: tokens,
+              tokenAmounts: amounts,
+              readableString: `${provider} ${
+                signature === Signatures.AddLiquidity ||
+                signature === Signatures.AddLiquidityVersion0212 ||
+                signature === Signatures.AddLiquidityVersion028 ||
+                signature === Signatures.AddLiquidityVersion030
+                  ? 'deposit'
+                  : 'withdraw'
+              } ${tokenAmount.slice(2)} on ${this.config.protocol} chain ${chain}`,
+            };
           }
         }
       } catch (e: any) {
