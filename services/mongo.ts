@@ -77,6 +77,7 @@ class MongodbProvider implements IMongodbProvider {
     const marketplaceActionsCollection = await this.getCollection(envConfig.mongodb.collections.marketplaceActions);
     const stakingActionsCollection = await this.getCollection(envConfig.mongodb.collections.stakingActions);
     const tradingActionsCollection = await this.getCollection(envConfig.mongodb.collections.tradingActions);
+    const serviceActionsCollection = await this.getCollection(envConfig.mongodb.collections.serviceActions);
     const erc20SupplyActionsCollection = await this.getCollection(envConfig.mongodb.collections.erc20SupplyActions);
 
     statesCollection.createIndex({ name: 1 }, { background: true });
@@ -111,6 +112,12 @@ class MongodbProvider implements IMongodbProvider {
     );
     tradingActionsCollection.createIndex({ protocol: 1, action: 1, timestamp: 1 }, { background: true });
 
+    serviceActionsCollection.createIndex(
+      { chain: 1, contract: 1, transactionHash: 1, logIndex: 1 },
+      { background: true }
+    );
+    serviceActionsCollection.createIndex({ protocol: 1, action: 1, timestamp: 1 }, { background: true });
+
     erc20SupplyActionsCollection.createIndex(
       { chain: 1, contract: 1, transactionHash: 1, logIndex: 1 },
       { background: true }
@@ -123,6 +130,7 @@ class MongodbProvider implements IMongodbProvider {
       marketplaceActionsCollection,
       stakingActionsCollection,
       tradingActionsCollection,
+      serviceActionsCollection,
       erc20SupplyActionsCollection,
     };
   }

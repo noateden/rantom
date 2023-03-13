@@ -17,6 +17,9 @@ export interface MongoCollections {
   // save action related to trading protocol: curve, cowswap, ...
   tradingActionsCollection: Collection;
 
+  // save actions on service protocol like: chainlink, ens, ...
+  serviceActionsCollection: Collection;
+
   // save token mint/burn events
   erc20SupplyActionsCollection: Collection;
 }
@@ -50,7 +53,7 @@ export type KnownAction =
   // for Eth2 Beacon Deposit
   | 'depositBeacon'
 
-  // use for layer 2 batch transaction
+  // use for service transaction
   | 'update';
 
 export interface NonFungibleTokenData {

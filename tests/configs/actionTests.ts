@@ -5,6 +5,7 @@ import { BalancerActionTestLogs } from './protocols/balancer';
 import { BancorActionTestLogs } from './protocols/bancor';
 import { BeanstalkActionTestLogs } from './protocols/beanstalk';
 import { BlurActionTestLogs } from './protocols/blur';
+import { ChainlinkActionTestLogs } from './protocols/chainlink';
 import { Compound3ActionTestLogs, CompoundActionTestLogs } from './protocols/compound';
 import { CowswapActionTestLogs } from './protocols/cowswap';
 import { CurveActionTestLogs } from './protocols/curve';
@@ -50,4 +51,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...X2y2ActionTestLogs,
   ...OpenseaActionTestLogs,
   ...Eth2ActionTestLogs,
+  ...ChainlinkActionTestLogs,
 ];

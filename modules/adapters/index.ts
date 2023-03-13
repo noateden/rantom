@@ -7,6 +7,7 @@ import {
   BancorConfigs,
   BeanstalkConfigs,
   BlurConfigs,
+  ChainlinkConfigs,
   CompoundConfigs,
   Compoundv3Configs,
   CowswapConfigs,
@@ -39,6 +40,7 @@ import { BalancerAdapter } from './balancer/balancer';
 import { BancorAdapter } from './bancor/bancor';
 import { BeanstalkAdapter } from './beanstalk/beanstalk';
 import { BlurAdapter } from './blur/blur';
+import { ChainlinkAdapter } from './chainlink/chainlink';
 import { CompoundAdapter } from './compound/compound';
 import { Compoundv3Adapter } from './compound/compoundv3';
 import { CowswapAdapter } from './cowswap/cowswap';
@@ -96,5 +98,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new OpenseaAdapter(OpenseaConfigs, providers),
     new X2y2Adapter(X2y2Configs, providers),
     new Eth2Adapter(Eth2Configs, providers),
+    new ChainlinkAdapter(ChainlinkConfigs, providers),
   ];
 }

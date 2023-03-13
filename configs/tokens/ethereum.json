@@ -17,6 +17,12 @@
     "symbol": "AMPL",
     "decimals": 9
   },
+  "APE": {
+    "chain": "ethereum",
+    "address": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+    "symbol": "APE",
+    "decimals": 18
+  },
   "BAL": {
     "chain": "ethereum",
     "address": "0xba100000625a3754423978a60c9317c58a424e3d",

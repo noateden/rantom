@@ -381,3 +381,10 @@ export const Eth2Configs: ProtocolConfig = {
     ],
   },
 };
+
+export const ChainlinkConfigs: ProtocolConfig = {
+  protocol: 'chainlink',
+  contracts: {
+    ethereum: [],
+  },
+};

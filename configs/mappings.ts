@@ -3366,4 +3366,45 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+
+  [Signatures['NewTransmission(uint32,int192,address,int192[],bytes,bytes32)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'uint32',
+        name: 'aggregatorRoundId',
+        type: 'uint32',
+      },
+      {
+        indexed: false,
+        internalType: 'int192',
+        name: 'answer',
+        type: 'int192',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'transmitter',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'int192[]',
+        name: 'observations',
+        type: 'int192[]',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes',
+        name: 'observers',
+        type: 'bytes',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'rawReportContext',
+        type: 'bytes32',
+      },
+    ],
+  },
 };
