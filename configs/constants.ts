@@ -6,6 +6,7 @@ export const MongodbPrefix = 'rantom';
 export const PasswordHashAlgorithm = 'sha1';
 
 export const AddressZero = '0x0000000000000000000000000000000000000000';
+export const BeaconDepositContract = '0x00000000219ab540356cbb839cbe05303d7705fa';
 
 export const Tokens: { [key: string]: { [key: string]: Token } } = {
   ethereum: EthereumTokens,

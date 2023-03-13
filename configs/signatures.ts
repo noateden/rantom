@@ -148,4 +148,5 @@ export const Signatures: { [key: string]: string } = {
     '0x95fb6205e23ff6bda16a2d1dba56b9ad7c783f67c96fa149785052f47696f2be',
   'RoyaltyPayment(address,uint256,address,address,uint256)':
     '0x27c4f0403323142b599832f26acd21c74a9e5b809f2215726e244a4ac588cd7d',
+  'DepositEvent(bytes,bytes,bytes,bytes,bytes)': '0x649bbc62d0e31342afea4e5cd82d4049e7e1ee912fc0889aa790803be39038c5',
 };

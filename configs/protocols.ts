@@ -29,6 +29,9 @@ export const LidoConfigs: ProtocolConfig = {
       '0xae7ab96520de3a18e5e111b5eaab095312d7fe84', // stETH
     ],
   },
+  staticData: {
+    depositSecurityModule2: '0x710b3303fb508a84f10793c1106e32be873c24cd',
+  },
 };
 
 export const SushiConfigs: ProtocolConfig = {
@@ -366,6 +369,15 @@ export const X2y2Configs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0x74312363e45dcaba76c59ec49a7aa8a65a67eed3', // X2y2 Exchange
+    ],
+  },
+};
+
+export const Eth2Configs: ProtocolConfig = {
+  protocol: 'eth2',
+  contracts: {
+    ethereum: [
+      '0x00000000219ab540356cbb839cbe05303d7705fa', // Beacon Deposit Contract
     ],
   },
 };

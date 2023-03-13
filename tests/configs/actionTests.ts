@@ -9,6 +9,7 @@ import { Compound3ActionTestLogs, CompoundActionTestLogs } from './protocols/com
 import { CowswapActionTestLogs } from './protocols/cowswap';
 import { CurveActionTestLogs } from './protocols/curve';
 import { EnsActionTestLogs } from './protocols/ens';
+import { Eth2ActionTestLogs } from './protocols/eth2';
 import { HopActionTestLogs } from './protocols/hop';
 import { IronbankActionTestLogs } from './protocols/ironbank';
 import { LidoActionTestLogs } from './protocols/lido';
@@ -48,4 +49,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...LooksrareActionTestLogs,
   ...X2y2ActionTestLogs,
   ...OpenseaActionTestLogs,
+  ...Eth2ActionTestLogs,
 ];

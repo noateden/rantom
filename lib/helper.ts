@@ -1,3 +1,5 @@
+import BigNumber from 'bignumber.js';
+
 export async function sleep(seconds: number) {
   return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
 }
@@ -45,3 +47,24 @@ export const shortenAddress = (address: string, chars = 6) => {
 export const shortenTxid = (txid: string, chars = 10) => {
   return `${txid.substring(0, chars + 2)}...${txid.substring(txid.length - chars)}`;
 };
+
+export function hexStringToDecimal(hexString: string): number {
+  return new BigNumber(hexString, 16).toNumber();
+}
+
+// https://etherscan.io/address/0x00000000219ab540356cbb839cbe05303d7705fa#code#L169
+export function fromLittleEndian64(bytes8: string): string {
+  // remove 0x
+  const bytes8Value = bytes8.split('0x')[1];
+  let swapBytes8 = '0x';
+  swapBytes8 += bytes8Value[14] + bytes8Value[15];
+  swapBytes8 += bytes8Value[12] + bytes8Value[13];
+  swapBytes8 += bytes8Value[10] + bytes8Value[11];
+  swapBytes8 += bytes8Value[8] + bytes8Value[9];
+  swapBytes8 += bytes8Value[6] + bytes8Value[7];
+  swapBytes8 += bytes8Value[4] + bytes8Value[5];
+  swapBytes8 += bytes8Value[2] + bytes8Value[3];
+  swapBytes8 += bytes8Value[0] + bytes8Value[1];
+
+  return new BigNumber(hexStringToDecimal(swapBytes8).toString()).dividedBy(1e9).toString(10);
+}

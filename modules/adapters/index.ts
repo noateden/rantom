@@ -12,6 +12,7 @@ import {
   CowswapConfigs,
   CurveConfigs,
   EnsConfigs,
+  Eth2Configs,
   FraxswapConfigs,
   HopConfigs,
   IronbankConfigs,
@@ -43,6 +44,7 @@ import { Compoundv3Adapter } from './compound/compoundv3';
 import { CowswapAdapter } from './cowswap/cowswap';
 import { CurveAdapter } from './curve/curve';
 import { EnsAdapter } from './ens/ens';
+import { Eth2Adapter } from './eth2/eth2';
 import { HopAdapter } from './hop/hop';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { LidoAdapter } from './lido/lido';
@@ -93,5 +95,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new BlurAdapter(BlurConfigs, providers),
     new OpenseaAdapter(OpenseaConfigs, providers),
     new X2y2Adapter(X2y2Configs, providers),
+    new Eth2Adapter(Eth2Configs, providers),
   ];
 }
