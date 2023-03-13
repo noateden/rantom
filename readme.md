@@ -49,6 +49,8 @@ yarn start --help
 |     Loopring     | Deposit, Withdraw                                        |     🌱 |
 |    Multichain    | SwapIn, SwapOut                                          |     🌱 |
 |     Optimism     | Batch                                                    |     🌱 |
+|  Eth2 Validator  | DepositEvent                                             |     🌱 |
+|    Chainlink     | NewTransmission                                          |     🌱 |
 
 ### Nft Marketplace
 
