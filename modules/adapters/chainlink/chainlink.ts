@@ -1,3 +1,4 @@
+import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import OffchainAggregatorAbi from '../../../configs/abi/chainlink/OffchainAggregator.json';
@@ -35,15 +36,19 @@ export class ChainlinkAdapter extends Adapter {
       try {
         const poolContract = new web3.eth.Contract(OffchainAggregatorAbi as any, address);
 
-        const [LINK, description] = await Promise.all([
+        const [LINK, description, decimals] = await Promise.all([
           poolContract.methods.LINK().call(),
           poolContract.methods.description().call(),
+          poolContract.methods.decimals().call(),
         ]);
 
         // const results = await multicallv2(chain, OffchainAggregatorAbi, calls);
         if (compareAddress(LINK.toString(), Tokens.ethereum.LINK.address)) {
           // chainlink price
           const label = description.toString();
+          const answer = new BigNumber(event.answer)
+            .dividedBy(new BigNumber(10).pow(new BigNumber(decimals)))
+            .toString(10);
 
           return {
             protocol: this.config.protocol,
@@ -51,12 +56,12 @@ export class ChainlinkAdapter extends Adapter {
             tokens: [],
             tokenAmounts: [],
             addresses: [normalizeAddress(options.sender)],
-            readableString: `${normalizeAddress(options.sender)} update ${label} price to ${event.answer} on ${
+            readableString: `${normalizeAddress(options.sender)} update ${label} price to ${answer} on ${
               this.config.protocol
             } chain ${options.chain}`,
             addition: {
               label: label,
-              answer: event.answer,
+              answer: answer,
             },
           };
         }
