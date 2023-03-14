@@ -50,9 +50,6 @@ export type KnownAction =
   // for beanstalk sow beans
   | 'sow'
 
-  // for Eth2 Beacon Deposit
-  | 'depositBeacon'
-
   // use for service transaction
   | 'update';
 

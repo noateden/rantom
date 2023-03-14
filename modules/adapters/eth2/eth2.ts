@@ -37,7 +37,7 @@ export class Eth2Adapter extends Adapter {
       const amount = fromLittleEndian64(event.amount);
       return {
         protocol: this.config.protocol,
-        action: 'depositBeacon',
+        action: 'deposit',
         tokens: [Tokens.ethereum.ETH],
         tokenAmounts: [amount],
         addresses: [normalizeAddress(options.sender), normalizeAddress(options.to)],
@@ -45,6 +45,9 @@ export class Eth2Adapter extends Adapter {
           options.chain
         }`,
         addition: {
+          // identify which protocol is depositing by contract address
+          contract: options.to ? options.to : null,
+
           pubkey: event.pubkey,
           withdrawalCredentials: event.withdrawal_credentials,
         },

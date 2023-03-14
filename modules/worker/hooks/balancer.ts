@@ -1,6 +1,8 @@
 import BigNumber from 'bignumber.js';
+import Web3 from 'web3';
 
 import { AddressZero } from '../../../configs/constants';
+import EnvConfig from '../../../configs/envConfig';
 import { BalancerConfigs } from '../../../configs/protocols';
 import { normalizeAddress } from '../../../lib/helper';
 import { Contract } from '../../../types/configs';
@@ -29,10 +31,12 @@ export class BalancerWorkerHook extends TradingWorker {
     const transactionHash = event.transactionHash;
     const blockNumber = event.blockNumber;
 
+    const web3 = new Web3(EnvConfig.blockchains[contract.chain].nodeRpc);
+    const receipt = await web3.eth.getTransactionReceipt(transactionHash);
     const adapter = new BalancerAdapter(BalancerConfigs, this.providers);
     const action = await adapter.tryParsingActions({
       chain: contract.chain,
-      sender: AddressZero, // don't use this field
+      sender: receipt ? receipt.from : AddressZero, // don't use this field
       address: contract.address,
       data: event.raw.data,
       topics: event.raw.topics,
