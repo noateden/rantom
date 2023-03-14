@@ -20,10 +20,12 @@ import { MultichainActionTestLogs } from './protocols/multichain';
 import { OpenseaActionTestLogs } from './protocols/opensea';
 import { OptimismActionTestLogs } from './protocols/optimism';
 import { PancakeswapActionTestLogs } from './protocols/pancakeswap';
+import { ParaswapActionTestLogs } from './protocols/paraswap';
 import { RocketpoolActionTestLogs } from './protocols/rocketpool';
 import { SushiActionTestLogs } from './protocols/sushi';
 import { UniswapActionTestLogs } from './protocols/uniswap';
 import { X2y2ActionTestLogs } from './protocols/x2y2';
+import { ZeroxActionTestLogs } from './protocols/zerox';
 
 export const ActionTestLogs: Array<TestLog> = [
   ...UniswapActionTestLogs,
@@ -52,4 +54,6 @@ export const ActionTestLogs: Array<TestLog> = [
   ...OpenseaActionTestLogs,
   ...Eth2ActionTestLogs,
   ...ChainlinkActionTestLogs,
+  ...ZeroxActionTestLogs,
+  ...ParaswapActionTestLogs,
 ];

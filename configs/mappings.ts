@@ -3407,4 +3407,79 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+
+  [Signatures['TransformedERC20(address,address,address,uint256,uint256)']]: {
+    abi: [
+      { indexed: true, internalType: 'address', name: 'taker', type: 'address' },
+      { indexed: false, internalType: 'address', name: 'inputToken', type: 'address' },
+      { indexed: false, internalType: 'address', name: 'outputToken', type: 'address' },
+      { indexed: false, internalType: 'uint256', name: 'inputTokenAmount', type: 'uint256' },
+      { indexed: false, internalType: 'uint256', name: 'outputTokenAmount', type: 'uint256' },
+    ],
+  },
+
+  [Signatures['Swapped2(bytes16,address,uint256,address,address,address,address,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'bytes16',
+        name: 'uuid',
+        type: 'bytes16',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'partner',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'feePercent',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'initiator',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'beneficiary',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'srcToken',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'destToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'srcAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'receivedAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'expectedAmount',
+        type: 'uint256',
+      },
+    ],
+  },
 };

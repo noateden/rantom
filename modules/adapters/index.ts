@@ -30,6 +30,7 @@ import {
   Uniswapv2Configs,
   Uniswapv3Configs,
   X2y2Configs,
+  ZeroxConfigs,
 } from '../../configs/protocols';
 import { GlobalProviders, IAdapter } from '../../types/namespaces';
 import { Aavev1Adapter } from './aave/aavev1';
@@ -60,6 +61,7 @@ import { SushiAdapter } from './sushi/sushi';
 import { Uniswapv2Adapter } from './uniswap/uniswapv2';
 import { Uniswapv3Adapter } from './uniswap/uniswapv3';
 import { X2y2Adapter } from './x2y2/x2y2';
+import { ZeroxAdapter } from './zerox/zerox';
 
 export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> {
   return [
@@ -99,5 +101,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new X2y2Adapter(X2y2Configs, providers),
     new Eth2Adapter(Eth2Configs, providers),
     new ChainlinkAdapter(ChainlinkConfigs, providers),
+    new ZeroxAdapter(ZeroxConfigs, providers),
   ];
 }

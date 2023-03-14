@@ -24,6 +24,6 @@ export const CowswapActionTestLogs: Array<TestLog> = [
       transactionIndex: '0xb7',
     },
     adapter: new CowswapAdapter(CowswapConfigs, null),
-    action: 'swap',
+    action: 'trade',
   },
 ];

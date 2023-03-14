@@ -388,3 +388,21 @@ export const ChainlinkConfigs: ProtocolConfig = {
     ethereum: [],
   },
 };
+
+export const ZeroxConfigs: ProtocolConfig = {
+  protocol: 'zerox',
+  contracts: {
+    ethereum: [
+      '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // Proxy Exchange
+    ],
+  },
+};
+
+export const ParaswapConfigs: ProtocolConfig = {
+  protocol: 'paraswap',
+  contracts: {
+    ethereum: [
+      '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap Augustus Swapper v5
+    ],
+  },
+};

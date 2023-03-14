@@ -46,6 +46,7 @@ export type KnownAction =
   | 'sell'
   | 'bid'
   | 'cancel'
+  | 'trade'
 
   // for beanstalk sow beans
   | 'sow'

@@ -151,4 +151,8 @@ export const Signatures: { [key: string]: string } = {
   'DepositEvent(bytes,bytes,bytes,bytes,bytes)': '0x649bbc62d0e31342afea4e5cd82d4049e7e1ee912fc0889aa790803be39038c5',
   'NewTransmission(uint32,int192,address,int192[],bytes,bytes32)':
     '0xf6a97944f31ea060dfde0566e4167c1a1082551e64b60ecb14d599a9d023d451',
+  'TransformedERC20(address,address,address,uint256,uint256)':
+    '0x0f6672f78a59ba8e5e5b5d38df3ebc67f3c792e2c9259b8d97d7f00dd78ba1b3',
+  'Swapped2(bytes16,address,uint256,address,address,address,address,uint256,uint256,uint256)':
+    '0x974dd0442e0b8c00fdbaae504edea1412d63bc110294a98b3c61ddcd0e703aa8',
 };
