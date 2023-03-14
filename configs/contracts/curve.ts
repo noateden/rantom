@@ -3,6 +3,7 @@ import CurvePool010Abi from '../abi/curve/pool-0.1.0.json';
 import CurvePool024Abi from '../abi/curve/pool-0.2.4.json';
 import CurvePool028Abi from '../abi/curve/pool-0.2.8.json';
 import CurvePool0212Abi from '../abi/curve/pool-0.2.12.json';
+import CurvePool0215Abi from '../abi/curve/pool-0.2.15.json';
 import CurvePool030Abi from '../abi/curve/pool-0.3.0.json';
 import CurvePool031Abi from '../abi/curve/pool-0.3.1.json';
 import { Tokens } from '../constants';
@@ -134,5 +135,15 @@ export const CurveContracts: Array<CurvePool> = [
     isMetaPool: true,
     events: ['TokenExchange', 'TokenExchangeUnderlying', 'AddLiquidity', 'RemoveLiquidity', 'RemoveLiquidityOne'],
     tokens: [Tokens.ethereum.aDAI, Tokens.ethereum.aUSDC, Tokens.ethereum.aUSDT],
+  },
+  {
+    chain: 'ethereum',
+    protocol: 'curve',
+    abi: CurvePool0215Abi,
+    address: '0x828b154032950c8ff7cf8085d841723db2696056',
+    birthday: 16308190,
+    isMetaPool: true,
+    events: ['TokenExchange', 'AddLiquidity', 'RemoveLiquidity', 'RemoveLiquidityOne'],
+    tokens: [Tokens.ethereum.WETH, Tokens.ethereum.stETH],
   },
 ];
