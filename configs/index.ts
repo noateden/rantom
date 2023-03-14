@@ -42,7 +42,7 @@ export const MaxExploreTransactions = 3;
 
 // return initial block for worker syncing
 export const WorkerGenesisBlocks: { [key: string]: number } = {
-  ethereum: 16720733, // Feb-27-2023 04:30:59 PM +UTC
+  ethereum: 16308190, // Jan-01-2023 12:00:11 AM +UTC
 };
 
 export const AllProtocolConfigs: { [key: string]: ProtocolConfig } = {
