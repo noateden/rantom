@@ -73,7 +73,7 @@ export const CurveContracts: Array<CurvePool> = [
     address: '0xa5407eae9ba41422680e2e00537571bcc53efbfd',
     birthday: 16308190,
     isMetaPool: false,
-    events: ['TokenExchange', 'TokenExchangeUnderlying', 'AddLiquidity', 'RemoveLiquidity', 'RemoveLiquidityOne'],
+    events: ['TokenExchange', 'TokenExchangeUnderlying', 'AddLiquidity', 'RemoveLiquidity', 'RemoveLiquidityImbalance'],
     tokens: [Tokens.ethereum.DAI, Tokens.ethereum.USDC, Tokens.ethereum.USDT, Tokens.ethereum.sUSD],
   },
   {

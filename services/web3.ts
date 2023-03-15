@@ -117,7 +117,7 @@ export class Web3HelperProvider implements IWeb3HelperProvider {
     const contract = new web3.eth.Contract(Erc721Abi as any, tokenAddress);
 
     try {
-      const [symbol] = await Promise.all([contract.methods.symbol().call()]);
+      const [symbol] = await Promise.all([contract.methods.name().call()]);
 
       const token: Token = {
         chain,
