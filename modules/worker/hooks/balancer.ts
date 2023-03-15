@@ -9,16 +9,16 @@ import { Contract } from '../../../types/configs';
 import { KnownAction, TradingEvent } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { BalancerAdapter } from '../../adapters/balancer/balancer';
-import { TradingWorker } from '../worker';
+import { TradingWorkerHook } from '../extends/trading';
 
-export class BalancerWorkerHook extends TradingWorker {
+export class BalancerWorkerHook extends TradingWorkerHook {
   public readonly name: string = 'worker.balancer';
 
   constructor(providers: GlobalProviders, contracts: Array<Contract>) {
     super(providers, contracts);
   }
 
-  public async parseTradingEvent(contract: Contract, event: any, options: any): Promise<TradingEvent | null> {
+  public async parseEvent(contract: Contract, event: any, options: any): Promise<TradingEvent | null> {
     let timestamp =
       options && options.blockTimes && options.blockTimes[event.blockNumber.toString()]
         ? Number(options.blockTimes[event.blockNumber.toString()].timestamp)

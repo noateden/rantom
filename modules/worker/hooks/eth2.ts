@@ -8,9 +8,9 @@ import { Contract } from '../../../types/configs';
 import { KnownAction, StakingEvent } from '../../../types/domains';
 import { GlobalProviders, IAdapter } from '../../../types/namespaces';
 import { Eth2Adapter } from '../../adapters/eth2/eth2';
-import { StakingWorker } from '../worker';
+import { StakingWorkerHook } from '../extends/staking';
 
-export class Eth2WorkerHook extends StakingWorker {
+export class Eth2WorkerHook extends StakingWorkerHook {
   public readonly name: string = 'worker.eth2';
 
   constructor(providers: GlobalProviders, contracts: Array<Contract>) {
@@ -21,7 +21,7 @@ export class Eth2WorkerHook extends StakingWorker {
     return new Eth2Adapter(Eth2Configs, this.providers);
   }
 
-  public async parseStakingEvent(contract: Contract, event: any): Promise<StakingEvent | null> {
+  public async parseEvent(contract: Contract, event: any): Promise<StakingEvent | null> {
     const timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, event.blockNumber);
     const logIndex = event.logIndex;
     const transactionHash = event.transactionHash;

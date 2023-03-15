@@ -2,9 +2,9 @@ import { SushiConfigs } from '../../../configs/protocols';
 import { Contract } from '../../../types/configs';
 import { GlobalProviders, IAdapter } from '../../../types/namespaces';
 import { SushiAdapter } from '../../adapters/sushi/sushi';
-import { StakingWorker } from '../worker';
+import { StakingWorkerHook } from '../extends/staking';
 
-export class SushiWorkerHook extends StakingWorker {
+export class SushiWorkerHook extends StakingWorkerHook {
   public readonly name: string = 'worker.sushi';
 
   constructor(providers: GlobalProviders, contracts: Array<Contract>) {

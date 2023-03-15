@@ -2,9 +2,9 @@ import { LidoConfigs } from '../../../configs/protocols';
 import { Contract } from '../../../types/configs';
 import { GlobalProviders, IAdapter } from '../../../types/namespaces';
 import { LidoAdapter } from '../../adapters/lido/lido';
-import { StakingWorker } from '../worker';
+import { StakingWorkerHook } from '../extends/staking';
 
-export class LidoWorkerHook extends StakingWorker {
+export class LidoWorkerHook extends StakingWorkerHook {
   public readonly name: string = 'worker.lido';
 
   constructor(providers: GlobalProviders, contracts: Array<Contract>) {

@@ -2,9 +2,9 @@ import { RocketpoolConfigs } from '../../../configs/protocols';
 import { Contract } from '../../../types/configs';
 import { GlobalProviders, IAdapter } from '../../../types/namespaces';
 import { RocketpoolAdapter } from '../../adapters/rocketpool/rocketpool';
-import { StakingWorker } from '../worker';
+import { StakingWorkerHook } from '../extends/staking';
 
-export class RocketpoolWorkerHook extends StakingWorker {
+export class RocketpoolWorkerHook extends StakingWorkerHook {
   public readonly name: string = 'worker.rocketpool';
 
   constructor(providers: GlobalProviders, contracts: Array<Contract>) {

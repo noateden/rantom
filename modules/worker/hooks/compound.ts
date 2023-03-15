@@ -7,16 +7,16 @@ import { Contract } from '../../../types/configs';
 import { KnownAction, LendingEvent } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { CompoundAdapter } from '../../adapters/compound/compound';
-import { LendingWorker } from '../worker';
+import { LendingWorkerHook } from '../extends/lending';
 
-export class CompoundWorkerHook extends LendingWorker {
+export class CompoundWorkerHook extends LendingWorkerHook {
   public readonly name: string = 'worker.compound';
 
   constructor(providers: GlobalProviders, contracts: Array<Contract>) {
     super(providers, contracts);
   }
 
-  public async parseLendingEvent(contract: Contract, event: any, options: any): Promise<LendingEvent | null> {
+  public async parseEvent(contract: Contract, event: any, options: any): Promise<LendingEvent | null> {
     let timestamp =
       options && options.blockTimes && options.blockTimes[event.blockNumber.toString()]
         ? Number(options.blockTimes[event.blockNumber.toString()].timestamp)

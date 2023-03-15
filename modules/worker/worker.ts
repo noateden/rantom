@@ -1,14 +1,14 @@
-import BigNumber from 'bignumber.js';
+import { Collection } from 'mongodb';
 import Web3 from 'web3';
 
-import { AddressZero, BlockSubgraphs } from '../../configs/constants';
+import { BlockSubgraphs } from '../../configs/constants';
 import EnvConfig from '../../configs/envConfig';
 import { normalizeAddress, shortenAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { getBlockTimestamps } from '../../lib/subgraph';
 import { Contract } from '../../types/configs';
-import { KnownAction, LendingEvent, MongoCollections, StakingEvent, TradingEvent } from '../../types/domains';
-import { GlobalProviders, IAdapter, IContractWorker } from '../../types/namespaces';
+import { MongoCollections, TradingEvent } from '../../types/domains';
+import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 import { WorkerRunOptions } from '../../types/options';
 
 export class ContractWorker implements IContractWorker {
@@ -21,8 +21,51 @@ export class ContractWorker implements IContractWorker {
     this.contracts = contracts;
   }
 
-  public async processEvents(contract: Contract, events: Array<any>, options: any): Promise<any> {
-    return [];
+  public async getCollection(): Promise<Collection | null> {
+    return null;
+  }
+
+  public async parseEvent(contract: Contract, event: any, options: any): Promise<any> {
+    return null;
+  }
+
+  public async processEvents(contract: Contract, events: Array<any>, options: any): Promise<number> {
+    const actions: Array<TradingEvent> = [];
+
+    for (const event of events) {
+      const transformedEvent: any = await this.parseEvent(contract, event, options);
+      if (transformedEvent) {
+        actions.push(transformedEvent);
+      }
+    }
+
+    const operations: Array<any> = [];
+    for (const action of actions) {
+      operations.push({
+        updateOne: {
+          filter: {
+            chain: action.chain,
+            contract: action.contract,
+            transactionHash: action.transactionHash,
+            logIndex: action.logIndex,
+          },
+          update: {
+            $set: {
+              ...action,
+            },
+          },
+          upsert: true,
+        },
+      });
+    }
+    if (operations.length > 0) {
+      const collection = await this.getCollection();
+      if (collection) {
+        await collection.bulkWrite(operations);
+      }
+    }
+
+    return operations.length;
   }
 
   private async indexContract(config: Contract, options: WorkerRunOptions): Promise<void> {
@@ -132,187 +175,5 @@ export class ContractWorker implements IContractWorker {
     for (const contract of this.contracts) {
       await this.indexContract(contract, options);
     }
-  }
-}
-
-export class LendingWorker extends ContractWorker {
-  public readonly name: string = 'worker.lending';
-
-  constructor(providers: GlobalProviders, contracts: Array<Contract>) {
-    super(providers, contracts);
-  }
-
-  public async processEvents(contract: Contract, events: Array<any>, options: any): Promise<any> {
-    const actions: Array<LendingEvent> = [];
-
-    for (const event of events) {
-      const transformedEvent: LendingEvent | null = await this.parseLendingEvent(contract, event, options);
-      if (transformedEvent) {
-        actions.push(transformedEvent);
-      }
-    }
-
-    const operations: Array<any> = [];
-    for (const action of actions) {
-      operations.push({
-        updateOne: {
-          filter: {
-            chain: action.chain,
-            contract: action.contract,
-            transactionHash: action.transactionHash,
-            logIndex: action.logIndex,
-          },
-          update: {
-            $set: {
-              ...action,
-            },
-          },
-          upsert: true,
-        },
-      });
-    }
-    if (operations.length > 0) {
-      const collections: MongoCollections = await this.providers.mongodb.requireCollections();
-      await collections.lendingActionsCollection.bulkWrite(operations);
-    }
-  }
-
-  public async parseLendingEvent(contract: Contract, event: any, options: any): Promise<LendingEvent | null> {
-    return null;
-  }
-}
-
-export class StakingWorker extends ContractWorker {
-  public readonly name: string = 'worker.staking';
-
-  constructor(providers: GlobalProviders, contracts: Array<Contract>) {
-    super(providers, contracts);
-  }
-
-  public getAdapter(): IAdapter | null {
-    return null;
-  }
-
-  public async processEvents(contract: Contract, events: Array<any>, options: any): Promise<any> {
-    const actions: Array<StakingEvent> = [];
-
-    for (const event of events) {
-      const transformedEvent: StakingEvent | null = await this.parseStakingEvent(contract, event);
-      if (transformedEvent) {
-        actions.push(transformedEvent);
-      }
-    }
-
-    const operations: Array<any> = [];
-    for (const action of actions) {
-      operations.push({
-        updateOne: {
-          filter: {
-            chain: action.chain,
-            contract: action.contract,
-            transactionHash: action.transactionHash,
-            logIndex: action.logIndex,
-          },
-          update: {
-            $set: {
-              ...action,
-            },
-          },
-          upsert: true,
-        },
-      });
-    }
-    if (operations.length > 0) {
-      const collections: MongoCollections = await this.providers.mongodb.requireCollections();
-      await collections.stakingActionsCollection.bulkWrite(operations);
-    }
-  }
-
-  public async parseStakingEvent(contract: Contract, event: any): Promise<StakingEvent | null> {
-    const adapter: IAdapter | null = this.getAdapter();
-
-    if (!adapter) return null;
-
-    const timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, event.blockNumber);
-    const logIndex = event.logIndex;
-    const transactionHash = event.transactionHash;
-    const blockNumber = event.blockNumber;
-
-    const action = await adapter.tryParsingActions({
-      chain: contract.chain,
-      sender: AddressZero, // don't use this field
-      address: contract.address,
-      data: event.raw.data,
-      topics: event.raw.topics,
-    });
-
-    if (action) {
-      return {
-        chain: contract.chain,
-        contract: normalizeAddress(contract.address),
-        transactionHash: transactionHash,
-        logIndex: logIndex,
-        protocol: contract.protocol,
-        timestamp,
-        blockNumber: blockNumber,
-        action: action.action as KnownAction,
-        token: action.tokens[0],
-        amount: new BigNumber(action.tokenAmounts[0])
-          .multipliedBy(new BigNumber(10).pow(action.tokens[0].decimals))
-          .toString(10),
-        caller: action.addresses[0],
-        user: action.addresses[0],
-        addition: action.addition ? action.addition : undefined,
-      };
-    }
-
-    return null;
-  }
-}
-
-export class TradingWorker extends ContractWorker {
-  public readonly name: string = 'worker.trading';
-
-  constructor(providers: GlobalProviders, contracts: Array<Contract>) {
-    super(providers, contracts);
-  }
-
-  public async processEvents(contract: Contract, events: Array<any>, options: any): Promise<any> {
-    const actions: Array<TradingEvent> = [];
-
-    for (const event of events) {
-      const transformedEvent: TradingEvent | null = await this.parseTradingEvent(contract, event, options);
-      if (transformedEvent) {
-        actions.push(transformedEvent);
-      }
-    }
-
-    const operations: Array<any> = [];
-    for (const action of actions) {
-      operations.push({
-        updateOne: {
-          filter: {
-            chain: action.chain,
-            contract: action.contract,
-            transactionHash: action.transactionHash,
-            logIndex: action.logIndex,
-          },
-          update: {
-            $set: {
-              ...action,
-            },
-          },
-          upsert: true,
-        },
-      });
-    }
-    if (operations.length > 0) {
-      const collections: MongoCollections = await this.providers.mongodb.requireCollections();
-      await collections.tradingActionsCollection.bulkWrite(operations);
-    }
-  }
-
-  public async parseTradingEvent(contract: Contract, event: any, options: any): Promise<TradingEvent | null> {
-    return null;
   }
 }
