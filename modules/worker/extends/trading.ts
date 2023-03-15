@@ -1,7 +1,7 @@
 import { Collection } from 'mongodb';
 
 import { Contract } from '../../../types/configs';
-import { GlobalProviders, IAdapter } from '../../../types/namespaces';
+import { GlobalProviders } from '../../../types/namespaces';
 import { ContractWorker } from '../worker';
 
 export class TradingWorkerHook extends ContractWorker {
@@ -9,10 +9,6 @@ export class TradingWorkerHook extends ContractWorker {
 
   constructor(providers: GlobalProviders, contracts: Array<Contract>) {
     super(providers, contracts);
-  }
-
-  public getAdapter(): IAdapter | null {
-    return null;
   }
 
   public async getCollection(): Promise<Collection | null> {

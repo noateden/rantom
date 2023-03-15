@@ -6,6 +6,7 @@ import { CurveContracts } from '../../configs/contracts/curve';
 import { Erc20Contracts } from '../../configs/contracts/erc20';
 import { Eth2Contracts } from '../../configs/contracts/eth2';
 import { LidoContracts } from '../../configs/contracts/lido';
+import { LooksrareContracts } from '../../configs/contracts/looksrare';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { RocketpoolContracts } from '../../configs/contracts/rocketpool';
 import { SushiContracts } from '../../configs/contracts/sushi';
@@ -18,6 +19,7 @@ import { CompoundWorkerHook } from './hooks/compound';
 import { CurveWorkerHook } from './hooks/curve';
 import { Eth2WorkerHook } from './hooks/eth2';
 import { LidoWorkerHook } from './hooks/lido';
+import { LooksrareWorkerHook } from './hooks/looksrare';
 import { OpenseaWorkerHook } from './hooks/opensea';
 import { RocketpoolWorkerHook } from './hooks/rocketpool';
 import { SushiWorkerHook } from './hooks/sushi';
@@ -35,5 +37,6 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     erc20: new Erc20SupplyWorker(providers, Erc20Contracts),
     balancer: new BalancerWorkerHook(providers, BalancerContracts),
     eth2: new Eth2WorkerHook(providers, Eth2Contracts),
+    looksrare: new LooksrareWorkerHook(providers, LooksrareContracts),
   };
 }
