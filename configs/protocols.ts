@@ -406,3 +406,54 @@ export const ParaswapConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const YearnConfigs: ProtocolConfig = {
+  protocol: 'yearn',
+  contracts: {
+    ethereum: [
+      // We detect yearn vault by checking vault governance address is match with
+      // Yearn Treasury or not?
+      '0xfeb4acf3df3cdea7399794d0869ef76a6efaff52',
+    ],
+  },
+  customEventMapping: {
+    [Signatures['Deposit(address,uint256,uint256)']]: {
+      abi: [
+        {
+          name: 'recipient',
+          type: 'address',
+          indexed: true,
+        },
+        {
+          name: 'shares',
+          type: 'uint256',
+          indexed: false,
+        },
+        {
+          name: 'amount',
+          type: 'uint256',
+          indexed: false,
+        },
+      ],
+    },
+    [Signatures['Withdraw(address,uint256,uint256)']]: {
+      abi: [
+        {
+          name: 'recipient',
+          type: 'address',
+          indexed: true,
+        },
+        {
+          name: 'shares',
+          type: 'uint256',
+          indexed: false,
+        },
+        {
+          name: 'amount',
+          type: 'uint256',
+          indexed: false,
+        },
+      ],
+    },
+  },
+};
