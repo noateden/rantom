@@ -155,4 +155,6 @@ export const Signatures: { [key: string]: string } = {
     '0x0f6672f78a59ba8e5e5b5d38df3ebc67f3c792e2c9259b8d97d7f00dd78ba1b3',
   'Swapped2(bytes16,address,uint256,address,address,address,address,uint256,uint256,uint256)':
     '0x974dd0442e0b8c00fdbaae504edea1412d63bc110294a98b3c61ddcd0e703aa8',
+  'Deposit(bytes32,uint32,uint256)': '0xa945e51eec50ab98c161376f0db4cf2aeba3ec92755fe2fcd388bdbbb80ff196',
+  'Withdrawal(address,bytes32,address,uint256)': '0xe9e508bad6d4c3227e881ca19068f099da81b5164dd6d62b2eaf1e8bc6c34931',
 };

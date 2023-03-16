@@ -23,6 +23,7 @@ import { PancakeswapActionTestLogs } from './protocols/pancakeswap';
 import { ParaswapActionTestLogs } from './protocols/paraswap';
 import { RocketpoolActionTestLogs } from './protocols/rocketpool';
 import { SushiActionTestLogs } from './protocols/sushi';
+import { TornadocashActionTestLogs } from './protocols/tornadocash';
 import { UniswapActionTestLogs } from './protocols/uniswap';
 import { X2y2ActionTestLogs } from './protocols/x2y2';
 import { YearnActionTestLogs } from './protocols/yearn';
@@ -58,4 +59,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...ZeroxActionTestLogs,
   ...ParaswapActionTestLogs,
   ...YearnActionTestLogs,
+  ...TornadocashActionTestLogs,
 ];

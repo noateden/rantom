@@ -3482,4 +3482,54 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Deposit(bytes32,uint32,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'commitment',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint32',
+        name: 'leafIndex',
+        type: 'uint32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'timestamp',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['Withdrawal(address,bytes32,address,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'to',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'nullifierHash',
+        type: 'bytes32',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'relayer',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'fee',
+        type: 'uint256',
+      },
+    ],
+  },
 };

@@ -1,5 +1,6 @@
 import { normalizeAddress } from '../lib/helper';
 import { ProtocolConfig } from '../types/configs';
+import { Tokens } from './constants';
 import { CompoundContracts } from './contracts/compound';
 import { CurveContracts } from './contracts/curve';
 import { Signatures } from './signatures';
@@ -454,6 +455,38 @@ export const YearnConfigs: ProtocolConfig = {
           indexed: false,
         },
       ],
+    },
+  },
+};
+
+export const TornadocashConfigs: ProtocolConfig = {
+  protocol: 'tornadocash',
+  contracts: {
+    ethereum: [
+      '0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc', // ETH 0.1
+      '0x47ce0c6ed5b0ce3d3a51fdb1c52dc66a7c3c2936', // ETH 1
+      '0x910cbd523d972eb0a6f4cae4618ad62622b39dbf', // ETH 10
+      '0xa160cdab225685da1d56aa342ad8841c3b53f291', // ETH 100
+    ],
+  },
+  staticData: {
+    pools: {
+      '0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc': {
+        token: Tokens.ethereum.NativeCoin,
+        amount: '0.1',
+      },
+      '0x47ce0c6ed5b0ce3d3a51fdb1c52dc66a7c3c2936': {
+        token: Tokens.ethereum.NativeCoin,
+        amount: '1',
+      },
+      '0x910cbd523d972eb0a6f4cae4618ad62622b39dbf': {
+        token: Tokens.ethereum.NativeCoin,
+        amount: '10',
+      },
+      '0xa160cdab225685da1d56aa342ad8841c3b53f291': {
+        token: Tokens.ethereum.NativeCoin,
+        amount: '100',
+      },
     },
   },
 };

@@ -27,6 +27,7 @@ import {
   RocketpoolConfigs,
   ShibaswapConfigs,
   SushiConfigs,
+  TornadocashConfigs,
   Uniswapv2Configs,
   Uniswapv3Configs,
   X2y2Configs,
@@ -59,6 +60,7 @@ import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SushiAdapter } from './sushi/sushi';
+import { TornadocashAdapter } from './tornadocash/tornadocash';
 import { Uniswapv2Adapter } from './uniswap/uniswapv2';
 import { Uniswapv3Adapter } from './uniswap/uniswapv3';
 import { X2y2Adapter } from './x2y2/x2y2';
@@ -105,5 +107,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new ChainlinkAdapter(ChainlinkConfigs, providers),
     new ZeroxAdapter(ZeroxConfigs, providers),
     new YearnAdapter(YearnConfigs, providers),
+    new TornadocashAdapter(TornadocashConfigs, providers),
   ];
 }
