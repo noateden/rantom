@@ -93,18 +93,15 @@ export class Web3HelperProvider extends CachingProvider implements IWeb3HelperPr
 
       return token;
     } catch (e: any) {
-      logger.onError({
+      logger.onWarn({
         service: this.name,
         message: 'failed to get erc20 metadata',
         props: {
           chain,
           token: normalizeAddress(tokenAddress),
+          error: e.message,
         },
-        error: e,
       });
-
-      // critical error
-      process.exit(0);
     }
 
     return null;

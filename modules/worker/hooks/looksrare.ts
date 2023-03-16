@@ -43,8 +43,8 @@ export class LooksrareWorkerHook extends MarketplaceWorkerHook {
         action: 'buy',
         nonFungibleToken: {
           chain: contract.chain,
-          symbol: action.addition.token.symbol,
-          address: action.addition.token.address,
+          symbol: action.addition.symbol,
+          address: action.addition.address,
           tokenId: action.addition.tokenId,
           image: action.addition.image,
         },
