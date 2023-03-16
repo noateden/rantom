@@ -34,6 +34,7 @@ export class Eth2WorkerHook extends StakingWorkerHook {
     const action = await adapter.tryParsingActions({
       chain: contract.chain,
       sender: receipt.from, // don't use this field
+      to: receipt.to,
       address: contract.address,
       data: event.raw.data,
       topics: event.raw.topics,
