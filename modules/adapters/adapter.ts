@@ -21,7 +21,7 @@ export class Adapter implements IAdapter {
     if (this.providers) {
       return this.providers.web3Helper;
     } else {
-      return new Web3HelperProvider();
+      return new Web3HelperProvider(null);
     }
   }
 

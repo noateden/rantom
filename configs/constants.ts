@@ -1,4 +1,4 @@
-import { Token } from '../types/configs';
+import { NonFungibleTokenMetadata, Token } from '../types/configs';
 import EthereumTokens from './tokens/ethereum.json';
 
 export const MongodbPrefix = 'rantom';
@@ -46,7 +46,7 @@ export const ChainIdMaps: { [key: number]: string } = {
 };
 
 export const HardCodeTokens: { [key: string]: Token } = {
-  'ethereum:0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee': {
+  'erc20-ethereum-0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee': {
     chain: 'ethereum',
     address: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
     symbol: 'ETH',
@@ -54,13 +54,13 @@ export const HardCodeTokens: { [key: string]: Token } = {
   },
 
   // Maker: I don't know why they make things to be complicated :(
-  'ethereum:0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2': {
+  'erc20-ethereum-0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2': {
     chain: 'ethereum',
     address: '0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2',
     symbol: 'MKR',
     decimals: 18,
   },
-  'ethereum:0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359': {
+  'erc20-ethereum-0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359': {
     chain: 'ethereum',
     address: '0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359',
     symbol: 'SAI',
@@ -76,7 +76,7 @@ export const HardCodeTokens: { [key: string]: Token } = {
   },
 
   // https://etherscan.io/token/0x9469d013805bffb7d3debe5e7839237e535ec483
-  'ethereum:0x9469d013805bffb7d3debe5e7839237e535ec483': {
+  'erc20-ethereum-0x9469d013805bffb7d3debe5e7839237e535ec483': {
     chain: 'ethereum',
     address: '0x9469d013805bffb7d3debe5e7839237e535ec483',
     symbol: 'RING',
@@ -84,7 +84,7 @@ export const HardCodeTokens: { [key: string]: Token } = {
   },
 
   // https://etherscan.io/token/0x0000000000a39bb272e79075ade125fd351887ac
-  'ethereum:0x0000000000a39bb272e79075ade125fd351887ac': {
+  'erc20-ethereum-0x0000000000a39bb272e79075ade125fd351887ac': {
     chain: 'ethereum',
     address: '0x0000000000a39bb272e79075ade125fd351887ac',
     symbol: 'BlurPool',
@@ -92,19 +92,15 @@ export const HardCodeTokens: { [key: string]: Token } = {
   },
 };
 
-export const HardcodeNft: { [key: string]: Token } = {
-  'ethereum:0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85': {
+export const HardcodeNft: { [key: string]: NonFungibleTokenMetadata } = {
+  'nft-ethereum-0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85': {
     chain: 'ethereum',
     address: '0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85',
     symbol: 'ENS',
-    decimals: 0,
-    erc721: true,
   },
-  'ethereum:0x3397e734f0a8f209a87f6ed929d5cb8519748e5e': {
+  'nft-ethereum-0x3397e734f0a8f209a87f6ed929d5cb8519748e5e': {
     chain: 'ethereum',
     address: '0x3397e734f0a8f209a87f6ed929d5cb8519748e5e',
     symbol: 'ERC1155',
-    decimals: 0,
-    erc721: true,
   },
 };

@@ -57,7 +57,7 @@ export class BlurAdapter extends Adapter {
               ...nftData,
               amount: amount,
             },
-            readableString: `${buyer} buy ${amount} [TokenId:${tokenId}] ${nftData.token.symbol} for ${tokenPayAmount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+            readableString: `${buyer} buy ${amount} [TokenId:${tokenId}] ${nftData.symbol} for ${tokenPayAmount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
           };
         }
       }

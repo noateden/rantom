@@ -10,13 +10,15 @@ export interface Token {
   symbol: string;
   decimals: number;
   address: string;
-  erc721?: boolean;
 }
 
-export interface NonFungibleToken {
+export interface NonFungibleTokenMetadata {
   chain: string;
-  symbol: string;
+  symbol: string; // name on contract
   address: string;
+}
+
+export interface NonFungibleToken extends NonFungibleTokenMetadata {
   tokenId: string;
   image: string;
 }
@@ -36,6 +38,7 @@ export interface EnvConfig {
     connectionUri: string;
     collections: {
       states: string;
+      caching: string;
 
       lendingActions: string;
       marketplaceActions: string;

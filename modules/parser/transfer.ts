@@ -5,8 +5,8 @@ import { Signatures } from '../../configs/signatures';
 import { normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { Web3HelperProvider } from '../../services/web3';
-import { Token } from '../../types/configs';
-import { NonFungibleTokenData, TransactionTransfer } from '../../types/domains';
+import { NonFungibleToken, Token } from '../../types/configs';
+import { TransactionTransfer } from '../../types/domains';
 import { GlobalProviders, ITransferParser, IWeb3HelperProvider } from '../../types/namespaces';
 import { TransferParseLogOptions } from '../../types/options';
 
@@ -23,7 +23,7 @@ export class TransferParser implements ITransferParser {
     if (this.providers) {
       return this.providers.web3Helper;
     } else {
-      return new Web3HelperProvider();
+      return new Web3HelperProvider(null);
     }
   }
 
@@ -96,18 +96,17 @@ export class TransferParser implements ITransferParser {
             data,
             topics.slice(1)
           );
-          const token: NonFungibleTokenData | null = await this.getWeb3Helper().getNonFungibleTokenData(
+          const token: NonFungibleToken | null = await this.getWeb3Helper().getNonFungibleTokenData(
             options.chain,
             options.address,
             new BigNumber(event.tokenId).toString(10)
           );
           if (token) {
             return {
-              ...token,
+              token,
               from: normalizeAddress(event.from),
               to: normalizeAddress(event.to),
               amount: '1',
-              tokenId: new BigNumber(event.tokenId).toString(10),
             };
           }
         } catch (e: any) {

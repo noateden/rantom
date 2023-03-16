@@ -1,4 +1,5 @@
 import envConfig from '../configs/envConfig';
+import { CachingProvider } from '../services/caching';
 import MongodbProvider from '../services/mongo';
 import SentryProvider from '../services/sentry';
 import { Web3HelperProvider } from '../services/web3';
@@ -11,10 +12,13 @@ export class BasicCommand {
   constructor() {}
 
   public async getProviders(): Promise<GlobalProviders> {
+    const mongodb = new MongodbProvider();
+
     const providers: GlobalProviders = {
-      mongodb: new MongodbProvider(),
+      mongodb: mongodb,
       sentry: new SentryProvider(process.env.RANTOM_SENTRY_DNS as string),
-      web3Helper: new Web3HelperProvider(),
+      caching: new CachingProvider(mongodb),
+      web3Helper: new Web3HelperProvider(mongodb),
     };
 
     await providers.mongodb.connect(envConfig.mongodb.connectionUri, envConfig.mongodb.databaseName);

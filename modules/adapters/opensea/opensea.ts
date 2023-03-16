@@ -60,7 +60,7 @@ export class OpenseaAdapter extends Adapter {
                 ...nftData,
                 amount: offer.amount,
               },
-              readableString: `${offer} buy ${considerations[0].amount} [TokenId:${nftData.tokenId}] ${nftData.token.symbol} for ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+              readableString: `${offer} buy ${considerations[0].amount} [TokenId:${nftData.tokenId}] ${nftData.symbol} for ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
             };
           }
         } else {
@@ -92,7 +92,7 @@ export class OpenseaAdapter extends Adapter {
                 amount: offer.amount,
               },
               readableString: `${recipient} buy ${offer.amount} [TokenId:${nftData.tokenId}] ${
-                nftData.token.symbol
+                nftData.symbol
               } for ${tokenAmount.toString(10)} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
             };
           }

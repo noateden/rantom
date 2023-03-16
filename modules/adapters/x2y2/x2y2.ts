@@ -96,7 +96,7 @@ export class X2y2Adapter extends Adapter {
             ...nftData,
             amount: '1',
           },
-          readableString: `${taker} buy [TokenId:${nftData.tokenId}] ${nftData.token.symbol} for ${payAmount} ${payToken.symbol} on ${this.config.protocol} chain ${chain}`,
+          readableString: `${taker} buy [TokenId:${nftData.tokenId}] ${nftData.symbol} for ${payAmount} ${payToken.symbol} on ${this.config.protocol} chain ${chain}`,
         };
       }
     }

@@ -1,9 +1,10 @@
 import { Collection } from 'mongodb';
 
-import { NonFungibleToken, Token } from './configs';
+import { NonFungibleToken, NonFungibleTokenMetadata, Token } from './configs';
 
 export interface MongoCollections {
   statesCollection: Collection;
+  cachingCollection: Collection;
 
   // save action related to lending protocol: aave, compound, ...
   lendingActionsCollection: Collection;
@@ -54,12 +55,6 @@ export type KnownAction =
   // use for service transaction
   | 'update';
 
-export interface NonFungibleTokenData {
-  token: Token;
-  tokenId: string;
-  image: string;
-}
-
 export interface TransactionAction {
   protocol: string;
   action: KnownAction;
@@ -72,12 +67,11 @@ export interface TransactionAction {
 }
 
 export interface TransactionTransfer {
-  token: Token;
+  token: Token | NonFungibleTokenMetadata;
   from: string;
   to: string;
   amount: string;
   logIndex?: number;
-  tokenId?: string;
 }
 
 export interface Transaction {

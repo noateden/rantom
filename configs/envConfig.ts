@@ -12,6 +12,7 @@ const envConfig: EnvConfig = {
     connectionUri: String(process.env.RANTOM_MONGODB_URI),
     collections: {
       states: `${MongodbPrefix}.states`,
+      caching: `${MongodbPrefix}.caching`,
 
       lendingActions: `${MongodbPrefix}.actions.lending`,
       marketplaceActions: `${MongodbPrefix}.actions.marketplace`,

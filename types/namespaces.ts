@@ -1,7 +1,7 @@
 import { Collection } from 'mongodb';
 
-import { Contract, EventMapping, ProtocolConfig, Token } from './configs';
-import { MongoCollections, NonFungibleTokenData, Transaction, TransactionAction, TransactionTransfer } from './domains';
+import { Contract, EventMapping, NonFungibleToken, NonFungibleTokenMetadata, ProtocolConfig, Token } from './configs';
+import { MongoCollections, Transaction, TransactionAction, TransactionTransfer } from './domains';
 import { AdapterParseLogOptions, ParseTransactionOptions, TransferParseLogOptions, WorkerRunOptions } from './options';
 
 export interface IProvider {
@@ -18,20 +18,22 @@ export interface ISentryProvider extends IProvider {
   capture: (e: Error) => void;
 }
 
-export interface IWeb3HelperProvider extends IProvider {
+export interface ICachingProvider extends IProvider {
+  getCachingData: (name: string) => Promise<any>;
+  setCachingData: (name: string, data: any) => Promise<void>;
+}
+
+export interface IWeb3HelperProvider extends ICachingProvider {
   getBlockTime: (chain: string, blockNumber: number) => Promise<number>;
   getErc20Metadata: (chain: string, tokenAddress: string) => Promise<Token | null>;
-  getErc721Metadata: (chain: string, tokenAddress: string) => Promise<Token | null>;
-  getNonFungibleTokenData: (
-    chain: string,
-    tokenAddress: string,
-    tokenId: string
-  ) => Promise<NonFungibleTokenData | null>;
+  getNonFungibleTokenMetadata: (chain: string, tokenAddress: string) => Promise<NonFungibleTokenMetadata | null>;
+  getNonFungibleTokenData: (chain: string, tokenAddress: string, tokenId: string) => Promise<NonFungibleToken | null>;
 }
 
 export interface GlobalProviders {
   mongodb: IMongodbProvider;
   sentry: ISentryProvider;
+  caching: ICachingProvider;
   web3Helper: IWeb3HelperProvider;
 }
 

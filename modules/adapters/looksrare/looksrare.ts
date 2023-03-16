@@ -77,7 +77,7 @@ export class LooksrareAdapter extends Adapter {
               ...nftData,
               amount: event.amount.toString(),
             },
-            readableString: `${buyer} buy ${event.amount} [TokenId:${event.tokenId}] ${nftData.token.symbol} for ${price} ${paymentToken.symbol} on ${this.config.protocol} chain ${chain}`,
+            readableString: `${buyer} buy ${event.amount} [TokenId:${event.tokenId}] ${nftData.symbol} for ${price} ${paymentToken.symbol} on ${this.config.protocol} chain ${chain}`,
           };
         }
       }

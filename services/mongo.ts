@@ -73,6 +73,7 @@ class MongodbProvider implements IMongodbProvider {
 
   public async requireCollections(): Promise<MongoCollections> {
     const statesCollection = await this.getCollection(envConfig.mongodb.collections.states);
+    const cachingCollection = await this.getCollection(envConfig.mongodb.collections.caching);
     const lendingActionsCollection = await this.getCollection(envConfig.mongodb.collections.lendingActions);
     const marketplaceActionsCollection = await this.getCollection(envConfig.mongodb.collections.marketplaceActions);
     const stakingActionsCollection = await this.getCollection(envConfig.mongodb.collections.stakingActions);
@@ -81,6 +82,7 @@ class MongodbProvider implements IMongodbProvider {
     const erc20SupplyActionsCollection = await this.getCollection(envConfig.mongodb.collections.erc20SupplyActions);
 
     statesCollection.createIndex({ name: 1 }, { background: true });
+    cachingCollection.createIndex({ name: 1 }, { background: true });
 
     lendingActionsCollection.createIndex(
       { chain: 1, contract: 1, transactionHash: 1, logIndex: 1 },
@@ -126,6 +128,7 @@ class MongodbProvider implements IMongodbProvider {
 
     return {
       statesCollection,
+      cachingCollection,
       lendingActionsCollection,
       marketplaceActionsCollection,
       stakingActionsCollection,
