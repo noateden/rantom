@@ -21,8 +21,15 @@ export class Eth2WorkerHook extends StakingWorkerHook {
     return new Eth2Adapter(Eth2Configs, this.providers);
   }
 
-  public async parseEvent(contract: Contract, event: any): Promise<StakingEvent | null> {
-    const timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, event.blockNumber);
+  public async parseEvent(contract: Contract, event: any, options: any): Promise<StakingEvent | null> {
+    let timestamp =
+      options && options.blockTimes && options.blockTimes[event.blockNumber.toString()]
+        ? Number(options.blockTimes[event.blockNumber.toString()].timestamp)
+        : null;
+    if (!timestamp) {
+      timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, event.blockNumber);
+    }
+
     const logIndex = event.logIndex;
     const transactionHash = event.transactionHash;
     const blockNumber = event.blockNumber;

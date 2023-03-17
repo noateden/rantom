@@ -160,7 +160,7 @@ export class ContractWorker implements IContractWorker {
           {
             $set: {
               name: stateKey,
-              blockNumber: stateBlock,
+              blockNumber: toBlock,
             },
           },
           { upsert: true }
