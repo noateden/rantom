@@ -361,6 +361,9 @@ export const OpenseaConfigs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0x00000000006c3852cbef3e08e8df289169ede581', // Seaport 1.1
+      '0x00000000000006c7676171937c444f6bde3d6282', // Seaport 1.2
+      '0x0000000000000ad24e80fd803c6ac37206a45f15', // Seaport 1.3
+      '0x00000000000001ad428e4906ae43d8f9852d0dd6', // Seaport 1.4
     ],
   },
 };
