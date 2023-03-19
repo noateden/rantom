@@ -119,6 +119,12 @@
     "symbol": "KNC",
     "decimals": 18
   },
+  "LDO": {
+    "chain": "ethereum",
+    "address": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
+    "symbol": "LDO",
+    "decimals": 18
+  },
   "LINK": {
     "chain": "ethereum",
     "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
@@ -268,6 +274,36 @@
     "address": "0x3ed3b47dd13ec9a98b44e6204a523e766b225811",
     "symbol": "aUSDT",
     "decimals": 6
+  },
+  "alETH": {
+    "chain": "ethereum",
+    "address": "0x0100546f2cd4c9d97f798ffc9755e47865ff7ee6",
+    "symbol": "alETH",
+    "decimals": 18
+  },
+  "alUSD": {
+    "chain": "ethereum",
+    "address": "0xbc6da0fe9ad5f3b0d58160288917aa56653660e9",
+    "symbol": "alUSD",
+    "decimals": 18
+  },
+  "cvxCRV": {
+    "chain": "ethereum",
+    "address": "0x62b9c7356a2dc64a1969e19c23e4f579f9810aa7",
+    "symbol": "cvxCRV",
+    "decimals": 18
+  },
+  "frxETH": {
+    "chain": "ethereum",
+    "address": "0x5e8422345238f34275888049021821e8e08caa1f",
+    "symbol": "frxETH",
+    "decimals": 18
+  },
+  "pETH": {
+    "chain": "ethereum",
+    "address": "0x836a808d4828586a69364065a1e064609f5078c7",
+    "symbol": "pETH",
+    "decimals": 18
   },
   "renFIL": {
     "chain": "ethereum",

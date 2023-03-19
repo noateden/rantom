@@ -2,8 +2,9 @@ import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import CurvePool024Abi from '../../../configs/abi/curve/pool-0.2.4.json';
+import CurvePool031Abi from '../../../configs/abi/curve/pool-0.3.1.json';
+import CurvePoolFactoryAbi from '../../../configs/abi/curve/pool-factory.json';
 import { CurvePool } from '../../../configs/contracts/curve';
-// import CurvePool0212Abi from '../../../configs/abi/curve/pool-0.2.12.json';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
@@ -115,11 +116,23 @@ export class CurveAdapter extends Adapter {
 
       try {
         if (!poolConfig) {
-          const poolOwner = await poolContract.methods.owner().call();
-          if (this.config.contracts[chain].indexOf(normalizeAddress(poolOwner)) === -1) {
-            return null;
+          // currently, we detect curve pools by checking pool owner and factory
+          try {
+            // try to check pool owner
+            const poolOwner = await poolContract.methods.owner().call();
+            if (this.config.contracts[chain].indexOf(normalizeAddress(poolOwner)) === -1) {
+              return null;
+            }
+          } catch (e: any) {
+            // try to check pool factory
+            const poolContractCheckingFactory = new web3.eth.Contract(CurvePoolFactoryAbi as any, address);
+            const poolFactory = await poolContractCheckingFactory.methods.factory().call();
+            if (this.config.contracts[chain].indexOf(normalizeAddress(poolFactory)) === -1) {
+              return null;
+            }
           }
         }
+
         const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
         // curve owns this pool
@@ -164,8 +177,7 @@ export class CurveAdapter extends Adapter {
             break;
           }
 
-          case Signatures.RemoveLiquidityOne:
-          case Signatures.RemoveLiquidityOneVersion0212: {
+          case Signatures.RemoveLiquidityOne: {
             const provider = normalizeAddress(event.provider);
             const params = web3.eth.abi.decodeParameters(
               ['address', 'uint256', 'uint256'],
@@ -182,7 +194,35 @@ export class CurveAdapter extends Adapter {
             if (poolConfig) {
               token = poolConfig.tokens[tokenIndex];
             } else {
-              const coinAddr = await poolContract.methods.coins(tokenIndex).call();
+              const poolContractVersion031 = new web3.eth.Contract(CurvePool031Abi as any, address);
+              const coinAddr = await poolContractVersion031.methods.coins(tokenIndex).call();
+              token = await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
+            }
+
+            if (token) {
+              const tokenAmount = new BigNumber(event.coin_amount)
+                .dividedBy(new BigNumber(10).pow(token.decimals))
+                .toString(10);
+              return {
+                protocol: this.config.protocol,
+                action: 'withdraw',
+                addresses: [provider],
+                tokens: [token],
+                tokenAmounts: [tokenAmount],
+                readableString: `${provider} withdraw ${tokenAmount} on ${this.config.protocol} chain ${chain}`,
+              };
+            }
+            break;
+          }
+
+          case Signatures.RemoveLiquidityOneVersion0212: {
+            const provider = normalizeAddress(event.provider);
+
+            let token;
+            if (poolConfig) {
+              token = poolConfig.tokens[Number(event.coin_index)];
+            } else {
+              const coinAddr = await poolContract.methods.coins(Number(event.coin_index)).call();
               token = await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
             }
 
@@ -255,6 +295,7 @@ export class CurveAdapter extends Adapter {
               protocol: this.config.protocol,
               action:
                 signature === Signatures.AddLiquidity ||
+                signature === Signatures.AddLiquidityVersion010 ||
                 signature === Signatures.AddLiquidityVersion0212 ||
                 signature === Signatures.AddLiquidityVersion028 ||
                 signature === Signatures.AddLiquidityVersion030
@@ -265,6 +306,7 @@ export class CurveAdapter extends Adapter {
               tokenAmounts: amounts,
               readableString: `${provider} ${
                 signature === Signatures.AddLiquidity ||
+                signature === Signatures.AddLiquidityVersion010 ||
                 signature === Signatures.AddLiquidityVersion0212 ||
                 signature === Signatures.AddLiquidityVersion028 ||
                 signature === Signatures.AddLiquidityVersion030
@@ -276,6 +318,7 @@ export class CurveAdapter extends Adapter {
         }
       } catch (e: any) {
         // ignore bad pool
+        console.info(e);
       }
     }
 
