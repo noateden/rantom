@@ -19,6 +19,9 @@ export interface AdapterParseLogOptions {
   data: string;
 
   input?: string;
+
+  // full transaction receipt
+  context?: any;
 }
 
 export type MultiCallResponse<T> = T | null;

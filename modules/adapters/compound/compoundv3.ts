@@ -12,6 +12,7 @@ import { AdapterParseLogOptions } from '../../../types/options';
 import { Adapter } from '../adapter';
 
 const Signatures = {
+  Transfer: '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
   SupplyV3: '0xd1cf3d156d5f8f0d50f6c122ed609cec09d35c9b9fb3fff6ea0959134dae424e',
   WithdrawV3: '0x9b1bfa7fa9ee420a16e124f794c35ac9f90472acc99140eb2f6447c714cad8eb',
   SupplyCollateralV3: '0xfa56f7b24f17183d81894d3ac2ee654e3c26388d17a28dbd9549b8114304e1f4',
@@ -48,7 +49,40 @@ export class Compoundv3Adapter extends Adapter {
         case Signatures.WithdrawV3: {
           const baseTokenAddr = await poolContract.methods.baseToken().call();
           token = await this.getWeb3Helper().getErc20Metadata(chain, baseTokenAddr);
-          action = signature === Signatures.SupplyV3 ? 'deposit' : 'withdraw';
+
+          if (signature === Signatures.SupplyV3) {
+            action = 'repay';
+
+            // on compound v3, we detect supply transaction by looking Transfer event from the same transaction
+            // when user deposit base asset, if there is a Transfer event emitted on transaction,
+            // the transaction action is deposit, otherwise, the transaction action is repay.
+            if (options.context) {
+              for (const log of options.context.logs) {
+                if (
+                  log.topics[0] === Signatures.Transfer &&
+                  this.config.contracts[chain].indexOf(normalizeAddress(log.address)) !== -1
+                ) {
+                  // supply transaction
+                  action = 'deposit';
+                }
+              }
+            }
+          } else {
+            action = 'borrow';
+
+            // we detect a withdrawal transaction by looking for Transfer to zero address event
+            if (options.context) {
+              for (const log of options.context.logs) {
+                if (
+                  log.topics[0] === Signatures.Transfer &&
+                  this.config.contracts[chain].indexOf(normalizeAddress(log.address)) !== -1
+                ) {
+                  // withdraw transaction
+                  action = 'withdraw';
+                }
+              }
+            }
+          }
           break;
         }
         case Signatures.SupplyCollateralV3:

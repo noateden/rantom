@@ -79,6 +79,7 @@ export class ParserProvider implements IParserProvider {
                 topics: log.topics,
                 data: log.data,
                 input: transaction.input,
+                context: receipt,
               });
               if (action) {
                 transaction.actions.push({
