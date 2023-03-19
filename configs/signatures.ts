@@ -122,6 +122,8 @@ export const Signatures: { [key: string]: string } = {
     '0xfa56f7b24f17183d81894d3ac2ee654e3c26388d17a28dbd9549b8114304e1f4',
   'WithdrawCollateral(address,address,address,uint256)':
     '0xd6d480d5b3068db003533b170d67561494d72e3bf9fa40a266471351ebba9e16',
+  'AbsorbCollateral(address,address,address,uint256,uint256)':
+    '0x9850ab1af75177e4a9201c65a2cf7976d5d28e40ef63494b44366f86b2f9412e',
   'NameRegistered(string,bytes32,address,uint256,uint256)':
     '0xca6abbe9d7f11422cb6ca7629fbf6fe9efb1c621f71ce8f02b9f2a230097404f',
   'NameRenewed(string,bytes32,uint256,uint256)': '0x3da24c024582931cfaf8267d8ed24d13a82a8068d5bd337d30ec45cea4e506ae',

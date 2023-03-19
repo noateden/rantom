@@ -76,6 +76,7 @@ export class ParserProvider implements IParserProvider {
                 sender: normalizeAddress(receipt.from),
                 to: normalizeAddress(receipt.to),
                 address: normalizeAddress(log.address),
+                hash: receipt.transactionHash,
                 topics: log.topics,
                 data: log.data,
                 input: transaction.input,

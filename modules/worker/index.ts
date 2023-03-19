@@ -1,7 +1,7 @@
 import { AaveContracts } from '../../configs/contracts/aave';
 import { BalancerContracts } from '../../configs/contracts/balancer';
 import { BeanstalkContracts } from '../../configs/contracts/beanstalk';
-import { CompoundContracts } from '../../configs/contracts/compound';
+import { CompoundContracts, Compoundv3Contracts } from '../../configs/contracts/compound';
 import { CurveContracts } from '../../configs/contracts/curve';
 import { Erc20Contracts } from '../../configs/contracts/erc20';
 import { Eth2Contracts } from '../../configs/contracts/eth2';
@@ -15,7 +15,7 @@ import { Erc20SupplyWorker } from './extends/erc20';
 import { AaveWorkerHook } from './hooks/aave';
 import { BalancerWorkerHook } from './hooks/balancer';
 import { BeanstalkWorkerHook } from './hooks/beanstalk';
-import { CompoundWorkerHook } from './hooks/compound';
+import { CompoundWorkerHook, Compoundv3WorkerHook } from './hooks/compound';
 import { CurveWorkerHook } from './hooks/curve';
 import { Eth2WorkerHook } from './hooks/eth2';
 import { LidoWorkerHook } from './hooks/lido';
@@ -29,6 +29,7 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     aave: new AaveWorkerHook(providers, AaveContracts),
     opensea: new OpenseaWorkerHook(providers, OpenseaContracts),
     compound: new CompoundWorkerHook(providers, CompoundContracts),
+    compoundv3: new Compoundv3WorkerHook(providers, Compoundv3Contracts),
     lido: new LidoWorkerHook(providers, LidoContracts),
     rocketpool: new RocketpoolWorkerHook(providers, RocketpoolContracts),
     beanstalk: new BeanstalkWorkerHook(providers, BeanstalkContracts),

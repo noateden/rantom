@@ -1,7 +1,7 @@
 import { normalizeAddress } from '../lib/helper';
 import { ProtocolConfig } from '../types/configs';
 import { Tokens } from './constants';
-import { CompoundContracts } from './contracts/compound';
+import { CompoundContracts, Compoundv3Contracts } from './contracts/compound';
 import { CurveContracts } from './contracts/curve';
 import { Signatures } from './signatures';
 
@@ -171,6 +171,9 @@ export const Compoundv3Configs: ProtocolConfig = {
       '0xc3d688b66703497daa19211eedff47f25384cdc3', // v3 USDC
       '0xa17581a9e3356d9a858b789d68b4d866e593ae94', // v3 ETH
     ],
+  },
+  staticData: {
+    pools: Compoundv3Contracts,
   },
 };
 

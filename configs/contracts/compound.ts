@@ -1,4 +1,5 @@
 import { Contract, Token } from '../../types/configs';
+import CometAbi from '../abi/compound/Comet.json';
 import cTokenAbi from '../abi/compound/cErc20.json';
 import { Tokens } from '../constants';
 
@@ -207,5 +208,39 @@ export const CompoundContracts: Array<CompoundPool> = [
     birthday: 7710733,
     underlying: Tokens.ethereum.ZRX,
     events: ['Mint', 'Redeem', 'Borrow', 'RepayBorrow', 'LiquidateBorrow'],
+  },
+];
+
+export interface Compoundv3Pool extends Contract {
+  baseToken: Token;
+  collaterals: Array<Token>;
+}
+
+export const Compoundv3Contracts: Array<Compoundv3Pool> = [
+  {
+    chain: 'ethereum',
+    protocol: 'compoundv3',
+    abi: CometAbi,
+    address: '0xc3d688b66703497daa19211eedff47f25384cdc3',
+    birthday: 15331586,
+    baseToken: Tokens.ethereum.USDC,
+    collaterals: [
+      Tokens.ethereum.WETH,
+      Tokens.ethereum.WBTC,
+      Tokens.ethereum.UNI,
+      Tokens.ethereum.LINK,
+      Tokens.ethereum.COMP,
+    ],
+    events: ['Supply', 'Withdraw', 'SupplyCollateral', 'WithdrawCollateral', 'AbsorbCollateral'],
+  },
+  {
+    chain: 'ethereum',
+    protocol: 'compoundv3',
+    abi: CometAbi,
+    address: '0xa17581a9e3356d9a858b789d68b4d866e593ae94',
+    birthday: 16400710,
+    baseToken: Tokens.ethereum.WETH,
+    collaterals: [Tokens.ethereum.cbETH, Tokens.ethereum.wstETH, Tokens.ethereum.stETH],
+    events: ['Supply', 'Withdraw', 'SupplyCollateral', 'WithdrawCollateral', 'AbsorbCollateral'],
   },
 ];

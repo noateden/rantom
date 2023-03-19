@@ -1,12 +1,13 @@
 import BigNumber from 'bignumber.js';
 
 import { AddressZero } from '../../../configs/constants';
-import { CompoundConfigs } from '../../../configs/protocols';
+import { CompoundConfigs, Compoundv3Configs } from '../../../configs/protocols';
 import { normalizeAddress } from '../../../lib/helper';
 import { Contract } from '../../../types/configs';
 import { KnownAction, LendingEvent } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
+import { GlobalProviders, IAdapter } from '../../../types/namespaces';
 import { CompoundAdapter } from '../../adapters/compound/compound';
+import { Compoundv3Adapter } from '../../adapters/compound/compoundv3';
 import { LendingWorkerHook } from '../extends/lending';
 
 export class CompoundWorkerHook extends LendingWorkerHook {
@@ -14,6 +15,10 @@ export class CompoundWorkerHook extends LendingWorkerHook {
 
   constructor(providers: GlobalProviders, contracts: Array<Contract>) {
     super(providers, contracts);
+  }
+
+  public getAdapter(): IAdapter {
+    return new CompoundAdapter(CompoundConfigs, this.providers);
   }
 
   public async parseEvent(contract: Contract, event: any, options: any): Promise<LendingEvent | null> {
@@ -29,13 +34,14 @@ export class CompoundWorkerHook extends LendingWorkerHook {
     const transactionHash = event.transactionHash;
     const blockNumber = event.blockNumber;
 
-    const adapter = new CompoundAdapter(CompoundConfigs, this.providers);
+    const adapter = this.getAdapter();
     const action = await adapter.tryParsingActions({
       chain: contract.chain,
       sender: AddressZero, // don't use this field
       address: contract.address,
       data: event.raw.data,
       topics: event.raw.topics,
+      hash: transactionHash,
     });
 
     if (action) {
@@ -60,5 +66,17 @@ export class CompoundWorkerHook extends LendingWorkerHook {
     }
 
     return null;
+  }
+}
+
+export class Compoundv3WorkerHook extends CompoundWorkerHook {
+  public readonly name: string = 'worker.compoundv3';
+
+  constructor(providers: GlobalProviders, contracts: Array<Contract>) {
+    super(providers, contracts);
+  }
+
+  public getAdapter(): IAdapter {
+    return new Compoundv3Adapter(Compoundv3Configs, this.providers);
   }
 }

@@ -287,6 +287,12 @@
     "symbol": "alUSD",
     "decimals": 18
   },
+  "cbETH": {
+    "chain": "ethereum",
+    "address": "0xbe9895146f7af43049ca1c1ae358b0541ea49704",
+    "symbol": "cbETH",
+    "decimals": 18
+  },
   "cvxCRV": {
     "chain": "ethereum",
     "address": "0x62b9c7356a2dc64a1969e19c23e4f579f9810aa7",
@@ -321,6 +327,12 @@
     "chain": "ethereum",
     "address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
     "symbol": "stETH",
+    "decimals": 18
+  },
+  "wstETH": {
+    "chain": "ethereum",
+    "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+    "symbol": "wstETH",
     "decimals": 18
   },
   "xSUSHI": {

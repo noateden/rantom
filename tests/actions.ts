@@ -15,6 +15,7 @@ describe('parse transaction actions', async function () {
         address: normalizeAddress(item.address),
         topics: item.log.topics,
         data: item.log.data,
+        hash: item.hash,
       });
 
       expect(action).to.not.equal(null);

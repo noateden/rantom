@@ -2,9 +2,10 @@ import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import CometAbi from '../../../configs/abi/compound/Comet.json';
+import { Compoundv3Pool } from '../../../configs/contracts/compound';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
@@ -17,6 +18,7 @@ const Signatures = {
   WithdrawV3: '0x9b1bfa7fa9ee420a16e124f794c35ac9f90472acc99140eb2f6447c714cad8eb',
   SupplyCollateralV3: '0xfa56f7b24f17183d81894d3ac2ee654e3c26388d17a28dbd9549b8114304e1f4',
   WithdrawCollateralV3: '0xd6d480d5b3068db003533b170d67561494d72e3bf9fa40a266471351ebba9e16',
+  AbsorbCollateral: '0x9850ab1af75177e4a9201c65a2cf7976d5d28e40ef63494b44366f86b2f9412e',
 };
 
 export class Compoundv3Adapter extends Adapter {
@@ -28,6 +30,7 @@ export class Compoundv3Adapter extends Adapter {
       [Signatures.WithdrawV3]: EventSignatureMapping[Signatures.WithdrawV3],
       [Signatures.SupplyCollateralV3]: EventSignatureMapping[Signatures.SupplyCollateralV3],
       [Signatures.WithdrawCollateralV3]: EventSignatureMapping[Signatures.WithdrawCollateralV3],
+      [Signatures.AbsorbCollateral]: EventSignatureMapping[Signatures.AbsorbCollateral],
     });
   }
 
@@ -39,6 +42,20 @@ export class Compoundv3Adapter extends Adapter {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
+      let context = options.context;
+      if (!context && options.hash) {
+        context = await web3.eth.getTransactionReceipt(options.hash);
+      }
+
+      let poolConfig: Compoundv3Pool | null = null;
+      if (this.config.staticData.pools) {
+        for (const pool of this.config.staticData.pools) {
+          if (compareAddress(address, pool.address)) {
+            poolConfig = pool as Compoundv3Pool;
+          }
+        }
+      }
+
       // v3 processing
       const poolContract = new web3.eth.Contract(CometAbi as any, address);
 
@@ -47,8 +64,12 @@ export class Compoundv3Adapter extends Adapter {
       switch (signature) {
         case Signatures.SupplyV3:
         case Signatures.WithdrawV3: {
-          const baseTokenAddr = await poolContract.methods.baseToken().call();
-          token = await this.getWeb3Helper().getErc20Metadata(chain, baseTokenAddr);
+          if (poolConfig) {
+            token = poolConfig.baseToken;
+          } else {
+            const baseTokenAddr = await poolContract.methods.baseToken().call();
+            token = await this.getWeb3Helper().getErc20Metadata(chain, baseTokenAddr);
+          }
 
           if (signature === Signatures.SupplyV3) {
             action = 'repay';
@@ -56,8 +77,8 @@ export class Compoundv3Adapter extends Adapter {
             // on compound v3, we detect supply transaction by looking Transfer event from the same transaction
             // when user deposit base asset, if there is a Transfer event emitted on transaction,
             // the transaction action is deposit, otherwise, the transaction action is repay.
-            if (options.context) {
-              for (const log of options.context.logs) {
+            if (context) {
+              for (const log of context.logs) {
                 if (
                   log.topics[0] === Signatures.Transfer &&
                   this.config.contracts[chain].indexOf(normalizeAddress(log.address)) !== -1
@@ -71,8 +92,8 @@ export class Compoundv3Adapter extends Adapter {
             action = 'borrow';
 
             // we detect a withdrawal transaction by looking for Transfer to zero address event
-            if (options.context) {
-              for (const log of options.context.logs) {
+            if (context) {
+              for (const log of context.logs) {
                 if (
                   log.topics[0] === Signatures.Transfer &&
                   this.config.contracts[chain].indexOf(normalizeAddress(log.address)) !== -1
@@ -87,14 +108,44 @@ export class Compoundv3Adapter extends Adapter {
         }
         case Signatures.SupplyCollateralV3:
         case Signatures.WithdrawCollateralV3: {
-          token = await this.getWeb3Helper().getErc20Metadata(chain, event.asset);
+          if (poolConfig) {
+            for (const collateral of poolConfig.collaterals) {
+              if (compareAddress(collateral.address, event.asset)) {
+                token = collateral;
+              }
+            }
+          } else {
+            token = await this.getWeb3Helper().getErc20Metadata(chain, event.asset);
+          }
+
           action = signature === Signatures.SupplyCollateralV3 ? 'deposit' : 'withdraw';
+
+          break;
+        }
+
+        case Signatures.AbsorbCollateral: {
+          if (poolConfig) {
+            for (const collateral of poolConfig.collaterals) {
+              if (compareAddress(collateral.address, event.asset)) {
+                token = collateral;
+              }
+            }
+          } else {
+            token = await this.getWeb3Helper().getErc20Metadata(chain, event.asset);
+          }
+
+          action = 'liquidate';
+
           break;
         }
       }
 
       if (token) {
-        const user = event.from ? normalizeAddress(event.from) : normalizeAddress(event.src);
+        let user = event.from ? normalizeAddress(event.from) : normalizeAddress(event.src);
+        if (signature === Signatures.AbsorbCollateral) {
+          user = normalizeAddress(event.absorber);
+        }
+
         const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
 
         return {
