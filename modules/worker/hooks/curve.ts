@@ -36,6 +36,7 @@ export class CurveWorkerHook extends TradingWorkerHook {
 
     if (event.event === 'RemoveLiquidityOne') {
       const web3 = new Web3(EnvConfig.blockchains[contract.chain].nodeRpc);
+      const tx = await web3.eth.getTransaction(transactionHash);
       const receipt = await web3.eth.getTransactionReceipt(transactionHash);
       action = await adapter.tryParsingActions({
         chain: contract.chain,
@@ -44,6 +45,7 @@ export class CurveWorkerHook extends TradingWorkerHook {
         address: contract.address,
         data: event.raw.data,
         topics: event.raw.topics,
+        input: tx.input,
       });
     } else {
       action = await adapter.tryParsingActions({

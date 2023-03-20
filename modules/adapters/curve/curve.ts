@@ -179,39 +179,46 @@ export class CurveAdapter extends Adapter {
 
           case Signatures.RemoveLiquidityOne: {
             const provider = normalizeAddress(event.provider);
-            const params = web3.eth.abi.decodeParameters(
-              ['address', 'uint256', 'uint256'],
-              `0x${(options.input as string).slice(10)}`
-            );
-            let tokenIndex = Number(params[1]);
 
-            // check if this transaction call to meta pool, so we need to subtract tokenIndex to 1
-            if (!compareAddress(options.to ? options.to : address, address)) {
-              tokenIndex -= 1;
+            let tokenIndex = null;
+            try {
+              const params = web3.eth.abi.decodeParameters(
+                ['address', 'uint256', 'uint256'],
+                `0x${(options.input as string).slice(10)}`
+              );
+              tokenIndex = Number(params[1]);
+            } catch (e: any) {}
+
+            if (tokenIndex) {
+              // check if this transaction call to meta pool, so we need to subtract tokenIndex to 1
+              if (!compareAddress(options.to ? options.to : address, address)) {
+                tokenIndex -= 1;
+              }
+
+              let token;
+              if (poolConfig) {
+                token = poolConfig.tokens[tokenIndex];
+              } else {
+                const poolContractVersion031 = new web3.eth.Contract(CurvePool031Abi as any, address);
+                const coinAddr = await poolContractVersion031.methods.coins(tokenIndex).call();
+                token = await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
+              }
+
+              if (token) {
+                const tokenAmount = new BigNumber(event.coin_amount)
+                  .dividedBy(new BigNumber(10).pow(token.decimals))
+                  .toString(10);
+                return {
+                  protocol: this.config.protocol,
+                  action: 'withdraw',
+                  addresses: [provider],
+                  tokens: [token],
+                  tokenAmounts: [tokenAmount],
+                  readableString: `${provider} withdraw ${tokenAmount} on ${this.config.protocol} chain ${chain}`,
+                };
+              }
             }
 
-            let token;
-            if (poolConfig) {
-              token = poolConfig.tokens[tokenIndex];
-            } else {
-              const poolContractVersion031 = new web3.eth.Contract(CurvePool031Abi as any, address);
-              const coinAddr = await poolContractVersion031.methods.coins(tokenIndex).call();
-              token = await this.getWeb3Helper().getErc20Metadata(chain, coinAddr);
-            }
-
-            if (token) {
-              const tokenAmount = new BigNumber(event.coin_amount)
-                .dividedBy(new BigNumber(10).pow(token.decimals))
-                .toString(10);
-              return {
-                protocol: this.config.protocol,
-                action: 'withdraw',
-                addresses: [provider],
-                tokens: [token],
-                tokenAmounts: [tokenAmount],
-                readableString: `${provider} withdraw ${tokenAmount} on ${this.config.protocol} chain ${chain}`,
-              };
-            }
             break;
           }
 
