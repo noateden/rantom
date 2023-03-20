@@ -1,0 +1,1572 @@
+[
+  {
+    "chain": "ethereum",
+    "poolId": 0,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x845838df265dcd2c412a1dc9e959c7d08537f8a2",
+      "symbol": "cDAI+cUSDC",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 1,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x9fc689ccada600b6df723d9e47d84d76664a1f23",
+      "symbol": "cDAI+cUSDC+USDT",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 2,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8",
+      "symbol": "yDAI+yUSDC+yUSDT+yTUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 3,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3b3ac5386837dc563660fb6a0937dfaa5924333b",
+      "symbol": "yDAI+yUSDC+yUSDT+yBUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 4,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc25a3a3b969415c80451098fa907ec722572917f",
+      "symbol": "crvPlain3andSUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 5,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xd905e2eaebe188fc92179b6350807d8bd91db0d8",
+      "symbol": "ypaxCrv",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 6,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x49849c98ae39fff122806c06791fa73784fb3675",
+      "symbol": "crvRenWBTC",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 7,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x075b1bb99792c9e1041ba13afef80c91a1e70fb3",
+      "symbol": "crvRenWSBTC",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 8,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xb19059ebb43466c323583928285a49f558e572fd",
+      "symbol": "hCRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 9,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x6c3f90f043a72fa612cbac8115ee7e52bde6e490",
+      "symbol": "3Crv",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 10,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xd2967f45c4f384deea880f807be904762a3dea07",
+      "symbol": "gusd3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 11,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x5b5cfe992adac0c9d48e05854b2d91c73a003858",
+      "symbol": "husd3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 12,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x97e2768e8e73511ca874545dc5ff8067eb19b787",
+      "symbol": "usdk3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 13,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x4f3e8f405cf5afc05d68142f3783bdfe13811522",
+      "symbol": "usdn3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 14,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x1aef73d49dedc4b1778d0706583995958dc862e6",
+      "symbol": "musd3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 15,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc2ee6b0334c261ed60c72f6054450b61b8f18e35",
+      "symbol": "rsv3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 16,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x64eda51d3ad40d56b9dfc5554e06f94e1dd786fd",
+      "symbol": "tbtc/sbtcCrv",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 17,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3a664ab939fd8482048609f652f9a0b0677337b9",
+      "symbol": "dusd3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 18,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xde5331ac4b3630f94853ff322b66407e0d6331e8",
+      "symbol": "pBTC/sbtcCRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 19,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+      "symbol": "bBTC/sbtcCRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 20,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x2fe94ea3d5d4a175184081439753de15aef9d614",
+      "symbol": "oBTC/sbtcCRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 21,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x94e131324b6054c0d789b190b2dac504e4361b53",
+      "symbol": "ust3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 22,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x194ebd173f6cdace046c53eacce9b953f28411d1",
+      "symbol": "eursCRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 23,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xa3d87fffce63b53e0d54faa1cc983b7eb0b74a9c",
+      "symbol": "eCRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 24,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xfd2a8fa60abd58efe3eee34dd494cd491dc14900",
+      "symbol": "a3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 25,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x06325440d014e39736583c165c2963ba99faf14e",
+      "symbol": "steCRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 26,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x02d341ccb60faaf662bc0554d13778015d1b285c",
+      "symbol": "saCRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 27,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xaa17a236f2badc98ddc0cf999abb47d47fc0a6cf",
+      "symbol": "ankrCRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 28,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x7eb40e450b9655f4b3cc4259bcc731c63ff55ae6",
+      "symbol": "usdp3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 29,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x5282a4ef67d9c33135340fb3289cc1711c13638c",
+      "symbol": "ib3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 30,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xcee60cfa923170e4f8204ae08b4fa6a3f5656f3a",
+      "symbol": "linkCRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 31,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xecd5e75afb02efa118af914515d6521aabd189f1",
+      "symbol": "TUSD3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 32,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xd632f22692fac7611d2aa1c0d552930d43caed3b",
+      "symbol": "FRAX3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 33,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xed279fdd11ca84beef15af5d39bb4d4bee23f0ca",
+      "symbol": "LUSD3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 34,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x4807862aa8b2bf68830e4c8dc86d0e9a998e085a",
+      "symbol": "BUSD3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 35,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x53a901d48795c58f485cbb38df08fa96a24669d5",
+      "symbol": "rCRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 36,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x43b4fdfd4ff969587185cdb6f0bd875c5fc83f8c",
+      "symbol": "alUSD3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 37,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xca3d75ac011bf5ad07a98d02f18225f9bd9a6bdf",
+      "symbol": "crvTricrypto",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 38,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc4ad29ba4b3c580e6d59105fff484999997675ff",
+      "symbol": "crv3crypto",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 39,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xfd5db7463a3ab53fd211b4af195c5bccc1a03890",
+      "symbol": "EURT-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 40,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x5a6a4d54456819380173272a5e8e9b9904bdf41b",
+      "symbol": "MIM-3LP3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 41,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x9d0464996170c6b9e75eed71c68b99ddedf279e8",
+      "symbol": "cvxcrv-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 42,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8818a9bb44fbf33502be7c15c500d0c783b73067",
+      "symbol": "ibJPY+sJPY-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 43,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xd6ac1cb9019137a896343da59dde6d097f710538",
+      "symbol": "ibGBP+sGBP-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 44,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3f1b0278a9ee595635b61817630cc19de792f506",
+      "symbol": "ibAUD+sAUD-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 45,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x19b080fe1ffa0553469d20ca36219f17fcf03859",
+      "symbol": "ibEUR+sEUR-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 46,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x9c2c8910f113181783c249d8f6aa41b51cde0f0c",
+      "symbol": "ibCHF+sCHF-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 47,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8461a004b50d321cb22b7d034969ce6803911899",
+      "symbol": "ibKRW+sKRW-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 48,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xb15ffb543211b558d40160811e5dcbcd7d5aaac9",
+      "symbol": "cvxRT",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 49,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc4c319e2d4d66cca4464c0c2b32c9bd23ebe784e",
+      "symbol": "alETH+ETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 50,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3fb78e61784c9c637d560ede23ad57ca1294c14a",
+      "symbol": "EURN/EURT-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 51,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x5b3b5df2bf2b6543f78e053bd91c4bdd820929f1",
+      "symbol": "USDM3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 52,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x55a8a39bc9694714e2874c1ce77aa1e599461e18",
+      "symbol": "MIM-UST-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 53,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xfbdca68601f835b27790d98bbb8ec7f05fdeaa9b",
+      "symbol": "ibbtc/sbtcCRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 54,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3d229e1b4faab62f621ef2f6a610961f7bd7b23b",
+      "symbol": "crvEURSUSDC",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 55,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3b6831c0077a1e44ed0a21841c3bc4dc11bce833",
+      "symbol": "crvEURTUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 56,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x87650d7bbfc3a9f10587d7778206671719d9910d",
+      "symbol": "OUSD3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 57,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc270b3b858c335b6ba5d5b10e2da8a09976005ad",
+      "symbol": "pax-usdp3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 58,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xbaaa1f5dba42c3389bdbc2c9d2de134f5cd0dc89",
+      "symbol": "D3-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 59,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xceaf7747579696a2f0bb206a14210e3c9e6fb269",
+      "symbol": "UST_whv23CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 60,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xb9446c4ef5ebe66268da6700d26f96273de3d571",
+      "symbol": "3EURpool-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 61,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xed4064f376cb8d68f770fb1ff088a3d0f3ff5c4d",
+      "symbol": "crvCRVETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 62,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xaa5a67c256e27a5d80712c51971408db3370927d",
+      "symbol": "DOLA3POOL3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 63,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x6ba5b4e438fa0aaf7c1bd179285af65d13bd3d90",
+      "symbol": "RAI3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 64,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3a283d9c08e8b55966afb64c515f5143cf907611",
+      "symbol": "crvCVXETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 65,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8484673ca7bff40f82b041916881aea15ee84834",
+      "symbol": "crvXAUTUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 66,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8282bd15dca2ea2bdf24163e8f2781b30c43a2ef",
+      "symbol": "crvSPELLETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 67,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xcb08717451aae9ef950a2524e33b6dcaba60147b",
+      "symbol": "crvTETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 68,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x29059568bb40344487d62f7450e78b8e6c74e0e5",
+      "symbol": "YFIETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 69,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x90244f43d548a4f8dfecfad91a193465b1fad6f7",
+      "symbol": "FXSETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 70,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xb37d6c07482bc11cd28a1f11f1a6ad7b66dec933",
+      "symbol": "ag+ib-EUR-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 71,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x06cb22615ba53e60d67bf6c341a0fd5e718e1655",
+      "symbol": "FEI3CRV3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 72,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xf3a43307dcafa93275993862aae628fcb50dc768",
+      "symbol": "cvxFXSFXS-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 73,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x447ddd4960d9fdbf6af9a790560d0af76795cb08",
+      "symbol": "rETHwstETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 74,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x137469b55d1f15651ba46a89d0588e97dd0b6562",
+      "symbol": "BADGERWBTC-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 75,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xe160364fd8407ffc8b163e278300c6c5d18ff61d",
+      "symbol": "BTRFLYETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 76,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xbcb91e689114b9cc865ad7871845c95241df4105",
+      "symbol": "PWRD3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 77,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc9467e453620f16b57a34a770c6bcebece002587",
+      "symbol": "pbtc/sbtcCRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 78,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x2302aabe69e6e7a1b0aa23aac68fccb8a4d2b460",
+      "symbol": "silofrax-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 79,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x1054ff2ffa34c055a13dcd9e0b4c0ca5b3aeceb9",
+      "symbol": "CADCUSDC-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 80,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3a70dfa7d2262988064a2d051dd47521e43c9bdd",
+      "symbol": "BEAN3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 81,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x401322b9fddba8c0a8d40fbcece1d1752c12316b",
+      "symbol": "LFTETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 82,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x4704ab1fb693ce163f7c9d3a31b3ff4eaf797714",
+      "symbol": "FPIFRAX-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 83,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x6359b6d3e327c497453d4376561ee276c6933323",
+      "symbol": "SDTETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 84,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x54c8ecf46a81496eeb0608bd3353388b5d7a2a33",
+      "symbol": "ibAUDUSDC-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 85,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x08cea8e5b4551722deb97113c139dd83c26c5398",
+      "symbol": "ibCHFUSDC-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 86,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8682fbf0cbf312c891532ba9f1a91e44f81ad7df",
+      "symbol": "ibEURUSDC-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 87,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x22cf19eb64226e0e1a79c69b345b31466fd273a7",
+      "symbol": "ibGBPUSDC-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 88,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x127091ede112aed7bae281747771b3150bb047bb",
+      "symbol": "ibJPYUSDC-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 89,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x80caccdbd3f07bbdb558db4a9e146d099933d677",
+      "symbol": "ibKRWUSDC-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 90,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x4647b6d835f3b393c7a955df51eefcf0db961606",
+      "symbol": "KP3RETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 91,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8ee017541375f6bcd802ba119bddc94dad6911a1",
+      "symbol": "PUSd-3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 92,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3660bd168494d61ffdac21e403d0f6356cf90fd7",
+      "symbol": "OHMETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 93,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xf7b55c3732ad8b2c2da7c24f30a69f55c54fb717",
+      "symbol": "sdCRVCRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 94,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x48ff31bbbd8ab553ebe7cbd84e1ea3dba8f54957",
+      "symbol": "sdAGAG-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 95,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xdf55670e27be5cde7228dd0a6849181891c9eba1",
+      "symbol": "STGUSDC-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 96,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xe6b5cc1b4b47305c58392ce3d359b10282fc36ea",
+      "symbol": "USDD3CRV3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 97,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xbe4f3ad6c9458b901c81b734cb22d9eae9ad8b50",
+      "symbol": "PALETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 98,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8c524635d52bd7b1bd55e062303177a7d916c046",
+      "symbol": "sdFXSFXS-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 99,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x7ea4ad8c803653498bf6ac1d2debc04dce8fd2ad",
+      "symbol": "TOKEETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 100,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3175df0976dfa876431c2e9ee6bc45b65d3473cc",
+      "symbol": "crvFRAX",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 101,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xe3c190c57b5959ae62efe3b6797058b76ba2f5ef",
+      "symbol": "SUSDFRAXBP3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 102,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x497ce58f34605b9944e6b15ecafe6b001206fd25",
+      "symbol": "LUSDFRAXBP3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 103,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x04b727c7e246ca70d496ecf52e6b6280f3c8077d",
+      "symbol": "APEUSDBP3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 104,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x4e43151b78b5fbb16298c1161fcbf7531d5f8d93",
+      "symbol": "GUSDFRAXBP3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 105,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8fdb0bb9365a46b145db80d0b1c5c5e979c84190",
+      "symbol": "BUSDFRAXBP3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 106,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xb30da2376f63de30b42dc055c93fa474f31330a5",
+      "symbol": "alUSDFRAXB3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 107,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x4606326b4db89373f5377c316d3b0f6e55bc6a20",
+      "symbol": "USDDFRAXBP3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 108,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x33baeda08b8afacc4d3d07cf31d49fc1f1f3e893",
+      "symbol": "TUSDFRAXBP3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 109,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xdadfd00a2bbeb1abc4936b1644a3033e1b653228",
+      "symbol": "xFraxTplLP-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 110,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x70fc957eb90e37af82acdbd12675699797745f68",
+      "symbol": "EUROC3CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 111,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xfa65aa60a9d45623c57d383fb4cf8fb8b854cc4d",
+      "symbol": "tbtc2/sbtcCRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 112,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xe7a3b38c39f97e977723bd1239c3470702568e7b",
+      "symbol": "europool-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 113,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xba3436fd341f2c8a928452db3c5a3670d1d5cc73",
+      "symbol": "agEUREUROC-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 114,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc47ebd6c0f68fd5963005d28d0ba533750e5c11b",
+      "symbol": "pUSDFRAXBP3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 115,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xe57180685e3348589e9521aa53af0bcd497e884d",
+      "symbol": "DOLAFRAXBP3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 116,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x22e859ee894c2068920858a60b51dc03ac5581c1",
+      "symbol": "agEURFRAXB-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 117,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x7f17a6c77c3938d235b014818092eb6305bda110",
+      "symbol": "CVXFRAXBP-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 118,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x527331f3f550f6f85acfecab9cc0889180c6f1d5",
+      "symbol": "cvxCrvFrax-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 119,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xf57ccad8122b898a147cc8601b1eca88b1662c7e",
+      "symbol": "cvxFxsFrax-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 120,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xf985005a3793dba4cce241b3c19ddcd3fe069ff4",
+      "symbol": "ALCXFRAXBP-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 121,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x66e335622ad7a6c9c72c98dbfcce684996a20ef9",
+      "symbol": "MAIPool3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 122,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x9848482da3ee3076165ce6497eda906e66bb85c5",
+      "symbol": "pETH-ETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 123,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x09b2e090531228d1b8e3d948c73b990cb6e60720",
+      "symbol": "BADGERFRAX-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 124,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x453d92c7d4263201c69aacfaf589ed14202d83a4",
+      "symbol": "yCRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 125,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3f436954afb722f5d14d868762a23fab6b0dabf0",
+      "symbol": "RSRcrvFRAX-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 126,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x7483dd57f6488b0e194a151c57df6ec85c00ace9",
+      "symbol": "BTRFLYETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 127,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x5b6c539b224014a09b3388e51caaa8e354c959c8",
+      "symbol": "cbETH/ETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 128,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xf43211935c781d5ca1a41d2041f397b8a7366c7a",
+      "symbol": "frxETHCRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 129,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x326290a1b0004eee78fa6ed4f1d8f4b2523ab669",
+      "symbol": "XAIFRAXBP3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 130,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x23e7817bc73645063fb2fa85c1d098effe84be90",
+      "symbol": "JPEGpETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 131,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x893da8a02b487fef2f7e3f35df49d7625ae549a3",
+      "symbol": "sdtfraxbp-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 132,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3a70dfa7d2262988064a2d051dd47521e43c9bdd",
+      "symbol": "BEAN3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 133,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x5ca0313d44551e32e0d7a298ec024321c4bc59b4",
+      "symbol": "bLUSDLUSD3-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 134,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x79e281bc69a03dabccd66858c65ef6724e50aebe",
+      "symbol": "sdYFIYFI-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 135,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x051d7e5609917bd9b73f04bac0ded8dd46a74301",
+      "symbol": "crvWSBTC",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 136,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x5be6c45e2d074faa20700c49ada3e88a1cc0025d",
+      "symbol": "crvGEARETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 137,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x2863a328a0b7fc6040f11614fa0728587db8e353",
+      "symbol": "multibtc3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 138,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x5271045f7b73c17825a7a7aee6917ee46b0b7520",
+      "symbol": "OHMFRAXBP-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 139,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xf9078fb962a7d13f55d40d49c8aa6472abd1a5a6",
+      "symbol": "clevCVX-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 140,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x84c333e94aea4a51a21f6cf0c7f528c50dc7592c",
+      "symbol": "clevUSD3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 141,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x6e0e681441be6cb1d8405752462488bd4d691e3a",
+      "symbol": "TRYB3POOL-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 142,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x6c280db098db673d30d5b34ec04b6387185d3620",
+      "symbol": "CLEVETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 143,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x413928a25d6ea1a26f2625d633207755f67bf97c",
+      "symbol": "agEUREURe-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 144,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc3b19502f8c02be75f3f77fd673503520deb51dd",
+      "symbol": "msUSDFRAX3CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 145,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc897b98272aa23714464ea2a0bd5180f1b8c0025",
+      "symbol": "msETH-ETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 146,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xf95aaa7ebb1620e46221b73588502960ef63dba0",
+      "symbol": "TBTCSBTC23CRV-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 147,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3f0e7916681452d23cd36b1281457da721f2e5df",
+      "symbol": "CTRETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 148,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xd8eb58d76af99547333cfeeb6a0f9bd1a63b6492",
+      "symbol": "ETH MATIC-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 149,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xb79565c01b7ae53618d9b847b9443aaf4f9011e7",
+      "symbol": "LDOETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 150,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x9de1c3d446237ab9baff74127eb4f303802a2683",
+      "symbol": "STG/FRAXBP-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 151,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x4acc1bf7d6a591016641325aa6664a1cd178f002",
+      "symbol": "DYDXETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 152,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xf9835375f6b268743ea0a54d742aa156947f8c06",
+      "symbol": "CNCETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 153,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8109a51542294cdbb489ae5516f42ffbd92177aa",
+      "symbol": "OGVETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 154,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x6c38ce8984a890f5e46e6df6117c26b3f1ecfc9c",
+      "symbol": "rETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 155,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x828b154032950c8ff7cf8085d841723db2696056",
+      "symbol": "STETHETH_C-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 156,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xaeda92e6a3b1028edc139a4ae56ec881f3064d4f",
+      "symbol": "eUSD3CRV-f",
+      "decimals": 18
+    }
+  }
+]

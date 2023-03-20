@@ -23,7 +23,7 @@ const YearnFactory = '0x21b1FC8A52f179757bf555346130bF27c0C2A17A';
         `Got vault token chain:${vaultInfo.chain} vault:${vaultInfo.address} token:${vaultInfo.token.symbol}`
       );
     }
-
-    fs.writeFileSync(`./configs/data/YearnVaults.json`, JSON.stringify(vaults));
   }
+
+  fs.writeFileSync(`./configs/data/YearnVaults.json`, JSON.stringify(vaults));
 })();

@@ -7,6 +7,7 @@ import { BeanstalkActionTestLogs } from './protocols/beanstalk';
 import { BlurActionTestLogs } from './protocols/blur';
 import { ChainlinkActionTestLogs } from './protocols/chainlink';
 import { Compound3ActionTestLogs, CompoundActionTestLogs } from './protocols/compound';
+import { ConvexActionTestLogs } from './protocols/convex';
 import { CowswapActionTestLogs } from './protocols/cowswap';
 import { CurveActionTestLogs } from './protocols/curve';
 import { EnsActionTestLogs } from './protocols/ens';
@@ -60,4 +61,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...ParaswapActionTestLogs,
   ...YearnActionTestLogs,
   ...TornadocashActionTestLogs,
+  ...ConvexActionTestLogs,
 ];

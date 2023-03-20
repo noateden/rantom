@@ -23,34 +23,36 @@ yarn start --help
 
 ### DeFi Protocols
 
-|     Protocol     | Event                                                    | Status |
-|:----------------:|----------------------------------------------------------|-------:|
-|    Uniswap v2    | Mint, Swap, Burn                                         |     🌱 |
-|   Pancakeswap    |                                                          |     🌱 |
-|    Shibaswap     |                                                          |     🌱 |
-|     Fraxswap     |                                                          |     🌱 |
-|      Sushi       | Mint, Swap, Burn, Stake, Unstake                         |     🌱 |
-|    Uniswap v3    | Mint, Swap, Burn, Collect                                |     🌱 |
-|     Balancer     | Swap, Join, Exit, FlashLoan                              |     🌱 |
-|     Aave v1      | Deposit, Withdraw, Borrow, Repay, Flashloan, Liquidation |     🌱 |
-|     Aave v2      |                                                          |     🌱 |
-|     Aave v3      |                                                          |     🌱 |
-|     Compound     | Mint, Redeem, Borrow, Repay, Liquidation                 |     🌱 |
-|     IronBank     |                                                          |     🌱 |
-|   Compound v3    | Supply, Withdraw, SupplyCollateral, WithdrawCollateral   |     🌱 |
-|   Aura Finance   | Deposit, Withdraw, Collect                               |     🌱 |
-|      Bancor      | Deposit, Withdraw, Trade, Flashloan                      |     🌱 |
-|    Beanstalk     | Deposit, Withdraw                                        |     🌱 |
-| CowSwap Protocol | Trade                                                    |     🌱 |
-|      Curve       | Trade, AddLiquidity, RemoveLiquidity                     |     🌱 |
-|   Hop Exchange   | TransferToL2                                             |     🌱 |
-|       Lido       | Stake                                                    |     🌱 |
-|   Rocket Pool    | Deposit, Withdraw                                        |     🌱 |
-|     Loopring     | Deposit, Withdraw                                        |     🌱 |
-|    Multichain    | SwapIn, SwapOut                                          |     🌱 |
-|     Optimism     | Batch                                                    |     🌱 |
-|  Eth2 Validator  | DepositEvent                                             |     🌱 |
-|    Chainlink     | NewTransmission                                          |     🌱 |
+|     Protocol     | Event                                                                                      | Status |
+|:----------------:|--------------------------------------------------------------------------------------------|-------:|
+|    Uniswap v2    | Mint, Swap, Burn                                                                           |     🌱 |
+|   Pancakeswap    |                                                                                            |     🌱 |
+|    Shibaswap     |                                                                                            |     🌱 |
+|     Fraxswap     |                                                                                            |     🌱 |
+|    Sushi Dex     | Mint, Swap, Burn                                                                           |     🌱 |
+| Sushi Masterchef | Deposit, Withdraw, EmergencyWithdraw                                                       |     🌱 |
+|    Uniswap v3    | Mint, Swap, Burn, Collect                                                                  |     🌱 |
+|     Balancer     | Swap, Join, Exit, FlashLoan                                                                |     🌱 |
+|     Aave v1      | Deposit, Withdraw, Borrow, Repay, Flashloan, Liquidation                                   |     🌱 |
+|     Aave v2      | Supply, Withdraw, Borrow, Repay, Flashloan, Liquidation                                    |     🌱 |
+|     Aave v3      | Supply, Withdraw, Borrow, Repay, Flashloan, Liquidation                                    |     🌱 |
+|     Compound     | Mint, Redeem, Borrow, Repay, Liquidation, DistributedSupplierComp, DistributedBorrowerComp |     🌱 |
+|     IronBank     |                                                                                            |     🌱 |
+|   Compound v3    | Supply, Withdraw, SupplyCollateral, WithdrawCollateral, AbsorbCollateral                   |     🌱 |
+|  Convex Finance  | Deposited, Withdrawn                                                                       |     🌱 |
+|   Aura Finance   | Deposited, Withdrawn, Collect                                                              |     🌱 |
+|      Bancor      | Deposit, Withdraw, Trade, Flashloan                                                        |     🌱 |
+|    Beanstalk     | Deposit, Withdraw, Sow                                                                     |     🌱 |
+| CowSwap Protocol | Trade                                                                                      |     🌱 |
+|      Curve       | TokenExchange, AddLiquidity, RemoveLiquidity                                               |     🌱 |
+|   Hop Exchange   | TransferToL2                                                                               |     🌱 |
+|       Lido       | Submitted                                                                                  |     🌱 |
+|   Rocket Pool    | TokensMinted, TokensBurned                                                                 |     🌱 |
+|    Multichain    | SwapIn, SwapOut                                                                            |     🌱 |
+|     Optimism     | Batch                                                                                      |     🌱 |
+|  Eth2 Validator  | DepositEvent                                                                               |     🌱 |
+|    Chainlink     | NewTransmission                                                                            |     🌱 |
+|      Yearn       | Deposit, Withdraw                                                                          |     🌱 |
 
 ### Nft Marketplace
 

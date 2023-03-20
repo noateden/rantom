@@ -4,6 +4,7 @@ import { Tokens } from './constants';
 import { CompoundContracts, Compoundv3Contracts } from './contracts/compound';
 import { CurveContracts } from './contracts/curve';
 import { YearnContracts } from './contracts/yearn';
+import ConvexBoosterPoolsData from './data/ConvexBoosterPools.json';
 import { Signatures } from './signatures';
 
 export const Uniswapv2Configs: ProtocolConfig = {
@@ -499,5 +500,17 @@ export const TornadocashConfigs: ProtocolConfig = {
         amount: '100',
       },
     },
+  },
+};
+
+export const ConvexConfigs: ProtocolConfig = {
+  protocol: 'convex',
+  contracts: {
+    ethereum: [
+      '0xf403c135812408bfbe8713b5a23a04b3d48aae31', // Booster
+    ],
+  },
+  staticData: {
+    pools: ConvexBoosterPoolsData,
   },
 };

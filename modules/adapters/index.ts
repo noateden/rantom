@@ -10,6 +10,7 @@ import {
   ChainlinkConfigs,
   CompoundConfigs,
   Compoundv3Configs,
+  ConvexConfigs,
   CowswapConfigs,
   CurveConfigs,
   EnsConfigs,
@@ -46,6 +47,7 @@ import { BlurAdapter } from './blur/blur';
 import { ChainlinkAdapter } from './chainlink/chainlink';
 import { CompoundAdapter } from './compound/compound';
 import { Compoundv3Adapter } from './compound/compoundv3';
+import { ConvexAdapter } from './convex/convex';
 import { CowswapAdapter } from './cowswap/cowswap';
 import { CurveAdapter } from './curve/curve';
 import { EnsAdapter } from './ens/ens';
@@ -108,5 +110,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new ZeroxAdapter(ZeroxConfigs, providers),
     new YearnAdapter(YearnConfigs, providers),
     new TornadocashAdapter(TornadocashConfigs, providers),
+    new ConvexAdapter(ConvexConfigs, providers),
   ];
 }
