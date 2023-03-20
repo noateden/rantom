@@ -146,7 +146,9 @@ export class Compoundv3Adapter extends Adapter {
           user = normalizeAddress(event.absorber);
         }
 
-        const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
+        const amount = event.amount
+          ? new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10)
+          : new BigNumber(event.collateralAbsorbed).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
 
         return {
           protocol: this.config.protocol,
