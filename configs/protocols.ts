@@ -4,6 +4,7 @@ import { Tokens } from './constants';
 import { CompoundContracts, Compoundv3Contracts } from './contracts/compound';
 import { CurveContracts } from './contracts/curve';
 import { YearnContracts } from './contracts/yearn';
+import AuraFinanceBoosterPoolsData from './data/AuraFinanceBoosterPools.json';
 import ConvexBoosterPoolsData from './data/ConvexBoosterPools.json';
 import { Signatures } from './signatures';
 
@@ -287,6 +288,9 @@ export const AurafinanceConfigs: ProtocolConfig = {
     ethereum: [
       '0xa57b8d98dae62b26ec3bcc4a365338157060b234', // Booster
     ],
+  },
+  staticData: {
+    pools: AuraFinanceBoosterPoolsData,
   },
 };
 

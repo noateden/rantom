@@ -1,7 +1,6 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
-import AuraBoosterAbi from '../../../configs/abi/aurafinance/Booster.json';
 import AuraRewardPoolAbi from '../../../configs/abi/aurafinance/RewardVault.json';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
@@ -12,6 +11,7 @@ import { TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { AdapterParseLogOptions } from '../../../types/options';
 import { Adapter } from '../adapter';
+import { ConvexHelper } from '../convex/helper';
 
 const Signatures: { [key: string]: string } = {
   Deposit: '0x73a19dd210f1a7f902193214c0ee91dd35ee5b4d920cba8d519eca65a7b488ca',
@@ -66,23 +66,31 @@ export class AurafinanceAdapter extends Adapter {
           }
           default: {
             if (this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
-              const boosterContract = new web3.eth.Contract(AuraBoosterAbi as any, address);
-              const poolInfo = await boosterContract.methods.poolInfo(Number(event.poolid)).call();
-              const token = await this.getWeb3Helper().getErc20Metadata(chain, poolInfo.lptoken);
-              if (token) {
+              let poolConfig = null;
+              if (this.config.staticData && this.config.staticData.pools) {
+                for (const pool of this.config.staticData.pools) {
+                  if (chain === pool.chain && Number(event.poolid) === pool.poolId) {
+                    poolConfig = pool;
+                  }
+                }
+              } else {
+                poolConfig = await ConvexHelper.getBoosterPool(chain, address, Number(event.poolid));
+              }
+
+              if (poolConfig) {
                 const user = normalizeAddress(event.user);
                 const amount = new BigNumber(event.amount)
-                  .dividedBy(new BigNumber(10).pow(token.decimals))
+                  .dividedBy(new BigNumber(10).pow(poolConfig.lpToken.decimals))
                   .toString(10);
 
                 return {
                   protocol: this.config.protocol,
                   action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
-                  tokens: [token],
+                  tokens: [poolConfig.lpToken],
                   tokenAmounts: [amount],
                   addresses: [user],
                   readableString: `${user} ${signature === Signatures.Deposit ? 'deposit' : 'withdraw'} ${amount} ${
-                    token.symbol
+                    poolConfig.lpToken.symbol
                   } on ${this.config.protocol} chain ${options.chain}`,
                 };
               }
