@@ -10,6 +10,7 @@ import { LooksrareContracts } from '../../configs/contracts/looksrare';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { RocketpoolContracts } from '../../configs/contracts/rocketpool';
 import { SushiContracts } from '../../configs/contracts/sushi';
+import { YearnContracts } from '../../configs/contracts/yearn';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 import { Erc20SupplyWorker } from './extends/erc20';
 import { AaveWorkerHook } from './hooks/aave';
@@ -23,6 +24,7 @@ import { LooksrareWorkerHook } from './hooks/looksrare';
 import { OpenseaWorkerHook } from './hooks/opensea';
 import { RocketpoolWorkerHook } from './hooks/rocketpool';
 import { SushiWorkerHook } from './hooks/sushi';
+import { YearnWorkerHook } from './hooks/yearn';
 
 export function getWorkers(providers: GlobalProviders): { [key: string]: IContractWorker } {
   return {
@@ -39,5 +41,6 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     balancer: new BalancerWorkerHook(providers, BalancerContracts),
     eth2: new Eth2WorkerHook(providers, Eth2Contracts),
     looksrare: new LooksrareWorkerHook(providers, LooksrareContracts),
+    yearn: new YearnWorkerHook(providers, YearnContracts),
   };
 }

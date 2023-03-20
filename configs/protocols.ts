@@ -1,9 +1,9 @@
-import YearnVaults from '../configs/data/YearnVaults.json';
 import { normalizeAddress } from '../lib/helper';
 import { ProtocolConfig } from '../types/configs';
 import { Tokens } from './constants';
 import { CompoundContracts, Compoundv3Contracts } from './contracts/compound';
 import { CurveContracts } from './contracts/curve';
+import { YearnContracts } from './contracts/yearn';
 import { Signatures } from './signatures';
 
 export const Uniswapv2Configs: ProtocolConfig = {
@@ -466,7 +466,7 @@ export const YearnConfigs: ProtocolConfig = {
     },
   },
   staticData: {
-    vaults: YearnVaults,
+    vaults: YearnContracts,
   },
 };
 
