@@ -4,7 +4,7 @@ import Web3 from 'web3';
 import VaultAbi from '../../../configs/abi/yearn/YearnVault-0.3.3.json';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/helper';
 import { multicallv2 } from '../../../lib/multicall';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
@@ -32,6 +32,15 @@ export class YearnAdapter extends Adapter {
 
     const signature = topics[0];
 
+    let vaultConfig = null;
+    if (this.config.staticData && this.config.staticData.vaults) {
+      for (const vault of this.config.staticData.vaults) {
+        if (vault.chain === chain && compareAddress(vault.address, address)) {
+          vaultConfig = vault;
+        }
+      }
+    }
+
     try {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const calls: Array<MulticallCall> = [
@@ -48,7 +57,14 @@ export class YearnAdapter extends Adapter {
       const result = await multicallv2(chain, VaultAbi, calls);
       const governance = normalizeAddress(result[0][0]);
       if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(governance)) !== -1) {
-        const token = await this.getWeb3Helper().getErc20Metadata(chain, result[1][0]);
+        let token = null;
+
+        if (vaultConfig) {
+          token = vaultConfig.token;
+        } else {
+          token = await this.getWeb3Helper().getErc20Metadata(chain, result[1][0]);
+        }
+
         if (token) {
           // yearn vault
           let event;

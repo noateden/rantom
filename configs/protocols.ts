@@ -1,3 +1,4 @@
+import YearnVaults from '../configs/data/YearnVaults.json';
 import { normalizeAddress } from '../lib/helper';
 import { ProtocolConfig } from '../types/configs';
 import { Tokens } from './constants';
@@ -463,6 +464,9 @@ export const YearnConfigs: ProtocolConfig = {
         },
       ],
     },
+  },
+  staticData: {
+    vaults: YearnVaults,
   },
 };
 
