@@ -7,7 +7,7 @@ export const LooksrareContracts: Array<Contract> = [
     protocol: 'looksrare',
     abi: ExchangeAbi,
     address: '0x59728544b08ab483533076417fbbb2fd0b17ce3a',
-    birthday: 13885625,
+    birthday: 16308190,
     events: ['TakerAsk', 'TakerBid'],
   },
 ];
