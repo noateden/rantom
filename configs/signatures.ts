@@ -159,4 +159,16 @@ export const Signatures: { [key: string]: string } = {
     '0x974dd0442e0b8c00fdbaae504edea1412d63bc110294a98b3c61ddcd0e703aa8',
   'Deposit(bytes32,uint32,uint256)': '0xa945e51eec50ab98c161376f0db4cf2aeba3ec92755fe2fcd388bdbbb80ff196',
   'Withdrawal(address,bytes32,address,uint256)': '0xe9e508bad6d4c3227e881ca19068f099da81b5164dd6d62b2eaf1e8bc6c34931',
+
+  // Beanstalk marketplace
+  'PodOrderCreated(address,bytes32,uint256,uint24,uint256,uint256,bytes,uint8)':
+    '0x7279c7b5d64f6bb98758727f0f16bcc5cf260997bfb49a45234c28fcb55fbcf0',
+  'PodOrderFilled(address,address,bytes32,uint256,uint256,uint256,uint256)':
+    '0x525994627282299f72de05d7d3f543c6ec6c2022cb3898ad47ff18553c7655bf',
+  'PodOrderCancelled(address,bytes32)': '0x531180eb4d1153cb99f00e54fef0a473edc9e3e951f9a88468fec65988e9e4f8',
+  'PodListingCreated(address,uint256,uint256,uint256,uint24,uint256,uint256,bytes,uint8,uint8)':
+    '0xb7653814153cbbed10e29f56c0ba102e97b4ce1078bbd8bd02da1ccce7d38fc9',
+  'PodListingFilled(address,address,uint256,uint256,uint256,uint256)':
+    '0xb33a5c3dd7c4265e5702ad84b5c4f6bb3971d2424a47955979a642fe9d77f4c3',
+  'PodListingCancelled(address,uint256)': '0xe9dc43fcbeb08ecb743b537fa98567049e3b77e283833f89ab216b22ede6ba0a',
 };

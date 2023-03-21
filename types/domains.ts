@@ -46,6 +46,7 @@ export type KnownAction =
   | 'buy'
   | 'sell'
   | 'bid'
+  | 'offer'
   | 'cancel'
   | 'trade'
 

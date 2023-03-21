@@ -3567,4 +3567,208 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+
+  [Signatures['PodOrderCreated(address,bytes32,uint256,uint24,uint256,uint256,bytes,uint8)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'id',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint24',
+        name: 'pricePerPod',
+        type: 'uint24',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'maxPlaceInLine',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'minFillAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes',
+        name: 'pricingFunction',
+        type: 'bytes',
+      },
+      {
+        indexed: false,
+        internalType: 'enum LibPolynomial.PriceType',
+        name: 'priceType',
+        type: 'uint8',
+      },
+    ],
+  },
+  [Signatures['PodOrderFilled(address,address,bytes32,uint256,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'from',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'to',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'id',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'index',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'start',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'costInBeans',
+        type: 'uint256',
+      },
+    ],
+  },
+
+  [Signatures['PodListingCreated(address,uint256,uint256,uint256,uint24,uint256,uint256,bytes,uint8,uint8)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'index',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'start',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint24',
+        name: 'pricePerPod',
+        type: 'uint24',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'maxHarvestableIndex',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'minFillAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes',
+        name: 'pricingFunction',
+        type: 'bytes',
+      },
+      {
+        indexed: false,
+        internalType: 'enum LibTransfer.To',
+        name: 'mode',
+        type: 'uint8',
+      },
+      {
+        indexed: false,
+        internalType: 'enum LibPolynomial.PriceType',
+        name: 'pricingType',
+        type: 'uint8',
+      },
+    ],
+  },
+  [Signatures['PodListingFilled(address,address,uint256,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'from',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'to',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'index',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'start',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'costInBeans',
+        type: 'uint256',
+      },
+    ],
+  },
 };

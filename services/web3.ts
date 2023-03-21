@@ -24,15 +24,15 @@ export class Web3HelperProvider extends CachingProvider implements IWeb3HelperPr
     const key = CachingHelper.getBlockTimeCacheName(chain, blockNumber);
     const cachingData = await this.getCachingData(key);
     if (cachingData) {
-      return Number(cachingData.blockNumber);
+      return Number(cachingData.timestamp);
     }
 
     const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
     try {
       const block = await web3.eth.getBlock(blockNumber);
       if (block) {
-        await this.setCachingData(key, { blockNumber: block.number });
-        return block.number;
+        await this.setCachingData(key, { timestamp: Number(block.timestamp) });
+        return Number(block.timestamp);
       }
     } catch (e: any) {
       logger.onError({
