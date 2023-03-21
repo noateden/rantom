@@ -7,7 +7,7 @@ import { normalizeAddress, shortenAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { getBlockTimestamps } from '../../lib/subgraph';
 import { Contract } from '../../types/configs';
-import { MongoCollections, TradingEvent } from '../../types/domains';
+import { EventBase, MongoCollections } from '../../types/domains';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 import { WorkerRunOptions } from '../../types/options';
 
@@ -30,7 +30,7 @@ export class ContractWorker implements IContractWorker {
   }
 
   public async processEvents(contract: Contract, events: Array<any>, options: any): Promise<number> {
-    const actions: Array<TradingEvent> = [];
+    const actions: Array<EventBase> = [];
 
     for (const event of events) {
       const transformedEvent: any = await this.parseEvent(contract, event, options);

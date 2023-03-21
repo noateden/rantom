@@ -8,17 +8,17 @@ export const BeanstalkContracts: Array<Contract> = [
     abi: BeanstalkAbi,
     address: '0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5',
     birthday: 15274075,
-    events: ['AddDeposit', 'AddWithdrawal', 'Sow', 'RemoveWithdrawal', 'RemoveWithdrawals', 'Harvest'],
-  },
-];
-
-export const BeanstalkPodMarketplaceContracts: Array<Contract> = [
-  {
-    chain: 'ethereum',
-    protocol: 'beanstalkPodMarketplace',
-    abi: BeanstalkAbi,
-    address: '0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5',
-    birthday: 15274075,
-    events: ['PodOrderCreated', 'PodOrderFilled', 'PodListingCreated', 'PodListingFilled'],
+    events: [
+      'AddDeposit',
+      'AddWithdrawal',
+      'Sow',
+      'RemoveWithdrawal',
+      'RemoveWithdrawals',
+      'Harvest',
+      'PodOrderCreated',
+      'PodOrderFilled',
+      'PodListingCreated',
+      'PodListingFilled',
+    ],
   },
 ];

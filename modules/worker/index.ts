@@ -1,7 +1,7 @@
 import { AaveContracts } from '../../configs/contracts/aave';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
 import { BalancerContracts } from '../../configs/contracts/balancer';
-import { BeanstalkContracts, BeanstalkPodMarketplaceContracts } from '../../configs/contracts/beanstalk';
+import { BeanstalkContracts } from '../../configs/contracts/beanstalk';
 import { CompoundContracts, Compoundv3Contracts } from '../../configs/contracts/compound';
 import { ConvexContracts } from '../../configs/contracts/convex';
 import { CurveContracts } from '../../configs/contracts/curve';
@@ -18,7 +18,7 @@ import { Erc20SupplyWorker } from './extends/erc20';
 import { AaveWorkerHook } from './hooks/aave';
 import { AurafinanceWorkerHook } from './hooks/aurafinance';
 import { BalancerWorkerHook } from './hooks/balancer';
-import { BeanstalkPodMarketplaceWorkerHook, BeanstalkWorkerHook } from './hooks/beanstalk';
+import { BeanstalkWorkerHook } from './hooks/beanstalk';
 import { CompoundWorkerHook, Compoundv3WorkerHook } from './hooks/compound';
 import { ConvexWorkerHook } from './hooks/convex';
 import { CurveWorkerHook } from './hooks/curve';
@@ -39,7 +39,6 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     lido: new LidoWorkerHook(providers, LidoContracts),
     rocketpool: new RocketpoolWorkerHook(providers, RocketpoolContracts),
     beanstalk: new BeanstalkWorkerHook(providers, BeanstalkContracts),
-    beanstalkPodMarketplace: new BeanstalkPodMarketplaceWorkerHook(providers, BeanstalkPodMarketplaceContracts),
     curve: new CurveWorkerHook(providers, CurveContracts),
     sushi: new SushiWorkerHook(providers, SushiContracts),
     erc20: new Erc20SupplyWorker(providers, Erc20Contracts),
