@@ -66,7 +66,7 @@ export const ZeroxActionTestLogs: Array<TestLog> = [
   },
   {
     chain: 'ethereum',
-    hash: '0x752260f60ae1a42d8bfd938201f04fa5d7a95dc7f18a9e69285e19cf9c6403a5',
+    hash: '0x2fa110163a59d65b2f183428a76133460a3be1ced3cd8ee3caf8e741707ee075',
     sender: normalizeAddress('0xbf029b93dc7ff07b7954cd123f7f417b2fe84054'),
     address: normalizeAddress('0xdef1c0ded9bec7f1a1670819833240f027b25eff'),
     log: {

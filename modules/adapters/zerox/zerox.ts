@@ -24,6 +24,7 @@ export class ZeroxAdapter extends Adapter {
       [Signatures.Trade]: EventSignatureMapping[Signatures.Trade],
       [Signatures.OtcOrderFilled]: EventSignatureMapping[Signatures.OtcOrderFilled],
       [Signatures.LimitOrderFilled]: EventSignatureMapping[Signatures.LimitOrderFilled],
+      [Signatures.RfqOrderFilled]: EventSignatureMapping[Signatures.RfqOrderFilled],
     });
   }
 
