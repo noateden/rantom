@@ -153,8 +153,6 @@ export const Signatures: { [key: string]: string } = {
   'DepositEvent(bytes,bytes,bytes,bytes,bytes)': '0x649bbc62d0e31342afea4e5cd82d4049e7e1ee912fc0889aa790803be39038c5',
   'NewTransmission(uint32,int192,address,int192[],bytes,bytes32)':
     '0xf6a97944f31ea060dfde0566e4167c1a1082551e64b60ecb14d599a9d023d451',
-  'TransformedERC20(address,address,address,uint256,uint256)':
-    '0x0f6672f78a59ba8e5e5b5d38df3ebc67f3c792e2c9259b8d97d7f00dd78ba1b3',
   'Swapped2(bytes16,address,uint256,address,address,address,address,uint256,uint256,uint256)':
     '0x974dd0442e0b8c00fdbaae504edea1412d63bc110294a98b3c61ddcd0e703aa8',
   'Deposit(bytes32,uint32,uint256)': '0xa945e51eec50ab98c161376f0db4cf2aeba3ec92755fe2fcd388bdbbb80ff196',
@@ -171,4 +169,14 @@ export const Signatures: { [key: string]: string } = {
   'PodListingFilled(address,address,uint256,uint256,uint256,uint256)':
     '0xb33a5c3dd7c4265e5702ad84b5c4f6bb3971d2424a47955979a642fe9d77f4c3',
   'PodListingCancelled(address,uint256)': '0xe9dc43fcbeb08ecb743b537fa98567049e3b77e283833f89ab216b22ede6ba0a',
+
+  // 0x: Exchange
+  'TransformedERC20(address,address,address,uint256,uint256)':
+    '0x0f6672f78a59ba8e5e5b5d38df3ebc67f3c792e2c9259b8d97d7f00dd78ba1b3',
+  'OtcOrderFilled(bytes32,address,address,address,address,uint128,uint128)':
+    '0xac75f773e3a92f1a02b12134d65e1f47f8a14eabe4eaf1e24624918e6a8b269f',
+  'LimitOrderFilled(bytes32,address,address,address,address,address,uint128,uint128,uint128,uint256,bytes32)':
+    '0xab614d2b738543c0ea21f56347cf696a3a0c42a7cbec3212a5ca22a4dcff2124',
+  'RfqOrderFilled(bytes32,address,address,address,address,uint128,uint128,bytes32)':
+    '0x829fa99d94dc4636925b38632e625736a614c154d55006b7ab6bea979c210c32',
 };

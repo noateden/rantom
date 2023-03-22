@@ -3453,6 +3453,79 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
     ],
   },
 
+  [Signatures['OtcOrderFilled(bytes32,address,address,address,address,uint128,uint128)']]: {
+    abi: [
+      { indexed: false, internalType: 'bytes32', name: 'orderHash', type: 'bytes32' },
+      { indexed: false, internalType: 'address', name: 'maker', type: 'address' },
+      { indexed: false, internalType: 'address', name: 'taker', type: 'address' },
+      { indexed: false, internalType: 'address', name: 'makerToken', type: 'address' },
+      { indexed: false, internalType: 'address', name: 'takerToken', type: 'address' },
+      {
+        indexed: false,
+        internalType: 'uint128',
+        name: 'makerTokenFilledAmount',
+        type: 'uint128',
+      },
+      { indexed: false, internalType: 'uint128', name: 'takerTokenFilledAmount', type: 'uint128' },
+    ],
+  },
+
+  [Signatures[
+    'LimitOrderFilled(bytes32,address,address,address,address,address,uint128,uint128,uint128,uint256,bytes32)'
+  ]]: {
+    abi: [
+      { indexed: false, internalType: 'bytes32', name: 'orderHash', type: 'bytes32' },
+      { indexed: false, internalType: 'address', name: 'maker', type: 'address' },
+      { indexed: false, internalType: 'address', name: 'taker', type: 'address' },
+      { indexed: false, internalType: 'address', name: 'feeRecipient', type: 'address' },
+      { indexed: false, internalType: 'address', name: 'makerToken', type: 'address' },
+      { indexed: false, internalType: 'address', name: 'takerToken', type: 'address' },
+      {
+        indexed: false,
+        internalType: 'uint128',
+        name: 'takerTokenFilledAmount',
+        type: 'uint128',
+      },
+      {
+        indexed: false,
+        internalType: 'uint128',
+        name: 'makerTokenFilledAmount',
+        type: 'uint128',
+      },
+      {
+        indexed: false,
+        internalType: 'uint128',
+        name: 'takerTokenFeeFilledAmount',
+        type: 'uint128',
+      },
+      { indexed: false, internalType: 'uint256', name: 'protocolFeePaid', type: 'uint256' },
+      { indexed: false, internalType: 'bytes32', name: 'pool', type: 'bytes32' },
+    ],
+  },
+
+  [Signatures['RfqOrderFilled(bytes32,address,address,address,address,uint128,uint128,bytes32)']]: {
+    abi: [
+      { indexed: false, internalType: 'bytes32', name: 'orderHash', type: 'bytes32' },
+      { indexed: false, internalType: 'address', name: 'maker', type: 'address' },
+      { indexed: false, internalType: 'address', name: 'taker', type: 'address' },
+      { indexed: false, internalType: 'address', name: 'makerToken', type: 'address' },
+      { indexed: false, internalType: 'address', name: 'takerToken', type: 'address' },
+      {
+        indexed: false,
+        internalType: 'uint128',
+        name: 'takerTokenFilledAmount',
+        type: 'uint128',
+      },
+      {
+        indexed: false,
+        internalType: 'uint128',
+        name: 'makerTokenFilledAmount',
+        type: 'uint128',
+      },
+      { indexed: false, internalType: 'bytes32', name: 'pool', type: 'bytes32' },
+    ],
+  },
+
   [Signatures['Swapped2(bytes16,address,uint256,address,address,address,address,uint256,uint256,uint256)']]: {
     abi: [
       {

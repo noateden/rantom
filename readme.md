@@ -53,6 +53,7 @@ yarn start --help
 |  Eth2 Validator  | DepositEvent                                                                               |     🌱 |
 |    Chainlink     | NewTransmission                                                                            |     🌱 |
 |      Yearn       | Deposit, Withdraw                                                                          |     🌱 |
+|   0x: Exchange   | TransformedERC20, OtcOrderFilled, LimitOrderFilled, RfqOrderFilled                         |     🌱 |
 
 ### Nft Marketplace
 
