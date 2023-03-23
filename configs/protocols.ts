@@ -518,3 +518,36 @@ export const ConvexConfigs: ProtocolConfig = {
     pools: ConvexBoosterPoolsData,
   },
 };
+
+export const EulerConfigs: ProtocolConfig = {
+  protocol: 'euler',
+  contracts: {
+    ethereum: [
+      '0x27182842e098f60e3d576794a5bffb0777e025d3', // Euler Protocol
+    ],
+  },
+  customEventMapping: {
+    [Signatures['Withdraw(address,address,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'underlying',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'account',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount',
+          type: 'uint256',
+        },
+      ],
+    },
+  },
+};

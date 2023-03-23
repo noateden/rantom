@@ -1,4 +1,5 @@
 import { NonFungibleTokenMetadata, Token } from '../types/configs';
+import EulerTokens from './data/EulerEAndDTokens.json';
 import EthereumTokens from './tokens/ethereum.json';
 
 export const MongodbPrefix = 'rantom';
@@ -90,6 +91,9 @@ export const HardCodeTokens: { [key: string]: Token } = {
     symbol: 'BlurPool',
     decimals: 18,
   },
+
+  // Euler.Finance e and d tokens
+  ...EulerTokens,
 };
 
 export const HardcodeNft: { [key: string]: NonFungibleTokenMetadata } = {

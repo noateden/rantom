@@ -179,4 +179,11 @@ export const Signatures: { [key: string]: string } = {
     '0xab614d2b738543c0ea21f56347cf696a3a0c42a7cbec3212a5ca22a4dcff2124',
   'RfqOrderFilled(bytes32,address,address,address,address,uint128,uint128,bytes32)':
     '0x829fa99d94dc4636925b38632e625736a614c154d55006b7ab6bea979c210c32',
+
+  // Euler Finance
+  'Deposit(address,address,uint256)': '0x5548c837ab068cf56a2c2479df0882a4922fd203edb7517321831d95078c5f62',
+  'Borrow(address,address,uint256)': '0x312a5e5e1079f5dda4e95dbbd0b908b291fd5b992ef22073643ab691572c5b52',
+  'Repay(address,address,uint256)': '0x05f2eeda0e08e4b437f487c8d7d29b14537d15e3488170dc3de5dbdf8dac4684',
+  'Liquidation(address,address,address,address,uint256,uint256,uint256,uint256,uint256)':
+    '0xbba0f1d6fb8b9abe2bbc543b7c13d43faba91c6f78da4700381c94041ac7267d',
 };

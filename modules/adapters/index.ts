@@ -15,6 +15,7 @@ import {
   CurveConfigs,
   EnsConfigs,
   Eth2Configs,
+  EulerConfigs,
   FraxswapConfigs,
   HopConfigs,
   IronbankConfigs,
@@ -52,6 +53,7 @@ import { CowswapAdapter } from './cowswap/cowswap';
 import { CurveAdapter } from './curve/curve';
 import { EnsAdapter } from './ens/ens';
 import { Eth2Adapter } from './eth2/eth2';
+import { EulerAdapter } from './euler/euler';
 import { HopAdapter } from './hop/hop';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { LidoAdapter } from './lido/lido';
@@ -111,5 +113,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new YearnAdapter(YearnConfigs, providers),
     new TornadocashAdapter(TornadocashConfigs, providers),
     new ConvexAdapter(ConvexConfigs, providers),
+    new EulerAdapter(EulerConfigs, providers),
   ];
 }

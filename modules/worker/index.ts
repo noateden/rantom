@@ -7,6 +7,7 @@ import { ConvexContracts } from '../../configs/contracts/convex';
 import { CurveContracts } from '../../configs/contracts/curve';
 import { Erc20Contracts } from '../../configs/contracts/erc20';
 import { Eth2Contracts } from '../../configs/contracts/eth2';
+import { EulerContracts } from '../../configs/contracts/euler';
 import { LidoContracts } from '../../configs/contracts/lido';
 import { LooksrareContracts } from '../../configs/contracts/looksrare';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
@@ -23,6 +24,7 @@ import { CompoundWorkerHook, Compoundv3WorkerHook } from './hooks/compound';
 import { ConvexWorkerHook } from './hooks/convex';
 import { CurveWorkerHook } from './hooks/curve';
 import { Eth2WorkerHook } from './hooks/eth2';
+import { EulerWorkerHook } from './hooks/euler';
 import { LidoWorkerHook } from './hooks/lido';
 import { LooksrareWorkerHook } from './hooks/looksrare';
 import { OpenseaWorkerHook } from './hooks/opensea';
@@ -48,5 +50,6 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     yearn: new YearnWorkerHook(providers, YearnContracts),
     convex: new ConvexWorkerHook(providers, ConvexContracts),
     aurafinance: new AurafinanceWorkerHook(providers, AurafinanceContracts),
+    euler: new EulerWorkerHook(providers, EulerContracts),
   };
 }

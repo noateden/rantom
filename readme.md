@@ -54,6 +54,7 @@ yarn start --help
 |    Chainlink     | NewTransmission                                                                            |     🌱 |
 |      Yearn       | Deposit, Withdraw                                                                          |     🌱 |
 |   0x: Exchange   | TransformedERC20, OtcOrderFilled, LimitOrderFilled, RfqOrderFilled                         |     🌱 |
+|  Euler Finance   | Deposit, Withdraw, Borrow, Repay, Liquidation                                              |     🌱 |
 
 ### Nft Marketplace
 
