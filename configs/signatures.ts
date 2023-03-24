@@ -186,4 +186,6 @@ export const Signatures: { [key: string]: string } = {
   'Repay(address,address,uint256)': '0x05f2eeda0e08e4b437f487c8d7d29b14537d15e3488170dc3de5dbdf8dac4684',
   'Liquidation(address,address,address,address,uint256,uint256,uint256,uint256,uint256)':
     '0xbba0f1d6fb8b9abe2bbc543b7c13d43faba91c6f78da4700381c94041ac7267d',
+
+  'Harvest(address,uint256)': '0xc9695243a805adb74c91f28311176c65b417e842d5699893cef56d18bfa48cba',
 };

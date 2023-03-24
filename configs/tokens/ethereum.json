@@ -137,6 +137,12 @@
     "symbol": "LINK",
     "decimals": 18
   },
+  "LOOKS": {
+    "chain": "ethereum",
+    "address": "0xf4d2888d29d722226fafa5d9b24f9164c092421e",
+    "symbol": "LOOKS",
+    "decimals": 18
+  },
   "LUSD": {
     "chain": "ethereum",
     "address": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",

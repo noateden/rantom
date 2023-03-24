@@ -41,6 +41,8 @@ export class YearnAdapter extends Adapter {
       }
     }
 
+    if (!vaultConfig) return null;
+
     try {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const calls: Array<MulticallCall> = [

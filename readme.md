@@ -58,9 +58,10 @@ yarn start --help
 
 ### Nft Marketplace
 
-| Protocol  | Event                              | Status |
-|:---------:|------------------------------------|-------:|
-|   Blur    | OrdersMatch                        |     🌱 |
-| Looksrare | TakerAsk, TakerBid, RoyaltyPayment |     🌱 |
-|  Opensea  | OrderFullFilled                    |     🌱 |
-|   X2Y2    | Inventory                          |     🌱 |
+|     Protocol      | Event                              | Status |
+|:-----------------:|------------------------------------|-------:|
+|       Blur        | OrdersMatch                        |     🌱 |
+|     Looksrare     | TakerAsk, TakerBid, RoyaltyPayment |     🌱 |
+| Looksrare Staking | Deposit, Withdraw, Harvest         |     🌱 |
+|      Opensea      | OrderFullFilled                    |     🌱 |
+|       X2Y2        | Inventory                          |     🌱 |

@@ -1,6 +1,7 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
+import { Tokens } from '../../../configs/constants';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig } from '../../../types/configs';
@@ -13,6 +14,9 @@ const Signatures: { [key: string]: string } = {
   Ask: '0x68cd251d4d267c6e2034ff0088b990352b97b2002c0476587d0c4da889c11330',
   Bid: '0x95fb6205e23ff6bda16a2d1dba56b9ad7c783f67c96fa149785052f47696f2be',
   Collect: '0x27c4f0403323142b599832f26acd21c74a9e5b809f2215726e244a4ac588cd7d',
+  Deposit: '0x90890809c654f11d6e72a28fa60149770a0d11ec6c92319d6ceb2bb0a4ea1a15',
+  Withdraw: '0xf279e6a1f5e320cca91135676d9cb6e44ca8a08c0b88342bcdb1144f6511b568',
+  Harvest: '0xc9695243a805adb74c91f28311176c65b417e842d5699893cef56d18bfa48cba',
 };
 
 export class LooksrareAdapter extends Adapter {
@@ -23,6 +27,9 @@ export class LooksrareAdapter extends Adapter {
       [Signatures.Ask]: EventSignatureMapping[Signatures.Ask],
       [Signatures.Bid]: EventSignatureMapping[Signatures.Bid],
       [Signatures.Collect]: EventSignatureMapping[Signatures.Collect],
+      [Signatures.Deposit]: EventSignatureMapping[Signatures.Deposit],
+      [Signatures.Withdraw]: EventSignatureMapping[Signatures.Withdraw],
+      [Signatures.Harvest]: EventSignatureMapping[Signatures.Harvest],
     });
   }
 
@@ -36,9 +43,16 @@ export class LooksrareAdapter extends Adapter {
       this.eventMappings[signature]
     ) {
       const web3 = new Web3();
-      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
+
+      let event;
+      if (this.config.customEventMapping && this.config.customEventMapping[signature]) {
+        event = web3.eth.abi.decodeLog(this.config.customEventMapping[signature].abi, data, topics.slice(1));
+      } else {
+        event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+      }
 
       if (signature === Signatures.Collect) {
+        // collect loyalty fee
         const paymentToken = await this.getWeb3Helper().getErc20Metadata(chain, event.currency);
         if (paymentToken) {
           const collector = normalizeAddress(event.royaltyRecipient);
@@ -55,7 +69,49 @@ export class LooksrareAdapter extends Adapter {
             readableString: `${collector} collect ${amount} ${paymentToken.symbol} on ${this.config.protocol} chain ${chain}`,
           };
         }
+      } else if (
+        signature === Signatures.Deposit ||
+        signature === Signatures.Withdraw ||
+        signature === Signatures.Harvest
+      ) {
+        // LOOKS staking
+        const user = normalizeAddress(event.user);
+        const amount = new BigNumber(event.amount)
+          .dividedBy(new BigNumber(10).pow(Tokens.ethereum.LOOKS.decimals))
+          .toString(10);
+        const harvestAmount = new BigNumber(event.harvestedAmount)
+          .dividedBy(new BigNumber(10).pow(Tokens.ethereum.WETH.decimals))
+          .toString(10);
+
+        if (signature === Signatures.Harvest) {
+          return {
+            protocol: this.config.protocol,
+            action: 'collect',
+            addresses: [user],
+            tokens: [Tokens.ethereum.WETH],
+            tokenAmounts: [harvestAmount],
+            readableString: `${user} collect ${amount} ${Tokens.ethereum.WETH.symbol} on ${this.config.protocol} chain ${chain}`,
+          };
+        } else {
+          return {
+            protocol: this.config.protocol,
+            action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
+            addresses: [user],
+            tokens: [Tokens.ethereum.LOOKS],
+            tokenAmounts: [amount],
+            readableString: `${user} ${signature === Signatures.Deposit ? 'deposit' : 'withdraw'} ${amount} ${
+              Tokens.ethereum.LOOKS.symbol
+            } on ${this.config.protocol} chain ${chain}`,
+            addition: {
+              harvest: {
+                token: Tokens.ethereum.WETH,
+                amount: harvestAmount,
+              },
+            },
+          };
+        }
       } else {
+        // NFT trading
         const nftData = await this.getWeb3Helper().getNonFungibleTokenData(
           chain,
           event.collection,
