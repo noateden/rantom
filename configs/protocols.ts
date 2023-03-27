@@ -598,3 +598,16 @@ export const EulerConfigs: ProtocolConfig = {
     },
   },
 };
+
+export const LiquityConfigs: ProtocolConfig = {
+  protocol: 'liquity',
+  contracts: {
+    ethereum: [
+      '0x24179cd81c9e782a4096035f7ec97fb8b783e007', // Borrow Operation
+      '0xa39739ef8b0231dbfa0dcda07d7e29faabcf4bb2', // Trove Manager
+    ],
+  },
+  staticData: {
+    troveManagerAddress: '0xa39739ef8b0231dbfa0dcda07d7e29faabcf4bb2',
+  },
+};

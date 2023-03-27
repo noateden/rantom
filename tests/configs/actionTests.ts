@@ -16,6 +16,7 @@ import { EulerActionTestLogs } from './protocols/euler';
 import { HopActionTestLogs } from './protocols/hop';
 import { IronbankActionTestLogs } from './protocols/ironbank';
 import { LidoActionTestLogs } from './protocols/lido';
+import { LiquityActionTestLogs } from './protocols/liquity';
 import { LooksrareActionTestLogs } from './protocols/looksrare';
 import { LoopringActionTestLogs } from './protocols/loopring';
 import { MultichainActionTestLogs } from './protocols/multichain';
@@ -64,4 +65,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...TornadocashActionTestLogs,
   ...ConvexActionTestLogs,
   ...EulerActionTestLogs,
+  ...LiquityActionTestLogs,
 ];

@@ -55,13 +55,13 @@ yarn start --help
 |      Yearn       | Deposit, Withdraw                                                                          |     🌱 |
 |   0x: Exchange   | TransformedERC20, OtcOrderFilled, LimitOrderFilled, RfqOrderFilled                         |     🌱 |
 |  Euler Finance   | Deposit, Withdraw, Borrow, Repay, Liquidation                                              |     🌱 |
+|     Liquity      | TroveUpdated, TroveLiquidated                                                              |     🌱 |
 
 ### Nft Marketplace
 
-|     Protocol      | Event                              | Status |
-|:-----------------:|------------------------------------|-------:|
-|       Blur        | OrdersMatch                        |     🌱 |
-|     Looksrare     | TakerAsk, TakerBid, RoyaltyPayment |     🌱 |
-| Looksrare Staking | Deposit, Withdraw, Harvest         |     🌱 |
-|      Opensea      | OrderFullFilled                    |     🌱 |
-|       X2Y2        | Inventory                          |     🌱 |
+| Protocol  | Event                                                          | Status |
+|:---------:|----------------------------------------------------------------|-------:|
+|   Blur    | OrdersMatch                                                    |     🌱 |
+| Looksrare | TakerAsk, TakerBid, RoyaltyPayment, Deposit, Withdraw, Harvest |     🌱 |
+|  Opensea  | OrderFullFilled                                                |     🌱 |
+|   X2Y2    | Inventory                                                      |     🌱 |

@@ -3986,4 +3986,66 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['TroveUpdated(address,uint256,uint256,uint256,uint8)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_borrower',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_debt',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_coll',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_stake',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'enum TroveManager.TroveManagerOperation',
+        name: '_operation',
+        type: 'uint8',
+      },
+    ],
+  },
+  [Signatures['TroveLiquidated(address,uint256,uint256,uint8)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_borrower',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_debt',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_coll',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'enum TroveManager.TroveManagerOperation',
+        name: '_operation',
+        type: 'uint8',
+      },
+    ],
+  },
 };

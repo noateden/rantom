@@ -188,4 +188,10 @@ export const Signatures: { [key: string]: string } = {
     '0xbba0f1d6fb8b9abe2bbc543b7c13d43faba91c6f78da4700381c94041ac7267d',
 
   'Harvest(address,uint256)': '0xc9695243a805adb74c91f28311176c65b417e842d5699893cef56d18bfa48cba',
+
+  // liquity.org
+  'TroveUpdated(address,uint256,uint256,uint256,uint8)':
+    '0xc3770d654ed33aeea6bf11ac8ef05d02a6a04ed4686dd2f624d853bbec43cc8b',
+  'TroveLiquidated(address,uint256,uint256,uint8)':
+    '0xea67486ed7ebe3eea8ab3390efd4a3c8aae48be5bea27df104a8af786c408434',
 };

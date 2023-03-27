@@ -20,6 +20,7 @@ import {
   HopConfigs,
   IronbankConfigs,
   LidoConfigs,
+  LiquityConfigs,
   LooksrareConfigs,
   LoopringConfigs,
   MultichainConfigs,
@@ -57,6 +58,7 @@ import { EulerAdapter } from './euler/euler';
 import { HopAdapter } from './hop/hop';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { LidoAdapter } from './lido/lido';
+import { LiquityAdapter } from './liquity/liquity';
 import { LooksrareAdapter } from './looksrare/looksrare';
 import { LoopringAdapter } from './loopring/loopring';
 import { MultichainAdapter } from './multichain/multichain';
@@ -114,5 +116,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new TornadocashAdapter(TornadocashConfigs, providers),
     new ConvexAdapter(ConvexConfigs, providers),
     new EulerAdapter(EulerConfigs, providers),
+    new LiquityAdapter(LiquityConfigs, providers),
   ];
 }

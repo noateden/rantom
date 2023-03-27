@@ -1,0 +1,117 @@
+import { LiquityConfigs } from '../../../configs/protocols';
+import { normalizeAddress } from '../../../lib/helper';
+import { LiquityAdapter } from '../../../modules/adapters/liquity/liquity';
+import { TestLog } from '../../types';
+
+export const LiquityActionTestLogs: Array<TestLog> = [
+  {
+    chain: 'ethereum',
+    hash: '0x607de1c590b6ddabd14fe7de0b661c5d605ba784713f5dfeb260db50b69f2539',
+    sender: normalizeAddress('0x9f9317e0790677733d3ebe3d3305de9ff4351fb5'),
+    address: normalizeAddress('0x24179cd81c9e782a4096035f7ec97fb8b783e007'),
+    log: {
+      address: '0x24179cd81c9e782a4096035f7ec97fb8b783e007',
+      topics: [
+        '0xc3770d654ed33aeea6bf11ac8ef05d02a6a04ed4686dd2f624d853bbec43cc8b',
+        '0x0000000000000000000000009f9317e0790677733d3ebe3d3305de9ff4351fb5',
+      ],
+      data: '0x0000000000000000000000000000000000000000000001367d07ad38d95775a800000000000000000000000000000000000000000000000058d15e176280000000000000000000000000000000000000000000000000000058d15e17628000000000000000000000000000000000000000000000000000000000000000000000',
+      blockNumber: '0x102233b',
+      transactionHash: '0x607de1c590b6ddabd14fe7de0b661c5d605ba784713f5dfeb260db50b69f2539',
+      transactionIndex: '0x73',
+      blockHash: '0xe574f0220d1fbac5bae4d79daf45d94bd275fff4b2accd4a67f3195fbe5a351a',
+      logIndex: '0x136',
+      removed: false,
+    },
+    adapter: new LiquityAdapter(LiquityConfigs, null),
+    action: 'borrow',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0xb67e50b2049c5a4beb38334dcfd6495c597de7a8e0bcc0c3271ea65a2e2674c9',
+    sender: normalizeAddress('0xd64791e747188b0e5061fc65b56bf20fee2e3321'),
+    address: normalizeAddress('0x24179cd81c9e782a4096035f7ec97fb8b783e007'),
+    log: {
+      address: '0x24179cd81c9e782a4096035f7ec97fb8b783e007',
+      topics: [
+        '0xc3770d654ed33aeea6bf11ac8ef05d02a6a04ed4686dd2f624d853bbec43cc8b',
+        '0x000000000000000000000000998650bf01a6424f9b11debd85a29090906cb559',
+      ],
+      data: '0x0000000000000000000000000000000000000000000006565b22061c4ab52ba2000000000000000000000000000000000000000000000002d49eaa69ab27ee42000000000000000000000000000000000000000000000002d49eaa69ab27ee420000000000000000000000000000000000000000000000000000000000000002',
+      blockNumber: '0x10223c9',
+      transactionHash: '0xb67e50b2049c5a4beb38334dcfd6495c597de7a8e0bcc0c3271ea65a2e2674c9',
+      transactionIndex: '0x46',
+      blockHash: '0x3e70531489ea52a3297c669322032aa36153d11ab8d0ae098b2c07534d385b1b',
+      logIndex: '0xad',
+      removed: false,
+    },
+    adapter: new LiquityAdapter(LiquityConfigs, null),
+    action: 'repay',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0xc39ae4f040f279b0bc345f6c499d6cacaf927e4ec72261b433784fee5da92ccb',
+    sender: normalizeAddress('0x096f0f03e4be68d7e6dd39b22a3846b8ce9849a3'),
+    address: normalizeAddress('0xa39739ef8b0231dbfa0dcda07d7e29faabcf4bb2'),
+    log: {
+      address: '0xa39739ef8b0231dbfa0dcda07d7e29faabcf4bb2',
+      topics: [
+        '0xea67486ed7ebe3eea8ab3390efd4a3c8aae48be5bea27df104a8af786c408434',
+        '0x000000000000000000000000fe3bf2979c8950877ffb11a735a77ca07fd56c3b',
+      ],
+      data: '0x00000000000000000000000000000000000000000000007cc3a0253f7b068d9b000000000000000000000000000000000000000000000000144ee1b8bac488580000000000000000000000000000000000000000000000000000000000000001',
+      blockNumber: '0x101f8da',
+      transactionHash: '0xc39ae4f040f279b0bc345f6c499d6cacaf927e4ec72261b433784fee5da92ccb',
+      transactionIndex: '0x1',
+      blockHash: '0xe81b4002f9af03258e9c895606689e5e25f9035b0f4addaf4b9858fd56c94006',
+      logIndex: '0xc',
+      removed: false,
+    },
+    adapter: new LiquityAdapter(LiquityConfigs, null),
+    action: 'liquidate',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0xc7364350fc10a700332b97ae4fda7e8d30f5fffa6c0f15ebdeb99f1bdae144f7',
+    sender: normalizeAddress('0xa56e8a460f2a14fa01d3e87804662aa37bfc7770'),
+    address: normalizeAddress('0x24179cd81c9e782a4096035f7ec97fb8b783e007'),
+    log: {
+      address: '0x24179cd81c9e782a4096035f7ec97fb8b783e007',
+      topics: [
+        '0xc3770d654ed33aeea6bf11ac8ef05d02a6a04ed4686dd2f624d853bbec43cc8b',
+        '0x000000000000000000000000a56e8a460f2a14fa01d3e87804662aa37bfc7770',
+      ],
+      data: '0x00000000000000000000000000000000000000000000022a4850b6e647165da7000000000000000000000000000000000000000000000000a688906bd8b00000000000000000000000000000000000000000000000000000a688906bd8b000000000000000000000000000000000000000000000000000000000000000000002',
+      blockNumber: '0x1021a7d',
+      transactionHash: '0xc7364350fc10a700332b97ae4fda7e8d30f5fffa6c0f15ebdeb99f1bdae144f7',
+      transactionIndex: '0x7c',
+      blockHash: '0xf31b88936610979c178ed62eec96aec76172adbc2a1354a25b57033969344dbb',
+      logIndex: '0x161',
+      removed: false,
+    },
+    adapter: new LiquityAdapter(LiquityConfigs, null),
+    action: 'deposit',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0xc63f045c5b89e96df37f0840bb953e037b2c1a157663f37db2161d6895123e6e',
+    sender: normalizeAddress('0x6f3a86a0fd7aafa0b679d4dac8ea7dfccce383ab'),
+    address: normalizeAddress('0x24179cd81c9e782a4096035f7ec97fb8b783e007'),
+    log: {
+      address: '0x24179cd81c9e782a4096035f7ec97fb8b783e007',
+      topics: [
+        '0xc3770d654ed33aeea6bf11ac8ef05d02a6a04ed4686dd2f624d853bbec43cc8b',
+        '0x0000000000000000000000006f3a86a0fd7aafa0b679d4dac8ea7dfccce383ab',
+      ],
+      data: '0x000000000000000000000000000000000000000000000a89b63b83072b1000000000000000000000000000000000000000000000000000049b9ca9a6943400000000000000000000000000000000000000000000000000049b9ca9a6943400000000000000000000000000000000000000000000000000000000000000000002',
+      blockNumber: '0x10215ee',
+      transactionHash: '0xc63f045c5b89e96df37f0840bb953e037b2c1a157663f37db2161d6895123e6e',
+      transactionIndex: '0x87',
+      blockHash: '0xb494750abc3c61e76b46705aa8efdf36ac4bcde0ad3d9912c49fda3e5287330a',
+      logIndex: '0x13c',
+      removed: false,
+    },
+    adapter: new LiquityAdapter(LiquityConfigs, null),
+    action: 'withdraw',
+  },
+];

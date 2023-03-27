@@ -10,6 +10,7 @@ import { Eth2Contracts } from '../../configs/contracts/eth2';
 import { EulerContracts } from '../../configs/contracts/euler';
 import { IronbankContracts } from '../../configs/contracts/ironbank';
 import { LidoContracts } from '../../configs/contracts/lido';
+import { LiquityContracts } from '../../configs/contracts/liquity';
 import { LooksrareContracts } from '../../configs/contracts/looksrare';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { RocketpoolContracts } from '../../configs/contracts/rocketpool';
@@ -28,6 +29,7 @@ import { Eth2WorkerHook } from './hooks/eth2';
 import { EulerWorkerHook } from './hooks/euler';
 import { IronbankWorkerHook } from './hooks/ironbank';
 import { LidoWorkerHook } from './hooks/lido';
+import { LiquityWorkerHook } from './hooks/liquity';
 import { LooksrareWorkerHook } from './hooks/looksrare';
 import { OpenseaWorkerHook } from './hooks/opensea';
 import { RocketpoolWorkerHook } from './hooks/rocketpool';
@@ -54,5 +56,6 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     aurafinance: new AurafinanceWorkerHook(providers, AurafinanceContracts),
     euler: new EulerWorkerHook(providers, EulerContracts),
     ironbank: new IronbankWorkerHook(providers, IronbankContracts),
+    liquity: new LiquityWorkerHook(providers, LiquityContracts),
   };
 }
