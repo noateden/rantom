@@ -2,6 +2,7 @@ import {
   Aavev1Configs,
   Aavev2Configs,
   Aavev3Configs,
+  AbracadabraConfigs,
   AurafinanceConfigs,
   BalancerConfigs,
   BancorConfigs,
@@ -41,6 +42,7 @@ import { GlobalProviders, IAdapter } from '../../types/namespaces';
 import { Aavev1Adapter } from './aave/aavev1';
 import { Aavev2Adapter } from './aave/aavev2';
 import { Aavev3Adapter } from './aave/aavev3';
+import { AbracadabraAdapter } from './abracadabra/abracadabra';
 import { AurafinanceAdapter } from './aurafinance/aurafinance';
 import { BalancerAdapter } from './balancer/balancer';
 import { BancorAdapter } from './bancor/bancor';
@@ -117,5 +119,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new ConvexAdapter(ConvexConfigs, providers),
     new EulerAdapter(EulerConfigs, providers),
     new LiquityAdapter(LiquityConfigs, providers),
+    new AbracadabraAdapter(AbracadabraConfigs, providers),
   ];
 }

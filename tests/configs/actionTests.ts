@@ -1,5 +1,6 @@
 import { TestLog } from '../types';
 import { AaveActionTestLogs } from './protocols/aave';
+import { AbracadabraActionTestLogs } from './protocols/abracadabra';
 import { AurafinanceActionTestLogs } from './protocols/aurafinance';
 import { BalancerActionTestLogs } from './protocols/balancer';
 import { BancorActionTestLogs } from './protocols/bancor';
@@ -66,4 +67,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...ConvexActionTestLogs,
   ...EulerActionTestLogs,
   ...LiquityActionTestLogs,
+  ...AbracadabraActionTestLogs,
 ];

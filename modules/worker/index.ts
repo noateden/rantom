@@ -1,4 +1,5 @@
 import { AaveContracts } from '../../configs/contracts/aave';
+import { AbracadabraContracts } from '../../configs/contracts/abracadabra';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
 import { BalancerContracts } from '../../configs/contracts/balancer';
 import { BeanstalkContracts } from '../../configs/contracts/beanstalk';
@@ -19,6 +20,7 @@ import { YearnContracts } from '../../configs/contracts/yearn';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 import { Erc20SupplyWorker } from './extends/erc20';
 import { AaveWorkerHook } from './hooks/aave';
+import { AbracadabraWorkerHook } from './hooks/abracadabra';
 import { AurafinanceWorkerHook } from './hooks/aurafinance';
 import { BalancerWorkerHook } from './hooks/balancer';
 import { BeanstalkWorkerHook } from './hooks/beanstalk';
@@ -57,5 +59,6 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     euler: new EulerWorkerHook(providers, EulerContracts),
     ironbank: new IronbankWorkerHook(providers, IronbankContracts),
     liquity: new LiquityWorkerHook(providers, LiquityContracts),
+    abracadabra: new AbracadabraWorkerHook(providers, AbracadabraContracts),
   };
 }

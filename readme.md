@@ -56,6 +56,7 @@ yarn start --help
 |   0x: Exchange   | TransformedERC20, OtcOrderFilled, LimitOrderFilled, RfqOrderFilled                         |     🌱 |
 |  Euler Finance   | Deposit, Withdraw, Borrow, Repay, Liquidation                                              |     🌱 |
 |     Liquity      | TroveUpdated, TroveLiquidated                                                              |     🌱 |
+|   Abracadabra    | LogBorrow, LogRepay, LogAddCollateral, LogRemoveCollateral, LogLiquidation                 |     🌱 |
 
 ### Nft Marketplace
 

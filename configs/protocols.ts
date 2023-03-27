@@ -4,6 +4,7 @@ import { Tokens } from './constants';
 import { CompoundContracts, Compoundv3Contracts } from './contracts/compound';
 import { CurveContracts } from './contracts/curve';
 import { YearnContracts } from './contracts/yearn';
+import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
 import AuraFinanceBoosterPoolsData from './data/AuraFinanceBoosterPools.json';
 import ConvexBoosterPoolsData from './data/ConvexBoosterPools.json';
 import { Signatures } from './signatures';
@@ -609,5 +610,21 @@ export const LiquityConfigs: ProtocolConfig = {
   },
   staticData: {
     troveManagerAddress: '0xa39739ef8b0231dbfa0dcda07d7e29faabcf4bb2',
+  },
+};
+
+export const AbracadabraConfigs: ProtocolConfig = {
+  protocol: 'abracadabra',
+  contracts: {
+    ethereum: [],
+  },
+  staticData: {
+    magicInternetMoney: {
+      chain: 'ethereum',
+      symbol: 'MIM',
+      decimals: 18,
+      address: '0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3',
+    },
+    cauldrons: AbracadabraCauldrons,
   },
 };
