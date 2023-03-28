@@ -63,7 +63,7 @@ export class SushiAdapter extends Uniswapv2Adapter {
         return {
           protocol: this.config.protocol,
           action: signature === Signatures.MasterchefDeposit ? 'deposit' : 'withdraw',
-          addresses: [options.sender],
+          addresses: [normalizeAddress(event.user)],
           tokens: [
             {
               chain: chain,
@@ -73,7 +73,7 @@ export class SushiAdapter extends Uniswapv2Adapter {
             },
           ],
           tokenAmounts: [amount],
-          readableString: `${options.sender} ${
+          readableString: `${normalizeAddress(event.user)} ${
             signature === Signatures.MasterchefDeposit ? 'deposit' : 'withdraw'
           } ${amount} ${tokenSymbol} on ${this.config.protocol} chain ${chain}`,
           addition: {
