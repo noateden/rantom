@@ -1,3 +1,5 @@
+import { KnownAction } from './domains';
+
 export interface ParseTransactionOptions {
   hash: string;
   force: boolean;
@@ -39,4 +41,9 @@ export interface MulticallOptions {
 
 export interface WorkerRunOptions {
   fromBlock: number;
+  fromTime: number;
+}
+
+export interface ProxyGetDataSubgraphOptions {
+  action: KnownAction;
 }

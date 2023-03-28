@@ -2,7 +2,13 @@ import { Collection } from 'mongodb';
 
 import { Contract, EventMapping, NonFungibleToken, NonFungibleTokenMetadata, ProtocolConfig, Token } from './configs';
 import { MongoCollections, Transaction, TransactionAction, TransactionTransfer } from './domains';
-import { AdapterParseLogOptions, ParseTransactionOptions, TransferParseLogOptions, WorkerRunOptions } from './options';
+import {
+  AdapterParseLogOptions,
+  ParseTransactionOptions,
+  ProxyGetDataSubgraphOptions,
+  TransferParseLogOptions,
+  WorkerRunOptions,
+} from './options';
 
 export interface IProvider {
   name: string;
@@ -67,4 +73,8 @@ export interface IContractWorker extends IProvider {
   // run indexer
   run: (options: WorkerRunOptions) => Promise<void>;
   processEvents: (contract: Contract, events: Array<any>, options: any) => Promise<any>;
+}
+
+export interface IProxyProvider extends ICachingProvider {
+  getEvents: (options: ProxyGetDataSubgraphOptions) => Promise<Array<any>>;
 }

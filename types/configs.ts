@@ -74,3 +74,12 @@ export interface ProtocolConfig {
   };
   staticData?: any;
 }
+
+export interface ProtocolSubgraphConfig {
+  chain: string;
+  protocol: string;
+  version: 'univ2' | 'univ3';
+  filters: any;
+  endpoint: string;
+  birthday: number;
+}

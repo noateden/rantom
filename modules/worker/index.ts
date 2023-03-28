@@ -17,6 +17,7 @@ import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { RocketpoolContracts } from '../../configs/contracts/rocketpool';
 import { SushiContracts } from '../../configs/contracts/sushi';
 import { YearnContracts } from '../../configs/contracts/yearn';
+import { Uniswapv2Configs, Uniswapv3Configs } from '../../configs/protocols';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 import { Erc20SupplyWorker } from './extends/erc20';
 import { AaveWorkerHook } from './hooks/aave';
@@ -36,6 +37,7 @@ import { LooksrareWorkerHook } from './hooks/looksrare';
 import { OpenseaWorkerHook } from './hooks/opensea';
 import { RocketpoolWorkerHook } from './hooks/rocketpool';
 import { SushiWorkerHook } from './hooks/sushi';
+import { UniswapWorkerHook } from './hooks/uniswap';
 import { YearnWorkerHook } from './hooks/yearn';
 
 export function getWorkers(providers: GlobalProviders): { [key: string]: IContractWorker } {
@@ -60,5 +62,7 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     ironbank: new IronbankWorkerHook(providers, IronbankContracts),
     liquity: new LiquityWorkerHook(providers, LiquityContracts),
     abracadabra: new AbracadabraWorkerHook(providers, AbracadabraContracts),
+    uniswapv2: new UniswapWorkerHook(providers, [], Uniswapv2Configs.staticData.subgraphConfigs),
+    uniswapv3: new UniswapWorkerHook(providers, [], Uniswapv3Configs.staticData.subgraphConfigs),
   };
 }

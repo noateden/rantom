@@ -22,7 +22,10 @@ export class IndexCommand extends BasicCommand {
         for (let name of names) {
           name = stringReplaceAll(name, ' ', '');
           if (workers[name]) {
-            await workers[name].run({ fromBlock: argv.fromBlock ? Number(argv.fromBlock) : 0 });
+            await workers[name].run({
+              fromBlock: argv.fromBlock ? Number(argv.fromBlock) : 0,
+              fromTime: argv.fromTime ? Number(argv.fromTime) : 0,
+            });
           }
         }
         await sleep(120);
@@ -30,7 +33,10 @@ export class IndexCommand extends BasicCommand {
     } else {
       while (true) {
         for (const [, worker] of Object.entries(workers)) {
-          await worker.run({ fromBlock: argv.fromBlock ? Number(argv.fromBlock) : 0 });
+          await worker.run({
+            fromBlock: argv.fromBlock ? Number(argv.fromBlock) : 0,
+            fromTime: argv.fromTime ? Number(argv.fromTime) : 0,
+          });
           await sleep(5);
         }
         await sleep(120);
@@ -49,6 +55,11 @@ export class IndexCommand extends BasicCommand {
         type: 'number',
         default: 0,
         describe: 'Run worker with given initial block number',
+      },
+      fromTime: {
+        type: 'number',
+        default: 0,
+        describe: 'Run worker with given initial timestamp',
       },
     });
   }
