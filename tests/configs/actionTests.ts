@@ -20,6 +20,7 @@ import { LidoActionTestLogs } from './protocols/lido';
 import { LiquityActionTestLogs } from './protocols/liquity';
 import { LooksrareActionTestLogs } from './protocols/looksrare';
 import { LoopringActionTestLogs } from './protocols/loopring';
+import { MakerActionTestLogs } from './protocols/maker';
 import { MultichainActionTestLogs } from './protocols/multichain';
 import { OpenseaActionTestLogs } from './protocols/opensea';
 import { OptimismActionTestLogs } from './protocols/optimism';
@@ -68,4 +69,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...EulerActionTestLogs,
   ...LiquityActionTestLogs,
   ...AbracadabraActionTestLogs,
+  ...MakerActionTestLogs,
 ];

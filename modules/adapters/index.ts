@@ -24,6 +24,7 @@ import {
   LiquityConfigs,
   LooksrareConfigs,
   LoopringConfigs,
+  MakerConfigs,
   MultichainConfigs,
   OpenseaConfigs,
   OptimismConfigs,
@@ -63,6 +64,7 @@ import { LidoAdapter } from './lido/lido';
 import { LiquityAdapter } from './liquity/liquity';
 import { LooksrareAdapter } from './looksrare/looksrare';
 import { LoopringAdapter } from './loopring/loopring';
+import { MakerAdapter } from './maker/maker';
 import { MultichainAdapter } from './multichain/multichain';
 import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
@@ -120,5 +122,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new EulerAdapter(EulerConfigs, providers),
     new LiquityAdapter(LiquityConfigs, providers),
     new AbracadabraAdapter(AbracadabraConfigs, providers),
+    new MakerAdapter(MakerConfigs, providers),
   ];
 }

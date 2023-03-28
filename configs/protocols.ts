@@ -652,3 +652,105 @@ export const AbracadabraConfigs: ProtocolConfig = {
     cauldrons: AbracadabraCauldrons,
   },
 };
+
+export const MakerConfigs: ProtocolConfig = {
+  protocol: 'maker',
+  contracts: {
+    ethereum: [
+      '0x9759a6ac90977b93b58547b4a71c78317f391a28', // DaiJoin
+      '0x2f0b23f53734252bda2277357e97e1517d6b042a', // ETH-A GemJoin
+      '0x08638eF1A205bE6762A8b935F5da9b700Cf7322c', // ETH-B GemJoin
+      '0xf04a5cc80b1e94c69b48f5ee68a08cd2f09a7c3e', // ETH-C GemJoin
+      '0xa191e578a6736167326d05c119ce0c90849e84b7', // USDC-A GemJoin
+      '0x2600004fd1585f7270756ddc88ad9cfa10dd0428', // USDC-B GemJoin
+      '0x0ac6a1d74e84c2df9063bddc31699ff2a2bb22a2', // USDT-A GemJoin
+      '0xbf72da2bd84c5170618fbe5914b0eca9638d5eb5', // WBTC-A GemJoin
+      '0xfa8c996e158b80d77fbd0082bb437556a65b96e0', // WBTC-B GemJoin
+    ],
+  },
+  staticData: {
+    daiJoin: '0x9759a6ac90977b93b58547b4a71c78317f391a28',
+    gems: [
+      {
+        chain: 'ethereum',
+        address: '0x2f0b23f53734252bda2277357e97e1517d6b042a',
+        token: {
+          chain: 'ethereum',
+          address: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+          symbol: 'WETH',
+          decimals: 18,
+        },
+      },
+      {
+        chain: 'ethereum',
+        address: '0x08638eF1A205bE6762A8b935F5da9b700Cf7322c',
+        token: {
+          chain: 'ethereum',
+          address: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+          symbol: 'WETH',
+          decimals: 18,
+        },
+      },
+      {
+        chain: 'ethereum',
+        address: '0xf04a5cc80b1e94c69b48f5ee68a08cd2f09a7c3e',
+        token: {
+          chain: 'ethereum',
+          address: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+          symbol: 'WETH',
+          decimals: 18,
+        },
+      },
+      {
+        chain: 'ethereum',
+        address: '0xa191e578a6736167326d05c119ce0c90849e84b7',
+        token: {
+          chain: 'ethereum',
+          address: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+          symbol: 'USDC',
+          decimals: 6,
+        },
+      },
+      {
+        chain: 'ethereum',
+        address: '0x2600004fd1585f7270756ddc88ad9cfa10dd0428',
+        token: {
+          chain: 'ethereum',
+          address: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+          symbol: 'USDC',
+          decimals: 6,
+        },
+      },
+      {
+        chain: 'ethereum',
+        address: '0x0ac6a1d74e84c2df9063bddc31699ff2a2bb22a2',
+        token: {
+          chain: 'ethereum',
+          address: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+          symbol: 'USDT',
+          decimals: 6,
+        },
+      },
+      {
+        chain: 'ethereum',
+        address: '0xbf72da2bd84c5170618fbe5914b0eca9638d5eb5',
+        token: {
+          chain: 'ethereum',
+          address: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
+          symbol: 'WBTC',
+          decimals: 8,
+        },
+      },
+      {
+        chain: 'ethereum',
+        address: '0xfa8c996e158b80d77fbd0082bb437556a65b96e0',
+        token: {
+          chain: 'ethereum',
+          address: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
+          symbol: 'WBTC',
+          decimals: 8,
+        },
+      },
+    ],
+  },
+};

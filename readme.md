@@ -57,6 +57,7 @@ yarn start --help
 |  Euler Finance   | Deposit, Withdraw, Borrow, Repay, Liquidation                                              |     🌱 |
 |     Liquity      | TroveUpdated, TroveLiquidated                                                              |     🌱 |
 |   Abracadabra    | LogBorrow, LogRepay, LogAddCollateral, LogRemoveCollateral, LogLiquidation                 |     🌱 |
+|     MakerDao     | GemJoin, GemExit, DaiJoin, DaiExit                                                         |     🌱 |
 
 ### Nft Marketplace
 
