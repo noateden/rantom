@@ -7,6 +7,7 @@ import { YearnContracts } from './contracts/yearn';
 import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
 import AuraFinanceBoosterPoolsData from './data/AuraFinanceBoosterPools.json';
 import ConvexBoosterPoolsData from './data/ConvexBoosterPools.json';
+import SushiPools from './data/SushiPools.json';
 import { Signatures } from './signatures';
 
 export const Uniswapv2Configs: ProtocolConfig = {
@@ -69,7 +70,11 @@ export const SushiConfigs: ProtocolConfig = {
     ethereum: [
       '0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac', // uni v2 Factory
       '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // masterchef
+      '0xef0881ec094552b2e128cf945ef17a6752b4ec5d', // masterchef v2
     ],
+  },
+  staticData: {
+    pools: SushiPools,
   },
 };
 
