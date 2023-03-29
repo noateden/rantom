@@ -68,9 +68,22 @@ export class ContractWorker implements IContractWorker {
     return operations.length;
   }
 
-  private async indexContract(config: Contract, options: WorkerRunOptions): Promise<void> {
+  // override this function if the worker needs a diff way to get past log
+  protected async getPasEvents(config: Contract, fromBlock: number, toBlock: number): Promise<Array<any>> {
     const web3 = new Web3(EnvConfig.blockchains[config.chain].nodeRpc);
     const contract = new web3.eth.Contract(config.abi, config.address);
+
+    let events: Array<any> = [];
+    for (const eventName of config.events) {
+      const pastEvents = await contract.getPastEvents(eventName, { fromBlock, toBlock });
+      events = events.concat(pastEvents);
+    }
+
+    return events;
+  }
+
+  protected async indexContract(config: Contract, options: WorkerRunOptions): Promise<void> {
+    const web3 = new Web3(EnvConfig.blockchains[config.chain].nodeRpc);
 
     // if fromBlock was given, start sync from fromBlock value
     // and do not save contract state
@@ -121,11 +134,7 @@ export class ContractWorker implements IContractWorker {
 
       const toBlock = stateBlock + CHUNK > tip ? tip : stateBlock + CHUNK;
 
-      let events: Array<any> = [];
-      for (const eventName of config.events) {
-        const pastEvents = await contract.getPastEvents(eventName, { fromBlock: stateBlock, toBlock });
-        events = events.concat(pastEvents);
-      }
+      const events: Array<any> = await this.getPasEvents(config, stateBlock, toBlock);
 
       const blockTimes = await getBlockTimestamps({
         endpoint: BlockSubgraphs[config.chain],

@@ -100,4 +100,26 @@ export const MakerActionTestLogs: Array<TestLog> = [
     adapter: new MakerAdapter(MakerConfigs, null),
     action: 'withdraw',
   },
+  {
+    chain: 'ethereum',
+    hash: '0x4f800ab40926ad52a57fe58b48c9a79d8823f7197de823bc59b0d12d0ad5bdfa',
+    sender: normalizeAddress('0x458f04feab592cd28f29a9926f86292a9ef20600'),
+    address: normalizeAddress('0x60744434d6339a6b27d73d9eda62b6f66a0a04fa'),
+    log: {
+      address: '0x60744434d6339a6b27d73d9eda62b6f66a0a04fa',
+      topics: [
+        '0x0d7d75e01ab95780d3cd1c8ec0dd6c2ce19e3a20427eec8bf53283b6fb8e95f0',
+        '0x0000000000000000000000002a49eae5cca3f050ebec729cf90cc910fadaf7a2',
+      ],
+      data: '0x0000000000000000000000006b175474e89094c44da98b954eedeac495271d0f000000000000000000000000000000000000000000003b25e74adfdd6a743c040000000000000000000000000000000000000000000000000000000000000000',
+      blockNumber: '0x10262f4',
+      transactionHash: '0x4f800ab40926ad52a57fe58b48c9a79d8823f7197de823bc59b0d12d0ad5bdfa',
+      transactionIndex: '0x60',
+      blockHash: '0x543176f4dcf2ae4a4fb1b1f84c88d5dbd7a5773c3f86f2403d104a1fa9b4ac2c',
+      logIndex: '0x86',
+      removed: false,
+    },
+    adapter: new MakerAdapter(MakerConfigs, null),
+    action: 'flashloan',
+  },
 ];

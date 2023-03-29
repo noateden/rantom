@@ -671,7 +671,38 @@ export const MakerConfigs: ProtocolConfig = {
       '0x0ac6a1d74e84c2df9063bddc31699ff2a2bb22a2', // USDT-A GemJoin
       '0xbf72da2bd84c5170618fbe5914b0eca9638d5eb5', // WBTC-A GemJoin
       '0xfa8c996e158b80d77fbd0082bb437556a65b96e0', // WBTC-B GemJoin
+      '0x60744434d6339a6b27d73d9eda62b6f66a0a04fa', // DAI Flashloan
     ],
+  },
+  customEventMapping: {
+    [Signatures['FlashLoan(address,address,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'receiver',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'address',
+          name: 'token',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'fee',
+          type: 'uint256',
+        },
+      ],
+    },
   },
   staticData: {
     daiJoin: '0x9759a6ac90977b93b58547b4a71c78317f391a28',

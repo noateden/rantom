@@ -206,4 +206,6 @@ export const Signatures: { [key: string]: string } = {
   'LogRepay(address,address,uint256,uint256)': '0xc8e512d8f188ca059984b5853d2bf653da902696b8512785b182b2c813789a6e',
   'LogLiquidation(address,address,address,uint256,uint256,uint256)':
     '0x66b108dc29b952efc76dccea9b82dce6b59fab4d9af73d8dcc9789afcad5daf6',
+
+  // maker
 };

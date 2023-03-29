@@ -2,6 +2,7 @@ import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import { Tokens } from '../../../configs/constants';
+import { EventSignatureMapping } from '../../../configs/mappings';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig, Token } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
@@ -12,6 +13,7 @@ import { Adapter } from '../adapter';
 const Signatures = {
   GemJoin: '0xef693bed00000000000000000000000000000000000000000000000000000000',
   GemExit: '0x3b4da69f00000000000000000000000000000000000000000000000000000000',
+  DaiFlashloan: '0x0d7d75e01ab95780d3cd1c8ec0dd6c2ce19e3a20427eec8bf53283b6fb8e95f0',
 };
 
 export class MakerAdapter extends Adapter {
@@ -21,56 +23,79 @@ export class MakerAdapter extends Adapter {
     super(config, providers, {
       [Signatures.GemJoin]: { abi: [] },
       [Signatures.GemExit]: { abi: [] },
+      [Signatures.DaiFlashloan]: config.customEventMapping
+        ? config.customEventMapping[Signatures.DaiFlashloan]
+        : { abi: [] },
     });
   }
 
   public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics } = options;
+    const { chain, address, topics, data } = options;
 
     const signature = topics[0];
     if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(address) !== -1) {
       const web3 = new Web3();
 
-      if (compareAddress(address, this.config.staticData.daiJoin)) {
-        const borrower = normalizeAddress(web3.eth.abi.decodeParameter('address', topics[1]).toString());
-        const amount = new BigNumber(web3.eth.abi.decodeParameter('uint256', topics[3]).toString())
-          .dividedBy(new BigNumber(10).pow(Tokens.ethereum.DAI.decimals))
-          .toString(10);
-
-        const action: KnownAction = signature === Signatures.GemJoin ? 'borrow' : 'repay';
-
-        return {
-          protocol: this.config.protocol,
-          action: action,
-          addresses: [borrower],
-          tokens: [Tokens.ethereum.DAI],
-          tokenAmounts: [amount],
-          readableString: `${borrower} ${action} ${amount} ${Tokens.ethereum.DAI.symbol} on ${this.config.protocol} chain ${chain}`,
-        };
-      } else {
-        let token: Token | null = null;
-        for (const gem of this.config.staticData.gems) {
-          if (compareAddress(address, gem.address)) {
-            token = gem.token;
-          }
-        }
-
+      if (signature === Signatures.DaiFlashloan) {
+        const abi = this.config.customEventMapping
+          ? this.config.customEventMapping[signature].abi
+          : EventSignatureMapping[signature].abi;
+        const event = web3.eth.abi.decodeLog(abi, data, topics.slice(1));
+        const receiver = normalizeAddress(event.receiver);
+        const token = await this.getWeb3Helper().getErc20Metadata(chain, event.token);
         if (token) {
-          const depositor = normalizeAddress(web3.eth.abi.decodeParameter('address', topics[1]).toString());
+          const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
+          return {
+            protocol: this.config.protocol,
+            action: 'flashloan',
+            addresses: [receiver],
+            tokens: [token],
+            tokenAmounts: [amount],
+            readableString: `${receiver} flashloan ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+          };
+        }
+      } else {
+        if (compareAddress(address, this.config.staticData.daiJoin)) {
+          const borrower = normalizeAddress(web3.eth.abi.decodeParameter('address', topics[1]).toString());
           const amount = new BigNumber(web3.eth.abi.decodeParameter('uint256', topics[3]).toString())
-            .dividedBy(new BigNumber(10).pow(token.decimals))
+            .dividedBy(new BigNumber(10).pow(Tokens.ethereum.DAI.decimals))
             .toString(10);
 
-          const action: KnownAction = signature === Signatures.GemExit ? 'deposit' : 'withdraw';
+          const action: KnownAction = signature === Signatures.GemJoin ? 'borrow' : 'repay';
 
           return {
             protocol: this.config.protocol,
             action: action,
-            addresses: [depositor],
-            tokens: [token],
+            addresses: [borrower],
+            tokens: [Tokens.ethereum.DAI],
             tokenAmounts: [amount],
-            readableString: `${depositor} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+            readableString: `${borrower} ${action} ${amount} ${Tokens.ethereum.DAI.symbol} on ${this.config.protocol} chain ${chain}`,
           };
+        } else {
+          let token: Token | null = null;
+          for (const gem of this.config.staticData.gems) {
+            if (compareAddress(address, gem.address)) {
+              token = gem.token;
+            }
+          }
+
+          if (token) {
+            const depositor = normalizeAddress(web3.eth.abi.decodeParameter('address', topics[1]).toString());
+            const amount = new BigNumber(web3.eth.abi.decodeParameter('uint256', topics[3]).toString())
+              .dividedBy(new BigNumber(10).pow(token.decimals))
+              .toString(10);
+
+            const action: KnownAction = signature === Signatures.GemExit ? 'deposit' : 'withdraw';
+
+            return {
+              protocol: this.config.protocol,
+              action: action,
+              addresses: [depositor],
+              tokens: [token],
+              tokenAmounts: [amount],
+              readableString: `${depositor} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+            };
+          }
         }
       }
     }
