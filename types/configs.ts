@@ -30,6 +30,9 @@ export interface Contract {
   address: string;
   birthday: number;
   events: Array<string>;
+
+  // for getting custom events
+  topics?: Array<string>;
 }
 
 export interface EnvConfig {

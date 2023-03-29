@@ -13,6 +13,7 @@ import { IronbankContracts } from '../../configs/contracts/ironbank';
 import { LidoContracts } from '../../configs/contracts/lido';
 import { LiquityContracts } from '../../configs/contracts/liquity';
 import { LooksrareContracts } from '../../configs/contracts/looksrare';
+import { MakerContracts } from '../../configs/contracts/maker';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { RocketpoolContracts } from '../../configs/contracts/rocketpool';
 import { SushiContracts } from '../../configs/contracts/sushi';
@@ -34,6 +35,7 @@ import { IronbankWorkerHook } from './hooks/ironbank';
 import { LidoWorkerHook } from './hooks/lido';
 import { LiquityWorkerHook } from './hooks/liquity';
 import { LooksrareWorkerHook } from './hooks/looksrare';
+import { MakerWorkerHook } from './hooks/maker';
 import { OpenseaWorkerHook } from './hooks/opensea';
 import { RocketpoolWorkerHook } from './hooks/rocketpool';
 import { SushiWorkerHook } from './hooks/sushi';
@@ -43,6 +45,7 @@ import { YearnWorkerHook } from './hooks/yearn';
 export function getWorkers(providers: GlobalProviders): { [key: string]: IContractWorker } {
   return {
     aave: new AaveWorkerHook(providers, AaveContracts),
+    maker: new MakerWorkerHook(providers, MakerContracts),
     opensea: new OpenseaWorkerHook(providers, OpenseaContracts),
     compound: new CompoundWorkerHook(providers, CompoundContracts),
     compoundv3: new Compoundv3WorkerHook(providers, Compoundv3Contracts),
