@@ -1,4 +1,5 @@
 import { Contract } from '../../types/configs';
+import MakerAuthGemJoinAbi from '../abi/maker/AuthGemJoin.json';
 import MakerDaiFlashLoanAbi from '../abi/maker/DaiFlashloan.json';
 
 export const MakerContracts: Array<Contract> = [
@@ -9,6 +10,16 @@ export const MakerContracts: Array<Contract> = [
     address: '0x60744434d6339a6b27d73d9eda62b6f66a0a04fa',
     birthday: 16308190,
     events: ['FlashLoan'],
+  },
+
+  // Auth GUSD Join
+  {
+    chain: 'ethereum',
+    protocol: 'maker',
+    abi: MakerAuthGemJoinAbi,
+    address: '0x79a0fa989fb7adf1f8e80c93ee605ebb94f7c6a5',
+    birthday: 16308190,
+    events: ['Join', 'Exit'],
   },
 
   // Dai Join
@@ -115,6 +126,18 @@ export const MakerContracts: Array<Contract> = [
     protocol: 'maker',
     abi: {},
     address: '0xfa8c996e158b80d77fbd0082bb437556a65b96e0',
+    birthday: 16308190,
+    events: [],
+    topics: [
+      '0xef693bed00000000000000000000000000000000000000000000000000000000',
+      '0x3b4da69f00000000000000000000000000000000000000000000000000000000',
+    ],
+  },
+  {
+    chain: 'ethereum',
+    protocol: 'maker',
+    abi: {},
+    address: '0x0a59649758aa4d66e25f08dd01271e891fe52199',
     birthday: 16308190,
     events: [],
     topics: [

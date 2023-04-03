@@ -208,4 +208,6 @@ export const Signatures: { [key: string]: string } = {
     '0x66b108dc29b952efc76dccea9b82dce6b59fab4d9af73d8dcc9789afcad5daf6',
 
   // maker
+  'Join(address,uint256,address)': '0x16c03c2fe01ac285473b0d10ba5c5de59ede582fcac27a866b5827415fe44b03',
+  'Exit(address,uint256)': '0x22d324652c93739755cf4581508b60875ebdd78c20c0cff5cf8e23452b299631',
 };

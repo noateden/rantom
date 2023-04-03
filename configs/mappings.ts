@@ -4274,4 +4274,42 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Join(address,uint256,address)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'urn',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amt',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'msgSender',
+        type: 'address',
+      },
+    ],
+  },
+  [Signatures['Exit(address,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'usr',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amt',
+        type: 'uint256',
+      },
+    ],
+  },
 };
