@@ -149,10 +149,22 @@
     "symbol": "LUSD",
     "decimals": 18
   },
+  "MAI": {
+    "chain": "ethereum",
+    "address": "0x8d6cebd76f18e1558d4db88138e2defb3909fad6",
+    "symbol": "MAI",
+    "decimals": 18
+  },
   "MANA": {
     "chain": "ethereum",
     "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
     "symbol": "MANA",
+    "decimals": 18
+  },
+  "METIS": {
+    "chain": "ethereum",
+    "address": "0x9e32b13ce7f2e80a01932b42553652e053d6ed8e",
+    "symbol": "METIS",
     "decimals": 18
   },
   "MIM": {
@@ -226,6 +238,12 @@
     "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
     "symbol": "USDC",
     "decimals": 6
+  },
+  "USDD": {
+    "chain": "ethereum",
+    "address": "0x0c10bf8fcb7bf5412187a595ab97a3609160b5c6",
+    "symbol": "USDD",
+    "decimals": 18
   },
   "USDP": {
     "chain": "ethereum",

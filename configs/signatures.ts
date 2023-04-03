@@ -210,4 +210,11 @@ export const Signatures: { [key: string]: string } = {
   // maker
   'Join(address,uint256,address)': '0x16c03c2fe01ac285473b0d10ba5c5de59ede582fcac27a866b5827415fe44b03',
   'Exit(address,uint256)': '0x22d324652c93739755cf4581508b60875ebdd78c20c0cff5cf8e23452b299631',
+
+  // stargate
+  'Mint(address,uint256,uint256,uint256)': '0xb4c03061fb5b7fed76389d5af8f2e0ddb09f8c70d1333abbb62582835e10accb',
+  'Burn(address,uint256,uint256)': '0x49995e5dd6158cf69ad3e9777c46755a1a826a446c6416992167462dad033b2a',
+  'Swap(uint16,uint256,address,uint256,uint256,uint256,uint256,uint256)':
+    '0x34660fc8af304464529f48a778e03d03e4d34bcd5f9b6f0cfbf3cd238c642f7f',
+  'SwapRemote(address,uint256,uint256,uint256)': '0xfb2b592367452f1c437675bed47f5e1e6c25188c17d7ba01a12eb030bc41ccef',
 };

@@ -772,3 +772,85 @@ export const MakerConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const StargateConfigs: ProtocolConfig = {
+  protocol: 'stargate',
+  contracts: {
+    ethereum: [
+      '0x101816545f6bd2b1076434b54383a1e633390a2e', // Pool ETH
+      '0xdf0770df86a8034b3efef0a1bb3c889b8332ff56', // Pool USDC
+      '0x38ea452219524bb87e18de1c24d3bb59510bd783', // Pool USDT
+      '0x692953e758c3669290cb1677180c64183cee374e', // Pool USDD
+      '0x0faf1d2d3ced330824de3b8200fc8dc6e397850d', // Pool DAI
+      '0xfa0f307783ac21c39e939acff795e27b650f6e68', // Pool FRAX
+      '0x590d4f8a68583639f215f675f3a259ed84790580', // Pool sUSD
+      '0xe8f55368c82d38bbbbdb5533e7f56afc2e978cc2', // Pool LUSD
+      '0x9cef9a0b1be0d289ac9f4a98ff317c33eaa84eb8', // Pool MAI
+      '0xd8772edbf88bba2667ed011542343b0eddacda47', // Pool METIS
+    ],
+  },
+  staticData: {
+    chainIds: {
+      ethereum: 101,
+      bnbchain: 102,
+      avalanche: 106,
+      polygon: 109,
+      arbitrum: 110,
+      optimism: 111,
+      fantom: 112,
+      metis: 151,
+    },
+    pools: [
+      {
+        chain: 'ethereum',
+        address: '0x101816545f6bd2b1076434b54383a1e633390a2e',
+        token: Tokens.ethereum.NativeCoin,
+      },
+      {
+        chain: 'ethereum',
+        address: '0xdf0770df86a8034b3efef0a1bb3c889b8332ff56',
+        token: Tokens.ethereum.USDC,
+      },
+      {
+        chain: 'ethereum',
+        address: '0x38ea452219524bb87e18de1c24d3bb59510bd783',
+        token: Tokens.ethereum.USDT,
+      },
+      {
+        chain: 'ethereum',
+        address: '0x692953e758c3669290cb1677180c64183cee374e',
+        token: Tokens.ethereum.USDD,
+      },
+      {
+        chain: 'ethereum',
+        address: '0x0faf1d2d3ced330824de3b8200fc8dc6e397850d',
+        token: Tokens.ethereum.DAI,
+      },
+      {
+        chain: 'ethereum',
+        address: '0xfa0f307783ac21c39e939acff795e27b650f6e68',
+        token: Tokens.ethereum.FRAX,
+      },
+      {
+        chain: 'ethereum',
+        address: '0x590d4f8a68583639f215f675f3a259ed84790580',
+        token: Tokens.ethereum.sUSD,
+      },
+      {
+        chain: 'ethereum',
+        address: '0xe8f55368c82d38bbbbdb5533e7f56afc2e978cc2',
+        token: Tokens.ethereum.LUSD,
+      },
+      {
+        chain: 'ethereum',
+        address: '0x9cef9a0b1be0d289ac9f4a98ff317c33eaa84eb8',
+        token: Tokens.ethereum.MAI,
+      },
+      {
+        chain: 'ethereum',
+        address: '0xd8772edbf88bba2667ed011542343b0eddacda47',
+        token: Tokens.ethereum.METIS,
+      },
+    ],
+  },
+};

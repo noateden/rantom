@@ -27,6 +27,7 @@ import { OptimismActionTestLogs } from './protocols/optimism';
 import { PancakeswapActionTestLogs } from './protocols/pancakeswap';
 import { ParaswapActionTestLogs } from './protocols/paraswap';
 import { RocketpoolActionTestLogs } from './protocols/rocketpool';
+import { StargateActionTestLogs } from './protocols/stargate';
 import { SushiActionTestLogs } from './protocols/sushi';
 import { TornadocashActionTestLogs } from './protocols/tornadocash';
 import { UniswapActionTestLogs } from './protocols/uniswap';
@@ -70,4 +71,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...LiquityActionTestLogs,
   ...AbracadabraActionTestLogs,
   ...MakerActionTestLogs,
+  ...StargateActionTestLogs,
 ];

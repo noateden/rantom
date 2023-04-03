@@ -58,6 +58,7 @@ yarn start --help
 |     Liquity      | TroveUpdated, TroveLiquidated                                                              |     🌱 |
 |   Abracadabra    | LogBorrow, LogRepay, LogAddCollateral, LogRemoveCollateral, LogLiquidation                 |     🌱 |
 |     MakerDao     | GemJoin, GemExit, DaiJoin, DaiExit, FlashLoan                                              |     🌱 |
+|     Stargate     | Mint, Burn, Swap, SwapRemote                                                               |     🌱 |
 
 ### Nft Marketplace
 

@@ -4312,4 +4312,134 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Mint(address,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'to',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountLP',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountSD',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'mintFeeAmountSD',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['Burn(address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'from',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountLP',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountSD',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['Swap(uint16,uint256,address,uint256,uint256,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'uint16',
+        name: 'chainId',
+        type: 'uint16',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'dstPoolId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'from',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountSD',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'eqReward',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'eqFee',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'protocolFee',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'lpFee',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['SwapRemote(address,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'to',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountSD',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'protocolFee',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'dstFee',
+        type: 'uint256',
+      },
+    ],
+  },
 };
