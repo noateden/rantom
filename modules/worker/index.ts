@@ -18,7 +18,7 @@ import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { RocketpoolContracts } from '../../configs/contracts/rocketpool';
 import { SushiContracts } from '../../configs/contracts/sushi';
 import { YearnContracts } from '../../configs/contracts/yearn';
-import { Uniswapv2Configs, Uniswapv3Configs } from '../../configs/protocols';
+import { SushiConfigs, Uniswapv2Configs, Uniswapv3Configs } from '../../configs/protocols';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 import { Erc20SupplyWorker } from './extends/erc20';
 import { AaveWorkerHook } from './hooks/aave';
@@ -53,7 +53,7 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     rocketpool: new RocketpoolWorkerHook(providers, RocketpoolContracts),
     beanstalk: new BeanstalkWorkerHook(providers, BeanstalkContracts),
     curve: new CurveWorkerHook(providers, CurveContracts),
-    sushi: new SushiWorkerHook(providers, SushiContracts),
+    sushi: new SushiWorkerHook(providers, SushiContracts, SushiConfigs.staticData.subgraphConfigs),
     erc20: new Erc20SupplyWorker(providers, Erc20Contracts),
     balancer: new BalancerWorkerHook(providers, BalancerContracts),
     eth2: new Eth2WorkerHook(providers, Eth2Contracts),

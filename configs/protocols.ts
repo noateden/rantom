@@ -75,6 +75,16 @@ export const SushiConfigs: ProtocolConfig = {
   },
   staticData: {
     pools: SushiPools,
+    subgraphConfigs: [
+      {
+        protocol: 'sushi',
+        chain: 'ethereum',
+        version: 'univ2',
+        birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+        filters: {},
+        endpoint: 'https://api.thegraph.com/subgraphs/name/sushiswap/exchange',
+      },
+    ],
   },
 };
 
