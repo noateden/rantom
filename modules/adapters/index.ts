@@ -31,6 +31,7 @@ import {
   PancakeswapConfigs,
   RocketpoolConfigs,
   ShibaswapConfigs,
+  SiloConfigs,
   StargateConfigs,
   SushiConfigs,
   TornadocashConfigs,
@@ -70,6 +71,7 @@ import { MultichainAdapter } from './multichain/multichain';
 import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
+import { SiloAdapter } from './silo/silo';
 import { StargateAdapter } from './stargate/stargate';
 import { SushiAdapter } from './sushi/sushi';
 import { TornadocashAdapter } from './tornadocash/tornadocash';
@@ -126,5 +128,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new AbracadabraAdapter(AbracadabraConfigs, providers),
     new MakerAdapter(MakerConfigs, providers),
     new StargateAdapter(StargateConfigs, providers),
+    new SiloAdapter(SiloConfigs, providers),
   ];
 }

@@ -854,3 +854,58 @@ export const StargateConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const SiloConfigs: ProtocolConfig = {
+  protocol: 'silo',
+  contracts: {
+    ethereum: [
+      '0xd998c35b7900b344bbbe6555cc11576942cf309d', // Silo Depository
+    ],
+  },
+  customEventMapping: {
+    [Signatures['Borrow(address,address,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'asset',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'user',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount',
+          type: 'uint256',
+        },
+      ],
+    },
+    [Signatures['Repay(address,address,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'asset',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'user',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount',
+          type: 'uint256',
+        },
+      ],
+    },
+  },
+};

@@ -217,4 +217,10 @@ export const Signatures: { [key: string]: string } = {
   'Swap(uint16,uint256,address,uint256,uint256,uint256,uint256,uint256)':
     '0x34660fc8af304464529f48a778e03d03e4d34bcd5f9b6f0cfbf3cd238c642f7f',
   'SwapRemote(address,uint256,uint256,uint256)': '0xfb2b592367452f1c437675bed47f5e1e6c25188c17d7ba01a12eb030bc41ccef',
+
+  // silo.finance
+  'Deposit(address,address,uint256,bool)': '0xdd160bb401ec5b5e5ca443d41e8e7182f3fe72d70a04b9c0ba844483d212bcb5',
+  'Withdraw(address,address,address,uint256,bool)':
+    '0x3b5f15635b488fe265654176726b3222080f3d6500a562f4664233b3ea2f0283',
+  'Liquidate(address,address,uint256,uint256)': '0xf3fa0eaee8f258c23b013654df25d1527f98a5c7ccd5e951dd77caca400ef972',
 };

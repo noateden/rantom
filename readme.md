@@ -59,6 +59,7 @@ yarn start --help
 |   Abracadabra    | LogBorrow, LogRepay, LogAddCollateral, LogRemoveCollateral, LogLiquidation                 |     🌱 |
 |     MakerDao     | GemJoin, GemExit, DaiJoin, DaiExit, FlashLoan                                              |     🌱 |
 |     Stargate     | Mint, Burn, Swap, SwapRemote                                                               |     🌱 |
+|   Silo Finance   | Deposit, Withdraw, Borrow, Repay, Liquidate                                                |     🌱 |
 
 ### Nft Marketplace
 

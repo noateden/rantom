@@ -4442,4 +4442,94 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Deposit(address,address,uint256,bool)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'asset',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'depositor',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'collateralOnly',
+        type: 'bool',
+      },
+    ],
+  },
+  [Signatures['Withdraw(address,address,address,uint256,bool)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'asset',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'depositor',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'receiver',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'collateralOnly',
+        type: 'bool',
+      },
+    ],
+  },
+  [Signatures['Liquidate(address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'asset',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'user',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'shareAmountRepaid',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'seizedCollateral',
+        type: 'uint256',
+      },
+    ],
+  },
 };
