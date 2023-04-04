@@ -53,7 +53,7 @@ export class EulerAdapter extends Adapter {
         if (token) {
           const account = normalizeAddress(event.violator);
           const liquidator = normalizeAddress(event.liquidator);
-          const amount = new BigNumber(event.yield).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
+          const amount = new BigNumber(event.yield).dividedBy(1e18).toString(10);
 
           return {
             protocol: this.config.protocol,
@@ -83,7 +83,7 @@ export class EulerAdapter extends Adapter {
             }
           }
           const account = normalizeAddress(event.account);
-          const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
+          const amount = new BigNumber(event.amount).dividedBy(1e18).toString(10);
 
           return {
             protocol: this.config.protocol,
