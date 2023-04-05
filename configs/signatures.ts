@@ -223,4 +223,8 @@ export const Signatures: { [key: string]: string } = {
   'Withdraw(address,address,address,uint256,bool)':
     '0x3b5f15635b488fe265654176726b3222080f3d6500a562f4664233b3ea2f0283',
   'Liquidate(address,address,uint256,uint256)': '0xf3fa0eaee8f258c23b013654df25d1527f98a5c7ccd5e951dd77caca400ef972',
+
+  // bancor
+  'Conversion(address,address,address,uint256,uint256,address)':
+    '0x7154b38b5dd31bb3122436a96d4e09aba5b323ae1fd580025fab55074334c095',
 };

@@ -4532,4 +4532,39 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+
+  [Signatures['Conversion(address,address,address,uint256,uint256,address)']]: {
+    abi: [
+      {
+        indexed: true,
+        name: '_smartToken',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        name: '_fromToken',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        name: '_toToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        name: '_fromAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        name: '_toAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        name: '_trader',
+        type: 'address',
+      },
+    ],
+  },
 };

@@ -343,7 +343,9 @@ export const BancorConfigs: ProtocolConfig = {
   protocol: 'bancor',
   contracts: {
     ethereum: [
+      '0x2f9ec37d6ccfff1cab21733bdadede11c823ccb0', // BancorNetwork
       '0xeef417e1d5cc832e619ae18d2f140de2999dd4fb', // BancorNetwork v3
+      '0xd982e001491d414c857f2a1aaa4b43ccf9f642b4', // BancorNetwork v3 Pool
     ],
   },
 };

@@ -14,6 +14,7 @@ const Signatures = {
   Deposit: '0xecb7e4cd1580472adaeba712b36acf94439b2e1760af55fedb61960ca4422af3',
   Withdraw: '0xeab8ac9e9478a4b3c37a794ecef629b8a8bbcd96f9eaeac8ed26054d144da52d',
   Flashloan: '0x0da3485ef1bb570df7bb888887eae5aa01d81b83cd8ccc80c0ea0922a677ecef',
+  Conversion: '0x7154b38b5dd31bb3122436a96d4e09aba5b323ae1fd580025fab55074334c095',
 };
 
 export class BancorAdapter extends Adapter {
@@ -25,6 +26,7 @@ export class BancorAdapter extends Adapter {
       [Signatures.Deposit]: EventSignatureMapping[Signatures.Deposit],
       [Signatures.Withdraw]: EventSignatureMapping[Signatures.Withdraw],
       [Signatures.Flashloan]: EventSignatureMapping[Signatures.Flashloan],
+      [Signatures.Conversion]: EventSignatureMapping[Signatures.Conversion],
     });
   }
 
@@ -32,13 +34,7 @@ export class BancorAdapter extends Adapter {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
-    if (
-      (signature === Signatures.Trade ||
-        signature === Signatures.Deposit ||
-        signature === Signatures.Withdraw ||
-        signature === Signatures.Flashloan) &&
-      this.config.contracts[chain].indexOf(address) !== 1
-    ) {
+    if (this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
       const web3 = new Web3();
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
@@ -53,6 +49,31 @@ export class BancorAdapter extends Adapter {
               .dividedBy(new BigNumber(10).pow(token0.decimals))
               .toString(10);
             const amount1 = new BigNumber(event.targetAmount)
+              .dividedBy(new BigNumber(10).pow(token1.decimals))
+              .toString(10);
+
+            return {
+              protocol: this.config.protocol,
+              action: 'swap',
+              addresses: [trader],
+              tokens: [token0, token1],
+              tokenAmounts: [amount0, amount1],
+              readableString: `${trader} swap ${amount0} ${token0.symbol} for ${amount1} ${token0.symbol} on ${this.config.protocol} chain ${chain}`,
+            };
+          }
+          break;
+        }
+        case Signatures.Conversion: {
+          // v1
+          const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event._fromToken);
+          const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event._toToken);
+
+          if (token0 && token1) {
+            const trader = normalizeAddress(event._trader);
+            const amount0 = new BigNumber(event._fromAmount)
+              .dividedBy(new BigNumber(10).pow(token0.decimals))
+              .toString(10);
+            const amount1 = new BigNumber(event._toAmount)
               .dividedBy(new BigNumber(10).pow(token1.decimals))
               .toString(10);
 
