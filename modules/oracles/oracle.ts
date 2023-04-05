@@ -75,7 +75,11 @@ export class OracleProvider implements IOracleProvider {
       return result;
     }
 
-    return null;
+    return {
+      token: symbol,
+      timestamp,
+      sources: [],
+    };
   }
 
   // this function get base token price on an oracle config

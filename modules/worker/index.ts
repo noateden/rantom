@@ -1,6 +1,7 @@
 import { AaveContracts } from '../../configs/contracts/aave';
 import { AbracadabraContracts } from '../../configs/contracts/abracadabra';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
+import { BancorContracts } from '../../configs/contracts/bancor';
 import { BeanstalkContracts } from '../../configs/contracts/beanstalk';
 import { CompoundContracts, Compoundv3Contracts } from '../../configs/contracts/compound';
 import { ConvexContracts } from '../../configs/contracts/convex';
@@ -30,6 +31,7 @@ import { AaveWorkerHook } from './hooks/aave';
 import { AbracadabraWorkerHook } from './hooks/abracadabra';
 import { AurafinanceWorkerHook } from './hooks/aurafinance';
 import { BalancerSubgraphWorkerHook } from './hooks/balancer';
+import { BancorWorkerHook } from './hooks/bancor';
 import { BeanstalkWorkerHook } from './hooks/beanstalk';
 import { CompoundWorkerHook, Compoundv3WorkerHook } from './hooks/compound';
 import { ConvexWorkerHook } from './hooks/convex';
@@ -73,5 +75,6 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     uniswapv2: new UniswapWorkerHook(providers, [], Uniswapv2Configs.staticData.subgraphConfigs),
     uniswapv3: new UniswapWorkerHook(providers, [], Uniswapv3Configs.staticData.subgraphConfigs),
     pancakeswap: new UniswapWorkerHook(providers, [], PancakeswapConfigs.staticData.subgraphConfigs),
+    bancor: new BancorWorkerHook(providers, BancorContracts),
   };
 }

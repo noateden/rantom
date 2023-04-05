@@ -1,18 +1,16 @@
 import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
 
 import { AddressZero } from '../../../configs/constants';
-import EnvConfig from '../../../configs/envConfig';
-import { CurveConfigs } from '../../../configs/protocols';
+import { BancorConfigs } from '../../../configs/protocols';
 import { normalizeAddress } from '../../../lib/helper';
 import { Contract } from '../../../types/configs';
 import { KnownAction, TradingEvent, TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
-import { CurveAdapter } from '../../adapters/curve/curve';
+import { BancorAdapter } from '../../adapters/bancor/bancor';
 import { TradingWorkerHook } from '../extends/trading';
 
-export class CurveWorkerHook extends TradingWorkerHook {
-  public readonly name: string = 'worker.curve';
+export class BancorWorkerHook extends TradingWorkerHook {
+  public readonly name: string = 'worker.bancor';
 
   constructor(providers: GlobalProviders, contracts: Array<Contract>) {
     super(providers, contracts);
@@ -31,31 +29,14 @@ export class CurveWorkerHook extends TradingWorkerHook {
     const transactionHash = event.transactionHash;
     const blockNumber = event.blockNumber;
 
-    let action: TransactionAction | null;
-    const adapter = new CurveAdapter(CurveConfigs, this.providers);
-
-    if (event.event === 'RemoveLiquidityOne') {
-      const web3 = new Web3(EnvConfig.blockchains[contract.chain].nodeRpc);
-      const tx = await web3.eth.getTransaction(transactionHash);
-      const receipt = await web3.eth.getTransactionReceipt(transactionHash);
-      action = await adapter.tryParsingActions({
-        chain: contract.chain,
-        sender: receipt.from, // don't use this field
-        to: receipt.to, // don't use this field
-        address: contract.address,
-        data: event.raw.data,
-        topics: event.raw.topics,
-        input: tx.input,
-      });
-    } else {
-      action = await adapter.tryParsingActions({
-        chain: contract.chain,
-        sender: AddressZero, // don't use this field
-        address: contract.address,
-        data: event.raw.data,
-        topics: event.raw.topics,
-      });
-    }
+    const adapter = new BancorAdapter(BancorConfigs, this.providers);
+    const action: TransactionAction | null = await adapter.tryParsingActions({
+      chain: contract.chain,
+      sender: AddressZero, // don't use this field
+      address: contract.address,
+      data: event.raw.data,
+      topics: event.raw.topics,
+    });
 
     if (action !== null) {
       return {
