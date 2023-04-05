@@ -1,7 +1,6 @@
 import { AaveContracts } from '../../configs/contracts/aave';
 import { AbracadabraContracts } from '../../configs/contracts/abracadabra';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
-import { BalancerContracts } from '../../configs/contracts/balancer';
 import { BeanstalkContracts } from '../../configs/contracts/beanstalk';
 import { CompoundContracts, Compoundv3Contracts } from '../../configs/contracts/compound';
 import { ConvexContracts } from '../../configs/contracts/convex';
@@ -18,13 +17,13 @@ import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { RocketpoolContracts } from '../../configs/contracts/rocketpool';
 import { SushiContracts } from '../../configs/contracts/sushi';
 import { YearnContracts } from '../../configs/contracts/yearn';
-import { SushiConfigs, Uniswapv2Configs, Uniswapv3Configs } from '../../configs/protocols';
+import { BalancerConfigs, SushiConfigs, Uniswapv2Configs, Uniswapv3Configs } from '../../configs/protocols';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 import { Erc20SupplyWorker } from './extends/erc20';
 import { AaveWorkerHook } from './hooks/aave';
 import { AbracadabraWorkerHook } from './hooks/abracadabra';
 import { AurafinanceWorkerHook } from './hooks/aurafinance';
-import { BalancerWorkerHook } from './hooks/balancer';
+import { BalancerSubgraphWorkerHook } from './hooks/balancer';
 import { BeanstalkWorkerHook } from './hooks/beanstalk';
 import { CompoundWorkerHook, Compoundv3WorkerHook } from './hooks/compound';
 import { ConvexWorkerHook } from './hooks/convex';
@@ -55,7 +54,7 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     curve: new CurveWorkerHook(providers, CurveContracts),
     sushi: new SushiWorkerHook(providers, SushiContracts, SushiConfigs.staticData.subgraphConfigs),
     erc20: new Erc20SupplyWorker(providers, Erc20Contracts),
-    balancer: new BalancerWorkerHook(providers, BalancerContracts),
+    balancer: new BalancerSubgraphWorkerHook(providers, [], BalancerConfigs.staticData.subgraphConfigs),
     eth2: new Eth2WorkerHook(providers, Eth2Contracts),
     looksrare: new LooksrareWorkerHook(providers, LooksrareContracts),
     yearn: new YearnWorkerHook(providers, YearnContracts),

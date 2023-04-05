@@ -104,6 +104,18 @@ export const BalancerConfigs: ProtocolConfig = {
       '0xba12222222228d8ba445958a75a0704d566bf2c8', // vault
     ],
   },
+  staticData: {
+    subgraphConfigs: [
+      {
+        protocol: 'balancer',
+        chain: 'ethereum',
+        version: 'balv2', // balancer v2
+        birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+        filters: {},
+        endpoint: 'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2',
+      },
+    ],
+  },
 };
 
 export const Aavev1Configs: ProtocolConfig = {
