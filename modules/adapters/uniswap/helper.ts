@@ -141,4 +141,94 @@ export class UniswapHelper {
       user: normalizeAddress(swap.recipient),
     };
   }
+
+  public static transformSubgraphDepositEvent(
+    subgraphConfig: ProtocolSubgraphConfig,
+    subgraphEvents: Array<any>
+  ): Array<TradingEvent> {
+    const events: Array<TradingEvent> = [];
+
+    for (const event of subgraphEvents) {
+      const token0: Token = {
+        chain: subgraphConfig.chain,
+        symbol: event.pair.token0.symbol,
+        address: event.pair.token0.id,
+        decimals: Number(event.pair.token0.decimals),
+      };
+      const token1: Token = {
+        chain: subgraphConfig.chain,
+        symbol: event.pair.token1.symbol,
+        address: event.pair.token1.id,
+        decimals: Number(event.pair.token1.decimals),
+      };
+
+      events.push({
+        chain: subgraphConfig.chain,
+        contract: normalizeAddress(event.pair.id),
+        transactionHash: event.transaction.id,
+        logIndex: Number(event.logIndex),
+        protocol: subgraphConfig.protocol,
+        timestamp: Number(event.timestamp),
+        blockNumber:
+          subgraphConfig.filters && subgraphConfig.filters.transactionBlockNumber
+            ? Number(event.transaction[subgraphConfig.filters.transactionBlockNumber])
+            : Number(event.transaction.blockNumber),
+        action: 'deposit',
+        tokens: [token0, token1],
+        amounts: [
+          new BigNumber(event.amount0.toString()).multipliedBy(new BigNumber(10).pow(token0.decimals)).toString(10),
+          new BigNumber(event.amount1.toString()).multipliedBy(new BigNumber(10).pow(token1.decimals)).toString(10),
+        ],
+        caller: normalizeAddress(event.sender),
+        user: normalizeAddress(event.sender),
+      });
+    }
+
+    return events;
+  }
+
+  public static transformSubgraphWithdrawEvent(
+    subgraphConfig: ProtocolSubgraphConfig,
+    subgraphEvents: Array<any>
+  ): Array<TradingEvent> {
+    const events: Array<TradingEvent> = [];
+
+    for (const event of subgraphEvents) {
+      const token0: Token = {
+        chain: subgraphConfig.chain,
+        symbol: event.pair.token0.symbol,
+        address: event.pair.token0.id,
+        decimals: Number(event.pair.token0.decimals),
+      };
+      const token1: Token = {
+        chain: subgraphConfig.chain,
+        symbol: event.pair.token1.symbol,
+        address: event.pair.token1.id,
+        decimals: Number(event.pair.token1.decimals),
+      };
+
+      events.push({
+        chain: subgraphConfig.chain,
+        contract: normalizeAddress(event.pair.id),
+        transactionHash: event.transaction.id,
+        logIndex: Number(event.logIndex),
+        protocol: subgraphConfig.protocol,
+        timestamp: Number(event.timestamp),
+        blockNumber:
+          subgraphConfig.filters && subgraphConfig.filters.transactionBlockNumber
+            ? Number(event.transaction[subgraphConfig.filters.transactionBlockNumber])
+            : Number(event.transaction.blockNumber),
+        action: 'withdraw',
+        tokens: [token0, token1],
+        amounts: [
+          new BigNumber(event.amount0.toString()).multipliedBy(new BigNumber(10).pow(token0.decimals)).toString(10),
+          new BigNumber(event.amount1.toString()).multipliedBy(new BigNumber(10).pow(token1.decimals)).toString(10),
+        ],
+        caller: normalizeAddress(event.sender),
+        user: normalizeAddress(event.sender),
+      });
+    }
+
+    return events;
+  }
 }
