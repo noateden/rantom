@@ -1,8 +1,10 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
+import BancorNetworkAbi from '../../../configs/abi/bancor/BancorNetwork.json';
+import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
@@ -33,9 +35,43 @@ export class BancorAdapter extends Adapter {
   public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
     const { chain, address, topics, data } = options;
 
+    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
     const signature = topics[0];
+
+    if (signature === Signatures.Conversion) {
+      const swapContract = new web3.eth.Contract(BancorNetworkAbi as any, address);
+      try {
+        const registryAddress = await swapContract.methods.registry().call();
+        if (compareAddress(registryAddress, this.config.staticData.v1Registry)) {
+          const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+          const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event._fromToken);
+          const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event._toToken);
+
+          if (token0 && token1) {
+            const trader = normalizeAddress(event._trader);
+            const amount0 = new BigNumber(event._fromAmount)
+              .dividedBy(new BigNumber(10).pow(token0.decimals))
+              .toString(10);
+            const amount1 = new BigNumber(event._toAmount)
+              .dividedBy(new BigNumber(10).pow(token1.decimals))
+              .toString(10);
+
+            return {
+              protocol: this.config.protocol,
+              action: 'swap',
+              addresses: [trader],
+              tokens: [token0, token1],
+              tokenAmounts: [amount0, amount1],
+              readableString: `${trader} swap ${amount0} ${token0.symbol} for ${amount1} ${token0.symbol} on ${this.config.protocol} chain ${chain}`,
+            };
+          }
+        }
+      } catch (e: any) {
+        return null;
+      }
+    }
+
     if (this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
-      const web3 = new Web3();
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
       switch (signature) {
@@ -49,31 +85,6 @@ export class BancorAdapter extends Adapter {
               .dividedBy(new BigNumber(10).pow(token0.decimals))
               .toString(10);
             const amount1 = new BigNumber(event.targetAmount)
-              .dividedBy(new BigNumber(10).pow(token1.decimals))
-              .toString(10);
-
-            return {
-              protocol: this.config.protocol,
-              action: 'swap',
-              addresses: [trader],
-              tokens: [token0, token1],
-              tokenAmounts: [amount0, amount1],
-              readableString: `${trader} swap ${amount0} ${token0.symbol} for ${amount1} ${token0.symbol} on ${this.config.protocol} chain ${chain}`,
-            };
-          }
-          break;
-        }
-        case Signatures.Conversion: {
-          // v1
-          const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event._fromToken);
-          const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event._toToken);
-
-          if (token0 && token1) {
-            const trader = normalizeAddress(event._trader);
-            const amount0 = new BigNumber(event._fromAmount)
-              .dividedBy(new BigNumber(10).pow(token0.decimals))
-              .toString(10);
-            const amount1 = new BigNumber(event._toAmount)
               .dividedBy(new BigNumber(10).pow(token1.decimals))
               .toString(10);
 
