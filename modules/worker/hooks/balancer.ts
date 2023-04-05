@@ -1,88 +1,30 @@
 import axios from 'axios';
-import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
 
-import { AddressZero } from '../../../configs/constants';
-import EnvConfig from '../../../configs/envConfig';
-import { BalancerConfigs } from '../../../configs/protocols';
-import { normalizeAddress } from '../../../lib/helper';
 import { Contract, ProtocolSubgraphConfig } from '../../../types/configs';
-import { KnownAction, TradingEvent } from '../../../types/domains';
+import { TradingEvent } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
-import { BalancerAdapter } from '../../adapters/balancer/balancer';
 import { BalancerHelper } from '../../adapters/balancer/helper';
-import { TradingWorkerHook } from '../extends/trading';
-import { SubgraphWorker } from '../subgraph';
+import { DexSubgraphWorkerHook, QuerySubgraphResult } from '../extends/dexSubgraph';
 
-export class BalancerWorkerHook extends TradingWorkerHook {
-  public readonly name: string = 'worker.balancer';
-
-  constructor(providers: GlobalProviders, contracts: Array<Contract>) {
-    super(providers, contracts);
-  }
-
-  public async parseEvent(contract: Contract, event: any, options: any): Promise<TradingEvent | null> {
-    let timestamp =
-      options && options.blockTimes && options.blockTimes[event.blockNumber.toString()]
-        ? Number(options.blockTimes[event.blockNumber.toString()].timestamp)
-        : null;
-    if (!timestamp) {
-      timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, event.blockNumber);
-    }
-
-    const logIndex = event.logIndex;
-    const transactionHash = event.transactionHash;
-    const blockNumber = event.blockNumber;
-
-    const web3 = new Web3(EnvConfig.blockchains[contract.chain].nodeRpc);
-    const receipt = await web3.eth.getTransactionReceipt(transactionHash);
-    const adapter = new BalancerAdapter(BalancerConfigs, this.providers);
-    const action = await adapter.tryParsingActions({
-      chain: contract.chain,
-      sender: receipt ? receipt.from : AddressZero, // don't use this field
-      address: contract.address,
-      data: event.raw.data,
-      topics: event.raw.topics,
-    });
-
-    if (action !== null) {
-      return {
-        chain: contract.chain,
-        contract: normalizeAddress(contract.address),
-        transactionHash: transactionHash,
-        logIndex: logIndex,
-        protocol: contract.protocol,
-        timestamp,
-        blockNumber: blockNumber,
-        action: action.action as KnownAction,
-        tokens: action.tokens,
-        amounts: action.tokenAmounts.map((amount, index) => {
-          return new BigNumber(amount)
-            .multipliedBy(new BigNumber(10).pow((action as any).tokens[index].decimals))
-            .toString(10);
-        }),
-        caller: action.addresses.length > 0 ? action.addresses[1] : action.addresses[0],
-        user: action.addresses[0],
-        addition: action.addition ? action.addition : undefined,
-      };
-    }
-
-    return null;
-  }
-}
-
-export class BalancerSubgraphWorkerHook extends SubgraphWorker {
+export class BalancerWorkerHook extends DexSubgraphWorkerHook {
   public readonly name: string = 'worker.balancer';
 
   constructor(providers: GlobalProviders, contracts: Array<Contract>, subgraphs: Array<ProtocolSubgraphConfig>) {
     super(providers, contracts, subgraphs);
   }
 
-  protected async querySubgraph(config: ProtocolSubgraphConfig, timestamp: number): Promise<any> {
-    return await axios.post(config.endpoint, {
+  protected async querySubgraph(config: ProtocolSubgraphConfig, timestamp: number): Promise<QuerySubgraphResult> {
+    const result: QuerySubgraphResult = {
+      trades: [],
+      deposits: [],
+      withdrawals: [],
+      nextTimestamp: 0,
+    };
+
+    const response = await axios.post(config.endpoint, {
       query: `
         {
-          swaps(first: 1000, where: {timestamp_gte: ${timestamp}}, orderBy: timestamp, orderDirection: asc) {
+          trades: swaps(first: 1000, where: {timestamp_gte: ${timestamp}}, orderBy: timestamp, orderDirection: asc) {
             caller
             tokenIn
             tokenOut
@@ -101,12 +43,66 @@ export class BalancerSubgraphWorkerHook extends SubgraphWorker {
             }
             id
           }
+          
+          joinExits: joinExits(first: 1000, where: {timestamp_gte: ${timestamp}}, orderBy: timestamp, orderDirection: asc) {
+            id
+            type
+            sender
+            amounts
+            timestamp
+            pool {
+              tokens(first: 100) {
+                address,
+                symbol,
+                decimals
+              }
+            }
+          }
         }
       `,
     });
+
+    result.trades = response.data.data.trades as Array<any>;
+
+    for (const event of response.data.data.joinExits) {
+      if (event.type === 'Join') {
+        result.deposits.push(event);
+      }
+      if (event.type === 'Exit') {
+        result.withdrawals.push(event);
+      }
+    }
+
+    const lastTrade = result.trades.length > 0 ? Number(result.trades[result.trades.length - 1].timestamp) : timestamp;
+    const lastDeposit =
+      result.deposits.length > 0 ? Number(result.deposits[result.deposits.length - 1].timestamp) : timestamp;
+    const lastWithdraw =
+      result.withdrawals.length > 0 ? Number(result.withdrawals[result.withdrawals.length - 1].timestamp) : timestamp;
+
+    result.nextTimestamp = lastTrade;
+    if (result.nextTimestamp > lastDeposit) {
+      result.nextTimestamp = lastDeposit;
+    }
+    if (result.nextTimestamp > lastWithdraw) {
+      result.nextTimestamp = lastWithdraw;
+    }
+
+    if (result.nextTimestamp === timestamp) {
+      result.nextTimestamp += 1;
+    }
+
+    return result;
   }
 
-  protected transformSwapEvent(config: ProtocolSubgraphConfig, events: Array<any>): Array<TradingEvent> {
+  protected transformSwapEvents(config: ProtocolSubgraphConfig, events: Array<any>): Array<TradingEvent> {
     return BalancerHelper.transformSubgraphSwapEvent(config, events);
+  }
+
+  protected transformDepositEvents(config: ProtocolSubgraphConfig, events: Array<any>): Array<TradingEvent> {
+    return BalancerHelper.transformSubgraphLiquidityEvent(config, events);
+  }
+
+  protected transformWithdrawEvents(config: ProtocolSubgraphConfig, events: Array<any>): Array<TradingEvent> {
+    return BalancerHelper.transformSubgraphLiquidityEvent(config, events);
   }
 }

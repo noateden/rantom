@@ -66,4 +66,46 @@ export class BalancerHelper {
 
     return events;
   }
+
+  public static transformSubgraphLiquidityEvent(
+    subgraphConfig: ProtocolSubgraphConfig,
+    subgraphEvents: Array<any>
+  ): Array<TradingEvent> {
+    const events: Array<TradingEvent> = [];
+
+    for (const event of subgraphEvents) {
+      let tokens: Array<Token> = [];
+      let amounts: Array<string> = [];
+
+      for (const token of event.pool.tokens) {
+        tokens.push({
+          chain: subgraphConfig.chain,
+          address: normalizeAddress(token.address),
+          symbol: token.symbol,
+          decimals: Number(token.decimals),
+        });
+      }
+
+      amounts = event.amounts.map((value: string, index: number) => {
+        return new BigNumber(value).multipliedBy(new BigNumber(10).pow(tokens[index].decimals)).toString(10);
+      });
+
+      events.push({
+        chain: subgraphConfig.chain,
+        contract: '0xba12222222228d8ba445958a75a0704d566bf2c8',
+        transactionHash: event.id.slice(0, 66),
+        logIndex: Number(event.id.slice(66)),
+        protocol: subgraphConfig.protocol,
+        timestamp: Number(event.timestamp),
+        blockNumber: 0,
+        action: event.type === 'Join' ? 'deposit' : 'withdraw',
+        tokens,
+        amounts,
+        caller: normalizeAddress(event.sender),
+        user: normalizeAddress(event.sender),
+      });
+    }
+
+    return events;
+  }
 }

@@ -30,7 +30,7 @@ import { Erc20SupplyWorker } from './extends/erc20';
 import { AaveWorkerHook } from './hooks/aave';
 import { AbracadabraWorkerHook } from './hooks/abracadabra';
 import { AurafinanceWorkerHook } from './hooks/aurafinance';
-import { BalancerSubgraphWorkerHook } from './hooks/balancer';
+import { BalancerWorkerHook } from './hooks/balancer';
 import { BancorWorkerHook } from './hooks/bancor';
 import { BeanstalkWorkerHook } from './hooks/beanstalk';
 import { CompoundWorkerHook, Compoundv3WorkerHook } from './hooks/compound';
@@ -62,7 +62,7 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     curve: new CurveWorkerHook(providers, CurveContracts),
     sushi: new SushiWorkerHook(providers, SushiContracts, SushiConfigs.staticData.subgraphConfigs),
     erc20: new Erc20SupplyWorker(providers, Erc20Contracts),
-    balancer: new BalancerSubgraphWorkerHook(providers, [], BalancerConfigs.staticData.subgraphConfigs),
+    balancer: new BalancerWorkerHook(providers, [], BalancerConfigs.staticData.subgraphConfigs),
     eth2: new Eth2WorkerHook(providers, Eth2Contracts),
     looksrare: new LooksrareWorkerHook(providers, LooksrareContracts),
     yearn: new YearnWorkerHook(providers, YearnContracts),
