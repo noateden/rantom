@@ -95,6 +95,20 @@ export const PancakeswapConfigs: ProtocolConfig = {
       '0x1097053fd2ea711dad45caccc45eff7548fcb362', // uni v2 Factory
     ],
   },
+  staticData: {
+    subgraphConfigs: [
+      {
+        protocol: 'pancakeswap',
+        chain: 'ethereum',
+        version: 'univ2',
+        birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+        filters: {
+          transactionBlockNumber: 'block',
+        },
+        endpoint: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exhange-eth',
+      },
+    ],
+  },
 };
 
 export const BalancerConfigs: ProtocolConfig = {

@@ -73,7 +73,10 @@ export class UniswapHelper {
       logIndex: Number(swap.logIndex),
       protocol: subgraphConfig.protocol,
       timestamp: Number(swap.timestamp),
-      blockNumber: Number(swap.transaction.blockNumber),
+      blockNumber:
+        subgraphConfig.filters && subgraphConfig.filters.transactionBlockNumber
+          ? Number(swap.transaction[subgraphConfig.filters.transactionBlockNumber])
+          : Number(swap.transaction.blockNumber),
       action: 'swap',
       tokens,
       amounts,
