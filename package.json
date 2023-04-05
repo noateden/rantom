@@ -22,6 +22,8 @@
     "@types/node": "^17.0.23",
     "@types/yargs": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@uniswap/sdk-core": "^3.2.2",
+    "@uniswap/v3-sdk": "^3.9.0",
     "axios": "^0.26.1",
     "bignumber.js": "^9.0.2",
     "body-parser": "^1.20.0",

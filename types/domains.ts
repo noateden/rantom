@@ -160,3 +160,14 @@ export interface Erc20SupplyEvent {
   // from address for burn transaction
   address: string;
 }
+
+export interface TokenOracleSource {
+  source: string;
+  spotPrice: string;
+}
+
+export interface TokenOracleResult {
+  token: string;
+  timestamp: number;
+  sources: Array<TokenOracleSource>;
+}

@@ -47,3 +47,8 @@ export interface WorkerRunOptions {
 export interface ProxyGetDataSubgraphOptions {
   action: KnownAction;
 }
+
+export interface OracleGetTokenPriceOptions {
+  symbol: string;
+  timestamp: number;
+}

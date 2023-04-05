@@ -1,9 +1,10 @@
 import { Collection } from 'mongodb';
 
 import { Contract, EventMapping, NonFungibleToken, NonFungibleTokenMetadata, ProtocolConfig, Token } from './configs';
-import { MongoCollections, Transaction, TransactionAction, TransactionTransfer } from './domains';
+import { MongoCollections, TokenOracleResult, Transaction, TransactionAction, TransactionTransfer } from './domains';
 import {
   AdapterParseLogOptions,
+  OracleGetTokenPriceOptions,
   ParseTransactionOptions,
   ProxyGetDataSubgraphOptions,
   TransferParseLogOptions,
@@ -41,6 +42,7 @@ export interface GlobalProviders {
   sentry: ISentryProvider;
   caching: ICachingProvider;
   web3Helper: IWeb3HelperProvider;
+  oracle: IOracleProvider;
 }
 
 export interface IAdapter extends IProvider {
@@ -77,4 +79,8 @@ export interface IContractWorker extends IProvider {
 
 export interface IProxyProvider extends ICachingProvider {
   getEvents: (options: ProxyGetDataSubgraphOptions) => Promise<Array<any>>;
+}
+
+export interface IOracleProvider extends IProvider {
+  getTokenSpotPriceUsd: (options: OracleGetTokenPriceOptions) => Promise<TokenOracleResult | null>;
 }

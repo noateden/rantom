@@ -1,4 +1,5 @@
 import envConfig from '../configs/envConfig';
+import { OracleProvider } from '../modules/oracles/oracle';
 import { CachingProvider } from '../services/caching';
 import MongodbProvider from '../services/mongo';
 import SentryProvider from '../services/sentry';
@@ -19,6 +20,7 @@ export class BasicCommand {
       sentry: new SentryProvider(process.env.RANTOM_SENTRY_DNS as string),
       caching: new CachingProvider(mongodb),
       web3Helper: new Web3HelperProvider(mongodb),
+      oracle: new OracleProvider(mongodb),
     };
 
     await providers.mongodb.connect(envConfig.mongodb.connectionUri, envConfig.mongodb.databaseName);
