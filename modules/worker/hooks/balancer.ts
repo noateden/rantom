@@ -88,7 +88,7 @@ export class BalancerWorkerHook extends DexSubgraphWorkerHook {
     }
 
     if (result.nextTimestamp === timestamp) {
-      result.nextTimestamp += 1;
+      result.nextTimestamp += 600;
     }
 
     return result;
