@@ -141,4 +141,27 @@ export const SushiActionTestLogs: Array<TestLog> = [
     adapter: new SushiAdapter(SushiConfigs, null),
     action: 'withdraw',
   },
+  {
+    chain: 'ethereum',
+    hash: '0x5b640c90c94e58bd20965ddcbd6253017cc0ea5ca1abef36084245a83a864009',
+    sender: normalizeAddress('0x29a088f8b4c33e149e67a0431e377ab84505c243'),
+    address: normalizeAddress('0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac'),
+    log: {
+      address: '0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac',
+      topics: [
+        '0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9',
+        '0x0000000000000000000000004cc798721d4f2acb3bcaf0ba17ebbcde8c4b7c0f',
+        '0x000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec7',
+      ],
+      data: '0x0000000000000000000000009b504b98aaaa0a746b35b0c9193c4c72d9f473390000000000000000000000000000000000000000000000000000000000000e1d',
+      blockNumber: '0x1023b7b',
+      transactionHash: '0x5b640c90c94e58bd20965ddcbd6253017cc0ea5ca1abef36084245a83a864009',
+      transactionIndex: '0x142',
+      blockHash: '0x12d398e4ca799c6b35cd79251ae31959e69b1c7ee595c38aaf7ee7299bc1a919',
+      logIndex: '0x348',
+      removed: false,
+    },
+    adapter: new SushiAdapter(SushiConfigs, null),
+    action: 'createLiquidityPool',
+  },
 ];

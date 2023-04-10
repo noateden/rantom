@@ -9,6 +9,7 @@ import { CurveContracts } from '../../configs/contracts/curve';
 import { Erc20Contracts } from '../../configs/contracts/erc20';
 import { Eth2Contracts } from '../../configs/contracts/eth2';
 import { EulerContracts } from '../../configs/contracts/euler';
+import { FactoryContracts } from '../../configs/contracts/extended/factory';
 import { IronbankContracts } from '../../configs/contracts/ironbank';
 import { LidoContracts } from '../../configs/contracts/lido';
 import { LiquityContracts } from '../../configs/contracts/liquity';
@@ -27,6 +28,7 @@ import {
 } from '../../configs/protocols';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 import { Erc20SupplyWorker } from './extends/erc20';
+import { FactoryWorkerHook } from './extends/factory';
 import { AaveWorkerHook } from './hooks/aave';
 import { AbracadabraWorkerHook } from './hooks/abracadabra';
 import { AurafinanceWorkerHook } from './hooks/aurafinance';
@@ -76,5 +78,8 @@ export function getWorkers(providers: GlobalProviders): { [key: string]: IContra
     uniswapv3: new UniswapWorkerHook(providers, [], Uniswapv3Configs.staticData.subgraphConfigs),
     pancakeswap: new UniswapWorkerHook(providers, [], PancakeswapConfigs.staticData.subgraphConfigs),
     bancor: new BancorWorkerHook(providers, BancorContracts),
+
+    // extended
+    factory: new FactoryWorkerHook(providers, FactoryContracts),
   };
 }

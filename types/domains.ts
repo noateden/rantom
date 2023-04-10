@@ -23,6 +23,9 @@ export interface MongoCollections {
 
   // save token mint/burn events
   erc20SupplyActionsCollection: Collection;
+
+  // save liquidity pools info
+  factoryPoolsCollection: Collection;
 }
 
 export type KnownAction =
@@ -52,6 +55,9 @@ export type KnownAction =
 
   // for beanstalk sow beans
   | 'sow'
+
+  // for liquidity pool created
+  | 'createLiquidityPool'
 
   // use for service transaction
   | 'update';
@@ -170,4 +176,22 @@ export interface TokenOracleResult {
   token: string;
   timestamp: number;
   sources: Array<TokenOracleSource>;
+}
+
+// present a liquidity pool info, support all liquidity protocols like: uniswap v2, uniswap v3, curve, ...
+export interface LiquidityPool {
+  chain: string;
+  protocol: string;
+  address: string;
+  tokens: Array<Token>;
+  fee: number;
+
+  // transaction hash where pool was created
+  transactionHash: string;
+
+  // block number when pool was created
+  blockNumber: number;
+
+  // timestamp when pool was created
+  timestamp: number;
 }

@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
-import UniswapV2PairAbi from '../../../configs/abi/uniswap/UniswapV2Pair.json';
+import PancakeswapV3PoolAbi from '../../../configs/abi/pancakeswap/PoolV3.json';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
@@ -14,21 +14,23 @@ import { AdapterParseLogOptions, MulticallCall } from '../../../types/options';
 import { Adapter } from '../adapter';
 
 const Signatures = {
-  Swap: '0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822',
-  Mint: '0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c6fef26394f4c03821c4f',
-  Burn: '0xdccd412f0b1252819cb1fd330b93224ca42612892bb3f4f789976e6d81936496',
-  PairCreated: '0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9',
+  Swap: '0x19b47279256b2a23a1665c810c8d55a1758940ee09377d4f8d26497a3577dc83',
+  Mint: '0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde',
+  Burn: '0x0c396cd989a39f4459b5fa1aed6a9a8dcdbc45908acfd67e028cd568da98982c',
+  Collect: '0x70935338e69775456a85ddef226c395fb668b63fa0115f5f20610b388e6ca9c0',
+  PoolCreated: '0x783cca1c0412dd0d695e784568c96da2e9c22ff989357a2e8b1d9b2b4e6b7118',
 };
 
-export class Uniswapv2Adapter extends Adapter {
-  public readonly name: string = 'adapter.uniswapv2';
+export class Pancakeswapv3Adapter extends Adapter {
+  public readonly name: string = 'adapter.uniswapv3';
 
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
     super(config, providers, {
       [Signatures.Swap]: EventSignatureMapping[Signatures.Swap],
       [Signatures.Mint]: EventSignatureMapping[Signatures.Mint],
       [Signatures.Burn]: EventSignatureMapping[Signatures.Burn],
-      [Signatures.PairCreated]: EventSignatureMapping[Signatures.PairCreated],
+      [Signatures.Collect]: EventSignatureMapping[Signatures.Collect],
+      [Signatures.PoolCreated]: EventSignatureMapping[Signatures.PoolCreated],
     });
   }
 
@@ -37,7 +39,12 @@ export class Uniswapv2Adapter extends Adapter {
 
     const signature = topics[0];
     const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-    if (signature === Signatures.Swap || signature === Signatures.Mint || signature === Signatures.Burn) {
+    if (
+      signature === Signatures.Swap ||
+      signature === Signatures.Mint ||
+      signature === Signatures.Burn ||
+      signature === Signatures.Collect
+    ) {
       let factoryAddress;
       let token0Address;
       let token1Address;
@@ -61,7 +68,7 @@ export class Uniswapv2Adapter extends Adapter {
           },
         ];
 
-        const results = await multicallv2(chain, UniswapV2PairAbi, calls);
+        const results = await multicallv2(chain, PancakeswapV3PoolAbi, calls);
 
         factoryAddress = results[0][0];
         token0Address = results[1][0];
@@ -79,86 +86,113 @@ export class Uniswapv2Adapter extends Adapter {
         return null;
       }
 
+      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
       if (this.config.contracts[chain].indexOf(normalizeAddress(factoryAddress)) !== -1) {
-        const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
         const token0 = await this.getWeb3Helper().getErc20Metadata(chain, token0Address);
         const token1 = await this.getWeb3Helper().getErc20Metadata(chain, token1Address);
 
         if (token0 && token1) {
           switch (signature) {
             case Signatures.Swap: {
-              const amount0In = new BigNumber(event.amount0In.toString()).dividedBy(
-                new BigNumber(10).pow(token0.decimals)
-              );
-              const amount1In = new BigNumber(event.amount1In.toString()).dividedBy(
-                new BigNumber(10).pow(token1.decimals)
-              );
-              const amount0Out = new BigNumber(event.amount0Out.toString()).dividedBy(
-                new BigNumber(10).pow(token0.decimals)
-              );
-              const amount1Out = new BigNumber(event.amount1Out.toString()).dividedBy(
-                new BigNumber(10).pow(token1.decimals)
-              );
-
-              const amountIn = amount0In.gt(0) ? amount0In.toString(10) : amount1In.toString(10);
-              const amountOut = amount0Out.gt(0) ? amount0Out.toString(10) : amount1Out.toString(10);
-
-              const tokenIn = amount0In.gt(0) ? token0 : token1;
-              const tokenOut = amount0In.gt(0) ? token1 : token0;
-
               const sender = normalizeAddress(event.sender);
-              const to = normalizeAddress(event.to);
+              const recipient = normalizeAddress(event.recipient);
+
+              let amount0 = new BigNumber(event.amount0.toString()).dividedBy(new BigNumber(10).pow(token0.decimals));
+              let amount1 = new BigNumber(event.amount1.toString()).dividedBy(new BigNumber(10).pow(token1.decimals));
+
+              let tokenIn = token0;
+              let tokenOut = token1;
+              let amountIn = '0';
+              let amountOut = '0';
+
+              // we detect swap route
+              if (amount0.lt(0)) {
+                // swap from token1 -> token0
+                tokenIn = token1;
+                tokenOut = token0;
+                amountIn = amount1.abs().toString(10);
+                amountOut = amount0.abs().toString(10);
+              } else {
+                // swap from token0 -> token1
+                tokenIn = token0;
+                tokenOut = token1;
+                amountIn = amount0.abs().toString(10);
+                amountOut = amount1.abs().toString(10);
+              }
 
               return {
                 protocol: this.config.protocol,
                 action: 'swap',
-                addresses: [to, sender],
+                addresses: [recipient, sender],
                 tokens: [tokenIn, tokenOut],
                 tokenAmounts: [amountIn, amountOut],
                 readableString: `${sender} swaps ${amountIn} ${tokenIn.symbol} for ${amountOut} ${tokenOut.symbol} on ${this.config.protocol} chain ${chain}`,
               };
             }
             case Signatures.Mint: {
+              const sender = normalizeAddress(options.sender);
+              const owner = normalizeAddress(event.owner);
+
               const amount0 = new BigNumber(event.amount0.toString())
                 .dividedBy(new BigNumber(10).pow(token0.decimals))
-                .toString(10);
+                .toString();
               const amount1 = new BigNumber(event.amount1.toString())
                 .dividedBy(new BigNumber(10).pow(token1.decimals))
-                .toString(10);
-              const sender = normalizeAddress(event.sender);
+                .toString();
 
               return {
                 protocol: this.config.protocol,
                 action: 'deposit',
-                addresses: [sender],
+                addresses: [owner, sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
-                readableString: `${sender} adds ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
+                readableString: `${owner} adds ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
               };
             }
             case Signatures.Burn: {
+              const owner = normalizeAddress(event.owner);
+
               const amount0 = new BigNumber(event.amount0.toString())
                 .dividedBy(new BigNumber(10).pow(token0.decimals))
-                .toString(10);
+                .toString();
               const amount1 = new BigNumber(event.amount1.toString())
                 .dividedBy(new BigNumber(10).pow(token1.decimals))
-                .toString(10);
-              const sender = normalizeAddress(event.sender);
-              const to = normalizeAddress(event.to);
+                .toString();
+
               return {
                 protocol: this.config.protocol,
                 action: 'withdraw',
-                addresses: [to, sender],
+                addresses: [owner, options.sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
-                readableString: `${sender} removes ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
+                readableString: `${owner} removes ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
+              };
+            }
+            case Signatures.Collect: {
+              const owner = normalizeAddress(event.owner);
+              const recipient = normalizeAddress(event.recipient);
+
+              const amount0 = new BigNumber(event.amount0.toString())
+                .dividedBy(new BigNumber(10).pow(token0.decimals))
+                .toString();
+              const amount1 = new BigNumber(event.amount1.toString())
+                .dividedBy(new BigNumber(10).pow(token1.decimals))
+                .toString();
+
+              return {
+                protocol: this.config.protocol,
+                action: 'collect',
+                addresses: [recipient, owner],
+                tokens: [token0, token1],
+                tokenAmounts: [amount0, amount1],
+                readableString: `${owner} collects ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
               };
             }
           }
         }
       }
-    } else if (signature === Signatures.PairCreated && this.config.contracts[chain].indexOf(address) !== -1) {
-      // new pair created on factory contract
+    } else if (signature === Signatures.PoolCreated && this.config.contracts[chain].indexOf(address) !== -1) {
+      // new pool created on factory contract
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
       const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event.token0);
       const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event.token1);
@@ -173,7 +207,8 @@ export class Uniswapv2Adapter extends Adapter {
           tokenAmounts: ['0', '0'],
           readableString: `${factory} create liquidity pool ${token0.symbol} and ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
           addition: {
-            pairAddress: normalizeAddress(event.pair),
+            poolAddress: normalizeAddress(event.pool),
+            fee: new BigNumber(event.fee).toNumber(),
           },
         };
       }

@@ -18,6 +18,7 @@ const Signatures = {
   Mint: '0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde',
   Burn: '0x0c396cd989a39f4459b5fa1aed6a9a8dcdbc45908acfd67e028cd568da98982c',
   Collect: '0x70935338e69775456a85ddef226c395fb668b63fa0115f5f20610b388e6ca9c0',
+  PoolCreated: '0x783cca1c0412dd0d695e784568c96da2e9c22ff989357a2e8b1d9b2b4e6b7118',
 };
 
 export class Uniswapv3Adapter extends Adapter {
@@ -29,6 +30,7 @@ export class Uniswapv3Adapter extends Adapter {
       [Signatures.Mint]: EventSignatureMapping[Signatures.Mint],
       [Signatures.Burn]: EventSignatureMapping[Signatures.Burn],
       [Signatures.Collect]: EventSignatureMapping[Signatures.Collect],
+      [Signatures.PoolCreated]: EventSignatureMapping[Signatures.PoolCreated],
     });
   }
 
@@ -36,14 +38,13 @@ export class Uniswapv3Adapter extends Adapter {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
+    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
     if (
       signature === Signatures.Swap ||
       signature === Signatures.Mint ||
       signature === Signatures.Burn ||
       signature === Signatures.Collect
     ) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-
       let factoryAddress;
       let token0Address;
       let token1Address;
@@ -189,6 +190,27 @@ export class Uniswapv3Adapter extends Adapter {
             }
           }
         }
+      }
+    } else if (signature === Signatures.PoolCreated && this.config.contracts[chain].indexOf(address) !== -1) {
+      // new pool created on factory contract
+      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+      const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event.token0);
+      const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event.token1);
+      const factory = normalizeAddress(address);
+
+      if (token0 && token1) {
+        return {
+          protocol: this.config.protocol,
+          action: 'createLiquidityPool',
+          addresses: [factory],
+          tokens: [token0, token1],
+          tokenAmounts: ['0', '0'],
+          readableString: `${factory} create liquidity pool ${token0.symbol} and ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
+          addition: {
+            poolAddress: normalizeAddress(event.pool),
+            fee: new BigNumber(event.fee).toNumber(),
+          },
+        };
       }
     }
 

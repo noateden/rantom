@@ -29,6 +29,7 @@ import {
   OpenseaConfigs,
   OptimismConfigs,
   PancakeswapConfigs,
+  PancakeswapV3Configs,
   RocketpoolConfigs,
   ShibaswapConfigs,
   SiloConfigs,
@@ -70,6 +71,7 @@ import { MakerAdapter } from './maker/maker';
 import { MultichainAdapter } from './multichain/multichain';
 import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
+import { Pancakeswapv3Adapter } from './pancakeswap/pancakeswapv3';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SiloAdapter } from './silo/silo';
 import { StargateAdapter } from './stargate/stargate';
@@ -83,11 +85,13 @@ import { ZeroxAdapter } from './zerox/zerox';
 
 export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> {
   return [
-    new Uniswapv3Adapter(Uniswapv3Configs, providers),
     new Uniswapv2Adapter(Uniswapv2Configs, providers),
     new Uniswapv2Adapter(PancakeswapConfigs, providers),
     new Uniswapv2Adapter(ShibaswapConfigs, providers),
     new Uniswapv2Adapter(FraxswapConfigs, providers),
+
+    new Uniswapv3Adapter(Uniswapv3Configs, providers),
+    new Pancakeswapv3Adapter(PancakeswapV3Configs, providers),
 
     new SushiAdapter(SushiConfigs, providers),
     new LidoAdapter(LidoConfigs, providers),

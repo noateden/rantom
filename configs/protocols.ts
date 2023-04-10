@@ -111,6 +111,15 @@ export const PancakeswapConfigs: ProtocolConfig = {
   },
 };
 
+export const PancakeswapV3Configs: ProtocolConfig = {
+  protocol: 'pancakeswapv3',
+  contracts: {
+    ethereum: [
+      '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865', // pancakeswap v3 Factory
+    ],
+  },
+};
+
 export const BalancerConfigs: ProtocolConfig = {
   protocol: 'balancer',
   contracts: {

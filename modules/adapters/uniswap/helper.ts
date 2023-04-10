@@ -1,8 +1,27 @@
 import BigNumber from 'bignumber.js';
+import Web3 from 'web3';
 
+import UniswapPoolAbiV2 from '../../../configs/abi/uniswap/UniswapV2Pair.json';
+import UniswapPoolAbiV3 from '../../../configs/abi/uniswap/UniswapV3Pool.json';
+import EnvConfig from '../../../configs/envConfig';
 import { normalizeAddress } from '../../../lib/helper';
+import logger from '../../../lib/logger';
+import { Web3HelperProvider } from '../../../services/web3';
 import { ProtocolSubgraphConfig, Token } from '../../../types/configs';
 import { TradingEvent } from '../../../types/domains';
+
+export interface UniswapPoolConstant {
+  chain: string;
+  version: 2 | 3;
+  poolAddress: string; // LP address
+  token0: Token;
+  token1: Token;
+
+  // the fee amount to enable, denominated in hundredths of a bip (i.e. 1e-6)
+  // if this a v3 pool, this value should be difference
+  // otherwise, this value should be 3000 ~ 0.3%
+  fee: number;
+}
 
 export class UniswapHelper {
   public static transformSubgraphSwapEvent(
@@ -230,5 +249,58 @@ export class UniswapHelper {
     }
 
     return events;
+  }
+
+  public static async getFactoryPoolInfo(
+    chain: string,
+    version: 2 | 3,
+    poolAddress: string
+  ): Promise<UniswapPoolConstant | null> {
+    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+
+    const poolContract =
+      version === 2
+        ? new web3.eth.Contract(UniswapPoolAbiV2 as any, poolAddress)
+        : new web3.eth.Contract(UniswapPoolAbiV3 as any, poolAddress);
+
+    try {
+      const [token0Address, token1Address] = await Promise.all([
+        poolContract.methods.token0.call(),
+        poolContract.methods.token1.call(),
+      ]);
+      const web3Helper = new Web3HelperProvider(null);
+
+      const token0 = await web3Helper.getErc20Metadata(chain, token0Address);
+      const token1 = await web3Helper.getErc20Metadata(chain, token1Address);
+
+      if (token0 && token1) {
+        let fee = 3000;
+        if (version === 3) {
+          fee = new BigNumber(await poolContract.methods.fee().call()).toNumber();
+        }
+
+        return {
+          chain,
+          version,
+          poolAddress: normalizeAddress(poolAddress),
+          token0,
+          token1,
+          fee,
+        };
+      }
+    } catch (e: any) {
+      logger.onDebug({
+        service: 'helper.uniswap',
+        message: 'failed to get uniswap pool info',
+        props: {
+          chain,
+          version,
+          poolAddress: normalizeAddress(poolAddress),
+          error: e.message,
+        },
+      });
+    }
+
+    return null;
   }
 }

@@ -101,6 +101,30 @@ export const UniswapActionTestLogs: Array<TestLog> = [
     adapter: new Uniswapv3Adapter(Uniswapv3Configs, null),
     action: 'collect',
   },
+  {
+    chain: 'ethereum',
+    hash: '0x27e90c3f1c5ae51bfd99265f58a5beba2e94172db85a1304feb4d55cc68f463e',
+    sender: normalizeAddress('0xd67ff61f86f669bdea721e89167352c8808c380e'),
+    address: normalizeAddress('0x1f98431c8ad98523631ae4a59f267346ea31f984'),
+    log: {
+      address: '0x1f98431c8ad98523631ae4a59f267346ea31f984',
+      topics: [
+        '0x783cca1c0412dd0d695e784568c96da2e9c22ff989357a2e8b1d9b2b4e6b7118',
+        '0x0000000000000000000000006e5970dbd6fc7eb1f29c6d2edf2bc4c36124c0c1',
+        '0x000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+        '0x00000000000000000000000000000000000000000000000000000000000001f4',
+      ],
+      data: '0x000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000e1eb378328f5800a3e13058ea6c55b331eb5870c',
+      blockNumber: '0x103a7ca',
+      transactionHash: '0x27e90c3f1c5ae51bfd99265f58a5beba2e94172db85a1304feb4d55cc68f463e',
+      transactionIndex: '0xce',
+      blockHash: '0x69d7bb2bd6fbf980ab8dc62dc51601913d46358d10440ccd005b427ded450881',
+      logIndex: '0xbe',
+      removed: false,
+    },
+    adapter: new Uniswapv3Adapter(Uniswapv3Configs, null),
+    action: 'createLiquidityPool',
+  },
 
   // uniswap v2
   {
@@ -170,5 +194,28 @@ export const UniswapActionTestLogs: Array<TestLog> = [
     },
     adapter: new Uniswapv2Adapter(Uniswapv2Configs, null),
     action: 'withdraw',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0xd07cbde817318492092cc7a27b3064a69bd893c01cb593d6029683ffd290ab3a',
+    sender: normalizeAddress('0xf94e5cdf41247e268d4847c30a0dc2893b33e85d'),
+    address: normalizeAddress('0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f'),
+    log: {
+      address: '0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f',
+      topics: [
+        '0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9',
+        '0x000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+        '0x000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+      ],
+      data: '0x000000000000000000000000b4e16d0168e52d35cacd2c6185b44281ec28c9dc0000000000000000000000000000000000000000000000000000000000000001',
+      blockNumber: '0x98b723',
+      transactionHash: '0xd07cbde817318492092cc7a27b3064a69bd893c01cb593d6029683ffd290ab3a',
+      transactionIndex: '0x26',
+      blockHash: '0x359d1dc4f14f9a07cba3ae8416958978ce98f78ad7b8d505925dad9722081f04',
+      logIndex: '0x22',
+      removed: false,
+    },
+    adapter: new Uniswapv2Adapter(Uniswapv2Configs, null),
+    action: 'createLiquidityPool',
   },
 ];

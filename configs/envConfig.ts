@@ -20,6 +20,7 @@ const envConfig: EnvConfig = {
       tradingActions: `${MongodbPrefix}.actions.trading`,
       erc20SupplyActions: `${MongodbPrefix}.actions.erc20`,
       serviceActions: `${MongodbPrefix}.actions.service`,
+      factoryPools: `${MongodbPrefix}.factory.pools`,
     },
   },
   sentry: {

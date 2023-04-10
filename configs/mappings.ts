@@ -4567,4 +4567,125 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+
+  [Signatures['Swap(address,address,int256,int256,uint160,uint128,int24,uint128,uint128)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'sender',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'recipient',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'int256',
+        name: 'amount0',
+        type: 'int256',
+      },
+      {
+        indexed: false,
+        internalType: 'int256',
+        name: 'amount1',
+        type: 'int256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint160',
+        name: 'sqrtPriceX96',
+        type: 'uint160',
+      },
+      {
+        indexed: false,
+        internalType: 'uint128',
+        name: 'liquidity',
+        type: 'uint128',
+      },
+      {
+        indexed: false,
+        internalType: 'int24',
+        name: 'tick',
+        type: 'int24',
+      },
+      {
+        indexed: false,
+        internalType: 'uint128',
+        name: 'protocolFeesToken0',
+        type: 'uint128',
+      },
+      {
+        indexed: false,
+        internalType: 'uint128',
+        name: 'protocolFeesToken1',
+        type: 'uint128',
+      },
+    ],
+  },
+  [Signatures['PairCreated(address,address,address,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'token0',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'token1',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'pair',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['PoolCreated(address,address,uint24,int24,address)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'token0',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'token1',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'uint24',
+        name: 'fee',
+        type: 'uint24',
+      },
+      {
+        indexed: false,
+        internalType: 'int24',
+        name: 'tickSpacing',
+        type: 'int24',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'pool',
+        type: 'address',
+      },
+    ],
+  },
 };

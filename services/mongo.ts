@@ -80,6 +80,7 @@ class MongodbProvider implements IMongodbProvider {
     const tradingActionsCollection = await this.getCollection(envConfig.mongodb.collections.tradingActions);
     const serviceActionsCollection = await this.getCollection(envConfig.mongodb.collections.serviceActions);
     const erc20SupplyActionsCollection = await this.getCollection(envConfig.mongodb.collections.erc20SupplyActions);
+    const factoryPoolsCollection = await this.getCollection(envConfig.mongodb.collections.factoryPools);
 
     statesCollection.createIndex({ name: 1 }, { background: true });
     cachingCollection.createIndex({ name: 1 }, { background: true });
@@ -126,6 +127,8 @@ class MongodbProvider implements IMongodbProvider {
     );
     erc20SupplyActionsCollection.createIndex({ chain: 1, symbol: 1, address: 1 }, { background: true });
 
+    factoryPoolsCollection.createIndex({ chain: 1, protocol: 1, address: 1 }, { background: true });
+
     return {
       statesCollection,
       cachingCollection,
@@ -135,6 +138,7 @@ class MongodbProvider implements IMongodbProvider {
       tradingActionsCollection,
       serviceActionsCollection,
       erc20SupplyActionsCollection,
+      factoryPoolsCollection,
     };
   }
 }

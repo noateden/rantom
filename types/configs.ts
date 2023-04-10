@@ -74,6 +74,9 @@ export interface EnvConfig {
       tradingActions: string;
       erc20SupplyActions: string;
       serviceActions: string;
+
+      // this document saves uniswap factory pools for protocol like uniswapv2 and uniswapv3
+      factoryPools: string;
     };
   };
   sentry: {
@@ -110,4 +113,9 @@ export interface ProtocolSubgraphConfig {
   filters: any;
   endpoint: string;
   birthday: number;
+}
+
+export type LiquidityPoolType = 'univ2' | 'univ3' | 'curve';
+export interface FactoryContract extends Contract {
+  type: LiquidityPoolType;
 }

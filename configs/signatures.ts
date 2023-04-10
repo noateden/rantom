@@ -227,4 +227,15 @@ export const Signatures: { [key: string]: string } = {
   // bancor
   'Conversion(address,address,address,uint256,uint256,address)':
     '0x7154b38b5dd31bb3122436a96d4e09aba5b323ae1fd580025fab55074334c095',
+
+  // pancakeswap v3
+  'Swap(address,address,int256,int256,uint160,uint128,int24,uint128,uint128)':
+    '0x19b47279256b2a23a1665c810c8d55a1758940ee09377d4f8d26497a3577dc83',
+  'Mint(address,address,int24,int24,uint128,uint256,uint256,uint256)':
+    '0xa1568462f02893b080aff063ff02808f3e3b9c0339a5aa2e7e48f4009969bca3',
+
+  // factory
+  'PairCreated(address,address,address,uint256)': '0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9',
+  'PoolCreated(address,address,uint24,int24,address)':
+    '0x783cca1c0412dd0d695e784568c96da2e9c22ff989357a2e8b1d9b2b4e6b7118',
 };

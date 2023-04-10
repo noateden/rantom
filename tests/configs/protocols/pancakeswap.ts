@@ -1,5 +1,6 @@
-import { PancakeswapConfigs } from '../../../configs/protocols';
+import { PancakeswapConfigs, PancakeswapV3Configs } from '../../../configs/protocols';
 import { normalizeAddress } from '../../../lib/helper';
+import { Pancakeswapv3Adapter } from '../../../modules/adapters/pancakeswap/pancakeswapv3';
 import { Uniswapv2Adapter } from '../../../modules/adapters/uniswap/uniswapv2';
 import { TestLog } from '../../types';
 
@@ -71,5 +72,100 @@ export const PancakeswapActionTestLogs: Array<TestLog> = [
     },
     adapter: new Uniswapv2Adapter(PancakeswapConfigs, null),
     action: 'withdraw',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0x11914399be7799ad7ddfc67fd9e7f8fb209de4ad19c8480738feac042e22b2ac',
+    sender: normalizeAddress('0xedfc0f3cfa6cf84e175fb398f8a456c69e27d747'),
+    address: normalizeAddress('0x04c8577958ccc170eb3d2cca76f9d51bc6e42d8f'),
+    log: {
+      address: '0x04c8577958ccc170eb3d2cca76f9d51bc6e42d8f',
+      topics: [
+        '0x19b47279256b2a23a1665c810c8d55a1758940ee09377d4f8d26497a3577dc83',
+        '0x00000000000000000000000013f4ea83d0bd40e75c8222255bc855a974568dd4',
+        '0x00000000000000000000000011a6713b702817db0aa0964d1afee4e641319732',
+      ],
+      data: '0xffffffffffffffffffffffffffffffffffffffffffffffffffffffff657ff904000000000000000000000000000000000000000000000000000000009a73e6940000000000000000000000000000000000000000fff2aea6398b6b4d765c417400000000000000000000000000000000000000000000000000324394bfca28e9fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014e08',
+      blockNumber: '0x1036dca',
+      transactionHash: '0x11914399be7799ad7ddfc67fd9e7f8fb209de4ad19c8480738feac042e22b2ac',
+      transactionIndex: '0xfe',
+      blockHash: '0x7fb770ef7dbc2392d7cb0c7a3ff21bd3c66bc5e6a472b2b712548fe959866c48',
+      logIndex: '0xea',
+      removed: false,
+    },
+    adapter: new Pancakeswapv3Adapter(PancakeswapV3Configs, null),
+    action: 'swap',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0xabbce6edc8b346c98b110cb0977fa1379989c46fc6affb823a6f782070a06916',
+    sender: normalizeAddress('0x23a977f0973ee5d5bbfe40763b13243f9ffd0e74'),
+    address: normalizeAddress('0x04c8577958ccc170eb3d2cca76f9d51bc6e42d8f'),
+    log: {
+      address: '0x04c8577958ccc170eb3d2cca76f9d51bc6e42d8f',
+      topics: [
+        '0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde',
+        '0x00000000000000000000000046a15b0b27311cedf172ab29e4f4766fbe7f4364',
+        '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9',
+        '0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
+      ],
+      data: '0x00000000000000000000000046a15b0b27311cedf172ab29e4f4766fbe7f436400000000000000000000000000000000000000000000000000037a263f425b7500000000000000000000000000000000000000000000000000000022ec738b96000000000000000000000000000000000000000000000000000000216e7cc016',
+      blockNumber: '0x1037011',
+      transactionHash: '0xabbce6edc8b346c98b110cb0977fa1379989c46fc6affb823a6f782070a06916',
+      transactionIndex: '0x69',
+      blockHash: '0xe19ac308ec23df6abd5b5945896d810a5317bde8f224353480a36df5182d299c',
+      logIndex: '0xa1',
+      removed: false,
+    },
+    adapter: new Pancakeswapv3Adapter(PancakeswapV3Configs, null),
+    action: 'deposit',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0xd6d21eff3193dc8120778d416f84581c67d879a520f79dde64a0291fcb82f48d',
+    sender: normalizeAddress('0x23a977f0973ee5d5bbfe40763b13243f9ffd0e74'),
+    address: normalizeAddress('0x04c8577958ccc170eb3d2cca76f9d51bc6e42d8f'),
+    log: {
+      address: '0x04c8577958ccc170eb3d2cca76f9d51bc6e42d8f',
+      topics: [
+        '0x70935338e69775456a85ddef226c395fb668b63fa0115f5f20610b388e6ca9c0',
+        '0x00000000000000000000000046a15b0b27311cedf172ab29e4f4766fbe7f4364',
+        '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb92',
+        '0x0000000000000000000000000000000000000000000000000000000000000465',
+      ],
+      data: '0x00000000000000000000000023a977f0973ee5d5bbfe40763b13243f9ffd0e7400000000000000000000000000000000000000000000000000000022e9a2b0b500000000000000000000000000000000000000000000000000000022ecb25bff',
+      blockNumber: '0x1036fc0',
+      transactionHash: '0xd6d21eff3193dc8120778d416f84581c67d879a520f79dde64a0291fcb82f48d',
+      transactionIndex: '0x4f',
+      blockHash: '0xac610b17b36f5cd4e87ba11a6ac1a6471b6043115d27bd5e800654f1fbba3d4c',
+      logIndex: '0xf5',
+      removed: false,
+    },
+    adapter: new Pancakeswapv3Adapter(PancakeswapV3Configs, null),
+    action: 'collect',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0xdaf270cf8e415ed5944af80167b7ccb43853aa84c7239e737453d795b91cfa91',
+    sender: normalizeAddress('0x42875ae5766dfd4d70772a3a956842e4b708d59a'),
+    address: normalizeAddress('0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865'),
+    log: {
+      address: '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865',
+      topics: [
+        '0x783cca1c0412dd0d695e784568c96da2e9c22ff989357a2e8b1d9b2b4e6b7118',
+        '0x000000000000000000000000467719ad09025fcc6cf6f8311755809d45a5e5f3',
+        '0x000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+        '0x00000000000000000000000000000000000000000000000000000000000009c4',
+      ],
+      data: '0x00000000000000000000000000000000000000000000000000000000000000320000000000000000000000003364f7925b3e499ec45f6a0c6f744912fb7394cf',
+      blockNumber: '0x1033791',
+      transactionHash: '0xdaf270cf8e415ed5944af80167b7ccb43853aa84c7239e737453d795b91cfa91',
+      transactionIndex: '0x6d',
+      blockHash: '0xa49af321ffeebe97aeaaa230c93b61bee28e1f3f177182d17f9f03158fffea5e',
+      logIndex: '0x144',
+      removed: false,
+    },
+    adapter: new Pancakeswapv3Adapter(PancakeswapV3Configs, null),
+    action: 'createLiquidityPool',
   },
 ];
