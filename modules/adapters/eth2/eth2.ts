@@ -1,6 +1,7 @@
 import Web3 from 'web3';
 
 import { Tokens } from '../../../configs/constants';
+import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { fromLittleEndian64, normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig } from '../../../types/configs';
@@ -31,22 +32,22 @@ export class Eth2Adapter extends Adapter {
       this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1 &&
       EventSignatureMapping[signature]
     ) {
-      const web3 = new Web3();
+      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
       const amount = fromLittleEndian64(event.amount);
+      const sender = await this.getSenderAddress(options);
+      const target = await this.getTargetAddress(options);
       return {
         protocol: this.config.protocol,
         action: 'deposit',
         tokens: [Tokens.ethereum.ETH],
         tokenAmounts: [amount],
-        addresses: [normalizeAddress(options.sender), normalizeAddress(options.to)],
-        readableString: `${normalizeAddress(event.sender)} deposit ${amount} ETH on ${this.config.protocol} chain ${
-          options.chain
-        }`,
+        addresses: [sender, target],
+        readableString: `${sender} deposit ${amount} ETH on ${this.config.protocol} chain ${options.chain}`,
         addition: {
           // identify which protocol is depositing by contract address
-          contract: options.to ? options.to : null,
+          contract: target,
 
           pubkey: event.pubkey,
           withdrawalCredentials: event.withdrawal_credentials,

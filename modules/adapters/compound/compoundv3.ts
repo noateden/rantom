@@ -42,11 +42,7 @@ export class Compoundv3Adapter extends Adapter {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
-      let context = options.context;
-      if (!context && options.hash) {
-        context = await web3.eth.getTransactionReceipt(options.hash);
-      }
-
+      const context = await web3.eth.getTransactionReceipt(options.hash as string);
       let poolConfig: Compoundv3Pool | null = null;
       if (this.config.staticData.pools) {
         for (const pool of this.config.staticData.pools) {

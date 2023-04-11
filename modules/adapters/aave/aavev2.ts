@@ -85,7 +85,6 @@ export class Aavev2Adapter extends Adapter {
         case Signatures.FlashLoan: {
           const reserve = await this.getWeb3Helper().getErc20Metadata(chain, event.asset);
           if (reserve) {
-            const sender = normalizeAddress(options.sender);
             const initiator = normalizeAddress(event.initiator);
             const target = normalizeAddress(event.target);
 
@@ -95,10 +94,10 @@ export class Aavev2Adapter extends Adapter {
             return {
               protocol: this.config.protocol,
               action: 'flashloan',
-              addresses: [sender, initiator, target],
+              addresses: [initiator, target],
               tokens: [reserve],
               tokenAmounts: [amount],
-              readableString: `${sender} flashloan ${amount} ${reserve.symbol} on ${this.config.protocol} chain ${chain}`,
+              readableString: `${initiator} flashloan ${amount} ${reserve.symbol} on ${this.config.protocol} chain ${chain}`,
             };
           }
           break;

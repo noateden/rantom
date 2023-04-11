@@ -130,7 +130,7 @@ export class Pancakeswapv3Adapter extends Adapter {
               };
             }
             case Signatures.Mint: {
-              const sender = normalizeAddress(options.sender);
+              const sender = await this.getSenderAddress(options);
               const owner = normalizeAddress(event.owner);
 
               const amount0 = new BigNumber(event.amount0.toString())
@@ -158,11 +158,12 @@ export class Pancakeswapv3Adapter extends Adapter {
               const amount1 = new BigNumber(event.amount1.toString())
                 .dividedBy(new BigNumber(10).pow(token1.decimals))
                 .toString();
+              const sender = await this.getSenderAddress(options);
 
               return {
                 protocol: this.config.protocol,
                 action: 'withdraw',
-                addresses: [owner, options.sender],
+                addresses: [owner, sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
                 readableString: `${owner} removes ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,

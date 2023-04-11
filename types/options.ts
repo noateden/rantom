@@ -40,6 +40,7 @@ export interface MulticallOptions {
 }
 
 export interface WorkerRunOptions {
+  chain?: string;
   fromBlock: number;
   fromTime: number;
 }

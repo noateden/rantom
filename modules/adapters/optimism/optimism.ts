@@ -31,7 +31,7 @@ export class OptimismAdapter extends Adapter {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
-      const sender = normalizeAddress(options.sender);
+      const sender = await this.getSenderAddress(options);
       const latestBlock = new BigNumber(event._totalElements).toString(10);
 
       return {

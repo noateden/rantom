@@ -77,6 +77,8 @@ export interface EnvConfig {
 
       // this document saves uniswap factory pools for protocol like uniswapv2 and uniswapv3
       factoryPools: string;
+
+      logs: string;
     };
   };
   sentry: {

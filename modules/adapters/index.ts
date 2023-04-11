@@ -85,15 +85,6 @@ import { ZeroxAdapter } from './zerox/zerox';
 
 export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> {
   return [
-    new Uniswapv2Adapter(Uniswapv2Configs, providers),
-    new Uniswapv2Adapter(PancakeswapConfigs, providers),
-    new Uniswapv2Adapter(ShibaswapConfigs, providers),
-    new Uniswapv2Adapter(FraxswapConfigs, providers),
-
-    new Uniswapv3Adapter(Uniswapv3Configs, providers),
-    new Pancakeswapv3Adapter(PancakeswapV3Configs, providers),
-
-    new SushiAdapter(SushiConfigs, providers),
     new LidoAdapter(LidoConfigs, providers),
     new CurveAdapter(CurveConfigs, providers),
 
@@ -133,5 +124,15 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new MakerAdapter(MakerConfigs, providers),
     new StargateAdapter(StargateConfigs, providers),
     new SiloAdapter(SiloConfigs, providers),
+
+    new Uniswapv2Adapter(Uniswapv2Configs, providers),
+    new Uniswapv2Adapter(PancakeswapConfigs, providers),
+    new Uniswapv2Adapter(ShibaswapConfigs, providers),
+    new Uniswapv2Adapter(FraxswapConfigs, providers),
+
+    new Uniswapv3Adapter(Uniswapv3Configs, providers),
+    new Pancakeswapv3Adapter(PancakeswapV3Configs, providers),
+
+    new SushiAdapter(SushiConfigs, providers),
   ];
 }

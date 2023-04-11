@@ -1,6 +1,7 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
+import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig, Token } from '../../../types/configs';
@@ -31,7 +32,7 @@ export class BalancerAdapter extends Adapter {
 
     const signature = topics[0];
     if (this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1 && EventSignatureMapping[signature]) {
-      const web3 = new Web3();
+      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
       switch (signature) {
@@ -47,13 +48,15 @@ export class BalancerAdapter extends Adapter {
               .dividedBy(new BigNumber(10).pow(tokenOut.decimals))
               .toString(10);
 
+            const sender = await this.getSenderAddress(options);
+
             return {
               protocol: this.config.protocol,
               action: 'swap',
-              addresses: [options.sender],
+              addresses: [sender],
               tokens: [tokenIn, tokenOut],
               tokenAmounts: [amountIn, amountOut],
-              readableString: `${options.sender} swaps ${amountIn} ${tokenIn.symbol} for ${amountOut} ${tokenOut.symbol} on ${this.config.protocol} chain ${chain}`,
+              readableString: `${sender} swaps ${amountIn} ${tokenIn.symbol} for ${amountOut} ${tokenOut.symbol} on ${this.config.protocol} chain ${chain}`,
             };
           }
 
@@ -69,10 +72,10 @@ export class BalancerAdapter extends Adapter {
             return {
               protocol: this.config.protocol,
               action: 'flashloan',
-              addresses: [options.sender, recipient],
+              addresses: [recipient],
               tokens: [token],
               tokenAmounts: [amount],
-              readableString: `${options.sender} flashloans ${amount} ${token.symbol} from ${this.config.protocol} chain ${chain}`,
+              readableString: `${recipient} flashloans ${amount} ${token.symbol} from ${this.config.protocol} chain ${chain}`,
             };
           }
 
@@ -113,9 +116,9 @@ export class BalancerAdapter extends Adapter {
               addresses: [provider],
               tokens: tokens,
               tokenAmounts: amounts,
-              readableString: `${options.sender} ${action === 'deposit' ? 'adds' : 'removes'} ${tokenAmount.slice(
-                2
-              )} on ${this.config.protocol} chain ${chain}`,
+              readableString: `${provider} ${action === 'deposit' ? 'adds' : 'removes'} ${tokenAmount.slice(2)} on ${
+                this.config.protocol
+              } chain ${chain}`,
             };
           }
         }

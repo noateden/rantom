@@ -84,3 +84,9 @@ export interface IProxyProvider extends ICachingProvider {
 export interface IOracleProvider extends IProvider {
   getTokenSpotPriceUsd: (options: OracleGetTokenPriceOptions) => Promise<TokenOracleResult | null>;
 }
+
+export interface IWorkerProvider extends IProvider {
+  providers: GlobalProviders;
+
+  run: (options: WorkerRunOptions) => Promise<void>;
+}

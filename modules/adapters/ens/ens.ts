@@ -2,6 +2,7 @@ import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import { Tokens } from '../../../configs/constants';
+import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig } from '../../../types/configs';
@@ -34,7 +35,7 @@ export class EnsAdapter extends Adapter {
       this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1 &&
       EventSignatureMapping[signature]
     ) {
-      const web3 = new Web3();
+      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
       if (signature === Signatures.Register) {
@@ -59,17 +60,18 @@ export class EnsAdapter extends Adapter {
       } else if (signature === Signatures.ReNew) {
         const amount = new BigNumber(event.cost).dividedBy(1e18).toString(10);
         const expired = Number(event.expires);
+        const sender = await this.getSenderAddress(options);
         return {
           protocol: this.config.protocol,
           action: 'renew',
-          addresses: [normalizeAddress(options.sender)],
+          addresses: [sender],
           tokens: [Tokens.ethereum.NativeCoin],
           tokenAmounts: [amount],
           addition: {
             name: event.name,
             expired: expired,
           },
-          readableString: `${normalizeAddress(options.sender)} renew ${event.name} cost ${amount} ${
+          readableString: `${sender} renew ${event.name} cost ${amount} ${
             Tokens.ethereum.NativeCoin.symbol
           } expired date ${new Date(expired * 1000).toISOString()} on ${this.config.protocol} chain ${chain}`,
         };

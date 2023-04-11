@@ -35,7 +35,7 @@ export class TornadocashAdapter extends Adapter {
       const web3 = new Web3();
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
-      const user = event.to ? normalizeAddress(event.to) : normalizeAddress(options.sender);
+      const user = event.to ? normalizeAddress(event.to) : await this.getSenderAddress(options);
       const relayer = signature === Signatures.Deposit ? AddressZero : normalizeAddress(event.relayer);
       const token = this.config.staticData
         ? this.config.staticData.pools[normalizeAddress(address)].token

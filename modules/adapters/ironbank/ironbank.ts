@@ -54,15 +54,16 @@ export class IronbankAdapter extends CompoundAdapter {
 
       if (token) {
         const receiver = normalizeAddress(event.receiver);
+        const sender = await this.getSenderAddress(options);
         const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
 
         return {
           protocol: this.config.protocol,
           action: 'flashloan',
-          addresses: [options.sender, receiver],
+          addresses: [sender, receiver],
           tokens: [token],
           tokenAmounts: [amount],
-          readableString: `${options.sender} flashloan ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+          readableString: `${sender} flashloan ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
         };
       }
     }

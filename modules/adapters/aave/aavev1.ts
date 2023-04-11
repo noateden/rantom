@@ -83,7 +83,7 @@ export class Aavev1Adapter extends Adapter {
         case Signatures.FlashLoan: {
           const reserve = await this.getWeb3Helper().getErc20Metadata(chain, event._reserve);
           if (reserve) {
-            const sender = normalizeAddress(options.sender);
+            const sender = await this.getSenderAddress(options);
             const target = normalizeAddress(event._target);
 
             const amount = new BigNumber(event._amount.toString())

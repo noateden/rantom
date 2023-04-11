@@ -26,6 +26,9 @@ export interface MongoCollections {
 
   // save liquidity pools info
   factoryPoolsCollection: Collection;
+
+  // save logs, v2 API
+  logsCollection: Collection;
 }
 
 export type KnownAction =
