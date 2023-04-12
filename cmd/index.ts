@@ -5,6 +5,7 @@ import { IndexCommand } from './commands';
 import { GetlogCommand } from './commands/getlog';
 import { ParseCommand } from './commands/parse';
 import { ServeCommand } from './commands/serve';
+import { SubgraphCommand } from './commands/subgraph';
 import { TestCommand } from './commands/test';
 
 (async function () {
@@ -15,6 +16,7 @@ import { TestCommand } from './commands/test';
   const serveCmd = new ServeCommand();
   const indexCmd = new IndexCommand();
   const getlogCmd = new GetlogCommand();
+  const subgraphCmd = new SubgraphCommand();
 
   yargs(process.argv.slice(2))
     .scriptName('rantom')
@@ -23,5 +25,6 @@ import { TestCommand } from './commands/test';
     .command(serveCmd.name, serveCmd.describe, serveCmd.setOptions, serveCmd.execute)
     .command(indexCmd.name, indexCmd.describe, indexCmd.setOptions, indexCmd.execute)
     .command(getlogCmd.name, getlogCmd.describe, getlogCmd.setOptions, getlogCmd.execute)
+    .command(subgraphCmd.name, subgraphCmd.describe, subgraphCmd.setOptions, subgraphCmd.execute)
     .help().argv;
 })();

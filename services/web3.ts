@@ -9,6 +9,7 @@ import { AddressZero, HardCodeTokens, HardcodeNft, Tokens } from '../configs/con
 import EnvConfig from '../configs/envConfig';
 import { compareAddress, normalizeAddress, transformToHttpUrl } from '../lib/helper';
 import logger from '../lib/logger';
+import { UniswapHelper } from '../modules/adapters/uniswap/helper';
 import { NonFungibleToken, NonFungibleTokenMetadata, Token } from '../types/configs';
 import { IMongodbProvider, IWeb3HelperProvider } from '../types/namespaces';
 import { CachingHelper, CachingProvider } from './caching';
@@ -215,5 +216,19 @@ export class Web3HelperProvider extends CachingProvider implements IWeb3HelperPr
     }
 
     return null;
+  }
+
+  public async getUniPoolFactoryAddress(chain: string, poolAddress: string): Promise<string | null> {
+    const key = CachingHelper.getUniswapPoolFactoryName(chain, poolAddress);
+
+    const cachingData = await this.getCachingData(key);
+    if (cachingData) {
+      return cachingData.factory;
+    }
+
+    const factory = await UniswapHelper.getFactoryAddress(chain, poolAddress);
+    await this.setCachingData(key, { factory });
+
+    return factory;
   }
 }

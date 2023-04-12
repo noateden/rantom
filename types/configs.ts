@@ -97,6 +97,15 @@ export interface EventMapping {
   abi: Array<any>;
 }
 
+export interface ProtocolSubgraphConfig {
+  chain: string;
+  protocol: string;
+  version: 'univ2' | 'univ3';
+  filters: any;
+  endpoint: string;
+  birthday: number;
+}
+
 export interface ProtocolConfig {
   protocol: string; // protocol id, ex: uniswap, lido, ...
   contracts: {
@@ -106,15 +115,7 @@ export interface ProtocolConfig {
     [key: string]: EventMapping;
   };
   staticData?: any;
-}
-
-export interface ProtocolSubgraphConfig {
-  chain: string;
-  protocol: string;
-  version: 'univ2' | 'univ3';
-  filters: any;
-  endpoint: string;
-  birthday: number;
+  subgraphs?: Array<ProtocolSubgraphConfig>;
 }
 
 export type LiquidityPoolType = 'univ2' | 'univ3' | 'curve';

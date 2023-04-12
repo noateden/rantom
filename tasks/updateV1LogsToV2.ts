@@ -11,8 +11,8 @@ import MongodbProvider from '../services/mongo';
   const collections = await mongodb.requireCollections();
 
   // update lending events
-  const cursor = await collections.tradingActionsCollection
-    .find({ protocol: { $exists: true }, blockNumber: { $lt: 16308190 } })
+  const cursor = await collections.stakingActionsCollection
+    .find({ protocol: { $exists: true } })
     .sort({ timestamp: 1 });
   while (await cursor.hasNext()) {
     const operations: Array<any> = [];
@@ -30,7 +30,7 @@ import MongodbProvider from '../services/mongo';
             update: {
               $set: {
                 chain: document.chain,
-                contract: normalizeAddress(document.address),
+                contract: normalizeAddress(document.contract),
                 transactionHash: document.transactionHash,
                 logIndex: document.logIndex,
                 blockNumber: document.blockNumber,
@@ -38,12 +38,10 @@ import MongodbProvider from '../services/mongo';
                 protocol: document.protocol,
                 action: document.action,
                 addresses: document.caller ? [document.user, document.caller] : [document.user],
-                tokens: document.tokens,
-                amounts: document.amounts.map((item: any, index: number) => {
-                  return new BigNumber(item)
-                    .dividedBy(new BigNumber(10).pow(document.tokens[index].decimals))
-                    .toString(10);
-                }),
+                tokens: [document.token],
+                amounts: [
+                  new BigNumber(document.amount).dividedBy(new BigNumber(10).pow(document.token.decimals)).toString(10),
+                ],
                 addition: document.addition,
               },
             },

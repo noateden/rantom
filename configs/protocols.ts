@@ -86,6 +86,16 @@ export const SushiConfigs: ProtocolConfig = {
       },
     ],
   },
+  subgraphs: [
+    {
+      protocol: 'sushi',
+      chain: 'ethereum',
+      version: 'univ2',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/sushiswap/exchange',
+    },
+  ],
 };
 
 export const PancakeswapConfigs: ProtocolConfig = {
@@ -109,6 +119,18 @@ export const PancakeswapConfigs: ProtocolConfig = {
       },
     ],
   },
+  subgraphs: [
+    {
+      protocol: 'pancakeswap',
+      chain: 'ethereum',
+      version: 'univ2',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {
+        transactionBlockNumber: 'block',
+      },
+      endpoint: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exhange-eth',
+    },
+  ],
 };
 
 export const PancakeswapV3Configs: ProtocolConfig = {

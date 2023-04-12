@@ -73,4 +73,8 @@ export class CachingHelper {
   public static getNftDataCacheName(chain: string, tokenAddress: string, tokenId: string): string {
     return `nft-${chain}-${normalizeAddress(tokenAddress)}-${tokenId}`;
   }
+
+  public static getUniswapPoolFactoryName(chain: string, poolAddress: string): string {
+    return `uni-factory-${chain}-${normalizeAddress(poolAddress)}`;
+  }
 }
