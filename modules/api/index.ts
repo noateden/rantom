@@ -7,6 +7,7 @@ import * as extendRouter from './routes/extend';
 import * as oracleRouter from './routes/oracle';
 import * as parserRouter from './routes/parser';
 import * as queryRouter from './routes/query';
+import * as queryv1Router from './routes/queryv1';
 import * as statusRouter from './routes/status';
 
 export function getRouter(providers: GlobalProviders): Router {
@@ -18,8 +19,18 @@ export function getRouter(providers: GlobalProviders): Router {
   router.use('/event', eventRouter.getRouter(providers));
   router.use('/extend', extendRouter.getRouter(providers));
   router.use('/status', statusRouter.getRouter(providers));
-  router.use('/query', queryRouter.getRouter(providers));
+  router.use('/query', queryv1Router.getRouter(providers));
   router.use('/oracle', oracleRouter.getRouter(providers));
+
+  return router;
+}
+
+export function getRouterV2(providers: GlobalProviders): Router {
+  const router = Router({ mergeParams: true });
+
+  router.use('/', logMiddleware);
+
+  router.use('/query', queryRouter.getRouter(providers));
 
   return router;
 }

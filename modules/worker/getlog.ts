@@ -108,7 +108,7 @@ export class GetlogWorker implements IWorkerProvider {
                         contract: normalizeAddress(log.address),
                         transactionHash: log.transactionHash,
                         logIndex: log.logIndex,
-                        blocNumber: log.blockNumber,
+                        blockNumber: log.blockNumber,
                         timestamp: timestamp,
 
                         protocol: action.protocol,

@@ -132,6 +132,7 @@ class MongodbProvider implements IMongodbProvider {
 
     logsCollection.createIndex({ chain: 1, contract: 1, transactionHash: 1, logIndex: 1 }, { background: true });
     logsCollection.createIndex({ protocol: 1, action: 1 }, { background: true });
+    logsCollection.createIndex({ protocol: 1, blockNumber: 1, timestamp: 1 }, { background: true });
 
     return {
       statesCollection,
