@@ -3,7 +3,7 @@ import express from 'express';
 import path from 'path';
 
 import logger from '../../lib/logger';
-import getRouter, { getRouterV2 } from '../../modules/api';
+import getRouter from '../../modules/api';
 import { GlobalProviders } from '../../types/namespaces';
 import { BasicCommand } from '../basic';
 
@@ -19,7 +19,6 @@ export class ServeCommand extends BasicCommand {
     const providers: GlobalProviders = await super.getProviders();
 
     const router = getRouter(providers);
-    const routerv2 = getRouterV2(providers);
 
     const port = argv.port || process.env.PORT || '8080';
 
@@ -29,7 +28,6 @@ export class ServeCommand extends BasicCommand {
     app.use(express.json());
 
     app.use('/api/v1', router);
-    app.use('/api/v2', routerv2);
 
     app.use('/', express.static(path.join('.', 'public')));
 
