@@ -24,6 +24,11 @@ export class GetlogWorker implements IWorkerProvider {
     this.adapters = getAdapters(providers);
   }
 
+  // check where this contract is whitelisted or not
+  private async shouldGetThisLog(chain: string, log: any): Promise<boolean> {
+    return ContractWhitelistedGetLogs[chain].indexOf(normalizeAddress(log.address)) !== -1;
+  }
+
   public async run(options: WorkerRunOptions): Promise<void> {
     const { fromBlock } = options;
 
@@ -72,11 +77,11 @@ export class GetlogWorker implements IWorkerProvider {
 
       const operations: Array<any> = [];
       for (const log of logs) {
-        // only sync whitelisted contracts
-        if (ContractWhitelistedGetLogs[chain].indexOf(normalizeAddress(log.address)) !== -1) {
-          // now we try to pass log into adapters to get readable event data
-          for (const adapter of this.adapters) {
-            if (adapter.supportedSignature(log.topics[0])) {
+        // now we try to pass log into adapters to get readable event data
+        for (const adapter of this.adapters) {
+          if (adapter.supportedSignature(log.topics[0])) {
+            // only sync whitelisted contracts
+            if (await this.shouldGetThisLog(chain, log)) {
               const action: TransactionAction | null = await adapter.tryParsingActions({
                 chain: chain,
                 sender: '', // adapter should get sender address
@@ -134,19 +139,21 @@ export class GetlogWorker implements IWorkerProvider {
         await collections.logsCollection.bulkWrite(operations);
       }
 
-      // save state
-      await collections.statesCollection.updateOne(
-        {
-          name: stateKey,
-        },
-        {
-          $set: {
+      // save state if fromBlock === 0
+      if (fromBlock === 0) {
+        await collections.statesCollection.updateOne(
+          {
             name: stateKey,
-            blockNumber: toBlock,
           },
-        },
-        { upsert: true }
-      );
+          {
+            $set: {
+              name: stateKey,
+              blockNumber: toBlock,
+            },
+          },
+          { upsert: true }
+        );
+      }
 
       const endExeTime = Math.floor(new Date().getTime() / 1000);
       const elapsed = endExeTime - startExeTime;

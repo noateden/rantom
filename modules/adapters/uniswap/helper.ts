@@ -303,4 +303,22 @@ export class UniswapHelper {
 
     return null;
   }
+
+  public static async getFactoryAddress(chain: string, poolAddress: string): Promise<string | null> {
+    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+
+    try {
+      const contract = new web3.eth.Contract(UniswapPoolAbiV2 as any, poolAddress);
+      const factory = await contract.methods.factory().call();
+      return normalizeAddress(factory);
+    } catch (e: any) {}
+
+    try {
+      const contract = new web3.eth.Contract(UniswapPoolAbiV3 as any, poolAddress);
+      const factory = await contract.methods.factory().call();
+      return normalizeAddress(factory);
+    } catch (e: any) {}
+
+    return null;
+  }
 }
