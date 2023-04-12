@@ -74,7 +74,10 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xfa8c996e158b80d77fbd0082bb437556a65b96e0', // Maker Gems
     '0x0a59649758aa4d66e25f08dd01271e891fe52199', // Maker Gems
     '0xae78736cd615f374d3085123a210448e74fc6393', // Rocketpool rETH
+    '0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac', // Sushi factory V2
     '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // Sushi masterchef
     '0xef0881ec094552b2e128cf945ef17a6752b4ec5d', // Sushi masterchef v2
+    '0x1097053fd2ea711dad45caccc45eff7548fcb362', // Pancakeswap factory v2
+    '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865', // Pancakeswap factory v3
   ],
 };
