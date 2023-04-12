@@ -79,7 +79,7 @@ export class GetlogWorker implements IWorkerProvider {
             if (adapter.supportedSignature(log.topics[0])) {
               const action: TransactionAction | null = await adapter.tryParsingActions({
                 chain: chain,
-                sender: normalizeAddress(log.address),
+                sender: '', // adapter should get sender address
                 address: normalizeAddress(log.address),
                 hash: log.transactionHash,
                 topics: log.topics,
