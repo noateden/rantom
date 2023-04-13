@@ -61,7 +61,7 @@ export class UniswapSubgraphJob extends SubgraphJobProvider {
         const response = await axios.post(this.config.endpoint, {
           query: `
 				{
-					deposits: mints(first: 1000, where: {timestamp_gte: ${timestamp}}, orderBy: timestamp, orderDirection: desc) {
+					deposits: mints(first: 1000, where: {timestamp_gte: ${timestamp}}, orderBy: timestamp, orderDirection: asc) {
 						transaction {
 							id
 							${
@@ -72,17 +72,17 @@ export class UniswapSubgraphJob extends SubgraphJobProvider {
 						}
 						logIndex
 						timestamp
-						pair {
-						  id
+						${this.config.version === 'univ2' ? 'pair' : 'pool'} {
+							id
 							token0 {
+								id
 								symbol
 								decimals
-								id
 							}
 							token1 {
+								id
 								symbol
 								decimals
-								id
 							}
 						}
 						amount0
@@ -99,7 +99,7 @@ export class UniswapSubgraphJob extends SubgraphJobProvider {
         const response = await axios.post(this.config.endpoint, {
           query: `
 				{
-					withdrawals: burns(first: 1000, where: {timestamp_gte: ${timestamp}}, orderBy: timestamp, orderDirection: desc) {
+					withdrawals: burns(first: 1000, where: {timestamp_gte: ${timestamp}}, orderBy: timestamp, orderDirection: asc) {
 						transaction {
 							id
 							${
@@ -110,22 +110,22 @@ export class UniswapSubgraphJob extends SubgraphJobProvider {
 						}
 						logIndex
 						timestamp
-						pair {
-						  id
+						${this.config.version === 'univ2' ? 'pair' : 'pool'} {
+							id
 							token0 {
+								id
 								symbol
 								decimals
-								id
 							}
 							token1 {
+								id
 								symbol
 								decimals
-								id
 							}
 						}
 						amount0
 						amount1
-						sender
+						${this.config.version === 'univ2' ? 'sender' : 'owner'}
 					}
 				}
 			`,

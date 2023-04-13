@@ -140,6 +140,16 @@ export const PancakeswapV3Configs: ProtocolConfig = {
       '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865', // pancakeswap v3 Factory
     ],
   },
+  subgraphs: [
+    {
+      protocol: 'pancakeswapv3',
+      chain: 'ethereum',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-eth',
+    },
+  ],
 };
 
 export const BalancerConfigs: ProtocolConfig = {

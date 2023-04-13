@@ -20,6 +20,7 @@ import {
   LooksrareConfigs,
   MakerConfigs,
   PancakeswapConfigs,
+  PancakeswapV3Configs,
   RocketpoolConfigs,
   SushiConfigs,
   YearnConfigs,
@@ -108,7 +109,11 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
   ],
 };
 
-export const ProtocolWhitelistedSubgraphs: Array<ProtocolConfig> = [SushiConfigs, PancakeswapConfigs];
+export const ProtocolWhitelistedSubgraphs: Array<ProtocolConfig> = [
+  SushiConfigs,
+  PancakeswapConfigs,
+  PancakeswapV3Configs,
+];
 
 export const ReportProtocolConfigs: Array<ProtocolConfig> = [
   Aavev2Configs,
