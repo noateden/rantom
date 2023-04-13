@@ -227,8 +227,6 @@ export class UniswapSubgraphJob extends SubgraphJobProvider {
           );
         }
 
-        stateTime = events.length > 0 ? events[events.length - 1].timestamp + 1 : (stateTime += 1);
-
         const endExeTime = Math.floor(new Date().getTime() / 1000);
         const elapsed = endExeTime - startExeTime;
         logger.onInfo({
@@ -243,6 +241,17 @@ export class UniswapSubgraphJob extends SubgraphJobProvider {
             elapsed: `${elapsed}s`,
           },
         });
+
+        // here we do the logic to find the next timestamp
+        // first, if we have events from subgraph, just use the latest timestamp + 1
+        // otherwise, exit
+        if (events.length > 0) {
+          stateTime = events[events.length - 1].timestamp;
+        } else {
+          return;
+        }
+
+        stateTime = events.length > 0 ? events[events.length - 1].timestamp + 1 : (stateTime += 1);
       } catch (e: any) {
         logger.onError({
           service: this.name,
