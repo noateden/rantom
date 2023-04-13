@@ -1,7 +1,6 @@
 import { Collection } from 'mongodb';
 
 import {
-  Contract,
   EventMapping,
   NonFungibleToken,
   NonFungibleTokenMetadata,
@@ -9,12 +8,18 @@ import {
   ProtocolSubgraphConfig,
   Token,
 } from './configs';
-import { MongoCollections, TokenOracleResult, Transaction, TransactionAction, TransactionTransfer } from './domains';
+import {
+  MongoCollections,
+  SystemReport,
+  TokenOracleResult,
+  Transaction,
+  TransactionAction,
+  TransactionTransfer,
+} from './domains';
 import {
   AdapterParseLogOptions,
   OracleGetTokenPriceOptions,
   ParseTransactionOptions,
-  ProxyGetDataSubgraphOptions,
   SubgraphJobRunOptions,
   TransferParseLogOptions,
   WorkerRunOptions,
@@ -78,19 +83,6 @@ export interface IParserProvider extends IProvider {
   parseTransaction: (options: ParseTransactionOptions) => Promise<Array<Transaction>>;
 }
 
-export interface IContractWorker extends IProvider {
-  contracts: Array<Contract>;
-  providers: GlobalProviders;
-
-  // run indexer
-  run: (options: WorkerRunOptions) => Promise<void>;
-  processEvents: (contract: Contract, events: Array<any>, options: any) => Promise<any>;
-}
-
-export interface IProxyProvider extends ICachingProvider {
-  getEvents: (options: ProxyGetDataSubgraphOptions) => Promise<Array<any>>;
-}
-
 export interface IOracleProvider extends IProvider {
   getTokenSpotPriceUsd: (options: OracleGetTokenPriceOptions) => Promise<TokenOracleResult | null>;
 }
@@ -106,4 +98,14 @@ export interface ISubgraphJobProvider extends IProvider {
   providers: GlobalProviders;
 
   run: (options: SubgraphJobRunOptions) => Promise<void>;
+}
+
+export interface IReportProvider extends IProvider {
+  providers: GlobalProviders;
+  configs: Array<ProtocolConfig>;
+
+  getSystemReport: () => Promise<SystemReport | null>;
+
+  // run reporter daemon
+  run: () => Promise<void>;
 }

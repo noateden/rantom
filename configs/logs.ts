@@ -1,7 +1,29 @@
 import { ProtocolConfig } from '../types/configs';
 import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
 import YearnVaults from './data/YearnVaults.json';
-import { PancakeswapConfigs, SushiConfigs } from './protocols';
+import {
+  Aavev2Configs,
+  Aavev3Configs,
+  AbracadabraConfigs,
+  AurafinanceConfigs,
+  BalancerConfigs,
+  BancorConfigs,
+  BeanstalkConfigs,
+  CompoundConfigs,
+  Compoundv3Configs,
+  ConvexConfigs,
+  CurveConfigs,
+  EulerConfigs,
+  IronbankConfigs,
+  LidoConfigs,
+  LiquityConfigs,
+  LooksrareConfigs,
+  MakerConfigs,
+  PancakeswapConfigs,
+  RocketpoolConfigs,
+  SushiConfigs,
+  YearnConfigs,
+} from './protocols';
 
 export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
   ethereum: [
@@ -87,3 +109,27 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
 };
 
 export const ProtocolWhitelistedSubgraphs: Array<ProtocolConfig> = [SushiConfigs, PancakeswapConfigs];
+
+export const ReportProtocolConfigs: Array<ProtocolConfig> = [
+  Aavev2Configs,
+  Aavev3Configs,
+  AbracadabraConfigs,
+  AurafinanceConfigs,
+  BalancerConfigs,
+  BancorConfigs,
+  BeanstalkConfigs,
+  CompoundConfigs,
+  Compoundv3Configs,
+  ConvexConfigs,
+  CurveConfigs,
+  EulerConfigs,
+  IronbankConfigs,
+  LidoConfigs,
+  LiquityConfigs,
+  LooksrareConfigs,
+  MakerConfigs,
+  PancakeswapConfigs,
+  RocketpoolConfigs,
+  SushiConfigs,
+  YearnConfigs,
+];

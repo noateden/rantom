@@ -1,6 +1,6 @@
 import { Collection } from 'mongodb';
 
-import { NonFungibleToken, NonFungibleTokenMetadata, Token } from './configs';
+import { NonFungibleTokenMetadata, Token } from './configs';
 
 export interface MongoCollections {
   statesCollection: Collection;
@@ -8,6 +8,9 @@ export interface MongoCollections {
 
   // save logs, v2 API
   logsCollection: Collection;
+
+  // save system reports
+  reportsCollection: Collection;
 }
 
 export type KnownAction =
@@ -88,38 +91,6 @@ export interface EventBase {
   blockNumber: number;
 }
 
-export interface LendingEvent extends EventBase {
-  action: KnownAction;
-  token: Token;
-  amount: string;
-  caller: string;
-  user: string;
-
-  // optional metrics
-  borrowRate?: string;
-  debtToken?: Token;
-  debtAmount?: string;
-}
-
-export interface MarketplaceEvent extends EventBase {
-  action: KnownAction;
-  nonFungibleToken: NonFungibleToken;
-  nonFungibleTokenAmount: string;
-  paymentToken: Token;
-  paymentTokenAmount: string;
-  seller: string;
-  buyer: string;
-}
-
-export interface StakingEvent extends EventBase {
-  action: KnownAction;
-  token: Token;
-  amount: string;
-  caller: string;
-  user: string;
-  addition?: any;
-}
-
 export interface TradingEvent extends EventBase {
   action: KnownAction;
   tokens: Array<Token>;
@@ -127,26 +98,6 @@ export interface TradingEvent extends EventBase {
   caller: string;
   user: string;
   addition?: any;
-}
-
-export interface Erc20SupplyEvent {
-  // write index
-  chain: string;
-  contract: string;
-  transactionHash: string;
-  logIndex: number;
-
-  action: 'mint' | 'burn';
-  timestamp: number;
-  blockNumber: number;
-
-  symbol: string;
-  decimals: number;
-  amount: string;
-
-  // to address for mint transaction
-  // from address for burn transaction
-  address: string;
 }
 
 export interface TokenOracleSource {
@@ -160,20 +111,18 @@ export interface TokenOracleResult {
   sources: Array<TokenOracleSource>;
 }
 
-// present a liquidity pool info, support all liquidity protocols like: uniswap v2, uniswap v3, curve, ...
-export interface LiquidityPool {
-  chain: string;
+export interface ProtocolSystemReport {
   protocol: string;
-  address: string;
-  tokens: Array<Token>;
-  fee: number;
 
-  // transaction hash where pool was created
-  transactionHash: string;
+  // latest event timestamp which found from block logs
+  latestEventTimestamp: number;
 
-  // block number when pool was created
-  blockNumber: number;
+  // total number of events all time which found from block logs
+  totalEventAllTime: number;
+}
 
-  // timestamp when pool was created
+export interface SystemReport {
   timestamp: number;
+  protocols: Array<string>;
+  reports: Array<ProtocolSystemReport>;
 }
