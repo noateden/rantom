@@ -242,4 +242,8 @@ export const Signatures: { [key: string]: string } = {
   'PairCreated(address,address,address,uint256)': '0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9',
   'PoolCreated(address,address,uint24,int24,address)':
     '0x783cca1c0412dd0d695e784568c96da2e9c22ff989357a2e8b1d9b2b4e6b7118',
+
+  // beefy.finance
+  'Staked(address,uint256)': '0x9e71bc8eea02a63969f509818f2dafb9254532904319f9dbda79b67bd34a5f3d',
+  'Withdrawn(address,uint256)': '0x7084f5476618d8e60b11ef0d7d3f06914655adb8793e28ff7f018d4c76d505d5',
 };

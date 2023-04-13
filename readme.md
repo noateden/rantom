@@ -60,6 +60,7 @@ yarn start --help
 |     MakerDao     | GemJoin, GemExit, DaiJoin, DaiExit, FlashLoan                                              |     🌱 |
 |     Stargate     | Mint, Burn, Swap, SwapRemote                                                               |     🌱 |
 |   Silo Finance   | Deposit, Withdraw, Borrow, Repay, Liquidate                                                |     🌱 |
+|      Beefy       | Transfer, Staked, Withdrawn, RewardPaid                                                    |     🌱 |
 
 ### Nft Marketplace
 

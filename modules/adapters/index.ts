@@ -7,6 +7,7 @@ import {
   BalancerConfigs,
   BancorConfigs,
   BeanstalkConfigs,
+  BeefyConfigs,
   BlurConfigs,
   ChainlinkConfigs,
   CompoundConfigs,
@@ -51,6 +52,7 @@ import { AurafinanceAdapter } from './aurafinance/aurafinance';
 import { BalancerAdapter } from './balancer/balancer';
 import { BancorAdapter } from './bancor/bancor';
 import { BeanstalkAdapter } from './beanstalk/beanstalk';
+import { BeefyAdapter } from './beefy/beefy';
 import { BlurAdapter } from './blur/blur';
 import { ChainlinkAdapter } from './chainlink/chainlink';
 import { CompoundAdapter } from './compound/compound';
@@ -134,5 +136,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new Pancakeswapv3Adapter(PancakeswapV3Configs, providers),
 
     new SushiAdapter(SushiConfigs, providers),
+    new BeefyAdapter(BeefyConfigs, providers),
   ];
 }

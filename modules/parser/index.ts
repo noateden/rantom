@@ -63,10 +63,10 @@ export class ParserProvider implements IParserProvider {
               ...transfer,
               logIndex: log.logIndex,
             });
-
-            // its a token transfer, ignore adapter parsers
-            continue;
           }
+
+          // despite we detect this is a transfer event
+          // we use transfer event to get more action on some protocols
 
           // now we try to pass log into adapters to get readable event data
           for (const adapter of this.adapters) {

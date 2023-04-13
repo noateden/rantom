@@ -5,6 +5,7 @@ import { AurafinanceActionTestLogs } from './protocols/aurafinance';
 import { BalancerActionTestLogs } from './protocols/balancer';
 import { BancorActionTestLogs } from './protocols/bancor';
 import { BeanstalkActionTestLogs } from './protocols/beanstalk';
+import { BeefyActionTestLogs } from './protocols/beefy';
 import { BlurActionTestLogs } from './protocols/blur';
 import { ChainlinkActionTestLogs } from './protocols/chainlink';
 import { Compound3ActionTestLogs, CompoundActionTestLogs } from './protocols/compound';
@@ -74,4 +75,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...MakerActionTestLogs,
   ...StargateActionTestLogs,
   ...SiloActionTestLogs,
+  ...BeefyActionTestLogs,
 ];

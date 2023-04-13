@@ -4763,4 +4763,33 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+
+  [Signatures['Staked(address,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        name: 'user',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        name: 'amount',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['Withdrawn(address,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        name: 'user',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        name: 'amount',
+        type: 'uint256',
+      },
+    ],
+  },
 };
