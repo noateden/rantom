@@ -227,7 +227,7 @@ export class UniswapSubgraphJob extends SubgraphJobProvider {
           );
         }
 
-        stateTime = events.length > 0 ? events[events.length - 1].timestamp : (stateTime += 1);
+        stateTime = events.length > 0 ? events[events.length - 1].timestamp + 1 : (stateTime += 1);
 
         const endExeTime = Math.floor(new Date().getTime() / 1000);
         const elapsed = endExeTime - startExeTime;
