@@ -60,7 +60,7 @@ export class UniswapHelper {
           decimals: Number(swap.pair.token0.decimals),
         },
       ];
-      amounts = [swap.amount1In.toString(), swap.amount0In.toString()];
+      amounts = [swap.amount1In.toString(), swap.amount0Out.toString()];
     } else {
       tokens = [
         {
@@ -76,7 +76,7 @@ export class UniswapHelper {
           decimals: Number(swap.pair.token1.decimals),
         },
       ];
-      amounts = [swap.amount0In.toString(), swap.amount1In.toString()];
+      amounts = [swap.amount0In.toString(), swap.amount1Out.toString()];
     }
 
     return {

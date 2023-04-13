@@ -1,4 +1,4 @@
-import { PancakeswapConfigs, SushiConfigs } from '../../configs/protocols';
+import { ProtocolWhitelistedSubgraphs } from '../../configs/logs';
 import { sleep } from '../../lib/helper';
 import { SubgraphWorker } from '../../modules/worker/subgraph';
 import { IWorkerProvider } from '../../types/namespaces';
@@ -15,7 +15,7 @@ export class SubgraphCommand extends BasicCommand {
   public async execute(argv: any) {
     const providers = await super.getProviders();
 
-    const subgraphWorker: IWorkerProvider = new SubgraphWorker(providers, [SushiConfigs, PancakeswapConfigs]);
+    const subgraphWorker: IWorkerProvider = new SubgraphWorker(providers, ProtocolWhitelistedSubgraphs);
 
     while (true) {
       await subgraphWorker.run({ fromBlock: 0, fromTime: argv.fromTime ? Number(argv.fromTime) : 0 });

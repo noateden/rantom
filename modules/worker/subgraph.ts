@@ -1,7 +1,7 @@
 import { ProtocolConfig } from '../../types/configs';
 import { GlobalProviders, IWorkerProvider } from '../../types/namespaces';
 import { WorkerRunOptions } from '../../types/options';
-import { UniswapSubgraphHook } from './hooks/uniswapSubgraph';
+import { UniswapSubgraphJob } from './subgraphs/uniswap';
 
 export class SubgraphWorker implements IWorkerProvider {
   public readonly name: string = 'worker.subgraph';
@@ -19,8 +19,10 @@ export class SubgraphWorker implements IWorkerProvider {
       if (config.subgraphs) {
         for (const subgraph of config.subgraphs) {
           if (subgraph.version === 'univ2' || subgraph.version === 'univ3') {
-            const worker = new UniswapSubgraphHook(this.providers, subgraph);
-            await worker.indexSubgraphs(options);
+            const worker = new UniswapSubgraphJob(subgraph, this.providers);
+            await worker.run({ job: 'swap', fromTime: options.fromTime });
+            await worker.run({ job: 'deposit', fromTime: options.fromTime });
+            await worker.run({ job: 'withdraw', fromTime: options.fromTime });
           }
         }
       }

@@ -1,5 +1,7 @@
+import { ProtocolConfig } from '../types/configs';
 import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
 import YearnVaults from './data/YearnVaults.json';
+import { PancakeswapConfigs, SushiConfigs } from './protocols';
 
 export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
   ethereum: [
@@ -83,3 +85,5 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865', // Pancakeswap factory v3
   ],
 };
+
+export const ProtocolWhitelistedSubgraphs: Array<ProtocolConfig> = [SushiConfigs, PancakeswapConfigs];

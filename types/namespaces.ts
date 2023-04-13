@@ -1,12 +1,21 @@
 import { Collection } from 'mongodb';
 
-import { Contract, EventMapping, NonFungibleToken, NonFungibleTokenMetadata, ProtocolConfig, Token } from './configs';
+import {
+  Contract,
+  EventMapping,
+  NonFungibleToken,
+  NonFungibleTokenMetadata,
+  ProtocolConfig,
+  ProtocolSubgraphConfig,
+  Token,
+} from './configs';
 import { MongoCollections, TokenOracleResult, Transaction, TransactionAction, TransactionTransfer } from './domains';
 import {
   AdapterParseLogOptions,
   OracleGetTokenPriceOptions,
   ParseTransactionOptions,
   ProxyGetDataSubgraphOptions,
+  SubgraphJobRunOptions,
   TransferParseLogOptions,
   WorkerRunOptions,
 } from './options';
@@ -90,4 +99,11 @@ export interface IWorkerProvider extends IProvider {
   providers: GlobalProviders;
 
   run: (options: WorkerRunOptions) => Promise<void>;
+}
+
+export interface ISubgraphJobProvider extends IProvider {
+  config: ProtocolSubgraphConfig;
+  providers: GlobalProviders;
+
+  run: (options: SubgraphJobRunOptions) => Promise<void>;
 }

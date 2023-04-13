@@ -45,6 +45,11 @@ export interface WorkerRunOptions {
   fromTime: number;
 }
 
+export interface SubgraphJobRunOptions {
+  job: string;
+  fromTime: number;
+}
+
 export interface ProxyGetDataSubgraphOptions {
   action: KnownAction;
 }
