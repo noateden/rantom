@@ -68,16 +68,6 @@ export interface EnvConfig {
       states: string;
       caching: string;
 
-      lendingActions: string;
-      marketplaceActions: string;
-      stakingActions: string;
-      tradingActions: string;
-      erc20SupplyActions: string;
-      serviceActions: string;
-
-      // this document saves uniswap factory pools for protocol like uniswapv2 and uniswapv3
-      factoryPools: string;
-
       logs: string;
     };
   };

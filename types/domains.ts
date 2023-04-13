@@ -6,27 +6,6 @@ export interface MongoCollections {
   statesCollection: Collection;
   cachingCollection: Collection;
 
-  // save action related to lending protocol: aave, compound, ...
-  lendingActionsCollection: Collection;
-
-  // save action related to marketplace: opensea, looksrare, ...
-  marketplaceActionsCollection: Collection;
-
-  // save action related to staking protocol: lido, ...
-  stakingActionsCollection: Collection;
-
-  // save action related to trading protocol: curve, cowswap, ...
-  tradingActionsCollection: Collection;
-
-  // save actions on service protocol like: chainlink, ens, ...
-  serviceActionsCollection: Collection;
-
-  // save token mint/burn events
-  erc20SupplyActionsCollection: Collection;
-
-  // save liquidity pools info
-  factoryPoolsCollection: Collection;
-
   // save logs, v2 API
   logsCollection: Collection;
 }

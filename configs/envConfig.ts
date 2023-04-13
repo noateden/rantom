@@ -14,14 +14,6 @@ const envConfig: EnvConfig = {
       states: `${MongodbPrefix}.states`,
       caching: `${MongodbPrefix}.caching`,
 
-      lendingActions: `${MongodbPrefix}.actions.lending`,
-      marketplaceActions: `${MongodbPrefix}.actions.marketplace`,
-      stakingActions: `${MongodbPrefix}.actions.staking`,
-      tradingActions: `${MongodbPrefix}.actions.trading`,
-      erc20SupplyActions: `${MongodbPrefix}.actions.erc20`,
-      serviceActions: `${MongodbPrefix}.actions.service`,
-      factoryPools: `${MongodbPrefix}.factory.pools`,
-
       // v2 api
       logs: `${MongodbPrefix}.logs`,
     },
