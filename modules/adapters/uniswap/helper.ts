@@ -60,10 +60,7 @@ export class UniswapHelper {
           decimals: Number(swap.pair.token0.decimals),
         },
       ];
-      amounts = [
-        new BigNumber(swap.amount1In).multipliedBy(new BigNumber(10).pow(swap.pair.token1.decimals)).toString(10),
-        new BigNumber(swap.amount0Out).multipliedBy(new BigNumber(10).pow(swap.pair.token0.decimals)).toString(10),
-      ];
+      amounts = [swap.amount1In.toString(), swap.amount0In.toString()];
     } else {
       tokens = [
         {
@@ -79,10 +76,7 @@ export class UniswapHelper {
           decimals: Number(swap.pair.token1.decimals),
         },
       ];
-      amounts = [
-        new BigNumber(swap.amount0In).multipliedBy(new BigNumber(10).pow(swap.pair.token0.decimals)).toString(10),
-        new BigNumber(swap.amount1Out).multipliedBy(new BigNumber(10).pow(swap.pair.token1.decimals)).toString(10),
-      ];
+      amounts = [swap.amount0In.toString(), swap.amount1In.toString()];
     }
 
     return {
@@ -108,8 +102,8 @@ export class UniswapHelper {
     let tokens: Array<Token> = [];
     let amounts: Array<string> = [];
 
-    const amount0 = new BigNumber(swap.amount0).multipliedBy(new BigNumber(10).pow(swap.pool.token0.decimals));
-    const amount1 = new BigNumber(swap.amount1).multipliedBy(new BigNumber(10).pow(swap.pool.token1.decimals));
+    const amount0 = new BigNumber(swap.amount0);
+    const amount1 = new BigNumber(swap.amount1);
 
     if (amount0.lt(0)) {
       tokens = [
@@ -194,10 +188,7 @@ export class UniswapHelper {
             : Number(event.transaction.blockNumber),
         action: 'deposit',
         tokens: [token0, token1],
-        amounts: [
-          new BigNumber(event.amount0.toString()).multipliedBy(new BigNumber(10).pow(token0.decimals)).toString(10),
-          new BigNumber(event.amount1.toString()).multipliedBy(new BigNumber(10).pow(token1.decimals)).toString(10),
-        ],
+        amounts: [event.amount0.toString(), event.amount1.toString()],
         caller: normalizeAddress(event.sender),
         user: normalizeAddress(event.sender),
       });
@@ -239,10 +230,7 @@ export class UniswapHelper {
             : Number(event.transaction.blockNumber),
         action: 'withdraw',
         tokens: [token0, token1],
-        amounts: [
-          new BigNumber(event.amount0.toString()).multipliedBy(new BigNumber(10).pow(token0.decimals)).toString(10),
-          new BigNumber(event.amount1.toString()).multipliedBy(new BigNumber(10).pow(token1.decimals)).toString(10),
-        ],
+        amounts: [event.amount0.toString(), event.amount1.toString()],
         caller: normalizeAddress(event.sender),
         user: normalizeAddress(event.sender),
       });

@@ -11,7 +11,7 @@ import MongodbProvider from '../services/mongo';
   const collections = await mongodb.requireCollections();
 
   // update lending events
-  const cursor = await collections.stakingActionsCollection
+  const cursor = await collections.lendingActionsCollection
     .find({ protocol: { $exists: true } })
     .sort({ timestamp: 1 });
   while (await cursor.hasNext()) {
@@ -23,7 +23,7 @@ import MongodbProvider from '../services/mongo';
           updateOne: {
             filter: {
               chain: document.chain,
-              contract: normalizeAddress(document.contract),
+              // contract: normalizeAddress(document.contract),
               transactionHash: document.transactionHash,
               logIndex: document.logIndex,
             },
@@ -45,7 +45,7 @@ import MongodbProvider from '../services/mongo';
                 addition: document.addition,
               },
             },
-            upsert: true,
+            upsert: false,
           },
         });
       } else {
