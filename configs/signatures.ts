@@ -227,6 +227,10 @@ export const Signatures: { [key: string]: string } = {
   // bancor
   'Conversion(address,address,address,uint256,uint256,address)':
     '0x7154b38b5dd31bb3122436a96d4e09aba5b323ae1fd580025fab55074334c095',
+  'TokensDeposited(bytes32,address,uint256,uint256,uint256)':
+    '0x98ac1ba20f9c40c6579f93634a34a46bd425744a5ef297e4c739ba0ce1d7f6b5',
+  'TokensWithdrawn(bytes32,address,uint256,uint256,uint256,uint256)':
+    '0x2d3e6c9d7b23425696e79d70b11c80ff35e7e65291f79a03f9aef35570686351',
 
   // pancakeswap v3
   'Swap(address,address,int256,int256,uint160,uint128,int24,uint128,uint128)':

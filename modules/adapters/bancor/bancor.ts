@@ -2,6 +2,7 @@ import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import BancorNetworkAbi from '../../../configs/abi/bancor/BancorNetwork.json';
+import { Tokens } from '../../../configs/constants';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
@@ -17,6 +18,8 @@ const Signatures = {
   Withdraw: '0xeab8ac9e9478a4b3c37a794ecef629b8a8bbcd96f9eaeac8ed26054d144da52d',
   Flashloan: '0x0da3485ef1bb570df7bb888887eae5aa01d81b83cd8ccc80c0ea0922a677ecef',
   Conversion: '0x7154b38b5dd31bb3122436a96d4e09aba5b323ae1fd580025fab55074334c095',
+  TokensDeposited: '0x98ac1ba20f9c40c6579f93634a34a46bd425744a5ef297e4c739ba0ce1d7f6b5',
+  TokensWithdrawn: '0x2d3e6c9d7b23425696e79d70b11c80ff35e7e65291f79a03f9aef35570686351',
 };
 
 export class BancorAdapter extends Adapter {
@@ -29,6 +32,8 @@ export class BancorAdapter extends Adapter {
       [Signatures.Withdraw]: EventSignatureMapping[Signatures.Withdraw],
       [Signatures.Flashloan]: EventSignatureMapping[Signatures.Flashloan],
       [Signatures.Conversion]: EventSignatureMapping[Signatures.Conversion],
+      [Signatures.TokensDeposited]: EventSignatureMapping[Signatures.TokensDeposited],
+      [Signatures.TokensWithdrawn]: EventSignatureMapping[Signatures.TokensWithdrawn],
     });
   }
 
@@ -69,6 +74,23 @@ export class BancorAdapter extends Adapter {
       } catch (e: any) {
         return null;
       }
+    }
+
+    if (signature === Signatures.TokensDeposited || signature === Signatures.TokensWithdrawn) {
+      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+      const user = normalizeAddress(event.provider);
+      const amount = new BigNumber(event.bntAmount).dividedBy(1e18).toString(10);
+
+      return {
+        protocol: this.config.protocol,
+        action: signature === Signatures.TokensDeposited ? 'deposit' : 'withdraw',
+        addresses: [user],
+        tokens: [Tokens.ethereum.BNT],
+        tokenAmounts: [amount],
+        readableString: `${user} ${signature === Signatures.TokensDeposited ? 'deposit' : 'withdraw'} ${amount} ${
+          Tokens.ethereum.BNT.symbol
+        } on ${this.config.protocol} chain ${chain}`,
+      };
     }
 
     if (this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {

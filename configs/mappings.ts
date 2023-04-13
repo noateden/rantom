@@ -4688,4 +4688,79 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+
+  [Signatures['TokensDeposited(bytes32,address,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'contextId',
+        type: 'bytes32',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'provider',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'bntAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'poolTokenAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'vbntAmount',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['TokensWithdrawn(bytes32,address,uint256,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'contextId',
+        type: 'bytes32',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'provider',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'bntAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'poolTokenAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'vbntAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'withdrawalFeeAmount',
+        type: 'uint256',
+      },
+    ],
+  },
 };
