@@ -8,6 +8,10 @@ export function createPasswordHash(plainText: string): string {
   return crypto.createHash(PasswordHashAlgorithm).update(plainText).digest('hex');
 }
 
+export function createDataHash(plainText: string): string {
+  return crypto.createHash('sha1').update(plainText).digest('hex');
+}
+
 export function signJwtToken(data: any, expired: string, secret: string): string {
   return jwt.sign(data, secret, { expiresIn: expired });
 }
