@@ -1063,3 +1063,70 @@ export const ApecoinConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const GearboxConfigs: ProtocolConfig = {
+  protocol: 'gearbox',
+  contracts: {
+    ethereum: [
+      '0xa7df60785e556d65292a2c9a077bb3a8fbf048bc', // Airdrop distributor
+      '0x24946bcbbd028d5abb62ad9b635eb1b1a67af668', // Pool DAI
+      '0x79012c8d491dcf3a30db20d1f449b14caf01da6c', // Pool FRAX
+      '0x86130bdd69143d8a4e5fc50bf4323d48049e98e4', // Pool USDC
+      '0xb2a015c71c17bcac6af36645dead8c572ba08a08', // Pool WBTC
+      '0xb8cf3ed326bb0e51454361fb37e9e8df6dc5c286', // Pool wstETH
+    ],
+  },
+  customEventMapping: {
+    [Signatures['Borrow(address,address,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'creditManager',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'creditAccount',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount',
+          type: 'uint256',
+        },
+      ],
+    },
+  },
+  staticData: {
+    pools: [
+      {
+        chain: 'ethereum',
+        address: '0x24946bcbbd028d5abb62ad9b635eb1b1a67af668',
+        token: Tokens.ethereum.DAI,
+      },
+      {
+        chain: 'ethereum',
+        address: '0x79012c8d491dcf3a30db20d1f449b14caf01da6c',
+        token: Tokens.ethereum.FRAX,
+      },
+      {
+        chain: 'ethereum',
+        address: '0x86130bdd69143d8a4e5fc50bf4323d48049e98e4',
+        token: Tokens.ethereum.USDC,
+      },
+      {
+        chain: 'ethereum',
+        address: '0xb2a015c71c17bcac6af36645dead8c572ba08a08',
+        token: Tokens.ethereum.WBTC,
+      },
+      {
+        chain: 'ethereum',
+        address: '0xb8cf3ed326bb0e51454361fb37e9e8df6dc5c286',
+        token: Tokens.ethereum.wstETH,
+      },
+    ],
+  },
+};

@@ -268,4 +268,10 @@ export const Signatures: { [key: string]: string } = {
   'ClaimRewards(address,uint256,address)': '0x030f754a3e747235920c21afeca14e881b260d41c7e657ada6c0b049f7eebca9',
   'ClaimRewardsNft(address,uint256,uint256,uint256)':
     '0xd334b3114fc25cbd72389ff9c361d5f8b0924e35fa237c65ac209a2cdcf4ba13',
+
+  // gearbox
+  'AddLiquidity(address,address,uint256,uint256)': '0xd2491a9b4fe81a7cd4511e8b7b7743951b061dad5bed7da8a7795b080ee08c7e',
+  'RemoveLiquidity(address,address,uint256)': '0xd8ae9b9ba89e637bcb66a69ac91e8f688018e81d6f92c57e02226425c8efbdf6',
+  'Repay(address,uint256,uint256,uint256)': '0x2fe77b1c99aca6b022b8efc6e3e8dd1b48b30748709339b65c50ef3263443e09',
+  'Claimed(address,uint256,bool)': '0xfa8256f7c08bb01a03ea96f8b3a904a4450311c9725d1c52cdbe21ed3dc42dcc',
 };

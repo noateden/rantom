@@ -125,6 +125,12 @@
     "symbol": "FRAX",
     "decimals": 18
   },
+  "GEAR": {
+    "chain": "ethereum",
+    "address": "0xba3335588d9403515223f109edc4eb7269a9ab5d",
+    "symbol": "GEAR",
+    "decimals": 18
+  },
   "GUSD": {
     "chain": "ethereum",
     "address": "0x056fd409e1d7a124bd7017459dfea2f387b6d5cd",

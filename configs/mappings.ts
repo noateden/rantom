@@ -5156,4 +5156,104 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['AddLiquidity(address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'sender',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'onBehalfOf',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'referralCode',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['RemoveLiquidity(address,address,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'sender',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'to',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['Repay(address,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'creditManager',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'borrowedAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'profit',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'loss',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['Claimed(address,uint256,bool)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'bool',
+        name: 'historic',
+        type: 'bool',
+      },
+    ],
+  },
 };

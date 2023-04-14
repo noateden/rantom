@@ -19,6 +19,7 @@ import {
   Eth2Configs,
   EulerConfigs,
   FraxswapConfigs,
+  GearboxConfigs,
   HopConfigs,
   IronbankConfigs,
   LidoConfigs,
@@ -63,6 +64,7 @@ import { CurveAdapter } from './curve/curve';
 import { EnsAdapter } from './ens/ens';
 import { Eth2Adapter } from './eth2/eth2';
 import { EulerAdapter } from './euler/euler';
+import { GearboxAdapter } from './gearbox/gearbox';
 import { HopAdapter } from './hop/hop';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { LidoAdapter } from './lido/lido';
@@ -137,5 +139,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
 
     new SushiAdapter(SushiConfigs, providers),
     new BeefyAdapter(BeefyConfigs, providers),
+    new GearboxAdapter(GearboxConfigs, providers),
   ];
 }

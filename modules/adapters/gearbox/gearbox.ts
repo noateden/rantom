@@ -1,0 +1,90 @@
+import BigNumber from 'bignumber.js';
+import Web3 from 'web3';
+
+import { Tokens } from '../../../configs/constants';
+import { EventSignatureMapping } from '../../../configs/mappings';
+import { compareAddress, normalizeAddress } from '../../../lib/helper';
+import { ProtocolConfig } from '../../../types/configs';
+import { KnownAction, TransactionAction } from '../../../types/domains';
+import { GlobalProviders } from '../../../types/namespaces';
+import { AdapterParseLogOptions } from '../../../types/options';
+import { Adapter } from '../adapter';
+
+const Signatures: { [key: string]: string } = {
+  AddLiquidity: '0xd2491a9b4fe81a7cd4511e8b7b7743951b061dad5bed7da8a7795b080ee08c7e',
+  RemoveLiquidity: '0xd8ae9b9ba89e637bcb66a69ac91e8f688018e81d6f92c57e02226425c8efbdf6',
+  Borrow: '0x312a5e5e1079f5dda4e95dbbd0b908b291fd5b992ef22073643ab691572c5b52',
+  Repay: '0x2fe77b1c99aca6b022b8efc6e3e8dd1b48b30748709339b65c50ef3263443e09',
+  Claimed: '0xfa8256f7c08bb01a03ea96f8b3a904a4450311c9725d1c52cdbe21ed3dc42dcc',
+};
+
+export class GearboxAdapter extends Adapter {
+  public readonly name: string = 'adapter.gearbox';
+
+  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
+    super(config, providers, {
+      [Signatures.AddLiquidity]: EventSignatureMapping[Signatures.AddLiquidity],
+      [Signatures.RemoveLiquidity]: EventSignatureMapping[Signatures.RemoveLiquidity],
+      [Signatures.Borrow]: config.customEventMapping
+        ? config.customEventMapping[Signatures.Borrow]
+        : EventSignatureMapping[Signatures.Borrow],
+      [Signatures.Repay]: EventSignatureMapping[Signatures.Repay],
+      [Signatures.Claimed]: EventSignatureMapping[Signatures.Claimed],
+    });
+  }
+
+  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
+    const { chain, address, topics, data } = options;
+
+    const signature = topics[0];
+    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
+      const web3 = new Web3();
+      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+
+      if (signature === Signatures.Claimed) {
+        const user = normalizeAddress(event.account);
+        const amount = new BigNumber(event.amount).dividedBy(1e18).toString(10);
+
+        return {
+          protocol: this.config.protocol,
+          action: 'collect',
+          tokens: [Tokens.ethereum.GEAR],
+          tokenAmounts: [amount],
+          addresses: [user],
+          readableString: `${user} collect ${amount} ${Tokens.ethereum.GEAR.symbol} on ${this.config.protocol} chain ${options.chain}`,
+        };
+      } else {
+        let token = null;
+        if (this.config.staticData) {
+          for (const pool of this.config.staticData.pools) {
+            if (compareAddress(pool.address, address)) {
+              token = pool.token;
+            }
+          }
+        }
+
+        if (token) {
+          const sender = event.sender ? normalizeAddress(event.sender) : normalizeAddress(event.creditManager);
+          const amount = new BigNumber(event.amount ? event.amount : event.borrowAmount)
+            .dividedBy(new BigNumber(10).pow(token.decimals))
+            .toString(10);
+          let action: KnownAction = 'deposit';
+          if (signature === Signatures.RemoveLiquidity || signature === Signatures.Borrow) {
+            action = 'withdraw';
+          }
+
+          return {
+            protocol: this.config.protocol,
+            action: action,
+            tokens: [token],
+            tokenAmounts: [amount],
+            addresses: [sender],
+            readableString: `${sender} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${options.chain}`,
+          };
+        }
+      }
+    }
+
+    return null;
+  }
+}

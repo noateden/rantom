@@ -63,6 +63,7 @@ yarn start --help
 |      Beefy       | Transfer, Staked, Withdrawn, RewardPaid                                                    |     🌱 |
 |     Fraxlend     | Deposit, Withdraw, AddCollateral, RemoveCollateral, BorrowAsset, RepayAsset, Liquidate     |     🌱 |
 |     Apecoin      | Deposit, DepositNft, Withdraw, WithdrawNft, ClaimRewards, ClaimRewardsNft                  |     🌱 |
+|     Gearbox      | AddLiquidity, RemoveLiquidity, Borrow, Repay, Claimed                                      |     🌱 |
 
 ### Nft Marketplace
 
