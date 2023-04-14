@@ -76,88 +76,87 @@ export class BancorAdapter extends Adapter {
       }
     }
 
-    if (signature === Signatures.TokensDeposited || signature === Signatures.TokensWithdrawn) {
-      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
-      const user = normalizeAddress(event.provider);
-      const amount = new BigNumber(event.bntAmount).dividedBy(1e18).toString(10);
-
-      return {
-        protocol: this.config.protocol,
-        action: signature === Signatures.TokensDeposited ? 'deposit' : 'withdraw',
-        addresses: [user],
-        tokens: [Tokens.ethereum.BNT],
-        tokenAmounts: [amount],
-        readableString: `${user} ${signature === Signatures.TokensDeposited ? 'deposit' : 'withdraw'} ${amount} ${
-          Tokens.ethereum.BNT.symbol
-        } on ${this.config.protocol} chain ${chain}`,
-      };
-    }
-
     if (this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
-      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+      if (signature === Signatures.TokensDeposited || signature === Signatures.TokensWithdrawn) {
+        const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+        const user = normalizeAddress(event.provider);
+        const amount = new BigNumber(event.bntAmount).dividedBy(1e18).toString(10);
 
-      switch (signature) {
-        case Signatures.Trade: {
-          const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event.sourceToken);
-          const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event.targetToken);
+        return {
+          protocol: this.config.protocol,
+          action: signature === Signatures.TokensDeposited ? 'deposit' : 'withdraw',
+          addresses: [user],
+          tokens: [Tokens.ethereum.BNT],
+          tokenAmounts: [amount],
+          readableString: `${user} ${signature === Signatures.TokensDeposited ? 'deposit' : 'withdraw'} ${amount} ${
+            Tokens.ethereum.BNT.symbol
+          } on ${this.config.protocol} chain ${chain}`,
+        };
+      } else {
+        const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+        switch (signature) {
+          case Signatures.Trade: {
+            const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event.sourceToken);
+            const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event.targetToken);
 
-          if (token0 && token1) {
-            const trader = normalizeAddress(event.trader);
-            const amount0 = new BigNumber(event.sourceAmount)
-              .dividedBy(new BigNumber(10).pow(token0.decimals))
-              .toString(10);
-            const amount1 = new BigNumber(event.targetAmount)
-              .dividedBy(new BigNumber(10).pow(token1.decimals))
-              .toString(10);
+            if (token0 && token1) {
+              const trader = normalizeAddress(event.trader);
+              const amount0 = new BigNumber(event.sourceAmount)
+                .dividedBy(new BigNumber(10).pow(token0.decimals))
+                .toString(10);
+              const amount1 = new BigNumber(event.targetAmount)
+                .dividedBy(new BigNumber(10).pow(token1.decimals))
+                .toString(10);
 
-            return {
-              protocol: this.config.protocol,
-              action: 'swap',
-              addresses: [trader],
-              tokens: [token0, token1],
-              tokenAmounts: [amount0, amount1],
-              readableString: `${trader} swap ${amount0} ${token0.symbol} for ${amount1} ${token0.symbol} on ${this.config.protocol} chain ${chain}`,
-            };
+              return {
+                protocol: this.config.protocol,
+                action: 'swap',
+                addresses: [trader],
+                tokens: [token0, token1],
+                tokenAmounts: [amount0, amount1],
+                readableString: `${trader} swap ${amount0} ${token0.symbol} for ${amount1} ${token0.symbol} on ${this.config.protocol} chain ${chain}`,
+              };
+            }
+            break;
           }
-          break;
-        }
-        case Signatures.Deposit:
-        case Signatures.Withdraw: {
-          const token = await this.getWeb3Helper().getErc20Metadata(chain, event.token);
-          if (token) {
-            const provider = normalizeAddress(event.provider);
-            const amount = new BigNumber(event.baseTokenAmount)
-              .dividedBy(new BigNumber(10).pow(token.decimals))
-              .toString(10);
+          case Signatures.Deposit:
+          case Signatures.Withdraw: {
+            const token = await this.getWeb3Helper().getErc20Metadata(chain, event.token);
+            if (token) {
+              const provider = normalizeAddress(event.provider);
+              const amount = new BigNumber(event.baseTokenAmount)
+                .dividedBy(new BigNumber(10).pow(token.decimals))
+                .toString(10);
 
-            return {
-              protocol: this.config.protocol,
-              action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
-              addresses: [provider],
-              tokens: [token],
-              tokenAmounts: [amount],
-              readableString: `${provider} ${signature === Signatures.Deposit ? 'add' : 'remove'} ${amount} ${
-                token.symbol
-              } on ${this.config.protocol} chain ${chain}`,
-            };
+              return {
+                protocol: this.config.protocol,
+                action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
+                addresses: [provider],
+                tokens: [token],
+                tokenAmounts: [amount],
+                readableString: `${provider} ${signature === Signatures.Deposit ? 'add' : 'remove'} ${amount} ${
+                  token.symbol
+                } on ${this.config.protocol} chain ${chain}`,
+              };
+            }
+            break;
           }
-          break;
-        }
-        case Signatures.Flashloan: {
-          const token = await this.getWeb3Helper().getErc20Metadata(chain, event.token);
+          case Signatures.Flashloan: {
+            const token = await this.getWeb3Helper().getErc20Metadata(chain, event.token);
 
-          if (token) {
-            const borrower = normalizeAddress(event.borrower);
-            const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
+            if (token) {
+              const borrower = normalizeAddress(event.borrower);
+              const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
 
-            return {
-              protocol: this.config.protocol,
-              action: 'flashloan',
-              addresses: [borrower],
-              tokens: [token],
-              tokenAmounts: [amount],
-              readableString: `${borrower} flashloan ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-            };
+              return {
+                protocol: this.config.protocol,
+                action: 'flashloan',
+                addresses: [borrower],
+                tokens: [token],
+                tokenAmounts: [amount],
+                readableString: `${borrower} flashloan ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+              };
+            }
           }
         }
       }

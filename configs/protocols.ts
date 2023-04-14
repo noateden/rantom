@@ -388,6 +388,7 @@ export const BancorConfigs: ProtocolConfig = {
     ethereum: [
       '0xeef417e1d5cc832e619ae18d2f140de2999dd4fb', // BancorNetwork v3
       '0xd982e001491d414c857f2a1aaa4b43ccf9f642b4', // BancorNetwork v3 Pool
+      '0x02651e355d26f3506c1e644ba393fdd9ac95eaca', // BNT Pool
     ],
   },
   staticData: {

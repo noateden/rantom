@@ -38,7 +38,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xa57b8d98dae62b26ec3bcc4a365338157060b234', // Aura booster
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault
     '0xeef417e1d5cc832e619ae18d2f140de2999dd4fb', // Bancor network v3
-    '0xd982e001491d414c857f2a1aaa4b43ccf9f642b4', // Bancor Pool v3
+    '0xd982e001491d414c857f2a1aaa4b43ccf9f642b4', // Bancor pool v3
+    '0x02651e355d26f3506c1e644ba393fdd9ac95eaca', // Bancor BNT pool
     '0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5', // Beanstalk
     '0xe65cdb6479bac1e22340e4e755fae7e509ecd06c', // Compound AAVE
     '0x6c8c6b02e7b2be14d4fa6022dfd6d75921d90e4e', // Compound BAT
