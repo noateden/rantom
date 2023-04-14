@@ -1054,3 +1054,12 @@ export const FraxlendConfigs: ProtocolConfig = {
     pairs: FraxlendPairs,
   },
 };
+
+export const ApecoinConfigs: ProtocolConfig = {
+  protocol: 'apecoin',
+  contracts: {
+    ethereum: [
+      '0x5954ab967bc958940b7eb73ee84797dc8a2afbb9', // APE staking
+    ],
+  },
+};

@@ -62,6 +62,7 @@ yarn start --help
 |   Silo Finance   | Deposit, Withdraw, Borrow, Repay, Liquidate                                                |     🌱 |
 |      Beefy       | Transfer, Staked, Withdrawn, RewardPaid                                                    |     🌱 |
 |     Fraxlend     | Deposit, Withdraw, AddCollateral, RemoveCollateral, BorrowAsset, RepayAsset, Liquidate     |     🌱 |
+|     Apecoin      | Deposit, DepositNft, Withdraw, WithdrawNft, ClaimRewards, ClaimRewardsNft                  |     🌱 |
 
 ### Nft Marketplace
 

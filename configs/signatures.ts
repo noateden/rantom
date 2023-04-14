@@ -258,4 +258,14 @@ export const Signatures: { [key: string]: string } = {
   'RepayAsset(address,address,uint256,uint256)': '0x9dc1449a0ff0c152e18e8289d865b47acc6e1b76b1ecb239c13d6ee22a9206a7',
   'Liquidate(address,uint256,uint256,uint256,uint256,uint256)':
     '0x35f432a64bd3767447a456650432406c6cacb885819947a202216eeea6820ecf',
+
+  // apecoin
+  'Deposit(address,uint256,address)': '0xe31c7b8d08ee7db0afa68782e1028ef92305caeea8626633ad44d413e30f6b2f',
+  'DepositNft(address,uint256,uint256,uint256)': '0x8863bdbe28273fa04cbc67c9e51785cff607a419b43ee367e4c3c01edb1d7b56',
+  'Withdraw(address,uint256,address)': '0x56c54ba9bd38d8fd62012e42c7ee564519b09763c426d331b3661b537ead19b2',
+  'WithdrawNft(address,uint256,uint256,address,uint256)':
+    '0x46916533b23d6665275e4143ec7eeb4b6b4ae92178ebbfe99f112564d2c7b1aa',
+  'ClaimRewards(address,uint256,address)': '0x030f754a3e747235920c21afeca14e881b260d41c7e657ada6c0b049f7eebca9',
+  'ClaimRewardsNft(address,uint256,uint256,uint256)':
+    '0xd334b3114fc25cbd72389ff9c361d5f8b0924e35fa237c65ac209a2cdcf4ba13',
 };
