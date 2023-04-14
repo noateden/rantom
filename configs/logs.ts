@@ -116,6 +116,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x86130bdd69143d8a4e5fc50bf4323d48049e98e4', // Gearbox Pool USDC
     '0xb2a015c71c17bcac6af36645dead8c572ba08a08', // Gearbox Pool WBTC
     '0xb8cf3ed326bb0e51454361fb37e9e8df6dc5c286', // Gearbox Pool wstETH
+    '0x000000000000ad05ccc4f10045630fb830b95127', // Blur Marketplace
   ],
 };
 
