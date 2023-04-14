@@ -109,6 +109,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x1097053fd2ea711dad45caccc45eff7548fcb362', // Pancakeswap factory v2
     '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865', // Pancakeswap factory v3
     '0x5954ab967bc958940b7eb73ee84797dc8a2afbb9', // APE staking
+    '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // 0x exchange
   ],
 };
 
