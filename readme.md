@@ -61,6 +61,7 @@ yarn start --help
 |     Stargate     | Mint, Burn, Swap, SwapRemote                                                               |     🌱 |
 |   Silo Finance   | Deposit, Withdraw, Borrow, Repay, Liquidate                                                |     🌱 |
 |      Beefy       | Transfer, Staked, Withdrawn, RewardPaid                                                    |     🌱 |
+|     Fraxlend     | Deposit, Withdraw, AddCollateral, RemoveCollateral, BorrowAsset, RepayAsset, Liquidate     |     🌱 |
 
 ### Nft Marketplace
 

@@ -1,0 +1,162 @@
+[
+  {
+    "chain": "ethereum",
+    "address": "0x794f6b13fbd7eb7ef10d1ed205c9a416910207ff",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    },
+    "collateral": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x32467a5fc2d72d21e8dce990906547a2b012f382",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    },
+    "collateral": {
+      "chain": "ethereum",
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "symbol": "WBTC",
+      "decimals": 8
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x78bb3aec3d855431bd9289fd98da13f9ebb7ef15",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    },
+    "collateral": {
+      "chain": "ethereum",
+      "address": "0xac3e018457b222d93114458476f3e3416abbe38f",
+      "symbol": "sfrxETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x3a25b9ab8c07ffefee614531c75905e810d8a239",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    },
+    "collateral": {
+      "chain": "ethereum",
+      "address": "0x4d224452801aced8b2f0aebe155379bb5d594381",
+      "symbol": "APE",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xdbe88dbac39263c47629ebba02b3ef4cf0752a72",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    },
+    "collateral": {
+      "chain": "ethereum",
+      "address": "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
+      "symbol": "FXS",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x74f82bd9d0390a4180daaec92d64cf0708751759",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    },
+    "collateral": {
+      "chain": "ethereum",
+      "address": "0x5ca135cb8527d76e932f34b5145575f9d8cbe08e",
+      "symbol": "FPI",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xa1d100a5bf6bfd2736837c97248853d989a9ed84",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    },
+    "collateral": {
+      "chain": "ethereum",
+      "address": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+      "symbol": "CVX",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x3835a58ca93cdb5f912519ad366826ac9a752510",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    },
+    "collateral": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x66bf36dba79d4606039f04b32946a260bcd3ff52",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    },
+    "collateral": {
+      "chain": "ethereum",
+      "address": "0x0ab87046fbb341d058f17cbc4c1133f25a20a52f",
+      "symbol": "gOHM",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x82ec28636b77661a95f021090f6be0c8d379dd5d",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    },
+    "collateral": {
+      "chain": "ethereum",
+      "address": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+      "symbol": "MKR",
+      "decimals": 18
+    }
+  }
+]

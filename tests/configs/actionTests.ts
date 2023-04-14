@@ -15,6 +15,7 @@ import { CurveActionTestLogs } from './protocols/curve';
 import { EnsActionTestLogs } from './protocols/ens';
 import { Eth2ActionTestLogs } from './protocols/eth2';
 import { EulerActionTestLogs } from './protocols/euler';
+import { FraxlendActionTestLogs } from './protocols/fraxlend';
 import { HopActionTestLogs } from './protocols/hop';
 import { IronbankActionTestLogs } from './protocols/ironbank';
 import { LidoActionTestLogs } from './protocols/lido';
@@ -76,4 +77,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...StargateActionTestLogs,
   ...SiloActionTestLogs,
   ...BeefyActionTestLogs,
+  ...FraxlendActionTestLogs,
 ];

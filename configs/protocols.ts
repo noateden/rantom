@@ -8,6 +8,7 @@ import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
 import AuraFinanceBoosterPoolsData from './data/AuraFinanceBoosterPools.json';
 import BeefyVaults from './data/BeefyVaults.json';
 import ConvexBoosterPoolsData from './data/ConvexBoosterPools.json';
+import FraxlendPairs from './data/FraxlendPairs.json';
 import SushiPools from './data/SushiPools.json';
 import { Signatures } from './signatures';
 
@@ -1041,5 +1042,15 @@ export const BeefyConfigs: ProtocolConfig = {
   },
   staticData: {
     vaults: BeefyVaults,
+  },
+};
+
+export const FraxlendConfigs: ProtocolConfig = {
+  protocol: 'fraxlend',
+  contracts: {
+    ethereum: FraxlendPairs.map((item) => item.address),
+  },
+  staticData: {
+    pairs: FraxlendPairs,
   },
 };

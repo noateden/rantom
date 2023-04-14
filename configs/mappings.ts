@@ -4792,4 +4792,212 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Deposit(address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'caller',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'owner',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'assets',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'shares',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['Withdraw(address,address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'caller',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'receiver',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'owner',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'assets',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'shares',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['BorrowAsset(address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_borrower',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_receiver',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_borrowAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_sharesAdded',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['AddCollateral(address,address,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_sender',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_borrower',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_collateralAmount',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['RemoveCollateral(address,uint256,address,address)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_sender',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_collateralAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_receiver',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_borrower',
+        type: 'address',
+      },
+    ],
+  },
+  [Signatures['RepayAsset(address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_payer',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_borrower',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_amountToRepay',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_shares',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['Liquidate(address,uint256,uint256,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_borrower',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_collateralForLiquidator',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_sharesToLiquidate',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_amountLiquidatorToRepay',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_sharesToAdjust',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_amountToAdjust',
+        type: 'uint256',
+      },
+    ],
+  },
 };
