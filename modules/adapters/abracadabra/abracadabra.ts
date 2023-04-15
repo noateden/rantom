@@ -51,9 +51,9 @@ export class AbracadabraAdapter extends Adapter {
 
     const signature = topics[0];
     const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-    const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
     if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(address) !== -1) {
+      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
       if (signature === Signatures.Transfer) {
         // sSPELL staking
         const from = normalizeAddress(event.from);
@@ -98,6 +98,8 @@ export class AbracadabraAdapter extends Adapter {
         signature === Signatures.Withdraw ||
         signature === Signatures.ClaimReward
       ) {
+        const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
+
         // mSpell staking
         let token = Tokens.ethereum.SPELL;
         let action: KnownAction = 'deposit';
@@ -132,6 +134,7 @@ export class AbracadabraAdapter extends Adapter {
       }
 
       if (cauldronInfo) {
+        const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
         if (signature === Signatures.LogAddCollateral || signature === Signatures.LogRemoveCollateral) {
           const action: KnownAction = signature === Signatures.LogAddCollateral ? 'deposit' : 'withdraw';
           const from = normalizeAddress(event.from);
