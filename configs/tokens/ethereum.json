@@ -233,6 +233,12 @@
     "symbol": "SNX",
     "decimals": 18
   },
+  "SPELL": {
+    "chain": "ethereum",
+    "address": "0x090185f2135308bad17527004364ebcc2d37e5f6",
+    "symbol": "SPELL",
+    "decimals": 18
+  },
   "SUSHI": {
     "chain": "ethereum",
     "address": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",

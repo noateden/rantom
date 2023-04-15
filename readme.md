@@ -57,6 +57,7 @@ yarn start --help
 |  Euler Finance   | Deposit, Withdraw, Borrow, Repay, Liquidation                                              |     🌱 |
 |     Liquity      | TroveUpdated, TroveLiquidated                                                              |     🌱 |
 |   Abracadabra    | LogBorrow, LogRepay, LogAddCollateral, LogRemoveCollateral, LogLiquidation                 |     🌱 |
+|                  | Transfer, Deposit, Withdraw, ClaimReward                                                   |     🌱 |
 |     MakerDao     | GemJoin, GemExit, DaiJoin, DaiExit, FlashLoan                                              |     🌱 |
 |     Stargate     | Mint, Burn, Swap, SwapRemote                                                               |     🌱 |
 |   Silo Finance   | Deposit, Withdraw, Borrow, Repay, Liquidate                                                |     🌱 |

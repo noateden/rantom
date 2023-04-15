@@ -729,7 +729,10 @@ export const LiquityConfigs: ProtocolConfig = {
 export const AbracadabraConfigs: ProtocolConfig = {
   protocol: 'abracadabra',
   contracts: {
-    ethereum: [],
+    ethereum: [
+      '0x26fa3fffb6efe8c1e69103acb4044c26b9a106a9', // sSPELL
+      '0xbd2fbaf2dc95bd78cf1cd3c5235b33d1165e6797', // mSPELL
+    ],
   },
   staticData: {
     magicInternetMoney: {

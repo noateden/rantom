@@ -1,6 +1,8 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
+import ERC20Abi from '../../../configs/abi/ERC20.json';
+import { AddressZero, Tokens } from '../../../configs/constants';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
@@ -17,6 +19,14 @@ const Signatures = {
   LogBorrow: '0xb92cb6bca8e3270b9170930f03b17571e55791acdb1a0e9f339eec88bdb35e24',
   LogRepay: '0xc8e512d8f188ca059984b5853d2bf653da902696b8512785b182b2c813789a6e',
   LogLiquidation: '0x66b108dc29b952efc76dccea9b82dce6b59fab4d9af73d8dcc9789afcad5daf6',
+
+  // for sSPELL deposit/withdraw
+  Transfer: '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
+
+  // for mSPELL deposit/withdraw/collect
+  Deposit: '0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c',
+  Withdraw: '0x884edad9ce6fa2440d8a54cc123490eb96d2768479d49ff9c7366125a9424364',
+  ClaimReward: '0xba8de60c3403ec381d1d484652ea1980e3c3e56359195c92525bff4ce47ad98e',
 };
 
 export class AbracadabraAdapter extends Adapter {
@@ -29,6 +39,10 @@ export class AbracadabraAdapter extends Adapter {
       [Signatures.LogBorrow]: EventSignatureMapping[Signatures.LogBorrow],
       [Signatures.LogRepay]: EventSignatureMapping[Signatures.LogRepay],
       [Signatures.LogLiquidation]: EventSignatureMapping[Signatures.LogLiquidation],
+      [Signatures.Transfer]: EventSignatureMapping[Signatures.Transfer],
+      [Signatures.Deposit]: EventSignatureMapping[Signatures.Deposit],
+      [Signatures.Withdraw]: EventSignatureMapping[Signatures.Withdraw],
+      [Signatures.ClaimReward]: EventSignatureMapping[Signatures.ClaimReward],
     });
   }
 
@@ -36,10 +50,78 @@ export class AbracadabraAdapter extends Adapter {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
-    if (EventSignatureMapping[signature]) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+    const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
+    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(address) !== -1) {
+      if (signature === Signatures.Transfer) {
+        // sSPELL staking
+        const from = normalizeAddress(event.from);
+        const to = normalizeAddress(event.to);
+        if (compareAddress(from, AddressZero) || compareAddress(to, AddressZero)) {
+          let blockNumber = 0;
+          if (options.context) {
+            blockNumber = options.context.blockNumber;
+          } else {
+            const tx = await web3.eth.getTransactionReceipt(options.hash as string);
+            blockNumber = tx.blockNumber;
+          }
+
+          if (blockNumber > 0) {
+            // SPELL amount = sSPELL amount * SPELL per sSPELL
+            // SPELL per sSPELL = SPELL balance / sSPELL total supply
+            const spellContract = new web3.eth.Contract(ERC20Abi as any, Tokens.ethereum.SPELL.address);
+            const sSpellContract = new web3.eth.Contract(ERC20Abi as any, address);
+
+            const [balance, supply] = await Promise.all([
+              spellContract.methods.balanceOf(address).call(blockNumber),
+              sSpellContract.methods.totalSupply().call(blockNumber),
+            ]);
+
+            const rate = new BigNumber(balance.toString()).dividedBy(new BigNumber(supply.toString()));
+            const spellAmount = new BigNumber(event.value.toString()).multipliedBy(rate).dividedBy(1e18).toString(10);
+            const action: KnownAction = compareAddress(from, AddressZero) ? 'deposit' : 'withdraw';
+            const user = compareAddress(from, AddressZero) ? to : from;
+
+            return {
+              protocol: this.config.protocol,
+              action: action,
+              addresses: [user],
+              tokens: [Tokens.ethereum.SPELL],
+              tokenAmounts: [spellAmount],
+              readableString: `${user} ${action} ${spellAmount} ${Tokens.ethereum.SPELL.symbol} on ${this.config.protocol} chain ${chain}`,
+            };
+          }
+        }
+      } else if (
+        signature === Signatures.Deposit ||
+        signature === Signatures.Withdraw ||
+        signature === Signatures.ClaimReward
+      ) {
+        // mSpell staking
+        let token = Tokens.ethereum.SPELL;
+        let action: KnownAction = 'deposit';
+        if (signature === Signatures.Withdraw) {
+          action = 'withdraw';
+        }
+        if (signature === Signatures.ClaimReward) {
+          action = 'collect';
+          token = Tokens.ethereum.MIM;
+        }
+
+        const user = normalizeAddress(event.user);
+        const amount = new BigNumber(event.amount).dividedBy(1e18).toString(10);
+
+        return {
+          protocol: this.config.protocol,
+          action: action,
+          addresses: [user],
+          tokens: [token],
+          tokenAmounts: [amount],
+          readableString: `${user} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+        };
+      }
+    } else {
       let cauldronInfo: AbracadabraCauldron | null = null;
       if (this.config.staticData && this.config.staticData.cauldrons) {
         for (const cauldron of this.config.staticData.cauldrons) {
