@@ -2,7 +2,6 @@ import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import CometAbi from '../../../configs/abi/compound/Comet.json';
-import { Compoundv3Pool } from '../../../configs/contracts/compound';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
@@ -11,6 +10,7 @@ import { KnownAction, TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { AdapterParseLogOptions } from '../../../types/options';
 import { Adapter } from '../adapter';
+import { CompoundMarketInfoV3 } from './helper';
 
 const Signatures = {
   Transfer: '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
@@ -43,11 +43,11 @@ export class Compoundv3Adapter extends Adapter {
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
       const context = await web3.eth.getTransactionReceipt(options.hash as string);
-      let poolConfig: Compoundv3Pool | null = null;
+      let poolConfig: CompoundMarketInfoV3 | null = null;
       if (this.config.staticData.pools) {
         for (const pool of this.config.staticData.pools) {
           if (compareAddress(address, pool.address)) {
-            poolConfig = pool as Compoundv3Pool;
+            poolConfig = pool as CompoundMarketInfoV3;
           }
         }
       }

@@ -1,14 +1,16 @@
 import { normalizeAddress } from '../lib/helper';
 import { ProtocolConfig } from '../types/configs';
 import { Tokens } from './constants';
-import { CompoundContracts, Compoundv3Contracts } from './contracts/compound';
 import { CurveContracts } from './contracts/curve';
 import { YearnContracts } from './contracts/yearn';
 import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
 import AuraFinanceBoosterPoolsData from './data/AuraFinanceBoosterPools.json';
 import BeefyVaults from './data/BeefyVaults.json';
+import CompoundMarkets from './data/CompoundMarkets.json';
+import CompoundMarketsV3 from './data/CompoundMarketsV3.json';
 import ConvexBoosterPoolsData from './data/ConvexBoosterPools.json';
 import FraxlendPairs from './data/FraxlendPairs.json';
+import IronbankMarkets from './data/IronbankMarkets.json';
 import SushiPools from './data/SushiPools.json';
 import { Signatures } from './signatures';
 
@@ -272,7 +274,7 @@ export const CompoundConfigs: ProtocolConfig = {
     },
   },
   staticData: {
-    pools: CompoundContracts,
+    pools: CompoundMarkets,
   },
 };
 
@@ -285,7 +287,7 @@ export const Compoundv3Configs: ProtocolConfig = {
     ],
   },
   staticData: {
-    pools: Compoundv3Contracts,
+    pools: CompoundMarketsV3,
   },
 };
 
@@ -338,6 +340,9 @@ export const IronbankConfigs: ProtocolConfig = {
         },
       ],
     },
+  },
+  staticData: {
+    pools: IronbankMarkets,
   },
 };
 
