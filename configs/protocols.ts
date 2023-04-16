@@ -1139,3 +1139,12 @@ export const GearboxConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const RaribleConfigs: ProtocolConfig = {
+  protocol: 'rarible',
+  contracts: {
+    ethereum: [
+      '0x09eab21c40743b2364b94345419138ef80f39e30', // Exchange v1
+    ],
+  },
+};

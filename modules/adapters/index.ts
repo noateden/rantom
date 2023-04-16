@@ -19,6 +19,7 @@ import {
   EnsConfigs,
   Eth2Configs,
   EulerConfigs,
+  FraxlendConfigs,
   FraxswapConfigs,
   GearboxConfigs,
   HopConfigs,
@@ -33,6 +34,7 @@ import {
   OptimismConfigs,
   PancakeswapConfigs,
   PancakeswapV3Configs,
+  RaribleConfigs,
   RocketpoolConfigs,
   ShibaswapConfigs,
   SiloConfigs,
@@ -66,6 +68,7 @@ import { CurveAdapter } from './curve/curve';
 import { EnsAdapter } from './ens/ens';
 import { Eth2Adapter } from './eth2/eth2';
 import { EulerAdapter } from './euler/euler';
+import { FraxlendAdapter } from './fraxlend/fraxlend';
 import { GearboxAdapter } from './gearbox/gearbox';
 import { HopAdapter } from './hop/hop';
 import { IronbankAdapter } from './ironbank/ironbank';
@@ -78,6 +81,7 @@ import { MultichainAdapter } from './multichain/multichain';
 import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
 import { Pancakeswapv3Adapter } from './pancakeswap/pancakeswapv3';
+import { RaribleAdapter } from './rarible/rarible';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SiloAdapter } from './silo/silo';
 import { StargateAdapter } from './stargate/stargate';
@@ -93,17 +97,13 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
   return [
     new LidoAdapter(LidoConfigs, providers),
     new CurveAdapter(CurveConfigs, providers),
-
     new BalancerAdapter(BalancerConfigs, providers),
-
     new Aavev1Adapter(Aavev1Configs, providers),
     new Aavev2Adapter(Aavev2Configs, providers),
     new Aavev3Adapter(Aavev3Configs, providers),
-
     new CompoundAdapter(CompoundConfigs, providers),
     new Compoundv3Adapter(Compoundv3Configs, providers),
     new IronbankAdapter(IronbankConfigs, providers),
-
     new RocketpoolAdapter(RocketpoolConfigs, providers),
     new CowswapAdapter(CowswapConfigs, providers),
     new LoopringAdapter(LoopringConfigs, providers),
@@ -130,18 +130,17 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new MakerAdapter(MakerConfigs, providers),
     new StargateAdapter(StargateConfigs, providers),
     new SiloAdapter(SiloConfigs, providers),
-
     new Uniswapv2Adapter(Uniswapv2Configs, providers),
     new Uniswapv2Adapter(PancakeswapConfigs, providers),
     new Uniswapv2Adapter(ShibaswapConfigs, providers),
     new Uniswapv2Adapter(FraxswapConfigs, providers),
-
     new Uniswapv3Adapter(Uniswapv3Configs, providers),
     new Pancakeswapv3Adapter(PancakeswapV3Configs, providers),
-
     new SushiAdapter(SushiConfigs, providers),
     new BeefyAdapter(BeefyConfigs, providers),
     new GearboxAdapter(GearboxConfigs, providers),
     new ApecoinAdapter(ApecoinConfigs, providers),
+    new FraxlendAdapter(FraxlendConfigs, providers),
+    new RaribleAdapter(RaribleConfigs, providers),
   ];
 }

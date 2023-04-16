@@ -279,4 +279,8 @@ export const Signatures: { [key: string]: string } = {
   'Deposit(address,uint256)': '0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c',
   'Withdraw(address,uint256)': '0x884edad9ce6fa2440d8a54cc123490eb96d2768479d49ff9c7366125a9424364',
   'ClaimReward(address,uint256)': '0xba8de60c3403ec381d1d484652ea1980e3c3e56359195c92525bff4ce47ad98e',
+
+  // rarible marketplace
+  'Buy(address,uint256,uint256,address,address,uint256,uint256,address,uint256,uint256)':
+    '0xdddcdb07e460849cf04a4445b7af9faf01b7f5c7ba75deaf969ac5ed830312c3',
 };

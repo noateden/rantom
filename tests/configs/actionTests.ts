@@ -30,6 +30,7 @@ import { OpenseaActionTestLogs } from './protocols/opensea';
 import { OptimismActionTestLogs } from './protocols/optimism';
 import { PancakeswapActionTestLogs } from './protocols/pancakeswap';
 import { ParaswapActionTestLogs } from './protocols/paraswap';
+import { RaribleActionTestLogs } from './protocols/rarible';
 import { RocketpoolActionTestLogs } from './protocols/rocketpool';
 import { SiloActionTestLogs } from './protocols/silo';
 import { StargateActionTestLogs } from './protocols/stargate';
@@ -82,4 +83,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...FraxlendActionTestLogs,
   ...ApecoinActionTestLogs,
   ...GearboxActionTestLogs,
+  ...RaribleActionTestLogs,
 ];
