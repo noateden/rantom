@@ -1,6 +1,7 @@
 import { ProtocolConfig } from '../types/configs';
 import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
 import BeefyVaults from './data/BeefyVaults.json';
+import FraxLendPairs from './data/FraxlendPairs.json';
 import YearnVaults from './data/YearnVaults.json';
 import {
   Aavev2Configs,
@@ -32,6 +33,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...AbracadabraCauldrons.map((item) => item.address),
     ...YearnVaults.map((item) => item.address),
     ...BeefyVaults.map((item) => item.address),
+    ...FraxLendPairs.map((item) => item.address),
 
     '0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9', // Aave lending pool v2
     '0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2', // Aave lending pool v3
@@ -120,6 +122,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x000000000000ad05ccc4f10045630fb830b95127', // Blur Marketplace
     '0x74312363e45dcaba76c59ec49a7aa8a65a67eed3', // X2y2 Exchange
     '0x09eab21c40743b2364b94345419138ef80f39e30', // Rarible Exchange
+    '0x26fa3fffb6efe8c1e69103acb4044c26b9a106a9', // sSPELL
+    '0xbd2fbaf2dc95bd78cf1cd3c5235b33d1165e6797', // mSPELL
   ],
 };
 
