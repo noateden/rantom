@@ -1,0 +1,52 @@
+[
+  {
+    "chain": "ethereum",
+    "address": "0x163538e22f4d38c1eb21b79939f3d2ee274198ff",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "symbol": "DAI",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x660e2fc185a9ffe722af253329ceaad4c9f6f928",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x8644c0fded361d1920e068ba4b09996e26729435",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "symbol": "WBTC",
+      "decimals": 8
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xc4d4500326981eacd020e20a81b1c479c161c7ef",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x3843c41da1d7909c86fad51c47b9a97cf62a29e1",
+    "asset": {
+      "chain": "ethereum",
+      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+      "symbol": "wstETH",
+      "decimals": 18
+    }
+  }
+]

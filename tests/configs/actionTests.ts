@@ -16,6 +16,7 @@ import { CurveActionTestLogs } from './protocols/curve';
 import { EnsActionTestLogs } from './protocols/ens';
 import { Eth2ActionTestLogs } from './protocols/eth2';
 import { EulerActionTestLogs } from './protocols/euler';
+import { ExactlyActionTestLogs } from './protocols/exactly';
 import { FraxlendActionTestLogs } from './protocols/fraxlend';
 import { GearboxActionTestLogs } from './protocols/gearbox';
 import { HopActionTestLogs } from './protocols/hop';
@@ -84,4 +85,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...ApecoinActionTestLogs,
   ...GearboxActionTestLogs,
   ...RaribleActionTestLogs,
+  ...ExactlyActionTestLogs,
 ];

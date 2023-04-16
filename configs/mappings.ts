@@ -5368,4 +5368,214 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Borrow(address,address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'caller',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'receiver',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'borrower',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'assets',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'shares',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['Repay(address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'caller',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'borrower',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'assets',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'shares',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['DepositAtMaturity(uint256,address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'maturity',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'caller',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'owner',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'assets',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'fee',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['WithdrawAtMaturity(uint256,address,address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'maturity',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'caller',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'receiver',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'owner',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'positionAssets',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'assets',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['BorrowAtMaturity(uint256,address,address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'maturity',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'caller',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'receiver',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'borrower',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'assets',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'fee',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['RepayAtMaturity(uint256,address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'maturity',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'caller',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'borrower',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'assets',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'positionAssets',
+        type: 'uint256',
+      },
+    ],
+  },
 };

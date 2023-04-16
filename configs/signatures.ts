@@ -283,4 +283,19 @@ export const Signatures: { [key: string]: string } = {
   // rarible marketplace
   'Buy(address,uint256,uint256,address,address,uint256,uint256,address,uint256,uint256)':
     '0xdddcdb07e460849cf04a4445b7af9faf01b7f5c7ba75deaf969ac5ed830312c3',
+
+  // exact.ly
+  'Borrow(address,address,address,uint256,uint256)':
+    '0x96558a334f4759f0e7c423d68c84721860bd8fbf94ddc4e55158ecb125ad04b5',
+  'Repay(address,address,uint256,uint256)': '0xe4a1ae657f49cb1fb1c7d3a94ae6093565c4c8c0e03de488f79c377c3c3a24e0',
+  'DepositAtMaturity(uint256,address,address,uint256,uint256)':
+    '0xd9900507c64720c1a5e11858a42769b599616268b832495aa6afe8b9dc566e76',
+  'WithdrawAtMaturity(uint256,address,address,address,uint256,uint256)':
+    '0xe57dbac0e7c42ad5f3b0fadb9c065565377cf771054fca70d35c96e01f9ec53c',
+  'BorrowAtMaturity(uint256,address,address,address,uint256,uint256)':
+    '0x66866b472f27d55d69496091bbd651907b2fb1041b3eeaca6e565ae5b5af4013',
+  'RepayAtMaturity(uint256,address,address,uint256,uint256)':
+    '0xf17fce321dd9fb005136a80c0bfb3789e455b7a70be9eb8922f1ad20a80d1a33',
+  'Liquidate(address,address,uint256,uint256,address,uint256)':
+    '0x67bb48f97d82192848c24158abf58ec614777328e19655e0a219652b773fd1db',
 };

@@ -19,6 +19,7 @@ import {
   EnsConfigs,
   Eth2Configs,
   EulerConfigs,
+  ExactlyConfigs,
   FraxlendConfigs,
   FraxswapConfigs,
   GearboxConfigs,
@@ -68,6 +69,7 @@ import { CurveAdapter } from './curve/curve';
 import { EnsAdapter } from './ens/ens';
 import { Eth2Adapter } from './eth2/eth2';
 import { EulerAdapter } from './euler/euler';
+import { ExactlyAdapter } from './exactly/exactly';
 import { FraxlendAdapter } from './fraxlend/fraxlend';
 import { GearboxAdapter } from './gearbox/gearbox';
 import { HopAdapter } from './hop/hop';
@@ -142,5 +144,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new ApecoinAdapter(ApecoinConfigs, providers),
     new FraxlendAdapter(FraxlendConfigs, providers),
     new RaribleAdapter(RaribleConfigs, providers),
+    new ExactlyAdapter(ExactlyConfigs, providers),
   ];
 }

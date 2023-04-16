@@ -9,6 +9,7 @@ import BeefyVaults from './data/BeefyVaults.json';
 import CompoundMarkets from './data/CompoundMarkets.json';
 import CompoundMarketsV3 from './data/CompoundMarketsV3.json';
 import ConvexBoosterPoolsData from './data/ConvexBoosterPools.json';
+import ExactlyMarkets from './data/ExactlyMarkets.json';
 import FraxlendPairs from './data/FraxlendPairs.json';
 import IronbankMarkets from './data/IronbankMarkets.json';
 import SushiPools from './data/SushiPools.json';
@@ -1146,5 +1147,79 @@ export const RaribleConfigs: ProtocolConfig = {
     ethereum: [
       '0x09eab21c40743b2364b94345419138ef80f39e30', // Exchange v1
     ],
+  },
+};
+
+export const ExactlyConfigs: ProtocolConfig = {
+  protocol: 'exactly',
+  contracts: {
+    ethereum: ExactlyMarkets.map((item) => item.address),
+  },
+  customEventMapping: {
+    [Signatures['Deposit(address,address,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'caller',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'owner',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'assets',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'shares',
+          type: 'uint256',
+        },
+      ],
+    },
+    [Signatures['Withdraw(address,address,address,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'caller',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'receiver',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'owner',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'assets',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'shares',
+          type: 'uint256',
+        },
+      ],
+    },
+  },
+  staticData: {
+    markets: ExactlyMarkets,
   },
 };

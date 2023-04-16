@@ -66,6 +66,8 @@ yarn start --help
 |     Apecoin      | Deposit, DepositNft, Withdraw, WithdrawNft, ClaimRewards, ClaimRewardsNft                  |     🌱 |
 |     Gearbox      | AddLiquidity, RemoveLiquidity, Borrow, Repay, Claimed                                      |     🌱 |
 |     Rarible      | Buy                                                                                        |     🌱 |
+|     Exactly      | Deposit, Withdraw, Borrow, Repay                                                           |     🌱 |
+|                  | DepositAtMaturity, WithdrawAtMaturity, BorrowAtMaturity, RepayAtMaturity                   |     🌱 |
 
 ### Nft Marketplace
 
