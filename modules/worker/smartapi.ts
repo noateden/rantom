@@ -28,7 +28,7 @@ export class SmartApiProvider implements ISmartApiProvider {
     if (cachingLogs.length > 0) {
       const caching = cachingLogs[0];
       const currentTime = getTimestamp();
-      if (caching.timestamp && caching.timestamp - currentTime <= 300) {
+      if (caching.timestamp && currentTime - caching.timestamp <= 300) {
         return caching.events;
       }
     }
