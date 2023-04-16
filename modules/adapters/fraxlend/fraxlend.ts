@@ -96,7 +96,7 @@ export class FraxlendAdapter extends Adapter {
               protocol: this.config.protocol,
               action: action,
               addresses: [borrower, sender],
-              tokens: [asset],
+              tokens: [collateral],
               tokenAmounts: [amount],
               readableString: `${borrower} ${action} ${amount} ${collateral.symbol} on ${this.config.protocol} chain ${chain}`,
             };
