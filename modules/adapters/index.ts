@@ -3,6 +3,7 @@ import {
   Aavev2Configs,
   Aavev3Configs,
   AbracadabraConfigs,
+  ApecoinConfigs,
   AurafinanceConfigs,
   BalancerConfigs,
   BancorConfigs,
@@ -49,6 +50,7 @@ import { Aavev1Adapter } from './aave/aavev1';
 import { Aavev2Adapter } from './aave/aavev2';
 import { Aavev3Adapter } from './aave/aavev3';
 import { AbracadabraAdapter } from './abracadabra/abracadabra';
+import { ApecoinAdapter } from './apecoin/apecoin';
 import { AurafinanceAdapter } from './aurafinance/aurafinance';
 import { BalancerAdapter } from './balancer/balancer';
 import { BancorAdapter } from './bancor/bancor';
@@ -140,5 +142,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new SushiAdapter(SushiConfigs, providers),
     new BeefyAdapter(BeefyConfigs, providers),
     new GearboxAdapter(GearboxConfigs, providers),
+    new ApecoinAdapter(ApecoinConfigs, providers),
   ];
 }

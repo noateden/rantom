@@ -58,3 +58,10 @@ export interface OracleGetTokenPriceOptions {
   symbol: string;
   timestamp: number;
 }
+
+export interface SmartApiQueryLogOptions {
+  query: any;
+  limit: number;
+  order: number;
+  skip: number;
+}

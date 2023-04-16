@@ -20,6 +20,7 @@ import {
   AdapterParseLogOptions,
   OracleGetTokenPriceOptions,
   ParseTransactionOptions,
+  SmartApiQueryLogOptions,
   SubgraphJobRunOptions,
   TransferParseLogOptions,
   WorkerRunOptions,
@@ -107,5 +108,12 @@ export interface IReportProvider extends IProvider {
   getSystemReport: () => Promise<SystemReport | null>;
 
   // run reporter daemon
+  run: () => Promise<void>;
+}
+
+export interface ISmartApiProvider extends IProvider {
+  providers: GlobalProviders;
+
+  queryLogs: (options: SmartApiQueryLogOptions) => Promise<Array<any>>;
   run: () => Promise<void>;
 }
