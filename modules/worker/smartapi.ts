@@ -1,5 +1,6 @@
 import { createDataHash } from '../../lib/crypto';
-import { getTimestamp } from '../../lib/helper';
+import { getTimestamp, sleep } from '../../lib/helper';
+import logger from '../../lib/logger';
 import { GlobalProviders, ISmartApiProvider } from '../../types/namespaces';
 import { SmartApiQueryLogOptions } from '../../types/options';
 
@@ -29,6 +30,13 @@ export class SmartApiProvider implements ISmartApiProvider {
       const caching = cachingLogs[0];
       const currentTime = getTimestamp();
       if (caching.timestamp && currentTime - caching.timestamp <= 300) {
+        logger.onDebug({
+          service: this.name,
+          message: 'query hit caching',
+          props: {
+            query: cachingKey,
+          },
+        });
         return caching.events;
       }
     }
@@ -62,5 +70,22 @@ export class SmartApiProvider implements ISmartApiProvider {
     return logs;
   }
 
-  public async run(): Promise<void> {}
+  public async run(): Promise<void> {
+    while (true) {
+      await this.queryLogs({
+        query: {},
+        order: -1,
+        limit: 1000,
+        skip: 0,
+      });
+
+      logger.onInfo({
+        service: this.name,
+        message: 'update caching api data',
+        props: {},
+      });
+
+      await sleep(2 * 60);
+    }
+  }
 }
