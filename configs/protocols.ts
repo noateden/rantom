@@ -650,6 +650,10 @@ export const TornadocashConfigs: ProtocolConfig = {
       '0x47ce0c6ed5b0ce3d3a51fdb1c52dc66a7c3c2936', // ETH 1
       '0x910cbd523d972eb0a6f4cae4618ad62622b39dbf', // ETH 10
       '0xa160cdab225685da1d56aa342ad8841c3b53f291', // ETH 100
+      '0xfd8610d20aa15b7b2e3be39b396a1bc3516c7144', // DAI 1,000
+      '0x07687e702b410fa43f4cb4af7fa097918ffd2730', // DAI 10,000
+      '0x23773e65ed146a459791799d01336db287f25334', // DAI 100,000
+      '0xbb93e510bbcd0b7beb5a853875f9ec60275cf498', // WBTC 10
     ],
   },
   staticData: {
@@ -669,6 +673,22 @@ export const TornadocashConfigs: ProtocolConfig = {
       '0xa160cdab225685da1d56aa342ad8841c3b53f291': {
         token: Tokens.ethereum.NativeCoin,
         amount: '100',
+      },
+      '0xfd8610d20aa15b7b2e3be39b396a1bc3516c7144': {
+        token: Tokens.ethereum.DAI,
+        amount: '1000',
+      },
+      '0x07687e702b410fa43f4cb4af7fa097918ffd2730': {
+        token: Tokens.ethereum.DAI,
+        amount: '10000',
+      },
+      '0x23773e65ed146a459791799d01336db287f25334': {
+        token: Tokens.ethereum.DAI,
+        amount: '100000',
+      },
+      '0xbb93e510bbcd0b7beb5a853875f9ec60275cf498': {
+        token: Tokens.ethereum.WBTC,
+        amount: '10',
       },
     },
   },

@@ -126,6 +126,14 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x09eab21c40743b2364b94345419138ef80f39e30', // Rarible Exchange
     '0x26fa3fffb6efe8c1e69103acb4044c26b9a106a9', // sSPELL
     '0xbd2fbaf2dc95bd78cf1cd3c5235b33d1165e6797', // mSPELL
+    '0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc', // Tornadocash ETH 0.1
+    '0x47ce0c6ed5b0ce3d3a51fdb1c52dc66a7c3c2936', // Tornadocash ETH 1
+    '0x910cbd523d972eb0a6f4cae4618ad62622b39dbf', // Tornadocash ETH 10
+    '0xa160cdab225685da1d56aa342ad8841c3b53f291', // Tornadocash ETH 100
+    '0xfd8610d20aa15b7b2e3be39b396a1bc3516c7144', // Tornadocash DAI 1,000
+    '0x07687e702b410fa43f4cb4af7fa097918ffd2730', // Tornadocash DAI 10,000
+    '0x23773e65ed146a459791799d01336db287f25334', // Tornadocash DAI 100,000
+    '0xbb93e510bbcd0b7beb5a853875f9ec60275cf498', // Tornadocash WBTC 10
   ],
 };
 

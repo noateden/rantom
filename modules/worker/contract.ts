@@ -192,7 +192,7 @@ export class ContractWorker implements IContractWorker {
         },
       });
 
-      startBlock = toBlock;
+      startBlock = toBlock + 1;
     }
   }
 
