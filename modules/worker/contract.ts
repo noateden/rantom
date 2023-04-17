@@ -3,7 +3,7 @@ import Web3 from 'web3';
 import { WorkerGenesisBlocks } from '../../configs';
 import { BlockSubgraphs } from '../../configs/constants';
 import EnvConfig from '../../configs/envConfig';
-import { normalizeAddress } from '../../lib/helper';
+import { normalizeAddress, sleep } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { getBlockTimestamps } from '../../lib/subgraph';
 import { Contract } from '../../types/configs';
@@ -73,8 +73,8 @@ export class ContractWorker implements IContractWorker {
       });
 
       let logs: Array<any> = [];
-      for (const topic of contract.topics) {
-        try {
+      try {
+        for (const topic of contract.topics) {
           logs = logs.concat(
             await web3.eth.getPastLogs({
               address: normalizeAddress(contract.address),
@@ -83,19 +83,22 @@ export class ContractWorker implements IContractWorker {
               topics: [topic],
             })
           );
-        } catch (e: any) {
-          logger.onWarn({
-            service: this.name,
-            message: 'failed to get logs by topic',
-            props: {
-              chain: contract.chain,
-              protocol: contract.protocol,
-              contract: normalizeAddress(contract.address),
-              topic: topic,
-              error: e.message,
-            },
-          });
         }
+      } catch (e: any) {
+        logger.onWarn({
+          service: this.name,
+          message: 'failed to get logs by topic',
+          props: {
+            chain: contract.chain,
+            protocol: contract.protocol,
+            contract: normalizeAddress(contract.address),
+            error: e.message,
+          },
+        });
+
+        // will retry to get logs at this block
+        await sleep(60);
+        continue;
       }
 
       const operations: Array<any> = [];
