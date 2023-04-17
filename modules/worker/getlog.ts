@@ -169,7 +169,7 @@ export class GetlogWorker implements IWorkerProvider {
         },
       });
 
-      startBlock += RANGE;
+      startBlock = toBlock;
     }
   }
 }

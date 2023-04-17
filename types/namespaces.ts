@@ -117,3 +117,9 @@ export interface ISmartApiProvider extends IProvider {
   queryLogs: (options: SmartApiQueryLogOptions) => Promise<Array<any>>;
   run: () => Promise<void>;
 }
+
+export interface IContractWorker extends IProvider {
+  providers: GlobalProviders;
+
+  run: (options: WorkerRunOptions) => Promise<void>;
+}

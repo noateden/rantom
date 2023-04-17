@@ -49,7 +49,7 @@ export class ExactlyAdapter extends Adapter {
     const signature = topics[0];
     const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
 
-    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(address) !== -1) {
+    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
       const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
       let token: Token | null = null;
