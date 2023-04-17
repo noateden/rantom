@@ -1,13 +1,16 @@
 import { Contract } from '../../types/configs';
-import RegistrationControllerAbi from '../abi/ens/RegistrationController.json';
 
 export const EnsContracts: Array<Contract> = [
   {
     chain: 'ethereum',
     protocol: 'ens',
-    abi: RegistrationControllerAbi,
+    abi: {},
     address: '0x283af0b28c62c092c9727f1ee09c02ca627eb7f5',
-    birthday: 9380471,
-    events: ['NameRegistered', 'NameRenewed'],
+    birthday: 16308190,
+    events: [],
+    topics: [
+      '0xca6abbe9d7f11422cb6ca7629fbf6fe9efb1c621f71ce8f02b9f2a230097404f', // Register
+      '0x3da24c024582931cfaf8267d8ed24d13a82a8068d5bd337d30ec45cea4e506ae', // Renew
+    ],
   },
 ];

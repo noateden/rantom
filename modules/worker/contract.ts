@@ -185,6 +185,7 @@ export class ContractWorker implements IContractWorker {
         props: {
           chain: contract.chain,
           protocol: contract.protocol,
+          contract: normalizeAddress(contract.address),
           logs: logs.length,
           actions: operations.length,
           toBlock: toBlock,

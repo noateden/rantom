@@ -134,6 +134,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x07687e702b410fa43f4cb4af7fa097918ffd2730', // Tornadocash DAI 10,000
     '0x23773e65ed146a459791799d01336db287f25334', // Tornadocash DAI 100,000
     '0xbb93e510bbcd0b7beb5a853875f9ec60275cf498', // Tornadocash WBTC 10
+    '0x283af0b28c62c092c9727f1ee09c02ca627eb7f5', // ENS registration controller
   ],
 };
 
