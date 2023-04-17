@@ -31,16 +31,31 @@ export class ChainlinkAdapter extends Adapter {
     const signature = topics[0];
     if (this.config.contracts[chain] && EventSignatureMapping[signature]) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+      const rpcWrapper = this.getRpcWrapper();
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
       try {
-        const poolContract = new web3.eth.Contract(OffchainAggregatorAbi as any, address);
-
-        const [LINK, description, decimals] = await Promise.all([
-          poolContract.methods.LINK().call(),
-          poolContract.methods.description().call(),
-          poolContract.methods.decimals().call(),
-        ]);
+        const LINK = await rpcWrapper.queryContract({
+          chain,
+          abi: OffchainAggregatorAbi,
+          contract: address,
+          method: 'LINK',
+          params: [],
+        });
+        const description = await rpcWrapper.queryContract({
+          chain,
+          abi: OffchainAggregatorAbi,
+          contract: address,
+          method: 'description',
+          params: [],
+        });
+        const decimals = await rpcWrapper.queryContract({
+          chain,
+          abi: OffchainAggregatorAbi,
+          contract: address,
+          method: 'decimals',
+          params: [],
+        });
 
         // const results = await multicallv2(chain, OffchainAggregatorAbi, calls);
         if (compareAddress(LINK.toString(), Tokens.ethereum.LINK.address)) {

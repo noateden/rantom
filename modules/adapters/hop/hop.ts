@@ -33,13 +33,18 @@ export class HopAdapter extends Adapter {
     if (this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1 && EventSignatureMapping[signature]) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
-      const poolContract = new web3.eth.Contract(HopBridgeAbi as any, address);
 
       try {
         if (signature === Signatures.TransferToL2) {
           let tokenAddr = AddressZero;
           if (!compareAddress(address, '0xb8901acb165ed027e32754e0ffe830802919727f')) {
-            tokenAddr = await poolContract.methods.l1CanonicalToken().call();
+            tokenAddr = await this.getRpcWrapper().queryContract({
+              chain,
+              abi: HopBridgeAbi,
+              contract: address,
+              method: 'l1CanonicalToken',
+              params: [],
+            });
           }
 
           const token = await this.getWeb3Helper().getErc20Metadata(chain, tokenAddr);

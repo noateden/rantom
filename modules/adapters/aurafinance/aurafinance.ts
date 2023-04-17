@@ -36,16 +36,28 @@ export class AurafinanceAdapter extends Adapter {
     const signature = topics[0];
     if (signature === Signatures.Deposit || signature === Signatures.Withdraw || signature === Signatures.Collect) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+      const rpcWrapper = this.getRpcWrapper();
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
       try {
         switch (signature) {
           case Signatures.Collect: {
-            const poolContract = new web3.eth.Contract(AuraRewardPoolAbi as any, address);
-            const operatorAddr = await poolContract.methods.operator().call();
+            const operatorAddr = await rpcWrapper.queryContract({
+              chain,
+              abi: AuraRewardPoolAbi,
+              contract: address,
+              method: 'operator',
+              params: [],
+            });
 
             if (this.config.contracts[chain].indexOf(normalizeAddress(operatorAddr)) !== -1) {
-              const rewardTokenAddr = await poolContract.methods.rewardToken().call();
+              const rewardTokenAddr = await rpcWrapper.queryContract({
+                chain,
+                abi: AuraRewardPoolAbi,
+                contract: address,
+                method: 'rewardToken',
+                params: [],
+              });
               const token = await this.getWeb3Helper().getErc20Metadata(chain, rewardTokenAddr);
               if (token) {
                 const user = normalizeAddress(event.user);

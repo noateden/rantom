@@ -47,6 +47,7 @@ export class CompoundAdapter extends Adapter {
         (this.config.customEventMapping && this.config.customEventMapping[signature]))
     ) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+      const rpcWrapper = this.getRpcWrapper();
       let event;
       if (this.config.customEventMapping && this.config.customEventMapping[signature]) {
         event = web3.eth.abi.decodeLog(this.config.customEventMapping[signature].abi, data, topics.slice(1));
@@ -66,8 +67,6 @@ export class CompoundAdapter extends Adapter {
           readableString: `${collector} collect ${amount} ${Tokens.ethereum.COMP.symbol} on ${this.config.protocol} chain ${chain}`,
         };
       } else {
-        const poolContract = new web3.eth.Contract(cErc20Abi as any, address);
-
         let token: Token | null = null;
         if (this.config.staticData) {
           for (const pool of this.config.staticData.pools) {
@@ -77,7 +76,13 @@ export class CompoundAdapter extends Adapter {
           }
         } else {
           try {
-            const underlyingAddr = await poolContract.methods.underlying().call();
+            const underlyingAddr = await rpcWrapper.queryContract({
+              chain,
+              abi: cErc20Abi,
+              contract: address,
+              method: 'underlying',
+              params: [],
+            });
             token = await this.getWeb3Helper().getErc20Metadata(chain, underlyingAddr);
           } catch (e: any) {
             token = Tokens[chain].NativeCoin;

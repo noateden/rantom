@@ -20,6 +20,7 @@ import {
   AdapterParseLogOptions,
   OracleGetTokenPriceOptions,
   ParseTransactionOptions,
+  RpcWrapperQueryContractOptions,
   SmartApiQueryLogOptions,
   SubgraphJobRunOptions,
   TransferParseLogOptions,
@@ -51,6 +52,10 @@ export interface IWeb3HelperProvider extends ICachingProvider {
   getNonFungibleTokenMetadata: (chain: string, tokenAddress: string) => Promise<NonFungibleTokenMetadata | null>;
   getNonFungibleTokenData: (chain: string, tokenAddress: string, tokenId: string) => Promise<NonFungibleToken | null>;
   getUniPoolFactoryAddress: (chain: string, poolAddress: string) => Promise<string | null>;
+}
+
+export interface IRpcWrapperProvider extends IProvider {
+  queryContract: (options: RpcWrapperQueryContractOptions) => Promise<any>;
 }
 
 export interface GlobalProviders {

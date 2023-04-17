@@ -54,11 +54,22 @@ export class FraxlendAdapter extends Adapter {
           }
         }
       } else {
-        const pairContract = new web3.eth.Contract(FraxlendPairAbi as any, address);
-        const [assetAddress, collateralAddress] = await Promise.all([
-          pairContract.methods.asset().call(),
-          pairContract.methods.collateralContract().call(),
-        ]);
+        const rpcWrapper = this.getRpcWrapper();
+        const assetAddress = await rpcWrapper.queryContract({
+          chain,
+          abi: FraxlendPairAbi,
+          contract: address,
+          method: 'asset',
+          params: [],
+        });
+        const collateralAddress = await rpcWrapper.queryContract({
+          chain,
+          abi: FraxlendPairAbi,
+          contract: address,
+          method: 'collateralContract',
+          params: [],
+        });
+
         asset = await this.getWeb3Helper().getErc20Metadata(chain, assetAddress);
         collateral = await this.getWeb3Helper().getErc20Metadata(chain, collateralAddress);
       }

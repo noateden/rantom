@@ -51,6 +51,7 @@ export class AbracadabraAdapter extends Adapter {
 
     const signature = topics[0];
     const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+    const rpcWrapper = await this.getRpcWrapper();
 
     if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(address) !== -1) {
       const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
@@ -70,13 +71,22 @@ export class AbracadabraAdapter extends Adapter {
           if (blockNumber > 0) {
             // SPELL amount = sSPELL amount * SPELL per sSPELL
             // SPELL per sSPELL = SPELL balance / sSPELL total supply
-            const spellContract = new web3.eth.Contract(ERC20Abi as any, Tokens.ethereum.SPELL.address);
-            const sSpellContract = new web3.eth.Contract(ERC20Abi as any, address);
-
-            const [balance, supply] = await Promise.all([
-              spellContract.methods.balanceOf(address).call(blockNumber),
-              sSpellContract.methods.totalSupply().call(blockNumber),
-            ]);
+            const balance = await rpcWrapper.queryContract({
+              chain,
+              abi: ERC20Abi,
+              contract: Tokens.ethereum.SPELL.address,
+              method: 'balanceOf',
+              params: [address],
+              blockNumber: blockNumber,
+            });
+            const supply = await rpcWrapper.queryContract({
+              chain,
+              abi: ERC20Abi,
+              contract: Tokens.ethereum.SPELL.address,
+              method: 'totalSupply',
+              params: [],
+              blockNumber: blockNumber,
+            });
 
             const rate = new BigNumber(balance.toString()).dividedBy(new BigNumber(supply.toString()));
             const spellAmount = new BigNumber(event.value.toString()).multipliedBy(rate).dividedBy(1e18).toString(10);

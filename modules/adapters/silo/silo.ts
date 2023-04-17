@@ -38,8 +38,13 @@ export class SiloAdapter extends Adapter {
     const signature = topics[0];
     try {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const contract = new web3.eth.Contract(SiloAbi as any, address);
-      const siloRepository = await contract.methods.siloRepository().call();
+      const siloRepository = await this.getRpcWrapper().queryContract({
+        chain,
+        abi: SiloAbi,
+        contract: address,
+        method: 'siloRepository',
+        params: [],
+      });
       if (
         this.config.contracts[chain] &&
         this.config.contracts[chain].indexOf(normalizeAddress(siloRepository)) != -1

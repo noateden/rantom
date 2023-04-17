@@ -65,3 +65,14 @@ export interface SmartApiQueryLogOptions {
   order: number;
   skip: number;
 }
+
+export interface RpcWrapperQueryContractOptions {
+  chain: string;
+  abi: any;
+  contract: string;
+  method: string;
+  params: Array<any>;
+
+  // if blockNumber is not given, just call data from latest block
+  blockNumber?: number;
+}

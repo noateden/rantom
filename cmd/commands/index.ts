@@ -13,17 +13,20 @@ export class IndexCommand extends BasicCommand {
   public async execute(argv: any) {
     const providers = await super.getProviders();
 
-    const name = argv.name;
-    const contractWorkers = getContractWorkers(providers);
-
-    if (!contractWorkers[name]) {
-      process.exit(0);
-    } else {
-      while (true) {
-        await contractWorkers[name].run({ fromBlock: argv.fromBlock ? Number(argv.fromBlock) : 0, fromTime: 0 });
-
-        await sleep(60);
+    const names = argv.name ? argv.name.toString().split(',') : [];
+    while (true) {
+      for (const name of names) {
+        const contractWorkers = getContractWorkers(providers);
+        if (contractWorkers[name]) {
+          await contractWorkers[name].run({ fromBlock: argv.fromBlock ? Number(argv.fromBlock) : 0, fromTime: 0 });
+        }
       }
+
+      if (argv.exit) {
+        process.exit(0);
+      }
+
+      await sleep(60);
     }
   }
 
@@ -38,6 +41,11 @@ export class IndexCommand extends BasicCommand {
         type: 'number',
         default: 0,
         describe: 'Run with given initial block number',
+      },
+      exit: {
+        type: 'boolean',
+        default: true,
+        describe: 'Exit when catching up with network blocks',
       },
     });
   }

@@ -37,6 +37,7 @@ export class LiquityAdapter extends Adapter {
       EventSignatureMapping[signature]
     ) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+      const rpcWrapper = this.getRpcWrapper();
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
       if (
@@ -61,19 +62,20 @@ export class LiquityAdapter extends Adapter {
             break;
           }
           case 2: {
-            // adjust trove
-            const troveManager = new web3.eth.Contract(
-              TroveManagerAbi as any,
-              this.config.staticData.troveManagerAddress
-            );
-
             // get trove snapshot from previous block
             let blockNumber = options.context ? options.context.blockNumber : null;
             if (!blockNumber) {
               const transaction = await web3.eth.getTransaction(options.hash as string);
               blockNumber = transaction.blockNumber;
             }
-            const troveInfo = await troveManager.methods.Troves(event._borrower).call(blockNumber - 1);
+            const troveInfo = await rpcWrapper.queryContract({
+              chain,
+              abi: TroveManagerAbi,
+              contract: this.config.staticData.troveManagerAddress,
+              method: 'Troves',
+              params: [event._borrower],
+              blockNumber: blockNumber - 1,
+            });
 
             const previousDebt = new BigNumber(troveInfo.debt);
             const newDebt = new BigNumber(event._debt);

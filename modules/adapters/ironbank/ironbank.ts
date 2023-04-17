@@ -43,10 +43,15 @@ export class IronbankAdapter extends CompoundAdapter {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
-      const poolContract = new web3.eth.Contract(cErc20Abi as any, address);
       let token: Token | null;
       try {
-        const underlyingAddr = await poolContract.methods.underlying().call();
+        const underlyingAddr = await this.getRpcWrapper().queryContract({
+          chain,
+          abi: cErc20Abi,
+          contract: address,
+          method: 'underlying',
+          params: [],
+        });
         token = await this.getWeb3Helper().getErc20Metadata(chain, underlyingAddr);
       } catch (e: any) {
         token = Tokens[chain].NativeCoin;

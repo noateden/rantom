@@ -60,8 +60,14 @@ export class ExactlyAdapter extends Adapter {
           }
         }
       } else {
-        const contract = new web3.eth.Contract(ExactlyMarketAbi as any, address);
-        const asset = await contract.methods.asset().call();
+        const rpcWrapper = this.getRpcWrapper();
+        const asset = await rpcWrapper.queryContract({
+          chain,
+          abi: ExactlyMarketAbi,
+          contract: address,
+          method: 'asset',
+          params: [],
+        });
         token = await this.getWeb3Helper().getErc20Metadata(chain, asset);
       }
 

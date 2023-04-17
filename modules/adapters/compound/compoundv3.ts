@@ -40,6 +40,7 @@ export class Compoundv3Adapter extends Adapter {
     const signature = topics[0];
     if (this.config.contracts[chain].indexOf(address) !== -1 && EventSignatureMapping[signature]) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+      const rpcWrapper = this.getRpcWrapper();
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
       const context = await web3.eth.getTransactionReceipt(options.hash as string);
@@ -53,8 +54,6 @@ export class Compoundv3Adapter extends Adapter {
       }
 
       // v3 processing
-      const poolContract = new web3.eth.Contract(CometAbi as any, address);
-
       let token = null;
       let action: KnownAction = 'deposit';
       switch (signature) {
@@ -63,7 +62,13 @@ export class Compoundv3Adapter extends Adapter {
           if (poolConfig) {
             token = poolConfig.baseToken;
           } else {
-            const baseTokenAddr = await poolContract.methods.baseToken().call();
+            const baseTokenAddr = await rpcWrapper.queryContract({
+              chain,
+              abi: CometAbi,
+              contract: address,
+              method: 'baseToken',
+              params: [],
+            });
             token = await this.getWeb3Helper().getErc20Metadata(chain, baseTokenAddr);
           }
 

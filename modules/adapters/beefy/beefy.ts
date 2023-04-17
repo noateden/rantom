@@ -43,6 +43,7 @@ export class BeefyAdapter extends Adapter {
     const signature = topics[0];
     if (this.config.contracts[chain].indexOf(address) !== -1) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+      const rpcWrapper = this.getRpcWrapper();
       const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
       if (signature === Signatures.Transfer) {
@@ -50,7 +51,6 @@ export class BeefyAdapter extends Adapter {
         const to = normalizeAddress(event.to);
 
         if (compareAddress(from, AddressZero) || compareAddress(to, AddressZero)) {
-          const vaultContract = new web3.eth.Contract(BeefyVaultAbi as any, address);
           let blockNumber = 0;
           let token = null;
           let priceShare = '0';
@@ -70,10 +70,24 @@ export class BeefyAdapter extends Adapter {
               const tx = await web3.eth.getTransactionReceipt(options.hash as string);
               blockNumber = tx.blockNumber;
             }
-            priceShare = await vaultContract.methods.getPricePerFullShare().call(blockNumber);
+            priceShare = await rpcWrapper.queryContract({
+              chain,
+              abi: BeefyVaultAbi,
+              contract: address,
+              method: 'getPricePerFullShare',
+              params: [],
+              blockNumber: blockNumber,
+            });
 
             if (!token) {
-              const tokenAddress = await vaultContract.methods.want().call();
+              const tokenAddress = await rpcWrapper.queryContract({
+                chain,
+                abi: BeefyVaultAbi,
+                contract: address,
+                method: 'want',
+                params: [],
+                blockNumber: blockNumber,
+              });
               token = await this.getWeb3Helper().getErc20Metadata(chain, tokenAddress);
             }
           } catch (e: any) {}

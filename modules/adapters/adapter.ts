@@ -2,10 +2,12 @@ import Web3 from 'web3';
 
 import EnvConfig from '../../configs/envConfig';
 import { normalizeAddress } from '../../lib/helper';
+import { RpcWrapperProvider } from '../../services/rpc';
+import SentryProvider from '../../services/sentry';
 import { Web3HelperProvider } from '../../services/web3';
 import { EventMapping, ProtocolConfig } from '../../types/configs';
 import { TransactionAction } from '../../types/domains';
-import { GlobalProviders, IAdapter, IWeb3HelperProvider } from '../../types/namespaces';
+import { GlobalProviders, IAdapter, IRpcWrapperProvider, IWeb3HelperProvider } from '../../types/namespaces';
 import { AdapterParseLogOptions } from '../../types/options';
 
 export class Adapter implements IAdapter {
@@ -26,6 +28,14 @@ export class Adapter implements IAdapter {
       return this.providers.web3Helper;
     } else {
       return new Web3HelperProvider(null);
+    }
+  }
+
+  public getRpcWrapper(): IRpcWrapperProvider {
+    if (this.providers) {
+      return new RpcWrapperProvider(this.providers.sentry);
+    } else {
+      return new RpcWrapperProvider(new SentryProvider(EnvConfig.sentry.dns));
     }
   }
 
