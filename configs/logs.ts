@@ -3,6 +3,7 @@ import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
 import BeefyVaults from './data/BeefyVaults.json';
 import ExactlyMarkets from './data/ExactlyMarkets.json';
 import FraxLendPairs from './data/FraxlendPairs.json';
+import SiloPools from './data/SiloPools.json';
 import YearnVaults from './data/YearnVaults.json';
 import {
   Aavev2Configs,
@@ -36,6 +37,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...BeefyVaults.map((item) => item.address),
     ...FraxLendPairs.map((item) => item.address),
     ...ExactlyMarkets.map((item) => item.address),
+    ...SiloPools.map((item) => item.address),
 
     '0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9', // Aave lending pool v2
     '0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2', // Aave lending pool v3

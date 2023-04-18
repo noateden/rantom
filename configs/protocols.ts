@@ -12,6 +12,7 @@ import ConvexBoosterPoolsData from './data/ConvexBoosterPools.json';
 import ExactlyMarkets from './data/ExactlyMarkets.json';
 import FraxlendPairs from './data/FraxlendPairs.json';
 import IronbankMarkets from './data/IronbankMarkets.json';
+import SiloPools from './data/SiloPools.json';
 import SushiPools from './data/SushiPools.json';
 import { Signatures } from './signatures';
 
@@ -1010,6 +1011,9 @@ export const SiloConfigs: ProtocolConfig = {
         },
       ],
     },
+  },
+  staticData: {
+    pools: SiloPools,
   },
 };
 

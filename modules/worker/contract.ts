@@ -60,7 +60,7 @@ export class ContractWorker implements IContractWorker {
       },
     });
 
-    const RANGE = 1000;
+    const RANGE = 2000;
     while (startBlock <= latestBlock) {
       const startExeTime = Math.floor(new Date().getTime() / 1000);
 

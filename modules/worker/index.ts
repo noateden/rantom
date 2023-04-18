@@ -4,6 +4,7 @@ import { ExactlyContracts } from '../../configs/contracts/exactly';
 import { FraxlendContracts } from '../../configs/contracts/fraxlend';
 import { GearboxContracts } from '../../configs/contracts/gearbox';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
+import { SiloContracts } from '../../configs/contracts/silo';
 import { TornadocashContracts } from '../../configs/contracts/tornadocash';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 import { ContractWorker } from './contract';
@@ -17,5 +18,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     tornadocash: new ContractWorker(providers, TornadocashContracts),
     ens: new ContractWorker(providers, EnsContracts),
     opensea: new ContractWorker(providers, OpenseaContracts),
+    silo: new ContractWorker(providers, SiloContracts),
   };
 }

@@ -2,14 +2,14 @@ import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import SiloAbi from '../../../configs/abi/silo/Silo.json';
-import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
+import { compareAddress, normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { AdapterParseLogOptions } from '../../../types/options';
 import { Adapter } from '../adapter';
+import { SiloHelper, SiloPoolInfo } from './helper';
 
 const Signatures = {
   Deposit: '0xdd160bb401ec5b5e5ca443d41e8e7182f3fe72d70a04b9c0ba844483d212bcb5',
@@ -26,8 +26,12 @@ export class SiloAdapter extends Adapter {
     super(config, providers, {
       [Signatures.Deposit]: EventSignatureMapping[Signatures.Deposit],
       [Signatures.Withdraw]: EventSignatureMapping[Signatures.Withdraw],
-      [Signatures.Borrow]: EventSignatureMapping[Signatures.Borrow],
-      [Signatures.Repay]: EventSignatureMapping[Signatures.Repay],
+      [Signatures.Borrow]: config.customEventMapping
+        ? config.customEventMapping[Signatures.Borrow]
+        : EventSignatureMapping[Signatures.Borrow],
+      [Signatures.Repay]: config.customEventMapping
+        ? config.customEventMapping[Signatures.Repay]
+        : EventSignatureMapping[Signatures.Repay],
       [Signatures.Liquidate]: EventSignatureMapping[Signatures.Liquidate],
     });
   }
@@ -36,73 +40,81 @@ export class SiloAdapter extends Adapter {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
-    try {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const siloRepository = await this.getRpcWrapper().queryContract({
-        chain,
-        abi: SiloAbi,
-        contract: address,
-        method: 'siloRepository',
-        params: [],
-      });
-      if (
-        this.config.contracts[chain] &&
-        this.config.contracts[chain].indexOf(normalizeAddress(siloRepository)) != -1
-      ) {
-        let event;
-        if (this.config.customEventMapping && this.config.customEventMapping[signature]) {
-          event = web3.eth.abi.decodeLog(this.config.customEventMapping[signature].abi, data, topics.slice(1));
-        } else {
-          event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
-        }
-
-        const token = await this.getWeb3Helper().getErc20Metadata(chain, event.asset);
-        if (token) {
-          if (signature === Signatures.Deposit || signature === Signatures.Withdraw) {
-            const action: KnownAction = signature === Signatures.Deposit ? 'deposit' : 'withdraw';
-            const depositor = normalizeAddress(event.depositor);
-            const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
-
-            return {
-              protocol: this.config.protocol,
-              action: action,
-              addresses: [depositor],
-              tokens: [token],
-              tokenAmounts: [amount],
-              readableString: `${depositor} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-            };
-          } else if (signature === Signatures.Borrow || signature === Signatures.Repay) {
-            const action: KnownAction = signature === Signatures.Borrow ? 'borrow' : 'repay';
-            const user = normalizeAddress(event.user);
-            const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
-
-            return {
-              protocol: this.config.protocol,
-              action: action,
-              addresses: [user],
-              tokens: [token],
-              tokenAmounts: [amount],
-              readableString: `${user} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-            };
-          } else if (signature === Signatures.Liquidate) {
-            const user = normalizeAddress(event.user);
-            const amount = new BigNumber(event.seizedCollateral)
-              .dividedBy(new BigNumber(10).pow(token.decimals))
-              .toString(10);
-
-            return {
-              protocol: this.config.protocol,
-              action: 'liquidate',
-              addresses: [user],
-              tokens: [token],
-              tokenAmounts: [amount],
-              readableString: `${user} liquidate ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-            };
-          }
+    let siloPool: SiloPoolInfo | null = null;
+    if (this.config.staticData) {
+      for (const pool of this.config.staticData.pools) {
+        if (compareAddress(pool.address, address)) {
+          siloPool = pool;
         }
       }
-    } catch (e: any) {
-      console.log(e);
+    }
+
+    if (!siloPool) {
+      try {
+        const siloRepository = await this.getRpcWrapper().queryContract({
+          chain,
+          abi: SiloAbi,
+          contract: address,
+          method: 'siloRepository',
+          params: [],
+        });
+        if (
+          this.config.contracts[chain] &&
+          this.config.contracts[chain].indexOf(normalizeAddress(siloRepository)) != -1
+        ) {
+          siloPool = await SiloHelper.getSiloInfo(chain, address);
+        }
+      } catch (e: any) {}
+    }
+
+    if (siloPool) {
+      const web3 = new Web3();
+      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
+
+      const token = await this.getWeb3Helper().getErc20Metadata(chain, event.asset);
+      if (token) {
+        if (signature === Signatures.Deposit || signature === Signatures.Withdraw) {
+          const action: KnownAction = signature === Signatures.Deposit ? 'deposit' : 'withdraw';
+          const depositor = normalizeAddress(event.depositor);
+          const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
+
+          return {
+            protocol: this.config.protocol,
+            action: action,
+            addresses: [depositor],
+            tokens: [token],
+            tokenAmounts: [amount],
+            readableString: `${depositor} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+          };
+        } else if (signature === Signatures.Borrow || signature === Signatures.Repay) {
+          const action: KnownAction = signature === Signatures.Borrow ? 'borrow' : 'repay';
+          const user = normalizeAddress(event.user);
+          const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
+
+          return {
+            protocol: this.config.protocol,
+            action: action,
+            addresses: [user],
+            tokens: [token],
+            tokenAmounts: [amount],
+            readableString: `${user} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+          };
+        } else if (signature === Signatures.Liquidate) {
+          const user = normalizeAddress(event.user);
+          const amount = new BigNumber(event.seizedCollateral)
+            .dividedBy(new BigNumber(10).pow(token.decimals))
+            .toString(10);
+
+          return {
+            protocol: this.config.protocol,
+            action: 'liquidate',
+            addresses: [user],
+            tokens: [token],
+            tokenAmounts: [amount],
+            readableString: `${user} liquidate ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+          };
+        }
+      }
     }
 
     return null;
