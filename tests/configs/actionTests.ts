@@ -17,6 +17,7 @@ import { EnsActionTestLogs } from './protocols/ens';
 import { Eth2ActionTestLogs } from './protocols/eth2';
 import { EulerActionTestLogs } from './protocols/euler';
 import { ExactlyActionTestLogs } from './protocols/exactly';
+import { FraxethActionTestLogs } from './protocols/fraxeth';
 import { FraxlendActionTestLogs } from './protocols/fraxlend';
 import { GearboxActionTestLogs } from './protocols/gearbox';
 import { HopActionTestLogs } from './protocols/hop';
@@ -86,4 +87,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...GearboxActionTestLogs,
   ...RaribleActionTestLogs,
   ...ExactlyActionTestLogs,
+  ...FraxethActionTestLogs,
 ];

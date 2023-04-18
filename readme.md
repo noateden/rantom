@@ -23,51 +23,50 @@ yarn start --help
 
 ### DeFi Protocols
 
-|     Protocol     | Event                                                                                      | Status |
-|:----------------:|--------------------------------------------------------------------------------------------|-------:|
-|    Uniswap v2    | Mint, Swap, Burn                                                                           |     🌱 |
-|   Pancakeswap    |                                                                                            |     🌱 |
-|    Shibaswap     |                                                                                            |     🌱 |
-|     Fraxswap     |                                                                                            |     🌱 |
-|    Sushi Dex     | Mint, Swap, Burn                                                                           |     🌱 |
-| Sushi Masterchef | Deposit, Withdraw, EmergencyWithdraw                                                       |     🌱 |
-|    Uniswap v3    | Mint, Swap, Burn, Collect                                                                  |     🌱 |
-|     Balancer     | Swap, Join, Exit, FlashLoan                                                                |     🌱 |
-|     Aave v1      | Deposit, Withdraw, Borrow, Repay, Flashloan, Liquidation                                   |     🌱 |
-|     Aave v2      | Supply, Withdraw, Borrow, Repay, Flashloan, Liquidation                                    |     🌱 |
-|     Aave v3      | Supply, Withdraw, Borrow, Repay, Flashloan, Liquidation                                    |     🌱 |
-|     Compound     | Mint, Redeem, Borrow, Repay, Liquidation, DistributedSupplierComp, DistributedBorrowerComp |     🌱 |
-|     IronBank     |                                                                                            |     🌱 |
-|   Compound v3    | Supply, Withdraw, SupplyCollateral, WithdrawCollateral, AbsorbCollateral                   |     🌱 |
-|  Convex Finance  | Deposited, Withdrawn                                                                       |     🌱 |
-|   Aura Finance   | Deposited, Withdrawn, Collect                                                              |     🌱 |
-|      Bancor      | Deposit, Withdraw, Trade, Flashloan                                                        |     🌱 |
-|    Beanstalk     | Deposit, Withdraw, Sow                                                                     |     🌱 |
-| CowSwap Protocol | Trade                                                                                      |     🌱 |
-|      Curve       | TokenExchange, AddLiquidity, RemoveLiquidity                                               |     🌱 |
-|   Hop Exchange   | TransferToL2                                                                               |     🌱 |
-|       Lido       | Submitted                                                                                  |     🌱 |
-|   Rocket Pool    | TokensMinted, TokensBurned                                                                 |     🌱 |
-|    Multichain    | SwapIn, SwapOut                                                                            |     🌱 |
-|     Optimism     | Batch                                                                                      |     🌱 |
-|  Eth2 Validator  | DepositEvent                                                                               |     🌱 |
-|    Chainlink     | NewTransmission                                                                            |     🌱 |
-|      Yearn       | Deposit, Withdraw                                                                          |     🌱 |
-|   0x: Exchange   | TransformedERC20, OtcOrderFilled, LimitOrderFilled, RfqOrderFilled                         |     🌱 |
-|  Euler Finance   | Deposit, Withdraw, Borrow, Repay, Liquidation                                              |     🌱 |
-|     Liquity      | TroveUpdated, TroveLiquidated                                                              |     🌱 |
-|   Abracadabra    | LogBorrow, LogRepay, LogAddCollateral, LogRemoveCollateral, LogLiquidation                 |     🌱 |
-|                  | Transfer, Deposit, Withdraw, ClaimReward                                                   |     🌱 |
-|     MakerDao     | GemJoin, GemExit, DaiJoin, DaiExit, FlashLoan                                              |     🌱 |
-|     Stargate     | Mint, Burn, Swap, SwapRemote                                                               |     🌱 |
-|   Silo Finance   | Deposit, Withdraw, Borrow, Repay, Liquidate                                                |     🌱 |
-|      Beefy       | Transfer, Staked, Withdrawn, RewardPaid                                                    |     🌱 |
-|     Fraxlend     | Deposit, Withdraw, AddCollateral, RemoveCollateral, BorrowAsset, RepayAsset, Liquidate     |     🌱 |
-|     Apecoin      | Deposit, DepositNft, Withdraw, WithdrawNft, ClaimRewards, ClaimRewardsNft                  |     🌱 |
-|     Gearbox      | AddLiquidity, RemoveLiquidity, Borrow, Repay, Claimed                                      |     🌱 |
-|     Rarible      | Buy                                                                                        |     🌱 |
-|     Exactly      | Deposit, Withdraw, Borrow, Repay                                                           |     🌱 |
-|                  | DepositAtMaturity, WithdrawAtMaturity, BorrowAtMaturity, RepayAtMaturity                   |     🌱 |
+|     Protocol     |     | Event                                                                                                                | Status |
+|:----------------:|:----|----------------------------------------------------------------------------------------------------------------------|-------:|
+|    Uniswap v2    |     | Mint, Swap, Burn                                                                                                     |     🌱 |
+|   Pancakeswap    |     |                                                                                                                      |     🌱 |
+|    Shibaswap     |     |                                                                                                                      |     🌱 |
+|     Fraxswap     |     |                                                                                                                      |     🌱 |
+|    Sushi Dex     |     | Mint, Swap, Burn                                                                                                     |     🌱 |
+| Sushi Masterchef |     | Deposit, Withdraw, EmergencyWithdraw                                                                                 |     🌱 |
+|    Uniswap v3    |     | Mint, Swap, Burn, Collect                                                                                            |     🌱 |
+|     Balancer     |     | Swap, Join, Exit, FlashLoan                                                                                          |     🌱 |
+|     Aave v1      |     | Deposit, Withdraw, Borrow, Repay, Flashloan, Liquidation                                                             |     🌱 |
+|     Aave v2      |     | Supply, Withdraw, Borrow, Repay, Flashloan, Liquidation                                                              |     🌱 |
+|     Aave v3      |     | Supply, Withdraw, Borrow, Repay, Flashloan, Liquidation                                                              |     🌱 |
+|     Compound     |     | Mint, Redeem, Borrow, Repay, Liquidation, DistributedSupplierComp, DistributedBorrowerComp                           |     🌱 |
+|     IronBank     |     |                                                                                                                      |     🌱 |
+|   Compound v3    |     | Supply, Withdraw, SupplyCollateral, WithdrawCollateral, AbsorbCollateral                                             |     🌱 |
+|  Convex Finance  |     | Deposited, Withdrawn                                                                                                 |     🌱 |
+|   Aura Finance   |     | Deposited, Withdrawn, Collect                                                                                        |     🌱 |
+|      Bancor      |     | Deposit, Withdraw, Trade, Flashloan                                                                                  |     🌱 |
+|    Beanstalk     |     | Deposit, Withdraw, Sow                                                                                               |     🌱 |
+| CowSwap Protocol |     | Trade                                                                                                                |     🌱 |
+|      Curve       |     | TokenExchange, AddLiquidity, RemoveLiquidity                                                                         |     🌱 |
+|   Hop Exchange   |     | TransferToL2                                                                                                         |     🌱 |
+|       Lido       |     | Submitted                                                                                                            |     🌱 |
+|   Rocket Pool    |     | TokensMinted, TokensBurned                                                                                           |     🌱 |
+|    Multichain    |     | SwapIn, SwapOut                                                                                                      |     🌱 |
+|     Optimism     |     | Batch                                                                                                                |     🌱 |
+|  Eth2 Validator  |     | DepositEvent                                                                                                         |     🌱 |
+|    Chainlink     |     | NewTransmission                                                                                                      |     🌱 |
+|      Yearn       |     | Deposit, Withdraw                                                                                                    |     🌱 |
+|   0x: Exchange   |     | TransformedERC20, OtcOrderFilled, LimitOrderFilled, RfqOrderFilled                                                   |     🌱 |
+|  Euler Finance   |     | Deposit, Withdraw, Borrow, Repay, Liquidation                                                                        |     🌱 |
+|     Liquity      |     | TroveUpdated, TroveLiquidated                                                                                        |     🌱 |
+|   Abracadabra    |     | LogBorrow, LogRepay, LogAddCollateral, LogRemoveCollateral, LogLiquidation, Transfer, Deposit, Withdraw, ClaimReward |     🌱 |
+|     MakerDao     |     | GemJoin, GemExit, DaiJoin, DaiExit, FlashLoan                                                                        |     🌱 |
+|     Stargate     |     | Mint, Burn, Swap, SwapRemote                                                                                         |     🌱 |
+|   Silo Finance   |     | Deposit, Withdraw, Borrow, Repay, Liquidate                                                                          |     🌱 |
+|      Beefy       |     | Transfer, Staked, Withdrawn, RewardPaid                                                                              |     🌱 |
+|     Fraxlend     |     | Deposit, Withdraw, AddCollateral, RemoveCollateral, BorrowAsset, RepayAsset, Liquidate                               |     🌱 |
+|     Apecoin      |     | Deposit, DepositNft, Withdraw, WithdrawNft, ClaimRewards, ClaimRewardsNft                                            |     🌱 |
+|     Gearbox      |     | AddLiquidity, RemoveLiquidity, Borrow, Repay, Claimed                                                                |     🌱 |
+|     Rarible      |     | Buy                                                                                                                  |     🌱 |
+|     Exactly      |     | Deposit, Withdraw, Borrow, Repay, DepositAtMaturity, WithdrawAtMaturity, BorrowAtMaturity, RepayAtMaturity           |     🌱 |
+|     FraxEth      |     | ETHSubmitted, Deposit, Withdraw                                                                                      |     🌱 |
 
 ### Nft Marketplace
 

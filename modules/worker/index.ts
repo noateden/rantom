@@ -1,6 +1,7 @@
 import { AbracadabraContracts } from '../../configs/contracts/abracadabra';
 import { EnsContracts } from '../../configs/contracts/ens';
 import { ExactlyContracts } from '../../configs/contracts/exactly';
+import { FraxethContracts } from '../../configs/contracts/fraxeth';
 import { FraxlendContracts } from '../../configs/contracts/fraxlend';
 import { GearboxContracts } from '../../configs/contracts/gearbox';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
@@ -19,5 +20,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     ens: new ContractWorker(providers, EnsContracts),
     opensea: new ContractWorker(providers, OpenseaContracts),
     silo: new ContractWorker(providers, SiloContracts),
+    fraxeth: new ContractWorker(providers, FraxethContracts),
   };
 }

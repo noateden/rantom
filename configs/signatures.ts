@@ -298,4 +298,7 @@ export const Signatures: { [key: string]: string } = {
     '0xf17fce321dd9fb005136a80c0bfb3789e455b7a70be9eb8922f1ad20a80d1a33',
   'Liquidate(address,address,uint256,uint256,address,uint256)':
     '0x67bb48f97d82192848c24158abf58ec614777328e19655e0a219652b773fd1db',
+
+  // frax eth
+  'ETHSubmitted(address,address,uint256,uint256)': '0x29b3e86ecfd94a32218997c40b051e650e4fd8c97fc7a4d266be3f7c61c5205b',
 };

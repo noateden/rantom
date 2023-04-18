@@ -20,6 +20,7 @@ import {
   Eth2Configs,
   EulerConfigs,
   ExactlyConfigs,
+  FraxethConfigs,
   FraxlendConfigs,
   FraxswapConfigs,
   GearboxConfigs,
@@ -70,6 +71,7 @@ import { EnsAdapter } from './ens/ens';
 import { Eth2Adapter } from './eth2/eth2';
 import { EulerAdapter } from './euler/euler';
 import { ExactlyAdapter } from './exactly/exactly';
+import { FraxethAdapter } from './fraxeth/fraxeth';
 import { FraxlendAdapter } from './fraxlend/fraxlend';
 import { GearboxAdapter } from './gearbox/gearbox';
 import { HopAdapter } from './hop/hop';
@@ -145,5 +147,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new FraxlendAdapter(FraxlendConfigs, providers),
     new RaribleAdapter(RaribleConfigs, providers),
     new ExactlyAdapter(ExactlyConfigs, providers),
+    new FraxethAdapter(FraxethConfigs, providers),
   ];
 }
