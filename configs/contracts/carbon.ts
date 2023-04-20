@@ -3,7 +3,7 @@ import { Contract } from '../../types/configs';
 export const CarbonContracts: Array<Contract> = [
   {
     chain: 'ethereum',
-    protocol: 'bancor',
+    protocol: 'carbon',
     abi: {},
     address: '0xc537e898cd774e2dcba3b14ea6f34c93d5ea45e1',
     birthday: 17087375,
