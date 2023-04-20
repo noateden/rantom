@@ -1,4 +1,5 @@
 import { AbracadabraContracts } from '../../configs/contracts/abracadabra';
+import { ConvexContracts } from '../../configs/contracts/convex';
 import { EnsContracts } from '../../configs/contracts/ens';
 import { ExactlyContracts } from '../../configs/contracts/exactly';
 import { FraxethContracts } from '../../configs/contracts/fraxeth';
@@ -21,5 +22,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     opensea: new ContractWorker(providers, OpenseaContracts),
     silo: new ContractWorker(providers, SiloContracts),
     fraxeth: new ContractWorker(providers, FraxethContracts),
+    convex: new ContractWorker(providers, ConvexContracts),
   };
 }
