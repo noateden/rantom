@@ -1,6 +1,5 @@
 import Web3 from 'web3';
 
-import { WorkerGenesisBlocks } from '../../configs';
 import { BlockSubgraphs } from '../../configs/constants';
 import EnvConfig from '../../configs/envConfig';
 import { normalizeAddress, sleep } from '../../lib/helper';
@@ -43,7 +42,7 @@ export class ContractWorker implements IContractWorker {
       if (states.length > 0) {
         startBlock = states[0].blockNumber;
       } else {
-        startBlock = WorkerGenesisBlocks[contract.chain];
+        startBlock = contract.birthday;
       }
     }
 
