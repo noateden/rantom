@@ -39,7 +39,7 @@ yarn start --help
 |     Compound     |     | Mint, Redeem, Borrow, Repay, Liquidation, DistributedSupplierComp, DistributedBorrowerComp                           |     🌱 |
 |     IronBank     |     |                                                                                                                      |     🌱 |
 |   Compound v3    |     | Supply, Withdraw, SupplyCollateral, WithdrawCollateral, AbsorbCollateral                                             |     🌱 |
-|  Convex Finance  |     | Deposited, Withdrawn                                                                                                 |     🌱 |
+|  Convex Finance  |     | Deposited, Withdrawn, Staked, Withdrawn, RewardPaid                                                                  |     🌱 |
 |   Aura Finance   |     | Deposited, Withdrawn, Collect                                                                                        |     🌱 |
 |      Bancor      |     | Deposit, Withdraw, Trade, Flashloan                                                                                  |     🌱 |
 |    Beanstalk     |     | Deposit, Withdraw, Sow                                                                                               |     🌱 |

@@ -23,18 +23,6 @@ export const Uniswapv2Configs: ProtocolConfig = {
       '0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f', // v2 Factory
     ],
   },
-  staticData: {
-    subgraphConfigs: [
-      {
-        protocol: 'uniswapv2',
-        chain: 'ethereum',
-        version: 'univ2',
-        birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
-        filters: {},
-        endpoint: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2',
-      },
-    ],
-  },
 };
 
 export const Uniswapv3Configs: ProtocolConfig = {
@@ -42,18 +30,6 @@ export const Uniswapv3Configs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0x1f98431c8ad98523631ae4a59f267346ea31f984', // v3 Factory
-    ],
-  },
-  staticData: {
-    subgraphConfigs: [
-      {
-        protocol: 'uniswapv3',
-        chain: 'ethereum',
-        version: 'univ3',
-        birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
-        filters: {},
-        endpoint: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3',
-      },
     ],
   },
 };
@@ -81,16 +57,6 @@ export const SushiConfigs: ProtocolConfig = {
   },
   staticData: {
     pools: SushiPools,
-    subgraphConfigs: [
-      {
-        protocol: 'sushi',
-        chain: 'ethereum',
-        version: 'univ2',
-        birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
-        filters: {},
-        endpoint: 'https://api.thegraph.com/subgraphs/name/sushiswap/exchange',
-      },
-    ],
   },
   subgraphs: [
     {
@@ -109,20 +75,6 @@ export const PancakeswapConfigs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0x1097053fd2ea711dad45caccc45eff7548fcb362', // uni v2 Factory
-    ],
-  },
-  staticData: {
-    subgraphConfigs: [
-      {
-        protocol: 'pancakeswap',
-        chain: 'ethereum',
-        version: 'univ2',
-        birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
-        filters: {
-          transactionBlockNumber: 'block',
-        },
-        endpoint: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exhange-eth',
-      },
     ],
   },
   subgraphs: [
@@ -701,6 +653,8 @@ export const ConvexConfigs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0xf403c135812408bfbe8713b5a23a04b3d48aae31', // Booster
+      '0xcf50b810e57ac33b91dcf525c6ddd9881b139332', // Stake CVX earn CRV
+      '0x3fe65692bfcd0e6cf84cb1e7d24108e434a7587e', // Stake cvxCRV earn CRV
     ],
   },
   staticData: {
