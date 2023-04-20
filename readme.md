@@ -67,6 +67,7 @@ yarn start --help
 |     Rarible      |     | Buy                                                                                                                  |     🌱 |
 |     Exactly      |     | Deposit, Withdraw, Borrow, Repay, DepositAtMaturity, WithdrawAtMaturity, BorrowAtMaturity, RepayAtMaturity           |     🌱 |
 |     FraxEth      |     | ETHSubmitted, Deposit, Withdraw                                                                                      |     🌱 |
+|      Carbon      |     | TokensTraded, StrategyCreated, StrategyDeleted                                                                       |     🌱 |
 
 ### Nft Marketplace
 

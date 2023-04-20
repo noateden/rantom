@@ -5772,4 +5772,222 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['TokensTraded(address,address,address,uint256,uint256,uint128,bool)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'trader',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'Token',
+        name: 'sourceToken',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'Token',
+        name: 'targetToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'sourceAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'targetAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint128',
+        name: 'tradingFeeAmount',
+        type: 'uint128',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'byTargetAmount',
+        type: 'bool',
+      },
+    ],
+  },
+  [Signatures[
+    'StrategyCreated(uint256,address,address,address,(uint128,uint128,uint64,uint64),(uint128,uint128,uint64,uint64))'
+  ]]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'id',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'owner',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'Token',
+        name: 'token0',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'Token',
+        name: 'token1',
+        type: 'address',
+      },
+      {
+        components: [
+          {
+            internalType: 'uint128',
+            name: 'y',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint128',
+            name: 'z',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint64',
+            name: 'A',
+            type: 'uint64',
+          },
+          {
+            internalType: 'uint64',
+            name: 'B',
+            type: 'uint64',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct Order',
+        name: 'order0',
+        type: 'tuple',
+      },
+      {
+        components: [
+          {
+            internalType: 'uint128',
+            name: 'y',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint128',
+            name: 'z',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint64',
+            name: 'A',
+            type: 'uint64',
+          },
+          {
+            internalType: 'uint64',
+            name: 'B',
+            type: 'uint64',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct Order',
+        name: 'order1',
+        type: 'tuple',
+      },
+    ],
+  },
+  [Signatures[
+    'StrategyDeleted(uint256,address,address,address,(uint128,uint128,uint64,uint64),(uint128,uint128,uint64,uint64))'
+  ]]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'id',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'owner',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'Token',
+        name: 'token0',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'Token',
+        name: 'token1',
+        type: 'address',
+      },
+      {
+        components: [
+          {
+            internalType: 'uint128',
+            name: 'y',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint128',
+            name: 'z',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint64',
+            name: 'A',
+            type: 'uint64',
+          },
+          {
+            internalType: 'uint64',
+            name: 'B',
+            type: 'uint64',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct Order',
+        name: 'order0',
+        type: 'tuple',
+      },
+      {
+        components: [
+          {
+            internalType: 'uint128',
+            name: 'y',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint128',
+            name: 'z',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint64',
+            name: 'A',
+            type: 'uint64',
+          },
+          {
+            internalType: 'uint64',
+            name: 'B',
+            type: 'uint64',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct Order',
+        name: 'order1',
+        type: 'tuple',
+      },
+    ],
+  },
 };

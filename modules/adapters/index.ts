@@ -10,6 +10,7 @@ import {
   BeanstalkConfigs,
   BeefyConfigs,
   BlurConfigs,
+  CarbonConfigs,
   ChainlinkConfigs,
   CompoundConfigs,
   Compoundv3Configs,
@@ -61,6 +62,7 @@ import { BancorAdapter } from './bancor/bancor';
 import { BeanstalkAdapter } from './beanstalk/beanstalk';
 import { BeefyAdapter } from './beefy/beefy';
 import { BlurAdapter } from './blur/blur';
+import { CarbonAdapter } from './carbon/carbon';
 import { ChainlinkAdapter } from './chainlink/chainlink';
 import { CompoundAdapter } from './compound/compound';
 import { Compoundv3Adapter } from './compound/compoundv3';
@@ -148,5 +150,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new RaribleAdapter(RaribleConfigs, providers),
     new ExactlyAdapter(ExactlyConfigs, providers),
     new FraxethAdapter(FraxethConfigs, providers),
+    new CarbonAdapter(CarbonConfigs, providers),
   ];
 }

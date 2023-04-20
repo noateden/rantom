@@ -1214,3 +1214,12 @@ export const FraxethConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const CarbonConfigs: ProtocolConfig = {
+  protocol: 'carbon',
+  contracts: {
+    ethereum: [
+      '0xc537e898cd774e2dcba3b14ea6f34c93d5ea45e1', // Controller
+    ],
+  },
+};

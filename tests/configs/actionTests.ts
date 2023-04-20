@@ -8,6 +8,7 @@ import { BancorActionTestLogs } from './protocols/bancor';
 import { BeanstalkActionTestLogs } from './protocols/beanstalk';
 import { BeefyActionTestLogs } from './protocols/beefy';
 import { BlurActionTestLogs } from './protocols/blur';
+import { CarbonActionTestLogs } from './protocols/carbon';
 import { ChainlinkActionTestLogs } from './protocols/chainlink';
 import { Compound3ActionTestLogs, CompoundActionTestLogs } from './protocols/compound';
 import { ConvexActionTestLogs } from './protocols/convex';
@@ -88,4 +89,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...RaribleActionTestLogs,
   ...ExactlyActionTestLogs,
   ...FraxethActionTestLogs,
+  ...CarbonActionTestLogs,
 ];

@@ -305,4 +305,12 @@ export const Signatures: { [key: string]: string } = {
 
   // frax eth
   'ETHSubmitted(address,address,uint256,uint256)': '0x29b3e86ecfd94a32218997c40b051e650e4fd8c97fc7a4d266be3f7c61c5205b',
+
+  // carbondefi.xyz
+  'TokensTraded(address,address,address,uint256,uint256,uint128,bool)':
+    '0x95f3b01351225fea0e69a46f68b164c9dea10284f12cd4a907ce66510ab7af6a',
+  'StrategyCreated(uint256,address,address,address,(uint128,uint128,uint64,uint64),(uint128,uint128,uint64,uint64))':
+    '0xff24554f8ccfe540435cfc8854831f8dcf1cf2068708cfaf46e8b52a4ccc4c8d',
+  'StrategyDeleted(uint256,address,address,address,(uint128,uint128,uint64,uint64),(uint128,uint128,uint64,uint64))':
+    '0x4d5b6e0627ea711d8e9312b6ba56f50e0b51d41816fd6fd38643495ac81d38b6',
 };
