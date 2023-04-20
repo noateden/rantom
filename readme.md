@@ -40,7 +40,7 @@ yarn start --help
 |     IronBank     |     |                                                                                                                      |     🌱 |
 |   Compound v3    |     | Supply, Withdraw, SupplyCollateral, WithdrawCollateral, AbsorbCollateral                                             |     🌱 |
 |  Convex Finance  |     | Deposited, Withdrawn, Staked, Withdrawn, RewardPaid                                                                  |     🌱 |
-|   Aura Finance   |     | Deposited, Withdrawn, Collect                                                                                        |     🌱 |
+|   Aura Finance   |     | Deposited, Withdrawn, Staked, Withdrawn, RewardPaid                                                                  |     🌱 |
 |      Bancor      |     | Deposit, Withdraw, Trade, Flashloan                                                                                  |     🌱 |
 |    Beanstalk     |     | Deposit, Withdraw, Sow                                                                                               |     🌱 |
 | CowSwap Protocol |     | Trade                                                                                                                |     🌱 |

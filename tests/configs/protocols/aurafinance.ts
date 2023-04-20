@@ -50,26 +50,4 @@ export const AurafinanceActionTestLogs: Array<TestLog> = [
     adapter: new AurafinanceAdapter(AurafinanceConfigs, null),
     action: 'withdraw',
   },
-  {
-    chain: 'ethereum',
-    hash: '0x6d78bed40d6e3dc191a551a61159edfa42300c34145b270c86afd9e0a151d067',
-    sender: normalizeAddress('0x04a8a22e5ef364c5237df13317c4f083f32c2cc4'),
-    address: normalizeAddress('0xde6226bda2f6c516486936d9b19ec4b0d88bf025'),
-    log: {
-      address: '0xde6226bda2f6c516486936d9b19ec4b0d88bf025',
-      topics: [
-        '0xe2403640ba68fed3a2f88b7557551d1993f84b99bb10ff833f0cf8db0c5e0486',
-        '0x00000000000000000000000004a8a22e5ef364c5237df13317c4f083f32c2cc4',
-      ],
-      data: '0x0000000000000000000000000000000000000000000000034de1775bab003533',
-      blockNumber: '0xfe5f08',
-      transactionHash: '0x6d78bed40d6e3dc191a551a61159edfa42300c34145b270c86afd9e0a151d067',
-      transactionIndex: '0x87',
-      blockHash: '0x4ec19de940bc9302a5c252c853bf228f2d73614335f81e598d85a01a301521c0',
-      logIndex: '0x150',
-      removed: false,
-    },
-    adapter: new AurafinanceAdapter(AurafinanceConfigs, null),
-    action: 'collect',
-  },
 ];

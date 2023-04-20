@@ -341,6 +341,12 @@
     "symbol": "alUSD",
     "decimals": 18
   },
+  "auraBAL": {
+    "chain": "ethereum",
+    "address": "0x616e8bfa43f920657b3497dbf40d6b1a02d4608d",
+    "symbol": "auraBAL",
+    "decimals": 18
+  },
   "cbETH": {
     "chain": "ethereum",
     "address": "0xbe9895146f7af43049ca1c1ae358b0541ea49704",
