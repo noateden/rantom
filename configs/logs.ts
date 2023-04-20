@@ -95,6 +95,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xa39739ef8b0231dbfa0dcda07d7e29faabcf4bb2', // Liquity trove manager
     '0x59728544b08ab483533076417fbbb2fd0b17ce3a', // Looksrare exchange
     '0xbcd7254a1d759efa08ec7c3291b2e85c5dcc12ce', // Looksrare staking
+    '0x0000000000e655fae4d56241588680f86e3b2377', // Looksrare exchange v2
     '0x60744434d6339a6b27d73d9eda62b6f66a0a04fa', // Maker DAI flashloan
     '0x9759a6ac90977b93b58547b4a71c78317f391a28', // Maker DAI join
     '0x79a0fa989fb7adf1f8e80c93ee605ebb94f7c6a5', // Maker GUSD join

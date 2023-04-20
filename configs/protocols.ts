@@ -484,6 +484,7 @@ export const LooksrareConfigs: ProtocolConfig = {
     ethereum: [
       '0x59728544b08ab483533076417fbbb2fd0b17ce3a', // Looksrare Exchange
       '0xbcd7254a1d759efa08ec7c3291b2e85c5dcc12ce', // LOOK Staking
+      '0x0000000000e655fae4d56241588680f86e3b2377', // Looksrare Exchange v2
     ],
   },
   customEventMapping: {

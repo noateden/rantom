@@ -5606,4 +5606,170 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures[
+    'TakerAsk((bytes32,uint256,bool),address,address,uint256,address,address,uint256[],uint256[],address[2],uint256[3])'
+  ]]: {
+    abi: [
+      {
+        components: [
+          {
+            internalType: 'bytes32',
+            name: 'orderHash',
+            type: 'bytes32',
+          },
+          {
+            internalType: 'uint256',
+            name: 'orderNonce',
+            type: 'uint256',
+          },
+          {
+            internalType: 'bool',
+            name: 'isNonceInvalidated',
+            type: 'bool',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct ILooksRareProtocol.NonceInvalidationParameters',
+        name: 'nonceInvalidationParameters',
+        type: 'tuple',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'askUser',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'bidUser',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'strategyId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'currency',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'collection',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256[]',
+        name: 'itemIds',
+        type: 'uint256[]',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256[]',
+        name: 'amounts',
+        type: 'uint256[]',
+      },
+      {
+        indexed: false,
+        internalType: 'address[2]',
+        name: 'feeRecipients',
+        type: 'address[2]',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256[3]',
+        name: 'feeAmounts',
+        type: 'uint256[3]',
+      },
+    ],
+  },
+  [Signatures[
+    'TakerBid((bytes32,uint256,bool),address,address,uint256,address,address,uint256[],uint256[],address[2],uint256[3])'
+  ]]: {
+    abi: [
+      {
+        components: [
+          {
+            internalType: 'bytes32',
+            name: 'orderHash',
+            type: 'bytes32',
+          },
+          {
+            internalType: 'uint256',
+            name: 'orderNonce',
+            type: 'uint256',
+          },
+          {
+            internalType: 'bool',
+            name: 'isNonceInvalidated',
+            type: 'bool',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct ILooksRareProtocol.NonceInvalidationParameters',
+        name: 'nonceInvalidationParameters',
+        type: 'tuple',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'bidUser',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'bidRecipient',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'strategyId',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'currency',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'collection',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256[]',
+        name: 'itemIds',
+        type: 'uint256[]',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256[]',
+        name: 'amounts',
+        type: 'uint256[]',
+      },
+      {
+        indexed: false,
+        internalType: 'address[2]',
+        name: 'feeRecipients',
+        type: 'address[2]',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256[3]',
+        name: 'feeAmounts',
+        type: 'uint256[3]',
+      },
+    ],
+  },
 };

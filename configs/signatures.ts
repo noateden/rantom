@@ -152,6 +152,10 @@ export const Signatures: { [key: string]: string } = {
     '0x68cd251d4d267c6e2034ff0088b990352b97b2002c0476587d0c4da889c11330',
   'TakerBid(bytes32,uint256,address,address,address,address,address,uint256,uint256,uint256)':
     '0x95fb6205e23ff6bda16a2d1dba56b9ad7c783f67c96fa149785052f47696f2be',
+  'TakerAsk((bytes32,uint256,bool),address,address,uint256,address,address,uint256[],uint256[],address[2],uint256[3])':
+    '0x9aaa45d6db2ef74ead0751ea9113263d1dec1b50cea05f0ca2002cb8063564a4',
+  'TakerBid((bytes32,uint256,bool),address,address,uint256,address,address,uint256[],uint256[],address[2],uint256[3])':
+    '0x3ee3de4684413690dee6fff1a0a4f92916a1b97d1c5a83cdf24671844306b2e3',
   'RoyaltyPayment(address,uint256,address,address,uint256)':
     '0x27c4f0403323142b599832f26acd21c74a9e5b809f2215726e244a4ac588cd7d',
   'DepositEvent(bytes,bytes,bytes,bytes,bytes)': '0x649bbc62d0e31342afea4e5cd82d4049e7e1ee912fc0889aa790803be39038c5',
