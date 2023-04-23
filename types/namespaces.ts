@@ -10,6 +10,7 @@ import {
 } from './configs';
 import {
   MongoCollections,
+  ProtocolStats,
   SystemReport,
   TokenOracleResult,
   Transaction,
@@ -18,10 +19,11 @@ import {
 } from './domains';
 import {
   AdapterParseLogOptions,
+  ApiQueryLogOptions,
+  ApiQueryProtocolStatsOptions,
   OracleGetTokenPriceOptions,
   ParseTransactionOptions,
   RpcWrapperQueryContractOptions,
-  SmartApiQueryLogOptions,
   SubgraphJobRunOptions,
   TransferParseLogOptions,
   WorkerRunOptions,
@@ -116,10 +118,11 @@ export interface IReportProvider extends IProvider {
   run: () => Promise<void>;
 }
 
-export interface ISmartApiProvider extends IProvider {
+export interface IApiWorkerProvider extends IProvider {
   providers: GlobalProviders;
 
-  queryLogs: (options: SmartApiQueryLogOptions) => Promise<Array<any>>;
+  queryLogs: (options: ApiQueryLogOptions) => Promise<Array<any>>;
+  queryProtocolStats: (options: ApiQueryProtocolStatsOptions) => Promise<ProtocolStats>;
   run: () => Promise<void>;
 }
 

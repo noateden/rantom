@@ -126,3 +126,13 @@ export interface SystemReport {
   protocols: Array<string>;
   reports: Array<ProtocolSystemReport>;
 }
+
+export interface ProtocolStats {
+  protocol: string;
+
+  // unique actions on protocol
+  actions: Array<KnownAction>;
+
+  // unique tokens on protocol
+  tokens: Array<string>;
+}

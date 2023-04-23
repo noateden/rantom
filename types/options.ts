@@ -59,7 +59,7 @@ export interface OracleGetTokenPriceOptions {
   timestamp: number;
 }
 
-export interface SmartApiQueryLogOptions {
+export interface ApiQueryLogOptions {
   query: any;
   limit: number;
   order: number;
@@ -75,4 +75,8 @@ export interface RpcWrapperQueryContractOptions {
 
   // if blockNumber is not given, just call data from latest block
   blockNumber?: number;
+}
+
+export interface ApiQueryProtocolStatsOptions {
+  protocol: string;
 }

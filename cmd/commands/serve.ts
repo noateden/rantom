@@ -4,7 +4,7 @@ import path from 'path';
 
 import logger from '../../lib/logger';
 import getRouter from '../../modules/api';
-import { SmartApiProvider } from '../../modules/worker/smartapi';
+import { ApiWorkerProvider } from '../../modules/api/worker';
 import { GlobalProviders } from '../../types/namespaces';
 import { BasicCommand } from '../basic';
 
@@ -20,7 +20,7 @@ export class ServeCommand extends BasicCommand {
     const providers: GlobalProviders = await super.getProviders();
 
     const router = getRouter(providers);
-    const smartApi = new SmartApiProvider(providers);
+    const apiWorker = new ApiWorkerProvider(providers);
 
     const port = argv.port || process.env.PORT || '8080';
 
@@ -43,7 +43,7 @@ export class ServeCommand extends BasicCommand {
       });
     });
 
-    await smartApi.run();
+    await apiWorker.run();
   }
 
   public setOptions(yargs: any) {
