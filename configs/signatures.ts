@@ -318,4 +318,7 @@ export const Signatures: { [key: string]: string } = {
   'SubmitEvent(address,uint256,address)': '0x98d2bc018caf34c71a8f920d9d93d4ed62e9789506b74087b48570c17b28ed99',
   'ClaimTokensEvent(address,uint256,uint256,uint256)':
     '0xaca94a3466fab333b79851ab29b0715612740e4ae0d891ef8e9bd2a1bf5e24dd',
+
+  // stakewise
+  'Claimed(address,uint256,address[],uint256[])': '0xc4687ac57d0a9636a21381dada24ff811c5652e7f9ee442caede1927ecebcb9b',
 };

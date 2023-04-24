@@ -11,6 +11,7 @@ import { LidoContracts } from '../../configs/contracts/lido';
 import { MakerContracts } from '../../configs/contracts/maker';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { SiloContracts } from '../../configs/contracts/silo';
+import { StakewiseContracts } from '../../configs/contracts/stakewise';
 import { TornadocashContracts } from '../../configs/contracts/tornadocash';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 import { ContractWorker } from './contract';
@@ -31,5 +32,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     carbon: new ContractWorker(providers, CarbonContracts),
     maker: new ContractWorker(providers, MakerContracts),
     lido: new ContractWorker(providers, LidoContracts),
+    stakewise: new ContractWorker(providers, StakewiseContracts),
   };
 }

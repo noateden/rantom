@@ -6040,4 +6040,32 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Claimed(address,uint256,address[],uint256[])']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'index',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address[]',
+        name: 'tokens',
+        type: 'address[]',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256[]',
+        name: 'amounts',
+        type: 'uint256[]',
+      },
+    ],
+  },
 };

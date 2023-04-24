@@ -41,6 +41,7 @@ import {
   RocketpoolConfigs,
   ShibaswapConfigs,
   SiloConfigs,
+  StakewiseConfigs,
   StargateConfigs,
   SushiConfigs,
   TornadocashConfigs,
@@ -90,6 +91,7 @@ import { Pancakeswapv3Adapter } from './pancakeswap/pancakeswapv3';
 import { RaribleAdapter } from './rarible/rarible';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SiloAdapter } from './silo/silo';
+import { StakewiseAdapter } from './stakewise/stakewise';
 import { StargateAdapter } from './stargate/stargate';
 import { SushiAdapter } from './sushi/sushi';
 import { TornadocashAdapter } from './tornadocash/tornadocash';
@@ -151,5 +153,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new ExactlyAdapter(ExactlyConfigs, providers),
     new FraxethAdapter(FraxethConfigs, providers),
     new CarbonAdapter(CarbonConfigs, providers),
+    new StakewiseAdapter(StakewiseConfigs, providers),
   ];
 }

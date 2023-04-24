@@ -251,6 +251,12 @@
     "symbol": "SUSHI",
     "decimals": 18
   },
+  "SWISE": {
+    "chain": "ethereum",
+    "address": "0x48c3399719b582dd63eb5aadf12a40b4c3f52fa2",
+    "symbol": "SWISE",
+    "decimals": 18
+  },
   "TUSD": {
     "chain": "ethereum",
     "address": "0x0000000000085d4780b73119b644ae5ecd22b376",

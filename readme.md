@@ -46,7 +46,7 @@ yarn start --help
 | CowSwap Protocol |     | Trade                                                                                                                |     🌱 |
 |      Curve       |     | TokenExchange, AddLiquidity, RemoveLiquidity                                                                         |     🌱 |
 |   Hop Exchange   |     | TransferToL2                                                                                                         |     🌱 |
-|       Lido       |     | Submitted                                                                                                            |     🌱 |
+|       Lido       |     | Submitted, SubmitEvent, ClaimTokensEvent                                                                             |     🌱 |
 |   Rocket Pool    |     | TokensMinted, TokensBurned                                                                                           |     🌱 |
 |    Multichain    |     | SwapIn, SwapOut                                                                                                      |     🌱 |
 |     Optimism     |     | Batch                                                                                                                |     🌱 |
@@ -68,6 +68,7 @@ yarn start --help
 |     Exactly      |     | Deposit, Withdraw, Borrow, Repay, DepositAtMaturity, WithdrawAtMaturity, BorrowAtMaturity, RepayAtMaturity           |     🌱 |
 |     FraxEth      |     | ETHSubmitted, Deposit, Withdraw                                                                                      |     🌱 |
 |      Carbon      |     | TokensTraded, StrategyCreated, StrategyDeleted                                                                       |     🌱 |
+|    Stakewise     |     | Transfer, Claimed                                                                                                    |     🌱 |
 
 ### Nft Marketplace
 
