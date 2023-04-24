@@ -141,6 +141,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     // '0x00000000006c3852cbef3e08e8df289169ede581', // Seaport 1.1
     // '0x00000000000001ad428e4906ae43d8f9852d0dd6', // Seaport 1.4
     '0xc537e898cd774e2dcba3b14ea6f34c93d5ea45e1', // Carbon controller
+    '0xbafa44efe7901e04e39dad13167d089c559c1138', // Fraxeth frxETHMinter
+    '0xac3e018457b222d93114458476f3e3416abbe38f', // Fraxeth sfrxETH
   ],
 };
 
