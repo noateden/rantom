@@ -1,25 +1,30 @@
 import { Contract } from '../../types/configs';
-import MakerAuthGemJoinAbi from '../abi/maker/AuthGemJoin.json';
-import MakerDaiFlashLoanAbi from '../abi/maker/DaiFlashloan.json';
 
 export const MakerContracts: Array<Contract> = [
   {
     chain: 'ethereum',
     protocol: 'maker',
-    abi: MakerDaiFlashLoanAbi,
+    abi: {},
     address: '0x60744434d6339a6b27d73d9eda62b6f66a0a04fa',
     birthday: 16308190,
-    events: ['FlashLoan'],
+    events: [],
+    topics: [
+      '0x0d7d75e01ab95780d3cd1c8ec0dd6c2ce19e3a20427eec8bf53283b6fb8e95f0', // Flashloan
+    ],
   },
 
   // Auth GUSD Join
   {
     chain: 'ethereum',
     protocol: 'maker',
-    abi: MakerAuthGemJoinAbi,
+    abi: {},
     address: '0x79a0fa989fb7adf1f8e80c93ee605ebb94f7c6a5',
     birthday: 16308190,
-    events: ['Join', 'Exit'],
+    events: [],
+    topics: [
+      '0xef693bed00000000000000000000000000000000000000000000000000000000',
+      '0x3b4da69f00000000000000000000000000000000000000000000000000000000',
+    ],
   },
 
   // Dai Join
@@ -137,7 +142,55 @@ export const MakerContracts: Array<Contract> = [
     chain: 'ethereum',
     protocol: 'maker',
     abi: {},
+    address: '0x7f62f9592b823331e012d3c5ddf2a7714cfb9de2',
+    birthday: 16308190,
+    events: [],
+    topics: [
+      '0xef693bed00000000000000000000000000000000000000000000000000000000',
+      '0x3b4da69f00000000000000000000000000000000000000000000000000000000',
+    ],
+  },
+  {
+    chain: 'ethereum',
+    protocol: 'maker',
+    abi: {},
     address: '0x0a59649758aa4d66e25f08dd01271e891fe52199',
+    birthday: 16308190,
+    events: [],
+    topics: [
+      '0xef693bed00000000000000000000000000000000000000000000000000000000',
+      '0x3b4da69f00000000000000000000000000000000000000000000000000000000',
+    ],
+  },
+  {
+    chain: 'ethereum',
+    protocol: 'maker',
+    abi: {},
+    address: '0x7e62b7e279dfc78deb656e34d6a435cc08a44666',
+    birthday: 16308190,
+    events: [],
+    topics: [
+      '0xef693bed00000000000000000000000000000000000000000000000000000000',
+      '0x3b4da69f00000000000000000000000000000000000000000000000000000000',
+    ],
+  },
+  {
+    chain: 'ethereum',
+    protocol: 'maker',
+    abi: {},
+    address: '0x10cd5fbe1b404b7e19ef964b63939907bdaf42e2',
+    birthday: 16308190,
+    events: [],
+    topics: [
+      '0xef693bed00000000000000000000000000000000000000000000000000000000',
+      '0x3b4da69f00000000000000000000000000000000000000000000000000000000',
+    ],
+  },
+  {
+    chain: 'ethereum',
+    protocol: 'maker',
+    abi: {},
+    address: '0x248ccbf4864221fc0e840f29bb042ad5bfc89b5c',
     birthday: 16308190,
     events: [],
     topics: [

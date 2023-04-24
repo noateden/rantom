@@ -742,9 +742,13 @@ export const MakerConfigs: ProtocolConfig = {
       '0x0ac6a1d74e84c2df9063bddc31699ff2a2bb22a2', // USDT-A GemJoin
       '0xbf72da2bd84c5170618fbe5914b0eca9638d5eb5', // WBTC-A GemJoin
       '0xfa8c996e158b80d77fbd0082bb437556a65b96e0', // WBTC-B GemJoin
+      '0x7f62f9592b823331e012d3c5ddf2a7714cfb9de2', // WBTC-C GemJoin
       '0x60744434d6339a6b27d73d9eda62b6f66a0a04fa', // DAI Flashloan
       '0x0a59649758aa4d66e25f08dd01271e891fe52199', // USDC PSM A GemJoin
       '0x79a0fa989fb7adf1f8e80c93ee605ebb94f7c6a5', // GUSD PSM A GemJoin
+      '0x7e62b7e279dfc78deb656e34d6a435cc08a44666', // USDP PSM A GemJoin
+      '0x10cd5fbe1b404b7e19ef964b63939907bdaf42e2', // wstETH-A GemJoin
+      '0x248ccbf4864221fc0e840f29bb042ad5bfc89b5c', // wstETH-B GemJoin
     ],
   },
   customEventMapping: {
@@ -822,6 +826,11 @@ export const MakerConfigs: ProtocolConfig = {
       },
       {
         chain: 'ethereum',
+        address: '0x7f62f9592b823331e012d3c5ddf2a7714cfb9de2',
+        token: Tokens.ethereum.WBTC,
+      },
+      {
+        chain: 'ethereum',
         address: '0x0a59649758aa4d66e25f08dd01271e891fe52199',
         token: Tokens.ethereum.USDC,
       },
@@ -829,6 +838,21 @@ export const MakerConfigs: ProtocolConfig = {
         chain: 'ethereum',
         address: '0x79a0fa989fb7adf1f8e80c93ee605ebb94f7c6a5',
         token: Tokens.ethereum.GUSD,
+      },
+      {
+        chain: 'ethereum',
+        address: '0x7e62b7e279dfc78deb656e34d6a435cc08a44666',
+        token: Tokens.ethereum.USDP,
+      },
+      {
+        chain: 'ethereum',
+        address: '0x10cd5fbe1b404b7e19ef964b63939907bdaf42e2',
+        token: Tokens.ethereum.wstETH,
+      },
+      {
+        chain: 'ethereum',
+        address: '0x248ccbf4864221fc0e840f29bb042ad5bfc89b5c',
+        token: Tokens.ethereum.wstETH,
       },
     ],
   },
