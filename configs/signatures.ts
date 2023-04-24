@@ -313,4 +313,9 @@ export const Signatures: { [key: string]: string } = {
     '0xff24554f8ccfe540435cfc8854831f8dcf1cf2068708cfaf46e8b52a4ccc4c8d',
   'StrategyDeleted(uint256,address,address,address,(uint128,uint128,uint64,uint64),(uint128,uint128,uint64,uint64))':
     '0x4d5b6e0627ea711d8e9312b6ba56f50e0b51d41816fd6fd38643495ac81d38b6',
+
+  // lido.fi
+  'SubmitEvent(address,uint256,address)': '0x98d2bc018caf34c71a8f920d9d93d4ed62e9789506b74087b48570c17b28ed99',
+  'ClaimTokensEvent(address,uint256,uint256,uint256)':
+    '0xaca94a3466fab333b79851ab29b0715612740e4ae0d891ef8e9bd2a1bf5e24dd',
 };

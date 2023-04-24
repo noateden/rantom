@@ -39,6 +39,7 @@ export const LidoConfigs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0xae7ab96520de3a18e5e111b5eaab095312d7fe84', // stETH
+      '0x9ee91f9f426fa633d227f7a9b000e28b9dfd8599', // stMATIC
     ],
   },
   staticData: {

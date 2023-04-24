@@ -5990,4 +5990,54 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['SubmitEvent(address,uint256,address)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_from',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_amount',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_referral',
+        type: 'address',
+      },
+    ],
+  },
+  [Signatures['ClaimTokensEvent(address,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_from',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: '_id',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: '_amountClaimed',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_amountBurned',
+        type: 'uint256',
+      },
+    ],
+  },
 };

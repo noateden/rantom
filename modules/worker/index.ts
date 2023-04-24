@@ -7,6 +7,7 @@ import { ExactlyContracts } from '../../configs/contracts/exactly';
 import { FraxethContracts } from '../../configs/contracts/fraxeth';
 import { FraxlendContracts } from '../../configs/contracts/fraxlend';
 import { GearboxContracts } from '../../configs/contracts/gearbox';
+import { LidoContracts } from '../../configs/contracts/lido';
 import { MakerContracts } from '../../configs/contracts/maker';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { SiloContracts } from '../../configs/contracts/silo';
@@ -29,5 +30,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     aurafinance: new ContractWorker(providers, AurafinanceContracts),
     carbon: new ContractWorker(providers, CarbonContracts),
     maker: new ContractWorker(providers, MakerContracts),
+    lido: new ContractWorker(providers, LidoContracts),
   };
 }

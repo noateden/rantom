@@ -179,6 +179,12 @@
     "symbol": "MANA",
     "decimals": 18
   },
+  "MATIC": {
+    "chain": "ethereum",
+    "address": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
+    "symbol": "MATIC",
+    "decimals": 18
+  },
   "METIS": {
     "chain": "ethereum",
     "address": "0x9e32b13ce7f2e80a01932b42553652e053d6ed8e",
