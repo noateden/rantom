@@ -704,6 +704,7 @@ export const LiquityConfigs: ProtocolConfig = {
     ethereum: [
       '0x24179cd81c9e782a4096035f7ec97fb8b783e007', // Borrow Operation
       '0xa39739ef8b0231dbfa0dcda07d7e29faabcf4bb2', // Trove Manager
+      '0x66017d22b0f8556afdd19fc67041899eb65a21bb', // Stability Pool
     ],
   },
   staticData: {

@@ -8,6 +8,7 @@ import { FraxethContracts } from '../../configs/contracts/fraxeth';
 import { FraxlendContracts } from '../../configs/contracts/fraxlend';
 import { GearboxContracts } from '../../configs/contracts/gearbox';
 import { LidoContracts } from '../../configs/contracts/lido';
+import { LiquityContracts } from '../../configs/contracts/liquity';
 import { MakerContracts } from '../../configs/contracts/maker';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { SiloContracts } from '../../configs/contracts/silo';
@@ -33,5 +34,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     maker: new ContractWorker(providers, MakerContracts),
     lido: new ContractWorker(providers, LidoContracts),
     stakewise: new ContractWorker(providers, StakewiseContracts),
+    liquity: new ContractWorker(providers, LiquityContracts),
   };
 }

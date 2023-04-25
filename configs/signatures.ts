@@ -321,4 +321,9 @@ export const Signatures: { [key: string]: string } = {
 
   // stakewise
   'Claimed(address,uint256,address[],uint256[])': '0xc4687ac57d0a9636a21381dada24ff811c5652e7f9ee442caede1927ecebcb9b',
+
+  // liquity.org
+  'UserDepositChanged(address,uint256)': '0xbce78369dccab09eec1986f4d409ab09ffbb47d65423e5148fcf98411c5111c9',
+  'ETHGainWithdrawn(address,uint256,uint256)': '0x51457222ebca92c335c9c86e2baa1cc0e40ffaa9084a51452980d5ba8dec2f63',
+  'LQTYPaidToDepositor(address,uint256)': '0x2608b986a6ac0f6c629ca37018e80af5561e366252ae93602a96d3ab2e73e42d',
 };

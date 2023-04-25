@@ -55,7 +55,7 @@ yarn start --help
 |      Yearn       |     | Deposit, Withdraw                                                                                                    |     🌱 |
 |   0x: Exchange   |     | TransformedERC20, OtcOrderFilled, LimitOrderFilled, RfqOrderFilled                                                   |     🌱 |
 |  Euler Finance   |     | Deposit, Withdraw, Borrow, Repay, Liquidation                                                                        |     🌱 |
-|     Liquity      |     | TroveUpdated, TroveLiquidated                                                                                        |     🌱 |
+|     Liquity      |     | TroveUpdated, TroveLiquidated, UserDepositChanged, ETHGainWithdrawn, LQTYPaidToDepositor                             |     🌱 |
 |   Abracadabra    |     | LogBorrow, LogRepay, LogAddCollateral, LogRemoveCollateral, LogLiquidation, Transfer, Deposit, Withdraw, ClaimReward |     🌱 |
 |     MakerDao     |     | GemJoin, GemExit, DaiJoin, DaiExit, FlashLoan                                                                        |     🌱 |
 |     Stargate     |     | Mint, Burn, Swap, SwapRemote                                                                                         |     🌱 |

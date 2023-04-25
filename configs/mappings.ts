@@ -6068,4 +6068,58 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['UserDepositChanged(address,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_depositor',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_newDeposit',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['ETHGainWithdrawn(address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_depositor',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_ETH',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_LUSDLoss',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['LQTYPaidToDepositor(address,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_depositor',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_LQTY',
+        type: 'uint256',
+      },
+    ],
+  },
 };
