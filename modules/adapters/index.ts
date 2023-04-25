@@ -14,6 +14,7 @@ import {
   ChainlinkConfigs,
   CompoundConfigs,
   Compoundv3Configs,
+  ConicConfigs,
   ConvexConfigs,
   CowswapConfigs,
   CurveConfigs,
@@ -67,6 +68,7 @@ import { CarbonAdapter } from './carbon/carbon';
 import { ChainlinkAdapter } from './chainlink/chainlink';
 import { CompoundAdapter } from './compound/compound';
 import { Compoundv3Adapter } from './compound/compoundv3';
+import { ConicAdapter } from './conic/conic';
 import { ConvexAdapter } from './convex/convex';
 import { CowswapAdapter } from './cowswap/cowswap';
 import { CurveAdapter } from './curve/curve';
@@ -154,5 +156,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new FraxethAdapter(FraxethConfigs, providers),
     new CarbonAdapter(CarbonConfigs, providers),
     new StakewiseAdapter(StakewiseConfigs, providers),
+    new ConicAdapter(ConicConfigs, providers),
   ];
 }

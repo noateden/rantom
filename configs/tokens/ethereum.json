@@ -59,6 +59,12 @@
     "symbol": "BUSD",
     "decimals": 18
   },
+  "CNC": {
+    "chain": "ethereum",
+    "address": "0x9ae380f0272e2162340a5bb646c354271c0f5cfc",
+    "symbol": "CNC",
+    "decimals": 18
+  },
   "COMP": {
     "chain": "ethereum",
     "symbol": "COMP",

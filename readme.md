@@ -69,6 +69,7 @@ yarn start --help
 |     FraxEth      |     | ETHSubmitted, Deposit, Withdraw                                                                                      |     🌱 |
 |      Carbon      |     | TokensTraded, StrategyCreated, StrategyDeleted                                                                       |     🌱 |
 |    Stakewise     |     | Transfer, Claimed                                                                                                    |     🌱 |
+|      Conic       |     | Deposit, Withdraw, ClaimedRewards, Locked, UnlockExecuted                                                            |     🌱 |
 
 ### Nft Marketplace
 

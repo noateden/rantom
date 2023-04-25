@@ -1259,3 +1259,71 @@ export const StakewiseConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const ConicConfigs: ProtocolConfig = {
+  protocol: 'conic',
+  contracts: {
+    ethereum: [
+      '0x40293380f5292bb13905608b35a936c332f07f94', // Omnipool FRAX
+      '0x07b577f10d4e00f3018542d08a87f255a49175a5', // Omnipool USDC
+      '0xabb735648a076d570aff2a61d8d141099823eae9', // Omnipool DAI
+      '0xf432110e5206356cd6448da16b05394a89b44cef', // Omnipool USDT
+      '0x3f41480dd3b32f1cc579125f9570dccd07e07667', // CNC locker v1
+      '0x5f2e1ac047e6a8526f8640a7ed8ab53a0b3f4acf', // CNC locker v2
+    ],
+  },
+  customEventMapping: {
+    [Signatures['Deposit(address,address,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'sender',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'receiver',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'depositedAmount',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'lpReceived',
+          type: 'uint256',
+        },
+      ],
+    },
+    [Signatures['Withdraw(address,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'account',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount',
+          type: 'uint256',
+        },
+      ],
+    },
+  },
+  staticData: {
+    poolTokens: {
+      '0x40293380f5292bb13905608b35a936c332f07f94': Tokens.ethereum.FRAX,
+      '0x07b577f10d4e00f3018542d08a87f255a49175a5': Tokens.ethereum.USDC,
+      '0xabb735648a076d570aff2a61d8d141099823eae9': Tokens.ethereum.DAI,
+      '0xf432110e5206356cd6448da16b05394a89b44cef': Tokens.ethereum.USDT,
+    },
+  },
+};

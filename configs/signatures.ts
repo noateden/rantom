@@ -326,4 +326,9 @@ export const Signatures: { [key: string]: string } = {
   'UserDepositChanged(address,uint256)': '0xbce78369dccab09eec1986f4d409ab09ffbb47d65423e5148fcf98411c5111c9',
   'ETHGainWithdrawn(address,uint256,uint256)': '0x51457222ebca92c335c9c86e2baa1cc0e40ffaa9084a51452980d5ba8dec2f63',
   'LQTYPaidToDepositor(address,uint256)': '0x2608b986a6ac0f6c629ca37018e80af5561e366252ae93602a96d3ab2e73e42d',
+
+  // conic.finance
+  'ClaimedRewards(uint256,uint256)': '0x141d6e75554381bcc1326596e8010e6c432bb0988e14ca0310d85837a211d292',
+  'Locked(address,uint256,uint256,bool)': '0xca8d506eda84f8ed07c2908ae102299d34888ef5e19b97f56e4d6fcd1104c31e',
+  'UnlockExecuted(address,uint256)': '0xb291e2a2847a5ad6d47409943306c6d6e8c63a9855b849701b868191e9478970',
 };

@@ -11,6 +11,7 @@ import { BlurActionTestLogs } from './protocols/blur';
 import { CarbonActionTestLogs } from './protocols/carbon';
 import { ChainlinkActionTestLogs } from './protocols/chainlink';
 import { Compound3ActionTestLogs, CompoundActionTestLogs } from './protocols/compound';
+import { ConicActionTestLogs } from './protocols/conic';
 import { ConvexActionTestLogs } from './protocols/convex';
 import { CowswapActionTestLogs } from './protocols/cowswap';
 import { CurveActionTestLogs } from './protocols/curve';
@@ -90,4 +91,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...ExactlyActionTestLogs,
   ...FraxethActionTestLogs,
   ...CarbonActionTestLogs,
+  ...ConicActionTestLogs,
 ];

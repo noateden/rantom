@@ -1,6 +1,7 @@
 import { AbracadabraContracts } from '../../configs/contracts/abracadabra';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
 import { CarbonContracts } from '../../configs/contracts/carbon';
+import { ConicContracts } from '../../configs/contracts/conic';
 import { ConvexContracts } from '../../configs/contracts/convex';
 import { EnsContracts } from '../../configs/contracts/ens';
 import { ExactlyContracts } from '../../configs/contracts/exactly';
@@ -35,5 +36,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     lido: new ContractWorker(providers, LidoContracts),
     stakewise: new ContractWorker(providers, StakewiseContracts),
     liquity: new ContractWorker(providers, LiquityContracts),
+    conic: new ContractWorker(providers, ConicContracts),
   };
 }
