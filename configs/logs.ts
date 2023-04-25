@@ -42,6 +42,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9', // Aave lending pool v2
     '0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2', // Aave lending pool v3
     '0xa57b8d98dae62b26ec3bcc4a365338157060b234', // Aura booster
+    '0x00a7ba8ae7bca0b10a32ea1f8e2a1da980c6cad2', // Aura auraBAL staking
+    '0x5e5ea2048475854a5702f5b8468a51ba1296efcc', // Aura auraBAL staking 2
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault
     '0xeef417e1d5cc832e619ae18d2f140de2999dd4fb', // Bancor network v3
     '0xd982e001491d414c857f2a1aaa4b43ccf9f642b4', // Bancor pool v3
@@ -70,6 +72,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xc3d688b66703497daa19211eedff47f25384cdc3', // Compound v3 USDC
     '0xa17581a9e3356d9a858b789d68b4d866e593ae94', // Compound v3 ETH
     '0xf403c135812408bfbe8713b5a23a04b3d48aae31', // Convex booster
+    '0xcf50b810e57ac33b91dcf525c6ddd9881b139332', // Convex stake CVX earn CRV
+    '0x3fe65692bfcd0e6cf84cb1e7d24108e434a7587e', // Convex Stake cvxCRV earn CRV
     '0x9008d19f58aabd9ed0d60971565aa8510560ab41', // CowSwap settlement
     '0x27182842e098f60e3d576794a5bffb0777e025d3', // Euler protocol
     '0x41c84c0e2ee0b740cf0d31f63f3b6f627dc6b393', // Ironbank WETH
