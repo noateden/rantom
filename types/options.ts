@@ -41,6 +41,7 @@ export interface MulticallOptions {
 
 export interface WorkerRunOptions {
   chain?: string;
+  force?: boolean;
   fromBlock: number;
   fromTime: number;
 }

@@ -18,7 +18,11 @@ export class IndexCommand extends BasicCommand {
       for (const name of names) {
         const contractWorkers = getContractWorkers(providers);
         if (contractWorkers[name]) {
-          await contractWorkers[name].run({ fromBlock: argv.fromBlock ? Number(argv.fromBlock) : 0, fromTime: 0 });
+          await contractWorkers[name].run({
+            force: argv.force,
+            fromBlock: argv.fromBlock ? Number(argv.fromBlock) : 0,
+            fromTime: 0,
+          });
         }
       }
 
@@ -41,6 +45,11 @@ export class IndexCommand extends BasicCommand {
         type: 'number',
         default: 0,
         describe: 'Run with given initial block number',
+      },
+      force: {
+        type: 'boolean',
+        default: true,
+        describe: 'Force get events from birthday config',
       },
       exit: {
         type: 'boolean',

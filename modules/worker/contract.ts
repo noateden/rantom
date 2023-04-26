@@ -28,7 +28,7 @@ export class ContractWorker implements IContractWorker {
   protected async indexContract(contract: Contract, options: WorkerRunOptions): Promise<void> {
     if (!contract.topics || contract.topics.length === 0) return;
 
-    const { fromBlock } = options;
+    const { force, fromBlock } = options;
 
     const web3 = new Web3(EnvConfig.blockchains[contract.chain].nodeRpc);
     const stateKey = `contract-index-${contract.chain}-${normalizeAddress(contract.address)}`;
@@ -37,12 +37,16 @@ export class ContractWorker implements IContractWorker {
     let startBlock = fromBlock;
     const latestBlock = await web3.eth.getBlockNumber();
 
-    if (startBlock === 0) {
-      const states = await collections.statesCollection.find({ name: stateKey }).limit(1).toArray();
-      if (states.length > 0) {
-        startBlock = states[0].blockNumber;
-      } else {
-        startBlock = contract.birthday;
+    if (force) {
+      startBlock = contract.birthday;
+    } else {
+      if (startBlock === 0) {
+        const states = await collections.statesCollection.find({ name: stateKey }).limit(1).toArray();
+        if (states.length > 0) {
+          startBlock = states[0].blockNumber;
+        } else {
+          startBlock = contract.birthday;
+        }
       }
     }
 
@@ -161,7 +165,7 @@ export class ContractWorker implements IContractWorker {
       }
 
       // save state if fromBlock === 0
-      if (fromBlock === 0) {
+      if (!force && fromBlock === 0) {
         await collections.statesCollection.updateOne(
           {
             name: stateKey,
