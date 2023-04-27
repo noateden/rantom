@@ -72,6 +72,7 @@ yarn start --help
 | Kyberswap Aggregator | Swapped                                                                                                              |     🌱 |
 | Kyberswap Classic    | Mint, Swap, Burn, PoolCreated                                                                                        |     🌱 |
 | Arrakis Finance      | Minted, Burned, LogMint, LogBurn                                                                                     |     🌱 |
+| Lybra Finance        | DepositEther, WithdrawEther, Mint, Burn                                                                              |     🌱 |
 
 ### Nft Marketplace
 

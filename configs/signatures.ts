@@ -353,4 +353,13 @@ export const Signatures: { [key: string]: string } = {
     '0x7239dff1718b550db7f36cbf69c665cfeb56d0e96b4fb76a5cba712961b65509',
   'LogMint(address,uint256,uint256,uint256)': '0x5f11830295067c4bcc7d02d4e3b048cd7427be50a3aeb6afc9d3d559ee64bcfa',
   'LogBurn(address,uint256,uint256,uint256)': '0x86dacd5ce62967ebd3d915a82b22ad7e159538e50c7ba451e073fec048d9f127',
+
+  // lybra.finance
+  'DepositEther(address,address,uint256,uint256)': '0x819557bb6c528588eb5c050cf4dd54b96956b6f93a5232c6b429d19e95fe8e89',
+  'WithdrawEther(address,address,uint256,uint256)':
+    '0x7af7d9e5b71152303ff7a5221e1a22febc3cf6407ea2a05f870d770097177db0',
+  'Mint(address,address,uint256,uint256)': '0x2f00e3cdd69a77be7ed215ec7b2a36784dd158f921fca79ac29deffa353fe6ee',
+  'Burn(address,address,uint256,uint256)': '0x5d624aa9c148153ab3446c1b154f660ee7701e549fe9b62dab7171b1c80e6fa2',
+  'LiquidationRecord(address,address,address,uint256,uint256,uint256,bool,uint256)':
+    '0xb59dc9737d55b75fc6ca7522e82d6161da5d7c8337b9ab990a5846f95b5ccdad',
 };

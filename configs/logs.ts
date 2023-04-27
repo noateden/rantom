@@ -162,6 +162,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Kyberswap aggregator meta router v2
     '0x1c758af0688502e49140230f6b0ebd376d429be5', // Kyberswap classic KSFactory
     '0x833e4083b7ae46cea85695c4f7ed25cdad8886de', // Kyberswap classic DMMFactory
+    '0x97de57ec338ab5d51557da3434828c5dbfada371', // Lybra finance main
   ],
 };
 

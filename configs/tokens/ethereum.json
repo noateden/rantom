@@ -383,6 +383,12 @@
     "symbol": "cvxCRV",
     "decimals": 18
   },
+  "eUSD": {
+    "chain": "ethereum",
+    "address": "0x97de57ec338ab5d51557da3434828c5dbfada371",
+    "symbol": "eUSD",
+    "decimals": 18
+  },
   "frxETH": {
     "chain": "ethereum",
     "address": "0x5e8422345238f34275888049021821e8e08caa1f",

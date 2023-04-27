@@ -1367,3 +1367,12 @@ export const ArrakisConfigs: ProtocolConfig = {
     vaults: ArrakisVaults,
   },
 };
+
+export const LybraConfigs: ProtocolConfig = {
+  protocol: 'lybra',
+  contracts: {
+    ethereum: [
+      '0x97de57ec338ab5d51557da3434828c5dbfada371', // Lybra
+    ],
+  },
+};

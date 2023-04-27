@@ -30,6 +30,7 @@ import { LidoActionTestLogs } from './protocols/lido';
 import { LiquityActionTestLogs } from './protocols/liquity';
 import { LooksrareActionTestLogs } from './protocols/looksrare';
 import { LoopringActionTestLogs } from './protocols/loopring';
+import { LybraActionTestLogs } from './protocols/lybra';
 import { MakerActionTestLogs } from './protocols/maker';
 import { MultichainActionTestLogs } from './protocols/multichain';
 import { OpenseaActionTestLogs } from './protocols/opensea';
@@ -96,4 +97,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...ConicActionTestLogs,
   ...KyberswapActionTestLogs,
   ...ArrakisActionTestLogs,
+  ...LybraActionTestLogs,
 ];

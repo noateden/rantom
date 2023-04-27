@@ -35,6 +35,7 @@ import {
   LiquityConfigs,
   LooksrareConfigs,
   LoopringConfigs,
+  LybraConfigs,
   MakerConfigs,
   MultichainConfigs,
   OpenseaConfigs,
@@ -91,6 +92,7 @@ import { LidoAdapter } from './lido/lido';
 import { LiquityAdapter } from './liquity/liquity';
 import { LooksrareAdapter } from './looksrare/looksrare';
 import { LoopringAdapter } from './loopring/loopring';
+import { LybraAdapter } from './lybra/lybra';
 import { MakerAdapter } from './maker/maker';
 import { MultichainAdapter } from './multichain/multichain';
 import { OpenseaAdapter } from './opensea/opensea';
@@ -166,5 +168,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new KyberswapAggregatorAdapter(KyberswapAggregatorConfigs, providers),
     new KyberswapClassicAdapter(KyberswapClassicConfigs, providers),
     new ArrakisAdapter(ArrakisConfigs, providers),
+    new LybraAdapter(LybraConfigs, providers),
   ];
 }

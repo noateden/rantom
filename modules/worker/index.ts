@@ -12,6 +12,7 @@ import { GearboxContracts } from '../../configs/contracts/gearbox';
 import { KyberswapAggregatorContracts } from '../../configs/contracts/kyperswap';
 import { LidoContracts } from '../../configs/contracts/lido';
 import { LiquityContracts } from '../../configs/contracts/liquity';
+import { LybraContracts } from '../../configs/contracts/lybra';
 import { MakerContracts } from '../../configs/contracts/maker';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { SiloContracts } from '../../configs/contracts/silo';
@@ -41,5 +42,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     conic: new ContractWorker(providers, ConicContracts),
     kyberswap: new ContractWorker(providers, KyberswapAggregatorContracts),
     arrakis: new ContractWorker(providers, ArrakisContracts),
+    lybra: new ContractWorker(providers, LybraContracts),
   };
 }
