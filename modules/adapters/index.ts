@@ -28,6 +28,7 @@ import {
   GearboxConfigs,
   HopConfigs,
   IronbankConfigs,
+  KyberswapAggregatorConfigs,
   LidoConfigs,
   LiquityConfigs,
   LooksrareConfigs,
@@ -81,6 +82,7 @@ import { FraxlendAdapter } from './fraxlend/fraxlend';
 import { GearboxAdapter } from './gearbox/gearbox';
 import { HopAdapter } from './hop/hop';
 import { IronbankAdapter } from './ironbank/ironbank';
+import { KyberswapAggregatorAdapter } from './kyberswap/kyberswap';
 import { LidoAdapter } from './lido/lido';
 import { LiquityAdapter } from './liquity/liquity';
 import { LooksrareAdapter } from './looksrare/looksrare';
@@ -157,5 +159,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new CarbonAdapter(CarbonConfigs, providers),
     new StakewiseAdapter(StakewiseConfigs, providers),
     new ConicAdapter(ConicConfigs, providers),
+    new KyberswapAggregatorAdapter(KyberswapAggregatorConfigs, providers),
   ];
 }

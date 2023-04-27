@@ -24,6 +24,7 @@ import { FraxlendActionTestLogs } from './protocols/fraxlend';
 import { GearboxActionTestLogs } from './protocols/gearbox';
 import { HopActionTestLogs } from './protocols/hop';
 import { IronbankActionTestLogs } from './protocols/ironbank';
+import { KyberswapActionTestLogs } from './protocols/kyberswap';
 import { LidoActionTestLogs } from './protocols/lido';
 import { LiquityActionTestLogs } from './protocols/liquity';
 import { LooksrareActionTestLogs } from './protocols/looksrare';
@@ -92,4 +93,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...FraxethActionTestLogs,
   ...CarbonActionTestLogs,
   ...ConicActionTestLogs,
+  ...KyberswapActionTestLogs,
 ];

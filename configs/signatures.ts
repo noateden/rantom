@@ -331,4 +331,12 @@ export const Signatures: { [key: string]: string } = {
   'ClaimedRewards(uint256,uint256)': '0x141d6e75554381bcc1326596e8010e6c432bb0988e14ca0310d85837a211d292',
   'Locked(address,uint256,uint256,bool)': '0xca8d506eda84f8ed07c2908ae102299d34888ef5e19b97f56e4d6fcd1104c31e',
   'UnlockExecuted(address,uint256)': '0xb291e2a2847a5ad6d47409943306c6d6e8c63a9855b849701b868191e9478970',
+
+  // kyberswap
+  'Swapped(address,address,address,address,uint256,uint256)':
+    '0xd6d4f5681c246c9f42c203e287975af1601f8df8035a9251f79aab5c8f09e2f8',
+  'OrderFilled(address,bytes32,uint256,uint256,uint256)':
+    '0xda67fd5efd7c65cc617b4e30cdd2569c6c2b3d0034729f3c616c6a83b4520a8f',
+  'OrderFilledRFQ(address,bytes32,uint256,uint256)':
+    '0xeb6e58fbaca6cb4b6726ec4e1ac663797ae31405c07620f4d6babd436ee9f0f7',
 };

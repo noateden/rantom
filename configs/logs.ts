@@ -156,6 +156,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x07b577f10d4e00f3018542d08a87f255a49175a5', // Conic USDC
     '0xabb735648a076d570aff2a61d8d141099823eae9', // Conic DAI
     '0xf432110e5206356cd6448da16b05394a89b44cef', // Conic USDT
+    '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Kyberswap aggregator meta router v2
   ],
 };
 

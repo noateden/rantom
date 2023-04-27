@@ -1327,3 +1327,12 @@ export const ConicConfigs: ProtocolConfig = {
     },
   },
 };
+
+export const KyberswapAggregatorConfigs: ProtocolConfig = {
+  protocol: 'kyberswap-aggregator',
+  contracts: {
+    ethereum: [
+      '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Meta Router v2
+    ],
+  },
+};
