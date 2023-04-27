@@ -48,7 +48,7 @@ export class IndexCommand extends BasicCommand {
       },
       force: {
         type: 'boolean',
-        default: true,
+        default: false,
         describe: 'Force get events from birthday config',
       },
       exit: {

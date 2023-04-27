@@ -34,12 +34,11 @@ export class ContractWorker implements IContractWorker {
     const stateKey = `contract-index-${contract.chain}-${normalizeAddress(contract.address)}`;
     const collections = await this.providers.mongodb.requireCollections();
 
-    let startBlock = fromBlock;
+    let startBlock = contract.birthday;
     const latestBlock = await web3.eth.getBlockNumber();
 
-    if (force) {
-      startBlock = contract.birthday;
-    } else {
+    if (!force) {
+      startBlock = fromBlock;
       if (startBlock === 0) {
         const states = await collections.statesCollection.find({ name: stateKey }).limit(1).toArray();
         if (states.length > 0) {
