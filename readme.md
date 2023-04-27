@@ -25,12 +25,12 @@ yarn start --help
 
 | Protocol             | Event                                                                                                                | Status |
 |:---------------------|----------------------------------------------------------------------------------------------------------------------|-------:|
-| Uniswap v2           | Mint, Swap, Burn                                                                                                     |     🌱 |
-| Pancakeswap          |                                                                                                                      |     🌱 |
-| Shibaswap            |                                                                                                                      |     🌱 |
-| Fraxswap             |                                                                                                                      |     🌱 |
-| Sushi Dex            | Mint, Swap, Burn                                                                                                     |     🌱 |
-| Sushi Masterche      | Deposit, Withdraw, EmergencyWithdraw                                                                                 |     🌱 |
+| Uniswap v2           | Mint, Swap, Burn, PoolCreated                                                                                        |     🌱 |
+| Pancakeswap          | Mint, Swap, Burn, PoolCreated                                                                                        |     🌱 |
+| Shibaswap            | Mint, Swap, Burn, PoolCreated                                                                                        |     🌱 |
+| Fraxswap             | Mint, Swap, Burn, PoolCreated                                                                                        |     🌱 |
+| Sushi Dex            | Mint, Swap, Burn, PoolCreated                                                                                        |     🌱 |
+| Sushi Masterchef     | Deposit, Withdraw, EmergencyWithdraw                                                                                 |     🌱 |
 | Uniswap v3           | Mint, Swap, Burn, Collect                                                                                            |     🌱 |
 | Balancer             | Swap, Join, Exit, FlashLoan                                                                                          |     🌱 |
 | Aave v1              | Deposit, Withdraw, Borrow, Repay, Flashloan, Liquidation                                                             |     🌱 |
@@ -70,6 +70,7 @@ yarn start --help
 | Stakewise            | Transfer, Claimed                                                                                                    |     🌱 |
 | Conic                | Deposit, Withdraw, ClaimedRewards, Locked, UnlockExecuted                                                            |     🌱 |
 | Kyberswap Aggregator | Swapped                                                                                                              |     🌱 |
+| Kyberswap Classic    | Mint, Swap, Burn, PoolCreated                                                                                        |     🌱 |
 
 ### Nft Marketplace
 

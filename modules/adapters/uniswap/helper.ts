@@ -160,6 +160,10 @@ export class UniswapHelper {
     const events: Array<TradingEvent> = [];
 
     for (const event of subgraphEvents) {
+      if (!event.amount0 || !event.amount1) {
+        continue;
+      }
+
       const token0: Token =
         subgraphConfig.version === 'univ2'
           ? {
@@ -219,6 +223,10 @@ export class UniswapHelper {
     const events: Array<TradingEvent> = [];
 
     for (const event of subgraphEvents) {
+      if (!event.amount0 || !event.amount1) {
+        continue;
+      }
+
       const token0: Token =
         subgraphConfig.version === 'univ2'
           ? {

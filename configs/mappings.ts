@@ -6284,4 +6284,124 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Swap(address,uint256,uint256,uint256,uint256,address,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'sender',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount0In',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount1In',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount0Out',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount1Out',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'to',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'feeInPrecision',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['PoolCreated(address,address,address,uint32,uint24,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'contract IERC20',
+        name: 'token0',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'contract IERC20',
+        name: 'token1',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'pool',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint32',
+        name: 'ampBps',
+        type: 'uint32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint24',
+        name: 'feeUnits',
+        type: 'uint24',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'totalPool',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['PoolCreated(address,address,address,uint32,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'contract IERC20',
+        name: 'token0',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'contract IERC20',
+        name: 'token1',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'pool',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint32',
+        name: 'ampBps',
+        type: 'uint32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'totalPool',
+        type: 'uint256',
+      },
+    ],
+  },
 };

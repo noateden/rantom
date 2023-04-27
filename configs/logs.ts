@@ -19,6 +19,7 @@ import {
   CurveConfigs,
   EulerConfigs,
   IronbankConfigs,
+  KyberswapClassicConfigs,
   LidoConfigs,
   LiquityConfigs,
   LooksrareConfigs,
@@ -164,6 +165,7 @@ export const ProtocolWhitelistedSubgraphs: Array<ProtocolConfig> = [
   SushiConfigs,
   PancakeswapConfigs,
   PancakeswapV3Configs,
+  KyberswapClassicConfigs,
 ];
 
 export const ReportProtocolConfigs: Array<ProtocolConfig> = [

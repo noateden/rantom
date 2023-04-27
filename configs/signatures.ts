@@ -339,4 +339,10 @@ export const Signatures: { [key: string]: string } = {
     '0xda67fd5efd7c65cc617b4e30cdd2569c6c2b3d0034729f3c616c6a83b4520a8f',
   'OrderFilledRFQ(address,bytes32,uint256,uint256)':
     '0xeb6e58fbaca6cb4b6726ec4e1ac663797ae31405c07620f4d6babd436ee9f0f7',
+  'Swap(address,uint256,uint256,uint256,uint256,address,uint256)':
+    '0x606ecd02b3e3b4778f8e97b2e03351de14224efaa5fa64e62200afc9395c2499',
+  'PoolCreated(address,address,address,uint32,uint24,uint256)':
+    '0xb6bce363b712c921bead4bcc977289440eb6172eb89e258e3a25bd49ca806de6',
+  'PoolCreated(address,address,address,uint32,uint256)':
+    '0xfc574402c445e75f2b79b67884ff9c662244dce454c5ae68935fcd0bebb7c8ff',
 };

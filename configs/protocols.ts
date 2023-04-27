@@ -1336,3 +1336,23 @@ export const KyberswapAggregatorConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const KyberswapClassicConfigs: ProtocolConfig = {
+  protocol: 'kyberswap-classic',
+  contracts: {
+    ethereum: [
+      '0x1c758af0688502e49140230f6b0ebd376d429be5', // KSFactory
+      '0x833e4083b7ae46cea85695c4f7ed25cdad8886de', // DMMFactory
+    ],
+  },
+  subgraphs: [
+    {
+      protocol: 'kyberswap-classic',
+      chain: 'ethereum',
+      version: 'univ2',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-exchange-ethereum',
+    },
+  ],
+};
