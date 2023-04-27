@@ -150,6 +150,12 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xac3e018457b222d93114458476f3e3416abbe38f', // Fraxeth sfrxETH
     '0xfe2e637202056d30016725477c5da089ab0a043a', // Stakewise sETH2
     '0xa3f21010e8b9a3930996c8849df38f9ca3647c20', // Stakewise rETH2, SWISE claim
+    '0x3f41480dd3b32f1cc579125f9570dccd07e07667', // Conic CNC staking
+    '0x5f2e1ac047e6a8526f8640a7ed8ab53a0b3f4acf', // Conic CNC staking v2
+    '0x40293380f5292bb13905608b35a936c332f07f94', // Conic FRAX
+    '0x07b577f10d4e00f3018542d08a87f255a49175a5', // Conic USDC
+    '0xabb735648a076d570aff2a61d8d141099823eae9', // Conic DAI
+    '0xf432110e5206356cd6448da16b05394a89b44cef', // Conic USDT
   ],
 };
 
