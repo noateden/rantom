@@ -4,6 +4,7 @@ import {
   Aavev3Configs,
   AbracadabraConfigs,
   ApecoinConfigs,
+  ArrakisConfigs,
   AurafinanceConfigs,
   BalancerConfigs,
   BancorConfigs,
@@ -60,6 +61,7 @@ import { Aavev2Adapter } from './aave/aavev2';
 import { Aavev3Adapter } from './aave/aavev3';
 import { AbracadabraAdapter } from './abracadabra/abracadabra';
 import { ApecoinAdapter } from './apecoin/apecoin';
+import { ArrakisAdapter } from './arrakis/arrakis';
 import { AurafinanceAdapter } from './aurafinance/aurafinance';
 import { BalancerAdapter } from './balancer/balancer';
 import { BancorAdapter } from './bancor/bancor';
@@ -163,5 +165,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new ConicAdapter(ConicConfigs, providers),
     new KyberswapAggregatorAdapter(KyberswapAggregatorConfigs, providers),
     new KyberswapClassicAdapter(KyberswapClassicConfigs, providers),
+    new ArrakisAdapter(ArrakisConfigs, providers),
   ];
 }

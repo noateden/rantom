@@ -1,4 +1,5 @@
 import { AbracadabraContracts } from '../../configs/contracts/abracadabra';
+import { ArrakisContracts } from '../../configs/contracts/arrakis';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
 import { CarbonContracts } from '../../configs/contracts/carbon';
 import { ConicContracts } from '../../configs/contracts/conic';
@@ -39,5 +40,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     liquity: new ContractWorker(providers, LiquityContracts),
     conic: new ContractWorker(providers, ConicContracts),
     kyberswap: new ContractWorker(providers, KyberswapAggregatorContracts),
+    arrakis: new ContractWorker(providers, ArrakisContracts),
   };
 }

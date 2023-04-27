@@ -71,6 +71,7 @@ yarn start --help
 | Conic                | Deposit, Withdraw, ClaimedRewards, Locked, UnlockExecuted                                                            |     🌱 |
 | Kyberswap Aggregator | Swapped                                                                                                              |     🌱 |
 | Kyberswap Classic    | Mint, Swap, Burn, PoolCreated                                                                                        |     🌱 |
+| Arrakis Finance      | Minted, Burned, LogMint, LogBurn                                                                                     |     🌱 |
 
 ### Nft Marketplace
 

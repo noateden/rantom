@@ -4,6 +4,7 @@ import { Tokens } from './constants';
 import { CurveContracts } from './contracts/curve';
 import { YearnContracts } from './contracts/yearn';
 import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
+import ArrakisVaults from './data/ArrakisVaults.json';
 import AuraFinanceBoosterPoolsData from './data/AuraFinanceBoosterPools.json';
 import BeefyVaults from './data/BeefyVaults.json';
 import CompoundMarkets from './data/CompoundMarkets.json';
@@ -1355,4 +1356,14 @@ export const KyberswapClassicConfigs: ProtocolConfig = {
       endpoint: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-exchange-ethereum',
     },
   ],
+};
+
+export const ArrakisConfigs: ProtocolConfig = {
+  protocol: 'arrakis',
+  contracts: {
+    ethereum: ArrakisVaults.map((item) => item.address),
+  },
+  staticData: {
+    vaults: ArrakisVaults,
+  },
 };
