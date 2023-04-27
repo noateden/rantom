@@ -148,6 +148,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xc537e898cd774e2dcba3b14ea6f34c93d5ea45e1', // Carbon controller
     '0xbafa44efe7901e04e39dad13167d089c559c1138', // Fraxeth frxETHMinter
     '0xac3e018457b222d93114458476f3e3416abbe38f', // Fraxeth sfrxETH
+    '0xfe2e637202056d30016725477c5da089ab0a043a', // Stakewise sETH2
+    '0xa3f21010e8b9a3930996c8849df38f9ca3647c20', // Stakewise rETH2, SWISE claim
   ],
 };
 
