@@ -158,6 +158,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xabb735648a076d570aff2a61d8d141099823eae9', // Conic DAI
     '0xf432110e5206356cd6448da16b05394a89b44cef', // Conic USDT
     '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Kyberswap aggregator meta router v2
+    '0x1c758af0688502e49140230f6b0ebd376d429be5', // Kyberswap classic KSFactory
+    '0x833e4083b7ae46cea85695c4f7ed25cdad8886de', // Kyberswap classic DMMFactory
   ],
 };
 
