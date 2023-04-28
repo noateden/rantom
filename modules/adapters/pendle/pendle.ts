@@ -83,8 +83,8 @@ export class PendleAdapter extends Adapter {
           }
         } else if (signature === Signatures.ClaimRewards) {
           const user = normalizeAddress(event.user);
-          const tokens: Array<Token> = [];
-          const amounts: Array<string> = [];
+          const rewardTokens: Array<Token> = [];
+          const rewardAmounts: Array<string> = [];
 
           for (let i = 0; i < event.rewardTokens.length; i++) {
             let token: Token | null = null;
@@ -94,12 +94,22 @@ export class PendleAdapter extends Adapter {
               }
             }
             if (token) {
-              tokens.push(token);
-              amounts.push(
+              rewardTokens.push(token);
+              rewardAmounts.push(
                 new BigNumber(event.rewardAmounts[i].toString())
                   .dividedBy(new BigNumber(10).pow(token.decimals))
                   .toString(10)
               );
+            } else {
+              token = await this.getWeb3Helper().getErc20Metadata(chain, event.rewardTokens[i]);
+              if (token) {
+                rewardTokens.push(token);
+                rewardAmounts.push(
+                  new BigNumber(event.rewardAmounts[i].toString())
+                    .dividedBy(new BigNumber(10).pow(token.decimals))
+                    .toString(10)
+                );
+              }
             }
           }
 
@@ -107,8 +117,8 @@ export class PendleAdapter extends Adapter {
             protocol: this.config.protocol,
             action: 'collect',
             addresses: [user],
-            tokens: tokens,
-            tokenAmounts: amounts,
+            tokens: rewardTokens,
+            tokenAmounts: rewardAmounts,
             readableString: `${user} collect rewards on ${this.config.protocol} chain ${chain}`,
           };
         }
