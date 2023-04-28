@@ -15,6 +15,7 @@ import { LiquityContracts } from '../../configs/contracts/liquity';
 import { LybraContracts } from '../../configs/contracts/lybra';
 import { MakerContracts } from '../../configs/contracts/maker';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
+import { PendleContracts } from '../../configs/contracts/pendle';
 import { SiloContracts } from '../../configs/contracts/silo';
 import { StakewiseContracts } from '../../configs/contracts/stakewise';
 import { TornadocashContracts } from '../../configs/contracts/tornadocash';
@@ -43,5 +44,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     kyberswap: new ContractWorker(providers, KyberswapAggregatorContracts),
     arrakis: new ContractWorker(providers, ArrakisContracts),
     lybra: new ContractWorker(providers, LybraContracts),
+    pendle: new ContractWorker(providers, PendleContracts),
   };
 }

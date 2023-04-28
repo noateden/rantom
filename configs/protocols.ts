@@ -13,6 +13,7 @@ import ConvexBoosterPoolsData from './data/ConvexBoosterPools.json';
 import ExactlyMarkets from './data/ExactlyMarkets.json';
 import FraxlendPairs from './data/FraxlendPairs.json';
 import IronbankMarkets from './data/IronbankMarkets.json';
+import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import SushiPools from './data/SushiPools.json';
 import { Signatures } from './signatures';
@@ -1374,5 +1375,49 @@ export const LybraConfigs: ProtocolConfig = {
     ethereum: [
       '0x97de57ec338ab5d51557da3434828c5dbfada371', // Lybra
     ],
+  },
+};
+
+export const PendleConfigs: ProtocolConfig = {
+  protocol: 'pendle',
+  contracts: {
+    ethereum: [
+      // all SY tokens
+      ...PendleContracts.syTokens.filter((item) => item.chain === 'ethereum').map((item) => item.address),
+    ],
+  },
+  customEventMapping: {
+    [Signatures['Mint(address,uint256,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'receiver',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'netLpMinted',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'netSyUsed',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'netPtUsed',
+          type: 'uint256',
+        },
+      ],
+    },
+  },
+  staticData: {
+    syTokens: PendleContracts.syTokens,
+    markets: PendleContracts.markets,
   },
 };

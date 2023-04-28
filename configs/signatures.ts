@@ -362,4 +362,14 @@ export const Signatures: { [key: string]: string } = {
   'Burn(address,address,uint256,uint256)': '0x5d624aa9c148153ab3446c1b154f660ee7701e549fe9b62dab7171b1c80e6fa2',
   'LiquidationRecord(address,address,address,uint256,uint256,uint256,bool,uint256)':
     '0xb59dc9737d55b75fc6ca7522e82d6161da5d7c8337b9ab990a5846f95b5ccdad',
+
+  // pendle.finance
+  'Deposit(address,address,address,uint256,uint256)':
+    '0x5fe47ed6d4225326d3303476197d782ded5a4e9c14f479dc9ec4992af4e85d59',
+  'Redeem(address,address,address,uint256,uint256)':
+    '0xaee47cdf925cf525fdae94f9777ee5a06cac37e1c41220d0a8a89ed154f62d1c',
+  'ClaimRewards(address,address[],uint256[])': '0x2193aa20a3717f5f4ac79482f4f553e5f0afe8f4e6ec3e3d1aa2e138adc4763f',
+  'Burn(address,address,uint256,uint256,uint256)': '0x4cf25bc1d991c17529c25213d3cc0cda295eeaad5f13f361969b12ea48015f90',
+  'Swap(address,address,int256,int256,uint256,uint256)':
+    '0x829000a5bc6a12d46e30cdcecd7c56b1efd88f6d7d059da6734a04f3764557c4',
 };

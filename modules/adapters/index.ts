@@ -42,6 +42,7 @@ import {
   OptimismConfigs,
   PancakeswapConfigs,
   PancakeswapV3Configs,
+  PendleConfigs,
   RaribleConfigs,
   RocketpoolConfigs,
   ShibaswapConfigs,
@@ -98,6 +99,7 @@ import { MultichainAdapter } from './multichain/multichain';
 import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
 import { Pancakeswapv3Adapter } from './pancakeswap/pancakeswapv3';
+import { PendleAdapter } from './pendle/pendle';
 import { RaribleAdapter } from './rarible/rarible';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SiloAdapter } from './silo/silo';
@@ -169,5 +171,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new KyberswapClassicAdapter(KyberswapClassicConfigs, providers),
     new ArrakisAdapter(ArrakisConfigs, providers),
     new LybraAdapter(LybraConfigs, providers),
+    new PendleAdapter(PendleConfigs, providers),
   ];
 }

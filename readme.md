@@ -73,6 +73,7 @@ yarn start --help
 | Kyberswap Classic    | Mint, Swap, Burn, PoolCreated                                                                                        |     🌱 |
 | Arrakis Finance      | Minted, Burned, LogMint, LogBurn                                                                                     |     🌱 |
 | Lybra Finance        | DepositEther, WithdrawEther, Mint, Burn                                                                              |     🌱 |
+| Pendle Finance       | Deposit, Redeem, ClaimRewards                                                                                        |     🌱 |
 
 ### Nft Marketplace
 

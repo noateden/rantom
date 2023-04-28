@@ -1,0 +1,655 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_yieldContractFactory",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_marketCreationCodeContractA",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_marketCreationCodeSizeA",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_marketCreationCodeContractB",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_marketCreationCodeSizeB",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "MarketFactoryExpiredPt",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "int256",
+        "name": "initialAnchor",
+        "type": "int256"
+      },
+      {
+        "internalType": "int256",
+        "name": "minInitialAnchor",
+        "type": "int256"
+      }
+    ],
+    "name": "MarketFactoryInitialAnchorTooLow",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "MarketFactoryInvalidPt",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint80",
+        "name": "lnFeeRateRoot",
+        "type": "uint80"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxLnFeeRateRoot",
+        "type": "uint256"
+      }
+    ],
+    "name": "MarketFactoryLnFeeRateRootTooHigh",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "MarketFactoryMarketExists",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "reserveFeePercent",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "maxReserveFeePercent",
+        "type": "uint8"
+      }
+    ],
+    "name": "MarketFactoryReserveFeePercentTooHigh",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "MarketFactoryZeroTreasury",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "market",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "PT",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "int256",
+        "name": "scalarRoot",
+        "type": "int256"
+      },
+      {
+        "indexed": false,
+        "internalType": "int256",
+        "name": "initialAnchor",
+        "type": "int256"
+      }
+    ],
+    "name": "CreateNewMarket",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "version",
+        "type": "uint8"
+      }
+    ],
+    "name": "Initialized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "treasury",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint80",
+        "name": "defaultLnFeeRateRoot",
+        "type": "uint80"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "reserveFeePercent",
+        "type": "uint8"
+      }
+    ],
+    "name": "NewMarketConfig",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "router",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint80",
+        "name": "lnFeeRateRoot",
+        "type": "uint80"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "reserveFeePercent",
+        "type": "uint8"
+      }
+    ],
+    "name": "SetOverriddenFee",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "router",
+        "type": "address"
+      }
+    ],
+    "name": "UnsetOverriddenFee",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "claimOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "PT",
+        "type": "address"
+      },
+      {
+        "internalType": "int256",
+        "name": "scalarRoot",
+        "type": "int256"
+      },
+      {
+        "internalType": "int256",
+        "name": "initialAnchor",
+        "type": "int256"
+      }
+    ],
+    "name": "createNewMarket",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "market",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "defaultFee",
+    "outputs": [
+      {
+        "internalType": "uint80",
+        "name": "lnFeeRateRoot",
+        "type": "uint80"
+      },
+      {
+        "internalType": "uint8",
+        "name": "reserveFeePercent",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bool",
+        "name": "active",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gaugeController",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "router",
+        "type": "address"
+      }
+    ],
+    "name": "getMarketConfig",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "_treasury",
+        "type": "address"
+      },
+      {
+        "internalType": "uint80",
+        "name": "_lnFeeRateRoot",
+        "type": "uint80"
+      },
+      {
+        "internalType": "uint8",
+        "name": "_reserveFeePercent",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_treasury",
+        "type": "address"
+      },
+      {
+        "internalType": "uint80",
+        "name": "_defaultLnFeeRateRoot",
+        "type": "uint80"
+      },
+      {
+        "internalType": "uint8",
+        "name": "_defaultReserveFeePercent",
+        "type": "uint8"
+      },
+      {
+        "internalType": "address",
+        "name": "newVePendle",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "newGaugeController",
+        "type": "address"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "market",
+        "type": "address"
+      }
+    ],
+    "name": "isValidMarket",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "marketCreationCodeContractA",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "marketCreationCodeContractB",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "marketCreationCodeSizeA",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "marketCreationCodeSizeB",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "maxLnFeeRateRoot",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "maxReserveFeePercent",
+    "outputs": [
+      {
+        "internalType": "uint8",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "minInitialAnchor",
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "",
+        "type": "int256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "overriddenFee",
+    "outputs": [
+      {
+        "internalType": "uint80",
+        "name": "lnFeeRateRoot",
+        "type": "uint80"
+      },
+      {
+        "internalType": "uint8",
+        "name": "reserveFeePercent",
+        "type": "uint8"
+      },
+      {
+        "internalType": "bool",
+        "name": "active",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "pendingOwner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint80",
+        "name": "newLnFeeRateRoot",
+        "type": "uint80"
+      },
+      {
+        "internalType": "uint8",
+        "name": "newReserveFeePercent",
+        "type": "uint8"
+      }
+    ],
+    "name": "setDefaultFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "router",
+        "type": "address"
+      },
+      {
+        "internalType": "uint80",
+        "name": "newLnFeeRateRoot",
+        "type": "uint80"
+      },
+      {
+        "internalType": "uint8",
+        "name": "newReserveFeePercent",
+        "type": "uint8"
+      }
+    ],
+    "name": "setOverriddenFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newTreasury",
+        "type": "address"
+      }
+    ],
+    "name": "setTreasury",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "direct",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "renounce",
+        "type": "bool"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "treasury",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "router",
+        "type": "address"
+      }
+    ],
+    "name": "unsetOverriddenFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "vePendle",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "yieldContractFactory",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
