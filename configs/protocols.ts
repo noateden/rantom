@@ -1382,8 +1382,9 @@ export const PendleConfigs: ProtocolConfig = {
   protocol: 'pendle',
   contracts: {
     ethereum: [
-      // all SY tokens
+      // all sy tokens and markets
       ...PendleContracts.syTokens.filter((item) => item.chain === 'ethereum').map((item) => item.address),
+      ...PendleContracts.markets.map((item) => item.address),
     ],
   },
   customEventMapping: {

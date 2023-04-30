@@ -17,4 +17,19 @@ export const PendleContracts: Array<Contract> = [
       ],
     };
   }),
+  ...PendleAllContracts.markets.map((item) => {
+    return {
+      chain: item.chain,
+      protocol: 'pendle',
+      abi: {},
+      address: item.address,
+      birthday: 16308190,
+      events: [],
+      topics: [
+        '0xb4c03061fb5b7fed76389d5af8f2e0ddb09f8c70d1333abbb62582835e10accb', // Mint
+        '0x4cf25bc1d991c17529c25213d3cc0cda295eeaad5f13f361969b12ea48015f90', // Burn
+        '0x829000a5bc6a12d46e30cdcecd7c56b1efd88f6d7d059da6734a04f3764557c4', // ClaimRewards
+      ],
+    };
+  }),
 ];

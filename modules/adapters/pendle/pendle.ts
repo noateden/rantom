@@ -9,6 +9,7 @@ import { KnownAction, TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { AdapterParseLogOptions } from '../../../types/options';
 import { Adapter } from '../adapter';
+import { PendleMarketInfo } from './helper';
 
 const Signatures = {
   Deposit: '0x5fe47ed6d4225326d3303476197d782ded5a4e9c14f479dc9ec4992af4e85d59',
@@ -123,6 +124,85 @@ export class PendleAdapter extends Adapter {
           };
         }
       } else if ([Signatures.Mint, Signatures.Burn, Signatures.Swap].indexOf(signature) !== -1) {
+        let marketInfo: PendleMarketInfo | null = null;
+        if (this.config.staticData) {
+          for (const market of this.config.staticData.markets) {
+            if (compareAddress(market.address, address)) {
+              marketInfo = market;
+            }
+          }
+        }
+
+        if (marketInfo) {
+          if (signature === Signatures.Mint) {
+            const receiver = normalizeAddress(event.receiver);
+            const syAmount = new BigNumber(event.netSyUsed.toString())
+              .dividedBy(new BigNumber(10).pow(marketInfo.syToken.decimals))
+              .toString(10);
+            const ptAmount = new BigNumber(event.netPtUsed.toString())
+              .dividedBy(new BigNumber(10).pow(marketInfo.ptToken.decimals))
+              .toString(10);
+
+            return {
+              protocol: this.config.protocol,
+              action: 'deposit',
+              addresses: [receiver],
+              tokens: [marketInfo.syToken, marketInfo.ptToken],
+              tokenAmounts: [syAmount, ptAmount],
+              readableString: `${receiver} deposit ${syAmount} ${marketInfo.syToken.symbol} and ${ptAmount} ${marketInfo.ptToken.symbol} on ${this.config.protocol} chain ${chain}`,
+            };
+          } else if (signature === Signatures.Burn) {
+            const sender = await this.getSenderAddress(options);
+
+            const syAmount = new BigNumber(event.netSyOut.toString())
+              .dividedBy(new BigNumber(10).pow(marketInfo.syToken.decimals))
+              .toString(10);
+            const ptAmount = new BigNumber(event.netPtOut.toString())
+              .dividedBy(new BigNumber(10).pow(marketInfo.ptToken.decimals))
+              .toString(10);
+
+            return {
+              protocol: this.config.protocol,
+              action: 'withdraw',
+              addresses: [sender],
+              tokens: [marketInfo.syToken, marketInfo.ptToken],
+              tokenAmounts: [syAmount, ptAmount],
+              readableString: `${sender} withdraw ${syAmount} ${marketInfo.syToken.symbol} and ${ptAmount} ${marketInfo.ptToken.symbol} on ${this.config.protocol} chain ${chain}`,
+            };
+          } else if (signature === Signatures.Swap) {
+            const caller = normalizeAddress(event.caller);
+            const receiver = normalizeAddress(event.receiver);
+
+            const syAmount = new BigNumber(event.netSyOut.toString()).dividedBy(
+              new BigNumber(10).pow(marketInfo.syToken.decimals)
+            );
+            const ptAmount = new BigNumber(event.netPtOut.toString()).dividedBy(
+              new BigNumber(10).pow(marketInfo.ptToken.decimals)
+            );
+
+            if (syAmount.lt(0)) {
+              // user swap pt for sy
+              return {
+                protocol: this.config.protocol,
+                action: 'swap',
+                addresses: [caller, receiver],
+                tokens: [marketInfo.ptToken, marketInfo.syToken],
+                tokenAmounts: [ptAmount.abs().toString(10), syAmount.abs().toString(10)],
+                readableString: `${caller} swap ${marketInfo.ptToken.symbol} for ${marketInfo.syToken.symbol} on ${this.config.protocol} chain ${chain}`,
+              };
+            } else {
+              // user swap sy for pt
+              return {
+                protocol: this.config.protocol,
+                action: 'swap',
+                addresses: [caller, receiver],
+                tokens: [marketInfo.syToken, marketInfo.ptToken],
+                tokenAmounts: [syAmount.abs().toString(10), ptAmount.abs().toString(10)],
+                readableString: `${caller} swap ${marketInfo.syToken.symbol} for ${marketInfo.ptToken.symbol} on ${this.config.protocol} chain ${chain}`,
+              };
+            }
+          }
+        }
       }
     }
 
