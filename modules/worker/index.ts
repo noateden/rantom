@@ -1,6 +1,7 @@
 import { AbracadabraContracts } from '../../configs/contracts/abracadabra';
 import { ArrakisContracts } from '../../configs/contracts/arrakis';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
+import { BinanceContracts } from '../../configs/contracts/binance';
 import { CarbonContracts } from '../../configs/contracts/carbon';
 import { ConicContracts } from '../../configs/contracts/conic';
 import { ConvexContracts } from '../../configs/contracts/convex';
@@ -45,5 +46,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     arrakis: new ContractWorker(providers, ArrakisContracts),
     lybra: new ContractWorker(providers, LybraContracts),
     pendle: new ContractWorker(providers, PendleContracts),
+    binance: new ContractWorker(providers, BinanceContracts),
   };
 }
