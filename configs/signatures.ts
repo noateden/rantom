@@ -372,4 +372,7 @@ export const Signatures: { [key: string]: string } = {
   'Burn(address,address,uint256,uint256,uint256)': '0x4cf25bc1d991c17529c25213d3cc0cda295eeaad5f13f361969b12ea48015f90',
   'Swap(address,address,int256,int256,uint256,uint256)':
     '0x829000a5bc6a12d46e30cdcecd7c56b1efd88f6d7d059da6734a04f3764557c4',
+
+  // binance staked eth
+  'DepositEth(address,uint256,uint256,address)': '0xe32c4b34261b430739ef30d727d062f9fdd6410be2080e6fd875a6015f40de83',
 };

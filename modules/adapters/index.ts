@@ -10,6 +10,7 @@ import {
   BancorConfigs,
   BeanstalkConfigs,
   BeefyConfigs,
+  BinanceStakedEthConfigs,
   BlurConfigs,
   CarbonConfigs,
   ChainlinkConfigs,
@@ -69,6 +70,7 @@ import { BalancerAdapter } from './balancer/balancer';
 import { BancorAdapter } from './bancor/bancor';
 import { BeanstalkAdapter } from './beanstalk/beanstalk';
 import { BeefyAdapter } from './beefy/beefy';
+import { BinanceStakedAdapter } from './binance/stakedEth';
 import { BlurAdapter } from './blur/blur';
 import { CarbonAdapter } from './carbon/carbon';
 import { ChainlinkAdapter } from './chainlink/chainlink';
@@ -172,5 +174,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new ArrakisAdapter(ArrakisConfigs, providers),
     new LybraAdapter(LybraConfigs, providers),
     new PendleAdapter(PendleConfigs, providers),
+    new BinanceStakedAdapter(BinanceStakedEthConfigs, providers),
   ];
 }

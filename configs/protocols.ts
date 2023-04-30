@@ -1421,3 +1421,12 @@ export const PendleConfigs: ProtocolConfig = {
     markets: PendleContracts.markets,
   },
 };
+
+export const BinanceStakedEthConfigs: ProtocolConfig = {
+  protocol: 'binance-staked-eth',
+  contracts: {
+    ethereum: [
+      '0xa2e3356610840701bdf5611a53974510ae27e2e1', // wbETH
+    ],
+  },
+};

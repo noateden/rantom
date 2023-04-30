@@ -74,6 +74,7 @@ yarn start --help
 | Arrakis Finance      | Minted, Burned, LogMint, LogBurn                                                                                     |     🌱 |
 | Lybra Finance        | DepositEther, WithdrawEther, Mint, Burn                                                                              |     🌱 |
 | Pendle Finance       | Deposit, Redeem, ClaimRewards                                                                                        |     🌱 |
+| Binance Staked ETH   | DepositEth                                                                                                           |     🌱 |
 
 ### Nft Marketplace
 
