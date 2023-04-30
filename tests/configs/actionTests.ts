@@ -1,6 +1,7 @@
 import { TestLog } from '../types';
 import { AaveActionTestLogs } from './protocols/aave';
 import { AbracadabraActionTestLogs } from './protocols/abracadabra';
+import { AgilityActionTestLogs } from './protocols/agility';
 import { ApecoinActionTestLogs } from './protocols/apecoin';
 import { ArrakisActionTestLogs } from './protocols/arrakis';
 import { AurafinanceActionTestLogs } from './protocols/aurafinance';
@@ -100,4 +101,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...ArrakisActionTestLogs,
   ...LybraActionTestLogs,
   ...PendleActionTestLogs,
+  ...AgilityActionTestLogs,
 ];

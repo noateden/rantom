@@ -3,6 +3,7 @@ import {
   Aavev2Configs,
   Aavev3Configs,
   AbracadabraConfigs,
+  AgilityConfigs,
   ApecoinConfigs,
   ArrakisConfigs,
   AurafinanceConfigs,
@@ -63,6 +64,7 @@ import { Aavev1Adapter } from './aave/aavev1';
 import { Aavev2Adapter } from './aave/aavev2';
 import { Aavev3Adapter } from './aave/aavev3';
 import { AbracadabraAdapter } from './abracadabra/abracadabra';
+import { AgilityAdapter } from './agility/agility';
 import { ApecoinAdapter } from './apecoin/apecoin';
 import { ArrakisAdapter } from './arrakis/arrakis';
 import { AurafinanceAdapter } from './aurafinance/aurafinance';
@@ -175,5 +177,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new LybraAdapter(LybraConfigs, providers),
     new PendleAdapter(PendleConfigs, providers),
     new BinanceStakedAdapter(BinanceStakedEthConfigs, providers),
+    new AgilityAdapter(AgilityConfigs, providers),
   ];
 }

@@ -1,4 +1,5 @@
 import { AbracadabraContracts } from '../../configs/contracts/abracadabra';
+import { AgilityContracts } from '../../configs/contracts/agility';
 import { ArrakisContracts } from '../../configs/contracts/arrakis';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
 import { BinanceContracts } from '../../configs/contracts/binance';
@@ -47,5 +48,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     lybra: new ContractWorker(providers, LybraContracts),
     pendle: new ContractWorker(providers, PendleContracts),
     binance: new ContractWorker(providers, BinanceContracts),
+    agility: new ContractWorker(providers, AgilityContracts),
   };
 }

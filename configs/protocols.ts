@@ -4,6 +4,7 @@ import { Tokens } from './constants';
 import { CurveContracts } from './contracts/curve';
 import { YearnContracts } from './contracts/yearn';
 import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
+import AgilityPools from './data/AgilityStakingPools.json';
 import ArrakisVaults from './data/ArrakisVaults.json';
 import AuraFinanceBoosterPoolsData from './data/AuraFinanceBoosterPools.json';
 import BeefyVaults from './data/BeefyVaults.json';
@@ -1429,5 +1430,15 @@ export const BinanceStakedEthConfigs: ProtocolConfig = {
     ethereum: [
       '0xa2e3356610840701bdf5611a53974510ae27e2e1', // wbETH
     ],
+  },
+};
+
+export const AgilityConfigs: ProtocolConfig = {
+  protocol: 'agility',
+  contracts: {
+    ethereum: [...AgilityPools.map((item) => item.address)],
+  },
+  staticData: {
+    pools: AgilityPools,
   },
 };

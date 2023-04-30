@@ -75,6 +75,7 @@ yarn start --help
 | Lybra Finance        | DepositEther, WithdrawEther, Mint, Burn                                                                              |     🌱 |
 | Pendle Finance       | Deposit, Redeem, ClaimRewards, Mint, Burn, Swap                                                                      |     🌱 |
 | Binance Staked ETH   | DepositEth                                                                                                           |     🌱 |
+| Agility LSD          | Staked, Withdrawn, RewardPaid                                                                                        |     🌱 |
 
 ### Nft Marketplace
 

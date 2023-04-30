@@ -1,0 +1,155 @@
+[
+  {
+    "chain": "ethereum",
+    "address": "0xb3db4e3238c1656fb6b832fb692643f4fa452010",
+    "stakingToken": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0x801c71a771e5710d41ac4c0f1d6e82bd07b5fa43",
+      "symbol": "esAGI",
+      "decimals": 18
+    },
+    "birthday": 17015759
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xc8187048f7ab0db0774b674fef3f4f4285a01bf4",
+    "stakingToken": {
+      "chain": "ethereum",
+      "address": "0x498c00e1ccc2afff80f6cc6144eaeb95c46cc3b5",
+      "symbol": "UNI-V2",
+      "decimals": 18
+    },
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0x801c71a771e5710d41ac4c0f1d6e82bd07b5fa43",
+      "symbol": "esAGI",
+      "decimals": 18
+    },
+    "birthday": 17015761
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xefd8a0b5e0e01a95fcc15656dad61d5b5436b2b4",
+    "stakingToken": {
+      "chain": "ethereum",
+      "address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
+      "symbol": "stETH",
+      "decimals": 18
+    },
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0x801c71a771e5710d41ac4c0f1d6e82bd07b5fa43",
+      "symbol": "esAGI",
+      "decimals": 18
+    },
+    "birthday": 17035787
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xabb828565d46f9db074d55241d82621b129bcf16",
+    "stakingToken": {
+      "chain": "ethereum",
+      "address": "0x5e8422345238f34275888049021821e8e08caa1f",
+      "symbol": "frxETH",
+      "decimals": 18
+    },
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0x801c71a771e5710d41ac4c0f1d6e82bd07b5fa43",
+      "symbol": "esAGI",
+      "decimals": 18
+    },
+    "birthday": 17035789
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x9775f32737f141ab1b661dd83f7afdf4ef749f3d",
+    "stakingToken": {
+      "chain": "ethereum",
+      "address": "0xae78736cd615f374d3085123a210448e74fc6393",
+      "symbol": "rETH",
+      "decimals": 18
+    },
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0x801c71a771e5710d41ac4c0f1d6e82bd07b5fa43",
+      "symbol": "esAGI",
+      "decimals": 18
+    },
+    "birthday": 17035790
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x5d5897797287a3c2552251a9d9185e09dd25b558",
+    "stakingToken": {
+      "chain": "ethereum",
+      "address": "0xe95a203b1a91a908f9b9ce46459d101078c2c3cb",
+      "symbol": "ankrETH",
+      "decimals": 18
+    },
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0x801c71a771e5710d41ac4c0f1d6e82bd07b5fa43",
+      "symbol": "esAGI",
+      "decimals": 18
+    },
+    "birthday": 17035792
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xf9fdb8ef7b8cd32c1db753e525ebbc3089de963b",
+    "stakingToken": {
+      "chain": "ethereum",
+      "address": "0x9559aaa82d9649c7a7b220e7c461d2e74c9a3593",
+      "symbol": "rETH",
+      "decimals": 18
+    },
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0x801c71a771e5710d41ac4c0f1d6e82bd07b5fa43",
+      "symbol": "esAGI",
+      "decimals": 18
+    },
+    "birthday": 17100263
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x2090d4cda71e3e870b8756acee51481421806202",
+    "stakingToken": {
+      "chain": "ethereum",
+      "address": "0x5f18ea482ad5cc6bc65803817c99f477043dce85",
+      "symbol": "AGI",
+      "decimals": 18
+    },
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0x801c71a771e5710d41ac4c0f1d6e82bd07b5fa43",
+      "symbol": "esAGI",
+      "decimals": 18
+    },
+    "birthday": 17114740
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x2b34c261880533f897b245cb8b86cca86ba83c8e",
+    "stakingToken": {
+      "chain": "ethereum",
+      "address": "0x6987633f18ca0b4a10831331fcc57211941b6ba0",
+      "symbol": "20AGI-80WETH",
+      "decimals": 18
+    },
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0x801c71a771e5710d41ac4c0f1d6e82bd07b5fa43",
+      "symbol": "esAGI",
+      "decimals": 18
+    },
+    "birthday": 17121276
+  }
+]
