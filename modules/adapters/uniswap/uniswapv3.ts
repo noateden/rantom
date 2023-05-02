@@ -94,7 +94,7 @@ export class Uniswapv3Adapter extends Adapter {
         if (token0 && token1) {
           switch (signature) {
             case Signatures.Swap: {
-              const sender = normalizeAddress(event.sender);
+              const sender = await this.getSenderAddress(options);
               const recipient = normalizeAddress(event.recipient);
 
               let amount0 = new BigNumber(event.amount0.toString()).dividedBy(new BigNumber(10).pow(token0.decimals));
@@ -170,7 +170,7 @@ export class Uniswapv3Adapter extends Adapter {
               };
             }
             case Signatures.Collect: {
-              const owner = normalizeAddress(event.owner);
+              const sender = await this.getSenderAddress(options);
               const recipient = normalizeAddress(event.recipient);
 
               const amount0 = new BigNumber(event.amount0.toString())
@@ -183,10 +183,10 @@ export class Uniswapv3Adapter extends Adapter {
               return {
                 protocol: this.config.protocol,
                 action: 'collect',
-                addresses: [recipient, owner],
+                addresses: [recipient, sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
-                readableString: `${owner} collects ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
+                readableString: `${recipient} collects ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
               };
             }
           }
@@ -198,15 +198,16 @@ export class Uniswapv3Adapter extends Adapter {
       const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event.token0);
       const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event.token1);
       const factory = normalizeAddress(address);
+      const sender = await this.getSenderAddress(options);
 
       if (token0 && token1) {
         return {
           protocol: this.config.protocol,
           action: 'createLiquidityPool',
-          addresses: [factory],
+          addresses: [factory, sender],
           tokens: [token0, token1],
           tokenAmounts: ['0', '0'],
-          readableString: `${factory} create liquidity pool ${token0.symbol} and ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
+          readableString: `${sender} create liquidity pool ${token0.symbol} and ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
           addition: {
             poolAddress: normalizeAddress(event.pool),
             fee: new BigNumber(event.fee).toNumber(),

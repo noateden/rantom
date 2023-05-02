@@ -149,7 +149,7 @@ export class UniswapHelper {
       tokens,
       amounts,
       caller: normalizeAddress(swap.sender),
-      user: normalizeAddress(swap.recipient),
+      user: normalizeAddress(swap.origin),
     };
   }
 
@@ -209,7 +209,7 @@ export class UniswapHelper {
         tokens: [token0, token1],
         amounts: [event.amount0.toString(), event.amount1.toString()],
         caller: normalizeAddress(event.sender),
-        user: normalizeAddress(event.sender),
+        user: subgraphConfig.version === 'univ2' ? normalizeAddress(event.to) : normalizeAddress(event.origin),
       });
     }
 
@@ -271,8 +271,8 @@ export class UniswapHelper {
         action: 'withdraw',
         tokens: [token0, token1],
         amounts: [event.amount0.toString(), event.amount1.toString()],
-        caller: event.sender ? normalizeAddress(event.sender) : normalizeAddress(event.owner),
-        user: event.sender ? normalizeAddress(event.sender) : normalizeAddress(event.owner),
+        caller: subgraphConfig.version === 'univ2' ? normalizeAddress(event.sender) : normalizeAddress(event.owner),
+        user: subgraphConfig.version === 'univ2' ? normalizeAddress(event.to) : normalizeAddress(event.origin),
       });
     }
 

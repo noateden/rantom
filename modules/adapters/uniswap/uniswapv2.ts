@@ -106,7 +106,7 @@ export class Uniswapv2Adapter extends Adapter {
               const tokenIn = amount0In.gt(0) ? token0 : token1;
               const tokenOut = amount0In.gt(0) ? token1 : token0;
 
-              const sender = normalizeAddress(event.sender);
+              const sender = await this.getSenderAddress(options);
               const to = normalizeAddress(event.to);
 
               return {
@@ -125,15 +125,16 @@ export class Uniswapv2Adapter extends Adapter {
               const amount1 = new BigNumber(event.amount1.toString())
                 .dividedBy(new BigNumber(10).pow(token1.decimals))
                 .toString(10);
-              const sender = normalizeAddress(event.sender);
+              const sender = await this.getSenderAddress(options);
+              const caller = normalizeAddress(event.sender);
 
               return {
                 protocol: this.config.protocol,
                 action: 'deposit',
-                addresses: [sender],
+                addresses: [caller, sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
-                readableString: `${sender} adds ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
+                readableString: `${caller} adds ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
               };
             }
             case Signatures.Burn: {
@@ -143,15 +144,16 @@ export class Uniswapv2Adapter extends Adapter {
               const amount1 = new BigNumber(event.amount1.toString())
                 .dividedBy(new BigNumber(10).pow(token1.decimals))
                 .toString(10);
-              const sender = normalizeAddress(event.sender);
+              const sender = await this.getSenderAddress(options);
               const to = normalizeAddress(event.to);
+
               return {
                 protocol: this.config.protocol,
                 action: 'withdraw',
                 addresses: [to, sender],
                 tokens: [token0, token1],
                 tokenAmounts: [amount0, amount1],
-                readableString: `${sender} removes ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
+                readableString: `${to} removes ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
               };
             }
           }
@@ -163,15 +165,16 @@ export class Uniswapv2Adapter extends Adapter {
       const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event.token0);
       const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event.token1);
       const factory = normalizeAddress(address);
+      const sender = await this.getSenderAddress(options);
 
       if (token0 && token1) {
         return {
           protocol: this.config.protocol,
           action: 'createLiquidityPool',
-          addresses: [factory],
+          addresses: [factory, sender],
           tokens: [token0, token1],
           tokenAmounts: ['0', '0'],
-          readableString: `${factory} create liquidity pool ${token0.symbol} and ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
+          readableString: `${sender} create liquidity pool ${token0.symbol} and ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
           addition: {
             pairAddress: normalizeAddress(event.pair),
           },

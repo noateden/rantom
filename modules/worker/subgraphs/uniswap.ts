@@ -46,7 +46,7 @@ export class UniswapSubgraphJob extends SubgraphJobProvider {
 						timestamp
 						logIndex
 						
-						${this.config.version === 'univ2' ? 'to' : 'recipient'}
+						${this.config.version === 'univ2' ? 'to' : 'origin'}
 						${this.config.version === 'univ2' ? 'amount0In\namount0Out\namount1In\namount1Out' : ''}
 						${this.config.version === 'univ3' ? 'amount0\namount1' : ''}
 					}
@@ -88,6 +88,7 @@ export class UniswapSubgraphJob extends SubgraphJobProvider {
 						amount0
 						amount1
 						sender
+						${this.config.version === 'univ2' ? 'to' : 'origin'}
 					}
 				}
 			`,
@@ -126,6 +127,7 @@ export class UniswapSubgraphJob extends SubgraphJobProvider {
 						amount0
 						amount1
 						${this.config.version === 'univ2' ? 'sender' : 'owner'}
+						${this.config.version === 'univ2' ? 'to' : 'origin'}
 					}
 				}
 			`,
