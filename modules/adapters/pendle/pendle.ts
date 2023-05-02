@@ -76,10 +76,10 @@ export class PendleAdapter extends Adapter {
             return {
               protocol: this.config.protocol,
               action: action,
-              addresses: [caller, receiver],
+              addresses: [receiver, caller],
               tokens: [token],
               tokenAmounts: [amount],
-              readableString: `${caller} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+              readableString: `${receiver} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
             };
           }
         } else if (signature === Signatures.ClaimRewards) {
@@ -135,6 +135,7 @@ export class PendleAdapter extends Adapter {
 
         if (marketInfo) {
           if (signature === Signatures.Mint) {
+            const sender = await this.getSenderAddress(options);
             const receiver = normalizeAddress(event.receiver);
             const syAmount = new BigNumber(event.netSyUsed.toString())
               .dividedBy(new BigNumber(10).pow(marketInfo.syToken.decimals))
@@ -146,13 +147,15 @@ export class PendleAdapter extends Adapter {
             return {
               protocol: this.config.protocol,
               action: 'deposit',
-              addresses: [receiver],
+              addresses: [sender, receiver],
               tokens: [marketInfo.syToken, marketInfo.ptToken],
               tokenAmounts: [syAmount, ptAmount],
-              readableString: `${receiver} deposit ${syAmount} ${marketInfo.syToken.symbol} and ${ptAmount} ${marketInfo.ptToken.symbol} on ${this.config.protocol} chain ${chain}`,
+              readableString: `${sender} deposit ${syAmount} ${marketInfo.syToken.symbol} and ${ptAmount} ${marketInfo.ptToken.symbol} on ${this.config.protocol} chain ${chain}`,
             };
           } else if (signature === Signatures.Burn) {
             const sender = await this.getSenderAddress(options);
+            const receiverSy = normalizeAddress(event.receiverSy);
+            const receiverPt = normalizeAddress(event.receiverPt);
 
             const syAmount = new BigNumber(event.netSyOut.toString())
               .dividedBy(new BigNumber(10).pow(marketInfo.syToken.decimals))
@@ -164,7 +167,7 @@ export class PendleAdapter extends Adapter {
             return {
               protocol: this.config.protocol,
               action: 'withdraw',
-              addresses: [sender],
+              addresses: [sender, receiverSy, receiverPt],
               tokens: [marketInfo.syToken, marketInfo.ptToken],
               tokenAmounts: [syAmount, ptAmount],
               readableString: `${sender} withdraw ${syAmount} ${marketInfo.syToken.symbol} and ${ptAmount} ${marketInfo.ptToken.symbol} on ${this.config.protocol} chain ${chain}`,
@@ -185,20 +188,20 @@ export class PendleAdapter extends Adapter {
               return {
                 protocol: this.config.protocol,
                 action: 'swap',
-                addresses: [caller, receiver],
+                addresses: [receiver, caller],
                 tokens: [marketInfo.ptToken, marketInfo.syToken],
                 tokenAmounts: [ptAmount.abs().toString(10), syAmount.abs().toString(10)],
-                readableString: `${caller} swap ${marketInfo.ptToken.symbol} for ${marketInfo.syToken.symbol} on ${this.config.protocol} chain ${chain}`,
+                readableString: `${receiver} swap ${marketInfo.ptToken.symbol} for ${marketInfo.syToken.symbol} on ${this.config.protocol} chain ${chain}`,
               };
             } else {
               // user swap sy for pt
               return {
                 protocol: this.config.protocol,
                 action: 'swap',
-                addresses: [caller, receiver],
+                addresses: [receiver, caller],
                 tokens: [marketInfo.syToken, marketInfo.ptToken],
                 tokenAmounts: [syAmount.abs().toString(10), ptAmount.abs().toString(10)],
-                readableString: `${caller} swap ${marketInfo.syToken.symbol} for ${marketInfo.ptToken.symbol} on ${this.config.protocol} chain ${chain}`,
+                readableString: `${receiver} swap ${marketInfo.syToken.symbol} for ${marketInfo.ptToken.symbol} on ${this.config.protocol} chain ${chain}`,
               };
             }
           }
