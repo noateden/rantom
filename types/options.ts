@@ -81,3 +81,7 @@ export interface RpcWrapperQueryContractOptions {
 export interface ApiQueryProtocolStatsOptions {
   protocol: string;
 }
+
+export interface ApiQueryAddressStatsOptions {
+  address: string;
+}

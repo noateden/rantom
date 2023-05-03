@@ -35,6 +35,16 @@ export const Uniswapv3Configs: ProtocolConfig = {
       '0x1f98431c8ad98523631ae4a59f267346ea31f984', // v3 Factory
     ],
   },
+  subgraphs: [
+    {
+      protocol: 'uniswapv3',
+      chain: 'ethereum',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3',
+    },
+  ],
 };
 
 export const LidoConfigs: ProtocolConfig = {
@@ -1440,5 +1450,14 @@ export const AgilityConfigs: ProtocolConfig = {
   },
   staticData: {
     pools: AgilityPools,
+  },
+};
+
+export const DodoConfigs: ProtocolConfig = {
+  protocol: 'dodo',
+  contracts: {
+    ethereum: [
+      '0xa2398842f37465f89540430bdc00219fa9e4d28a', // Router proxy v2
+    ],
   },
 };

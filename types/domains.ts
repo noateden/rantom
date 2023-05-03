@@ -136,3 +136,16 @@ export interface ProtocolStats {
   // unique tokens on protocol
   tokens: Array<string>;
 }
+
+export interface AddressStats {
+  address: string;
+
+  // unique protocol which this address interact on
+  protocols: Array<string>;
+
+  // unique actions on protocol
+  actions: Array<KnownAction>;
+
+  // unique tokens on protocol
+  tokens: Array<string>;
+}

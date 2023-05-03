@@ -21,6 +21,7 @@ import {
   ConvexConfigs,
   CowswapConfigs,
   CurveConfigs,
+  DodoConfigs,
   EnsConfigs,
   Eth2Configs,
   EulerConfigs,
@@ -82,6 +83,7 @@ import { ConicAdapter } from './conic/conic';
 import { ConvexAdapter } from './convex/convex';
 import { CowswapAdapter } from './cowswap/cowswap';
 import { CurveAdapter } from './curve/curve';
+import { DodoAdapter } from './dodo/dodo';
 import { EnsAdapter } from './ens/ens';
 import { Eth2Adapter } from './eth2/eth2';
 import { EulerAdapter } from './euler/euler';
@@ -178,5 +180,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new PendleAdapter(PendleConfigs, providers),
     new BinanceStakedAdapter(BinanceStakedEthConfigs, providers),
     new AgilityAdapter(AgilityConfigs, providers),
+    new DodoAdapter(DodoConfigs, providers),
   ];
 }

@@ -375,4 +375,8 @@ export const Signatures: { [key: string]: string } = {
 
   // binance staked eth
   'DepositEth(address,uint256,uint256,address)': '0xe32c4b34261b430739ef30d727d062f9fdd6410be2080e6fd875a6015f40de83',
+
+  // Dodo Router
+  'OrderHistory(address,address,address,uint256,uint256)':
+    '0x92ceb067a9883c85aba061e46b9edf505a0d6e81927c4b966ebed543a5221787',
 };

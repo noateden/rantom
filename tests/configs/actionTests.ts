@@ -17,6 +17,7 @@ import { ConicActionTestLogs } from './protocols/conic';
 import { ConvexActionTestLogs } from './protocols/convex';
 import { CowswapActionTestLogs } from './protocols/cowswap';
 import { CurveActionTestLogs } from './protocols/curve';
+import { DodoActionTestLogs } from './protocols/dodo';
 import { EnsActionTestLogs } from './protocols/ens';
 import { Eth2ActionTestLogs } from './protocols/eth2';
 import { EulerActionTestLogs } from './protocols/euler';
@@ -102,4 +103,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...LybraActionTestLogs,
   ...PendleActionTestLogs,
   ...AgilityActionTestLogs,
+  ...DodoActionTestLogs,
 ];

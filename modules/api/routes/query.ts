@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 import logger from '../../../lib/logger';
-import { ProtocolStats } from '../../../types/domains';
+import { AddressStats, ProtocolStats } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { writeResponseError } from '../helpers';
 import { ApiWorkerProvider } from '../worker';
@@ -45,6 +45,31 @@ export function getRouter(providers: GlobalProviders): Router {
 
     try {
       const stats: ProtocolStats = await apiWorker.queryProtocolStats({ protocol });
+      response.status(200).json(stats).end();
+    } catch (e: any) {
+      logger.onError({
+        service: 'api',
+        message: 'failed to serve api request',
+        props: {
+          path: request.path,
+          error: e.message,
+        },
+        error: e as Error,
+      });
+      writeResponseError(response, {
+        status: 500,
+        error: 'internal server error',
+      });
+    }
+  });
+
+  router.get('/stats/address/:address', async (request, response) => {
+    const { address } = request.params;
+
+    const apiWorker = new ApiWorkerProvider(providers);
+
+    try {
+      const stats: AddressStats = await apiWorker.queryAddressStats({ address });
       response.status(200).json(stats).end();
     } catch (e: any) {
       logger.onError({

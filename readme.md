@@ -76,6 +76,7 @@ yarn start --help
 | Pendle Finance       | Deposit, Redeem, ClaimRewards, Mint, Burn, Swap                                                                      |     🌱 |
 | Binance Staked ETH   | DepositEth                                                                                                           |     🌱 |
 | Agility LSD          | Staked, Withdrawn, RewardPaid                                                                                        |     🌱 |
+| Dodoex               | OrderHistory                                                                                                         |     🌱 |
 
 ### Nft Marketplace
 

@@ -31,6 +31,7 @@ import {
   PancakeswapV3Configs,
   RocketpoolConfigs,
   SushiConfigs,
+  Uniswapv3Configs,
   YearnConfigs,
 } from './protocols';
 
@@ -168,10 +169,12 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x833e4083b7ae46cea85695c4f7ed25cdad8886de', // Kyberswap classic DMMFactory
     '0x97de57ec338ab5d51557da3434828c5dbfada371', // Lybra finance main
     '0xa2e3356610840701bdf5611a53974510ae27e2e1', // Binance staked eth
+    '0xa2398842f37465f89540430bdc00219fa9e4d28a', // DODO router proxy v2
   ],
 };
 
 export const ProtocolWhitelistedSubgraphs: Array<ProtocolConfig> = [
+  Uniswapv3Configs,
   SushiConfigs,
   PancakeswapConfigs,
   PancakeswapV3Configs,

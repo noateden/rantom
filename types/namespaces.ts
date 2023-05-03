@@ -9,6 +9,7 @@ import {
   Token,
 } from './configs';
 import {
+  AddressStats,
   MongoCollections,
   ProtocolStats,
   SystemReport,
@@ -19,6 +20,7 @@ import {
 } from './domains';
 import {
   AdapterParseLogOptions,
+  ApiQueryAddressStatsOptions,
   ApiQueryLogOptions,
   ApiQueryProtocolStatsOptions,
   OracleGetTokenPriceOptions,
@@ -123,6 +125,7 @@ export interface IApiWorkerProvider extends IProvider {
 
   queryLogs: (options: ApiQueryLogOptions) => Promise<Array<any>>;
   queryProtocolStats: (options: ApiQueryProtocolStatsOptions) => Promise<ProtocolStats>;
+  queryAddressStats: (options: ApiQueryAddressStatsOptions) => Promise<AddressStats>;
   run: () => Promise<void>;
 }
 

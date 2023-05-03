@@ -2,9 +2,9 @@ import { ApiQueryLogsCachingTime, ApiQueryProtocolStatsCachingTime } from '../..
 import { createDataHash } from '../../lib/crypto';
 import { getTimestamp, sleep } from '../../lib/helper';
 import logger from '../../lib/logger';
-import { ProtocolStats } from '../../types/domains';
+import { AddressStats, ProtocolStats } from '../../types/domains';
 import { GlobalProviders, IApiWorkerProvider } from '../../types/namespaces';
-import { ApiQueryLogOptions, ApiQueryProtocolStatsOptions } from '../../types/options';
+import { ApiQueryAddressStatsOptions, ApiQueryLogOptions, ApiQueryProtocolStatsOptions } from '../../types/options';
 
 export class ApiWorkerProvider implements IApiWorkerProvider {
   public readonly name: string = 'worker.api';
@@ -150,6 +150,91 @@ export class ApiWorkerProvider implements IApiWorkerProvider {
     );
 
     return protocolStats;
+  }
+
+  public async queryAddressStats(options: ApiQueryAddressStatsOptions): Promise<AddressStats> {
+    const { address } = options;
+
+    const addressStats: AddressStats = {
+      address: address,
+      protocols: [],
+      actions: [],
+      tokens: [],
+    };
+
+    const cachingKey = `protocol-stats-${address}`;
+    const collections = await this.providers.mongodb.requireCollections();
+    const cachingLogs = await collections.cachingCollection.find({ name: cachingKey }).limit(1).toArray();
+    if (cachingLogs.length > 0) {
+      const caching = cachingLogs[0];
+      const currentTime = getTimestamp();
+      if (caching.timestamp && currentTime - caching.timestamp <= ApiQueryProtocolStatsCachingTime) {
+        logger.onDebug({
+          service: this.name,
+          message: 'query address stats hit caching',
+          props: {
+            address: address,
+          },
+        });
+        return caching.protocolStats;
+      }
+    }
+
+    // get unique actions
+    const actions: Array<any> = await collections.logsCollection
+      .aggregate([
+        {
+          $unwind: '$addresses',
+        },
+        {
+          $group: { _id: { address: '$addresses', action: '$action' } },
+        },
+        {
+          $match: { '_id.address': address },
+        },
+      ])
+      .toArray();
+    for (const action of actions) {
+      addressStats.actions.push(action._id.action);
+    }
+
+    // get unique tokens
+    const tokens: Array<any> = await collections.logsCollection
+      .aggregate([
+        { $unwind: '$addresses' },
+        { $unwind: '$tokens' },
+        { $group: { _id: { address: '$addresses', token: '$tokens.symbol' } } },
+        {
+          $match: { '_id.address': address },
+        },
+      ])
+      .toArray();
+    for (const token of tokens) {
+      addressStats.tokens.push(token._id.token);
+    }
+
+    addressStats.actions = addressStats.actions.sort(function (a: string, b: string) {
+      return a > b ? 1 : -1;
+    });
+    addressStats.tokens = addressStats.tokens.sort(function (a: string, b: string) {
+      return a > b ? 1 : -1;
+    });
+
+    // save cache
+    await collections.cachingCollection.updateOne(
+      {
+        name: cachingKey,
+      },
+      {
+        $set: {
+          timestamp: getTimestamp(),
+          addressStats: addressStats,
+        },
+      },
+      { upsert: true }
+    );
+
+    return addressStats;
   }
 
   public async run(): Promise<void> {
