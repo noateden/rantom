@@ -122,7 +122,6 @@ import { ZeroxAdapter } from './zerox/zerox';
 export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> {
   return [
     new LidoAdapter(LidoConfigs, providers),
-    new CurveAdapter(CurveConfigs, providers),
     new BalancerAdapter(BalancerConfigs, providers),
     new Aavev1Adapter(Aavev1Configs, providers),
     new Aavev2Adapter(Aavev2Configs, providers),
@@ -181,5 +180,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new BinanceStakedAdapter(BinanceStakedEthConfigs, providers),
     new AgilityAdapter(AgilityConfigs, providers),
     new DodoAdapter(DodoConfigs, providers),
+    new CurveAdapter(CurveConfigs, providers),
   ];
 }

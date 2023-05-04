@@ -1,7 +1,6 @@
 import { normalizeAddress } from '../lib/helper';
 import { ProtocolConfig } from '../types/configs';
 import { Tokens } from './constants';
-import { CurveContracts } from './contracts/curve';
 import { YearnContracts } from './contracts/yearn';
 import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
 import AgilityPools from './data/AgilityStakingPools.json';
@@ -11,6 +10,7 @@ import BeefyVaults from './data/BeefyVaults.json';
 import CompoundMarkets from './data/CompoundMarkets.json';
 import CompoundMarketsV3 from './data/CompoundMarketsV3.json';
 import ConvexBoosterPoolsData from './data/ConvexBoosterPools.json';
+import CurvePools from './data/CurvePools.json';
 import ExactlyMarkets from './data/ExactlyMarkets.json';
 import FraxlendPairs from './data/FraxlendPairs.json';
 import IronbankMarkets from './data/IronbankMarkets.json';
@@ -21,6 +21,7 @@ import { Signatures } from './signatures';
 
 export const Uniswapv2Configs: ProtocolConfig = {
   protocol: 'uniswapv2',
+  categories: ['trading'],
   contracts: {
     ethereum: [
       '0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f', // v2 Factory
@@ -30,6 +31,7 @@ export const Uniswapv2Configs: ProtocolConfig = {
 
 export const Uniswapv3Configs: ProtocolConfig = {
   protocol: 'uniswapv3',
+  categories: ['trading'],
   contracts: {
     ethereum: [
       '0x1f98431c8ad98523631ae4a59f267346ea31f984', // v3 Factory
@@ -49,6 +51,7 @@ export const Uniswapv3Configs: ProtocolConfig = {
 
 export const LidoConfigs: ProtocolConfig = {
   protocol: 'lido',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0xae7ab96520de3a18e5e111b5eaab095312d7fe84', // stETH
@@ -62,6 +65,7 @@ export const LidoConfigs: ProtocolConfig = {
 
 export const SushiConfigs: ProtocolConfig = {
   protocol: 'sushi',
+  categories: ['trading'],
   contracts: {
     ethereum: [
       '0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac', // uni v2 Factory
@@ -86,6 +90,7 @@ export const SushiConfigs: ProtocolConfig = {
 
 export const PancakeswapConfigs: ProtocolConfig = {
   protocol: 'pancakeswap',
+  categories: ['trading'],
   contracts: {
     ethereum: [
       '0x1097053fd2ea711dad45caccc45eff7548fcb362', // uni v2 Factory
@@ -107,6 +112,7 @@ export const PancakeswapConfigs: ProtocolConfig = {
 
 export const PancakeswapV3Configs: ProtocolConfig = {
   protocol: 'pancakeswapv3',
+  categories: ['trading'],
   contracts: {
     ethereum: [
       '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865', // pancakeswap v3 Factory
@@ -126,6 +132,7 @@ export const PancakeswapV3Configs: ProtocolConfig = {
 
 export const BalancerConfigs: ProtocolConfig = {
   protocol: 'balancer',
+  categories: ['trading'],
   contracts: {
     ethereum: [
       '0xba12222222228d8ba445958a75a0704d566bf2c8', // vault
@@ -147,6 +154,7 @@ export const BalancerConfigs: ProtocolConfig = {
 
 export const Aavev1Configs: ProtocolConfig = {
   protocol: 'aavev1',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       '0x398ec7346dcd622edc5ae82352f02be94c62d119', // lending pool v1
@@ -156,6 +164,7 @@ export const Aavev1Configs: ProtocolConfig = {
 
 export const Aavev2Configs: ProtocolConfig = {
   protocol: 'aavev2',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       '0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9', // lending pool v2
@@ -165,6 +174,7 @@ export const Aavev2Configs: ProtocolConfig = {
 
 export const Aavev3Configs: ProtocolConfig = {
   protocol: 'aavev3',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       '0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2', // lending pool v3
@@ -174,6 +184,7 @@ export const Aavev3Configs: ProtocolConfig = {
 
 export const ShibaswapConfigs: ProtocolConfig = {
   protocol: 'shibaswap',
+  categories: ['trading'],
   contracts: {
     ethereum: [
       '0x115934131916c8b277dd010ee02de363c09d037c', // uni v2 Factory
@@ -183,6 +194,7 @@ export const ShibaswapConfigs: ProtocolConfig = {
 
 export const FraxswapConfigs: ProtocolConfig = {
   protocol: 'fraxswap',
+  categories: ['trading'],
   contracts: {
     ethereum: [
       '0x43ec799eadd63848443e2347c49f5f52e8fe0f6f', // uni v2 Factory
@@ -192,6 +204,7 @@ export const FraxswapConfigs: ProtocolConfig = {
 
 export const CompoundConfigs: ProtocolConfig = {
   protocol: 'compound',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       '0xe65cdb6479bac1e22340e4e755fae7e509ecd06c', // cAAVE
@@ -248,6 +261,7 @@ export const CompoundConfigs: ProtocolConfig = {
 
 export const Compoundv3Configs: ProtocolConfig = {
   protocol: 'compoundv3',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       '0xc3d688b66703497daa19211eedff47f25384cdc3', // v3 USDC
@@ -261,6 +275,7 @@ export const Compoundv3Configs: ProtocolConfig = {
 
 export const IronbankConfigs: ProtocolConfig = {
   protocol: 'ironbank',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       normalizeAddress('0x41c84c0e2EE0b740Cf0d31F63f3B6F627DC6b393'), // iETH
@@ -316,6 +331,7 @@ export const IronbankConfigs: ProtocolConfig = {
 
 export const RocketpoolConfigs: ProtocolConfig = {
   protocol: 'rocketpool',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0xae78736cd615f374d3085123a210448e74fc6393', // rETH
@@ -325,20 +341,39 @@ export const RocketpoolConfigs: ProtocolConfig = {
 
 export const CurveConfigs: ProtocolConfig = {
   protocol: 'curve',
+  categories: ['trading'],
   contracts: {
     ethereum: [
       '0xecb456ea5365865ebab8a2661b0c503410e9b347', // Curve.fi pool owner
       '0xbabe61887f1de2713c6f97e567623453d3c79f67', // Curve.fi deployer 2
       '0xf18056bbd320e96a48e3fbf8bc061322531aac99', // Curve.fi factory
+      ...CurvePools.map((item) => item.address),
     ],
   },
   staticData: {
-    pools: CurveContracts,
+    pools: CurvePools,
+    lpTokenMaps: {
+      // DAI- USDC - USDT
+      '0x6c3f90f043a72fa612cbac8115ee7e52bde6e490': CurvePools.filter(
+        (item) => item.address === normalizeAddress('0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7')
+      )[0],
+
+      // FRAX- USDC
+      '0x3175df0976dfa876431c2e9ee6bc45b65d3473cc': CurvePools.filter(
+        (item) => item.address === normalizeAddress('0xb30da2376f63de30b42dc055c93fa474f31330a5')
+      )[0],
+
+      // Aave A tokens
+      '0x028171bca77440897b824ca71d1c56cac55b68a3': Tokens.ethereum.DAI,
+      '0xbcca60bb61934080951369a648fb03df4f96263c': Tokens.ethereum.USDC,
+      '0x3ed3b47dd13ec9a98b44e6204a523e766b225811': Tokens.ethereum.USDT,
+    },
   },
 };
 
 export const CowswapConfigs: ProtocolConfig = {
   protocol: 'cowswap',
+  categories: ['dexAggregator'],
   contracts: {
     ethereum: [
       '0x9008d19f58aabd9ed0d60971565aa8510560ab41', // GPv2Settlement
@@ -348,6 +383,7 @@ export const CowswapConfigs: ProtocolConfig = {
 
 export const LoopringConfigs: ProtocolConfig = {
   protocol: 'loopring',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0x0baba1ad5be3a5c0a66e7ac838a129bf948f1ea4', // Exchange v2
@@ -357,6 +393,7 @@ export const LoopringConfigs: ProtocolConfig = {
 
 export const BancorConfigs: ProtocolConfig = {
   protocol: 'bancor',
+  categories: ['trading'],
   contracts: {
     ethereum: [
       '0xeef417e1d5cc832e619ae18d2f140de2999dd4fb', // BancorNetwork v3
@@ -371,6 +408,7 @@ export const BancorConfigs: ProtocolConfig = {
 
 export const AurafinanceConfigs: ProtocolConfig = {
   protocol: 'aurafinance',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0xa57b8d98dae62b26ec3bcc4a365338157060b234', // Booster
@@ -385,6 +423,7 @@ export const AurafinanceConfigs: ProtocolConfig = {
 
 export const EnsConfigs: ProtocolConfig = {
   protocol: 'ens',
+  categories: ['service'],
   contracts: {
     ethereum: [
       '0x283af0b28c62c092c9727f1ee09c02ca627eb7f5', // registration controller
@@ -394,6 +433,7 @@ export const EnsConfigs: ProtocolConfig = {
 
 export const OptimismConfigs: ProtocolConfig = {
   protocol: 'optimism',
+  categories: ['service'],
   contracts: {
     ethereum: [
       '0x5e4e65926ba27467555eb562121fac00d24e9dd2', // CanonicalTransactionChain
@@ -403,6 +443,7 @@ export const OptimismConfigs: ProtocolConfig = {
 
 export const HopConfigs: ProtocolConfig = {
   protocol: 'hop',
+  categories: ['bridge'],
   contracts: {
     ethereum: [
       '0x3666f603cc164936c1b87e207f36beba4ac5f18a', // USDC
@@ -418,6 +459,7 @@ export const HopConfigs: ProtocolConfig = {
 
 export const MultichainConfigs: ProtocolConfig = {
   protocol: 'multichain',
+  categories: ['bridge'],
   contracts: {
     ethereum: [
       '0xe95fd76cf16008c12ff3b3a937cb16cd9cc20284', // Router v3
@@ -430,6 +472,7 @@ export const MultichainConfigs: ProtocolConfig = {
 
 export const BeanstalkConfigs: ProtocolConfig = {
   protocol: 'beanstalk',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0xc1e088fc1323b20bcbee9bd1b9fc9546db5624c5', // Beanstalk Protocol
@@ -439,6 +482,7 @@ export const BeanstalkConfigs: ProtocolConfig = {
 
 export const BlurConfigs: ProtocolConfig = {
   protocol: 'blur',
+  categories: ['marketplace'],
   contracts: {
     ethereum: [
       '0x000000000000ad05ccc4f10045630fb830b95127', // Blur Marketplace
@@ -448,6 +492,7 @@ export const BlurConfigs: ProtocolConfig = {
 
 export const LooksrareConfigs: ProtocolConfig = {
   protocol: 'looksrare',
+  categories: ['marketplace', 'staking'],
   contracts: {
     ethereum: [
       '0x59728544b08ab483533076417fbbb2fd0b17ce3a', // Looksrare Exchange
@@ -505,6 +550,7 @@ export const LooksrareConfigs: ProtocolConfig = {
 
 export const OpenseaConfigs: ProtocolConfig = {
   protocol: 'opensea',
+  categories: ['marketplace'],
   contracts: {
     ethereum: [
       '0x00000000006c3852cbef3e08e8df289169ede581', // Seaport 1.1
@@ -517,6 +563,7 @@ export const OpenseaConfigs: ProtocolConfig = {
 
 export const X2y2Configs: ProtocolConfig = {
   protocol: 'x2y2',
+  categories: ['marketplace'],
   contracts: {
     ethereum: [
       '0x74312363e45dcaba76c59ec49a7aa8a65a67eed3', // X2y2 Exchange
@@ -526,6 +573,7 @@ export const X2y2Configs: ProtocolConfig = {
 
 export const Eth2Configs: ProtocolConfig = {
   protocol: 'eth2',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0x00000000219ab540356cbb839cbe05303d7705fa', // Beacon Deposit Contract
@@ -535,6 +583,7 @@ export const Eth2Configs: ProtocolConfig = {
 
 export const ChainlinkConfigs: ProtocolConfig = {
   protocol: 'chainlink',
+  categories: ['service'],
   contracts: {
     ethereum: [],
   },
@@ -542,6 +591,7 @@ export const ChainlinkConfigs: ProtocolConfig = {
 
 export const ZeroxConfigs: ProtocolConfig = {
   protocol: 'zerox',
+  categories: ['dexAggregator'],
   contracts: {
     ethereum: [
       '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // Proxy Exchange
@@ -551,6 +601,7 @@ export const ZeroxConfigs: ProtocolConfig = {
 
 export const ParaswapConfigs: ProtocolConfig = {
   protocol: 'paraswap',
+  categories: ['dexAggregator'],
   contracts: {
     ethereum: [
       '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap Augustus Swapper v5
@@ -560,6 +611,7 @@ export const ParaswapConfigs: ProtocolConfig = {
 
 export const YearnConfigs: ProtocolConfig = {
   protocol: 'yearn',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       // We detect yearn vault by checking vault governance address is match with
@@ -614,6 +666,7 @@ export const YearnConfigs: ProtocolConfig = {
 
 export const TornadocashConfigs: ProtocolConfig = {
   protocol: 'tornadocash',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc', // ETH 0.1
@@ -666,6 +719,7 @@ export const TornadocashConfigs: ProtocolConfig = {
 
 export const ConvexConfigs: ProtocolConfig = {
   protocol: 'convex',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0xf403c135812408bfbe8713b5a23a04b3d48aae31', // Booster
@@ -680,6 +734,7 @@ export const ConvexConfigs: ProtocolConfig = {
 
 export const EulerConfigs: ProtocolConfig = {
   protocol: 'euler',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       '0x27182842e098f60e3d576794a5bffb0777e025d3', // Euler Protocol
@@ -713,6 +768,7 @@ export const EulerConfigs: ProtocolConfig = {
 
 export const LiquityConfigs: ProtocolConfig = {
   protocol: 'liquity',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       '0x24179cd81c9e782a4096035f7ec97fb8b783e007', // Borrow Operation
@@ -727,6 +783,7 @@ export const LiquityConfigs: ProtocolConfig = {
 
 export const AbracadabraConfigs: ProtocolConfig = {
   protocol: 'abracadabra',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       '0x26fa3fffb6efe8c1e69103acb4044c26b9a106a9', // sSPELL
@@ -746,6 +803,7 @@ export const AbracadabraConfigs: ProtocolConfig = {
 
 export const MakerConfigs: ProtocolConfig = {
   protocol: 'maker',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       '0x9759a6ac90977b93b58547b4a71c78317f391a28', // DaiJoin
@@ -875,6 +933,7 @@ export const MakerConfigs: ProtocolConfig = {
 
 export const StargateConfigs: ProtocolConfig = {
   protocol: 'stargate',
+  categories: ['bridge'],
   contracts: {
     ethereum: [
       '0x101816545f6bd2b1076434b54383a1e633390a2e', // Pool ETH
@@ -957,6 +1016,7 @@ export const StargateConfigs: ProtocolConfig = {
 
 export const SiloConfigs: ProtocolConfig = {
   protocol: 'silo',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       '0xd998c35b7900b344bbbe6555cc11576942cf309d', // Silo Depository
@@ -1015,6 +1075,7 @@ export const SiloConfigs: ProtocolConfig = {
 
 export const BeefyConfigs: ProtocolConfig = {
   protocol: 'beefy',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0xf49c523f08b4e7c8e51a44088ea2a5e6b5f397d9', // Beefy reward vault
@@ -1077,6 +1138,7 @@ export const BeefyConfigs: ProtocolConfig = {
 
 export const FraxlendConfigs: ProtocolConfig = {
   protocol: 'fraxlend',
+  categories: ['lending'],
   contracts: {
     ethereum: FraxlendPairs.map((item) => item.address),
   },
@@ -1087,6 +1149,7 @@ export const FraxlendConfigs: ProtocolConfig = {
 
 export const ApecoinConfigs: ProtocolConfig = {
   protocol: 'apecoin',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0x5954ab967bc958940b7eb73ee84797dc8a2afbb9', // APE staking
@@ -1096,6 +1159,7 @@ export const ApecoinConfigs: ProtocolConfig = {
 
 export const GearboxConfigs: ProtocolConfig = {
   protocol: 'gearbox',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       '0xa7df60785e556d65292a2c9a077bb3a8fbf048bc', // Airdrop distributor
@@ -1163,6 +1227,7 @@ export const GearboxConfigs: ProtocolConfig = {
 
 export const RaribleConfigs: ProtocolConfig = {
   protocol: 'rarible',
+  categories: ['marketplace'],
   contracts: {
     ethereum: [
       '0x09eab21c40743b2364b94345419138ef80f39e30', // Exchange v1
@@ -1172,6 +1237,7 @@ export const RaribleConfigs: ProtocolConfig = {
 
 export const ExactlyConfigs: ProtocolConfig = {
   protocol: 'exactly',
+  categories: ['lending'],
   contracts: {
     ethereum: ExactlyMarkets.map((item) => item.address),
   },
@@ -1246,6 +1312,7 @@ export const ExactlyConfigs: ProtocolConfig = {
 
 export const FraxethConfigs: ProtocolConfig = {
   protocol: 'fraxeth',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0xbafa44efe7901e04e39dad13167d089c559c1138', // frxETH minter
@@ -1256,6 +1323,7 @@ export const FraxethConfigs: ProtocolConfig = {
 
 export const CarbonConfigs: ProtocolConfig = {
   protocol: 'carbon',
+  categories: ['trading'],
   contracts: {
     ethereum: [
       '0xc537e898cd774e2dcba3b14ea6f34c93d5ea45e1', // Controller
@@ -1265,6 +1333,7 @@ export const CarbonConfigs: ProtocolConfig = {
 
 export const StakewiseConfigs: ProtocolConfig = {
   protocol: 'stakewise',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0xfe2e637202056d30016725477c5da089ab0a043a', // sETH2
@@ -1275,6 +1344,7 @@ export const StakewiseConfigs: ProtocolConfig = {
 
 export const ConicConfigs: ProtocolConfig = {
   protocol: 'conic',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0x40293380f5292bb13905608b35a936c332f07f94', // Omnipool FRAX
@@ -1343,6 +1413,7 @@ export const ConicConfigs: ProtocolConfig = {
 
 export const KyberswapAggregatorConfigs: ProtocolConfig = {
   protocol: 'kyberswap-aggregator',
+  categories: ['dexAggregator'],
   contracts: {
     ethereum: [
       '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Meta Router v2
@@ -1352,6 +1423,7 @@ export const KyberswapAggregatorConfigs: ProtocolConfig = {
 
 export const KyberswapClassicConfigs: ProtocolConfig = {
   protocol: 'kyberswap-classic',
+  categories: ['trading'],
   contracts: {
     ethereum: [
       '0x1c758af0688502e49140230f6b0ebd376d429be5', // KSFactory
@@ -1372,6 +1444,7 @@ export const KyberswapClassicConfigs: ProtocolConfig = {
 
 export const ArrakisConfigs: ProtocolConfig = {
   protocol: 'arrakis',
+  categories: ['staking'],
   contracts: {
     ethereum: ArrakisVaults.map((item) => item.address),
   },
@@ -1382,6 +1455,7 @@ export const ArrakisConfigs: ProtocolConfig = {
 
 export const LybraConfigs: ProtocolConfig = {
   protocol: 'lybra',
+  categories: ['lending'],
   contracts: {
     ethereum: [
       '0x97de57ec338ab5d51557da3434828c5dbfada371', // Lybra
@@ -1391,6 +1465,7 @@ export const LybraConfigs: ProtocolConfig = {
 
 export const PendleConfigs: ProtocolConfig = {
   protocol: 'pendle',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       // all sy tokens and markets
@@ -1436,6 +1511,7 @@ export const PendleConfigs: ProtocolConfig = {
 
 export const BinanceStakedEthConfigs: ProtocolConfig = {
   protocol: 'binance-staked-eth',
+  categories: ['staking'],
   contracts: {
     ethereum: [
       '0xa2e3356610840701bdf5611a53974510ae27e2e1', // wbETH
@@ -1445,6 +1521,7 @@ export const BinanceStakedEthConfigs: ProtocolConfig = {
 
 export const AgilityConfigs: ProtocolConfig = {
   protocol: 'agility',
+  categories: ['staking'],
   contracts: {
     ethereum: [...AgilityPools.map((item) => item.address)],
   },
@@ -1455,6 +1532,7 @@ export const AgilityConfigs: ProtocolConfig = {
 
 export const DodoConfigs: ProtocolConfig = {
   protocol: 'dodo',
+  categories: ['dexAggregator'],
   contracts: {
     ethereum: [
       '0xa2398842f37465f89540430bdc00219fa9e4d28a', // Router proxy v2

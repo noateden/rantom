@@ -88,6 +88,15 @@ export interface EventMapping {
   abi: Array<any>;
 }
 
+export type ProtocolCategory =
+  | 'lending'
+  | 'staking'
+  | 'marketplace'
+  | 'trading'
+  | 'dexAggregator'
+  | 'service'
+  | 'bridge';
+
 export interface ProtocolSubgraphConfig {
   chain: string;
   protocol: string;
@@ -99,6 +108,7 @@ export interface ProtocolSubgraphConfig {
 
 export interface ProtocolConfig {
   protocol: string; // protocol id, ex: uniswap, lido, ...
+  categories: Array<ProtocolCategory>;
   contracts: {
     [key: string]: Array<string>;
   };

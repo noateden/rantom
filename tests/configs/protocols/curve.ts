@@ -4,9 +4,10 @@ import { CurveAdapter } from '../../../modules/adapters/curve/curve';
 import { TestLog } from '../../types';
 
 export const CurveActionTestLogs: Array<TestLog> = [
+  // 3Crv
   {
     chain: 'ethereum',
-    hash: '0xd6f7ce407f168459a842125e398caaebdb8e2e2513159f8900e9565dd6d58cdb',
+    hash: '0xc95a6d0aa5e119ae4f9cc2850345e00076b6adab2f1daf5b38d386678a11b359',
     sender: normalizeAddress('0x8a0369272a18e603c5010323b389e16763240292'),
     address: normalizeAddress('0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7'),
     log: {
@@ -92,6 +93,8 @@ export const CurveActionTestLogs: Array<TestLog> = [
     adapter: new CurveAdapter(CurveConfigs, null),
     action: 'withdraw',
   },
+
+  // 3crypto
   {
     chain: 'ethereum',
     hash: '0xab7baabd53f684ee5845ce2b04b06e1696763e7465599ae3dca75684d7672665',

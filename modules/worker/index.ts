@@ -6,6 +6,7 @@ import { BinanceContracts } from '../../configs/contracts/binance';
 import { CarbonContracts } from '../../configs/contracts/carbon';
 import { ConicContracts } from '../../configs/contracts/conic';
 import { ConvexContracts } from '../../configs/contracts/convex';
+import { CurveContracts } from '../../configs/contracts/curve';
 import { DodoContracts } from '../../configs/contracts/dodo';
 import { EnsContracts } from '../../configs/contracts/ens';
 import { ExactlyContracts } from '../../configs/contracts/exactly';
@@ -51,5 +52,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     binance: new ContractWorker(providers, BinanceContracts),
     agility: new ContractWorker(providers, AgilityContracts),
     dodo: new ContractWorker(providers, DodoContracts),
+    curve: new ContractWorker(providers, CurveContracts),
   };
 }
