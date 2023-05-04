@@ -31,7 +31,7 @@ import {
   PancakeswapV3Configs,
   RocketpoolConfigs,
   SushiConfigs,
-  // Uniswapv3Configs,
+  Uniswapv3Configs,
   YearnConfigs,
 } from './protocols';
 
@@ -174,7 +174,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
 };
 
 export const ProtocolWhitelistedSubgraphs: Array<ProtocolConfig> = [
-  // Uniswapv3Configs,
+  Uniswapv3Configs,
   SushiConfigs,
   PancakeswapConfigs,
   PancakeswapV3Configs,
