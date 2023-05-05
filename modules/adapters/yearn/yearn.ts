@@ -68,7 +68,10 @@ export class YearnAdapter extends Adapter {
               })
             ).toString()
           );
-          const amount = new BigNumber(event.value).multipliedBy(pricePerShare).dividedBy(1e36).toString(10);
+          const amount = new BigNumber(event.value)
+            .multipliedBy(pricePerShare)
+            .dividedBy(new BigNumber(10).pow(token.decimals * 2))
+            .toString(10);
           const account = compareAddress(event.from, AddressZero)
             ? normalizeAddress(event.to)
             : normalizeAddress(event.from);
