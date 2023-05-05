@@ -174,6 +174,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x97de57ec338ab5d51557da3434828c5dbfada371', // Lybra finance main
     '0xa2e3356610840701bdf5611a53974510ae27e2e1', // Binance staked eth
     '0xa2398842f37465f89540430bdc00219fa9e4d28a', // DODO router proxy v2
+    '0x50f9bde1c76bba997a5d6e7fefff695ec8536194', // DODOFeeRouteProxy
   ],
 };
 
