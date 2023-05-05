@@ -1,5 +1,3 @@
-import { KnownAction } from './domains';
-
 export interface ParseTransactionOptions {
   hash: string;
   force: boolean;
@@ -51,10 +49,6 @@ export interface SubgraphJobRunOptions {
   fromTime: number;
 }
 
-export interface ProxyGetDataSubgraphOptions {
-  action: KnownAction;
-}
-
 export interface OracleGetTokenPriceOptions {
   symbol: string;
   timestamp: number;
@@ -78,10 +72,10 @@ export interface RpcWrapperQueryContractOptions {
   blockNumber?: number;
 }
 
-export interface ApiQueryProtocolStatsOptions {
+export interface CollectorGetProtocolStatsOptions {
   protocol: string;
 }
 
-export interface ApiQueryAddressStatsOptions {
+export interface CollectorGetAddressStatsOptions {
   address: string;
 }

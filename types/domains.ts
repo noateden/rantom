@@ -139,22 +139,22 @@ export interface SystemReport {
 export interface ProtocolStats {
   protocol: string;
 
-  // unique actions on protocol
-  actions: Array<KnownAction>;
+  // unique actions which occur on this protocol
+  actions: Array<string>;
 
-  // unique tokens on protocol
-  tokens: Array<string>;
+  // unique tokens which used in this protocol
+  tokens: Array<Token>;
 }
 
 export interface AddressStats {
   address: string;
 
-  // unique protocol which this address interact on
+  // unique protocols which this address interact with
   protocols: Array<string>;
 
-  // unique actions on protocol
-  actions: Array<KnownAction>;
+  // unique actions which occur on this protocol
+  actions: Array<string>;
 
-  // unique tokens on protocol
-  tokens: Array<string>;
+  // unique tokens which used in this protocol
+  tokens: Array<Token>;
 }

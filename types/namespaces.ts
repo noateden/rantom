@@ -20,9 +20,9 @@ import {
 } from './domains';
 import {
   AdapterParseLogOptions,
-  ApiQueryAddressStatsOptions,
   ApiQueryLogOptions,
-  ApiQueryProtocolStatsOptions,
+  CollectorGetAddressStatsOptions,
+  CollectorGetProtocolStatsOptions,
   OracleGetTokenPriceOptions,
   ParseTransactionOptions,
   RpcWrapperQueryContractOptions,
@@ -120,17 +120,27 @@ export interface IReportProvider extends IProvider {
   run: () => Promise<void>;
 }
 
-export interface IApiWorkerProvider extends IProvider {
+export interface IApiCachingProvider extends IProvider {
   providers: GlobalProviders;
 
   queryLogs: (options: ApiQueryLogOptions) => Promise<Array<any>>;
-  queryProtocolStats: (options: ApiQueryProtocolStatsOptions) => Promise<ProtocolStats>;
-  queryAddressStats: (options: ApiQueryAddressStatsOptions) => Promise<AddressStats>;
-  run: () => Promise<void>;
 }
 
 export interface IContractWorker extends IProvider {
   providers: GlobalProviders;
 
   run: (options: WorkerRunOptions) => Promise<void>;
+}
+
+export interface ICollectorProvider extends IProvider {
+  providers: GlobalProviders;
+
+  // get stats of given protocol
+  getProtocolStats: (options: CollectorGetProtocolStatsOptions) => Promise<ProtocolStats | null>;
+
+  // get stats of given address
+  getAddressStats: (options: CollectorGetAddressStatsOptions) => Promise<AddressStats | null>;
+
+  // run collector daemon, update data
+  run: () => Promise<void>;
 }

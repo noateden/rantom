@@ -3,8 +3,9 @@ import { Router } from 'express';
 import logger from '../../../lib/logger';
 import { AddressStats, ProtocolStats } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
+import { CollectorProvider } from '../../collector/collector';
+import { ApiCachingProvider } from '../caching';
 import { writeResponseError } from '../helpers';
-import { ApiWorkerProvider } from '../worker';
 
 export function getRouter(providers: GlobalProviders): Router {
   const router = Router({ mergeParams: true });
@@ -16,10 +17,10 @@ export function getRouter(providers: GlobalProviders): Router {
     const limit = options && options.limit ? Number(options.limit) : 1000;
     const skip = options && options.skip ? Number(options.skip) : 0;
 
-    const apiWorker = new ApiWorkerProvider(providers);
+    const apiCaching = new ApiCachingProvider(providers);
 
     try {
-      const events: Array<any> = await apiWorker.queryLogs({ query, limit, order, skip });
+      const events: Array<any> = await apiCaching.queryLogs({ query, limit, order, skip });
       response.status(200).json(events).end();
     } catch (e: any) {
       logger.onError({
@@ -41,10 +42,10 @@ export function getRouter(providers: GlobalProviders): Router {
   router.get('/stats/protocol/:protocol', async (request, response) => {
     const { protocol } = request.params;
 
-    const apiWorker = new ApiWorkerProvider(providers);
+    const collector = new CollectorProvider(providers);
 
     try {
-      const stats: ProtocolStats = await apiWorker.queryProtocolStats({ protocol });
+      const stats: ProtocolStats | null = await collector.getProtocolStats({ protocol });
       response.status(200).json(stats).end();
     } catch (e: any) {
       logger.onError({
@@ -66,10 +67,10 @@ export function getRouter(providers: GlobalProviders): Router {
   router.get('/stats/address/:address', async (request, response) => {
     const { address } = request.params;
 
-    const apiWorker = new ApiWorkerProvider(providers);
+    const collector = new CollectorProvider(providers);
 
     try {
-      const stats: AddressStats = await apiWorker.queryAddressStats({ address });
+      const stats: AddressStats | null = await collector.getAddressStats({ address });
       response.status(200).json(stats).end();
     } catch (e: any) {
       logger.onError({
