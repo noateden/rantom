@@ -126,13 +126,13 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xfa8c996e158b80d77fbd0082bb437556a65b96e0', // Maker Gems
     '0x0a59649758aa4d66e25f08dd01271e891fe52199', // Maker Gems
     '0xae78736cd615f374d3085123a210448e74fc6393', // Rocketpool rETH
-    '0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f', // Uniswap factory v2
-    '0x1f98431c8ad98523631ae4a59f267346ea31f984', // Uniswap factory v3
-    '0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac', // Sushi factory v2
+    // '0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f', // Uniswap factory v2
+    // '0x1f98431c8ad98523631ae4a59f267346ea31f984', // Uniswap factory v3
+    // '0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac', // Sushi factory v2
     '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // Sushi masterchef
     '0xef0881ec094552b2e128cf945ef17a6752b4ec5d', // Sushi masterchef v2
-    '0x1097053fd2ea711dad45caccc45eff7548fcb362', // Pancakeswap factory v2
-    '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865', // Pancakeswap factory v3
+    // '0x1097053fd2ea711dad45caccc45eff7548fcb362', // Pancakeswap factory v2
+    // '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865', // Pancakeswap factory v3
     '0x5954ab967bc958940b7eb73ee84797dc8a2afbb9', // APE staking
     '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // 0x exchange
     '0xa7df60785e556d65292a2c9a077bb3a8fbf048bc', // Gearbox airdrop distributor
@@ -169,8 +169,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xabb735648a076d570aff2a61d8d141099823eae9', // Conic DAI
     '0xf432110e5206356cd6448da16b05394a89b44cef', // Conic USDT
     '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Kyberswap aggregator meta router v2
-    '0x1c758af0688502e49140230f6b0ebd376d429be5', // Kyberswap classic KSFactory
-    '0x833e4083b7ae46cea85695c4f7ed25cdad8886de', // Kyberswap classic DMMFactory
+    // '0x1c758af0688502e49140230f6b0ebd376d429be5', // Kyberswap classic KSFactory
+    // '0x833e4083b7ae46cea85695c4f7ed25cdad8886de', // Kyberswap classic DMMFactory
     '0x97de57ec338ab5d51557da3434828c5dbfada371', // Lybra finance main
     '0xa2e3356610840701bdf5611a53974510ae27e2e1', // Binance staked eth
     '0xa2398842f37465f89540430bdc00219fa9e4d28a', // DODO router proxy v2
