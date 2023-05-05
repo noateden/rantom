@@ -17,6 +17,7 @@ import IronbankMarkets from './data/IronbankMarkets.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import SushiPools from './data/SushiPools.json';
+import UniLiquidityPools from './data/UniLiquidityPools.json';
 import { Signatures } from './signatures';
 
 export const Uniswapv2Configs: ProtocolConfig = {
@@ -25,7 +26,23 @@ export const Uniswapv2Configs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f', // v2 Factory
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'uniswapv2').map((item) => item.address),
     ],
+  },
+  subgraphs: [
+    {
+      protocol: 'uniswapv2',
+      chain: 'ethereum',
+      version: 'univ2',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2',
+    },
+  ],
+  staticData: {
+    liquidityPools: UniLiquidityPools.filter((item) => item.protocol === 'uniswapv2'),
   },
 };
 
@@ -35,6 +52,9 @@ export const Uniswapv3Configs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0x1f98431c8ad98523631ae4a59f267346ea31f984', // v3 Factory
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'uniswapv3').map((item) => item.address),
     ],
   },
   subgraphs: [
@@ -47,6 +67,9 @@ export const Uniswapv3Configs: ProtocolConfig = {
       endpoint: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3',
     },
   ],
+  staticData: {
+    liquidityPools: UniLiquidityPools.filter((item) => item.protocol === 'uniswapv3'),
+  },
 };
 
 export const LidoConfigs: ProtocolConfig = {
@@ -71,10 +94,17 @@ export const SushiConfigs: ProtocolConfig = {
       '0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac', // uni v2 Factory
       '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // masterchef
       '0xef0881ec094552b2e128cf945ef17a6752b4ec5d', // masterchef v2
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'sushi').map((item) => item.address),
     ],
   },
   staticData: {
+    // masterchef pools
     pools: SushiPools,
+
+    // dex pools
+    liquidityPools: UniLiquidityPools.filter((item) => item.protocol === 'sushi'),
   },
   subgraphs: [
     {
@@ -94,6 +124,9 @@ export const PancakeswapConfigs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0x1097053fd2ea711dad45caccc45eff7548fcb362', // uni v2 Factory
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'pancakeswap').map((item) => item.address),
     ],
   },
   subgraphs: [
@@ -108,6 +141,9 @@ export const PancakeswapConfigs: ProtocolConfig = {
       endpoint: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exhange-eth',
     },
   ],
+  staticData: {
+    liquidityPools: UniLiquidityPools.filter((item) => item.protocol === 'pancakeswap'),
+  },
 };
 
 export const PancakeswapV3Configs: ProtocolConfig = {
@@ -116,6 +152,9 @@ export const PancakeswapV3Configs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865', // pancakeswap v3 Factory
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'pancakeswapv3').map((item) => item.address),
     ],
   },
   subgraphs: [
@@ -128,6 +167,9 @@ export const PancakeswapV3Configs: ProtocolConfig = {
       endpoint: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-eth',
     },
   ],
+  staticData: {
+    liquidityPools: UniLiquidityPools.filter((item) => item.protocol === 'pancakeswapv3'),
+  },
 };
 
 export const BalancerConfigs: ProtocolConfig = {

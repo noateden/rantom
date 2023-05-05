@@ -100,6 +100,15 @@ export interface TradingEvent extends EventBase {
   addition?: any;
 }
 
+export interface UniLiquidityPool {
+  chain: string;
+  protocol: string;
+  version: 'univ2' | 'univ3';
+  address: string;
+  token0: Token;
+  token1: Token;
+}
+
 export interface TokenOracleSource {
   source: string;
   spotPrice: string;

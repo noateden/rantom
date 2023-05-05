@@ -9,6 +9,7 @@ import FraxLendPairs from './data/FraxlendPairs.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import YearnVaults from './data/YearnVaults.json';
+import { WhitelistUniPools } from './policies/whitelistUniPools';
 import {
   Aavev2Configs,
   Aavev3Configs,
@@ -38,6 +39,7 @@ import {
 
 export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
   ethereum: [
+    ...WhitelistUniPools,
     ...AbracadabraCauldrons.map((item) => item.address),
     ...YearnVaults.map((item) => item.address),
     ...BeefyVaults.map((item) => item.address),
