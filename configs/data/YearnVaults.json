@@ -581,5 +581,500 @@
       "decimals": 18
     },
     "birthday": 17035362
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xa258c4606ca8206d8aa700ce2143d7db854d168c",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "birthday": 12588794
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xa9fe4601811213c340e850ea305481aff02f5b28",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "birthday": 11883016
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xe14d13d8b3b85af791b2aadd661cdbd5e6097db1",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+      "symbol": "YFI",
+      "decimals": 18
+    },
+    "birthday": 11992803
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x27b5739e22ad9033bcbf192059122d163b60349d",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfcc5c47be19d06bf83eb04298b026f81069ff65b",
+      "symbol": "yCRV",
+      "decimals": 18
+    },
+    "birthday": 15624989
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xc97232527b62efb0d8ed38cf3ea103a6cca4037e",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x453d92c7d4263201c69aacfaf589ed14202d83a4",
+      "symbol": "yCRV-f",
+      "decimals": 18
+    },
+    "birthday": 15624988
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x1b905331f7de2748f4d6a0678e1521e20347643f",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x3f1b0278a9ee595635b61817630cc19de792f506",
+      "symbol": "ibAUD+sAUD-f",
+      "decimals": 18
+    },
+    "birthday": 13195497
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x341bb10d8f5947f3066502dc8125d9b8949fd3d6",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xdf55670e27be5cde7228dd0a6849181891c9eba1",
+      "symbol": "STGUSDC-f",
+      "decimals": 18
+    },
+    "birthday": 14891068
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x59518884eebfb03e90a18adbaaab770d4666471e",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x8818a9bb44fbf33502be7c15c500d0c783b73067",
+      "symbol": "ibJPY+sJPY-f",
+      "decimals": 18
+    },
+    "birthday": 13195534
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xbcbb5b54fa51e7b7dc920340043b203447842a6b",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x3b6831c0077a1e44ed0a21841c3bc4dc11bce833",
+      "symbol": "crvEURTUSD",
+      "decimals": 18
+    },
+    "birthday": 13635328
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xc5f3d11580c41cd07104e9af154fc6428bb93c73",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa13a9247ea42d743238089903570127dda72fe44",
+      "symbol": "bb-a-USD",
+      "decimals": 18
+    },
+    "birthday": 15649144
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x790a60024bc3aea28385b60480f15a0771f26d09",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x29059568bb40344487d62f7450e78b8e6c74e0e5",
+      "symbol": "YFIETH-f",
+      "decimals": 18
+    },
+    "birthday": 14165196
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xbfedbcbe27171c418cdabc2477042554b1904857",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x53a901d48795c58f485cbb38df08fa96a24669d5",
+      "symbol": "rCRV",
+      "decimals": 18
+    },
+    "birthday": 12484685
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x718abe90777f5b778b52d553a5abaa148dd0dc5d",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc4c319e2d4d66cca4464c0c2b32c9bd23ebe784e",
+      "symbol": "alETH+ETH-f",
+      "decimals": 18
+    },
+    "birthday": 13470881
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x378cb52b00f9d0921cb46dfc099cff73b42419dc",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",
+      "symbol": "LUSD",
+      "decimals": 18
+    },
+    "birthday": 13541215
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x8cc94ccd0f3841a468184aca3cc478d2148e1757",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x1aef73d49dedc4b1778d0706583995958dc862e6",
+      "symbol": "musd3CRV",
+      "decimals": 18
+    },
+    "birthday": 12293207
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x625b7df2fa8abe21b0a976736cda4775523aed1e",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb19059ebb43466c323583928285a49f558e572fd",
+      "symbol": "hCRV",
+      "decimals": 18
+    },
+    "birthday": 12115501
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xf29ae508698bdef169b89834f76704c3b205aedf",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+      "symbol": "SNX",
+      "decimals": 18
+    },
+    "birthday": 12272748
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xa354f35829ae975e850e23e9615b11da1b3dc4de",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "birthday": 13513457
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x132d8d2c76db3812403431facb00f3453fc42125",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xaa17a236f2badc98ddc0cf999abb47d47fc0a6cf",
+      "symbol": "ankrCRV",
+      "decimals": 18
+    },
+    "birthday": 12293061
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xda816459f1ab5631232fe5e97a05bbbb94970c95",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "symbol": "DAI",
+      "decimals": 18
+    },
+    "birthday": 12796965
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xd9788f3931ede4d5018184e198699dc6d66c1915",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+      "symbol": "AAVE",
+      "decimals": 18
+    },
+    "birthday": 12885875
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x6ede7f19df5df6ef23bd5b9cedb651580bdf56ca",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x4807862aa8b2bf68830e4c8dc86d0e9a998e085a",
+      "symbol": "BUSD3CRV-f",
+      "decimals": 18
+    },
+    "birthday": 12283876
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x30fcf7c6cdfc46ec237783d94fc78553e79d4e9c",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x3a664ab939fd8482048609f652f9a0b0677337b9",
+      "symbol": "dusd3CRV",
+      "decimals": 18
+    },
+    "birthday": 12293189
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x2a38b9b0201ca39b17b460ed2f11e4929559071e",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd2967f45c4f384deea880f807be904762a3dea07",
+      "symbol": "gusd3CRV",
+      "decimals": 18
+    },
+    "birthday": 12298129
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xd6ea40597be05c201845c0bfd2e96a60bacde267",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x845838df265dcd2c412a1dc9e959c7d08537f8a2",
+      "symbol": "cDAI+cUSDC",
+      "decimals": 18
+    },
+    "birthday": 12245239
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x39caf13a104ff567f71fd2a4c68c026fdb6e740b",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfd2a8fa60abd58efe3eee34dd494cd491dc14900",
+      "symbol": "a3CRV",
+      "decimals": 18
+    },
+    "birthday": 12298216
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x3b27f92c0e212c671ea351827edf93db27cc0c65",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "symbol": "USDT",
+      "decimals": 6
+    },
+    "birthday": 14980240
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xb4d1be44bff40ad6e506edf43156577a3f8672ec",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x02d341ccb60faaf662bc0554d13778015d1b285c",
+      "symbol": "saCRV",
+      "decimals": 18
+    },
+    "birthday": 12245110
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xdb25ca703181e7484a155dd612b06f57e12be5f0",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+      "symbol": "YFI",
+      "decimals": 18
+    },
+    "birthday": 13030322
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xa696a63cc78dffa1a63e9e50587c197387ff6c7e",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "symbol": "WBTC",
+      "decimals": 8
+    },
+    "birthday": 12185982
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x671a912c10bba0cfa74cfc2d6fba9ba1ed9530b2",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+      "symbol": "LINK",
+      "decimals": 18
+    },
+    "birthday": 12542636
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x6d765cbe5bc922694afe112c140b8878b9fb0390",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
+      "symbol": "SUSHI",
+      "decimals": 18
+    },
+    "birthday": 12866983
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xa9412ffd7e0866755ae0dda3318470a61f62abe8",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x178e029173417b1f9c8bc16dcec6f697bc323746",
+      "symbol": "FUD",
+      "decimals": 18
+    },
+    "birthday": 15116693
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xd88dbba3f9c4391ee46f5ff548f289054db6e51c",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xaa5a67c256e27a5d80712c51971408db3370927d",
+      "symbol": "DOLA3POOL3CRV-f",
+      "decimals": 18
+    },
+    "birthday": 13845182
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xc1f3c276bf73396c020e8354bca581846171649d",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+      "symbol": "wstETH",
+      "decimals": 18
+    },
+    "birthday": 16501974
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x873fb544277fd7b977b196a826459a69e27ea4ea",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x03ab458634910aad20ef5f1c8ee96f1d6ac54919",
+      "symbol": "RAI",
+      "decimals": 18
+    },
+    "birthday": 12570773
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xf59d66c1d593fb10e2f8c2a6fd2c958792434b9c",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x87650d7bbfc3a9f10587d7778206671719d9910d",
+      "symbol": "OUSD3CRV-f",
+      "decimals": 18
+    },
+    "birthday": 13635343
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x25212df29073fffa7a67399acefc2dd75a831a1a",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x194ebd173f6cdace046c53eacce9b953f28411d1",
+      "symbol": "eursCRV",
+      "decimals": 18
+    },
+    "birthday": 12298088
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xc4daf3b5e2a9e93861c3fbdd25f1e943b8d87417",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x7eb40e450b9655f4b3cc4259bcc731c63ff55ae6",
+      "symbol": "usdp3CRV",
+      "decimals": 18
+    },
+    "birthday": 12298233
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x2d5d4869381c4fce34789bc1d38acce747e295ae",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x6ba5b4e438fa0aaf7c1bd179285af65d13bd3d90",
+      "symbol": "RAI3CRV",
+      "decimals": 18
+    },
+    "birthday": 13845201
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x801ab06154bf539dea4385a39f5fa8534fb53073",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x3d229e1b4faab62f621ef2f6a610961f7bd7b23b",
+      "symbol": "crvEURSUSDC",
+      "decimals": 18
+    },
+    "birthday": 13635343
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xfbeb78a723b8087fd2ea7ef1afec93d35e8bed42",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
+      "symbol": "UNI",
+      "decimals": 18
+    },
+    "birthday": 12339355
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x4560b99c904aad03027b5178cca81584744ac01f",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9d0464996170c6b9e75eed71c68b99ddedf279e8",
+      "symbol": "cvxcrv-f",
+      "decimals": 18
+    },
+    "birthday": 13194414
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x5c0a86a32c129538d62c106eb8115a8b02358d57",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x447ddd4960d9fdbf6af9a790560d0af76795cb08",
+      "symbol": "rETHwstETH-f",
+      "decimals": 18
+    },
+    "birthday": 14401423
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xfd0877d9095789caf24c98f7cce092fa8e120775",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0000000000085d4780b73119b644ae5ecd22b376",
+      "symbol": "TUSD",
+      "decimals": 18
+    },
+    "birthday": 12909669
   }
 ]

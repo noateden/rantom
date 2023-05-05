@@ -17,7 +17,7 @@ export const DodoContracts: Array<Contract> = [
     protocol: 'dodo',
     abi: {},
     address: '0x50f9bde1c76bba997a5d6e7fefff695ec8536194',
-    birthday: 16180938,
+    birthday: 16584032,
     events: [],
     topics: [
       '0x92ceb067a9883c85aba061e46b9edf505a0d6e81927c4b966ebed543a5221787', // OrderHistory
