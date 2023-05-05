@@ -1,19 +1,18 @@
-import { Contract, Token } from '../../types/configs';
-import YearnVaultAbi from '../abi/yearn/YearnVault-0.3.3.json';
+import { Contract } from '../../types/configs';
 import YearnVaultData from '../data/YearnVaults.json';
 
-export interface YearnVaultContract extends Contract {
-  token: Token;
-}
-
-export const YearnContracts: Array<YearnVaultContract> = YearnVaultData.map((item) => {
+export const YearnContracts: Array<Contract> = YearnVaultData.map((item) => {
   return {
     chain: 'ethereum',
     protocol: 'yearn',
-    abi: YearnVaultAbi,
+    abi: {},
     address: item.address,
-    birthday: 16308190,
+    birthday: item.birthday,
     token: item.token,
-    events: ['Deposit', 'Withdraw'],
+    events: [],
+    topics: [
+      '0x90890809c654f11d6e72a28fa60149770a0d11ec6c92319d6ceb2bb0a4ea1a15', // Deposit
+      '0xf279e6a1f5e320cca91135676d9cb6e44ca8a08c0b88342bcdb1144f6511b568', // Withdraw
+    ],
   };
 });

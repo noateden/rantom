@@ -1,7 +1,6 @@
 import { normalizeAddress } from '../lib/helper';
 import { ProtocolConfig } from '../types/configs';
 import { Tokens } from './constants';
-import { YearnContracts } from './contracts/yearn';
 import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
 import AgilityPools from './data/AgilityStakingPools.json';
 import ArrakisVaults from './data/ArrakisVaults.json';
@@ -18,6 +17,7 @@ import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import SushiPools from './data/SushiPools.json';
 import UniLiquidityPools from './data/UniLiquidityPools.json';
+import YearnVaults from './data/YearnVaults.json';
 import { Signatures } from './signatures';
 
 export const Uniswapv2Configs: ProtocolConfig = {
@@ -702,7 +702,7 @@ export const YearnConfigs: ProtocolConfig = {
     },
   },
   staticData: {
-    vaults: YearnContracts,
+    vaults: YearnVaults,
   },
 };
 

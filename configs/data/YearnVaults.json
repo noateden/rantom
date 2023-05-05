@@ -7,7 +7,8 @@
       "address": "0x06325440d014e39736583c165c2963ba99faf14e",
       "symbol": "steCRV",
       "decimals": 18
-    }
+    },
+    "birthday": 16228109
   },
   {
     "chain": "ethereum",
@@ -17,7 +18,8 @@
       "address": "0xba3436fd341f2c8a928452db3c5a3670d1d5cc73",
       "symbol": "agEUREUROC-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16234260
   },
   {
     "chain": "ethereum",
@@ -27,7 +29,8 @@
       "address": "0x5b6c539b224014a09b3388e51caaa8e354c959c8",
       "symbol": "cbETH/ETH-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16234260
   },
   {
     "chain": "ethereum",
@@ -37,7 +40,8 @@
       "address": "0xed279fdd11ca84beef15af5d39bb4d4bee23f0ca",
       "symbol": "LUSD3CRV-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16234267
   },
   {
     "chain": "ethereum",
@@ -47,7 +51,8 @@
       "address": "0xc4ad29ba4b3c580e6d59105fff484999997675ff",
       "symbol": "crv3crypto",
       "decimals": 18
-    }
+    },
+    "birthday": 16234272
   },
   {
     "chain": "ethereum",
@@ -57,7 +62,8 @@
       "address": "0x19b080fe1ffa0553469d20ca36219f17fcf03859",
       "symbol": "ibEUR+sEUR-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16234290
   },
   {
     "chain": "ethereum",
@@ -67,7 +73,8 @@
       "address": "0x3a283d9c08e8b55966afb64c515f5143cf907611",
       "symbol": "crvCVXETH",
       "decimals": 18
-    }
+    },
+    "birthday": 16234376
   },
   {
     "chain": "ethereum",
@@ -77,7 +84,8 @@
       "address": "0x5a6a4d54456819380173272a5e8e9b9904bdf41b",
       "symbol": "MIM-3LP3CRV-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16234376
   },
   {
     "chain": "ethereum",
@@ -87,7 +95,8 @@
       "address": "0x3175df0976dfa876431c2e9ee6bc45b65d3473cc",
       "symbol": "crvFRAX",
       "decimals": 18
-    }
+    },
+    "birthday": 16234376
   },
   {
     "chain": "ethereum",
@@ -97,7 +106,8 @@
       "address": "0x5282a4ef67d9c33135340fb3289cc1711c13638c",
       "symbol": "ib3CRV",
       "decimals": 18
-    }
+    },
+    "birthday": 16294994
   },
   {
     "chain": "ethereum",
@@ -107,7 +117,8 @@
       "address": "0x4f3e8f405cf5afc05d68142f3783bdfe13811522",
       "symbol": "usdn3CRV",
       "decimals": 18
-    }
+    },
+    "birthday": 16294994
   },
   {
     "chain": "ethereum",
@@ -117,7 +128,8 @@
       "address": "0xed4064f376cb8d68f770fb1ff088a3d0f3ff5c4d",
       "symbol": "crvCRVETH",
       "decimals": 18
-    }
+    },
+    "birthday": 16294994
   },
   {
     "chain": "ethereum",
@@ -127,7 +139,8 @@
       "address": "0xc25a3a3b969415c80451098fa907ec722572917f",
       "symbol": "crvPlain3andSUSD",
       "decimals": 18
-    }
+    },
+    "birthday": 16295006
   },
   {
     "chain": "ethereum",
@@ -137,7 +150,8 @@
       "address": "0xa3d87fffce63b53e0d54faa1cc983b7eb0b74a9c",
       "symbol": "eCRV",
       "decimals": 18
-    }
+    },
+    "birthday": 16295006
   },
   {
     "chain": "ethereum",
@@ -147,7 +161,8 @@
       "address": "0xb9446c4ef5ebe66268da6700d26f96273de3d571",
       "symbol": "3EURpool-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16295006
   },
   {
     "chain": "ethereum",
@@ -157,7 +172,8 @@
       "address": "0xd632f22692fac7611d2aa1c0d552930d43caed3b",
       "symbol": "FRAX3CRV-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16295013
   },
   {
     "chain": "ethereum",
@@ -167,7 +183,8 @@
       "address": "0x43b4fdfd4ff969587185cdb6f0bd875c5fc83f8c",
       "symbol": "alUSD3CRV-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16295013
   },
   {
     "chain": "ethereum",
@@ -177,7 +194,8 @@
       "address": "0xe57180685e3348589e9521aa53af0bcd497e884d",
       "symbol": "DOLAFRAXBP3CRV-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16342020
   },
   {
     "chain": "ethereum",
@@ -187,7 +205,8 @@
       "address": "0x2863a328a0b7fc6040f11614fa0728587db8e353",
       "symbol": "multibtc3CRV-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16370837
   },
   {
     "chain": "ethereum",
@@ -197,7 +216,8 @@
       "address": "0x5ca0313d44551e32e0d7a298ec024321c4bc59b4",
       "symbol": "bLUSDLUSD3-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16371069
   },
   {
     "chain": "ethereum",
@@ -207,7 +227,8 @@
       "address": "0x79e281bc69a03dabccd66858c65ef6724e50aebe",
       "symbol": "sdYFIYFI-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16373250
   },
   {
     "chain": "ethereum",
@@ -217,7 +238,8 @@
       "address": "0x04b727c7e246ca70d496ecf52e6b6280f3c8077d",
       "symbol": "APEUSDBP3CRV-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16373328
   },
   {
     "chain": "ethereum",
@@ -227,7 +249,8 @@
       "address": "0x326290a1b0004eee78fa6ed4f1d8f4b2523ab669",
       "symbol": "XAIFRAXBP3CRV-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16373355
   },
   {
     "chain": "ethereum",
@@ -237,7 +260,8 @@
       "address": "0x5be6c45e2d074faa20700c49ada3e88a1cc0025d",
       "symbol": "crvGEARETH-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16373506
   },
   {
     "chain": "ethereum",
@@ -247,7 +271,8 @@
       "address": "0x051d7e5609917bd9b73f04bac0ded8dd46a74301",
       "symbol": "crvWSBTC",
       "decimals": 18
-    }
+    },
+    "birthday": 16377576
   },
   {
     "chain": "ethereum",
@@ -257,7 +282,8 @@
       "address": "0xf7b55c3732ad8b2c2da7c24f30a69f55c54fb717",
       "symbol": "sdCRVCRV-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16391698
   },
   {
     "chain": "ethereum",
@@ -267,7 +293,8 @@
       "address": "0x48ff31bbbd8ab553ebe7cbd84e1ea3dba8f54957",
       "symbol": "sdAGAG-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16391698
   },
   {
     "chain": "ethereum",
@@ -277,7 +304,8 @@
       "address": "0x8c524635d52bd7b1bd55e062303177a7d916c046",
       "symbol": "sdFXSFXS-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16391725
   },
   {
     "chain": "ethereum",
@@ -287,7 +315,8 @@
       "address": "0x6e0e681441be6cb1d8405752462488bd4d691e3a",
       "symbol": "TRYB3POOL-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16476681
   },
   {
     "chain": "ethereum",
@@ -297,7 +326,8 @@
       "address": "0x6c280db098db673d30d5b34ec04b6387185d3620",
       "symbol": "CLEVETH-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16515136
   },
   {
     "chain": "ethereum",
@@ -307,7 +337,8 @@
       "address": "0x5271045f7b73c17825a7a7aee6917ee46b0b7520",
       "symbol": "OHMFRAXBP-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16550127
   },
   {
     "chain": "ethereum",
@@ -317,7 +348,8 @@
       "address": "0xf95aaa7ebb1620e46221b73588502960ef63dba0",
       "symbol": "TBTCSBTC23CRV-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16550265
   },
   {
     "chain": "ethereum",
@@ -327,7 +359,8 @@
       "address": "0x7483dd57f6488b0e194a151c57df6ec85c00ace9",
       "symbol": "BTRFLYETH-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16550269
   },
   {
     "chain": "ethereum",
@@ -337,7 +370,8 @@
       "address": "0xd8eb58d76af99547333cfeeb6a0f9bd1a63b6492",
       "symbol": "ETH MATIC-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16606720
   },
   {
     "chain": "ethereum",
@@ -347,7 +381,8 @@
       "address": "0x9848482da3ee3076165ce6497eda906e66bb85c5",
       "symbol": "pETH-ETH-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16613070
   },
   {
     "chain": "ethereum",
@@ -357,7 +392,8 @@
       "address": "0x8682fbf0cbf312c891532ba9f1a91e44f81ad7df",
       "symbol": "ibEURUSDC-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16615751
   },
   {
     "chain": "ethereum",
@@ -367,7 +403,8 @@
       "address": "0xc3b19502f8c02be75f3f77fd673503520deb51dd",
       "symbol": "msUSDFRAX3CRV-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16618266
   },
   {
     "chain": "ethereum",
@@ -377,7 +414,8 @@
       "address": "0x4acc1bf7d6a591016641325aa6664a1cd178f002",
       "symbol": "DYDXETH-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16634729
   },
   {
     "chain": "ethereum",
@@ -387,7 +425,8 @@
       "address": "0xd6ac1cb9019137a896343da59dde6d097f710538",
       "symbol": "ibGBP+sGBP-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16688852
   },
   {
     "chain": "ethereum",
@@ -397,7 +436,8 @@
       "address": "0x8461a004b50d321cb22b7d034969ce6803911899",
       "symbol": "ibKRW+sKRW-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16688852
   },
   {
     "chain": "ethereum",
@@ -407,7 +447,8 @@
       "address": "0x9c2c8910f113181783c249d8f6aa41b51cde0f0c",
       "symbol": "ibCHF+sCHF-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16688852
   },
   {
     "chain": "ethereum",
@@ -417,7 +458,8 @@
       "address": "0x9de1c3d446237ab9baff74127eb4f303802a2683",
       "symbol": "STG/FRAXBP-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16688852
   },
   {
     "chain": "ethereum",
@@ -427,7 +469,8 @@
       "address": "0x90244f43d548a4f8dfecfad91a193465b1fad6f7",
       "symbol": "FXSETH-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16718255
   },
   {
     "chain": "ethereum",
@@ -437,7 +480,8 @@
       "address": "0xcb08717451aae9ef950a2524e33b6dcaba60147b",
       "symbol": "crvTETH",
       "decimals": 18
-    }
+    },
+    "birthday": 16743594
   },
   {
     "chain": "ethereum",
@@ -447,7 +491,8 @@
       "address": "0x6c3f90f043a72fa612cbac8115ee7e52bde6e490",
       "symbol": "3Crv",
       "decimals": 18
-    }
+    },
+    "birthday": 16840081
   },
   {
     "chain": "ethereum",
@@ -457,7 +502,8 @@
       "address": "0x23e7817bc73645063fb2fa85c1d098effe84be90",
       "symbol": "JPEGpETH-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16845785
   },
   {
     "chain": "ethereum",
@@ -467,7 +513,8 @@
       "address": "0xf3a43307dcafa93275993862aae628fcb50dc768",
       "symbol": "cvxFXSFXS-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16845801
   },
   {
     "chain": "ethereum",
@@ -477,7 +524,8 @@
       "address": "0x3f0e7916681452d23cd36b1281457da721f2e5df",
       "symbol": "CTRETH-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16859519
   },
   {
     "chain": "ethereum",
@@ -487,7 +535,8 @@
       "address": "0xc270b3b858c335b6ba5d5b10e2da8a09976005ad",
       "symbol": "pax-usdp3CRV-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16863615
   },
   {
     "chain": "ethereum",
@@ -497,7 +546,8 @@
       "address": "0xbe4f3ad6c9458b901c81b734cb22d9eae9ad8b50",
       "symbol": "PALETH-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16887793
   },
   {
     "chain": "ethereum",
@@ -507,7 +557,8 @@
       "address": "0xf9078fb962a7d13f55d40d49c8aa6472abd1a5a6",
       "symbol": "clevCVX-f",
       "decimals": 18
-    }
+    },
+    "birthday": 16887825
   },
   {
     "chain": "ethereum",
@@ -517,7 +568,8 @@
       "address": "0xb79565c01b7ae53618d9b847b9443aaf4f9011e7",
       "symbol": "LDOETH-f",
       "decimals": 18
-    }
+    },
+    "birthday": 17019685
   },
   {
     "chain": "ethereum",
@@ -527,6 +579,7 @@
       "address": "0x3660bd168494d61ffdac21e403d0f6356cf90fd7",
       "symbol": "OHMETH-f",
       "decimals": 18
-    }
+    },
+    "birthday": 17035362
   }
 ]

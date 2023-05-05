@@ -1,15 +1,13 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
-import VaultAbi from '../../../configs/abi/yearn/YearnVault-0.3.3.json';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
-import { multicallv2 } from '../../../lib/multicall';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions, MulticallCall } from '../../../types/options';
+import { AdapterParseLogOptions } from '../../../types/options';
 import { Adapter } from '../adapter';
 
 const Signatures = {
@@ -43,55 +41,29 @@ export class YearnAdapter extends Adapter {
 
     if (!vaultConfig) return null;
 
-    try {
+    if (vaultConfig) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const calls: Array<MulticallCall> = [
-        {
-          name: 'governance',
-          address: address,
-          params: [],
-        },
-        {
-          name: 'token',
-          address: address,
-        },
-      ];
-      const result = await multicallv2(chain, VaultAbi, calls);
-      const governance = normalizeAddress(result[0][0]);
-      if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(governance)) !== -1) {
-        let token = null;
+      const token = vaultConfig.token;
 
-        if (vaultConfig) {
-          token = vaultConfig.token;
-        } else {
-          token = await this.getWeb3Helper().getErc20Metadata(chain, result[1][0]);
-        }
-
-        if (token) {
-          // yearn vault
-          let event;
-          if (this.config.customEventMapping && this.config.customEventMapping[signature]) {
-            event = web3.eth.abi.decodeLog(this.config.customEventMapping[signature].abi, data, topics.slice(1));
-          } else {
-            event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
-          }
-          const user = normalizeAddress(event.recipient);
-          const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
-          return {
-            protocol: this.config.protocol,
-            action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
-            addresses: [user],
-            tokens: [token],
-            tokenAmounts: [amount],
-            readableString: `${user} ${signature === Signatures.Deposit ? 'deposit' : 'withdraw'} ${amount} ${
-              token.symbol
-            } on ${this.config.protocol} chain ${chain}`,
-          };
-        }
+      // yearn vault
+      let event;
+      if (this.config.customEventMapping && this.config.customEventMapping[signature]) {
+        event = web3.eth.abi.decodeLog(this.config.customEventMapping[signature].abi, data, topics.slice(1));
+      } else {
+        event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
       }
-    } catch (e: any) {
-      // ignore bad vault
-      console.info(e);
+      const user = normalizeAddress(event.recipient);
+      const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
+      return {
+        protocol: this.config.protocol,
+        action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
+        addresses: [user],
+        tokens: [token],
+        tokenAmounts: [amount],
+        readableString: `${user} ${signature === Signatures.Deposit ? 'deposit' : 'withdraw'} ${amount} ${
+          token.symbol
+        } on ${this.config.protocol} chain ${chain}`,
+      };
     }
 
     return null;
