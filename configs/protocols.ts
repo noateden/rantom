@@ -1578,6 +1578,7 @@ export const DodoConfigs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0xa2398842f37465f89540430bdc00219fa9e4d28a', // Router proxy v2
+      '0x50f9bde1c76bba997a5d6e7fefff695ec8536194', // DODOFeeRouteProxy
     ],
   },
 };
