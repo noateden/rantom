@@ -488,5 +488,45 @@
       "symbol": "pax-usdp3CRV-f",
       "decimals": 18
     }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x1c97e67dc7ca179ae82e0c4aff4af9ff66612a43",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xbe4f3ad6c9458b901c81b734cb22d9eae9ad8b50",
+      "symbol": "PALETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xc869206adafd3d874db22e8bba662e05f6257613",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf9078fb962a7d13f55d40d49c8aa6472abd1a5a6",
+      "symbol": "clevCVX-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x708c42e0236fe8f5916c5638a462ee83da99d07b",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb79565c01b7ae53618d9b847b9443aaf4f9011e7",
+      "symbol": "LDOETH-f",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xe510e87d0ef7d987ed1baf8e1d7aaef5b9e3db42",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x3660bd168494d61ffdac21e403d0f6356cf90fd7",
+      "symbol": "OHMETH-f",
+      "decimals": 18
+    }
   }
 ]
