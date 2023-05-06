@@ -389,8 +389,30 @@ export const CurveConfigs: ProtocolConfig = {
       '0xecb456ea5365865ebab8a2661b0c503410e9b347', // Curve.fi pool owner
       '0xbabe61887f1de2713c6f97e567623453d3c79f67', // Curve.fi deployer 2
       '0xf18056bbd320e96a48e3fbf8bc061322531aac99', // Curve.fi factory
+      '0x5f3b5dfeb7b28cdbd7faba78963ee202a494e2a2', // Curve.fi veCRV
       ...CurvePools.map((item) => item.address),
     ],
+  },
+  customEventMapping: {
+    [Signatures['Withdraw(address,uint256,uint256)']]: {
+      abi: [
+        {
+          type: 'address',
+          name: 'provider',
+          indexed: true,
+        },
+        {
+          type: 'uint256',
+          name: 'value',
+          indexed: false,
+        },
+        {
+          type: 'uint256',
+          name: 'ts',
+          indexed: false,
+        },
+      ],
+    },
   },
   staticData: {
     pools: CurvePools,

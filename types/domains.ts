@@ -44,6 +44,10 @@ export type KnownAction =
   // for liquidity pool created
   | 'createLiquidityPool'
 
+  // for token locking
+  | 'lock'
+  | 'unlock'
+
   // use for service transaction
   | 'update';
 

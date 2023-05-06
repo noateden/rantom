@@ -6918,4 +6918,33 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Deposit(address,uint256,uint256,int128,uint256)']]: {
+    abi: [
+      {
+        type: 'address',
+        name: 'provider',
+        indexed: true,
+      },
+      {
+        type: 'uint256',
+        name: 'value',
+        indexed: false,
+      },
+      {
+        type: 'uint256',
+        name: 'locktime',
+        indexed: true,
+      },
+      {
+        type: 'int128',
+        name: 'type',
+        indexed: false,
+      },
+      {
+        type: 'uint256',
+        name: 'ts',
+        indexed: false,
+      },
+    ],
+  },
 };

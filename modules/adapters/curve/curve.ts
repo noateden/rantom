@@ -13,6 +13,10 @@ import { Adapter } from '../adapter';
 import { CurvePoolInfo } from './helper';
 
 const Signatures = {
+  // veCRV
+  Deposit: '0x4566dfc29f6f11d13a418c26a02bef7c28bae749d4de47e4e6a7cddea6730d59',
+  Withdraw: '0xf279e6a1f5e320cca91135676d9cb6e44ca8a08c0b88342bcdb1144f6511b568',
+
   Transfer: '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
 
   TokenExchangeUnderlying: '0xd013ca23e77a65003c2c659c5442c00c805371b7fc1ebd4c206c41d1536bd90b',
@@ -48,6 +52,11 @@ export class CurveAdapter extends Adapter {
 
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
     super(config, providers, {
+      [Signatures.Deposit]: EventSignatureMapping[Signatures.Deposit],
+      [Signatures.Withdraw]: config.customEventMapping
+        ? config.customEventMapping[Signatures.Withdraw]
+        : EventSignatureMapping[Signatures.Withdraw],
+
       [Signatures.TokenExchangeUnderlying]: EventSignatureMapping[Signatures.TokenExchangeUnderlying],
 
       [Signatures.AddLiquidityVersion010]: EventSignatureMapping[Signatures.AddLiquidityVersion010],
@@ -281,15 +290,39 @@ export class CurveAdapter extends Adapter {
   public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
     const { chain, address, topics, data } = options;
 
-    const signature = topics[0];
-    const poolConfig = this.getPoolConfig(address);
     const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+    const signature = topics[0];
+    const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
-    // support configured pools
-    if (poolConfig) {
-      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
+    if (signature === Signatures.Deposit || signature === Signatures.Withdraw) {
+      if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
+        const provider = normalizeAddress(event.provider);
+        const token = Tokens.ethereum.CRV;
+        const amount = new BigNumber(event.value.toString()).dividedBy(1e18).toString(10);
+        const action: KnownAction = signature === Signatures.Deposit ? 'lock' : 'unlock';
 
-      return await this.parseNormalPoolEvent(chain, address, signature, poolConfig, event, options);
+        return {
+          protocol: this.config.protocol,
+          action: action,
+          addresses: [provider],
+          tokens: [token],
+          tokenAmounts: [amount],
+          readableString: `${provider} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+          addition:
+            signature === Signatures.Deposit
+              ? {
+                  lockUntil: Number(event.locktime),
+                }
+              : undefined,
+        };
+      }
+    } else {
+      const poolConfig = this.getPoolConfig(address);
+
+      // support configured pools
+      if (poolConfig) {
+        return await this.parseNormalPoolEvent(chain, address, signature, poolConfig, event, options);
+      }
     }
 
     return null;

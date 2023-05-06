@@ -425,4 +425,51 @@ export const CurveActionTestLogs: Array<TestLog> = [
     adapter: new CurveAdapter(CurveConfigs, null),
     action: 'swap',
   },
+
+  // veCRV
+  {
+    chain: 'ethereum',
+    hash: '0x84a8c40c851de1ff0fe3754e20a7bab86602fa7cbfd2bd69bb956caa84eb58ff',
+    sender: normalizeAddress('0x0fc59c9c998537c940a9dfc7dacde533a9c496fe'),
+    address: normalizeAddress('0x5f3b5dfeb7b28cdbd7faba78963ee202a494e2a2'),
+    log: {
+      address: '0x5f3b5dfeb7b28cdbd7faba78963ee202a494e2a2',
+      topics: [
+        '0x4566dfc29f6f11d13a418c26a02bef7c28bae749d4de47e4e6a7cddea6730d59',
+        '0x0000000000000000000000000fc59c9c998537c940a9dfc7dacde533a9c496fe',
+        '0x000000000000000000000000000000000000000000000000000000006bd27d80',
+      ],
+      data: '0x000000000000000000000000000000000000000000000044f0d17c8ee8d32a1400000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000064546a27',
+      blockNumber: '0x106522e',
+      transactionHash: '0x84a8c40c851de1ff0fe3754e20a7bab86602fa7cbfd2bd69bb956caa84eb58ff',
+      transactionIndex: '0x1c',
+      blockHash: '0x59e93b950117eeee7d63abec51cb546902fd40270fce7b4ea294a1df77c5d937',
+      logIndex: '0x96',
+      removed: false,
+    },
+    adapter: new CurveAdapter(CurveConfigs, null),
+    action: 'lock',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0xdb5a179f875e1f86979996805640a1e774d708c6c44d336fb556ae2f5cc412c2',
+    sender: normalizeAddress('0x6fb651cdd003a7eba1998e9c77d9ee0eca102e86'),
+    address: normalizeAddress('0x5f3b5dfeb7b28cdbd7faba78963ee202a494e2a2'),
+    log: {
+      address: '0x5f3b5dfeb7b28cdbd7faba78963ee202a494e2a2',
+      topics: [
+        '0xf279e6a1f5e320cca91135676d9cb6e44ca8a08c0b88342bcdb1144f6511b568',
+        '0x0000000000000000000000006fb651cdd003a7eba1998e9c77d9ee0eca102e86',
+      ],
+      data: '0x000000000000000000000000000000000000000000000029b24c43648ae192fd0000000000000000000000000000000000000000000000000000000064522adb',
+      blockNumber: '0x10622cf',
+      transactionHash: '0xdb5a179f875e1f86979996805640a1e774d708c6c44d336fb556ae2f5cc412c2',
+      transactionIndex: '0x78',
+      blockHash: '0x9a12c486ec8d0bbfb1b3e9a94e17ba443650bcc02744a232f623cc6168181f02',
+      logIndex: '0x130',
+      removed: false,
+    },
+    adapter: new CurveAdapter(CurveConfigs, null),
+    action: 'unlock',
+  },
 ];
