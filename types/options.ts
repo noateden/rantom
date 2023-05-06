@@ -19,6 +19,8 @@ export interface AdapterParseLogOptions {
   topics: Array<string>;
   data: string;
 
+  blockNumber?: number;
+
   input?: string;
 
   // full transaction receipt

@@ -57,6 +57,11 @@ export class YearnAdapter extends Adapter {
       if (signature === Signatures.Transfer) {
         if (compareAddress(event.from, AddressZero) || compareAddress(event.to, AddressZero)) {
           const rpcWrapper = this.getRpcWrapper();
+          let blockNumber: number = options.blockNumber ? options.blockNumber : 0;
+          if (blockNumber === 0) {
+            const tx = await web3.eth.getTransactionReceipt(options.hash as string);
+            blockNumber = tx.blockNumber;
+          }
           const pricePerShare = new BigNumber(
             (
               await rpcWrapper.queryContract({
@@ -65,6 +70,7 @@ export class YearnAdapter extends Adapter {
                 contract: address,
                 method: 'pricePerShare',
                 params: [],
+                blockNumber,
               })
             ).toString()
           );
