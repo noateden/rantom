@@ -119,6 +119,23 @@ export const SushiConfigs: ProtocolConfig = {
   ],
 };
 
+export const Sushiv3Configs: ProtocolConfig = {
+  protocol: 'sushiv3',
+  categories: ['trading'],
+  contracts: {
+    ethereum: [
+      '0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f', // sushi v3 Factory
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'sushiv3').map((item) => item.address),
+    ],
+  },
+  staticData: {
+    // dex pools
+    liquidityPools: UniLiquidityPools.filter((item) => item.protocol === 'sushiv3'),
+  },
+};
+
 export const PancakeswapConfigs: ProtocolConfig = {
   protocol: 'pancakeswap',
   categories: ['trading'],

@@ -1,6 +1,7 @@
-import { SushiConfigs } from '../../../configs/protocols';
+import { SushiConfigs, Sushiv3Configs } from '../../../configs/protocols';
 import { normalizeAddress } from '../../../lib/helper';
 import { SushiAdapter } from '../../../modules/adapters/sushi/sushi';
+import { Sushiv3Adapter } from '../../../modules/adapters/sushi/sushiv3';
 import { TestLog } from '../../types';
 
 export const SushiActionTestLogs: Array<TestLog> = [
@@ -163,5 +164,54 @@ export const SushiActionTestLogs: Array<TestLog> = [
     },
     adapter: new SushiAdapter(SushiConfigs, null),
     action: 'createLiquidityPool',
+  },
+
+  // v3
+  {
+    chain: 'ethereum',
+    hash: '0x8743a533034f6120792fbf7c137e9efeb3e2021dc009dd140be871785f683b1a',
+    sender: normalizeAddress('0xb9fa59ca6c777e0c635148edaa74baaf6b0ead83'),
+    address: normalizeAddress('0x5f11853100774087030845d4c47a9d42b429ed83'),
+    log: {
+      address: '0x5f11853100774087030845d4c47a9d42b429ed83',
+      topics: [
+        '0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed8004e115fbcca67',
+        '0x000000000000000000000000247b69f78d2a590bec1ac0a4a4066debe3fca2b8',
+        '0x000000000000000000000000247b69f78d2a590bec1ac0a4a4066debe3fca2b8',
+      ],
+      data: '0x00000000000000000000000000000000000000000000000000000022a7928f59fffffffffffffffffffffffffffffffffffffffffffffffffc3d7a239016b59f000000000000000000000000000000000000054301917336b0b5ea418b635173000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000232f7',
+      blockNumber: '0x105c9a6',
+      transactionHash: '0x8743a533034f6120792fbf7c137e9efeb3e2021dc009dd140be871785f683b1a',
+      transactionIndex: '0xc',
+      blockHash: '0xe2141e1019ad202b5dea773b61d5b308314fe212fb3449d106f8ae1a22a85e00',
+      logIndex: '0x64',
+      removed: false,
+    },
+    adapter: new Sushiv3Adapter(Sushiv3Configs, null),
+    action: 'swap',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0xdf95c63555a350d04a0cac2876e24b8798ad9446b3e6215c9e296197ff16423a',
+    sender: normalizeAddress('0x8f54c8c2df62c94772ac14ccfc85603742976312'),
+    address: normalizeAddress('0x87c7056bbe6084f03304196be51c6b90b6d85aa2'),
+    log: {
+      address: '0x87c7056bbe6084f03304196be51c6b90b6d85aa2',
+      topics: [
+        '0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde',
+        '0x0000000000000000000000002214a42d8e2a1d20635c2cb0664422c528b6a432',
+        '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffed964',
+        '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffede50',
+      ],
+      data: '0x0000000000000000000000002214a42d8e2a1d20635c2cb0664422c528b6a4320000000000000000000000000000000000000000000000021655b48ce42f48e3000000000000000000000000000000000000000000000000b23d4733c4babf8700000000000000000000000000000000000000000000000000b1a2b8cd319be2',
+      blockNumber: '0x1060dec',
+      transactionHash: '0xdf95c63555a350d04a0cac2876e24b8798ad9446b3e6215c9e296197ff16423a',
+      transactionIndex: '0x74',
+      blockHash: '0xf956f684842062404ed020d8e1c17251dde9659ec3eadfc58ce7c810e7d539e5',
+      logIndex: '0x129',
+      removed: false,
+    },
+    adapter: new Sushiv3Adapter(Sushiv3Configs, null),
+    action: 'deposit',
   },
 ];

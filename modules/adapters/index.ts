@@ -54,6 +54,7 @@ import {
   StakewiseConfigs,
   StargateConfigs,
   SushiConfigs,
+  Sushiv3Configs,
   TornadocashConfigs,
   Uniswapv2Configs,
   Uniswapv3Configs,
@@ -114,6 +115,7 @@ import { SiloAdapter } from './silo/silo';
 import { StakewiseAdapter } from './stakewise/stakewise';
 import { StargateAdapter } from './stargate/stargate';
 import { SushiAdapter } from './sushi/sushi';
+import { Sushiv3Adapter } from './sushi/sushiv3';
 import { TornadocashAdapter } from './tornadocash/tornadocash';
 import { Uniswapv2Adapter } from './uniswap/uniswapv2';
 import { Uniswapv3Adapter } from './uniswap/uniswapv3';
@@ -164,6 +166,7 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new Uniswapv3Adapter(Uniswapv3Configs, providers),
     new Pancakeswapv3Adapter(PancakeswapV3Configs, providers),
     new SushiAdapter(SushiConfigs, providers),
+    new Sushiv3Adapter(Sushiv3Configs, providers),
     new BeefyAdapter(BeefyConfigs, providers),
     new GearboxAdapter(GearboxConfigs, providers),
     new ApecoinAdapter(ApecoinConfigs, providers),

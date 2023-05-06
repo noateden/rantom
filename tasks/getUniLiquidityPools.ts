@@ -2,7 +2,11 @@
 // sorted by total value locked
 import axios from 'axios';
 import fs from 'fs';
+import Web3 from 'web3';
 
+import UniswapV3FactoryAbi from '../configs/abi/uniswap/UniswapV3Factory.json';
+import UniswapV3PoolAbi from '../configs/abi/uniswap/UniswapV3Pool.json';
+import EnvConfig from '../configs/envConfig';
 import {
   PancakeswapConfigs,
   PancakeswapV3Configs,
@@ -11,6 +15,7 @@ import {
   Uniswapv3Configs,
 } from '../configs/protocols';
 import { normalizeAddress } from '../lib/helper';
+import { Web3HelperProvider } from '../services/web3';
 import { ProtocolConfig } from '../types/configs';
 import { UniLiquidityPool } from '../types/domains';
 
@@ -125,6 +130,40 @@ const TopPoolCount = 50;
         }
       }
     }
+  }
+
+  const sushiv3Factory: string = '0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f';
+  let startBlock = 16955547;
+  const web3 = new Web3(EnvConfig.blockchains.ethereum.nodeRpc);
+  const web3Helper = new Web3HelperProvider(null);
+  const latestBlock = await web3.eth.getBlockNumber();
+  const factoryContract = new web3.eth.Contract(UniswapV3FactoryAbi as any, sushiv3Factory);
+  while (startBlock <= latestBlock) {
+    const toBlock = startBlock + 1000 > latestBlock ? latestBlock : startBlock + 1000;
+    const events: Array<any> = await factoryContract.getPastEvents('PoolCreated', { fromBlock: startBlock, toBlock });
+    for (const event of events) {
+      const poolContract = new web3.eth.Contract(UniswapV3PoolAbi as any, event.returnValues.pool);
+      const [token0Address, token1Address] = await Promise.all([
+        poolContract.methods.token0().call(),
+        poolContract.methods.token1().call(),
+      ]);
+      const token0 = await web3Helper.getErc20Metadata('ethereum', token0Address);
+      const token1 = await web3Helper.getErc20Metadata('ethereum', token1Address);
+      if (token0 && token1) {
+        allPools.push({
+          chain: 'ethereum',
+          protocol: 'sushiv3',
+          version: 'univ3',
+          address: normalizeAddress(event.returnValues.pool),
+          token0: token0,
+          token1: token1,
+        });
+
+        console.info(`Got sushiv3 pool pool:${event.returnValues.pool} token:${token0.symbol}-${token1.symbol}`);
+      }
+    }
+
+    startBlock += 1000;
   }
 
   fs.writeFileSync('./configs/data/UniLiquidityPools.json', JSON.stringify(allPools));
