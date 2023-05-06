@@ -176,6 +176,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xa2398842f37465f89540430bdc00219fa9e4d28a', // DODO router proxy v2
     '0x50f9bde1c76bba997a5d6e7fefff695ec8536194', // DODOFeeRouteProxy
     '0x5f3b5dfeb7b28cdbd7faba78963ee202a494e2a2', // Curve.fi veCRV
+    '0xc128a9954e6c874ea3d62ce62b468ba073093f25', // Balancer veBAL
+    '0x90c1f9220d90d3966fbee24045edd73e1d588ad5', // Yearn veYFI
   ],
 };
 
