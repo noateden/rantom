@@ -178,19 +178,29 @@ export const BalancerConfigs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0xba12222222228d8ba445958a75a0704d566bf2c8', // vault
+      '0xc128a9954e6c874ea3d62ce62b468ba073093f25', // veBAL
     ],
   },
-  staticData: {
-    subgraphConfigs: [
-      {
-        protocol: 'balancer',
-        chain: 'ethereum',
-        version: 'balv2', // balancer v2
-        birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
-        filters: {},
-        endpoint: 'https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2',
-      },
-    ],
+  customEventMapping: {
+    [Signatures['Withdraw(address,uint256,uint256)']]: {
+      abi: [
+        {
+          type: 'address',
+          name: 'provider',
+          indexed: true,
+        },
+        {
+          type: 'uint256',
+          name: 'value',
+          indexed: false,
+        },
+        {
+          type: 'uint256',
+          name: 'ts',
+          indexed: false,
+        },
+      ],
+    },
   },
 };
 
