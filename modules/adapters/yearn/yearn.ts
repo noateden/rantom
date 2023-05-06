@@ -14,8 +14,8 @@ import { Adapter } from '../adapter';
 
 const Signatures = {
   Transfer: '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
-  Deposit: '0x90890809c654f11d6e72a28fa60149770a0d11ec6c92319d6ceb2bb0a4ea1a15',
-  Withdraw: '0xf279e6a1f5e320cca91135676d9cb6e44ca8a08c0b88342bcdb1144f6511b568',
+  // Deposit: '0x90890809c654f11d6e72a28fa60149770a0d11ec6c92319d6ceb2bb0a4ea1a15',
+  // Withdraw: '0xf279e6a1f5e320cca91135676d9cb6e44ca8a08c0b88342bcdb1144f6511b568',
 };
 
 export class YearnAdapter extends Adapter {
@@ -24,12 +24,12 @@ export class YearnAdapter extends Adapter {
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
     super(config, providers, {
       [Signatures.Transfer]: EventSignatureMapping[Signatures.Transfer],
-      [Signatures.Deposit]: config.customEventMapping
-        ? config.customEventMapping[Signatures.Deposit]
-        : EventSignatureMapping[Signatures.Deposit],
-      [Signatures.Withdraw]: config.customEventMapping
-        ? config.customEventMapping[Signatures.Withdraw]
-        : EventSignatureMapping[Signatures.Withdraw],
+      // [Signatures.Deposit]: config.customEventMapping
+      //   ? config.customEventMapping[Signatures.Deposit]
+      //   : EventSignatureMapping[Signatures.Deposit],
+      // [Signatures.Withdraw]: config.customEventMapping
+      //   ? config.customEventMapping[Signatures.Withdraw]
+      //   : EventSignatureMapping[Signatures.Withdraw],
     });
   }
 
@@ -92,20 +92,21 @@ export class YearnAdapter extends Adapter {
             readableString: `${account} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
           };
         }
-      } else if (signature === Signatures.Deposit || signature === Signatures.Withdraw) {
-        const user = normalizeAddress(event.recipient);
-        const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
-        return {
-          protocol: this.config.protocol,
-          action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
-          addresses: [user],
-          tokens: [token],
-          tokenAmounts: [amount],
-          readableString: `${user} ${signature === Signatures.Deposit ? 'deposit' : 'withdraw'} ${amount} ${
-            token.symbol
-          } on ${this.config.protocol} chain ${chain}`,
-        };
       }
+      // } else if (signature === Signatures.Deposit || signature === Signatures.Withdraw) {
+      //   const user = normalizeAddress(event.recipient);
+      //   const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
+      //   return {
+      //     protocol: this.config.protocol,
+      //     action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
+      //     addresses: [user],
+      //     tokens: [token],
+      //     tokenAmounts: [amount],
+      //     readableString: `${user} ${signature === Signatures.Deposit ? 'deposit' : 'withdraw'} ${amount} ${
+      //       token.symbol
+      //     } on ${this.config.protocol} chain ${chain}`,
+      //   };
+      // }
     }
 
     return null;
