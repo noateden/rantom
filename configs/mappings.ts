@@ -6947,4 +6947,33 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['ModifyLock(address,address,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        name: 'sender',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'user',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'amount',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'locktime',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'ts',
+        type: 'uint256',
+        indexed: false,
+      },
+    ],
+  },
 };

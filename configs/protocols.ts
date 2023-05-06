@@ -691,42 +691,24 @@ export const YearnConfigs: ProtocolConfig = {
       // We detect yearn vault by checking vault governance address is match with
       // Yearn Treasury or not?
       '0xfeb4acf3df3cdea7399794d0869ef76a6efaff52',
+      '0x90c1f9220d90d3966fbee24045edd73e1d588ad5', // veYFI
     ],
   },
   customEventMapping: {
-    [Signatures['Deposit(address,uint256,uint256)']]: {
-      abi: [
-        {
-          name: 'recipient',
-          type: 'address',
-          indexed: true,
-        },
-        {
-          name: 'shares',
-          type: 'uint256',
-          indexed: false,
-        },
-        {
-          name: 'amount',
-          type: 'uint256',
-          indexed: false,
-        },
-      ],
-    },
     [Signatures['Withdraw(address,uint256,uint256)']]: {
       abi: [
         {
-          name: 'recipient',
+          name: 'user',
           type: 'address',
           indexed: true,
         },
         {
-          name: 'shares',
+          name: 'amount',
           type: 'uint256',
           indexed: false,
         },
         {
-          name: 'amount',
+          name: 'ts',
           type: 'uint256',
           indexed: false,
         },

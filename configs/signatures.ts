@@ -383,4 +383,8 @@ export const Signatures: { [key: string]: string } = {
   // Curve veCRV
   'Deposit(address,uint256,uint256,int128,uint256)':
     '0x4566dfc29f6f11d13a418c26a02bef7c28bae749d4de47e4e6a7cddea6730d59',
+
+  // veYFI
+  'ModifyLock(address,address,uint256,uint256,uint256)':
+    '0x01affbd18fb24fa23763acc978a6bb9b9cd159b1cc733a15f3ea571d691cabc1',
 };
