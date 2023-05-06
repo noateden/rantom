@@ -40,6 +40,7 @@ import {
   LoopringConfigs,
   LybraConfigs,
   MakerConfigs,
+  MorphoConfigs,
   MultichainConfigs,
   OpenseaConfigs,
   OptimismConfigs,
@@ -101,6 +102,7 @@ import { LooksrareAdapter } from './looksrare/looksrare';
 import { LoopringAdapter } from './loopring/loopring';
 import { LybraAdapter } from './lybra/lybra';
 import { MakerAdapter } from './maker/maker';
+import { MorphoAdapter } from './morpho/morpho';
 import { MultichainAdapter } from './multichain/multichain';
 import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
@@ -181,5 +183,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new AgilityAdapter(AgilityConfigs, providers),
     new DodoAdapter(DodoConfigs, providers),
     new CurveAdapter(CurveConfigs, providers),
+    new MorphoAdapter(MorphoConfigs, providers),
   ];
 }

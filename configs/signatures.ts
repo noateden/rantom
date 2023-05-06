@@ -387,4 +387,16 @@ export const Signatures: { [key: string]: string } = {
   // veYFI
   'ModifyLock(address,address,uint256,uint256,uint256)':
     '0x01affbd18fb24fa23763acc978a6bb9b9cd159b1cc733a15f3ea571d691cabc1',
+
+  // Morpho Aave v2
+  'Supplied(address,address,address,uint256,uint256,uint256)':
+    '0x11adb3570ba55fd255b1f04252ca0071ae6639c86d4fd69e7c1bf1688afb493f',
+  'Withdrawn(address,address,address,uint256,uint256,uint256)':
+    '0x378f9d375cd79e36c19c26a9e57791fe7cd5953b61986c01ebf980c0efb92801',
+  'Borrowed(address,address,uint256,uint256,uint256)':
+    '0xc1cba78646fef030830d099fc25cb498953709c9d47d883848f81fd207174c9f',
+  'Repaid(address,address,address,uint256,uint256,uint256)':
+    '0x7b417e520d2b905fc5a1689d29d329358dd55efc60ed115aa165b0a2b64232c6',
+  'Liquidated(address,address,address,uint256,address,uint256)':
+    '0xc2c75a73164c2efcbb9f74bfa511cd0866489d90687831a7217b3dbeeb697088',
 };

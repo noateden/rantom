@@ -2,6 +2,7 @@ import { AbracadabraContracts } from '../../configs/contracts/abracadabra';
 import { AgilityContracts } from '../../configs/contracts/agility';
 import { ArrakisContracts } from '../../configs/contracts/arrakis';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
+import { BalancerContracts } from '../../configs/contracts/balancer';
 import { BinanceContracts } from '../../configs/contracts/binance';
 import { CarbonContracts } from '../../configs/contracts/carbon';
 import { ConicContracts } from '../../configs/contracts/conic';
@@ -18,6 +19,7 @@ import { LidoContracts } from '../../configs/contracts/lido';
 import { LiquityContracts } from '../../configs/contracts/liquity';
 import { LybraContracts } from '../../configs/contracts/lybra';
 import { MakerContracts } from '../../configs/contracts/maker';
+import { MorphoContracts } from '../../configs/contracts/morpho';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { PendleContracts } from '../../configs/contracts/pendle';
 import { SiloContracts } from '../../configs/contracts/silo';
@@ -55,5 +57,7 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     dodo: new ContractWorker(providers, DodoContracts),
     curve: new ContractWorker(providers, CurveContracts),
     yearn: new ContractWorker(providers, YearnContracts),
+    balancer: new ContractWorker(providers, BalancerContracts),
+    morpho: new ContractWorker(providers, MorphoContracts),
   };
 }

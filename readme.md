@@ -77,6 +77,7 @@ yarn start --help
 | Binance Staked ETH   | DepositEth                                                                                                           |     🌱 |
 | Agility LSD          | Staked, Withdrawn, RewardPaid                                                                                        |     🌱 |
 | Dodoex               | OrderHistory                                                                                                         |     🌱 |
+| Morpho               | Supplied, Withdrawn, Borrowed, Repaid, Liquidated                                                                    |     🌱 |
 
 ### Nft Marketplace
 

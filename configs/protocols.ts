@@ -13,6 +13,7 @@ import CurvePools from './data/CurvePools.json';
 import ExactlyMarkets from './data/ExactlyMarkets.json';
 import FraxlendPairs from './data/FraxlendPairs.json';
 import IronbankMarkets from './data/IronbankMarkets.json';
+import MorphoMarkets from './data/MorphoMarkets.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import SushiPools from './data/SushiPools.json';
@@ -1594,5 +1595,19 @@ export const DodoConfigs: ProtocolConfig = {
       '0xa2398842f37465f89540430bdc00219fa9e4d28a', // Router proxy v2
       '0x50f9bde1c76bba997a5d6e7fefff695ec8536194', // DODOFeeRouteProxy
     ],
+  },
+};
+
+export const MorphoConfigs: ProtocolConfig = {
+  protocol: 'morpho',
+  categories: ['lending'],
+  contracts: {
+    ethereum: [
+      '0x777777c9898d384f785ee44acfe945efdff5f3e0', // Morpho Aave v2
+      '0x8888882f8f843896699869179fb6e4f7e3b58888', // Morpho Compound
+    ],
+  },
+  staticData: {
+    markets: MorphoMarkets,
   },
 };

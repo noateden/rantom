@@ -34,6 +34,7 @@ import { LooksrareActionTestLogs } from './protocols/looksrare';
 import { LoopringActionTestLogs } from './protocols/loopring';
 import { LybraActionTestLogs } from './protocols/lybra';
 import { MakerActionTestLogs } from './protocols/maker';
+import { MorphoActionTestLogs } from './protocols/morpho';
 import { MultichainActionTestLogs } from './protocols/multichain';
 import { OpenseaActionTestLogs } from './protocols/opensea';
 import { OptimismActionTestLogs } from './protocols/optimism';
@@ -104,4 +105,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...PendleActionTestLogs,
   ...AgilityActionTestLogs,
   ...DodoActionTestLogs,
+  ...MorphoActionTestLogs,
 ];
