@@ -24,6 +24,7 @@ import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { PendleContracts } from '../../configs/contracts/pendle';
 import { SiloContracts } from '../../configs/contracts/silo';
 import { StakewiseContracts } from '../../configs/contracts/stakewise';
+import { SushiContracts } from '../../configs/contracts/sushi';
 import { TornadocashContracts } from '../../configs/contracts/tornadocash';
 import { YearnContracts } from '../../configs/contracts/yearn';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
@@ -59,5 +60,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     yearn: new ContractWorker(providers, YearnContracts),
     balancer: new ContractWorker(providers, BalancerContracts),
     morpho: new ContractWorker(providers, MorphoContracts),
+    sushi: new ContractWorker(providers, SushiContracts),
   };
 }
