@@ -180,6 +180,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x90c1f9220d90d3966fbee24045edd73e1d588ad5', // Yearn veYFI
     '0x777777c9898d384f785ee44acfe945efdff5f3e0', // Morpho Aave v2
     '0x8888882f8f843896699869179fb6e4f7e3b58888', // Morpho Compound
+    '0x06af07097c9eeb7fd685c692751d5c66db49c215', // CHAI Token
   ],
 };
 

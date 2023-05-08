@@ -5,6 +5,7 @@ import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
 import { BalancerContracts } from '../../configs/contracts/balancer';
 import { BinanceContracts } from '../../configs/contracts/binance';
 import { CarbonContracts } from '../../configs/contracts/carbon';
+import { ChaiContracts } from '../../configs/contracts/chai';
 import { ConicContracts } from '../../configs/contracts/conic';
 import { ConvexContracts } from '../../configs/contracts/convex';
 import { CurveContracts } from '../../configs/contracts/curve';
@@ -61,5 +62,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     balancer: new ContractWorker(providers, BalancerContracts),
     morpho: new ContractWorker(providers, MorphoContracts),
     sushi: new ContractWorker(providers, SushiContracts),
+    chai: new ContractWorker(providers, ChaiContracts),
   };
 }
