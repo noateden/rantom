@@ -14,6 +14,7 @@ import {
   BinanceStakedEthConfigs,
   BlurConfigs,
   CarbonConfigs,
+  ChaiConfigs,
   ChainlinkConfigs,
   CompoundConfigs,
   Compoundv3Configs,
@@ -78,6 +79,7 @@ import { BeefyAdapter } from './beefy/beefy';
 import { BinanceStakedAdapter } from './binance/stakedEth';
 import { BlurAdapter } from './blur/blur';
 import { CarbonAdapter } from './carbon/carbon';
+import { ChaiAdapter } from './chai/chai';
 import { ChainlinkAdapter } from './chainlink/chainlink';
 import { CompoundAdapter } from './compound/compound';
 import { Compoundv3Adapter } from './compound/compoundv3';
@@ -187,5 +189,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new DodoAdapter(DodoConfigs, providers),
     new CurveAdapter(CurveConfigs, providers),
     new MorphoAdapter(MorphoConfigs, providers),
+    new ChaiAdapter(ChaiConfigs, providers),
   ];
 }

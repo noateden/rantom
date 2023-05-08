@@ -1628,3 +1628,13 @@ export const MorphoConfigs: ProtocolConfig = {
     markets: MorphoMarkets,
   },
 };
+
+export const ChaiConfigs: ProtocolConfig = {
+  protocol: 'chai',
+  categories: ['staking'],
+  contracts: {
+    ethereum: [
+      '0x06af07097c9eeb7fd685c692751d5c66db49c215', // CHAI token
+    ],
+  },
+};

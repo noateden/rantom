@@ -11,6 +11,7 @@ import { BeanstalkActionTestLogs } from './protocols/beanstalk';
 import { BeefyActionTestLogs } from './protocols/beefy';
 import { BlurActionTestLogs } from './protocols/blur';
 import { CarbonActionTestLogs } from './protocols/carbon';
+import { ChaiActionTestLogs } from './protocols/chai';
 import { ChainlinkActionTestLogs } from './protocols/chainlink';
 import { Compound3ActionTestLogs, CompoundActionTestLogs } from './protocols/compound';
 import { ConicActionTestLogs } from './protocols/conic';
@@ -106,4 +107,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...AgilityActionTestLogs,
   ...DodoActionTestLogs,
   ...MorphoActionTestLogs,
+  ...ChaiActionTestLogs,
 ];

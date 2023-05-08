@@ -78,6 +78,7 @@ yarn start --help
 | Agility LSD          | Staked, Withdrawn, RewardPaid                                                                                        |     🌱 |
 | Dodoex               | OrderHistory                                                                                                         |     🌱 |
 | Morpho               | Supplied, Withdrawn, Borrowed, Repaid, Liquidated                                                                    |     🌱 |
+| Chai Money           | Transfer                                                                                                             |     🌱 |
 
 ### Nft Marketplace
 
