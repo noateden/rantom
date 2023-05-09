@@ -519,6 +519,7 @@ export const EnsConfigs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0x283af0b28c62c092c9727f1ee09c02ca627eb7f5', // registration controller
+      '0x253553366da8546fc250f225fe3d25d0c782303b', // registration controller
     ],
   },
 };

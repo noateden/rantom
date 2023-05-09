@@ -94,6 +94,28 @@ export class OracleProvider extends CachingProvider implements IOracleProvider {
           method: 'getPool',
           params: [token.address, oracleTokenBase.token.address, 3000],
         });
+
+        if (compareAddress(poolAddress, AddressZero)) {
+          // try with 10000
+          poolAddress = await rpcWrapper.queryContract({
+            chain: oracleSource.chain,
+            abi: oracleSource.factoryAbi,
+            contract: oracleSource.factory,
+            method: 'getPool',
+            params: [token.address, oracleTokenBase.token.address, 10000],
+          });
+        }
+
+        if (compareAddress(poolAddress, AddressZero)) {
+          // try with 500
+          poolAddress = await rpcWrapper.queryContract({
+            chain: oracleSource.chain,
+            abi: oracleSource.factoryAbi,
+            contract: oracleSource.factory,
+            method: 'getPool',
+            params: [token.address, oracleTokenBase.token.address, 500],
+          });
+        }
       }
 
       if (!compareAddress(poolAddress, AddressZero)) {

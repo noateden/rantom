@@ -155,6 +155,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x23773e65ed146a459791799d01336db287f25334', // Tornadocash DAI 100,000
     '0xbb93e510bbcd0b7beb5a853875f9ec60275cf498', // Tornadocash WBTC 10
     '0x283af0b28c62c092c9727f1ee09c02ca627eb7f5', // ENS registration controller
+    '0x253553366da8546fc250f225fe3d25d0c782303b', // ENS registration controller new
     // '0x00000000006c3852cbef3e08e8df289169ede581', // Seaport 1.1
     // '0x00000000000001ad428e4906ae43d8f9852d0dd6', // Seaport 1.4
     '0xc537e898cd774e2dcba3b14ea6f34c93d5ea45e1', // Carbon controller
