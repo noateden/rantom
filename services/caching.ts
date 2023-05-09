@@ -5,7 +5,7 @@ export class CachingProvider implements ICachingProvider {
   public readonly name: string = 'caching';
 
   private readonly _memories: { [key: string]: any } = {};
-  private readonly _mongodb: IMongodbProvider | null;
+  protected readonly _mongodb: IMongodbProvider | null;
 
   constructor(mongodb: IMongodbProvider | null) {
     this._mongodb = mongodb;
@@ -76,5 +76,9 @@ export class CachingHelper {
 
   public static getUniswapPoolFactoryName(chain: string, poolAddress: string): string {
     return `uni-factory-${chain}-${normalizeAddress(poolAddress)}`;
+  }
+
+  public static getOracleTokenName(chain: string, tokenAddress: string): string {
+    return `oracle-${chain}-${normalizeAddress(tokenAddress)}`;
   }
 }

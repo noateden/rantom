@@ -1,85 +1,56 @@
-import { TokenOracle } from '../types/configs';
+import { TokenOracleBase, TokenOracleSource } from '../types/configs';
+import UniswapV2FactoryAbi from './abi/uniswap/UniswapV2Factory.json';
+import UniswapV3FactoryAbi from './abi/uniswap/UniswapV3Factory.json';
 import { Tokens } from './constants';
 
-export const TokenOracles: { [key: string]: TokenOracle } = {
-  ETH: {
+export const TokenOracleBases: { [key: string]: TokenOracleBase } = {
+  [Tokens.ethereum.NativeCoin.address]: {
     token: Tokens.ethereum.NativeCoin,
-    oracles: [
-      {
-        type: 'chainlink',
-        base: 'USD',
-        source: 'chainlink',
-        chain: 'ethereum',
-        decimals: 8,
-        address: '0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419',
-      },
-      {
-        type: 'pool2',
-        base: 'USD',
-        source: 'uniswapv2',
-        chain: 'ethereum',
-        address: '0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc',
-        baseToken: Tokens.ethereum.WETH,
-        quotaToken: Tokens.ethereum.USDC,
-      },
-      {
-        type: 'pool3',
-        base: 'USD',
-        source: 'uniswapv3',
-        chain: 'ethereum',
-        address: '0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640',
-        baseToken: Tokens.ethereum.WETH,
-        quotaToken: Tokens.ethereum.USDC,
-      },
-    ],
+    priceFeed: '0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419',
+    priceFeedDecimals: 8,
   },
-  BTC: {
-    token: {
-      chain: 'ethereum',
-      symbol: 'BTC',
-      decimals: 8,
-      address: '0x0000000000000000000000000000000000000000',
-    },
-    oracles: [
-      {
-        type: 'chainlink',
-        base: 'USD',
-        source: 'chainlink',
-        chain: 'ethereum',
-        decimals: 8,
-        address: '0xf4030086522a5beea4988f8ca5b36dbc97bee88c',
-      },
-    ],
+  [Tokens.ethereum.WETH.address]: {
+    token: Tokens.ethereum.WETH,
+    priceFeed: '0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419',
+    priceFeedDecimals: 8,
   },
-  WBTC: {
-    token: Tokens.ethereum.WBTC,
-    oracles: [
-      {
-        type: 'chainlink',
-        base: 'BTC',
-        source: 'chainlink',
-        chain: 'ethereum',
-        decimals: 8,
-        address: '0xfdfd9c85ad200c506cf9e21f1fd8dd01932fbb23',
-      },
-    ],
+  [Tokens.ethereum.DAI.address]: {
+    token: Tokens.ethereum.DAI,
+    priceFeed: '0xaed0c38402a5d19df6e4c03f4e2dced6e29c1ee9',
+    priceFeedDecimals: 8,
   },
-  BNB: {
-    token: {
-      chain: 'ethereum',
-      symbol: 'BNB',
-      decimals: 18,
-      address: '0x0000000000000000000000000000000000000000',
-    },
-    oracles: [
-      {
-        type: 'chainlink',
-        base: 'USD',
-        source: 'chainlink',
-        chain: 'ethereum',
-        decimals: 8,
-        address: '0x14e613ac84a31f709eadbdf89c6cc390fdc9540a',
-      },
-    ],
+  [Tokens.ethereum.USDC.address]: {
+    token: Tokens.ethereum.USDC,
+    priceFeed: '0x8fffffd4afb6115b954bd326cbe7b4ba576818f6',
+    priceFeedDecimals: 8,
+  },
+  [Tokens.ethereum.USDT.address]: {
+    token: Tokens.ethereum.USDT,
+    priceFeed: '0x3e7d1eab13ad0104d2750b8863b489d65364e32d',
+    priceFeedDecimals: 8,
   },
 };
+
+export const TokenOracleSources: Array<TokenOracleSource> = [
+  {
+    chain: 'ethereum',
+    source: 'uniswapv3',
+    type: 'pool3',
+    factory: '0x1f98431c8ad98523631ae4a59f267346ea31f984',
+    factoryAbi: UniswapV3FactoryAbi,
+  },
+  {
+    chain: 'ethereum',
+    source: 'uniswapv2',
+    type: 'pool2',
+    factory: '0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f',
+    factoryAbi: UniswapV2FactoryAbi,
+  },
+  {
+    chain: 'ethereum',
+    source: 'sushi',
+    type: 'pool2',
+    factory: '0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac',
+    factoryAbi: UniswapV2FactoryAbi,
+  },
+];

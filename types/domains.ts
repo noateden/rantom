@@ -113,15 +113,15 @@ export interface UniLiquidityPool {
   token1: Token;
 }
 
-export interface TokenOracleSource {
-  source: string;
-  spotPrice: string;
-}
-
 export interface TokenOracleResult {
+  chain: string;
   token: string;
   timestamp: number;
-  sources: Array<TokenOracleSource>;
+
+  sources: Array<{
+    source: string;
+    spotPriceUsd: string;
+  }>;
 }
 
 export interface ProtocolSystemReport {

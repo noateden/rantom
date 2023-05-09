@@ -52,7 +52,8 @@ export interface SubgraphJobRunOptions {
 }
 
 export interface OracleGetTokenPriceOptions {
-  symbol: string;
+  chain: string;
+  address: string;
   timestamp: number;
 }
 

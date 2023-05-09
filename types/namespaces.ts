@@ -93,8 +93,8 @@ export interface IParserProvider extends IProvider {
   parseTransaction: (options: ParseTransactionOptions) => Promise<Array<Transaction>>;
 }
 
-export interface IOracleProvider extends IProvider {
-  getTokenSpotPriceUsd: (options: OracleGetTokenPriceOptions) => Promise<TokenOracleResult | null>;
+export interface IOracleProvider extends ICachingProvider {
+  getTokenSpotPriceUsd: (options: OracleGetTokenPriceOptions) => Promise<TokenOracleResult>;
 }
 
 export interface IWorkerProvider extends IProvider {

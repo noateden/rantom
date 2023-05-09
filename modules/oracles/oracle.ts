@@ -1,199 +1,204 @@
-import { Token as UniswapSdkToken } from '@uniswap/sdk-core';
-import { Pool } from '@uniswap/v3-sdk';
 import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
 
-import ERC20Abi from '../../configs/abi/ERC20.json';
 import ChainlinkAggregatorAbi from '../../configs/abi/chainlink/OffchainAggregator.json';
-import UniswapV3PoolAbi from '../../configs/abi/uniswap/UniswapV3Pool.json';
-import { BlockSubgraphs } from '../../configs/constants';
-import EnvConfig from '../../configs/envConfig';
-import { TokenOracles } from '../../configs/oracles';
-import { normalizeAddress } from '../../lib/helper';
+import { AddressZero, BlockSubgraphs, Tokens } from '../../configs/constants';
+import { TokenOracleBases, TokenOracleSources } from '../../configs/oracles';
+import { compareAddress, getStartDayTimestamp, getTimestamp, normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { getBlockNumberAtTimestamp } from '../../lib/subgraph';
-import { TokenOracle, TokenOracleChainlinkAggregator, TokenOraclePool2 } from '../../types/configs';
+import { CachingHelper, CachingProvider } from '../../services/caching';
+import { RpcWrapperProvider } from '../../services/rpc';
+import { Web3HelperProvider } from '../../services/web3';
+import { Token, TokenOracleBase, TokenOracleSource } from '../../types/configs';
 import { TokenOracleResult } from '../../types/domains';
 import { IMongodbProvider, IOracleProvider } from '../../types/namespaces';
 import { OracleGetTokenPriceOptions } from '../../types/options';
+import { UniswapOracleLib } from './libs/uniswap';
 
-export class OracleProvider implements IOracleProvider {
+export class OracleProvider extends CachingProvider implements IOracleProvider {
   public readonly name: string = 'oracle';
-  public mongodb: IMongodbProvider | null;
 
   constructor(mongodb: IMongodbProvider | null) {
-    this.mongodb = mongodb;
+    super(mongodb);
   }
 
-  // this function get token price in USD term via multiple routes
-  // for example, in case token was paired with ETH:
-  // 1. we get token spot price per ETH
-  // 2. we get ETH price in USD and convert token price to USD
-  public async getTokenSpotPriceUsd(options: OracleGetTokenPriceOptions): Promise<TokenOracleResult | null> {
-    const { symbol, timestamp } = options;
-
-    const config: TokenOracle = TokenOracles[symbol];
-
-    if (config && config.oracles.length > 0) {
-      const result: TokenOracleResult = {
-        token: config.token.symbol,
-        timestamp: timestamp,
-        sources: [],
-      };
-
-      for (const oracleConfig of config.oracles) {
-        let basePrice = await this.getTokenBasePriceOracle(oracleConfig, timestamp);
-
-        if (basePrice) {
-          if (oracleConfig.base !== 'USD') {
-            let quotaOracleBaseUsd: TokenOracleChainlinkAggregator | TokenOraclePool2 | null = null;
-
-            // we find the first oracle source base on USD
-            if (TokenOracles[oracleConfig.base]) {
-              for (const baseOracleSource of TokenOracles[oracleConfig.base].oracles) {
-                if (baseOracleSource.base === 'USD') {
-                  quotaOracleBaseUsd = baseOracleSource;
-                }
-              }
-            }
-
-            if (quotaOracleBaseUsd) {
-              const quotaSpotPrice = await this.getTokenBasePriceOracle(quotaOracleBaseUsd, timestamp);
-              if (quotaSpotPrice) {
-                basePrice = new BigNumber(basePrice).multipliedBy(quotaSpotPrice).toString(10);
-              }
-            }
-          }
-
-          result.sources.push({
-            source: oracleConfig.source,
-            spotPrice: basePrice,
-          });
-        }
-      }
-
-      return result;
+  private async getTokenOracleBasePriceUsd(oracle: TokenOracleBase, blockNumber: number): Promise<string | null> {
+    const tokenBasePriceCacheKey = CachingHelper.getOracleTokenName(oracle.token.chain, oracle.token.address);
+    const cachePrice = await this.getCachingData(tokenBasePriceCacheKey);
+    if (cachePrice) {
+      return cachePrice.spotPriceUsd;
     }
-
-    return {
-      token: symbol,
-      timestamp,
-      sources: [],
-    };
-  }
-
-  // this function get base token price on an oracle config
-  // for example, in case token was paired with ETH
-  // this function will return token price in ETH
-  protected async getTokenBasePriceOracle(
-    oracle: TokenOracleChainlinkAggregator | TokenOraclePool2,
-    timestamp: number
-  ): Promise<string | null> {
-    let spotPrice: string | null = null;
-    switch (oracle.type) {
-      case 'chainlink': {
-        spotPrice = await this.getTokenPriceFromChainlinkAggregator(
-          oracle as TokenOracleChainlinkAggregator,
-          timestamp
-        );
-        break;
-      }
-      case 'pool2': {
-        spotPrice = await this.getTokenPriceFromPool2(oracle as TokenOraclePool2, timestamp);
-        break;
-      }
-      case 'pool3': {
-        spotPrice = await this.getTokenPriceFromPool2(oracle as TokenOraclePool2, timestamp);
-        break;
-      }
-    }
-
-    return spotPrice;
-  }
-
-  private async getTokenPriceFromChainlinkAggregator(
-    config: TokenOracleChainlinkAggregator,
-    timestamp: number
-  ): Promise<string | null> {
-    const web3 = new Web3(EnvConfig.blockchains[config.chain].nodeRpc);
-    const contract = new web3.eth.Contract(ChainlinkAggregatorAbi as any, config.address);
-
-    // get block number at timestamp
-    const blockNumber = await getBlockNumberAtTimestamp(BlockSubgraphs[config.chain], timestamp);
 
     try {
-      const latestAnswer = await contract.methods.latestAnswer().call(blockNumber);
-      return new BigNumber(latestAnswer.toString()).dividedBy(new BigNumber(10).pow(config.decimals)).toString(10);
+      const rpcWrapper = new RpcWrapperProvider(null);
+      const latestAnswer = await rpcWrapper.queryContract({
+        chain: oracle.token.chain,
+        abi: ChainlinkAggregatorAbi,
+        contract: oracle.priceFeed,
+        method: 'latestAnswer',
+        params: [],
+        blockNumber: blockNumber,
+      });
+
+      const spotPriceUsd = new BigNumber(latestAnswer)
+        .dividedBy(new BigNumber(10).pow(oracle.priceFeedDecimals))
+        .toString(10);
+
+      // save caching price
+      await this.setCachingData(tokenBasePriceCacheKey, { spotPriceUsd: spotPriceUsd });
+
+      return spotPriceUsd;
     } catch (e: any) {
-      logger.onWarn({
+      logger.onError({
         service: this.name,
-        message: 'failed to call get data from aggregator',
+        message: 'failed to get token price from chainlink aggregator',
         props: {
-          chain: config.chain,
-          address: normalizeAddress(config.address),
+          chain: oracle.token.chain,
+          token: oracle.token.address,
+          address: normalizeAddress(oracle.priceFeed),
           blockNumber,
-          error: e.message,
         },
+        error: e,
       });
     }
 
     return null;
   }
 
-  private async getTokenPriceFromPool2(config: TokenOraclePool2, timestamp: number): Promise<string | null> {
-    const web3 = new Web3(EnvConfig.blockchains[config.chain].nodeRpc);
-    // get block number at timestamp
-    const blockNumber = await getBlockNumberAtTimestamp(BlockSubgraphs[config.chain], timestamp);
+  // get token spot price USD from given oracle source
+  private async getTokenSpotPriceUsdFromOracleSource(
+    chain: string,
+    token: Token,
+    oracleSource: TokenOracleSource,
+    blockNumber: number
+  ): Promise<string | null> {
+    const rpcWrapper = new RpcWrapperProvider(null);
 
-    if (config.type == 'pool2') {
-      try {
-        const baseContract = new web3.eth.Contract(ERC20Abi as any, config.baseToken.address);
-        const quoteContract = new web3.eth.Contract(ERC20Abi as any, config.quotaToken.address);
-        const baseBalance = new BigNumber(
-          (await baseContract.methods.balanceOf(config.address).call(blockNumber)).toString()
-        ).dividedBy(new BigNumber(10).pow(config.baseToken.decimals));
-        const quoteBalance = new BigNumber(
-          (await quoteContract.methods.balanceOf(config.address).call(blockNumber)).toString()
-        ).dividedBy(new BigNumber(10).pow(config.quotaToken.decimals));
-        return quoteBalance.dividedBy(baseBalance).toString(10);
-      } catch (e: any) {
-        logger.onWarn({
-          service: this.name,
-          message: 'failed to get price from lp contract',
-          props: {
-            chain: config.chain,
-            address: normalizeAddress(config.address),
-            blockNumber,
-            error: e.message,
-          },
+    for (const [, oracleTokenBase] of Object.entries(TokenOracleBases)) {
+      // find the pool with token base
+      let poolAddress = AddressZero;
+
+      if (oracleSource.type === 'pool2') {
+        poolAddress = await rpcWrapper.queryContract({
+          chain: oracleSource.chain,
+          abi: oracleSource.factoryAbi,
+          contract: oracleSource.factory,
+          method: 'getPair',
+          params: [token.address, oracleTokenBase.token.address],
+        });
+      } else if (oracleSource.type === 'pool3') {
+        poolAddress = await rpcWrapper.queryContract({
+          chain: oracleSource.chain,
+          abi: oracleSource.factoryAbi,
+          contract: oracleSource.factory,
+          method: 'getPool',
+          params: [token.address, oracleTokenBase.token.address, 3000],
         });
       }
-    } else if (config.type === 'pool3') {
-      const poolContract = new web3.eth.Contract(UniswapV3PoolAbi as any, config.address);
 
-      const poolFee = new BigNumber((await poolContract.methods.fee().call()).toString()).toNumber();
-      const state = await poolContract.methods.slot0().call(blockNumber);
-      const liquidity = await poolContract.methods.liquidity().call(blockNumber);
-
-      const baseTokenConfig = new UniswapSdkToken(1, config.baseToken.address, config.baseToken.decimals, '', '');
-      const quoteTokenConfig = new UniswapSdkToken(1, config.quotaToken.address, config.quotaToken.decimals, '', '');
-
-      const pool = new Pool(
-        baseTokenConfig,
-        quoteTokenConfig,
-        poolFee,
-        state.sqrtPriceX96.toString(),
-        liquidity.toString(),
-        new BigNumber(state.tick.toString()).toNumber()
-      );
-
-      if (normalizeAddress(pool.token0.address) === normalizeAddress(config.baseToken.address)) {
-        return new BigNumber(pool.token0Price.toFixed(12)).toString(10);
-      } else {
-        return new BigNumber(pool.token1Price.toFixed(12)).toString(10);
+      if (!compareAddress(poolAddress, AddressZero)) {
+        const priceTokenBaseUsd = await this.getTokenOracleBasePriceUsd(oracleTokenBase, blockNumber);
+        if (priceTokenBaseUsd) {
+          if (oracleSource.type === 'pool2') {
+            const spotPrice = await UniswapOracleLib.getSpotPriceV2({
+              chain: oracleSource.chain,
+              poolAddress: poolAddress,
+              baseToken: oracleTokenBase.token,
+              quotaToken: token,
+              blockNumber: blockNumber,
+            });
+            return new BigNumber(spotPrice).multipliedBy(new BigNumber(priceTokenBaseUsd)).toString(10);
+          } else if (oracleSource.type === 'pool3') {
+            // uniswap v3
+            const spotPrice = await UniswapOracleLib.getSpotPriceV3({
+              chain: oracleSource.chain,
+              poolAddress: poolAddress,
+              baseToken: oracleTokenBase.token,
+              quotaToken: token,
+              blockNumber: blockNumber,
+            });
+            return new BigNumber(spotPrice).multipliedBy(new BigNumber(priceTokenBaseUsd)).toString(10);
+          }
+        }
       }
     }
 
     return null;
+  }
+
+  // this function get token price in USD term via multiple routes
+  // for example, in case token was paired with ETH:
+  // 1. we get token spot price per ETH
+  // 2. we get ETH price in USD and convert token price to USD
+  public async getTokenSpotPriceUsd(options: OracleGetTokenPriceOptions): Promise<TokenOracleResult> {
+    const timestamp = options.timestamp === 0 ? getTimestamp() : getStartDayTimestamp(options.timestamp);
+    const blockNumber = await getBlockNumberAtTimestamp(BlockSubgraphs[options.chain], timestamp);
+
+    if (TokenOracleBases[options.address]) {
+      const priceUsd = await this.getTokenOracleBasePriceUsd(TokenOracleBases[options.address], blockNumber);
+      return {
+        chain: options.chain,
+        token: TokenOracleBases[options.address].token.address,
+        sources: [
+          {
+            source: 'chainlink',
+            spotPriceUsd: priceUsd ? priceUsd : '0',
+          },
+        ],
+        timestamp: timestamp,
+      };
+    } else {
+      const result: TokenOracleResult = {
+        chain: options.chain,
+        token: options.address,
+        sources: [],
+        timestamp: timestamp,
+      };
+
+      // get token metadata
+      let token: Token | null = null;
+      for (const [, config] of Object.entries(Tokens.ethereum)) {
+        if (compareAddress(config.address, options.address)) {
+          token = config;
+        }
+      }
+
+      if (!token) {
+        const web3Helper = new Web3HelperProvider(this._mongodb);
+        token = await web3Helper.getErc20Metadata(options.chain, options.address);
+      }
+
+      if (!token) {
+        return result;
+      }
+
+      for (const oracleSource of TokenOracleSources.filter((item) => item.chain === options.chain)) {
+        const spotPriceUsd = await this.getTokenSpotPriceUsdFromOracleSource(
+          options.chain,
+          token,
+          oracleSource,
+          blockNumber
+        );
+
+        if (spotPriceUsd) {
+          result.sources.push({
+            source: oracleSource.source,
+            spotPriceUsd: spotPriceUsd,
+          });
+        }
+      }
+
+      if (result.sources.length === 0) {
+        logger.onWarn({
+          service: this.name,
+          message: 'failed to get token price',
+          props: {
+            ...options,
+          },
+        });
+      }
+
+      return result;
+    }
   }
 }

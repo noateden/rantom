@@ -35,29 +35,21 @@ export interface Contract {
   topics?: Array<string>;
 }
 
-export type TokenOracleType = 'chainlink' | 'pool2' | 'pool3' | 'coingecko';
-export type TokenOracleBase = 'USD' | 'ETH' | 'BTC';
-
-export interface TokenOracleBasic {
-  type: TokenOracleType;
-  base: TokenOracleBase;
-  source: string;
-  chain: string;
-  address: string;
-}
-
-export interface TokenOracleChainlinkAggregator extends TokenOracleBasic {
-  decimals: number;
-}
-
-export interface TokenOraclePool2 extends TokenOracleBasic {
-  baseToken: Token;
-  quotaToken: Token;
-}
-
-export interface TokenOracle {
+// we get this token price USD from ChainLink price feed
+// it should be ETH, WETH, USDC, USDT, DAI
+export interface TokenOracleBase {
   token: Token;
-  oracles: Array<TokenOracleChainlinkAggregator | TokenOraclePool2>;
+  priceFeed: string;
+  priceFeedDecimals: number;
+}
+
+export type TokenOracleSourceType = 'pool2' | 'pool3';
+export interface TokenOracleSource {
+  chain: string;
+  source: string;
+  type: TokenOracleSourceType;
+  factory: string;
+  factoryAbi: any;
 }
 
 export interface EnvConfig {
