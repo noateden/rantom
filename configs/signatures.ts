@@ -399,4 +399,10 @@ export const Signatures: { [key: string]: string } = {
     '0x7b417e520d2b905fc5a1689d29d329358dd55efc60ed115aa165b0a2b64232c6',
   'Liquidated(address,address,address,uint256,address,uint256)':
     '0xc2c75a73164c2efcbb9f74bfa511cd0866489d90687831a7217b3dbeeb697088',
+
+  // ankr ETH staking
+  'StakeConfirmed(address,uint256)': '0x995d6cdbf356b73aa4dff24e951558cc155c9bb0397786ec4a142f9470f50007',
+  'PendingUnstake(address,address,uint256,bool)': '0xc5130045b6f6c9e2944ccea448ad17c279db68237b8aa856ee12cbfaa25f7715',
+  'RewardsDistributed(address[],uint256[])': '0xe69d325558610ba73c441901deb46d7f251108348dc5dc9447e8866774c12edc',
+  'RewardsClaimed(address,address,uint256)': '0x9310ccfcb8de723f578a9e4282ea9f521f05ae40dc08f3068dfad528a65ee3c7',
 };

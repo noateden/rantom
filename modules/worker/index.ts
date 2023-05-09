@@ -1,5 +1,6 @@
 import { AbracadabraContracts } from '../../configs/contracts/abracadabra';
 import { AgilityContracts } from '../../configs/contracts/agility';
+import { AnkrContracts } from '../../configs/contracts/ankr';
 import { ArrakisContracts } from '../../configs/contracts/arrakis';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
 import { BalancerContracts } from '../../configs/contracts/balancer';
@@ -63,5 +64,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     morpho: new ContractWorker(providers, MorphoContracts),
     sushi: new ContractWorker(providers, SushiContracts),
     chai: new ContractWorker(providers, ChaiContracts),
+    ankr: new ContractWorker(providers, AnkrContracts),
   };
 }

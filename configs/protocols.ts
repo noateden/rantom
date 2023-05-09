@@ -1638,3 +1638,13 @@ export const ChaiConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const AnkrConfigs: ProtocolConfig = {
+  protocol: 'ankr',
+  categories: ['staking'],
+  contracts: {
+    ethereum: [
+      '0x84db6ee82b7cf3b47e8f19270abde5718b936670', // ETH staking
+    ],
+  },
+};

@@ -4,6 +4,7 @@ import {
   Aavev3Configs,
   AbracadabraConfigs,
   AgilityConfigs,
+  AnkrConfigs,
   ApecoinConfigs,
   ArrakisConfigs,
   AurafinanceConfigs,
@@ -69,6 +70,7 @@ import { Aavev2Adapter } from './aave/aavev2';
 import { Aavev3Adapter } from './aave/aavev3';
 import { AbracadabraAdapter } from './abracadabra/abracadabra';
 import { AgilityAdapter } from './agility/agility';
+import { AnkrAdapter } from './ankr/ankr';
 import { ApecoinAdapter } from './apecoin/apecoin';
 import { ArrakisAdapter } from './arrakis/arrakis';
 import { AurafinanceAdapter } from './aurafinance/aurafinance';
@@ -190,5 +192,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new CurveAdapter(CurveConfigs, providers),
     new MorphoAdapter(MorphoConfigs, providers),
     new ChaiAdapter(ChaiConfigs, providers),
+    new AnkrAdapter(AnkrConfigs, providers),
   ];
 }
