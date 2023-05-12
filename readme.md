@@ -77,7 +77,7 @@ yarn start --help
 | Binance Staked ETH   | DepositEth                                                                                                           |     🌱 |
 | Agility LSD          | Staked, Withdrawn, RewardPaid                                                                                        |     🌱 |
 | Dodoex               | OrderHistory                                                                                                         |     🌱 |
-| Morpho               | Supplied, Withdrawn, Borrowed, Repaid, Liquidated                                                                    |     🌱 |
+| Morpho               | Supplied, Withdrawn, Borrowed, Repaid, Liquidated, CollateralSupplied, CollateralWithdrawn                           |     🌱 |
 | Chai Money           | Transfer                                                                                                             |     🌱 |
 | Ankr                 | StakeConfirmed, PendingUnstake, RewardsDistributed, RewardsClaimed                                                   |     🌱 |
 

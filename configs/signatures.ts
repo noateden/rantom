@@ -401,6 +401,15 @@ export const Signatures: { [key: string]: string } = {
     '0x7b417e520d2b905fc5a1689d29d329358dd55efc60ed115aa165b0a2b64232c6',
   'Liquidated(address,address,address,uint256,address,uint256)':
     '0xc2c75a73164c2efcbb9f74bfa511cd0866489d90687831a7217b3dbeeb697088',
+  // Morpho Aave v3
+  'CollateralSupplied(address,address,address,uint256,uint256)':
+    '0x4d1fc6dc36972a1eeab2351fae829d06c827d7ee429880dbf762ec00b805fb2f',
+  'Borrowed(address,address,address,address,uint256,uint256,uint256)':
+    '0xf99275e3db7a3400181f0bd088002bba02b833be9187bccc88fbbc79fb52f2f1',
+  'Withdrawn(address,address,address,address,uint256,uint256,uint256)':
+    '0x6a9c828ef646db99cc7a20bbfb02fdf8f7dcc183400a28daab4968e47b9a21e0',
+  'CollateralWithdrawn(address,address,address,address,uint256,uint256)':
+    '0xb49f4cffa4b6674963440a1fb6cb419c233a9341280f44d8543571eca1306577',
 
   // ankr ETH staking
   'StakeConfirmed(address,uint256)': '0x995d6cdbf356b73aa4dff24e951558cc155c9bb0397786ec4a142f9470f50007',
