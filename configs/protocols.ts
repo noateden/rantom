@@ -1623,10 +1623,133 @@ export const MorphoConfigs: ProtocolConfig = {
     ethereum: [
       '0x777777c9898d384f785ee44acfe945efdff5f3e0', // Morpho Aave v2
       '0x8888882f8f843896699869179fb6e4f7e3b58888', // Morpho Compound
+      '0x33333aea097c193e66081e930c33020272b33333', // Morpho Aave v3
     ],
   },
   staticData: {
     markets: MorphoMarkets,
+  },
+  customEventMapping: {
+    [Signatures['Supplied(address,address,address,uint256,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'from',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'onBehalf',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'underlying',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'scaledOnPool',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'scaledInP2P',
+          type: 'uint256',
+        },
+      ],
+    },
+    [Signatures['Repaid(address,address,address,uint256,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'repayer',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'onBehalf',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'underlying',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'scaledOnPool',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'scaledInP2P',
+          type: 'uint256',
+        },
+      ],
+    },
+    [Signatures['Liquidated(address,address,address,uint256,address,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'liquidator',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'borrower',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'underlyingBorrowed',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amountLiquidated',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'address',
+          name: 'underlyingCollateral',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amountSeized',
+          type: 'uint256',
+        },
+      ],
+    },
   },
 };
 
