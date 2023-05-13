@@ -78,7 +78,7 @@ export class CachingHelper {
     return `uni-factory-${chain}-${normalizeAddress(poolAddress)}`;
   }
 
-  public static getOracleTokenName(chain: string, tokenAddress: string): string {
-    return `oracle-${chain}-${normalizeAddress(tokenAddress)}`;
+  public static getOracleTokenName(chain: string, tokenAddress: string, blockNumber: number): string {
+    return `oracle-${chain}-${normalizeAddress(tokenAddress)}-${blockNumber}`;
   }
 }

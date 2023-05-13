@@ -6,7 +6,7 @@ import { TokenOracles } from '../../configs/oracles';
 import { getStartDayTimestamp, getTimestamp, normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { getBlockNumberAtTimestamp } from '../../lib/subgraph';
-import { CachingProvider } from '../../services/caching';
+import { CachingHelper, CachingProvider } from '../../services/caching';
 import { RpcWrapperProvider } from '../../services/rpc';
 import { TokenOracle, TokenOracleChainlink, TokenOracleCurvePool, TokenOraclePool2 } from '../../types/configs';
 import { TokenOracleResult } from '../../types/domains';
@@ -168,15 +168,40 @@ export class OracleProvider extends CachingProvider implements IOracleProvider {
     const timestamp = options.timestamp === 0 ? getTimestamp() : getStartDayTimestamp(options.timestamp);
     const blockNumber = await getBlockNumberAtTimestamp(BlockSubgraphs[options.chain], timestamp);
 
+    const priceCacheKey = CachingHelper.getOracleTokenName(
+      options.chain,
+      normalizeAddress(options.address),
+      blockNumber
+    );
+    const cachingPrice = await this.getCachingData(priceCacheKey);
+    if (cachingPrice) {
+      return {
+        chain: options.chain,
+        token: cachingPrice.token,
+        spotPriceUsd: cachingPrice.spotPriceUsd,
+        timestamp: timestamp,
+      };
+    }
+
     const config: TokenOracle = TokenOracles[options.address];
     if (!config) {
       return null;
     }
 
+    const spotPriceUsd = await this.getPriceUsd(config.token.address, blockNumber);
+
+    // save cache
+    await this.setCachingData(priceCacheKey, {
+      chain: options.chain,
+      token: cachingPrice.token,
+      spotPriceUsd: cachingPrice.spotPriceUsd,
+      timestamp: timestamp,
+    });
+
     return {
       chain: options.chain,
       token: config.token,
-      spotPriceUsd: await this.getPriceUsd(config.token.address, blockNumber),
+      spotPriceUsd: spotPriceUsd,
       timestamp: timestamp,
     };
   }
