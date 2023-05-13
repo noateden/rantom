@@ -115,13 +115,9 @@ export interface UniLiquidityPool {
 
 export interface TokenOracleResult {
   chain: string;
-  token: string;
+  token: Token;
   timestamp: number;
-
-  sources: Array<{
-    source: string;
-    spotPriceUsd: string;
-  }>;
+  spotPriceUsd: string;
 }
 
 export interface ProtocolSystemReport {

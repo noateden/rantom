@@ -35,21 +35,28 @@ export interface Contract {
   topics?: Array<string>;
 }
 
-// we get this token price USD from ChainLink price feed
-// it should be ETH, WETH, USDC, USDT, DAI
-export interface TokenOracleBase {
-  token: Token;
+export type TokenOracleSource = 'chainlink' | 'pool2' | 'pool3' | 'curveMeta' | 'curvePol' | 'balancer';
+export interface TokenOracleChainlink {
   priceFeed: string;
   priceFeedDecimals: number;
 }
+export interface TokenOraclePool2 {
+  poolAddress: string;
+  baseToken: Token;
+}
+export interface TokenOracleCurvePool {
+  poolAddress: string;
+  poolAbi: Array<any>;
+  baseToken: Token;
 
-export type TokenOracleSourceType = 'pool2' | 'pool3';
-export interface TokenOracleSource {
+  // the pricing coin index
+  indies: Array<number>;
+}
+export interface TokenOracle {
   chain: string;
-  source: string;
-  type: TokenOracleSourceType;
-  factory: string;
-  factoryAbi: any;
+  source: TokenOracleSource;
+  token: Token;
+  config: TokenOracleChainlink | TokenOraclePool2 | TokenOracleCurvePool;
 }
 
 export interface EnvConfig {

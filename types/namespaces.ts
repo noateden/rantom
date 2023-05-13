@@ -94,7 +94,7 @@ export interface IParserProvider extends IProvider {
 }
 
 export interface IOracleProvider extends ICachingProvider {
-  getTokenSpotPriceUsd: (options: OracleGetTokenPriceOptions) => Promise<TokenOracleResult>;
+  getTokenSpotPriceUsd: (options: OracleGetTokenPriceOptions) => Promise<TokenOracleResult | null>;
 }
 
 export interface IWorkerProvider extends IProvider {

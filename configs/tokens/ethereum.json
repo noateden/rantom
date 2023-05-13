@@ -407,6 +407,12 @@
     "symbol": "pETH",
     "decimals": 18
   },
+  "rETH": {
+    "chain": "ethereum",
+    "address": "0xae78736cd615f374d3085123a210448e74fc6393",
+    "symbol": "rETH",
+    "decimals": 18
+  },
   "renFIL": {
     "chain": "ethereum",
     "address": "0xd5147bc8e386d91cc5dbe72099dac6c9b99276f5",

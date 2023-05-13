@@ -11,6 +11,7 @@
     "start": "node build/cmd/index.js"
   },
   "dependencies": {
+    "@balancer-labs/sdk": "^1.0.5",
     "@sentry/node": "^7.28.1",
     "@sentry/tracing": "^7.28.1",
     "@trivago/prettier-plugin-sort-imports": "^3.2.0",
