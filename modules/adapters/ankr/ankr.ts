@@ -51,22 +51,25 @@ export class AnkrAdapter extends Adapter {
           readableString: `${user} ${action} ${amount} ETH on ${this.config.protocol} chain ${options.chain}`,
         };
       } else if (signature === Signatures.RewardsDistributed) {
-        const amounts: Array<string> = [];
-        const addresses: Array<string> = [];
         const claimers = event.claimers as unknown as Array<string>;
-        claimers.map((item, index) => {
-          amounts.push(new BigNumber(event.amounts[index].toString()).dividedBy(1e18).toString(10));
-          addresses.push(normalizeAddress(item));
-        });
+        
+        if (claimers.length > 0) {
+          const amounts: Array<string> = [];
+          const addresses: Array<string> = [];
+          claimers.map((item, index) => {
+            amounts.push(new BigNumber(event.amounts[index].toString()).dividedBy(1e18).toString(10));
+            addresses.push(normalizeAddress(item));
+          });
 
-        return {
-          protocol: this.config.protocol,
-          action: 'collect',
-          tokens: [Tokens.ethereum.ETH],
-          tokenAmounts: amounts,
-          addresses: addresses,
-          readableString: `${addresses.length} addresses collect ETH on ${this.config.protocol} chain ${options.chain}`,
-        };
+          return {
+            protocol: this.config.protocol,
+            action: 'collect',
+            tokens: [Tokens.ethereum.ETH],
+            tokenAmounts: amounts,
+            addresses: addresses,
+            readableString: `${addresses.length} addresses collect ETH on ${this.config.protocol} chain ${options.chain}`,
+          };
+        }
       } else if (signature === Signatures.RewardsClaimed) {
         const amount = new BigNumber(event.amount).dividedBy(1e18).toString(10);
         const user = normalizeAddress(event.claimer);
