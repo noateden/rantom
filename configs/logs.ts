@@ -176,6 +176,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x33333aea097c193e66081e930c33020272b33333', // Morpho Aave v3
     '0x8888882f8f843896699869179fb6e4f7e3b58888', // Morpho Compound
     '0x06af07097c9eeb7fd685c692751d5c66db49c215', // CHAI Token
+    '0x84db6ee82b7cf3b47e8f19270abde5718b936670', // Ankr ETH staking
   ],
 };
 

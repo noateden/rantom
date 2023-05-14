@@ -52,7 +52,7 @@ export class AnkrAdapter extends Adapter {
         };
       } else if (signature === Signatures.RewardsDistributed) {
         const claimers = event.claimers as unknown as Array<string>;
-        
+
         if (claimers.length > 0) {
           const amounts: Array<string> = [];
           const addresses: Array<string> = [];
