@@ -80,6 +80,7 @@ yarn start --help
 | Morpho               | Supplied, Withdrawn, Borrowed, Repaid, Liquidated, CollateralSupplied, CollateralWithdrawn                           |     🌱 |
 | Chai Money           | Transfer                                                                                                             |     🌱 |
 | Ankr                 | StakeConfirmed, PendingUnstake, RewardsDistributed, RewardsClaimed                                                   |     🌱 |
+| Paraswap             | BoughtV3, SwappedV3                                                                                                  |     🌱 |
 
 ### Nft Marketplace
 

@@ -177,6 +177,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x8888882f8f843896699869179fb6e4f7e3b58888', // Morpho Compound
     '0x06af07097c9eeb7fd685c692751d5c66db49c215', // CHAI Token
     '0x84db6ee82b7cf3b47e8f19270abde5718b936670', // Ankr ETH staking
+    '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap v5 augustus swapper
   ],
 };
 

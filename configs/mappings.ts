@@ -3653,70 +3653,6 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
     ],
   },
 
-  [Signatures['Swapped2(bytes16,address,uint256,address,address,address,address,uint256,uint256,uint256)']]: {
-    abi: [
-      {
-        indexed: false,
-        internalType: 'bytes16',
-        name: 'uuid',
-        type: 'bytes16',
-      },
-      {
-        indexed: false,
-        internalType: 'address',
-        name: 'partner',
-        type: 'address',
-      },
-      {
-        indexed: false,
-        internalType: 'uint256',
-        name: 'feePercent',
-        type: 'uint256',
-      },
-      {
-        indexed: false,
-        internalType: 'address',
-        name: 'initiator',
-        type: 'address',
-      },
-      {
-        indexed: true,
-        internalType: 'address',
-        name: 'beneficiary',
-        type: 'address',
-      },
-      {
-        indexed: true,
-        internalType: 'address',
-        name: 'srcToken',
-        type: 'address',
-      },
-      {
-        indexed: true,
-        internalType: 'address',
-        name: 'destToken',
-        type: 'address',
-      },
-      {
-        indexed: false,
-        internalType: 'uint256',
-        name: 'srcAmount',
-        type: 'uint256',
-      },
-      {
-        indexed: false,
-        internalType: 'uint256',
-        name: 'receivedAmount',
-        type: 'uint256',
-      },
-      {
-        indexed: false,
-        internalType: 'uint256',
-        name: 'expectedAmount',
-        type: 'uint256',
-      },
-    ],
-  },
   [Signatures['Deposit(bytes32,uint32,uint256)']]: {
     abi: [
       {
@@ -7494,6 +7430,134 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
         internalType: 'string',
         name: 'logName',
         type: 'string',
+      },
+    ],
+  },
+  [Signatures['BoughtV3(bytes16,address,uint256,address,address,address,address,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'bytes16',
+        name: 'uuid',
+        type: 'bytes16',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'partner',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'feePercent',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'initiator',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'beneficiary',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'srcToken',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'destToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'srcAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'receivedAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'expectedAmount',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['SwappedV3(bytes16,address,uint256,address,address,address,address,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'bytes16',
+        name: 'uuid',
+        type: 'bytes16',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'partner',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'feePercent',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'initiator',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'beneficiary',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'srcToken',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'destToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'srcAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'receivedAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'expectedAmount',
+        type: 'uint256',
       },
     ],
   },

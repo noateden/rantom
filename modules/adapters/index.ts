@@ -48,6 +48,7 @@ import {
   OptimismConfigs,
   PancakeswapConfigs,
   PancakeswapV3Configs,
+  ParaswapConfigs,
   PendleConfigs,
   RaribleConfigs,
   RocketpoolConfigs,
@@ -112,6 +113,7 @@ import { MultichainAdapter } from './multichain/multichain';
 import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
 import { Pancakeswapv3Adapter } from './pancakeswap/pancakeswapv3';
+import { ParaswapAdapter } from './paraswap/paraswap';
 import { PendleAdapter } from './pendle/pendle';
 import { RaribleAdapter } from './rarible/rarible';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
@@ -193,5 +195,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new MorphoAdapter(MorphoConfigs, providers),
     new ChaiAdapter(ChaiConfigs, providers),
     new AnkrAdapter(AnkrConfigs, providers),
+    new ParaswapAdapter(ParaswapConfigs, providers),
   ];
 }
