@@ -71,7 +71,7 @@ export class ParserProvider implements IParserProvider {
           // now we try to pass log into adapters to get readable event data
           for (const adapter of this.adapters) {
             if (adapter.supportedSignature(log.topics[0])) {
-              const action: TransactionAction | null = await adapter.tryParsingActions({
+              const options = {
                 chain: blockchain.name,
                 sender: normalizeAddress(receipt.from),
                 to: normalizeAddress(receipt.to),
@@ -81,12 +81,22 @@ export class ParserProvider implements IParserProvider {
                 data: log.data,
                 input: transaction.input,
                 context: receipt,
-              });
+              };
+
+              const action: TransactionAction | null = await adapter.tryParsingActions(options);
               if (action) {
                 transaction.actions.push({
                   ...action,
                   logIndex: log.logIndex,
                 });
+                continue;
+              }
+
+              if (adapter.tryParsingMultipleActions) {
+                const actions: Array<TransactionAction> = await adapter.tryParsingMultipleActions(options);
+                for (const item of actions) {
+                  transaction.actions.push(item);
+                }
               }
             }
           }

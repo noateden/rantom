@@ -416,4 +416,8 @@ export const Signatures: { [key: string]: string } = {
   'PendingUnstake(address,address,uint256,bool)': '0xc5130045b6f6c9e2944ccea448ad17c279db68237b8aa856ee12cbfaa25f7715',
   'RewardsDistributed(address[],uint256[])': '0xe69d325558610ba73c441901deb46d7f251108348dc5dc9447e8866774c12edc',
   'RewardsClaimed(address,address,uint256)': '0x9310ccfcb8de723f578a9e4282ea9f521f05ae40dc08f3068dfad528a65ee3c7',
+
+  // DefiSaver
+  'ActionDirectEvent(address,string,bytes)': '0xf28c1e8e1a8c97027796e625e1ed041028c9642e14da6e7ad2c18838a59a2d8c',
+  'RecipeEvent(address,string)': '0xb6cd938f99beba85b61cc813aa1c12ba1b95f797dfb6ddd567c0f361f3e77574',
 };

@@ -7459,4 +7459,42 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['ActionDirectEvent(address,string,bytes)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'caller',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'string',
+        name: 'logName',
+        type: 'string',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes',
+        name: 'data',
+        type: 'bytes',
+      },
+    ],
+  },
+  [Signatures['RecipeEvent(address,string)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'caller',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'string',
+        name: 'logName',
+        type: 'string',
+      },
+    ],
+  },
 };

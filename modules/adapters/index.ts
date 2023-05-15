@@ -23,6 +23,7 @@ import {
   ConvexConfigs,
   CowswapConfigs,
   CurveConfigs,
+  DefisaverConfigs,
   DodoConfigs,
   EnsConfigs,
   Eth2Configs,
@@ -89,6 +90,7 @@ import { ConicAdapter } from './conic/conic';
 import { ConvexAdapter } from './convex/convex';
 import { CowswapAdapter } from './cowswap/cowswap';
 import { CurveAdapter } from './curve/curve';
+import { DefisaverAdapter } from './defisaver/defisaver';
 import { DodoAdapter } from './dodo/dodo';
 import { EnsAdapter } from './ens/ens';
 import { Eth2Adapter } from './eth2/eth2';
@@ -193,5 +195,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new MorphoAdapter(MorphoConfigs, providers),
     new ChaiAdapter(ChaiConfigs, providers),
     new AnkrAdapter(AnkrConfigs, providers),
+    new DefisaverAdapter(DefisaverConfigs, providers),
   ];
 }

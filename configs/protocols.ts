@@ -19,6 +19,7 @@ import SiloPools from './data/SiloPools.json';
 import SushiPools from './data/SushiPools.json';
 import UniLiquidityPools from './data/UniLiquidityPools.json';
 import YearnVaults from './data/YearnVaults.json';
+import { DefisaverActions } from './policies/defisaverActions';
 import { Signatures } from './signatures';
 
 export const Uniswapv2Configs: ProtocolConfig = {
@@ -1770,5 +1771,19 @@ export const AnkrConfigs: ProtocolConfig = {
     ethereum: [
       '0x84db6ee82b7cf3b47e8f19270abde5718b936670', // ETH staking
     ],
+  },
+};
+
+export const DefisaverConfigs: ProtocolConfig = {
+  protocol: 'defisaver',
+  categories: ['service'],
+  contracts: {
+    ethereum: [
+      '0xce7a977cac4a481bc84ac06b2da0df614e621cf3', // Logger
+      '0x1d6dedb49af91a11b5c5f34954fd3e8cc4f03a86', // Recipe executor
+    ],
+  },
+  staticData: {
+    actions: DefisaverActions,
   },
 };
