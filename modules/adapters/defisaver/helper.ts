@@ -2,6 +2,7 @@ import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import { Tokens } from '../../../configs/constants';
+import EnvConfig from '../../../configs/envConfig';
 import { DefisaverActions } from '../../../configs/policies/defisaverActions';
 import { normalizeAddress } from '../../../lib/helper';
 import { Web3HelperProvider } from '../../../services/web3';
@@ -21,7 +22,7 @@ export class DefisaverHelper {
     options: ParseDefisaverActionOptions
   ): Promise<Array<TransactionAction>> {
     const actions: Array<TransactionAction> = [];
-    const web3 = new Web3();
+    const web3 = new Web3(EnvConfig.blockchains[options.context.chain].nodeRpc);
 
     for (const [, actionConfig] of Object.entries(DefisaverActions)) {
       if (actionConfig.actionId === options.actionId) {
@@ -108,7 +109,13 @@ export class DefisaverHelper {
               break;
             }
             case 'LiquityOpen': {
-              const ethAmount = new BigNumber(params[1]).dividedBy(1e18).toString(10);
+              let ethAmount = new BigNumber(params[1]).dividedBy(1e18).toString(10);
+              if (ethAmount === '0') {
+                // using transaction value
+                const transaction = await web3.eth.getTransaction(options.context.hash as string);
+                ethAmount = new BigNumber(transaction.value.toString()).dividedBy(1e18).toString(10);
+              }
+
               const lusdAmount = new BigNumber(params[2]).dividedBy(1e18).toString(10);
               const addresses: Array<string> = [normalizeAddress(params[3]), normalizeAddress(params[4])];
 
@@ -129,14 +136,16 @@ export class DefisaverHelper {
                 addresses,
                 tokens: [Tokens.ethereum.LUSD],
                 tokenAmounts: [lusdAmount],
-                readableString: `${addresses[0]} deposit ${lusdAmount} LUSD on ${protocolConfig.protocol} chain ${options.context.chain}`,
+                readableString: `${addresses[0]} borrow ${lusdAmount} LUSD on ${protocolConfig.protocol} chain ${options.context.chain}`,
                 addition: {
                   protocolLayer1: 'liquity',
                 },
               });
             }
           }
-        } catch (e: any) {}
+        } catch (e: any) {
+          console.log(e);
+        }
       }
     }
 
