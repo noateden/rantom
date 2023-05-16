@@ -77,9 +77,6 @@ export interface IAdapter extends IProvider {
 
   supportedSignature(signature: string): boolean;
   tryParsingActions: (options: AdapterParseLogOptions) => Promise<TransactionAction | null>;
-
-  // some protocol has multiple actions on a single event log
-  tryParsingMultipleActions?: (options: AdapterParseLogOptions) => Promise<Array<TransactionAction>>;
 }
 
 export interface ITransferParser extends IProvider {

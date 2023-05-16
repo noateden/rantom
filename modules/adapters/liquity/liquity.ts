@@ -36,10 +36,9 @@ export class LiquityAdapter extends Adapter {
     });
   }
 
-  public async tryParsingMultipleActions(options: AdapterParseLogOptions): Promise<Array<TransactionAction>> {
+  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
     const { chain, address, topics, data } = options;
 
-    const actions: Array<TransactionAction> = [];
     const signature = topics[0];
     if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(address) !== -1) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
@@ -61,27 +60,24 @@ export class LiquityAdapter extends Adapter {
 
             const action = operation === 0 ? 'borrow' : 'repay';
 
-            actions.push({
+            return {
               protocol: this.config.protocol,
               action: action,
               addresses: [borrower],
               tokens: [Tokens.ethereum.LUSD],
               tokenAmounts: [debtAmount],
               readableString: `${borrower} ${action} ${debtAmount} ${Tokens.ethereum.LUSD.symbol} on ${this.config.protocol} chain ${chain}`,
-            });
-
-            if (collateralAmount !== '0') {
-              actions.push({
-                protocol: this.config.protocol,
-                action: 'deposit',
-                addresses: [borrower],
-                tokens: [Tokens.ethereum.NativeCoin],
-                tokenAmounts: [collateralAmount],
-                readableString: `${borrower} deposit ${collateralAmount} ${Tokens.ethereum.NativeCoin.symbol} on ${this.config.protocol} chain ${chain}`,
-              });
-            }
-
-            break;
+              subActions: [
+                {
+                  protocol: this.config.protocol,
+                  action: 'deposit',
+                  addresses: [borrower],
+                  tokens: [Tokens.ethereum.NativeCoin],
+                  tokenAmounts: [collateralAmount],
+                  readableString: `${borrower} deposit ${collateralAmount} ${Tokens.ethereum.NativeCoin.symbol} on ${this.config.protocol} chain ${chain}`,
+                },
+              ],
+            };
           }
           case 2: {
             // get trove snapshot from previous block
@@ -107,51 +103,30 @@ export class LiquityAdapter extends Adapter {
             const debtAmount = newDebt.minus(previousDebt).abs().dividedBy(1e18).toString(10);
             const collateralAmount = newColl.minus(previousColl).abs().dividedBy(1e18).toString(10);
 
-            if (debtAmount !== '0') {
-              // adjust debt balance
-              const action = previousDebt.lt(newDebt) ? 'borrow' : 'repay';
-              actions.push({
-                protocol: this.config.protocol,
-                action: action,
-                addresses: [borrower],
-                tokens: [Tokens.ethereum.LUSD],
-                tokenAmounts: [debtAmount],
-                readableString: `${borrower} ${action} ${debtAmount} ${Tokens.ethereum.LUSD.symbol} on ${this.config.protocol} chain ${chain}`,
-              });
-            }
-
-            if (collateralAmount !== '0') {
-              // adjust coll balance
-              const action = previousColl.lt(newColl) ? 'deposit' : 'withdraw';
-              actions.push({
-                protocol: this.config.protocol,
-                action: action,
-                addresses: [borrower],
-                tokens: [Tokens.ethereum.NativeCoin],
-                tokenAmounts: [collateralAmount],
-                readableString: `${borrower} ${action} ${collateralAmount} ${Tokens.ethereum.NativeCoin.symbol} on ${this.config.protocol} chain ${chain}`,
-              });
-            }
-
-            break;
+            const action = previousDebt.lt(newDebt) ? 'borrow' : 'repay';
+            return {
+              protocol: this.config.protocol,
+              action: action,
+              addresses: [borrower],
+              tokens: [Tokens.ethereum.LUSD],
+              tokenAmounts: [debtAmount],
+              readableString: `${borrower} ${action} ${debtAmount} ${Tokens.ethereum.LUSD.symbol} on ${this.config.protocol} chain ${chain}`,
+              subActions: [
+                {
+                  protocol: this.config.protocol,
+                  action: previousColl.lt(newColl) ? 'deposit' : 'withdraw',
+                  addresses: [borrower],
+                  tokens: [Tokens.ethereum.NativeCoin],
+                  tokenAmounts: [collateralAmount],
+                  readableString: `${borrower} ${
+                    previousColl.lt(newColl) ? 'deposit' : 'withdraw'
+                  } ${collateralAmount} ${Tokens.ethereum.NativeCoin.symbol} on ${this.config.protocol} chain ${chain}`,
+                },
+              ],
+            };
           }
         }
-      }
-    }
-
-    return actions;
-  }
-
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
-
-    const signature = topics[0];
-    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(address) !== -1) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const rpcWrapper = this.getRpcWrapper();
-      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
-
-      if (signature === Signatures.TroveLiquidated) {
+      } else if (signature === Signatures.TroveLiquidated) {
         const borrower = normalizeAddress(event._borrower);
         const collAmount = new BigNumber(event._coll).dividedBy(1e18).toString(10);
         const debtAmount = new BigNumber(event._debt).dividedBy(1e18).toString(10);

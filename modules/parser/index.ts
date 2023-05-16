@@ -89,14 +89,6 @@ export class ParserProvider implements IParserProvider {
                   ...action,
                   logIndex: log.logIndex,
                 });
-                continue;
-              }
-
-              if (adapter.tryParsingMultipleActions) {
-                const actions: Array<TransactionAction> = await adapter.tryParsingMultipleActions(options);
-                for (const item of actions) {
-                  transaction.actions.push(item);
-                }
               }
             }
           }

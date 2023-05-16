@@ -83,9 +83,7 @@ export class GetlogWorker implements IWorkerProvider {
             // only sync whitelisted contracts
             if (await this.shouldGetThisLog(chain, log)) {
               try {
-                const allActions: Array<TransactionAction> = [];
-
-                const singleAction: TransactionAction | null = await adapter.tryParsingActions({
+                const action: TransactionAction | null = await adapter.tryParsingActions({
                   chain: chain,
                   sender: '', // adapter should get sender address
                   address: normalizeAddress(log.address),
@@ -94,26 +92,7 @@ export class GetlogWorker implements IWorkerProvider {
                   data: log.data,
                   blockNumber: log.blockNumber,
                 });
-                if (singleAction) {
-                  allActions.push(singleAction);
-                }
-
-                if (adapter.tryParsingMultipleActions) {
-                  const multipleActions = await adapter.tryParsingMultipleActions({
-                    chain: chain,
-                    sender: '', // adapter should get sender address
-                    address: normalizeAddress(log.address),
-                    hash: log.transactionHash,
-                    topics: log.topics,
-                    data: log.data,
-                    blockNumber: log.blockNumber,
-                  });
-                  for (const item of multipleActions) {
-                    allActions.push(item);
-                  }
-                }
-
-                for (const action of allActions) {
+                if (action) {
                   let timestamp =
                     blockTimes && blockTimes[Number(log.blockNumber)]
                       ? Number(blockTimes[Number(log.blockNumber)].timestamp)
@@ -151,11 +130,22 @@ export class GetlogWorker implements IWorkerProvider {
                     },
                   });
                 }
+              } catch (e: any) {
+                logger.onError({
+                  service: this.name,
+                  message: 'failed to parse transaction',
+                  props: {
+                    chain: chain,
+                    tx: log.transactionHash,
+                    signature: log.topics[0],
+                  },
+                  error: e,
+                });
 
-                if (allActions.length > 0) {
-                  break;
+                if (this.providers) {
+                  this.providers.sentry.capture(e);
                 }
-              } catch (e: any) {}
+              }
             }
           }
         }

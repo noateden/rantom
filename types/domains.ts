@@ -51,15 +51,19 @@ export type KnownAction =
   // use for service transaction
   | 'update';
 
-export interface TransactionAction {
+export interface TransactionActionBase {
   protocol: string;
   action: KnownAction;
   tokens: Array<Token>;
   tokenAmounts: Array<string>; // should match with tokens
   addresses: Array<string>;
   readableString: string;
+}
+
+export interface TransactionAction extends TransactionActionBase {
   logIndex?: number;
   addition?: any;
+  subActions?: Array<TransactionActionBase>;
 }
 
 export interface TransactionTransfer {
