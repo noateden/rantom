@@ -7,6 +7,7 @@ import { BalancerContracts } from '../../configs/contracts/balancer';
 import { BinanceContracts } from '../../configs/contracts/binance';
 import { CarbonContracts } from '../../configs/contracts/carbon';
 import { ChaiContracts } from '../../configs/contracts/chai';
+import { Compoundv3Contracts } from '../../configs/contracts/compound';
 import { ConicContracts } from '../../configs/contracts/conic';
 import { ConvexContracts } from '../../configs/contracts/convex';
 import { CurveContracts } from '../../configs/contracts/curve';
@@ -67,5 +68,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     chai: new ContractWorker(providers, ChaiContracts),
     ankr: new ContractWorker(providers, AnkrContracts),
     paraswap: new ContractWorker(providers, ParaswapContracts),
+    compoundv3: new ContractWorker(providers, Compoundv3Contracts),
   };
 }

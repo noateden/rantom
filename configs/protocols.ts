@@ -337,6 +337,7 @@ export const Compoundv3Configs: ProtocolConfig = {
     ethereum: [
       '0xc3d688b66703497daa19211eedff47f25384cdc3', // v3 USDC
       '0xa17581a9e3356d9a858b789d68b4d866e593ae94', // v3 ETH
+      '0x1b0e765f6224c21223aea2af16c1c46e38885a40', // Comet rewards
     ],
   },
   staticData: {

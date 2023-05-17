@@ -424,4 +424,8 @@ export const Signatures: { [key: string]: string } = {
     '0x4cc7e95e48af62690313a0733e93308ac9a73326bc3c29f1788b1191c376d5b6',
   'SwappedV3(bytes16,address,uint256,address,address,address,address,uint256,uint256,uint256)':
     '0xe00361d207b252a464323eb23d45d42583e391f2031acdd2e9fa36efddd43cb0',
+
+  // Compound comet reward
+  'RewardClaimed(address,address,address,uint256)':
+    '0x2422cac5e23c46c890fdcf42d0c64757409df6832174df639337558f09d99c68',
 };

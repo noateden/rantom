@@ -38,7 +38,7 @@ yarn start --help
 | Aave v3              | Supply, Withdraw, Borrow, Repay, Flashloan, Liquidation                                                              |     🌱 |
 | Compound             | Mint, Redeem, Borrow, Repay, Liquidation, DistributedSupplierComp, DistributedBorrowerComp                           |     🌱 |
 | IronBank             |                                                                                                                      |     🌱 |
-| Compound v3          | Supply, Withdraw, SupplyCollateral, WithdrawCollateral, AbsorbCollateral                                             |     🌱 |
+| Compound v3          | Supply, Withdraw, SupplyCollateral, WithdrawCollateral, AbsorbCollateral, RewardClaimed                              |     🌱 |
 | Convex Financ        | Deposited, Withdrawn, Staked, Withdrawn, RewardPaid                                                                  |     🌱 |
 | Aura Finance         | Deposited, Withdrawn, Staked, Withdrawn, RewardPaid                                                                  |     🌱 |
 | Bancor               | Deposit, Withdraw, Trade, Flashloan                                                                                  |     🌱 |
