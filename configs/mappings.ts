@@ -45,6 +45,35 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
     ],
   },
 
+  [Signatures['WithdrawalClaimed(uint256,address,address,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'requestId',
+        type: 'uint256',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'owner',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'receiver',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountOfETH',
+        type: 'uint256',
+      },
+    ],
+  },
+
   // Swap(address,uint256,uint256,uint256,uint256,address)
   [Signatures['Swap(address,uint256,uint256,uint256,uint256,address)']]: {
     abi: [

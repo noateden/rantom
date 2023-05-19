@@ -46,7 +46,7 @@ yarn start --help
 | CowSwap Protoco      | Trade                                                                                                                |     🌱 |
 | Curve                | TokenExchange, AddLiquidity, RemoveLiquidity                                                                         |     🌱 |
 | Hop Exchange         | TransferToL2                                                                                                         |     🌱 |
-| Lido                 | Submitted, SubmitEvent, ClaimTokensEvent                                                                             |     🌱 |
+| Lido                 | Submitted, SubmitEvent, ClaimTokensEvent, WithdrawalClaimed                                                          |     🌱 |
 | Rocket Pool          | TokensMinted, TokensBurned                                                                                           |     🌱 |
 | Multichain           | SwapIn, SwapOut                                                                                                      |     🌱 |
 | Optimism             | Batch                                                                                                                |     🌱 |

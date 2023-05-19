@@ -73,4 +73,28 @@ export const LidoActionTestLogs: Array<TestLog> = [
     adapter: new LidoAdapter(LidoConfigs, null),
     action: 'withdraw',
   },
+  {
+    chain: 'ethereum',
+    hash: '0x602c9618ed914d5b5827369fa0f17f656388b724b6f2a99a31e06d48fb3c4d57',
+    sender: normalizeAddress('0x984819172700eb099e29607e159665b32185dd91'),
+    address: normalizeAddress('0x889edc2edab5f40e902b864ad4d7ade8e412f9b1'),
+    log: {
+      address: '0x889edc2edab5f40e902b864ad4d7ade8e412f9b1',
+      topics: [
+        '0x6ad26c5e238e7d002799f9a5db07e81ef14e37386ae03496d7a7ef04713e145b',
+        '0x000000000000000000000000000000000000000000000000000000000000025e',
+        '0x000000000000000000000000984819172700eb099e29607e159665b32185dd91',
+        '0x000000000000000000000000984819172700eb099e29607e159665b32185dd91',
+      ],
+      data: '0x000000000000000000000000000000000000000000000000007f55a11ea1f537',
+      blockNumber: '0x107ddb3',
+      transactionHash: '0x602c9618ed914d5b5827369fa0f17f656388b724b6f2a99a31e06d48fb3c4d57',
+      transactionIndex: '0x9d',
+      blockHash: '0x5ec7ce21b8560757ab799dc35cc924b2674c115c801baacd90be21d9fbac18fc',
+      logIndex: '0x10d',
+      removed: false,
+    },
+    adapter: new LidoAdapter(LidoConfigs, null),
+    action: 'withdraw',
+  },
 ];

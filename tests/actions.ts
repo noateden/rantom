@@ -2,10 +2,7 @@ import { expect } from 'chai';
 import { describe } from 'mocha';
 
 import { normalizeAddress } from '../lib/helper';
-
-// import { ActionTestLogs } from './configs/actionTests';
-
-const ActionTestLogs: Array<any> = [];
+import { ActionTestLogs } from './configs/actionTests';
 
 describe('parse transaction actions', async function () {
   ActionTestLogs.map((item) =>

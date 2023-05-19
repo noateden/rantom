@@ -4534,5 +4534,401 @@
       "symbol": "WETH",
       "decimals": 18
     }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "uniswapv2",
+    "version": "univ2",
+    "address": "0x96aa22baedc5a605357e0b9ae20ab6b10a472e03",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x7f792db54b0e580cdc755178443f0430cf799aca",
+      "symbol": "VOLT",
+      "decimals": 9
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "uniswapv2",
+    "version": "univ2",
+    "address": "0xcaa004418eb42cdf00cb057b7c9e28f0ffd840a5",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x2a3bff78b79a009976eea096a51a948a3dc00e34",
+      "symbol": "WILD",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "uniswapv2",
+    "version": "univ2",
+    "address": "0x7924a818013f39cf800f5589ff1f1f0def54f31f",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x0000000000095413afc295d19edeb1ad7b71c952",
+      "symbol": "LON",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "uniswapv2",
+    "version": "univ2",
+    "address": "0xaf996125e98b5804c00ffdb4f7ff386307c99a00",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x5befbb272290dd5b8521d4a938f6c4757742c430",
+      "symbol": "XFI",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "uniswapv3",
+    "version": "univ3",
+    "address": "0x42d403ab9b0603442ac991c0cfe124105dde0811",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x3007083eaa95497cd6b2b809fb97b6a30bdf53d3",
+      "symbol": "PSYOP",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "uniswapv3",
+    "version": "univ3",
+    "address": "0xe931b03260b2854e77e8da8378a1bc017b13cb97",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x111111111117dc0aa78b770fa6a738034120c302",
+      "symbol": "1INCH",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "uniswapv3",
+    "version": "univ3",
+    "address": "0x9febc984504356225405e26833608b17719c82ae",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x111111111117dc0aa78b770fa6a738034120c302",
+      "symbol": "1INCH",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "uniswapv3",
+    "version": "univ3",
+    "address": "0xf1b5cf831ced19136472b2b385f30384ce14a982",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x12b6893ce26ea6341919fe289212ef77e51688c8",
+      "symbol": "TAMA",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "version": "univ2",
+    "address": "0x99b42f2b49c395d2a77d973f6009abb5d67da343",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x25f8087ead173b73d6e8b84329989a8eea16cf73",
+      "symbol": "YGG",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "pancakeswap",
+    "version": "univ2",
+    "address": "0x481e2f30940949cf6a3e0f4617e3d0b16bbb03d1",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x830a8512db4f6fca51968593e2667156c2c483a8",
+      "symbol": "WEN",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "pancakeswap",
+    "version": "univ2",
+    "address": "0x89b27f4737957ea394b215204093197687e76921",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xd0115af3a9ea82bed85c128bc724dbaa253d5017",
+      "symbol": "Aicat",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "pancakeswap",
+    "version": "univ2",
+    "address": "0x0d2d5c3dcb2b4eb1a1b7806296e30a4dc5e8284b",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x490a153c5bfb74c0934dd250a738c901b5ce3cc8",
+      "symbol": "ELI",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "pancakeswap",
+    "version": "univ2",
+    "address": "0x5b66a1897501f5bb931209857953a174759b87b2",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xf0ccf5274823456c2ddb28197f905550ec3dc938",
+      "symbol": "TCD",
+      "decimals": 8
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "pancakeswapv3",
+    "version": "univ3",
+    "address": "0x32600e01dfaebad27dac6b68902abc082219b526",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d",
+      "symbol": "FUSE",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "pancakeswapv3",
+    "version": "univ3",
+    "address": "0xc7f25e2fcc474816effd9be316f2e51ccef90ceb",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x5283d291dbcf85356a21ba090e6db59121208b44",
+      "symbol": "BLUR",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "pancakeswapv3",
+    "version": "univ3",
+    "address": "0x392d0f0b7fe5161db89f2db87d33a20682c12a2b",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
+      "symbol": "ENS",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "pancakeswapv3",
+    "version": "univ3",
+    "address": "0x8cb5032caf8e802d8db0d2eae544e11809a0f2c0",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x16ba14849f8336e205a54ea0fac41cf3600ba4af",
+      "symbol": "FPSYOP",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "pancakeswapv3",
+    "version": "univ3",
+    "address": "0x9c4fffe1abfe156ac161fc83aa7e04d51bd4bf88",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc1d0aeafaa1c4a631fd5b96ddd138e71c5de2b8b",
+      "symbol": "SQUAT",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "pancakeswapv3",
+    "version": "univ3",
+    "address": "0x7b26e6f221010b095ac6cc7b049b715b30c02d1a",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc41d2b3f3fa4f927104be7011f6f4debd1764ffe",
+      "symbol": "BitT",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushiv3",
+    "version": "univ3",
+    "address": "0x9fa0d7b67175f6b17801dfe1baad8bddd59931b8",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x9d80d26e1db4dac67a7689ea8d88ae3f871383e3",
+      "symbol": "LFG",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushiv3",
+    "version": "univ3",
+    "address": "0x9130f1c937bb57da4e0e5ad7f6081d40e6a29455",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0x97ac4a2439a47c07ad535bb1188c989dae755341",
+      "symbol": "WPLS",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushiv3",
+    "version": "univ3",
+    "address": "0x5a7eed1100d494d902e86bc700025e45a8c18b4c",
+    "token0": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "ethereum",
+      "address": "0xef8e456967122db4c3c160314bde8d2602ad6199",
+      "symbol": "WAGMI",
+      "decimals": 9
+    }
   }
 ]

@@ -108,6 +108,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xe0b57feed45e7d908f2d0dacd26f113cf26715bf', // Ironbank CVX
     '0xae7ab96520de3a18e5e111b5eaab095312d7fe84', // stETH
     '0x9ee91f9f426fa633d227f7a9b000e28b9dfd8599', // stMATIC
+    '0x889edc2edab5f40e902b864ad4d7ade8e412f9b1', // stETH withdrawal queue
     '0x24179cd81c9e782a4096035f7ec97fb8b783e007', // Liquity borrow operation
     '0xa39739ef8b0231dbfa0dcda07d7e29faabcf4bb2', // Liquity trove manager
     '0x59728544b08ab483533076417fbbb2fd0b17ce3a', // Looksrare exchange

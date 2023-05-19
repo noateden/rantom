@@ -166,5 +166,22 @@ const TopPoolCount = 50;
     startBlock += 1000;
   }
 
-  fs.writeFileSync('./configs/data/UniLiquidityPools.json', JSON.stringify(allPools));
+  const savePools: Array<UniLiquidityPool> = JSON.parse(
+    fs.readFileSync('./configs/data/UniLiquidityPools.json').toString()
+  );
+
+  const exitedPools: { [key: string]: boolean } = {};
+  if (fs.existsSync('./configs/data/UniLiquidityPools.json')) {
+    for (const savedPool of savePools) {
+      exitedPools[savedPool.address] = true;
+    }
+  }
+
+  for (const pool of allPools) {
+    if (!exitedPools[pool.address]) {
+      savePools.push(pool);
+    }
+  }
+
+  fs.writeFileSync('./configs/data/UniLiquidityPools.json', JSON.stringify(savePools));
 })();

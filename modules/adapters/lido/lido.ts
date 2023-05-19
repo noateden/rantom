@@ -14,6 +14,7 @@ const Signatures: { [key: string]: string } = {
   Submitted: '0x96a25c8ce0baabc1fdefd93e9ed25d8e092a3332f3aa9a41722b5697231d1d1a',
   SubmitEvent: '0x98d2bc018caf34c71a8f920d9d93d4ed62e9789506b74087b48570c17b28ed99',
   ClaimTokensEvent: '0xaca94a3466fab333b79851ab29b0715612740e4ae0d891ef8e9bd2a1bf5e24dd',
+  WithdrawalClaimed: '0x6ad26c5e238e7d002799f9a5db07e81ef14e37386ae03496d7a7ef04713e145b',
 };
 
 export class LidoAdapter extends Adapter {
@@ -24,6 +25,7 @@ export class LidoAdapter extends Adapter {
       [Signatures.Submitted]: EventSignatureMapping[Signatures.Submitted],
       [Signatures.SubmitEvent]: EventSignatureMapping[Signatures.SubmitEvent],
       [Signatures.ClaimTokensEvent]: EventSignatureMapping[Signatures.ClaimTokensEvent],
+      [Signatures.WithdrawalClaimed]: EventSignatureMapping[Signatures.WithdrawalClaimed],
     });
   }
 
@@ -49,6 +51,18 @@ export class LidoAdapter extends Adapter {
               ? ''
               : ' using referral address ' + normalizeAddress(event.referral)
           } on ${this.config.protocol} chain ${options.chain}`,
+        };
+      } else if (signature === Signatures.WithdrawalClaimed) {
+        const owner = normalizeAddress(event.owner);
+        const receiver = normalizeAddress(event.receiver);
+        const amount = new BigNumber(event.amountOfETH).dividedBy(1e18).toString(10);
+        return {
+          protocol: this.config.protocol,
+          action: 'withdraw',
+          tokens: [Tokens.ethereum.ETH],
+          tokenAmounts: [amount],
+          addresses: [owner, receiver],
+          readableString: `${owner} withdraw ${amount} ETH on ${this.config.protocol} chain ${options.chain}`,
         };
       } else if (signature === Signatures.SubmitEvent) {
         const amount = new BigNumber(event._amount).dividedBy(1e18).toString(10);
