@@ -163,8 +163,6 @@ export const Signatures: { [key: string]: string } = {
   'DepositEvent(bytes,bytes,bytes,bytes,bytes)': '0x649bbc62d0e31342afea4e5cd82d4049e7e1ee912fc0889aa790803be39038c5',
   'NewTransmission(uint32,int192,address,int192[],bytes,bytes32)':
     '0xf6a97944f31ea060dfde0566e4167c1a1082551e64b60ecb14d599a9d023d451',
-  'Swapped2(bytes16,address,uint256,address,address,address,address,uint256,uint256,uint256)':
-    '0x974dd0442e0b8c00fdbaae504edea1412d63bc110294a98b3c61ddcd0e703aa8',
   'Deposit(bytes32,uint32,uint256)': '0xa945e51eec50ab98c161376f0db4cf2aeba3ec92755fe2fcd388bdbbb80ff196',
   'Withdrawal(address,bytes32,address,uint256)': '0xe9e508bad6d4c3227e881ca19068f099da81b5164dd6d62b2eaf1e8bc6c34931',
 
@@ -422,4 +420,14 @@ export const Signatures: { [key: string]: string } = {
   // DefiSaver
   'ActionDirectEvent(address,string,bytes)': '0xf28c1e8e1a8c97027796e625e1ed041028c9642e14da6e7ad2c18838a59a2d8c',
   'RecipeEvent(address,string)': '0xb6cd938f99beba85b61cc813aa1c12ba1b95f797dfb6ddd567c0f361f3e77574',
+
+  // Paraswap v5
+  'BoughtV3(bytes16,address,uint256,address,address,address,address,uint256,uint256,uint256)':
+    '0x4cc7e95e48af62690313a0733e93308ac9a73326bc3c29f1788b1191c376d5b6',
+  'SwappedV3(bytes16,address,uint256,address,address,address,address,uint256,uint256,uint256)':
+    '0xe00361d207b252a464323eb23d45d42583e391f2031acdd2e9fa36efddd43cb0',
+
+  // Compound comet reward
+  'RewardClaimed(address,address,address,uint256)':
+    '0x2422cac5e23c46c890fdcf42d0c64757409df6832174df639337558f09d99c68',
 };

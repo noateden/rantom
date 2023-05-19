@@ -68,6 +68,32 @@ export const HardCodeTokens: { [key: string]: Token } = {
     decimals: 18,
   },
 
+  // DS Tokens
+  'erc20-ethereum-0x0d88ed6e74bbfd96b831231638b66c05571e824f': {
+    chain: 'ethereum',
+    address: '0x0d88ed6e74bbfd96b831231638b66c05571e824f',
+    symbol: 'AVT',
+    decimals: 18,
+  },
+  'erc20-ethereum-0x431ad2ff6a9c365805ebad47ee021148d6f7dbe0': {
+    chain: 'ethereum',
+    address: '0x431ad2ff6a9c365805ebad47ee021148d6f7dbe0',
+    symbol: 'DF',
+    decimals: 18,
+  },
+  'erc20-ethereum-0x8e0e57dcb1ce8d9091df38ec1bfc3b224529754a': {
+    chain: 'ethereum',
+    address: '0x8e0e57dcb1ce8d9091df38ec1bfc3b224529754a',
+    symbol: 'CAH',
+    decimals: 18,
+  },
+  'erc20-ethereum-0xcfe4eb08e33272d98cb31e37a7be78d5c1b740c1': {
+    chain: 'ethereum',
+    address: '0xcfe4eb08e33272d98cb31e37a7be78d5c1b740c1',
+    symbol: 'VB',
+    decimals: 18,
+  },
+
   // synapse protocol
   'avalanche:0x20a9dc684b4d0407ef8c9a302beaaa18ee15f656': {
     chain: 'avalanche',

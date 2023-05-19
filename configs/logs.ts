@@ -83,6 +83,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xb3319f5d18bc0d84dd1b4825dcde5d5f7266d407', // Compound ZRX
     '0xc3d688b66703497daa19211eedff47f25384cdc3', // Compound v3 USDC
     '0xa17581a9e3356d9a858b789d68b4d866e593ae94', // Compound v3 ETH
+    '0x1b0e765f6224c21223aea2af16c1c46e38885a40', // Compound comet reward
     '0xf403c135812408bfbe8713b5a23a04b3d48aae31', // Convex booster
     '0xcf50b810e57ac33b91dcf525c6ddd9881b139332', // Convex stake CVX earn CRV
     '0x3fe65692bfcd0e6cf84cb1e7d24108e434a7587e', // Convex Stake cvxCRV earn CRV
@@ -178,6 +179,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x8888882f8f843896699869179fb6e4f7e3b58888', // Morpho Compound
     '0x06af07097c9eeb7fd685c692751d5c66db49c215', // CHAI Token
     '0x84db6ee82b7cf3b47e8f19270abde5718b936670', // Ankr ETH staking
+    '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap v5 augustus swapper
   ],
 };
 

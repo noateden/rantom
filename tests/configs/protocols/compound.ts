@@ -313,4 +313,28 @@ export const Compound3ActionTestLogs: Array<TestLog> = [
     adapter: new Compoundv3Adapter(Compoundv3Configs, null),
     action: 'liquidate',
   },
+  {
+    chain: 'ethereum',
+    hash: '0x700267ead80d68fd7bf86a41ee44823e0abbd9e343cc36e421041070f2ab64c7',
+    sender: normalizeAddress('0x89be8f2da700ce27c7e1c4d06813e76a4172e352'),
+    address: normalizeAddress('0x1b0e765f6224c21223aea2af16c1c46e38885a40'),
+    log: {
+      address: '0x1b0e765f6224c21223aea2af16c1c46e38885a40',
+      topics: [
+        '0x2422cac5e23c46c890fdcf42d0c64757409df6832174df639337558f09d99c68',
+        '0x00000000000000000000000089be8f2da700ce27c7e1c4d06813e76a4172e352',
+        '0x00000000000000000000000089be8f2da700ce27c7e1c4d06813e76a4172e352',
+        '0x000000000000000000000000c00e94cb662c3520282e6f5717214004a7f26888',
+      ],
+      data: '0x0000000000000000000000000000000000000000000000004edcb7df68e2b000',
+      blockNumber: '0x107915f',
+      transactionHash: '0x700267ead80d68fd7bf86a41ee44823e0abbd9e343cc36e421041070f2ab64c7',
+      transactionIndex: '0x7',
+      blockHash: '0x4d623f916a52d6b8ec205bf558e66b1f82045708ed8b1899fc7ad64837eb6bff',
+      logIndex: '0x29',
+      removed: false,
+    },
+    adapter: new Compoundv3Adapter(Compoundv3Configs, null),
+    action: 'collect',
+  },
 ];

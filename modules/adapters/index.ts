@@ -23,7 +23,6 @@ import {
   ConvexConfigs,
   CowswapConfigs,
   CurveConfigs,
-  DefisaverConfigs,
   DodoConfigs,
   EnsConfigs,
   Eth2Configs,
@@ -49,6 +48,7 @@ import {
   OptimismConfigs,
   PancakeswapConfigs,
   PancakeswapV3Configs,
+  ParaswapConfigs,
   PendleConfigs,
   RaribleConfigs,
   RocketpoolConfigs,
@@ -90,7 +90,6 @@ import { ConicAdapter } from './conic/conic';
 import { ConvexAdapter } from './convex/convex';
 import { CowswapAdapter } from './cowswap/cowswap';
 import { CurveAdapter } from './curve/curve';
-import { DefisaverAdapter } from './defisaver/defisaver';
 import { DodoAdapter } from './dodo/dodo';
 import { EnsAdapter } from './ens/ens';
 import { Eth2Adapter } from './eth2/eth2';
@@ -114,6 +113,7 @@ import { MultichainAdapter } from './multichain/multichain';
 import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
 import { Pancakeswapv3Adapter } from './pancakeswap/pancakeswapv3';
+import { ParaswapAdapter } from './paraswap/paraswap';
 import { PendleAdapter } from './pendle/pendle';
 import { RaribleAdapter } from './rarible/rarible';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
@@ -195,6 +195,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new MorphoAdapter(MorphoConfigs, providers),
     new ChaiAdapter(ChaiConfigs, providers),
     new AnkrAdapter(AnkrConfigs, providers),
-    new DefisaverAdapter(DefisaverConfigs, providers),
+    new ParaswapAdapter(ParaswapConfigs, providers),
   ];
 }

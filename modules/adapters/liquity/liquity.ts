@@ -49,22 +49,35 @@ export class LiquityAdapter extends Adapter {
         signature === Signatures.TroveUpdated &&
         !compareAddress(address, this.config.staticData.troveManagerAddress)
       ) {
-        let action: KnownAction = 'borrow';
-        let debtAmount = '0';
-        let collateralAmount = '0';
-
         const borrower = normalizeAddress(event._borrower);
         const operation = Number(event._operation);
         switch (operation) {
           case 0:
           case 1: {
             // open or close trove
-            debtAmount = new BigNumber(event._debt).dividedBy(1e18).toString(10);
-            collateralAmount = new BigNumber(event._coll).dividedBy(1e18).toString(10);
+            const debtAmount = new BigNumber(event._debt).dividedBy(1e18).toString(10);
+            const collateralAmount = new BigNumber(event._coll).dividedBy(1e18).toString(10);
 
-            action = operation === 0 ? 'borrow' : 'repay';
+            const action = operation === 0 ? 'borrow' : 'repay';
 
-            break;
+            return {
+              protocol: this.config.protocol,
+              action: action,
+              addresses: [borrower],
+              tokens: [Tokens.ethereum.LUSD],
+              tokenAmounts: [debtAmount],
+              readableString: `${borrower} ${action} ${debtAmount} ${Tokens.ethereum.LUSD.symbol} on ${this.config.protocol} chain ${chain}`,
+              subActions: [
+                {
+                  protocol: this.config.protocol,
+                  action: 'deposit',
+                  addresses: [borrower],
+                  tokens: [Tokens.ethereum.NativeCoin],
+                  tokenAmounts: [collateralAmount],
+                  readableString: `${borrower} deposit ${collateralAmount} ${Tokens.ethereum.NativeCoin.symbol} on ${this.config.protocol} chain ${chain}`,
+                },
+              ],
+            };
           }
           case 2: {
             // get trove snapshot from previous block
@@ -87,45 +100,31 @@ export class LiquityAdapter extends Adapter {
             const previousColl = new BigNumber(troveInfo.coll);
             const newColl = new BigNumber(event._coll);
 
-            debtAmount = newDebt.minus(previousDebt).abs().dividedBy(1e18).toString(10);
-            collateralAmount = newColl.minus(previousColl).abs().dividedBy(1e18).toString(10);
+            const debtAmount = newDebt.minus(previousDebt).abs().dividedBy(1e18).toString(10);
+            const collateralAmount = newColl.minus(previousColl).abs().dividedBy(1e18).toString(10);
 
-            if (debtAmount !== '0') {
-              // adjust debt balance
-              action = previousDebt.lt(newDebt) ? 'borrow' : 'repay';
-            } else {
-              // adjust coll balance
-              action = previousColl.lt(newColl) ? 'deposit' : 'withdraw';
-            }
-
-            break;
+            const action = previousDebt.lt(newDebt) ? 'borrow' : 'repay';
+            return {
+              protocol: this.config.protocol,
+              action: action,
+              addresses: [borrower],
+              tokens: [Tokens.ethereum.LUSD],
+              tokenAmounts: [debtAmount],
+              readableString: `${borrower} ${action} ${debtAmount} ${Tokens.ethereum.LUSD.symbol} on ${this.config.protocol} chain ${chain}`,
+              subActions: [
+                {
+                  protocol: this.config.protocol,
+                  action: previousColl.lt(newColl) ? 'deposit' : 'withdraw',
+                  addresses: [borrower],
+                  tokens: [Tokens.ethereum.NativeCoin],
+                  tokenAmounts: [collateralAmount],
+                  readableString: `${borrower} ${
+                    previousColl.lt(newColl) ? 'deposit' : 'withdraw'
+                  } ${collateralAmount} ${Tokens.ethereum.NativeCoin.symbol} on ${this.config.protocol} chain ${chain}`,
+                },
+              ],
+            };
           }
-        }
-
-        if (action === 'borrow' || action === 'repay') {
-          return {
-            protocol: this.config.protocol,
-            action: action,
-            addresses: [borrower],
-            tokens: [Tokens.ethereum.LUSD],
-            tokenAmounts: [debtAmount],
-            readableString: `${borrower} ${action} ${debtAmount} ${Tokens.ethereum.LUSD.symbol} on ${this.config.protocol} chain ${chain}`,
-            addition: {
-              collateral: {
-                token: Tokens.ethereum.NativeCoin,
-                amount: collateralAmount,
-              },
-            },
-          };
-        } else if (action === 'deposit' || action === 'withdraw') {
-          return {
-            protocol: this.config.protocol,
-            action: action,
-            addresses: [borrower],
-            tokens: [Tokens.ethereum.NativeCoin],
-            tokenAmounts: [collateralAmount],
-            readableString: `${borrower} ${action} ${collateralAmount} ${Tokens.ethereum.NativeCoin.symbol} on ${this.config.protocol} chain ${chain}`,
-          };
         }
       } else if (signature === Signatures.TroveLiquidated) {
         const borrower = normalizeAddress(event._borrower);

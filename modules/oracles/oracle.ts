@@ -193,8 +193,8 @@ export class OracleProvider extends CachingProvider implements IOracleProvider {
     // save cache
     await this.setCachingData(priceCacheKey, {
       chain: options.chain,
-      token: cachingPrice.token,
-      spotPriceUsd: cachingPrice.spotPriceUsd,
+      token: config.token,
+      spotPriceUsd: spotPriceUsd,
       timestamp: timestamp,
     });
 
