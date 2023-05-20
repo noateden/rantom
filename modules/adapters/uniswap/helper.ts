@@ -1,6 +1,7 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
+import UniswapFactoryV2 from '../../../configs/abi/uniswap/UniswapV2Factory.json';
 import UniswapPoolAbiV2 from '../../../configs/abi/uniswap/UniswapV2Pair.json';
 import UniswapPoolAbiV3 from '../../../configs/abi/uniswap/UniswapV3Pool.json';
 import EnvConfig from '../../../configs/envConfig';
@@ -295,5 +296,18 @@ export class UniswapHelper {
     } catch (e: any) {}
 
     return null;
+  }
+
+  public static async getFactoryPoolV2(
+    chain: string,
+    factoryAddress: string,
+    token0: string,
+    token1: string
+  ): Promise<string> {
+    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+    const contract = new web3.eth.Contract(UniswapFactoryV2 as any, factoryAddress);
+    const pairAddress = await contract.methods.getPair(token0, token1).call();
+
+    return normalizeAddress(pairAddress);
   }
 }

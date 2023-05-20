@@ -17,7 +17,7 @@ import { ExactlyContracts } from '../../configs/contracts/exactly';
 import { FraxethContracts } from '../../configs/contracts/fraxeth';
 import { FraxlendContracts } from '../../configs/contracts/fraxlend';
 import { GearboxContracts } from '../../configs/contracts/gearbox';
-import { KyberswapAggregatorContracts } from '../../configs/contracts/kyperswap';
+import { KyberswapClassicContracts } from '../../configs/contracts/kyperswap';
 import { LidoContracts } from '../../configs/contracts/lido';
 import { LiquityContracts } from '../../configs/contracts/liquity';
 import { LybraContracts } from '../../configs/contracts/lybra';
@@ -53,7 +53,7 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     stakewise: new ContractWorker(providers, StakewiseContracts),
     liquity: new ContractWorker(providers, LiquityContracts),
     conic: new ContractWorker(providers, ConicContracts),
-    kyberswap: new ContractWorker(providers, KyberswapAggregatorContracts),
+    kyberswap: new ContractWorker(providers, KyberswapClassicContracts),
     arrakis: new ContractWorker(providers, ArrakisContracts),
     lybra: new ContractWorker(providers, LybraContracts),
     pendle: new ContractWorker(providers, PendleContracts),

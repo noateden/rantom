@@ -6,15 +6,18 @@ import Web3 from 'web3';
 
 import UniswapV3FactoryAbi from '../configs/abi/uniswap/UniswapV3Factory.json';
 import UniswapV3PoolAbi from '../configs/abi/uniswap/UniswapV3Pool.json';
+import { AddressZero } from '../configs/constants';
 import EnvConfig from '../configs/envConfig';
 import {
+  KyberswapClassicConfigs,
   PancakeswapConfigs,
   PancakeswapV3Configs,
   SushiConfigs,
   Uniswapv2Configs,
   Uniswapv3Configs,
 } from '../configs/protocols';
-import { normalizeAddress } from '../lib/helper';
+import { compareAddress, normalizeAddress } from '../lib/helper';
+import { KyberHelper } from '../modules/adapters/kyberswap/helper';
 import { Web3HelperProvider } from '../services/web3';
 import { ProtocolConfig } from '../types/configs';
 import { UniLiquidityPool } from '../types/domains';
@@ -40,6 +43,7 @@ const TopPoolCount = 50;
     SushiConfigs,
     PancakeswapConfigs,
     PancakeswapV3Configs,
+    KyberswapClassicConfigs,
   ];
 
   for (const config of configs) {
@@ -179,7 +183,16 @@ const TopPoolCount = 50;
 
   for (const pool of allPools) {
     if (!exitedPools[pool.address]) {
-      savePools.push(pool);
+      // transform kyberswap-classic pools
+      if (pool.protocol === 'kyberswap-classic') {
+        pool.address = await KyberHelper.getKyberswapClassicPool('ethereum', pool.token0.address, pool.token1.address);
+      }
+
+      if (!compareAddress(pool.address, AddressZero)) {
+        savePools.push(pool);
+      } else {
+        console.log(`Ignore protocol${pool.protocol} token:${pool.token0.symbol}-${pool.token1.symbol}`);
+      }
     }
   }
 
