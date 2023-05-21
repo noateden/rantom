@@ -4,4 +4,7 @@ export const Functions: { [key: string]: string } = {
 
   // defi saver | executeRecipe(Recipe)
   defisaverExecuteRecipe: '0x0c2c8750',
+
+  // metamask swap router swap
+  metamaskRouterSwap: '0x5f575529',
 };

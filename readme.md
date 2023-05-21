@@ -81,6 +81,7 @@ yarn start --help
 | Chai Money           | Transfer                                                                                                             |     🌱 |
 | Ankr                 | StakeConfirmed, PendingUnstake, RewardsDistributed, RewardsClaimed                                                   |     🌱 |
 | Paraswap             | BoughtV3, SwappedV3                                                                                                  |     🌱 |
+| Metamask             | Swap                                                                                                                 |     🌱 |
 
 ### Nft Marketplace
 

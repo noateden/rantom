@@ -42,6 +42,7 @@ import {
   LoopringConfigs,
   LybraConfigs,
   MakerConfigs,
+  MetamaskConfigs,
   MorphoConfigs,
   MultichainConfigs,
   OpenseaConfigs,
@@ -108,6 +109,7 @@ import { LooksrareAdapter } from './looksrare/looksrare';
 import { LoopringAdapter } from './loopring/loopring';
 import { LybraAdapter } from './lybra/lybra';
 import { MakerAdapter } from './maker/maker';
+import { MetamaskAdapter } from './metamask/metamask';
 import { MorphoAdapter } from './morpho/morpho';
 import { MultichainAdapter } from './multichain/multichain';
 import { OpenseaAdapter } from './opensea/opensea';
@@ -196,5 +198,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new ChaiAdapter(ChaiConfigs, providers),
     new AnkrAdapter(AnkrConfigs, providers),
     new ParaswapAdapter(ParaswapConfigs, providers),
+    new MetamaskAdapter(MetamaskConfigs, providers),
   ];
 }

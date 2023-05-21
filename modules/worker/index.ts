@@ -22,6 +22,7 @@ import { LidoContracts } from '../../configs/contracts/lido';
 import { LiquityContracts } from '../../configs/contracts/liquity';
 import { LybraContracts } from '../../configs/contracts/lybra';
 import { MakerContracts } from '../../configs/contracts/maker';
+import { MetamaskContracts } from '../../configs/contracts/metamask';
 import { MorphoContracts } from '../../configs/contracts/morpho';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { ParaswapContracts } from '../../configs/contracts/paraswap';
@@ -69,5 +70,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     ankr: new ContractWorker(providers, AnkrContracts),
     paraswap: new ContractWorker(providers, ParaswapContracts),
     compoundv3: new ContractWorker(providers, Compoundv3Contracts),
+    metamask: new ContractWorker(providers, MetamaskContracts),
   };
 }

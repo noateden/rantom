@@ -1789,3 +1789,13 @@ export const DefisaverConfigs: ProtocolConfig = {
     actions: DefisaverActions,
   },
 };
+
+export const MetamaskConfigs: ProtocolConfig = {
+  protocol: 'metamask',
+  categories: ['dexAggregator'],
+  contracts: {
+    ethereum: [
+      '0x881d40237659c251811cec9c364ef91dc08d300c', // Swap router
+    ],
+  },
+};
