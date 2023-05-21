@@ -4,6 +4,7 @@ import {
   Aavev3Configs,
   AbracadabraConfigs,
   AgilityConfigs,
+  AirswapConfigs,
   AnkrConfigs,
   ApecoinConfigs,
   ArrakisConfigs,
@@ -72,6 +73,7 @@ import { Aavev2Adapter } from './aave/aavev2';
 import { Aavev3Adapter } from './aave/aavev3';
 import { AbracadabraAdapter } from './abracadabra/abracadabra';
 import { AgilityAdapter } from './agility/agility';
+import { AirswapAdapter } from './airswap/airswap';
 import { AnkrAdapter } from './ankr/ankr';
 import { ApecoinAdapter } from './apecoin/apecoin';
 import { ArrakisAdapter } from './arrakis/arrakis';
@@ -199,5 +201,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new AnkrAdapter(AnkrConfigs, providers),
     new ParaswapAdapter(ParaswapConfigs, providers),
     new MetamaskAdapter(MetamaskConfigs, providers),
+    new AirswapAdapter(AirswapConfigs, providers),
   ];
 }

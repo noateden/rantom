@@ -1,5 +1,6 @@
 import { AbracadabraContracts } from '../../configs/contracts/abracadabra';
 import { AgilityContracts } from '../../configs/contracts/agility';
+import { AirswapContracts } from '../../configs/contracts/airswap';
 import { AnkrContracts } from '../../configs/contracts/ankr';
 import { ArrakisContracts } from '../../configs/contracts/arrakis';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
@@ -71,5 +72,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     paraswap: new ContractWorker(providers, ParaswapContracts),
     compoundv3: new ContractWorker(providers, Compoundv3Contracts),
     metamask: new ContractWorker(providers, MetamaskContracts),
+    airswap: new ContractWorker(providers, AirswapContracts),
   };
 }

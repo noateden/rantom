@@ -430,4 +430,8 @@ export const Signatures: { [key: string]: string } = {
   // Compound comet reward
   'RewardClaimed(address,address,address,uint256)':
     '0x2422cac5e23c46c890fdcf42d0c64757409df6832174df639337558f09d99c68',
+
+  // Airswap
+  'Swap(uint256,uint256,address,address,uint256,uint256,address,address,uint256)':
+    '0x06dfeb25e76d44e08965b639a9d9307df8e1c3dbe2a6364194895e9c3992f033',
 };

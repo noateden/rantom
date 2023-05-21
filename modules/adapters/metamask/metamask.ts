@@ -68,17 +68,29 @@ export class MetamaskAdapter extends Adapter {
                   .dividedBy(new BigNumber(10).pow(token0.decimals))
                   .toString(10);
 
-                const callData = transactionParams[3].slice(0, 258);
-                const callParams = web3.eth.abi.decodeParameters(
-                  ['address', 'address', 'uint256', 'uint256'],
-                  callData
-                );
+                let token1Address = null;
+                let amount1 = '0';
+                if (transactionParams[0] === 'airswapLight3FeeDynamic') {
+                  const callData = transactionParams[3].slice(0, 322);
+                  const parsedParams = web3.eth.abi.decodeParameters(
+                    ['uint256', 'uint256', 'address', 'address', 'uint256'],
+                    callData
+                  );
+                  token1Address = parsedParams[3].toString();
+                  amount1 = parsedParams[4].toString();
+                } else {
+                  const callData = transactionParams[3].slice(0, 258);
+                  const parsedParams = web3.eth.abi.decodeParameters(
+                    ['address', 'address', 'uint256', 'uint256'],
+                    callData
+                  );
+                  token1Address = parsedParams[1].toString();
+                  amount1 = parsedParams[3].toString();
+                }
 
-                const token1 = await this.getWeb3Helper().getErc20Metadata(chain, callParams[1].toString());
+                const token1 = await this.getWeb3Helper().getErc20Metadata(chain, token1Address);
                 if (token1) {
-                  let amount1 = new BigNumber(callParams[3].toString())
-                    .dividedBy(new BigNumber(10).pow(token1.decimals))
-                    .toString(10);
+                  amount1 = new BigNumber(amount1).dividedBy(new BigNumber(10).pow(token1.decimals)).toString(10);
 
                   // the amount 1 is the minimum amount was passed by metamask
                   // we need to find out the exact amount trader was received

@@ -2,6 +2,7 @@ import { TestLog } from '../types';
 import { AaveActionTestLogs } from './protocols/aave';
 import { AbracadabraActionTestLogs } from './protocols/abracadabra';
 import { AgilityActionTestLogs } from './protocols/agility';
+import { AirswapActionTestLogs } from './protocols/airswap';
 import { AnkrActionTestLogs } from './protocols/ankr';
 import { ApecoinActionTestLogs } from './protocols/apecoin';
 import { ArrakisActionTestLogs } from './protocols/arrakis';
@@ -36,6 +37,7 @@ import { LooksrareActionTestLogs } from './protocols/looksrare';
 import { LoopringActionTestLogs } from './protocols/loopring';
 import { LybraActionTestLogs } from './protocols/lybra';
 import { MakerActionTestLogs } from './protocols/maker';
+import { MetamaskActionTestLogs } from './protocols/metamask';
 import { MorphoActionTestLogs } from './protocols/morpho';
 import { MultichainActionTestLogs } from './protocols/multichain';
 import { OpenseaActionTestLogs } from './protocols/opensea';
@@ -110,4 +112,6 @@ export const ActionTestLogs: Array<TestLog> = [
   ...MorphoActionTestLogs,
   ...ChaiActionTestLogs,
   ...AnkrActionTestLogs,
+  ...MetamaskActionTestLogs,
+  ...AirswapActionTestLogs,
 ];

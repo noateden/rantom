@@ -44,7 +44,7 @@ export class CowswapAdapter extends Adapter {
           addresses: [owner],
           tokens: [token0, token1],
           tokenAmounts: [amount0, amount1],
-          readableString: `${owner} trade ${amount0} ${token0.symbol} for ${amount1} ${token0.symbol} on ${this.config.protocol} chain ${chain}`,
+          readableString: `${owner} trade ${amount0} ${token0.symbol} for ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
         };
       }
     }

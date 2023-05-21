@@ -1799,3 +1799,13 @@ export const MetamaskConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const AirswapConfigs: ProtocolConfig = {
+  protocol: 'airswap',
+  categories: ['dexAggregator'],
+  contracts: {
+    ethereum: [
+      '0x522d6f36c95a1b6509a14272c17747bbb582f2a6', // Swap V3
+    ],
+  },
+};

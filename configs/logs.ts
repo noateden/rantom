@@ -180,6 +180,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x06af07097c9eeb7fd685c692751d5c66db49c215', // CHAI Token
     '0x84db6ee82b7cf3b47e8f19270abde5718b936670', // Ankr ETH staking
     '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap v5 augustus swapper
+    '0x522d6f36c95a1b6509a14272c17747bbb582f2a6', // Airswap v3
   ],
 };
 
