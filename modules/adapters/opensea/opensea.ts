@@ -26,11 +26,7 @@ export class OpenseaAdapter extends Adapter {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
-    if (
-      this.config.contracts[chain] &&
-      this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1 &&
-      this.eventMappings[signature]
-    ) {
+    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
       const web3 = new Web3();
       const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
@@ -71,12 +67,14 @@ export class OpenseaAdapter extends Adapter {
           let tokenAmount: BigNumber = new BigNumber(0);
 
           for (const consideration of considerations) {
-            const payToken = await this.getWeb3Helper().getErc20Metadata(chain, consideration.token);
-            if (payToken) {
-              token = payToken;
-              tokenAmount = tokenAmount.plus(
-                new BigNumber(consideration.amount).dividedBy(new BigNumber(10).pow(payToken.decimals))
-              );
+            if (Number(consideration.itemType) === 0 || Number(consideration.itemType) === 1) {
+              const payToken = await this.getWeb3Helper().getErc20Metadata(chain, consideration.token);
+              if (payToken) {
+                token = payToken;
+                tokenAmount = tokenAmount.plus(
+                  new BigNumber(consideration.amount).dividedBy(new BigNumber(10).pow(payToken.decimals))
+                );
+              }
             }
           }
 
