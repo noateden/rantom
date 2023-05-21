@@ -82,7 +82,7 @@ yarn start --help
 | Ankr                 | StakeConfirmed, PendingUnstake, RewardsDistributed, RewardsClaimed                                                   |     🌱 |
 | Paraswap             | BoughtV3, SwappedV3                                                                                                  |     🌱 |
 | Metamask             | Swap                                                                                                                 |     🌱 |
-| Airswap              | Swap                                                                                                                 |     🌱 |
+| Airswap              | SwapV3, SwapV2                                                                                                       |     🌱 |
 
 ### Nft Marketplace
 

@@ -32,7 +32,7 @@ export class ZeroxAdapter extends Adapter {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
-    if (this.config.contracts[chain].indexOf(address) !== 1 && EventSignatureMapping[signature]) {
+    if (this.config.contracts[chain].indexOf(address) !== -1 && EventSignatureMapping[signature]) {
       const web3 = new Web3();
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 

@@ -10,7 +10,8 @@ import { AdapterParseLogOptions } from '../../../types/options';
 import { Adapter } from '../adapter';
 
 const Signatures = {
-  Swap: '0x06dfeb25e76d44e08965b639a9d9307df8e1c3dbe2a6364194895e9c3992f033',
+  SwapV2: '0xd5fe17cd50e0d3d39b905ea598bbabccf2f8cda62a3b2fc64e09de00247a4724',
+  SwapV3: '0x06dfeb25e76d44e08965b639a9d9307df8e1c3dbe2a6364194895e9c3992f033',
 };
 
 export class AirswapAdapter extends Adapter {
@@ -18,7 +19,8 @@ export class AirswapAdapter extends Adapter {
 
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
     super(config, providers, {
-      [Signatures.Swap]: EventSignatureMapping[Signatures.Swap],
+      [Signatures.SwapV2]: EventSignatureMapping[Signatures.SwapV2],
+      [Signatures.SwapV3]: EventSignatureMapping[Signatures.SwapV3],
     });
   }
 
@@ -26,11 +28,11 @@ export class AirswapAdapter extends Adapter {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
-    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== 1) {
-      if (signature === Signatures.Swap) {
-        const web3 = new Web3();
-        const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
+    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
+      const web3 = new Web3();
+      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
+      if (signature === Signatures.SwapV3 || signature === Signatures.SwapV2) {
         const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event.senderToken);
         const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event.signerToken);
 

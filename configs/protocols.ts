@@ -1805,6 +1805,7 @@ export const AirswapConfigs: ProtocolConfig = {
   categories: ['dexAggregator'],
   contracts: {
     ethereum: [
+      '0x4572f2554421bd64bef1c22c8a81840e8d496bea', // Swap V2
       '0x522d6f36c95a1b6509a14272c17747bbb582f2a6', // Swap V3
     ],
   },

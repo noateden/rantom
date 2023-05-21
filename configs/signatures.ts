@@ -434,4 +434,6 @@ export const Signatures: { [key: string]: string } = {
   // Airswap
   'Swap(uint256,uint256,address,address,uint256,uint256,address,address,uint256)':
     '0x06dfeb25e76d44e08965b639a9d9307df8e1c3dbe2a6364194895e9c3992f033',
+  'Swap(uint256,uint256,address,uint256,uint256,address,address,uint256,uint256,address,address,uint256,uint256,address)':
+    '0xd5fe17cd50e0d3d39b905ea598bbabccf2f8cda62a3b2fc64e09de00247a4724',
 };
