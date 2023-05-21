@@ -30,6 +30,9 @@ const envConfig: EnvConfig = {
       nodeRpc: String(process.env.RANTOM_ETHEREUM_NODE),
     },
   },
+  security: {
+    systemApiKey: String(process.env.RANTOM_SYSTEM_API_KEY),
+  },
   ipfs: {
     uploadGateway: String(process.env.RANTOM_IPFS_UPLOAD_GATEWAY),
     contentGateway: String(process.env.RANTOM_IPFS_CONTENT_GATEWAY),

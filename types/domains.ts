@@ -130,6 +130,9 @@ export interface ProtocolSystemReport {
   // latest event timestamp which found from block logs
   latestEventTimestamp: number;
 
+  // oldest event timestamp which found from block logs
+  oldestEventTimestamp: number;
+
   // total number of events all time which found from block logs
   totalEventAllTime: number;
 }

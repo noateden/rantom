@@ -77,6 +77,9 @@ export interface EnvConfig {
   blockchains: {
     [key: string]: Blockchain;
   };
+  security: {
+    systemApiKey: string;
+  };
   ipfs: {
     uploadGateway: string;
     contentGateway: string;

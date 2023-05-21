@@ -27,16 +27,23 @@ export class ReportProvider implements IReportProvider {
 
     systemReport.protocols = await collections.logsCollection.distinct('protocol');
     for (const protocol of systemReport.protocols) {
+      console.log(protocol)
       const count = await collections.logsCollection.countDocuments({ protocol: protocol, action: { $exists: true } });
-      const events = await collections.logsCollection
+      const latestEvents = await collections.logsCollection
         .find({ protocol: protocol })
         .sort({ timestamp: -1 })
+        .limit(1)
+        .toArray();
+      const oldestEvents = await collections.logsCollection
+        .find({ protocol: protocol })
+        .sort({ timestamp: 1 })
         .limit(1)
         .toArray();
 
       systemReport.reports.push({
         protocol: protocol,
-        latestEventTimestamp: events.length > 0 ? events[events.length - 1].timestamp : 0,
+        latestEventTimestamp: latestEvents.length > 0 ? latestEvents[0].timestamp : 0,
+        oldestEventTimestamp: oldestEvents.length > 0 ? oldestEvents[0].timestamp : 0,
         totalEventAllTime: count,
       });
     }
