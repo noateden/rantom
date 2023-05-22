@@ -107,53 +107,66 @@ export class ContractWorker implements IContractWorker {
       for (const log of logs) {
         for (const adapter of this.adapters) {
           if (adapter.supportedSignature(log.topics[0])) {
-            const action: TransactionAction | null = await adapter.tryParsingActions({
-              chain: contract.chain,
-              sender: '',
-              address: normalizeAddress(log.address),
-              hash: log.transactionHash,
-              topics: log.topics,
-              data: log.data,
-            });
-            if (action) {
-              let timestamp =
-                blockTimes && blockTimes[Number(log.blockNumber)]
-                  ? Number(blockTimes[Number(log.blockNumber)].timestamp)
-                  : null;
-              if (!timestamp) {
-                timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, log.blockNumber);
-              }
+            try {
+              const action: TransactionAction | null = await adapter.tryParsingActions({
+                chain: contract.chain,
+                sender: '',
+                address: normalizeAddress(log.address),
+                hash: log.transactionHash,
+                topics: log.topics,
+                data: log.data,
+              });
+              if (action) {
+                let timestamp =
+                  blockTimes && blockTimes[Number(log.blockNumber)]
+                    ? Number(blockTimes[Number(log.blockNumber)].timestamp)
+                    : null;
+                if (!timestamp) {
+                  timestamp = await this.providers.web3Helper.getBlockTime(contract.chain, log.blockNumber);
+                }
 
-              operations.push({
-                updateOne: {
-                  filter: {
-                    chain: contract.chain,
-                    contract: normalizeAddress(log.address),
-                    transactionHash: log.transactionHash,
-                    logIndex: log.logIndex,
-                  },
-                  update: {
-                    $set: {
+                operations.push({
+                  updateOne: {
+                    filter: {
                       chain: contract.chain,
                       contract: normalizeAddress(log.address),
                       transactionHash: log.transactionHash,
                       logIndex: log.logIndex,
-                      blockNumber: log.blockNumber,
-                      timestamp: timestamp,
-
-                      protocol: action.protocol,
-                      action: action.action,
-                      addresses: action.addresses,
-                      tokens: action.tokens,
-                      amounts: action.tokenAmounts,
-                      addition: action.addition,
                     },
+                    update: {
+                      $set: {
+                        chain: contract.chain,
+                        contract: normalizeAddress(log.address),
+                        transactionHash: log.transactionHash,
+                        logIndex: log.logIndex,
+                        blockNumber: log.blockNumber,
+                        timestamp: timestamp,
+
+                        protocol: action.protocol,
+                        action: action.action,
+                        addresses: action.addresses,
+                        tokens: action.tokens,
+                        amounts: action.tokenAmounts,
+                        addition: action.addition,
+                      },
+                    },
+                    upsert: true,
                   },
-                  upsert: true,
+                });
+
+                break;
+              }
+            } catch (e: any) {
+              logger.onDebug({
+                service: this.name,
+                message: 'failed to parse event log',
+                props: {
+                  chain: contract.chain,
+                  protocol: contract.protocol,
+                  hash: log.transactionHash,
+                  topic: log.topics[0],
                 },
               });
-
-              break;
             }
           }
         }
