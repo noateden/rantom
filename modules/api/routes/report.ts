@@ -1,10 +1,10 @@
 import { Router } from 'express';
 
+import EnvConfig from '../../../configs/envConfig';
 import logger from '../../../lib/logger';
 import { GlobalProviders } from '../../../types/namespaces';
 import { ReportProvider } from '../../worker/reporter';
 import { writeResponseError } from '../helpers';
-import EnvConfig from "../../../configs/envConfig";
 
 export function getRouter(providers: GlobalProviders): Router {
   const router = Router({ mergeParams: true });

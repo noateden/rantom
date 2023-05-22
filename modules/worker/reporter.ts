@@ -27,7 +27,6 @@ export class ReportProvider implements IReportProvider {
 
     systemReport.protocols = await collections.logsCollection.distinct('protocol');
     for (const protocol of systemReport.protocols) {
-      console.log(protocol)
       const count = await collections.logsCollection.countDocuments({ protocol: protocol, action: { $exists: true } });
       const latestEvents = await collections.logsCollection
         .find({ protocol: protocol })

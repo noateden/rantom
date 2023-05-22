@@ -25,7 +25,7 @@ export class GetlogWorker implements IWorkerProvider {
   }
 
   // check where this contract is whitelisted or not
-  private async shouldGetThisLog(chain: string, log: any): Promise<boolean> {
+  private shouldGetThisLog(chain: string, log: any): boolean {
     return ContractWhitelistedGetLogs[chain].indexOf(normalizeAddress(log.address)) !== -1;
   }
 
@@ -77,74 +77,77 @@ export class GetlogWorker implements IWorkerProvider {
 
       const operations: Array<any> = [];
       for (const log of logs) {
+        if (!this.shouldGetThisLog(chain, log)) {
+          continue;
+        }
+
         // now we try to pass log into adapters to get readable event data
         for (const adapter of this.adapters) {
           if (adapter.supportedSignature(log.topics[0])) {
-            // only sync whitelisted contracts
-            if (await this.shouldGetThisLog(chain, log)) {
-              try {
-                const action: TransactionAction | null = await adapter.tryParsingActions({
-                  chain: chain,
-                  sender: '', // adapter should get sender address
-                  address: normalizeAddress(log.address),
-                  hash: log.transactionHash,
-                  topics: log.topics,
-                  data: log.data,
-                  blockNumber: log.blockNumber,
-                });
-                if (action) {
-                  let timestamp =
-                    blockTimes && blockTimes[Number(log.blockNumber)]
-                      ? Number(blockTimes[Number(log.blockNumber)].timestamp)
-                      : null;
-                  if (!timestamp) {
-                    timestamp = await this.providers.web3Helper.getBlockTime(chain, log.blockNumber);
-                  }
+            try {
+              const action: TransactionAction | null = await adapter.tryParsingActions({
+                chain: chain,
+                sender: '', // adapter should get sender address
+                address: normalizeAddress(log.address),
+                hash: log.transactionHash,
+                topics: log.topics,
+                data: log.data,
+                blockNumber: log.blockNumber,
+              });
+              if (action) {
+                let timestamp =
+                  blockTimes && blockTimes[Number(log.blockNumber)]
+                    ? Number(blockTimes[Number(log.blockNumber)].timestamp)
+                    : null;
+                if (!timestamp) {
+                  timestamp = await this.providers.web3Helper.getBlockTime(chain, log.blockNumber);
+                }
 
-                  operations.push({
-                    updateOne: {
-                      filter: {
+                operations.push({
+                  updateOne: {
+                    filter: {
+                      chain: chain,
+                      contract: normalizeAddress(log.address),
+                      transactionHash: log.transactionHash,
+                      logIndex: log.logIndex,
+                    },
+                    update: {
+                      $set: {
                         chain: chain,
                         contract: normalizeAddress(log.address),
                         transactionHash: log.transactionHash,
                         logIndex: log.logIndex,
-                      },
-                      update: {
-                        $set: {
-                          chain: chain,
-                          contract: normalizeAddress(log.address),
-                          transactionHash: log.transactionHash,
-                          logIndex: log.logIndex,
-                          blockNumber: log.blockNumber,
-                          timestamp: timestamp,
+                        blockNumber: log.blockNumber,
+                        timestamp: timestamp,
 
-                          protocol: action.protocol,
-                          action: action.action,
-                          addresses: action.addresses,
-                          tokens: action.tokens,
-                          amounts: action.tokenAmounts,
-                          addition: action.addition,
-                        },
+                        protocol: action.protocol,
+                        action: action.action,
+                        addresses: action.addresses,
+                        tokens: action.tokens,
+                        amounts: action.tokenAmounts,
+                        addition: action.addition,
                       },
-                      upsert: true,
                     },
-                  });
-                }
-              } catch (e: any) {
-                logger.onError({
-                  service: this.name,
-                  message: 'failed to parse transaction',
-                  props: {
-                    chain: chain,
-                    tx: log.transactionHash,
-                    signature: log.topics[0],
+                    upsert: true,
                   },
-                  error: e,
                 });
 
-                if (this.providers) {
-                  this.providers.sentry.capture(e);
-                }
+                break;
+              }
+            } catch (e: any) {
+              logger.onError({
+                service: this.name,
+                message: 'failed to parse transaction',
+                props: {
+                  chain: chain,
+                  tx: log.transactionHash,
+                  signature: log.topics[0],
+                },
+                error: e,
+              });
+
+              if (this.providers) {
+                this.providers.sentry.capture(e);
               }
             }
           }
