@@ -1810,3 +1810,13 @@ export const AirswapConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const BungeeConfigs: ProtocolConfig = {
+  protocol: 'bungee',
+  categories: ['bridge'],
+  contracts: {
+    ethereum: [
+      '0x3a23f943181408eac424116af7b7790c94cb97a5', // Socket gateway
+    ],
+  },
+};

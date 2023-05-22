@@ -15,6 +15,7 @@ import {
   BeefyConfigs,
   BinanceStakedEthConfigs,
   BlurConfigs,
+  BungeeConfigs,
   CarbonConfigs,
   ChaiConfigs,
   ChainlinkConfigs,
@@ -84,6 +85,7 @@ import { BeanstalkAdapter } from './beanstalk/beanstalk';
 import { BeefyAdapter } from './beefy/beefy';
 import { BinanceStakedAdapter } from './binance/stakedEth';
 import { BlurAdapter } from './blur/blur';
+import { BungeeAdapter } from './bungee/bungee';
 import { CarbonAdapter } from './carbon/carbon';
 import { ChaiAdapter } from './chai/chai';
 import { ChainlinkAdapter } from './chainlink/chainlink';
@@ -202,5 +204,6 @@ export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> 
     new ParaswapAdapter(ParaswapConfigs, providers),
     new MetamaskAdapter(MetamaskConfigs, providers),
     new AirswapAdapter(AirswapConfigs, providers),
+    new BungeeAdapter(BungeeConfigs, providers),
   ];
 }

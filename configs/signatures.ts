@@ -436,4 +436,8 @@ export const Signatures: { [key: string]: string } = {
     '0x06dfeb25e76d44e08965b639a9d9307df8e1c3dbe2a6364194895e9c3992f033',
   'Swap(uint256,uint256,address,uint256,uint256,address,address,uint256,uint256,address,address,uint256,uint256,address)':
     '0xd5fe17cd50e0d3d39b905ea598bbabccf2f8cda62a3b2fc64e09de00247a4724',
+
+  // Bungee.Exchange
+  'SocketBridge(uint256,address,uint256,bytes32,address,address,bytes32)':
+    '0x74594da9e31ee4068e17809037db37db496702bf7d8d63afe6f97949277d1609',
 };

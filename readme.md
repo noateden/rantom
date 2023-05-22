@@ -83,6 +83,7 @@ yarn start --help
 | Paraswap             | BoughtV3, SwappedV3                                                                                                  |     🌱 |
 | Metamask             | Swap                                                                                                                 |     🌱 |
 | Airswap              | SwapV3, SwapV2                                                                                                       |     🌱 |
+| Bungee               | SocketBridge                                                                                                         |     🌱 |
 
 ### Nft Marketplace
 

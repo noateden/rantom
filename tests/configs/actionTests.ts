@@ -12,6 +12,7 @@ import { BancorActionTestLogs } from './protocols/bancor';
 import { BeanstalkActionTestLogs } from './protocols/beanstalk';
 import { BeefyActionTestLogs } from './protocols/beefy';
 import { BlurActionTestLogs } from './protocols/blur';
+import { BungeeActionTestLogs } from './protocols/bungee';
 import { CarbonActionTestLogs } from './protocols/carbon';
 import { ChaiActionTestLogs } from './protocols/chai';
 import { ChainlinkActionTestLogs } from './protocols/chainlink';
@@ -114,4 +115,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...AnkrActionTestLogs,
   ...MetamaskActionTestLogs,
   ...AirswapActionTestLogs,
+  ...BungeeActionTestLogs,
 ];

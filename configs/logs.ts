@@ -182,6 +182,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap v5 augustus swapper
     '0x4572f2554421bd64bef1c22c8a81840e8d496bea', // Airswap v2
     '0x522d6f36c95a1b6509a14272c17747bbb582f2a6', // Airswap v3
+    '0x3a23f943181408eac424116af7b7790c94cb97a5', // Bungee socket gateway
   ],
 };
 
