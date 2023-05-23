@@ -1,17 +1,19 @@
+import { MetricDailyStats } from '../../configs';
+import logger from '../../lib/logger';
 import { Token } from '../../types/configs';
 import { AddressStats, ProtocolStats } from '../../types/domains';
-import { GlobalProviders, ICollectorProvider } from '../../types/namespaces';
-import { CollectorGetAddressStatsOptions, CollectorGetProtocolStatsOptions } from '../../types/options';
+import { GlobalProviders, IMetricProvider } from '../../types/namespaces';
+import { getAdapterMapping } from '../adapters';
 
-export class CollectorProvider implements ICollectorProvider {
-  public readonly name: string = 'collector';
+export class MetricProvider implements IMetricProvider {
+  public readonly name: string = 'worker.metric';
   public providers: GlobalProviders;
 
   constructor(providers: GlobalProviders) {
     this.providers = providers;
   }
 
-  protected async collectProtocolStats(protocol: string): Promise<ProtocolStats> {
+  public async getProtocolStats(protocol: string): Promise<ProtocolStats> {
     const collections = await this.providers.mongodb.requireCollections();
     const documents: Array<any> = await collections.logsCollection
       .aggregate([
@@ -51,7 +53,7 @@ export class CollectorProvider implements ICollectorProvider {
     return metrics;
   }
 
-  protected async collectAddressStats(address: string): Promise<AddressStats> {
+  public async getAddressStats(address: string): Promise<AddressStats> {
     const collections = await this.providers.mongodb.requireCollections();
     const documents: Array<any> = await collections.logsCollection
       .aggregate([
@@ -101,15 +103,55 @@ export class CollectorProvider implements ICollectorProvider {
     return metrics;
   }
 
-  public async getProtocolStats(options: CollectorGetProtocolStatsOptions): Promise<ProtocolStats | null> {
-    return await this.collectProtocolStats(options.protocol);
-  }
-
-  public async getAddressStats(options: CollectorGetAddressStatsOptions): Promise<AddressStats | null> {
-    return await this.collectAddressStats(options.address);
-  }
-
   public async run(): Promise<void> {
-    return Promise.resolve(undefined);
+    // collect and save protocols daily stats
+    const adapters = getAdapterMapping(this.providers);
+    const collections = await this.providers.mongodb.requireCollections();
+
+    logger.onInfo({
+      service: this.name,
+      message: 'start collecting protocol stats',
+      props: {
+        protocols: Object.keys(adapters).length,
+      },
+    });
+
+    // for now, we collect metrics on these protocols
+    // const protocols: Array<string> = ['compound', 'compoundv3', 'aavev2', 'aavev3'];
+    const protocols: Array<string> = Object.keys(adapters);
+
+    for (const protocol of protocols) {
+      const startExeTime = Math.floor(new Date().getTime() / 1000);
+
+      const dailyStats = await adapters[protocol].getDailyStats();
+      if (dailyStats) {
+        await collections.metricsCollection.updateOne(
+          {
+            metric: MetricDailyStats,
+            protocol: dailyStats.protocol,
+          },
+          {
+            $set: {
+              ...dailyStats,
+            },
+          },
+          { upsert: true }
+        );
+
+        const endExeTime = Math.floor(new Date().getTime() / 1000);
+        const elapsed = endExeTime - startExeTime;
+        logger.onInfo({
+          service: this.name,
+          message: 'updated protocol daily stats',
+          props: {
+            protocol: dailyStats.protocol,
+            timestamp: dailyStats.timestamp,
+            eventCount: dailyStats.totalEventCount,
+            txnCount: dailyStats.totalTransactionCount,
+            elapsed: `${elapsed}s`,
+          },
+        });
+      }
+    }
   }
 }

@@ -76,6 +76,7 @@ class MongodbProvider implements IMongodbProvider {
     const cachingCollection = await this.getCollection(envConfig.mongodb.collections.caching);
     const logsCollection = await this.getCollection(envConfig.mongodb.collections.logs);
     const reportsCollection = await this.getCollection(envConfig.mongodb.collections.reports);
+    const metricsCollection = await this.getCollection(envConfig.mongodb.collections.metrics);
 
     statesCollection.createIndex({ name: 1 }, { background: true });
     cachingCollection.createIndex({ name: 1 }, { background: true });
@@ -85,11 +86,14 @@ class MongodbProvider implements IMongodbProvider {
 
     reportsCollection.createIndex({ name: 1 }, { background: true });
 
+    metricsCollection.createIndex({ protocol: 1, metric: 1, timestamp: 1 }, { background: true });
+
     return {
       statesCollection,
       cachingCollection,
       logsCollection,
       reportsCollection,
+      metricsCollection,
     };
   }
 }

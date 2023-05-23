@@ -69,6 +69,7 @@ export interface EnvConfig {
 
       logs: string;
       reports: string;
+      metrics: string;
     };
   };
   sentry: {

@@ -11,6 +11,9 @@ export interface MongoCollections {
 
   // save system reports
   reportsCollection: Collection;
+
+  // save protocol metrics
+  metricsCollection: Collection;
 }
 
 export type KnownAction =
@@ -148,17 +151,18 @@ export interface ProtocolDailyStats {
 
   // data collected between timestampFrom and timestampTo
   timestampFrom: number;
-  timestampTo: number;
+  timestamp: number;
 
-  totalEventCount: string;
-  totalAddressCount: string;
-  totalTransactionCount: string;
+  totalEventCount: number;
+  totalTransactionCount: number;
 
-  tokenVolumeUsdIn: number;
-  tokenVolumeUsdOut: number;
+  volumeUsdByActions: {
+    [key: string]: number;
+  };
 
-  // timestamp where data was updated
-  updatedAt: number;
+  eventCountByActions: {
+    [key: string]: number;
+  };
 }
 
 export interface ProtocolStats {

@@ -3,7 +3,7 @@ import { Router } from 'express';
 import logger from '../../../lib/logger';
 import { AddressStats, ProtocolStats } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
-import { CollectorProvider } from '../../collector/collector';
+import { MetricProvider } from '../../worker/metric';
 import { ApiCachingProvider } from '../caching';
 import { writeResponseError } from '../helpers';
 
@@ -42,10 +42,10 @@ export function getRouter(providers: GlobalProviders): Router {
   router.get('/stats/protocol/:protocol', async (request, response) => {
     const { protocol } = request.params;
 
-    const collector = new CollectorProvider(providers);
+    const metricWorker = new MetricProvider(providers);
 
     try {
-      const stats: ProtocolStats | null = await collector.getProtocolStats({ protocol });
+      const stats: ProtocolStats | null = await metricWorker.getProtocolStats(protocol);
       response.status(200).json(stats).end();
     } catch (e: any) {
       logger.onError({
@@ -67,10 +67,10 @@ export function getRouter(providers: GlobalProviders): Router {
   router.get('/stats/address/:address', async (request, response) => {
     const { address } = request.params;
 
-    const collector = new CollectorProvider(providers);
+    const metricWorker = new MetricProvider(providers);
 
     try {
-      const stats: AddressStats | null = await collector.getAddressStats({ address });
+      const stats: AddressStats | null = await metricWorker.getAddressStats(address);
       response.status(200).json(stats).end();
     } catch (e: any) {
       logger.onError({

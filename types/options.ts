@@ -74,11 +74,3 @@ export interface RpcWrapperQueryContractOptions {
   // if blockNumber is not given, just call data from latest block
   blockNumber?: number;
 }
-
-export interface CollectorGetProtocolStatsOptions {
-  protocol: string;
-}
-
-export interface CollectorGetAddressStatsOptions {
-  address: string;
-}

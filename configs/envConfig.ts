@@ -19,6 +19,9 @@ const envConfig: EnvConfig = {
 
       // system reports
       reports: `${MongodbPrefix}.reports`,
+
+      // protocol metrics
+      metrics: `${MongodbPrefix}.metrics`,
     },
   },
   sentry: {

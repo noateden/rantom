@@ -236,4 +236,13 @@ export const TokenOracleFromUniswapv3: { [key: string]: TokenOracle } = {
       baseToken: Tokens.ethereum.WETH,
     },
   },
+  [Tokens.ethereum.MATIC.address]: {
+    chain: 'ethereum',
+    source: 'pool3',
+    token: Tokens.ethereum.MATIC,
+    config: {
+      poolAddress: '0x290a6a7460b308ee3f19023d2d00de604bcf5b42',
+      baseToken: Tokens.ethereum.WETH,
+    },
+  },
 };

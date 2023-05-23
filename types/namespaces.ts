@@ -15,8 +15,6 @@ import {
 import {
   AdapterParseLogOptions,
   ApiQueryLogOptions,
-  CollectorGetAddressStatsOptions,
-  CollectorGetProtocolStatsOptions,
   OracleGetTokenPriceOptions,
   ParseTransactionOptions,
   RpcWrapperQueryContractOptions,
@@ -120,14 +118,14 @@ export interface IContractWorker extends IProvider {
   run: (options: WorkerRunOptions) => Promise<void>;
 }
 
-export interface ICollectorProvider extends IProvider {
+export interface IMetricProvider extends IProvider {
   providers: GlobalProviders;
 
   // get stats of given protocol
-  getProtocolStats: (options: CollectorGetProtocolStatsOptions) => Promise<ProtocolStats | null>;
+  getProtocolStats: (protocol: string) => Promise<ProtocolStats | null>;
 
   // get stats of given address
-  getAddressStats: (options: CollectorGetAddressStatsOptions) => Promise<AddressStats | null>;
+  getAddressStats: (address: string) => Promise<AddressStats | null>;
 
   // run collector daemon, update data
   run: () => Promise<void>;
