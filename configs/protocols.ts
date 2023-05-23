@@ -653,6 +653,7 @@ export const OpenseaConfigs: ProtocolConfig = {
       '0x00000000000006c7676171937c444f6bde3d6282', // Seaport 1.2
       '0x0000000000000ad24e80fd803c6ac37206a45f15', // Seaport 1.3
       '0x00000000000001ad428e4906ae43d8f9852d0dd6', // Seaport 1.4
+      '0x00000000000000adc04c56bf30ac9d3c0aaf14dc', // Seaport 1.5
     ],
   },
 };
