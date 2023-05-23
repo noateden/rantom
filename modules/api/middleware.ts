@@ -9,7 +9,9 @@ export function logMiddleware(request: Request, response: Response, next: NextFu
     props: {
       method: request.method,
       path: request.path,
-      remoteAddress: `${request.socket.remoteFamily}:${request.socket.remoteAddress}`,
+      remoteAddress: request.header('CF-Connecting-IP')
+        ? request.header('CF-Connecting-IP')
+        : `${request.socket.remoteFamily}:${request.socket.remoteAddress}`,
     },
   });
 
