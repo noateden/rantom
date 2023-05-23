@@ -8,6 +8,7 @@ import FraxLendPairs from './data/FraxlendPairs.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import YearnVaults from './data/YearnVaults.json';
+import { WhitelistUniPools } from './policies/whitelistUniPools';
 
 export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
   ethereum: [
@@ -23,10 +24,10 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...CurvePools.map((item) => item.address),
 
     // we split these addresses into another sync process
-    // ...WhitelistUniPools,
-    // '0x000000000000ad05ccc4f10045630fb830b95127', // Blur Marketplace
-    // '0x00000000006c3852cbef3e08e8df289169ede581', // Seaport 1.1
-    // '0x00000000000001ad428e4906ae43d8f9852d0dd6', // Seaport 1.4
+    ...WhitelistUniPools,
+    '0x000000000000ad05ccc4f10045630fb830b95127', // Blur Marketplace
+    '0x00000000006c3852cbef3e08e8df289169ede581', // Seaport 1.1
+    '0x00000000000001ad428e4906ae43d8f9852d0dd6', // Seaport 1.4
 
     '0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9', // Aave lending pool v2
     '0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2', // Aave lending pool v3

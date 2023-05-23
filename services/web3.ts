@@ -1,13 +1,11 @@
-import axios from 'axios';
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import Erc20Abi from '../configs/abi/ERC20.json';
 import Erc721Abi from '../configs/abi/ERC721.json';
-import Erc1155Abi from '../configs/abi/ERC1155.json';
 import { AddressZero, HardCodeTokens, HardcodeNft, Tokens } from '../configs/constants';
 import EnvConfig from '../configs/envConfig';
-import { compareAddress, normalizeAddress, transformToHttpUrl } from '../lib/helper';
+import { compareAddress, normalizeAddress } from '../lib/helper';
 import logger from '../lib/logger';
 import { UniswapHelper } from '../modules/adapters/uniswap/helper';
 import { NonFungibleToken, NonFungibleTokenMetadata, Token } from '../types/configs';
@@ -163,57 +161,65 @@ export class Web3HelperProvider extends CachingProvider implements IWeb3HelperPr
       return cachingData.token;
     }
 
-    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-    const contract = new web3.eth.Contract(Erc721Abi as any, tokenAddress);
+    // const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+    // const contract = new web3.eth.Contract(Erc721Abi as any, tokenAddress);
 
     const metadata: NonFungibleTokenMetadata | null = await this.getNonFungibleTokenMetadata(chain, tokenAddress);
+
     if (metadata) {
-      try {
-        // try to get tokenURI with ERC721 standard
-        const tokenUri = transformToHttpUrl(await contract.methods.tokenURI(new BigNumber(tokenId).toNumber()).call());
-        const response = await axios.get(tokenUri);
-
-        const token: NonFungibleToken = {
-          ...metadata,
-          tokenId: tokenId,
-          image: transformToHttpUrl(response.data.image),
-        };
-
-        await this.setCachingData(key, { token });
-
-        return token;
-      } catch (e: any) {
-        try {
-          // try to get tokenURI with ERC1155 standard
-          const erc1155Contract = new web3.eth.Contract(Erc1155Abi as any, tokenAddress);
-          const tokenUri = transformToHttpUrl(
-            await erc1155Contract.methods.uri(new BigNumber(tokenId).toNumber()).call()
-          );
-
-          const response = await axios.get(tokenUri);
-
-          const token: NonFungibleToken = {
-            ...metadata,
-            tokenId: tokenId,
-            image: transformToHttpUrl(response.data.image),
-          };
-
-          await this.setCachingData(key, { token });
-
-          return token;
-        } catch (e: any) {
-          const token: NonFungibleToken = {
-            ...metadata,
-            tokenId: tokenId,
-            image: '',
-          };
-
-          await this.setCachingData(key, { token });
-
-          return token;
-        }
-      }
+      return {
+        ...metadata,
+        tokenId: tokenId,
+        image: '',
+      };
     }
+    // if (metadata) {
+    //   try {
+    //     // try to get tokenURI with ERC721 standard
+    //     const tokenUri = transformToHttpUrl(await contract.methods.tokenURI(new BigNumber(tokenId).toNumber()).call());
+    //     const response = await axios.get(tokenUri);
+    //
+    //     const token: NonFungibleToken = {
+    //       ...metadata,
+    //       tokenId: tokenId,
+    //       image: transformToHttpUrl(response.data.image),
+    //     };
+    //
+    //     await this.setCachingData(key, { token });
+    //
+    //     return token;
+    //   } catch (e: any) {
+    //     try {
+    //       // try to get tokenURI with ERC1155 standard
+    //       const erc1155Contract = new web3.eth.Contract(Erc1155Abi as any, tokenAddress);
+    //       const tokenUri = transformToHttpUrl(
+    //         await erc1155Contract.methods.uri(new BigNumber(tokenId).toNumber()).call()
+    //       );
+    //
+    //       const response = await axios.get(tokenUri);
+    //
+    //       const token: NonFungibleToken = {
+    //         ...metadata,
+    //         tokenId: tokenId,
+    //         image: transformToHttpUrl(response.data.image),
+    //       };
+    //
+    //       await this.setCachingData(key, { token });
+    //
+    //       return token;
+    //     } catch (e: any) {
+    //       const token: NonFungibleToken = {
+    //         ...metadata,
+    //         tokenId: tokenId,
+    //         image: '',
+    //       };
+    //
+    //       await this.setCachingData(key, { token });
+    //
+    //       return token;
+    //     }
+    //   }
+    // }
 
     return null;
   }
