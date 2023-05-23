@@ -84,6 +84,7 @@ yarn start --help
 | Metamask             | Swap                                                                                                                 |     🌱 |
 | Airswap              | SwapV3, SwapV2                                                                                                       |     🌱 |
 | Bungee               | SocketBridge                                                                                                         |     🌱 |
+| Spark Protocol       | Supply, Withdraw, Borrow, Repay, Flashloan, Liquidation                                                              |     🌱 |
 
 ### Nft Marketplace
 

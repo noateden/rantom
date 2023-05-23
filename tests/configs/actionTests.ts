@@ -49,6 +49,7 @@ import { PendleActionTestLogs } from './protocols/pendle';
 import { RaribleActionTestLogs } from './protocols/rarible';
 import { RocketpoolActionTestLogs } from './protocols/rocketpool';
 import { SiloActionTestLogs } from './protocols/silo';
+import { SparkActionTestLogs } from './protocols/spark';
 import { StargateActionTestLogs } from './protocols/stargate';
 import { SushiActionTestLogs } from './protocols/sushi';
 import { TornadocashActionTestLogs } from './protocols/tornadocash';
@@ -116,4 +117,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...MetamaskActionTestLogs,
   ...AirswapActionTestLogs,
   ...BungeeActionTestLogs,
+  ...SparkActionTestLogs,
 ];

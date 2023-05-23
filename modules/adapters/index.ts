@@ -57,6 +57,7 @@ import {
   RocketpoolConfigs,
   ShibaswapConfigs,
   SiloConfigs,
+  SparkConfigs,
   StakewiseConfigs,
   StargateConfigs,
   SushiConfigs,
@@ -210,5 +211,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     metamask: new MetamaskAdapter(MetamaskConfigs, providers),
     airswap: new AirswapAdapter(AirswapConfigs, providers),
     bungee: new BungeeAdapter(BungeeConfigs, providers),
+    spark: new Aavev3Adapter(SparkConfigs, providers),
   };
 }
