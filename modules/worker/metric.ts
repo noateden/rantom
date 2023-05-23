@@ -1,7 +1,7 @@
 import { MetricDailyStats } from '../../configs';
 import logger from '../../lib/logger';
 import { Token } from '../../types/configs';
-import { AddressStats, ProtocolStats } from '../../types/domains';
+import { AddressStats, ProtocolDailyStats, ProtocolStats } from '../../types/domains';
 import { GlobalProviders, IMetricProvider } from '../../types/namespaces';
 import { getAdapterMapping } from '../adapters';
 
@@ -101,6 +101,24 @@ export class MetricProvider implements IMetricProvider {
     }
 
     return metrics;
+  }
+
+  public async getProtocolDailyStats(protocol: string): Promise<ProtocolDailyStats | null> {
+    const collections = await this.providers.mongodb.requireCollections();
+    const stats = await collections.metricsCollection.find({ protocol, metric: MetricDailyStats }).toArray();
+    if (stats.length > 0) {
+      return {
+        protocol: protocol,
+        timestampFrom: stats[0].timestampFrom,
+        timestamp: stats[0].timestamp,
+        totalEventCount: stats[0].totalEventCount,
+        totalTransactionCount: stats[0].totalTransactionCount,
+        volumeUsdByActions: stats[0].volumeUsdByActions,
+        eventCountByActions: stats[0].eventCountByActions,
+      };
+    }
+
+    return null;
   }
 
   public async run(): Promise<void> {

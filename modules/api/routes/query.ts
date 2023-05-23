@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 import logger from '../../../lib/logger';
-import { AddressStats, ProtocolStats } from '../../../types/domains';
+import { AddressStats, ProtocolDailyStats, ProtocolStats } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { MetricProvider } from '../../worker/metric';
 import { ApiCachingProvider } from '../caching';
@@ -47,6 +47,31 @@ export function getRouter(providers: GlobalProviders): Router {
     try {
       const stats: ProtocolStats | null = await metricWorker.getProtocolStats(protocol);
       response.status(200).json(stats).end();
+    } catch (e: any) {
+      logger.onError({
+        service: 'api',
+        message: 'failed to serve api request',
+        props: {
+          path: request.path,
+          error: e.message,
+        },
+        error: e as Error,
+      });
+      writeResponseError(response, {
+        status: 500,
+        error: 'internal server error',
+      });
+    }
+  });
+
+  router.get('/metrics/protocol/:protocol', async (request, response) => {
+    const { protocol } = request.params;
+
+    const metricWorker = new MetricProvider(providers);
+
+    try {
+      const dailyStats: ProtocolDailyStats | null = await metricWorker.getProtocolDailyStats(protocol);
+      response.status(200).json(dailyStats).end();
     } catch (e: any) {
       logger.onError({
         service: 'api',

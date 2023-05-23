@@ -127,6 +127,9 @@ export interface IMetricProvider extends IProvider {
   // get stats of given address
   getAddressStats: (address: string) => Promise<AddressStats | null>;
 
+  // get daily stats of given protocol
+  getProtocolDailyStats: (protocol: string) => Promise<ProtocolDailyStats | null>;
+
   // run collector daemon, update data
   run: () => Promise<void>;
 }
