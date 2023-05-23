@@ -6,7 +6,6 @@ import { GetlogCommand } from './commands/getlog';
 import { ParseCommand } from './commands/parse';
 import { ReportCommand } from './commands/report';
 import { ServeCommand } from './commands/serve';
-import { SubgraphCommand } from './commands/subgraph';
 import { TestCommand } from './commands/test';
 
 (async function () {
@@ -17,7 +16,6 @@ import { TestCommand } from './commands/test';
   const parseCmd = new ParseCommand();
   const serveCmd = new ServeCommand();
   const getlogCmd = new GetlogCommand();
-  const subgraphCmd = new SubgraphCommand();
   const reportCmd = new ReportCommand();
 
   yargs(process.argv.slice(2))
@@ -27,7 +25,6 @@ import { TestCommand } from './commands/test';
     .command(parseCmd.name, parseCmd.describe, parseCmd.setOptions, parseCmd.execute)
     .command(serveCmd.name, serveCmd.describe, serveCmd.setOptions, serveCmd.execute)
     .command(getlogCmd.name, getlogCmd.describe, getlogCmd.setOptions, getlogCmd.execute)
-    .command(subgraphCmd.name, subgraphCmd.describe, subgraphCmd.setOptions, subgraphCmd.execute)
     .command(reportCmd.name, reportCmd.describe, reportCmd.setOptions, reportCmd.execute)
     .help().argv;
 })();
