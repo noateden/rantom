@@ -1,4 +1,3 @@
-import { ProtocolConfig } from '../types/configs';
 import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
 import AgilityPools from './data/AgilityStakingPools.json';
 import ArrakisVaults from './data/ArrakisVaults.json';
@@ -10,32 +9,6 @@ import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import YearnVaults from './data/YearnVaults.json';
 import { WhitelistUniPools } from './policies/whitelistUniPools';
-import {
-  Aavev2Configs,
-  Aavev3Configs,
-  AbracadabraConfigs,
-  AurafinanceConfigs,
-  BalancerConfigs,
-  BancorConfigs,
-  BeanstalkConfigs,
-  CompoundConfigs,
-  Compoundv3Configs,
-  ConvexConfigs,
-  CurveConfigs,
-  EulerConfigs,
-  IronbankConfigs,
-  KyberswapClassicConfigs,
-  LidoConfigs,
-  LiquityConfigs,
-  LooksrareConfigs,
-  MakerConfigs,
-  PancakeswapConfigs,
-  PancakeswapV3Configs,
-  RocketpoolConfigs,
-  SushiConfigs,
-  Uniswapv3Configs,
-  YearnConfigs,
-} from './protocols';
 
 export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
   ethereum: [
@@ -185,35 +158,3 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x3a23f943181408eac424116af7b7790c94cb97a5', // Bungee socket gateway
   ],
 };
-
-export const ProtocolWhitelistedSubgraphs: Array<ProtocolConfig> = [
-  Uniswapv3Configs,
-  SushiConfigs,
-  PancakeswapConfigs,
-  PancakeswapV3Configs,
-  KyberswapClassicConfigs,
-];
-
-export const ReportProtocolConfigs: Array<ProtocolConfig> = [
-  Aavev2Configs,
-  Aavev3Configs,
-  AbracadabraConfigs,
-  AurafinanceConfigs,
-  BalancerConfigs,
-  BancorConfigs,
-  BeanstalkConfigs,
-  CompoundConfigs,
-  Compoundv3Configs,
-  ConvexConfigs,
-  CurveConfigs,
-  EulerConfigs,
-  IronbankConfigs,
-  LidoConfigs,
-  LiquityConfigs,
-  LooksrareConfigs,
-  MakerConfigs,
-  PancakeswapConfigs,
-  RocketpoolConfigs,
-  SushiConfigs,
-  YearnConfigs,
-];

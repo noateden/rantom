@@ -1,7 +1,5 @@
-import { ReportProtocolConfigs } from '../../configs/logs';
 import { getTimestamp, sleep } from '../../lib/helper';
 import logger from '../../lib/logger';
-import { ProtocolConfig } from '../../types/configs';
 import { MongoCollections, SystemReport } from '../../types/domains';
 import { GlobalProviders, IReportProvider } from '../../types/namespaces';
 
@@ -9,7 +7,6 @@ const SystemReportKey = 'system-report';
 
 export class ReportProvider implements IReportProvider {
   public readonly name: string = 'worker.report';
-  public configs: Array<ProtocolConfig> = ReportProtocolConfigs;
   public readonly providers: GlobalProviders;
 
   constructor(providers: GlobalProviders) {

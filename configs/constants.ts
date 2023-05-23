@@ -94,14 +94,6 @@ export const HardCodeTokens: { [key: string]: Token } = {
     decimals: 18,
   },
 
-  // synapse protocol
-  'avalanche:0x20a9dc684b4d0407ef8c9a302beaaa18ee15f656': {
-    chain: 'avalanche',
-    address: '0x62edc0692bd897d2295872a9ffcac5425011c661',
-    symbol: 'GMX',
-    decimals: 18,
-  },
-
   // https://etherscan.io/token/0x9469d013805bffb7d3debe5e7839237e535ec483
   'erc20-ethereum-0x9469d013805bffb7d3debe5e7839237e535ec483': {
     chain: 'ethereum',

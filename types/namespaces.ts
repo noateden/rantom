@@ -112,7 +112,6 @@ export interface ISubgraphJobProvider extends IProvider {
 
 export interface IReportProvider extends IProvider {
   providers: GlobalProviders;
-  configs: Array<ProtocolConfig>;
 
   getSystemReport: () => Promise<SystemReport | null>;
 
