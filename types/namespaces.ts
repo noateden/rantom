@@ -5,6 +5,7 @@ import {
   AddressStats,
   MongoCollections,
   ProtocolDailyStats,
+  ProtocolSnapshotStats,
   ProtocolStats,
   SystemReport,
   TokenOracleResult,
@@ -71,6 +72,9 @@ export interface IAdapter extends IProvider {
 
   // get protocol daily stats
   getDailyStats: () => Promise<ProtocolDailyStats | null>;
+
+  // get snapshot stats
+  getSnapshotStats: (fromTime: number, toTime: number) => Promise<ProtocolSnapshotStats | null>;
 }
 
 export interface ITransferParser extends IProvider {
@@ -129,6 +133,8 @@ export interface IMetricProvider extends IProvider {
 
   // get daily stats of given protocol
   getProtocolDailyStats: (protocol: string) => Promise<ProtocolDailyStats | null>;
+
+  getProtocolSnapshotStats: (protocol: string) => Promise<Array<ProtocolSnapshotStats>>;
 
   // run collector daemon, update data
   run: () => Promise<void>;

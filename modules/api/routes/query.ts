@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 import logger from '../../../lib/logger';
-import { AddressStats, ProtocolDailyStats, ProtocolStats } from '../../../types/domains';
+import { AddressStats, ProtocolDailyStats, ProtocolSnapshotStats, ProtocolStats } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { MetricProvider } from '../../worker/metric';
 import { ApiCachingProvider } from '../caching';
@@ -71,7 +71,14 @@ export function getRouter(providers: GlobalProviders): Router {
 
     try {
       const dailyStats: ProtocolDailyStats | null = await metricWorker.getProtocolDailyStats(protocol);
-      response.status(200).json(dailyStats).end();
+      const snapshotsStats: Array<ProtocolSnapshotStats> = await metricWorker.getProtocolSnapshotStats(protocol);
+      response
+        .status(200)
+        .json({
+          dailyStats,
+          snapshotsStats,
+        })
+        .end();
     } catch (e: any) {
       logger.onError({
         service: 'api',

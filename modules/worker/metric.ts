@@ -1,7 +1,8 @@
-import { MetricDailyStats } from '../../configs';
+import { MetricDailyStats, MetricSnapshotStats } from '../../configs';
+import { getStartDayTimestamp, getTimestamp } from '../../lib/helper';
 import logger from '../../lib/logger';
 import { Token } from '../../types/configs';
-import { AddressStats, ProtocolDailyStats, ProtocolStats } from '../../types/domains';
+import { AddressStats, ProtocolDailyStats, ProtocolSnapshotStats, ProtocolStats } from '../../types/domains';
 import { GlobalProviders, IMetricProvider } from '../../types/namespaces';
 import { getAdapterMapping } from '../adapters';
 
@@ -121,25 +122,46 @@ export class MetricProvider implements IMetricProvider {
     return null;
   }
 
+  public async getProtocolSnapshotStats(protocol: string): Promise<Array<ProtocolSnapshotStats>> {
+    const collections = await this.providers.mongodb.requireCollections();
+    const stats = await collections.metricsCollection
+      .find({ protocol, metric: MetricSnapshotStats })
+      .sort({ timestamp: -1 })
+      .toArray();
+    const metrics: Array<ProtocolSnapshotStats> = [];
+    for (const stat of stats) {
+      metrics.push({
+        protocol: protocol,
+        timestamp: stat.timestamp,
+        totalEventCount: stat.totalEventCount,
+        totalTransactionCount: stat.totalTransactionCount,
+        eventCountByActions: stat.eventCountByActions,
+      });
+    }
+
+    return metrics;
+  }
+
   public async run(): Promise<void> {
     // collect and save protocols daily stats
     const adapters = getAdapterMapping(this.providers);
     const collections = await this.providers.mongodb.requireCollections();
-
-    logger.onInfo({
-      service: this.name,
-      message: 'start collecting protocol stats',
-      props: {
-        protocols: Object.keys(adapters).length,
-      },
-    });
 
     // for now, we collect metrics on these protocols
     // const protocols: Array<string> = ['compound', 'compoundv3', 'aavev2', 'aavev3'];
     const protocols: Array<string> = Object.keys(adapters);
 
     for (const protocol of protocols) {
-      const startExeTime = Math.floor(new Date().getTime() / 1000);
+      logger.onInfo({
+        service: this.name,
+        message: 'start collecting protocol stats',
+        props: {
+          protocol: protocol,
+        },
+      });
+
+      // update daily stats
+      let startExeTime = Math.floor(new Date().getTime() / 1000);
 
       const dailyStats = await adapters[protocol].getDailyStats();
       if (dailyStats) {
@@ -169,6 +191,86 @@ export class MetricProvider implements IMetricProvider {
             elapsed: `${elapsed}s`,
           },
         });
+      }
+
+      // update snapshots
+      let startTime = 0;
+      const snapshots = await collections.metricsCollection
+        .find({ protocol, metric: MetricSnapshotStats })
+        .sort({ timestamp: -1 })
+        .limit(1)
+        .toArray();
+      if (snapshots.length > 0) {
+        startTime = snapshots[0].timestamp;
+      } else {
+        const logs = await collections.logsCollection.find({ protocol }).sort({ timestamp: 1 }).limit(1).toArray();
+        if (logs.length > 0) {
+          startTime = logs[0].timestamp;
+        }
+      }
+
+      if (startTime > 0) {
+        startTime = getStartDayTimestamp(startTime);
+      } else {
+        logger.onWarn({
+          service: this.name,
+          message: 'cannot find start time to start get snapshots',
+          props: {
+            protocol,
+          },
+        });
+        continue;
+      }
+
+      const currentTime = getTimestamp();
+
+      logger.onInfo({
+        service: this.name,
+        message: 'start collecting protocol snapshots',
+        props: {
+          protocol: protocol,
+          startTime: startTime,
+        },
+      });
+
+      while (startTime <= currentTime) {
+        startExeTime = Math.floor(new Date().getTime() / 1000);
+        const snapshotStats: ProtocolSnapshotStats | null = await adapters[protocol].getSnapshotStats(
+          startTime,
+          startTime + 24 * 60 * 60 - 1
+        );
+        if (snapshotStats) {
+          snapshotStats.timestamp = startTime;
+          await collections.metricsCollection.updateOne(
+            {
+              protocol: protocol,
+              metric: MetricSnapshotStats,
+              timestamp: startTime,
+            },
+            {
+              $set: {
+                ...snapshotStats,
+              },
+            },
+            { upsert: true }
+          );
+
+          const endExeTime = Math.floor(new Date().getTime() / 1000);
+          const elapsed = endExeTime - startExeTime;
+          logger.onInfo({
+            service: this.name,
+            message: 'updated protocol snapshot stats',
+            props: {
+              protocol: snapshotStats.protocol,
+              timestamp: snapshotStats.timestamp,
+              eventCount: snapshotStats.totalEventCount,
+              txnCount: snapshotStats.totalTransactionCount,
+              elapsed: `${elapsed}s`,
+            },
+          });
+        }
+
+        startTime += 24 * 60 * 60;
       }
     }
   }

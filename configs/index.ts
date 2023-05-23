@@ -8,3 +8,4 @@ export const WorkerGenesisBlocks: { [key: string]: number } = {
 export const ApiQueryLogsCachingTime = 10 * 60; // 10 minutes
 
 export const MetricDailyStats = 'dailystats';
+export const MetricSnapshotStats = 'snapshotStats'; // per day

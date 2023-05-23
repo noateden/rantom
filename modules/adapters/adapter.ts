@@ -6,7 +6,7 @@ import { RpcWrapperProvider } from '../../services/rpc';
 import SentryProvider from '../../services/sentry';
 import { Web3HelperProvider } from '../../services/web3';
 import { EventMapping, ProtocolConfig } from '../../types/configs';
-import { KnownAction, ProtocolDailyStats, TransactionAction } from '../../types/domains';
+import { KnownAction, ProtocolDailyStats, ProtocolSnapshotStats, TransactionAction } from '../../types/domains';
 import { GlobalProviders, IAdapter, IRpcWrapperProvider, IWeb3HelperProvider } from '../../types/namespaces';
 import { AdapterParseLogOptions } from '../../types/options';
 
@@ -149,6 +149,56 @@ export class Adapter implements IAdapter {
           //     });
           //   }
           // }
+        }
+      }
+
+      return stats;
+    }
+
+    return null;
+  }
+
+  public async getSnapshotStats(fromTime: number, toTime: number): Promise<ProtocolSnapshotStats | null> {
+    if (this.providers) {
+      const stats: ProtocolSnapshotStats = {
+        protocol: this.config.protocol,
+
+        timestamp: toTime,
+
+        totalEventCount: 0,
+        totalTransactionCount: 0,
+
+        eventCountByActions: {},
+      };
+
+      const collections = await this.providers.mongodb.requireCollections();
+      const cursor = await collections.logsCollection.find({
+        protocol: this.config.protocol,
+        timestamp: {
+          $lte: toTime,
+          $gte: fromTime,
+        },
+      });
+
+      const transactions: { [key: string]: boolean } = {};
+      while (await cursor.hasNext()) {
+        const document = await cursor.next();
+
+        if (document) {
+          // count event
+          stats.totalEventCount += 1;
+          const action: KnownAction = document.action;
+          if (stats.eventCountByActions[action]) {
+            stats.eventCountByActions[action] += 1;
+          } else {
+            stats.eventCountByActions[action] = 1;
+          }
+
+          // count transaction
+          if (!transactions[document.transactionHash]) {
+            stats.totalTransactionCount += 1;
+            transactions[document.transactionHash] = true;
+          }
         }
       }
 

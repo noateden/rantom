@@ -165,6 +165,17 @@ export interface ProtocolDailyStats {
   };
 }
 
+export interface ProtocolSnapshotStats {
+  protocol: string;
+  timestamp: number; // day timestamp
+  totalEventCount: number;
+  totalTransactionCount: number;
+
+  eventCountByActions: {
+    [key: string]: number;
+  };
+}
+
 export interface ProtocolStats {
   protocol: string;
 
