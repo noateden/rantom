@@ -8,11 +8,9 @@ import FraxLendPairs from './data/FraxlendPairs.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import YearnVaults from './data/YearnVaults.json';
-import { WhitelistUniPools } from './policies/whitelistUniPools';
 
 export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
   ethereum: [
-    ...WhitelistUniPools,
     ...AbracadabraCauldrons.map((item) => item.address),
     ...YearnVaults.map((item) => item.address),
     ...BeefyVaults.map((item) => item.address),
@@ -23,6 +21,12 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...PendleContracts.syTokens.map((item) => item.address),
     ...AgilityPools.map((item) => item.address),
     ...CurvePools.map((item) => item.address),
+
+    // we split these addresses into another sync process
+    // ...WhitelistUniPools,
+    // '0x000000000000ad05ccc4f10045630fb830b95127', // Blur Marketplace
+    // '0x00000000006c3852cbef3e08e8df289169ede581', // Seaport 1.1
+    // '0x00000000000001ad428e4906ae43d8f9852d0dd6', // Seaport 1.4
 
     '0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9', // Aave lending pool v2
     '0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2', // Aave lending pool v3
@@ -111,7 +115,6 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x86130bdd69143d8a4e5fc50bf4323d48049e98e4', // Gearbox Pool USDC
     '0xb2a015c71c17bcac6af36645dead8c572ba08a08', // Gearbox Pool WBTC
     '0xb8cf3ed326bb0e51454361fb37e9e8df6dc5c286', // Gearbox Pool wstETH
-    '0x000000000000ad05ccc4f10045630fb830b95127', // Blur Marketplace
     '0x74312363e45dcaba76c59ec49a7aa8a65a67eed3', // X2y2 Exchange
     '0x09eab21c40743b2364b94345419138ef80f39e30', // Rarible Exchange
     '0x26fa3fffb6efe8c1e69103acb4044c26b9a106a9', // sSPELL
@@ -126,8 +129,6 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xbb93e510bbcd0b7beb5a853875f9ec60275cf498', // Tornadocash WBTC 10
     '0x283af0b28c62c092c9727f1ee09c02ca627eb7f5', // ENS registration controller
     '0x253553366da8546fc250f225fe3d25d0c782303b', // ENS registration controller new
-    // '0x00000000006c3852cbef3e08e8df289169ede581', // Seaport 1.1
-    // '0x00000000000001ad428e4906ae43d8f9852d0dd6', // Seaport 1.4
     '0xc537e898cd774e2dcba3b14ea6f34c93d5ea45e1', // Carbon controller
     '0xbafa44efe7901e04e39dad13167d089c559c1138', // Fraxeth frxETHMinter
     '0xac3e018457b222d93114458476f3e3416abbe38f', // Fraxeth sfrxETH

@@ -6,6 +6,7 @@ import { ArrakisContracts } from '../../configs/contracts/arrakis';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
 import { BalancerContracts } from '../../configs/contracts/balancer';
 import { BinanceContracts } from '../../configs/contracts/binance';
+import { BlurContracts } from '../../configs/contracts/blur';
 import { BungeeContracts } from '../../configs/contracts/bungee';
 import { CarbonContracts } from '../../configs/contracts/carbon';
 import { ChaiContracts } from '../../configs/contracts/chai';
@@ -75,5 +76,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     metamask: new ContractWorker(providers, MetamaskContracts),
     airswap: new ContractWorker(providers, AirswapContracts),
     bungee: new ContractWorker(providers, BungeeContracts),
+    blur: new ContractWorker(providers, BlurContracts),
   };
 }
