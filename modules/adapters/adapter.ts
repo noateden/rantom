@@ -6,7 +6,7 @@ import { RpcWrapperProvider } from '../../services/rpc';
 import SentryProvider from '../../services/sentry';
 import { Web3HelperProvider } from '../../services/web3';
 import { EventMapping, ProtocolConfig } from '../../types/configs';
-import { TransactionAction } from '../../types/domains';
+import { ProtocolDailyStats, TransactionAction } from '../../types/domains';
 import { GlobalProviders, IAdapter, IRpcWrapperProvider, IWeb3HelperProvider } from '../../types/namespaces';
 import { AdapterParseLogOptions } from '../../types/options';
 
@@ -69,5 +69,9 @@ export class Adapter implements IAdapter {
     } else {
       return '';
     }
+  }
+
+  public async getDailyStats(): Promise<ProtocolDailyStats | null> {
+    return null;
   }
 }

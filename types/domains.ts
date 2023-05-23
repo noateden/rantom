@@ -143,6 +143,24 @@ export interface SystemReport {
   reports: Array<ProtocolSystemReport>;
 }
 
+export interface ProtocolDailyStats {
+  protocol: string;
+
+  // data collected between timestampFrom and timestampTo
+  timestampFrom: number;
+  timestampTo: number;
+
+  totalEventCount: string;
+  totalAddressCount: string;
+  totalTransactionCount: string;
+
+  tokenVolumeUsdIn: number;
+  tokenVolumeUsdOut: number;
+
+  // timestamp where data was updated
+  updatedAt: number;
+}
+
 export interface ProtocolStats {
   protocol: string;
 

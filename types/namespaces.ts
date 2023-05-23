@@ -1,16 +1,10 @@
 import { Collection } from 'mongodb';
 
-import {
-  EventMapping,
-  NonFungibleToken,
-  NonFungibleTokenMetadata,
-  ProtocolConfig,
-  ProtocolSubgraphConfig,
-  Token,
-} from './configs';
+import { EventMapping, NonFungibleToken, NonFungibleTokenMetadata, ProtocolConfig, Token } from './configs';
 import {
   AddressStats,
   MongoCollections,
+  ProtocolDailyStats,
   ProtocolStats,
   SystemReport,
   TokenOracleResult,
@@ -26,7 +20,6 @@ import {
   OracleGetTokenPriceOptions,
   ParseTransactionOptions,
   RpcWrapperQueryContractOptions,
-  SubgraphJobRunOptions,
   TransferParseLogOptions,
   WorkerRunOptions,
 } from './options';
@@ -77,6 +70,9 @@ export interface IAdapter extends IProvider {
 
   supportedSignature(signature: string): boolean;
   tryParsingActions: (options: AdapterParseLogOptions) => Promise<TransactionAction | null>;
+
+  // get protocol daily stats
+  getDailyStats: () => Promise<ProtocolDailyStats | null>;
 }
 
 export interface ITransferParser extends IProvider {
@@ -101,13 +97,6 @@ export interface IWorkerProvider extends IProvider {
   providers: GlobalProviders;
 
   run: (options: WorkerRunOptions) => Promise<void>;
-}
-
-export interface ISubgraphJobProvider extends IProvider {
-  config: ProtocolSubgraphConfig;
-  providers: GlobalProviders;
-
-  run: (options: SubgraphJobRunOptions) => Promise<void>;
 }
 
 export interface IReportProvider extends IProvider {
