@@ -13,6 +13,7 @@ const envConfig: EnvConfig = {
     collections: {
       states: `${MongodbPrefix}.states`,
       caching: `${MongodbPrefix}.caching`,
+      apiLogs: `${MongodbPrefix}.apiLogs`,
 
       // v2 api
       logs: `${MongodbPrefix}.logs`,

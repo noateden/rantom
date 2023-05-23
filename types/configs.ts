@@ -66,6 +66,7 @@ export interface EnvConfig {
     collections: {
       states: string;
       caching: string;
+      apiLogs: string;
 
       logs: string;
       reports: string;
