@@ -1,4 +1,4 @@
-import chalk from 'chalk';
+import pino from 'pino';
 
 export interface LogEntry {
   message: string;
@@ -9,67 +9,59 @@ export interface LogEntry {
 }
 
 class LogProvider {
-  constructor() {}
+  private readonly logger: any;
 
-  private static buildPropsLog(props: any): string {
-    let logString = '';
-
-    for (const [key, value] of Object.entries(props)) {
-      logString += ` ${key}=${value}`;
-    }
-
-    return logString;
+  constructor() {
+    this.logger = pino({
+      level: 'debug',
+      enabled: !Boolean(process.env.SILENT_MODE),
+      timestamp: pino.stdTimeFunctions.isoTime,
+    });
   }
 
-  private static getMessage(service: string, message: string): string {
-    return `${service}: ${message}`;
+  public getLogger() {
+    return this.logger;
   }
 
   public onInfo(entry: LogEntry): void {
-    if (!Boolean(process.env.SILENT_MODE)) {
-      console.info(
-        `${new Date().toISOString()} ${chalk.green(' INFO')} ${LogProvider.getMessage(
-          entry.service ? entry.service : 'global',
-          entry.message
-        )}    ${LogProvider.buildPropsLog(entry.props)}`
-      );
-    }
+    this.logger.info(
+      {
+        service: entry.service,
+        props: entry.props,
+      },
+      entry.message
+    );
   }
 
   public onDebug(entry: LogEntry): void {
-    if (!Boolean(process.env.SILENT_MODE)) {
-      console.info(
-        `${new Date().toISOString()} ${chalk.grey('DEBUG')} ${LogProvider.getMessage(
-          entry.service ? entry.service : 'global',
-          entry.message
-        )}    ${LogProvider.buildPropsLog(entry.props)}`
-      );
-    }
+    this.logger.debug(
+      {
+        service: entry.service,
+        props: entry.props,
+      },
+      entry.message
+    );
   }
 
   public onWarn(entry: LogEntry): void {
-    if (!Boolean(process.env.SILENT_MODE)) {
-      console.info(
-        `${new Date().toISOString()} ${chalk.yellow(' WARN')} ${LogProvider.getMessage(
-          entry.service ? entry.service : 'global',
-          entry.message
-        )}    ${LogProvider.buildPropsLog(entry.props)}`
-      );
-    }
+    this.logger.warn(
+      {
+        service: entry.service,
+        props: entry.props,
+      },
+      entry.message
+    );
   }
 
   public onError(entry: LogEntry): void {
-    if (!Boolean(process.env.SILENT_MODE)) {
-      console.info(
-        `${new Date().toISOString()} ${chalk.red('ERROR')} ${LogProvider.getMessage(
-          entry.service ? entry.service : 'global',
-          entry.message
-        )}    ${LogProvider.buildPropsLog(entry.props)}`
-      );
-      if (entry.error) {
-        console.error(entry.error);
-      }
-    }
+    this.logger.error(
+      {
+        service: entry.service,
+        props: entry.props,
+        error: entry.error,
+      },
+      entry.message
+    );
   }
 }
 
