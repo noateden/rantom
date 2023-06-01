@@ -8,7 +8,7 @@ import FraxLendPairs from './data/FraxlendPairs.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import YearnVaults from './data/YearnVaults.json';
-import { WhitelistUniPools } from './policies/whitelistUniPools';
+import {WhitelistPancakePools, WhitelistSushiPools, WhitelistUniPools} from './policies/whitelistUniPools';
 
 export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
   ethereum: [
@@ -25,6 +25,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
 
     // we split these addresses into another sync process
     ...WhitelistUniPools,
+    ...WhitelistSushiPools,
+    ...WhitelistPancakePools,
     '0x000000000000ad05ccc4f10045630fb830b95127', // Blur Marketplace
     '0x00000000006c3852cbef3e08e8df289169ede581', // Seaport 1.1
     '0x00000000000006c7676171937c444f6bde3d6282', // Seaport 1.2
