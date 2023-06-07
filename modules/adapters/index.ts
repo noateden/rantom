@@ -53,6 +53,7 @@ import {
   PancakeswapV3Configs,
   ParaswapConfigs,
   PendleConfigs,
+  RaftConfigs,
   RaribleConfigs,
   RocketpoolConfigs,
   ShibaswapConfigs,
@@ -122,6 +123,7 @@ import { OptimismAdapter } from './optimism/optimism';
 import { Pancakeswapv3Adapter } from './pancakeswap/pancakeswapv3';
 import { ParaswapAdapter } from './paraswap/paraswap';
 import { PendleAdapter } from './pendle/pendle';
+import { RaftAdapter } from './raft/raft';
 import { RaribleAdapter } from './rarible/rarible';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SiloAdapter } from './silo/silo';
@@ -212,5 +214,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     airswap: new AirswapAdapter(AirswapConfigs, providers),
     bungee: new BungeeAdapter(BungeeConfigs, providers),
     spark: new Aavev3Adapter(SparkConfigs, providers),
+    raft: new RaftAdapter(RaftConfigs, providers),
   };
 }

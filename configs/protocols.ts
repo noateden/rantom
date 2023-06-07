@@ -1831,3 +1831,13 @@ export const SparkConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const RaftConfigs: ProtocolConfig = {
+  protocol: 'raft',
+  categories: ['lending'],
+  contracts: {
+    ethereum: [
+      '0x839d6833cee34ffab6fa9057b39f02bd3091a1d6', // PositionManagerStETH
+    ],
+  },
+};

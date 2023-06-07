@@ -227,6 +227,7 @@
     "decimals": 18,
     "address": "0x0000000000000000000000000000000000000000"
   },
+  "R": { "chain": "ethereum", "address": "0x183015a9ba6ff60230fdeadc3f43b3d788b13e21", "symbol": "R", "decimals": 18 },
   "RAI": {
     "chain": "ethereum",
     "address": "0x03ab458634910aad20ef5f1c8ee96f1d6ac54919",

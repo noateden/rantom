@@ -1,0 +1,281 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "positionManager_",
+        "type": "address"
+      },
+      {
+        "internalType": "contract IWstETH",
+        "name": "wstETH_",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "caller",
+        "type": "address"
+      }
+    ],
+    "name": "CallerIsNotPositionManager",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "PositionManagerCannotBeZero",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "SendingEtherFailed",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "WstETHAddressCannotBeZero",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "position",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "collateralAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "debtAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "isDebtIncrease",
+        "type": "bool"
+      }
+    ],
+    "name": "ETHPositionChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "position",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "collateralAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "isCollateralIncrease",
+        "type": "bool"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "debtAmount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "isDebtIncrease",
+        "type": "bool"
+      }
+    ],
+    "name": "StETHPositionChanged",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "debtChange",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "isDebtIncrease",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxFeePercentage",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "contract IERC20Permit",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "v",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "r",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct ERC20PermitSignature",
+        "name": "permitSignature",
+        "type": "tuple"
+      }
+    ],
+    "name": "managePositionETH",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "stETHCollateralChange",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "isCollateralIncrease",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint256",
+        "name": "debtChange",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "isDebtIncrease",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxFeePercentage",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "contract IERC20Permit",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "v",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "r",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "internalType": "struct ERC20PermitSignature",
+        "name": "permitSignature",
+        "type": "tuple"
+      }
+    ],
+    "name": "managePositionStETH",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "positionManager",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "stETH",
+    "outputs": [
+      {
+        "internalType": "contract IStETH",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "wstETH",
+    "outputs": [
+      {
+        "internalType": "contract IWstETH",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

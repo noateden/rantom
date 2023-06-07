@@ -440,4 +440,8 @@ export const Signatures: { [key: string]: string } = {
   // Bungee.Exchange
   'SocketBridge(uint256,address,uint256,bytes32,address,address,bytes32)':
     '0x74594da9e31ee4068e17809037db37db496702bf7d8d63afe6f97949277d1609',
+
+  // Raft.fi
+  'StETHPositionChanged(address,uint256,bool,uint256,bool)':
+    '0x8ec6bac52c41abc2cd8ffecf547e7916fa2412325d10243ca4cf318727cda019',
 };

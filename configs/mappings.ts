@@ -7812,4 +7812,38 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['StETHPositionChanged(address,uint256,bool,uint256,bool)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'position',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'collateralAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'isCollateralIncrease',
+        type: 'bool',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'debtAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'isDebtIncrease',
+        type: 'bool',
+      },
+    ],
+  },
 };

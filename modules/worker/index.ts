@@ -30,6 +30,7 @@ import { MorphoContracts } from '../../configs/contracts/morpho';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { ParaswapContracts } from '../../configs/contracts/paraswap';
 import { PendleContracts } from '../../configs/contracts/pendle';
+import { RaftContracts } from '../../configs/contracts/raft';
 import { SiloContracts } from '../../configs/contracts/silo';
 import { SparkContracts } from '../../configs/contracts/spark';
 import { StakewiseContracts } from '../../configs/contracts/stakewise';
@@ -79,5 +80,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     bungee: new ContractWorker(providers, BungeeContracts),
     blur: new ContractWorker(providers, BlurContracts),
     spark: new ContractWorker(providers, SparkContracts),
+    raft: new ContractWorker(providers, RaftContracts),
   };
 }
