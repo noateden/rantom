@@ -7930,4 +7930,85 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Borrow(address,uint256,uint256)']]: {
+    abi: [
+      {
+        name: 'user',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'collateral_increase',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'loan_increase',
+        type: 'uint256',
+        indexed: false,
+      },
+    ],
+  },
+  [Signatures['Repay(address,uint256,uint256)']]: {
+    abi: [
+      {
+        name: 'user',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'collateral_decrease',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'loan_decrease',
+        type: 'uint256',
+        indexed: false,
+      },
+    ],
+  },
+  [Signatures['RemoveCollateral(address,uint256)']]: {
+    abi: [
+      {
+        name: 'user',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'collateral_decrease',
+        type: 'uint256',
+        indexed: false,
+      },
+    ],
+  },
+  [Signatures['Liquidate(address,address,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        name: 'liquidator',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'user',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'collateral_received',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'stablecoin_received',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'debt',
+        type: 'uint256',
+        indexed: false,
+      },
+    ],
+  },
 };

@@ -17,11 +17,11 @@ class LogProvider {
 
       if (props) {
         for (const [key, value] of Object.entries(props)) {
-          propsLine += `${key}=${value}, `;
+          propsLine += `${key}=${value} `;
         }
       }
 
-      return `${timestamp} [${service}] ${level}: ${message.padEnd(40)} ${propsLine.slice(0, -2)}`;
+      return `${timestamp} [${service}] ${level}: ${message.padEnd(40)} ${propsLine.slice(0, -1)}`;
     });
 
     this.logger = winston.createLogger({

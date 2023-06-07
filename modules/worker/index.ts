@@ -13,6 +13,7 @@ import { ChaiContracts } from '../../configs/contracts/chai';
 import { Compoundv3Contracts } from '../../configs/contracts/compound';
 import { ConicContracts } from '../../configs/contracts/conic';
 import { ConvexContracts } from '../../configs/contracts/convex';
+import { CrvusdContracts } from '../../configs/contracts/crvusd';
 import { CurveContracts } from '../../configs/contracts/curve';
 import { DodoContracts } from '../../configs/contracts/dodo';
 import { EnsContracts } from '../../configs/contracts/ens';
@@ -85,5 +86,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     raft: new ContractWorker(providers, RaftContracts),
     sturdy: new ContractWorker(providers, SturdyContracts),
     swell: new ContractWorker(providers, SwellContracts),
+    crvusd: new ContractWorker(providers, CrvusdContracts),
   };
 }

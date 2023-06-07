@@ -24,6 +24,7 @@ import {
   ConicConfigs,
   ConvexConfigs,
   CowswapConfigs,
+  CrvusdConfigs,
   CurveConfigs,
   DodoConfigs,
   EnsConfigs,
@@ -98,6 +99,7 @@ import { Compoundv3Adapter } from './compound/compoundv3';
 import { ConicAdapter } from './conic/conic';
 import { ConvexAdapter } from './convex/convex';
 import { CowswapAdapter } from './cowswap/cowswap';
+import { CrvusdAdapter } from './crvusd/crvusd';
 import { CurveAdapter } from './curve/curve';
 import { DodoAdapter } from './dodo/dodo';
 import { EnsAdapter } from './ens/ens';
@@ -221,5 +223,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     raft: new RaftAdapter(RaftConfigs, providers),
     sturdy: new SturdyAdapter(SturdyConfigs, providers),
     swell: new SwellAdapter(SwellConfigs, providers),
+    crvusd: new CrvusdAdapter(CrvusdConfigs, providers),
   };
 }

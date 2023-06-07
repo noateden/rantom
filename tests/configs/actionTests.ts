@@ -20,6 +20,7 @@ import { Compound3ActionTestLogs, CompoundActionTestLogs } from './protocols/com
 import { ConicActionTestLogs } from './protocols/conic';
 import { ConvexActionTestLogs } from './protocols/convex';
 import { CowswapActionTestLogs } from './protocols/cowswap';
+import { CrvusdActionTestLogs } from './protocols/crvusd';
 import { CurveActionTestLogs } from './protocols/curve';
 import { DodoActionTestLogs } from './protocols/dodo';
 import { EnsActionTestLogs } from './protocols/ens';
@@ -120,4 +121,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...BungeeActionTestLogs,
   ...SparkActionTestLogs,
   ...SturdyActionTestLogs,
+  ...CrvusdActionTestLogs,
 ];

@@ -1862,3 +1862,13 @@ export const SwellConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const CrvusdConfigs: ProtocolConfig = {
+  protocol: 'crvusd',
+  categories: ['lending'],
+  contracts: {
+    ethereum: [
+      '0x8472a9a7632b173c8cf3a86d3afec50c35548e76', // sfrxETH
+    ],
+  },
+};

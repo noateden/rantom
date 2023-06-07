@@ -384,6 +384,12 @@
     "symbol": "cbETH",
     "decimals": 18
   },
+  "crvUSD": {
+    "chain": "ethereum",
+    "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
+    "symbol": "crvUSD",
+    "decimals": 18
+  },
   "cvxCRV": {
     "chain": "ethereum",
     "address": "0x62b9c7356a2dc64a1969e19c23e4f579f9810aa7",
@@ -430,6 +436,12 @@
     "chain": "ethereum",
     "address": "0x57ab1ec28d129707052df4df418d58a2d46d5f51",
     "symbol": "sUSD",
+    "decimals": 18
+  },
+  "sfrxETH": {
+    "chain": "ethereum",
+    "address": "0xac3e018457b222d93114458476f3e3416abbe38f",
+    "symbol": "sfrxETH",
     "decimals": 18
   },
   "stETH": {
