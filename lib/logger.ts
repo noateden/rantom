@@ -1,4 +1,4 @@
-import pino from 'pino';
+import winston from 'winston';
 
 export interface LogEntry {
   message: string;
@@ -12,56 +12,55 @@ class LogProvider {
   private readonly logger: any;
 
   constructor() {
-    this.logger = pino({
+    const customFormat = winston.format.printf(({ timestamp, level, service, message, props }) => {
+      let propsLine = '';
+
+      if (props) {
+        for (const [key, value] of Object.entries(props)) {
+          propsLine += `${key}=${value}, `;
+        }
+      }
+
+      return `${timestamp} [${service}] ${level}: ${message.padEnd(40)} ${propsLine.slice(0, -2)}`;
+    });
+
+    this.logger = winston.createLogger({
       level: 'debug',
-      enabled: !Boolean(process.env.SILENT_MODE),
-      timestamp: pino.stdTimeFunctions.isoTime,
+      format: winston.format.combine(winston.format.colorize(), winston.format.timestamp(), customFormat),
+      transports: [new winston.transports.Console({})],
     });
   }
 
-  public getLogger() {
-    return this.logger;
-  }
-
   public onInfo(entry: LogEntry): void {
-    this.logger.info(
-      {
-        service: entry.service,
-        props: entry.props,
-      },
-      entry.message
-    );
+    this.logger.info(entry.message, {
+      service: entry.service,
+      props: entry.props,
+    });
   }
 
   public onDebug(entry: LogEntry): void {
-    this.logger.debug(
-      {
-        service: entry.service,
-        props: entry.props,
-      },
-      entry.message
-    );
+    this.logger.debug(entry.message, {
+      service: entry.service,
+      props: entry.props,
+    });
   }
 
   public onWarn(entry: LogEntry): void {
-    this.logger.warn(
-      {
-        service: entry.service,
-        props: entry.props,
-      },
-      entry.message
-    );
+    this.logger.warn(entry.message, {
+      service: entry.service,
+      props: entry.props,
+    });
   }
 
   public onError(entry: LogEntry): void {
-    this.logger.error(
-      {
-        service: entry.service,
-        props: entry.props,
-        error: entry.error,
-      },
-      entry.message
-    );
+    this.logger.error(entry.message, {
+      service: entry.service,
+      props: entry.props,
+    });
+
+    if (entry.error) {
+      console.error(entry.error);
+    }
   }
 }
 
