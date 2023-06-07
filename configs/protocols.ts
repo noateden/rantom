@@ -1852,3 +1852,13 @@ export const SturdyConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const SwellConfigs: ProtocolConfig = {
+  protocol: 'swell',
+  categories: ['staking'],
+  contracts: {
+    ethereum: [
+      '0xf951e335afb289353dc249e82926178eac7ded78', // swETH
+    ],
+  },
+};

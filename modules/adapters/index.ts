@@ -64,6 +64,7 @@ import {
   SturdyConfigs,
   SushiConfigs,
   Sushiv3Configs,
+  SwellConfigs,
   TornadocashConfigs,
   Uniswapv2Configs,
   Uniswapv3Configs,
@@ -133,6 +134,7 @@ import { StargateAdapter } from './stargate/stargate';
 import { SturdyAdapter } from './sturdy/sturdy';
 import { SushiAdapter } from './sushi/sushi';
 import { Sushiv3Adapter } from './sushi/sushiv3';
+import { SwellAdapter } from './swell/swell';
 import { TornadocashAdapter } from './tornadocash/tornadocash';
 import { Uniswapv2Adapter } from './uniswap/uniswapv2';
 import { Uniswapv3Adapter } from './uniswap/uniswapv3';
@@ -218,5 +220,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     spark: new Aavev3Adapter(SparkConfigs, providers),
     raft: new RaftAdapter(RaftConfigs, providers),
     sturdy: new SturdyAdapter(SturdyConfigs, providers),
+    swell: new SwellAdapter(SwellConfigs, providers),
   };
 }

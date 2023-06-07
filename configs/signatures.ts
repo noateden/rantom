@@ -447,4 +447,8 @@ export const Signatures: { [key: string]: string } = {
   'DebtChanged(address,address,uint256,bool)': '0x44c05672e6192a1b2b6c9d606ce13bde25c7166a0b0b26b37f1a09cb1b8423fb',
   'CollateralChanged(address,address,uint256,bool)':
     '0xde54006e825a11b955b762dda1068596579f82b325e183045afefa6f71a8db49',
+
+  // swellnetwork.io
+  'ETHDepositReceived(address,uint256,uint256,uint256)':
+    '0xcb2ce03599937ff3d73e67e71a0f37013a6d3b697487823e37bc94da69483986',
 };
