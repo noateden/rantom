@@ -166,5 +166,6 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xc13e21b648a5ee794902342038ff3adab66be987', // Spark lending pool
     '0x5f59b322eb3e16a0c78846195af1f588b77403fc', // Raft.fi PositionManager
     '0x839d6833cee34ffab6fa9057b39f02bd3091a1d6', // Raft.fi PositionManagerStETH
+    '0xa422ca380bd70eef876292839222159e41aaee17', // Sturdy lending pool
   ],
 };

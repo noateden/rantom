@@ -1842,3 +1842,13 @@ export const RaftConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const SturdyConfigs: ProtocolConfig = {
+  protocol: 'sturdy',
+  categories: ['lending'],
+  contracts: {
+    ethereum: [
+      '0xa422ca380bd70eef876292839222159e41aaee17', // lending pool
+    ],
+  },
+};

@@ -51,6 +51,7 @@ import { RocketpoolActionTestLogs } from './protocols/rocketpool';
 import { SiloActionTestLogs } from './protocols/silo';
 import { SparkActionTestLogs } from './protocols/spark';
 import { StargateActionTestLogs } from './protocols/stargate';
+import { SturdyActionTestLogs } from './protocols/sturdy';
 import { SushiActionTestLogs } from './protocols/sushi';
 import { TornadocashActionTestLogs } from './protocols/tornadocash';
 import { UniswapActionTestLogs } from './protocols/uniswap';
@@ -118,4 +119,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...AirswapActionTestLogs,
   ...BungeeActionTestLogs,
   ...SparkActionTestLogs,
+  ...SturdyActionTestLogs,
 ];

@@ -34,6 +34,7 @@ import { RaftContracts } from '../../configs/contracts/raft';
 import { SiloContracts } from '../../configs/contracts/silo';
 import { SparkContracts } from '../../configs/contracts/spark';
 import { StakewiseContracts } from '../../configs/contracts/stakewise';
+import { SturdyContracts } from '../../configs/contracts/sturdy';
 import { SushiContracts } from '../../configs/contracts/sushi';
 import { TornadocashContracts } from '../../configs/contracts/tornadocash';
 import { YearnContracts } from '../../configs/contracts/yearn';
@@ -81,5 +82,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     blur: new ContractWorker(providers, BlurContracts),
     spark: new ContractWorker(providers, SparkContracts),
     raft: new ContractWorker(providers, RaftContracts),
+    sturdy: new ContractWorker(providers, SturdyContracts),
   };
 }

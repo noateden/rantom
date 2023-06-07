@@ -1,0 +1,68 @@
+[
+  {
+    "chain": "ethereum",
+    "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+    "symbol": "DAI",
+    "decimals": 18
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "symbol": "USDC",
+    "decimals": 6
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "symbol": "USDT",
+    "decimals": 6
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
+    "symbol": "stETH",
+    "decimals": 18
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x001dfc794bf68c47fec0a3f031c710e71318fa2a",
+    "symbol": "cFRAX3CRV-f",
+    "decimals": 18
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xc6dc0bf66e759d4892aeda7c9d02eb671f2c3016",
+    "symbol": "ccrvPlain3andSUSD",
+    "decimals": 18
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xabad46dcf632351cc74f2087d9a359ac3299804a",
+    "symbol": "cib3CRV",
+    "decimals": 18
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x27403b2756e9c2f436fb13e0b188dd231f1da170",
+    "symbol": "ccrvFRAX",
+    "decimals": 18
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xd17df4734cac425f64e83dec1ac4622a4e909405",
+    "symbol": "cMIM-3LP3CRV-f",
+    "decimals": 18
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xeb74fbfbd9d3b190940384867bc984890b96d202",
+    "symbol": "cTUSDFRAXBP3CRV-f",
+    "decimals": 18
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xc91daad2208b962babb06c576355334d9f5357ea",
+    "symbol": "cbb-a-USD",
+    "decimals": 18
+  }
+]

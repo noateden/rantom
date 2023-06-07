@@ -61,6 +61,7 @@ import {
   SparkConfigs,
   StakewiseConfigs,
   StargateConfigs,
+  SturdyConfigs,
   SushiConfigs,
   Sushiv3Configs,
   TornadocashConfigs,
@@ -129,6 +130,7 @@ import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SiloAdapter } from './silo/silo';
 import { StakewiseAdapter } from './stakewise/stakewise';
 import { StargateAdapter } from './stargate/stargate';
+import { SturdyAdapter } from './sturdy/sturdy';
 import { SushiAdapter } from './sushi/sushi';
 import { Sushiv3Adapter } from './sushi/sushiv3';
 import { TornadocashAdapter } from './tornadocash/tornadocash';
@@ -215,5 +217,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     bungee: new BungeeAdapter(BungeeConfigs, providers),
     spark: new Aavev3Adapter(SparkConfigs, providers),
     raft: new RaftAdapter(RaftConfigs, providers),
+    sturdy: new SturdyAdapter(SturdyConfigs, providers),
   };
 }
