@@ -7846,4 +7846,60 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['DebtChanged(address,address,uint256,bool)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'position',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'contract IERC20',
+        name: 'collateralToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'debtAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'isDebtIncrease',
+        type: 'bool',
+      },
+    ],
+  },
+  [Signatures['CollateralChanged(address,address,uint256,bool)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'position',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'contract IERC20',
+        name: 'collateralToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'collateralAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'isCollateralIncrease',
+        type: 'bool',
+      },
+    ],
+  },
 };

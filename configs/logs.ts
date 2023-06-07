@@ -164,6 +164,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x522d6f36c95a1b6509a14272c17747bbb582f2a6', // Airswap v3
     '0x3a23f943181408eac424116af7b7790c94cb97a5', // Bungee socket gateway
     '0xc13e21b648a5ee794902342038ff3adab66be987', // Spark lending pool
+    '0x5f59b322eb3e16a0c78846195af1f588b77403fc', // Raft.fi PositionManager
     '0x839d6833cee34ffab6fa9057b39f02bd3091a1d6', // Raft.fi PositionManagerStETH
   ],
 };

@@ -1837,6 +1837,7 @@ export const RaftConfigs: ProtocolConfig = {
   categories: ['lending'],
   contracts: {
     ethereum: [
+      '0x5f59b322eb3e16a0c78846195af1f588b77403fc', // PositionManager
       '0x839d6833cee34ffab6fa9057b39f02bd3091a1d6', // PositionManagerStETH
     ],
   },

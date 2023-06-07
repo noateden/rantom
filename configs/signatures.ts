@@ -444,4 +444,7 @@ export const Signatures: { [key: string]: string } = {
   // Raft.fi
   'StETHPositionChanged(address,uint256,bool,uint256,bool)':
     '0x8ec6bac52c41abc2cd8ffecf547e7916fa2412325d10243ca4cf318727cda019',
+  'DebtChanged(address,address,uint256,bool)': '0x44c05672e6192a1b2b6c9d606ce13bde25c7166a0b0b26b37f1a09cb1b8423fb',
+  'CollateralChanged(address,address,uint256,bool)':
+    '0xde54006e825a11b955b762dda1068596579f82b325e183045afefa6f71a8db49',
 };
