@@ -19,6 +19,7 @@ const Signatures = {
 
 const Collaterals: { [key: string]: Token } = {
   '0x8472a9a7632b173c8cf3a86d3afec50c35548e76': Tokens.ethereum.sfrxETH,
+  '0x100daa78fc509db39ef7d04de0c1abd299f4c6ce': Tokens.ethereum.wstETH,
 };
 
 export class CrvusdAdapter extends Adapter {
