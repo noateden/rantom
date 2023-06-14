@@ -48,6 +48,53 @@
     ]
   },
   {
+    "type": "plainWithoutCoinIndex",
+    "chain": "ethereum",
+    "address": "0xae34574ac03a15cd58a92dc79de7b1a0800f1ce3",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+        "symbol": "FRAX",
+        "decimals": 18
+      },
+      { "chain": "ethereum", "address": "0x8e870d67f660d95d5be530380d0ec0bd388289e1", "symbol": "USDP", "decimals": 18 }
+    ]
+  },
+  {
+    "type": "plainWithoutCoinIndex",
+    "chain": "ethereum",
+    "address": "0xca978a0528116dda3cba9acd3e68bc6191ca53d0",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0x8e870d67f660d95d5be530380d0ec0bd388289e1",
+        "symbol": "USDP",
+        "decimals": 18
+      },
+      {
+        "chain": "ethereum",
+        "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
+        "symbol": "crvUSD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "type": "plainWithoutCoinIndex",
+    "chain": "ethereum",
+    "address": "0x4dece678ceceb27446b35c672dc7d61f30bad69e",
+    "tokens": [
+      { "chain": "ethereum", "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "symbol": "USDC", "decimals": 6 },
+      {
+        "chain": "ethereum",
+        "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
+        "symbol": "crvUSD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
     "type": "plainWithCoinIndex",
     "chain": "ethereum",
     "address": "0x8301ae4fc9c624d1d396cbdaa1ed877821d7c511",
