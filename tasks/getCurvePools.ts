@@ -11,6 +11,8 @@ const CurvePools: Array<string> = [
   'ethereum:2:plainWithoutCoinIndex:0xae34574ac03a15cd58a92dc79de7b1a0800f1ce3', // FRAX-USDP
   'ethereum:2:plainWithoutCoinIndex:0xca978a0528116dda3cba9acd3e68bc6191ca53d0', // crvUSD-USDP
   'ethereum:2:plainWithoutCoinIndex:0x4dece678ceceb27446b35c672dc7d61f30bad69e', // crvUSD-USDC
+  'ethereum:2:plainWithoutCoinIndex:0x34d655069f4cac1547e4c8ca284ffff5ad4a8db0', // crvUSD-TUSD
+  'ethereum:2:plainWithoutCoinIndex:0x390f3595bca2df7d23783dfd126427cceb997bf4', // crvUSD-USDT
   'ethereum:2:plainWithCoinIndex:0x8301ae4fc9c624d1d396cbdaa1ed877821d7c511', // WETH-CRV
   'ethereum:4:old:0xa5407eae9ba41422680e2e00537571bcc53efbfd', // DAI-USDC-USDT-sUSD
   'ethereum:2:meta:0xd632f22692fac7611d2aa1c0d552930d43caed3b', // FRAX-3Crv
