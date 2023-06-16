@@ -26,6 +26,10 @@ export function getRouter(providers: GlobalProviders): Router {
 
     let query: any = {};
 
+    if (filters && filters.protocol) {
+      query.protocol = filters.protocol;
+    }
+
     if (filters && filters.protocols) {
       query.protocol = { $in: filters.protocols };
     }
