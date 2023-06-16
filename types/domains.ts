@@ -16,43 +16,29 @@ export interface MongoCollections {
   metricsCollection: Collection;
 }
 
-export type KnownAction =
-  | 'swap'
-  | 'deposit'
-  | 'supply'
-  | 'withdraw'
-  | 'collect'
-  | 'borrow'
-  | 'repay'
-  | 'flashloan'
-  | 'liquidate'
-  | 'bridge'
-
-  // use for ENS domains
-  | 'register'
-  | 'renew'
-
-  // use for NFT trading
-  | 'list'
-  | 'buy'
-  | 'sell'
-  | 'bid'
-  | 'offer'
-  | 'cancel'
-  | 'trade'
-
-  // for beanstalk sow beans
-  | 'sow'
-
-  // for liquidity pool created
-  | 'createLiquidityPool'
-
-  // for token locking
-  | 'lock'
-  | 'unlock'
-
-  // use for service transaction
-  | 'update';
+export const Actions = [
+  'swap',
+  'collect',
+  'deposit',
+  'withdraw',
+  'borrow',
+  'repay',
+  'flashloan',
+  'liquidate',
+  'bridge',
+  'register',
+  'renew',
+  'list',
+  'buy',
+  'offer',
+  'trade',
+  'sow',
+  'createLiquidityPool',
+  'lock',
+  'unlock',
+  'update',
+] as const;
+export type KnownAction = (typeof Actions)[number];
 
 export interface TransactionActionBase {
   protocol: string;

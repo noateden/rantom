@@ -2,6 +2,7 @@ import { Router } from 'express';
 
 import { GlobalProviders } from '../../types/namespaces';
 import { logMiddleware } from './middleware';
+import * as activityRouter from './routes/activity';
 import * as oracleRouter from './routes/oracle';
 import * as parserRouter from './routes/parser';
 import * as queryRouter from './routes/query';
@@ -14,6 +15,7 @@ export function getRouter(providers: GlobalProviders): Router {
 
   router.use('/parser', parserRouter.getRouter(providers));
   router.use('/query', queryRouter.getRouter(providers));
+  router.use('/activity', activityRouter.getRouter(providers));
   router.use('/oracle', oracleRouter.getRouter(providers));
   router.use('/report', reportRouter.getRouter(providers));
 

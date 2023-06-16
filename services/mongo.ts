@@ -81,8 +81,23 @@ class MongodbProvider implements IMongodbProvider {
     statesCollection.createIndex({ name: 1 }, { background: true });
     cachingCollection.createIndex({ name: 1 }, { background: true });
 
+    // for insert and update logs
     logsCollection.createIndex({ chain: 1, contract: 1, transactionHash: 1, logIndex: 1 }, { background: true });
+
+    // for query all activities and order by timestamp
+    logsCollection.createIndex({ timestamp: 1 }, { background: true });
+
+    // for query given action like: deposit or swap
+    logsCollection.createIndex({ action: 1, timestamp: 1 }, { background: true });
+
+    // for query given token
+    logsCollection.createIndex({ 'tokens.address': 1, timestamp: 1 }, { background: true });
+
+    // for query protocol
     logsCollection.createIndex({ protocol: 1, action: 1, timestamp: 1 }, { background: true });
+
+    // for overall query
+    logsCollection.createIndex({ protocol: 1, action: 1, 'tokens.address': 1, timestamp: 1 }, { background: true });
 
     reportsCollection.createIndex({ name: 1 }, { background: true });
 
