@@ -1,27 +1,68 @@
 import { Router } from 'express';
 
+import { ApiQueryLogsLimitDefault } from '../../../configs';
+import { normalizeAddress } from '../../../lib/helper';
 import logger from '../../../lib/logger';
-import { AddressStats, ProtocolDailyStats, ProtocolSnapshotStats, ProtocolStats } from '../../../types/domains';
+import {
+  Actions,
+  AddressStats,
+  ProtocolDailyStats,
+  ProtocolSnapshotStats,
+  ProtocolStats,
+} from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
 import { MetricProvider } from '../../worker/metric';
-import { ApiCachingProvider } from '../caching';
 import { writeResponseError } from '../helpers';
 
 export function getRouter(providers: GlobalProviders): Router {
   const router = Router({ mergeParams: true });
 
   router.post('/logs', async (request, response) => {
-    const { query, options } = request.body;
+    const { filters, options } = request.body;
 
     const order = options && options.order === 'oldest' ? 1 : -1;
-    const limit = options && options.limit ? Number(options.limit) : 1000;
+    const limit = options && options.limit ? Number(options.limit) : ApiQueryLogsLimitDefault;
     const skip = options && options.skip ? Number(options.skip) : 0;
 
-    const apiCaching = new ApiCachingProvider(providers);
+    let query: any = {};
+
+    if (filters && filters.protocols) {
+      query.protocol = { $in: filters.protocols };
+    }
+
+    if (filters && filters.actions) {
+      query.action = { $in: filters.actions };
+    } else {
+      // query all actions
+      query.action = { $in: Actions };
+    }
+
+    if (filters && filters.token) {
+      query['tokens.address'] = normalizeAddress(filters.token.toString());
+    }
+
+    if (filters && filters.address) {
+      query.addresses = normalizeAddress(filters.address.toString());
+    }
 
     try {
-      const events: Array<any> = await apiCaching.queryLogs({ query, limit, order, skip });
-      response.status(200).json(events).end();
+      const collections = await providers.mongodb.requireCollections();
+      const activities: Array<any> = await collections.logsCollection
+        .find(query)
+        .sort({
+          timestamp: order,
+        })
+        .limit(limit)
+        .skip(skip)
+        .toArray();
+
+      const returnActivities: Array<any> = [];
+      for (const activity of activities) {
+        delete activity._id;
+        returnActivities.push(activity);
+      }
+
+      response.status(200).json(returnActivities);
     } catch (e: any) {
       logger.onError({
         service: 'api',
