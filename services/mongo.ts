@@ -100,12 +100,8 @@ class MongodbProvider implements IMongodbProvider {
     logsCollection.createIndex({ protocol: 1, action: 1, timestamp: 1 }, { background: true });
 
     // for overall query
-    logsCollection.createIndex({ addresses: 1, action: 1, 'tokens.address': 1, timestamp: 1 }, { background: true });
+    logsCollection.createIndex({ protocol: 1, action: 1, addresses: 1, timestamp: 1 }, { background: true });
     logsCollection.createIndex({ protocol: 1, action: 1, 'tokens.address': 1, timestamp: 1 }, { background: true });
-    logsCollection.createIndex(
-      { protocol: 1, action: 1, addresses: 1, 'tokens.address': 1, timestamp: 1 },
-      { background: true }
-    );
 
     reportsCollection.createIndex({ name: 1 }, { background: true });
 
