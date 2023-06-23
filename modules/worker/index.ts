@@ -28,6 +28,7 @@ import { LybraContracts } from '../../configs/contracts/lybra';
 import { MakerContracts } from '../../configs/contracts/maker';
 import { MetamaskContracts } from '../../configs/contracts/metamask';
 import { MorphoContracts } from '../../configs/contracts/morpho';
+import { OpenoceanContracts } from '../../configs/contracts/openocean';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { ParaswapContracts } from '../../configs/contracts/paraswap';
 import { PendleContracts } from '../../configs/contracts/pendle';
@@ -87,5 +88,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     sturdy: new ContractWorker(providers, SturdyContracts),
     swell: new ContractWorker(providers, SwellContracts),
     crvusd: new ContractWorker(providers, CrvusdContracts),
+    openocean: new ContractWorker(providers, OpenoceanContracts),
   };
 }

@@ -458,4 +458,8 @@ export const Signatures: { [key: string]: string } = {
   'RemoveCollateral(address,uint256)': '0xe25410a4059619c9594dc6f022fe231b02aaea733f689e7ab0cd21b3d4d0eb54',
   'Liquidate(address,address,uint256,uint256,uint256)':
     '0x642dd4d37ddd32036b9797cec464c0045dd2118c549066ae6b0f88e32240c2d0',
+
+  // OpenOcean.Finance
+  'Swapped(address,address,address,address,uint256,uint256,uint256,uint256,uint256,address)':
+    '0x76af224a143865a50b41496e1a73622698692c565c1214bc862f18e22d829c5e',
 };

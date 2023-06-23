@@ -48,6 +48,7 @@ import {
   MetamaskConfigs,
   MorphoConfigs,
   MultichainConfigs,
+  OpenOceanConfigs,
   OpenseaConfigs,
   OptimismConfigs,
   PancakeswapConfigs,
@@ -122,6 +123,7 @@ import { MakerAdapter } from './maker/maker';
 import { MetamaskAdapter } from './metamask/metamask';
 import { MorphoAdapter } from './morpho/morpho';
 import { MultichainAdapter } from './multichain/multichain';
+import { OpenoceanAdapter } from './openocean/openocean';
 import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
 import { Pancakeswapv3Adapter } from './pancakeswap/pancakeswapv3';
@@ -224,5 +226,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     sturdy: new SturdyAdapter(SturdyConfigs, providers),
     swell: new SwellAdapter(SwellConfigs, providers),
     crvusd: new CrvusdAdapter(CrvusdConfigs, providers),
+    openocean: new OpenoceanAdapter(OpenOceanConfigs, providers),
   };
 }

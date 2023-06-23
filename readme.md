@@ -85,6 +85,8 @@ yarn start --help
 | Airswap              | SwapV3, SwapV2                                                                                                       |     🌱 |
 | Bungee               | SocketBridge                                                                                                         |     🌱 |
 | Spark Protocol       | Supply, Withdraw, Borrow, Repay, Flashloan, Liquidation                                                              |     🌱 |
+| Crvusd               | Borrow, Repay, RemoveCollateral, Liquidate                                                                           |     🌱 |
+| OpenOcean.Finance    | Swapped                                                                                                              |     🌱 |
 
 ### Nft Marketplace
 

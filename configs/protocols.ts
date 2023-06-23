@@ -1873,3 +1873,13 @@ export const CrvusdConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const OpenOceanConfigs: ProtocolConfig = {
+  protocol: 'openocean',
+  categories: ['dexAggregator'],
+  contracts: {
+    ethereum: [
+      '0x6352a56caadc4f1e25cd6c75970fa768a3304e64', // OpenOcean Exchange
+    ],
+  },
+};

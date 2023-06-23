@@ -170,5 +170,6 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xf951e335afb289353dc249e82926178eac7ded78', // Swell swETH
     '0x8472a9a7632b173c8cf3a86d3afec50c35548e76', // Crvusd controller sfrxETH
     '0x100daa78fc509db39ef7d04de0c1abd299f4c6ce', // Crvusd controller wstETH
+    '0x6352a56caadc4f1e25cd6c75970fa768a3304e64', // Openocean exchange v2
   ],
 };
