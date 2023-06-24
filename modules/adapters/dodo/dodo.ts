@@ -36,9 +36,9 @@ export class DodoAdapter extends Adapter {
 
       if (token0 && token1) {
         const amount0 = new BigNumber(event.fromAmount).dividedBy(new BigNumber(10).pow(token0.decimals)).toString(10);
-        const amount1 = new BigNumber(event.returnAmount)
-          .dividedBy(new BigNumber(10).pow(token1.decimals))
-          .toString(10);
+        const amount1 = event.returnAmount
+          ? new BigNumber(event.returnAmount).dividedBy(new BigNumber(10).pow(token1.decimals)).toString(10)
+          : new BigNumber(event.toAmount).dividedBy(new BigNumber(10).pow(token1.decimals)).toString(10);
 
         let addresses: Array<string> = [];
         if (signature === Signatures.OrderHistory) {
