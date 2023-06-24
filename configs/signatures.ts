@@ -381,6 +381,8 @@ export const Signatures: { [key: string]: string } = {
   // Dodo Router
   'OrderHistory(address,address,address,uint256,uint256)':
     '0x92ceb067a9883c85aba061e46b9edf505a0d6e81927c4b966ebed543a5221787',
+  'DODOSwap(address,address,uint256,uint256,address,address)':
+    '0xc2c0245e056d5fb095f04cd6373bc770802ebd1e6c918eb78fdef843cdb37b0f',
 
   // Curve veCRV
   'Deposit(address,uint256,uint256,int128,uint256)':

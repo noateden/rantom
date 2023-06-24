@@ -1615,7 +1615,10 @@ export const DodoConfigs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0xa2398842f37465f89540430bdc00219fa9e4d28a', // Router proxy v2
+      '0xa356867fdcea8e71aeaf87805808803806231fdc', // V2Proxy02
       '0x50f9bde1c76bba997a5d6e7fefff695ec8536194', // DODOFeeRouteProxy
+      '0x21b9f852534fb9ddc3a0a7b24f067b50d8ac9a99', // FeeRouteProxy(for widget)
+      '0x3058ef90929cb8180174d74c507176cca6835d73', // USDT-DAI stable pool
     ],
   },
 };
