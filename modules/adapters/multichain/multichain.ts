@@ -2,7 +2,6 @@ import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import AnyErc20Abi from '../../../configs/abi/multichain/AnyERC20.json';
-import { ChainIdMaps } from '../../../configs/constants';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
@@ -45,8 +44,8 @@ export class MultichainAdapter extends Adapter {
       if (token) {
         const recipient = normalizeAddress(event.to);
         const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
-        const fromChain = ChainIdMaps[Number(event.fromChainID)];
-        const toChain = ChainIdMaps[Number(event.toChainID)];
+        const fromChain = event.fromChainID.toString();
+        const toChain = event.toChainID.toString();
 
         return {
           protocol: this.config.protocol,

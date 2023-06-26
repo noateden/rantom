@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
-import { ChainIdMaps } from '../../../configs/constants';
+import { LayerZeroChainIdMaps } from '../../../configs/constants';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
@@ -60,7 +60,7 @@ export class StargateAdapter extends Adapter {
             readableString: `${provider} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
             addition: {
               fromChain: chain,
-              toChain: ChainIdMaps[Number(event.chainId)] ? ChainIdMaps[Number(event.chainId)] : 'unknown',
+              toChain: LayerZeroChainIdMaps[Number(event.chainId)].toString(),
             },
           };
         } else if (signature === Signatures.Swap) {

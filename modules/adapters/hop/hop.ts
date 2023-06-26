@@ -2,7 +2,7 @@ import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import HopBridgeAbi from '../../../configs/abi/hop/L2Erc20Bridge.json';
-import { AddressZero, ChainIdMaps } from '../../../configs/constants';
+import { AddressZero } from '../../../configs/constants';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
@@ -58,12 +58,12 @@ export class HopAdapter extends Adapter {
               tokens: [token],
               tokenAmounts: [amount],
               addresses: [recipient],
-              readableString: `${recipient} bridge ${amount} ${token.symbol} from ${chain} to ${
-                ChainIdMaps[Number(event.chainId)]
-              } on ${this.config.protocol}`,
+              readableString: `${recipient} bridge ${amount} ${
+                token.symbol
+              } from ${chain} to ${event.chainId.toString()} on ${this.config.protocol}`,
               addition: {
                 fromChain: chain,
-                toChain: ChainIdMaps[Number(event.chainId)] ? ChainIdMaps[Number(event.chainId)] : 'unknown',
+                toChain: event.chainId.toString(),
               },
             };
           }

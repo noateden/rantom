@@ -1,7 +1,6 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
-import { ChainIdMaps } from '../../../configs/constants';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
@@ -44,12 +43,12 @@ export class BungeeAdapter extends Adapter {
           tokens: [token],
           tokenAmounts: [amount],
           addresses: [sender, receiver],
-          readableString: `${sender} bridge ${amount} ${token.symbol} from ${chain} to ${
-            ChainIdMaps[Number(event.toChainId)]
-          } on ${this.config.protocol}`,
+          readableString: `${sender} bridge ${amount} ${
+            token.symbol
+          } from ${chain} to ${event.toChainId.toString()} on ${this.config.protocol}`,
           addition: {
             fromChain: chain,
-            toChain: ChainIdMaps[Number(event.toChainId)] ? ChainIdMaps[Number(event.toChainId)] : 'unknown',
+            toChain: event.toChainId.toString(),
           },
         };
       }
