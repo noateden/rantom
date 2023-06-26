@@ -37,6 +37,8 @@ export const Actions = [
   'lock',
   'unlock',
   'update',
+
+  'useContract', // for calls to smart contracts: DSProxy, Instadapp account, ...
 ] as const;
 export type KnownAction = (typeof Actions)[number];
 
@@ -68,6 +70,11 @@ export interface Transaction {
   hash: string;
   from: string; // sender address
   to: string;
+
+  // we also try to get information and label for to address
+  // return address label if found
+  toLabel?: string;
+
   input: string;
   status: boolean;
   version: string;

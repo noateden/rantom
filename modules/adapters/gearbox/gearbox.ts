@@ -1,13 +1,15 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
+import CreditFacadeAbi from '../../../configs/abi/gearbox/CreditFacade.json';
 import { Tokens } from '../../../configs/constants';
+import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
+import { AdapterParseContractInfoOptions, AdapterParseLogOptions } from '../../../types/options';
 import { Adapter } from '../adapter';
 
 const Signatures: { [key: string]: string } = {
@@ -84,6 +86,23 @@ export class GearboxAdapter extends Adapter {
         }
       }
     }
+
+    return null;
+  }
+
+  public async tryParsingContractInfo(options: AdapterParseContractInfoOptions): Promise<string | null> {
+    const web3 = new Web3(EnvConfig.blockchains[options.chain].nodeRpc);
+    const contract = new web3.eth.Contract(CreditFacadeAbi as any, options.address);
+    try {
+      const creditManagerAddress = await contract.methods.creditManager.call();
+      if (creditManagerAddress) {
+        for (const pool of this.config.staticData.pools) {
+          if (compareAddress(pool.creditManager, creditManagerAddress)) {
+            return `Gearbox Credit Account ${normalizeAddress(options.address).slice(0, 6)}`;
+          }
+        }
+      }
+    } catch (e: any) {}
 
     return null;
   }

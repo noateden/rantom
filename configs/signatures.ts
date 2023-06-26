@@ -464,4 +464,8 @@ export const Signatures: { [key: string]: string } = {
   // OpenOcean.Finance
   'Swapped(address,address,address,address,uint256,uint256,uint256,uint256,uint256,address)':
     '0x76af224a143865a50b41496e1a73622698692c565c1214bc862f18e22d829c5e',
+
+  // Instadapp
+  'LogCast(address,address,uint256,string[],address[],string[],bytes[])':
+    '0xf6d9b29bbf2ae698de33670961ec53f895af65801d2cdaced431cc6129865347',
 };

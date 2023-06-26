@@ -8,7 +8,7 @@ import { Web3HelperProvider } from '../../services/web3';
 import { EventMapping, ProtocolConfig } from '../../types/configs';
 import { KnownAction, ProtocolDailyStats, ProtocolSnapshotStats, TransactionAction } from '../../types/domains';
 import { GlobalProviders, IAdapter, IRpcWrapperProvider, IWeb3HelperProvider } from '../../types/namespaces';
-import { AdapterParseLogOptions } from '../../types/options';
+import { AdapterParseContractInfoOptions, AdapterParseLogOptions } from '../../types/options';
 
 export class Adapter implements IAdapter {
   public readonly name: string = 'adapter';
@@ -44,6 +44,10 @@ export class Adapter implements IAdapter {
   }
 
   public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
+    return null;
+  }
+
+  public async tryParsingContractInfo(options: AdapterParseContractInfoOptions): Promise<string | null> {
     return null;
   }
 

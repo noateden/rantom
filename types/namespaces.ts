@@ -14,6 +14,7 @@ import {
   TransactionTransfer,
 } from './domains';
 import {
+  AdapterParseContractInfoOptions,
   AdapterParseLogOptions,
   ApiQueryLogOptions,
   OracleGetTokenPriceOptions,
@@ -69,6 +70,9 @@ export interface IAdapter extends IProvider {
 
   supportedSignature(signature: string): boolean;
   tryParsingActions: (options: AdapterParseLogOptions) => Promise<TransactionAction | null>;
+
+  // return address label or null on nothing found
+  tryParsingContractInfo: (options: AdapterParseContractInfoOptions) => Promise<string | null>;
 
   // get protocol daily stats
   getDailyStats: () => Promise<ProtocolDailyStats | null>;

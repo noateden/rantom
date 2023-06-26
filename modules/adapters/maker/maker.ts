@@ -1,13 +1,15 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
-import { Tokens } from '../../../configs/constants';
+import DSProxyFactoryAbi from '../../../configs/abi/maker/DSProxyFactory.json';
+import { MakerDSProxyFactoryContract, Tokens } from '../../../configs/constants';
+import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
 import { ProtocolConfig, Token } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
 import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
+import { AdapterParseContractInfoOptions, AdapterParseLogOptions } from '../../../types/options';
 import { Adapter } from '../adapter';
 
 const Signatures = {
@@ -133,6 +135,21 @@ export class MakerAdapter extends Adapter {
         }
       }
     }
+
+    return null;
+  }
+
+  public async tryParsingContractInfo(options: AdapterParseContractInfoOptions): Promise<string | null> {
+    // the original DSProxy contract was deployed: 0x2b9b8b83c09e1d2bd3dace1c3db2fec8ff54a8ac
+
+    const web3 = new Web3(EnvConfig.blockchains[options.chain].nodeRpc);
+    const contract = new web3.eth.Contract(DSProxyFactoryAbi as any, MakerDSProxyFactoryContract);
+    try {
+      const isDsProxy = await contract.methods.isProxy(options.address).call();
+      if (isDsProxy) {
+        return `DSProxy ${normalizeAddress(options.address).slice(0, 6)}`;
+      }
+    } catch (e: any) {}
 
     return null;
   }

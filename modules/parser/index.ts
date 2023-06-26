@@ -1,6 +1,7 @@
 import Web3 from 'web3';
 
 import { ParserVersion } from '../../configs';
+import { AddressZero } from '../../configs/constants';
 import EnvConfig from '../../configs/envConfig';
 import { normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
@@ -91,6 +92,17 @@ export class ParserProvider implements IParserProvider {
                 });
               }
             }
+          }
+        }
+
+        for (const adapter of this.adapters) {
+          const label = await adapter.tryParsingContractInfo({
+            chain: blockchain.name,
+            address: tx.to ? tx.to : AddressZero,
+          });
+          if (label) {
+            transaction.toLabel = label;
+            break;
           }
         }
 

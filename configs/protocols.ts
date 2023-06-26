@@ -1245,6 +1245,7 @@ export const GearboxConfigs: ProtocolConfig = {
       '0x24946bcbbd028d5abb62ad9b635eb1b1a67af668', // Pool DAI
       '0x79012c8d491dcf3a30db20d1f449b14caf01da6c', // Pool FRAX
       '0x86130bdd69143d8a4e5fc50bf4323d48049e98e4', // Pool USDC
+      '0xb03670c20f87f2169a7c4ebe35746007e9575901', // Pool WETH
       '0xb2a015c71c17bcac6af36645dead8c572ba08a08', // Pool WBTC
       '0xb8cf3ed326bb0e51454361fb37e9e8df6dc5c286', // Pool wstETH
     ],
@@ -1278,26 +1279,37 @@ export const GearboxConfigs: ProtocolConfig = {
       {
         chain: 'ethereum',
         address: '0x24946bcbbd028d5abb62ad9b635eb1b1a67af668',
+        creditManager: '0x672461bfc20dd783444a830ad4c38b345ab6e2f7',
         token: Tokens.ethereum.DAI,
       },
       {
         chain: 'ethereum',
+        address: '0xb03670c20f87f2169a7c4ebe35746007e9575901',
+        creditManager: '0x5887ad4cb2352e7f01527035faa3ae0ef2ce2b9b',
+        token: Tokens.ethereum.WETH,
+      },
+      {
+        chain: 'ethereum',
         address: '0x79012c8d491dcf3a30db20d1f449b14caf01da6c',
+        creditManager: '',
         token: Tokens.ethereum.FRAX,
       },
       {
         chain: 'ethereum',
         address: '0x86130bdd69143d8a4e5fc50bf4323d48049e98e4',
+        creditManager: '0x95357303f995e184a7998da6c6ea35cc728a1900',
         token: Tokens.ethereum.USDC,
       },
       {
         chain: 'ethereum',
         address: '0xb2a015c71c17bcac6af36645dead8c572ba08a08',
+        creditManager: '0xc62bf8a7889adf1c5dc4665486c7683ae6e74e0f',
         token: Tokens.ethereum.WBTC,
       },
       {
         chain: 'ethereum',
         address: '0xb8cf3ed326bb0e51454361fb37e9e8df6dc5c286',
+        creditManager: '0xe0bce4460795281d39c91da9b0275bca968293de',
         token: Tokens.ethereum.wstETH,
       },
     ],
@@ -1883,6 +1895,16 @@ export const OpenOceanConfigs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0x6352a56caadc4f1e25cd6c75970fa768a3304e64', // OpenOcean Exchange
+    ],
+  },
+};
+
+export const InstadappConfigs: ProtocolConfig = {
+  protocol: 'instadapp',
+  categories: ['service'],
+  contracts: {
+    ethereum: [
+      '0xcba828153d3a85b30b5b912e1f2dacac5816ae9d', // Account v2 implementation
     ],
   },
 };

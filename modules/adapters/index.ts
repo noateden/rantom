@@ -36,6 +36,7 @@ import {
   FraxswapConfigs,
   GearboxConfigs,
   HopConfigs,
+  InstadappConfigs,
   IronbankConfigs,
   KyberswapAggregatorConfigs,
   KyberswapClassicConfigs,
@@ -111,6 +112,7 @@ import { FraxethAdapter } from './fraxeth/fraxeth';
 import { FraxlendAdapter } from './fraxlend/fraxlend';
 import { GearboxAdapter } from './gearbox/gearbox';
 import { HopAdapter } from './hop/hop';
+import { InstadappAdapter } from './instadapp/instadapp';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { KyberswapAggregatorAdapter } from './kyberswap/kyberswapAggregator';
 import { KyberswapClassicAdapter } from './kyberswap/kyberswapClassic';
@@ -227,5 +229,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     swell: new SwellAdapter(SwellConfigs, providers),
     crvusd: new CrvusdAdapter(CrvusdConfigs, providers),
     openocean: new OpenoceanAdapter(OpenOceanConfigs, providers),
+    instadapp: new InstadappAdapter(InstadappConfigs, providers),
   };
 }

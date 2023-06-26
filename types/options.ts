@@ -27,6 +27,11 @@ export interface AdapterParseLogOptions {
   context?: any;
 }
 
+export interface AdapterParseContractInfoOptions {
+  chain: string;
+  address: string;
+}
+
 export type MultiCallResponse<T> = T | null;
 
 export interface MulticallCall {

@@ -119,6 +119,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x24946bcbbd028d5abb62ad9b635eb1b1a67af668', // Gearbox Pool DAI
     '0x79012c8d491dcf3a30db20d1f449b14caf01da6c', // Gearbox Pool FRAX
     '0x86130bdd69143d8a4e5fc50bf4323d48049e98e4', // Gearbox Pool USDC
+    '0xb03670c20f87f2169a7c4ebe35746007e9575901', // Gearbox Pool WETH
     '0xb2a015c71c17bcac6af36645dead8c572ba08a08', // Gearbox Pool WBTC
     '0xb8cf3ed326bb0e51454361fb37e9e8df6dc5c286', // Gearbox Pool wstETH
     '0x74312363e45dcaba76c59ec49a7aa8a65a67eed3', // X2y2 Exchange
