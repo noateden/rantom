@@ -39,6 +39,7 @@ export const Actions = [
   'update',
 
   'useContract', // for calls to smart contracts: DSProxy, Instadapp account, ...
+  'executeReceipt', // execute receipt on DeFi Saver
 ] as const;
 export type KnownAction = (typeof Actions)[number];
 
@@ -71,9 +72,10 @@ export interface Transaction {
   from: string; // sender address
   to: string;
 
-  // we also try to get information and label for to address
-  // return address label if found
-  toLabel?: string;
+  // we also try to get information and label for to addresses
+  addressesLabels?: {
+    [key: string]: string;
+  };
 
   input: string;
   status: boolean;

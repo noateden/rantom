@@ -26,6 +26,7 @@ import {
   CowswapConfigs,
   CrvusdConfigs,
   CurveConfigs,
+  DefisaverConfigs,
   DodoConfigs,
   EnsConfigs,
   Eth2Configs,
@@ -103,6 +104,7 @@ import { ConvexAdapter } from './convex/convex';
 import { CowswapAdapter } from './cowswap/cowswap';
 import { CrvusdAdapter } from './crvusd/crvusd';
 import { CurveAdapter } from './curve/curve';
+import { DefisaverAdapter } from './defisaver/defisaver';
 import { DodoAdapter } from './dodo/dodo';
 import { EnsAdapter } from './ens/ens';
 import { Eth2Adapter } from './eth2/eth2';
@@ -230,5 +232,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     crvusd: new CrvusdAdapter(CrvusdConfigs, providers),
     openocean: new OpenoceanAdapter(OpenOceanConfigs, providers),
     instadapp: new InstadappAdapter(InstadappConfigs, providers),
+    defisaver: new DefisaverAdapter(DefisaverConfigs, providers),
   };
 }

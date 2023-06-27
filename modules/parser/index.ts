@@ -101,7 +101,9 @@ export class ParserProvider implements IParserProvider {
             address: tx.to ? tx.to : AddressZero,
           });
           if (label) {
-            transaction.toLabel = label;
+            transaction.addressesLabels = {
+              [normalizeAddress(tx.to ? tx.to : AddressZero)]: label,
+            };
             break;
           }
         }
