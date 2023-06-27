@@ -40,7 +40,7 @@ export class DefisaverAdapter extends Adapter {
       } else if (signature === Signatures.RecipeEvent) {
         return {
           protocol: this.config.protocol,
-          action: 'executeReceipt',
+          action: 'executeRecipe',
           addresses: [sender],
           tokens: [],
           tokenAmounts: [],

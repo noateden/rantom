@@ -39,7 +39,7 @@ export const Actions = [
   'update',
 
   'useContract', // for calls to smart contracts: DSProxy, Instadapp account, ...
-  'executeReceipt', // execute receipt on DeFi Saver
+  'executeRecipe', // execute recipe on DeFi Saver
 ] as const;
 export type KnownAction = (typeof Actions)[number];
 
