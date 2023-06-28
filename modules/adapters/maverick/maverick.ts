@@ -80,15 +80,16 @@ export class MaverickAdapter extends Adapter {
           }
 
           const sender = normalizeAddress(event.sender);
+          const user = event.recipient ? normalizeAddress(event.recipient) : await this.getSenderAddress(options);
           const action: KnownAction = signature === Signatures.AddLiquidity ? 'deposit' : 'withdraw';
 
           return {
             protocol: this.config.protocol,
             action: action,
-            addresses: [sender],
+            addresses: [user, sender],
             tokens: [poolInfo.tokenA, poolInfo.tokenB],
             tokenAmounts: [amountA.toString(10), amountB.toString(10)],
-            readableString: `${sender} ${action} liquidity on ${this.config.protocol} chain ${chain}`,
+            readableString: `${user} ${action} liquidity on ${this.config.protocol} chain ${chain}`,
           };
         }
       }
