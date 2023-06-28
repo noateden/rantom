@@ -34,6 +34,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x00000000000001ad428e4906ae43d8f9852d0dd6', // Seaport 1.4
     '0x00000000000000adc04c56bf30ac9d3c0aaf14dc', // Seaport 1.5
 
+    '0x00000000219ab540356cbb839cbe05303d7705fa', // Eth beacon deposit
     '0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9', // Aave lending pool v2
     '0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2', // Aave lending pool v3
     '0xa57b8d98dae62b26ec3bcc4a365338157060b234', // Aura booster

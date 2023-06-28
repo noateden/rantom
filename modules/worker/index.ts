@@ -17,6 +17,7 @@ import { CrvusdContracts } from '../../configs/contracts/crvusd';
 import { CurveContracts } from '../../configs/contracts/curve';
 import { DodoContracts } from '../../configs/contracts/dodo';
 import { EnsContracts } from '../../configs/contracts/ens';
+import { Eth2Contracts } from '../../configs/contracts/eth2';
 import { ExactlyContracts } from '../../configs/contracts/exactly';
 import { FraxethContracts } from '../../configs/contracts/fraxeth';
 import { FraxlendContracts } from '../../configs/contracts/fraxlend';
@@ -46,6 +47,7 @@ import { ContractWorker } from './contract';
 
 export function getContractWorkers(providers: GlobalProviders): { [key: string]: IContractWorker } {
   return {
+    eth2: new ContractWorker(providers, Eth2Contracts),
     abracadabra: new ContractWorker(providers, AbracadabraContracts),
     gearbox: new ContractWorker(providers, GearboxContracts),
     exactly: new ContractWorker(providers, ExactlyContracts),
