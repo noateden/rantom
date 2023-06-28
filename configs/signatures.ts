@@ -278,6 +278,9 @@ export const Signatures: { [key: string]: string } = {
   'RemoveLiquidity(address,address,uint256)': '0xd8ae9b9ba89e637bcb66a69ac91e8f688018e81d6f92c57e02226425c8efbdf6',
   'Repay(address,uint256,uint256,uint256)': '0x2fe77b1c99aca6b022b8efc6e3e8dd1b48b30748709339b65c50ef3263443e09',
   'Claimed(address,uint256,bool)': '0xfa8256f7c08bb01a03ea96f8b3a904a4450311c9725d1c52cdbe21ed3dc42dcc',
+  'OpenCreditAccount(address,address,uint256,uint16)':
+    '0xfa2baf5d3eb95569f312f22477b246f9d4c50276f1cb3ded8e1aeadcbc07a763',
+  'CloseCreditAccount(address,address)': '0x460ad03b1cf79b1d64d3aefa28475f110ab66e84649c52bb41ed796b9b391981',
 
   // mSPELL staking
   'Deposit(address,uint256)': '0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c',

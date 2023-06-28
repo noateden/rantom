@@ -71,7 +71,7 @@ export const GearboxActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new GearboxAdapter(GearboxConfigs, null),
-    action: 'withdraw',
+    action: 'borrow',
   },
   {
     chain: 'ethereum',
@@ -93,7 +93,7 @@ export const GearboxActionTestLogs: Array<TestLog> = [
       removed: false,
     },
     adapter: new GearboxAdapter(GearboxConfigs, null),
-    action: 'deposit',
+    action: 'repay',
   },
   {
     chain: 'ethereum',

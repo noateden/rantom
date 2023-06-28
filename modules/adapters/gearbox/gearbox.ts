@@ -18,6 +18,9 @@ const Signatures: { [key: string]: string } = {
   Borrow: '0x312a5e5e1079f5dda4e95dbbd0b908b291fd5b992ef22073643ab691572c5b52',
   Repay: '0x2fe77b1c99aca6b022b8efc6e3e8dd1b48b30748709339b65c50ef3263443e09',
   Claimed: '0xfa8256f7c08bb01a03ea96f8b3a904a4450311c9725d1c52cdbe21ed3dc42dcc',
+
+  OpenCreditAccount: '0xfa2baf5d3eb95569f312f22477b246f9d4c50276f1cb3ded8e1aeadcbc07a763',
+  CloseCreditAccount: '0x460ad03b1cf79b1d64d3aefa28475f110ab66e84649c52bb41ed796b9b391981',
 };
 
 export class GearboxAdapter extends Adapter {
@@ -32,6 +35,8 @@ export class GearboxAdapter extends Adapter {
         : EventSignatureMapping[Signatures.Borrow],
       [Signatures.Repay]: EventSignatureMapping[Signatures.Repay],
       [Signatures.Claimed]: EventSignatureMapping[Signatures.Claimed],
+      [Signatures.OpenCreditAccount]: EventSignatureMapping[Signatures.OpenCreditAccount],
+      [Signatures.CloseCreditAccount]: EventSignatureMapping[Signatures.CloseCreditAccount],
     });
   }
 
@@ -39,8 +44,25 @@ export class GearboxAdapter extends Adapter {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
+    const web3 = new Web3();
+
+    if (signature === Signatures.OpenCreditAccount || signature === Signatures.CloseCreditAccount) {
+      try {
+        const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+        const account = event.onBehalfOf ? normalizeAddress(event.onBehalfOf) : normalizeAddress(event.borrower);
+        const action: KnownAction = signature === Signatures.OpenCreditAccount ? 'openAccount' : 'closeAccount';
+        return {
+          protocol: this.config.protocol,
+          action: action,
+          tokens: [],
+          tokenAmounts: [],
+          addresses: [account],
+          readableString: `${account} ${action} on ${this.config.protocol} chain ${options.chain}`,
+        };
+      } catch (e: any) {}
+    }
+
     if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
-      const web3 = new Web3();
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 
       if (signature === Signatures.Claimed) {
@@ -66,13 +88,23 @@ export class GearboxAdapter extends Adapter {
         }
 
         if (token) {
-          const sender = event.sender ? normalizeAddress(event.sender) : normalizeAddress(event.creditManager);
-          const amount = new BigNumber(event.amount ? event.amount : event.borrowAmount)
+          const sender = event.sender
+            ? normalizeAddress(event.sender)
+            : event.creaditAccount
+            ? normalizeAddress(event.creaditAccount)
+            : normalizeAddress(event.creditManager);
+          const amount = new BigNumber(event.amount ? event.amount : event.borrowedAmount)
             .dividedBy(new BigNumber(10).pow(token.decimals))
             .toString(10);
           let action: KnownAction = 'deposit';
-          if (signature === Signatures.RemoveLiquidity || signature === Signatures.Borrow) {
+          if (signature === Signatures.RemoveLiquidity) {
             action = 'withdraw';
+          }
+          if (signature === Signatures.Borrow) {
+            action = 'borrow';
+          }
+          if (signature === Signatures.Repay) {
+            action = 'repay';
           }
 
           return {

@@ -5262,6 +5262,50 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['OpenCreditAccount(address,address,uint256,uint16)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'onBehalfOf',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'creditAccount',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'borrowAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint16',
+        name: 'referralCode',
+        type: 'uint16',
+      },
+    ],
+  },
+  [Signatures['CloseCreditAccount(address,address)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'borrower',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'to',
+        type: 'address',
+      },
+    ],
+  },
   [Signatures['Deposit(address,uint256)']]: {
     abi: [
       {

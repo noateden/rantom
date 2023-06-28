@@ -58,21 +58,10 @@ export class StargateAdapter extends Adapter {
             tokenAmounts: [amount],
             addresses: [provider],
             readableString: `${provider} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-            addition: {
-              fromChain: chain,
-              toChain: LayerZeroChainIdMaps[Number(event.chainId)].toString(),
-            },
           };
         } else if (signature === Signatures.Swap) {
           const amount = new BigNumber(event.amountSD).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
           const provider = normalizeAddress(event.from);
-          const chainId = Number(event.chainId);
-          let targetChain = 'unknown';
-          for (const [chain, id] of Object.entries(this.config.staticData.chainIds)) {
-            if (id === chainId) {
-              targetChain = chain;
-            }
-          }
 
           return {
             protocol: this.config.protocol,
@@ -80,10 +69,12 @@ export class StargateAdapter extends Adapter {
             tokens: [token],
             tokenAmounts: [amount],
             addresses: [provider],
-            readableString: `${provider} bridge ${amount} ${token.symbol} from ${chain} to ${targetChain} on ${this.config.protocol}`,
+            readableString: `${provider} bridge ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
             addition: {
               fromChain: chain,
-              toChain: targetChain,
+              toChain: LayerZeroChainIdMaps[Number(event.chainId)]
+                ? LayerZeroChainIdMaps[Number(event.chainId)].toString()
+                : event.chainId.toString(),
             },
           };
         }

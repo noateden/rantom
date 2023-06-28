@@ -32,34 +32,42 @@ class LogProvider {
   }
 
   public onInfo(entry: LogEntry): void {
-    this.logger.info(entry.message, {
-      service: entry.service,
-      props: entry.props,
-    });
+    if (!Boolean(process.env.SILENT_MODE)) {
+      this.logger.info(entry.message, {
+        service: entry.service,
+        props: entry.props,
+      });
+    }
   }
 
   public onDebug(entry: LogEntry): void {
-    this.logger.debug(entry.message, {
-      service: entry.service,
-      props: entry.props,
-    });
+    if (!Boolean(process.env.SILENT_MODE)) {
+      this.logger.debug(entry.message, {
+        service: entry.service,
+        props: entry.props,
+      });
+    }
   }
 
   public onWarn(entry: LogEntry): void {
-    this.logger.warn(entry.message, {
-      service: entry.service,
-      props: entry.props,
-    });
+    if (!Boolean(process.env.SILENT_MODE)) {
+      this.logger.warn(entry.message, {
+        service: entry.service,
+        props: entry.props,
+      });
+    }
   }
 
   public onError(entry: LogEntry): void {
-    this.logger.error(entry.message, {
-      service: entry.service,
-      props: entry.props,
-    });
+    if (!Boolean(process.env.SILENT_MODE)) {
+      this.logger.error(entry.message, {
+        service: entry.service,
+        props: entry.props,
+      });
 
-    if (entry.error) {
-      console.error(entry.error);
+      if (entry.error) {
+        console.error(entry.error);
+      }
     }
   }
 }
