@@ -24,6 +24,7 @@ const Signatures = {
   // vyper version 0.1.0
   AddLiquidityVersion010: '0x3f1915775e0c9a38a57a7bb7f1f9005f486fb904e1f84aa215364d567319a58d',
   RemoveLiquidityVersion010: '0x9878ca375e106f2a43c3b599fc624568131c4c9a4ba66a14563715763be9d59d',
+  RemoveLiquidityImbalance010: '0xb964b72f73f5ef5bf0fdc559b2fab9a7b12a39e47817a547f1f0aee47febd602',
 
   // vyper version 0.2.4
   TokenExchange: '0x8b3e96f2b889fa771c53c981b40daf005f63f637f1869f707052d15a3dd97140',
@@ -61,6 +62,7 @@ export class CurveAdapter extends Adapter {
 
       [Signatures.AddLiquidityVersion010]: EventSignatureMapping[Signatures.AddLiquidityVersion010],
       [Signatures.RemoveLiquidityVersion010]: EventSignatureMapping[Signatures.RemoveLiquidityVersion010],
+      [Signatures.RemoveLiquidityImbalance010]: EventSignatureMapping[Signatures.RemoveLiquidityImbalance010],
 
       [Signatures.TokenExchange]: EventSignatureMapping[Signatures.TokenExchange],
       [Signatures.AddLiquidity]: EventSignatureMapping[Signatures.AddLiquidity],
@@ -232,6 +234,28 @@ export class CurveAdapter extends Adapter {
         }
         break;
       }
+
+      case Signatures.RemoveLiquidityImbalance010: {
+        const provider = normalizeAddress(event.provider);
+        const tokenAmounts: Array<string> = [];
+        for (let i = 0; i < poolConfig.tokens.length; i++) {
+          tokenAmounts.push(
+            new BigNumber(event.token_amounts[i].toString())
+              .dividedBy(new BigNumber(10).pow(poolConfig.tokens[i].decimals))
+              .toString(10)
+          );
+        }
+
+        return {
+          protocol: this.config.protocol,
+          action: 'withdraw',
+          addresses: [provider],
+          tokens: poolConfig.tokens,
+          tokenAmounts: tokenAmounts,
+          readableString: `${provider} withdraw tokens on ${this.config.protocol} chain ${chain}`,
+        };
+      }
+
       case Signatures.AddLiquidity:
       case Signatures.AddLiquidityVersion010:
       case Signatures.AddLiquidityVersion028:

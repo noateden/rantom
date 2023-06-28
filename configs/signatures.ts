@@ -99,6 +99,8 @@ export const Signatures: { [key: string]: string } = {
     '0x5ad056f2e28a8cec232015406b843668c1e36cda598127ec3b8c59b8c72773a0',
   'RemoveLiquidity(address,uint256[4],uint256[4],uint256)':
     '0x9878ca375e106f2a43c3b599fc624568131c4c9a4ba66a14563715763be9d59d',
+  'RemoveLiquidityImbalance(address,uint256[4],uint256[4],uint256,uint256)':
+    '0xb964b72f73f5ef5bf0fdc559b2fab9a7b12a39e47817a547f1f0aee47febd602',
   'TokenExchangeUnderlying(address,int128,uint256,int128,uint256)':
     '0xd013ca23e77a65003c2c659c5442c00c805371b7fc1ebd4c206c41d1536bd90b',
   'AddLiquidity(address,uint256[4],uint256[4],uint256,uint256)':

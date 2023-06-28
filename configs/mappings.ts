@@ -1978,6 +1978,35 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['RemoveLiquidityImbalance(address,uint256[4],uint256[4],uint256,uint256)']]: {
+    abi: [
+      {
+        type: 'address',
+        name: 'provider',
+        indexed: true,
+      },
+      {
+        type: 'uint256[4]',
+        name: 'token_amounts',
+        indexed: false,
+      },
+      {
+        type: 'uint256[4]',
+        name: 'fees',
+        indexed: false,
+      },
+      {
+        type: 'uint256',
+        name: 'invariant',
+        indexed: false,
+      },
+      {
+        type: 'uint256',
+        name: 'token_supply',
+        indexed: false,
+      },
+    ],
+  },
 
   [Signatures['Trade(address,address,address,uint256,uint256,uint256,bytes)']]: {
     abi: [
