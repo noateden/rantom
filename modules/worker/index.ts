@@ -27,6 +27,7 @@ import { LidoContracts } from '../../configs/contracts/lido';
 import { LiquityContracts } from '../../configs/contracts/liquity';
 import { LybraContracts } from '../../configs/contracts/lybra';
 import { MakerContracts } from '../../configs/contracts/maker';
+import { MaverickContracts } from '../../configs/contracts/maverick';
 import { MetamaskContracts } from '../../configs/contracts/metamask';
 import { MorphoContracts } from '../../configs/contracts/morpho';
 import { OpenoceanContracts } from '../../configs/contracts/openocean';
@@ -91,5 +92,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     swell: new ContractWorker(providers, SwellContracts),
     crvusd: new ContractWorker(providers, CrvusdContracts),
     openocean: new ContractWorker(providers, OpenoceanContracts),
+    maverick: new ContractWorker(providers, MaverickContracts),
   };
 }

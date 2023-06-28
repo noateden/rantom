@@ -13,6 +13,7 @@ import CurvePools from './data/CurvePools.json';
 import ExactlyMarkets from './data/ExactlyMarkets.json';
 import FraxlendPairs from './data/FraxlendPairs.json';
 import IronbankMarkets from './data/IronbankMarkets.json';
+import MaverickPools from './data/MaverickPools.json';
 import MorphoMarkets from './data/MorphoMarkets.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
@@ -1908,5 +1909,16 @@ export const InstadappConfigs: ProtocolConfig = {
     ethereum: [
       '0xcba828153d3a85b30b5b912e1f2dacac5816ae9d', // Account v2 implementation
     ],
+  },
+};
+
+export const MaverickConfigs: ProtocolConfig = {
+  protocol: 'maverick',
+  categories: ['trading'],
+  contracts: {
+    ethereum: MaverickPools.map((item) => item.address),
+  },
+  staticData: {
+    pools: MaverickPools,
   },
 };

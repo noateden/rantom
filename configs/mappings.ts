@@ -8188,4 +8188,174 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Swap(address,address,bool,bool,uint256,uint256,int32)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'sender',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'recipient',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'tokenAIn',
+        type: 'bool',
+      },
+      {
+        indexed: false,
+        internalType: 'bool',
+        name: 'exactOutput',
+        type: 'bool',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountIn',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountOut',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'int32',
+        name: 'activeTick',
+        type: 'int32',
+      },
+    ],
+  },
+  [Signatures['AddLiquidity(address,uint256,(uint128,uint128,uint256,uint128,uint8,int32,bool)[])']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'sender',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'tokenId',
+        type: 'uint256',
+      },
+      {
+        components: [
+          {
+            internalType: 'uint128',
+            name: 'deltaA',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint128',
+            name: 'deltaB',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint256',
+            name: 'deltaLpBalance',
+            type: 'uint256',
+          },
+          {
+            internalType: 'uint128',
+            name: 'binId',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint8',
+            name: 'kind',
+            type: 'uint8',
+          },
+          {
+            internalType: 'int32',
+            name: 'lowerTick',
+            type: 'int32',
+          },
+          {
+            internalType: 'bool',
+            name: 'isActive',
+            type: 'bool',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct IPool.BinDelta[]',
+        name: 'binDeltas',
+        type: 'tuple[]',
+      },
+    ],
+  },
+  [Signatures['RemoveLiquidity(address,address,uint256,(uint128,uint128,uint256,uint128,uint8,int32,bool)[])']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'sender',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'recipient',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'uint256',
+        name: 'tokenId',
+        type: 'uint256',
+      },
+      {
+        components: [
+          {
+            internalType: 'uint128',
+            name: 'deltaA',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint128',
+            name: 'deltaB',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint256',
+            name: 'deltaLpBalance',
+            type: 'uint256',
+          },
+          {
+            internalType: 'uint128',
+            name: 'binId',
+            type: 'uint128',
+          },
+          {
+            internalType: 'uint8',
+            name: 'kind',
+            type: 'uint8',
+          },
+          {
+            internalType: 'int32',
+            name: 'lowerTick',
+            type: 'int32',
+          },
+          {
+            internalType: 'bool',
+            name: 'isActive',
+            type: 'bool',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct IPool.BinDelta[]',
+        name: 'binDeltas',
+        type: 'tuple[]',
+      },
+    ],
+  },
 };

@@ -5,6 +5,7 @@ import BeefyVaults from './data/BeefyVaults.json';
 import CurvePools from './data/CurvePools.json';
 import ExactlyMarkets from './data/ExactlyMarkets.json';
 import FraxLendPairs from './data/FraxlendPairs.json';
+import MaverickPools from './data/MaverickPools.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import YearnVaults from './data/YearnVaults.json';
@@ -22,6 +23,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...PendleContracts.syTokens.map((item) => item.address),
     ...AgilityPools.map((item) => item.address),
     ...CurvePools.map((item) => item.address),
+    ...MaverickPools.map((item) => item.address),
 
     // we split these addresses into another sync process
     ...WhitelistUniPools,

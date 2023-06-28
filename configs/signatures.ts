@@ -473,4 +473,12 @@ export const Signatures: { [key: string]: string } = {
   // Instadapp
   'LogCast(address,address,uint256,string[],address[],string[],bytes[])':
     '0xf6d9b29bbf2ae698de33670961ec53f895af65801d2cdaced431cc6129865347',
+
+  // Maverick mav.xyz
+  'Swap(address,address,bool,bool,uint256,uint256,int32)':
+    '0x3b841dc9ab51e3104bda4f61b41e4271192d22cd19da5ee6e292dc8e2744f713',
+  'AddLiquidity(address,uint256,(uint128,uint128,uint256,uint128,uint8,int32,bool)[])':
+    '0x133a027327582be2089f6ca47137e3d337be4ca2cd921e5f0b178c9c2d5b8364',
+  'RemoveLiquidity(address,address,uint256,(uint128,uint128,uint256,uint128,uint8,int32,bool)[])':
+    '0x65da280c1e973a1c5884c38d63e2c2b3c2a3158a0761e76545b64035e2489dfe',
 };

@@ -47,6 +47,7 @@ import {
   LoopringConfigs,
   LybraConfigs,
   MakerConfigs,
+  MaverickConfigs,
   MetamaskConfigs,
   MorphoConfigs,
   MultichainConfigs,
@@ -124,6 +125,7 @@ import { LooksrareAdapter } from './looksrare/looksrare';
 import { LoopringAdapter } from './loopring/loopring';
 import { LybraAdapter } from './lybra/lybra';
 import { MakerAdapter } from './maker/maker';
+import { MaverickAdapter } from './maverick/maverick';
 import { MetamaskAdapter } from './metamask/metamask';
 import { MorphoAdapter } from './morpho/morpho';
 import { MultichainAdapter } from './multichain/multichain';
@@ -233,5 +235,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     openocean: new OpenoceanAdapter(OpenOceanConfigs, providers),
     instadapp: new InstadappAdapter(InstadappConfigs, providers),
     defisaver: new DefisaverAdapter(DefisaverConfigs, providers),
+    maverick: new MaverickAdapter(MaverickConfigs, providers),
   };
 }

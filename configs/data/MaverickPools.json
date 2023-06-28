@@ -1,0 +1,1026 @@
+[
+  {
+    "chain": "ethereum",
+    "address": "0xe8d7a52aabe8a0569314f28e90fdb8544860a424",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "symbol": "USDT",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xebac4a08dbe9b33320f73b7bc8c3559ff042a9d9",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+      "symbol": "wstETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x0eb1c92f9f5ec9d817968afddb4b46c564cdedbe",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+      "symbol": "wstETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xa495a38ea3728ac29096c86ca30127003f33af28",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xbe9895146f7af43049ca1c1ae358b0541ea49704",
+      "symbol": "cbETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xeb061a4e1ad3f1983655281cb8019ebbf8b30b29",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xae78736cd615f374d3085123a210448e74fc6393",
+      "symbol": "rETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x1dc08fb758c89db0d81da0924ea4ba884b68564c",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",
+      "symbol": "LUSD",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x0ce176e1b11a8f88a4ba2535de80e81f88592bad",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xf951e335afb289353dc249e82926178eac7ded78",
+      "symbol": "swETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x4efec7ada76685a521278407d9fcf58b8c6e8774",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x2dff88a56767223a5529ea5960da7a3f5f766406",
+      "symbol": "ID",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xedf1335a6f016d7e2c0d80082688cd582e48a6fc",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5faa989af96af85384b8a938c2ede4a7378d9875",
+      "symbol": "GAL",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+      "symbol": "wstETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x53dc703b78794b61281812f3a901918253beefee",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "symbol": "DAI",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x11a653ddfbb61e0feff5484919f06d9d254bf65f",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xf4b0e6fad7443fbb7bbfea7dc1cbe7bf7e574b03",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",
+      "symbol": "LUSD",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x757caf1bd60b4e16d6b91f03169a66149306de7a",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",
+      "symbol": "LUSD",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+      "symbol": "wstETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x99903bb64e9c1e54a10723afa7f9a094c9f783c8",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5e8422345238f34275888049021821e8e08caa1f",
+      "symbol": "frxETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xccb606939387c0274aaa2426517da315c1154e50",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x352b186090068eb35d532428676ce510e17ab581",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "symbol": "USDT",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x12378796271f2c5fb1a3206525c4b49a204a8487",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "symbol": "DAI",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "symbol": "USDT",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x2f3e9cd12dc8eee8c7fea0383ab877b6bead56ab",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "symbol": "DAI",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "symbol": "USDT",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xeab253203605d0b2ca7bde2157009d121cffdd27",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",
+      "symbol": "LUSD",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x991322ee666ec384eeb31bbd97b4dc0c2df14ce1",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
+      "symbol": "PEPE",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x001903de96a72d11d27cd8c2bee003a730e032a8",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x62b9c7356a2dc64a1969e19c23e4f579f9810aa7",
+      "symbol": "cvxCRV",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x7064a1ea78961ef05a510e86540235a4a2e64ca4",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x0ae38f7e10a43b5b2fb064b42a2f4514cba909ef",
+      "symbol": "unshETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xf7c3d9615221dfa89a835ec5d56dea2990eae54a",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x0ae38f7e10a43b5b2fb064b42a2f4514cba909ef",
+      "symbol": "unshETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xe1f9a04aeaf788b1494721317c812145dcef2359",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x15f74458ae0bfdaa1a96ca1aa779d715cc1eefe4",
+      "symbol": "GRAI",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",
+      "symbol": "LUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xf8fb2d6bb43f6a422bc1e2a15b0f85afce7e7f05",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xb9d7dddca9a4ac480991865efef82e01273f79c3",
+      "symbol": "bLUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xba7f8b8cf0f13f8d90d4e364d43a3ddd57f39da0",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xe95a203b1a91a908f9b9ce46459d101078c2c3cb",
+      "symbol": "ankrETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xbfe59fd293c4c19487a20178f384be62867bf875",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
+      "symbol": "RPL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x55095300bdcb3026b48b4ad05a5feaaba801aac9",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x15f74458ae0bfdaa1a96ca1aa779d715cc1eefe4",
+      "symbol": "GRAI",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",
+      "symbol": "LUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x6c6fc818b25df89a8ada8da5a43669023bad1f4c",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",
+      "symbol": "LUSD",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x257b0a09d1f4b5913f9c813c43dcd0d0115af2f2",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xe60779cc1b2c1d0580611c526a8df0e3f870ec48",
+      "symbol": "USH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xaf29b974b47d900bc6746bf9979be8edc8790a20",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xe60779cc1b2c1d0580611c526a8df0e3f870ec48",
+      "symbol": "USH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xf59ce000475cc3962cd366ce05ea2fd6fea5b8aa",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5e8422345238f34275888049021821e8e08caa1f",
+      "symbol": "frxETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x44f0f76cfbafc2b9b3ad000d588897d1e5381068",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
+      "symbol": "RPL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x1970523c241756e24d546dc4bfffc1f436ab9671",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
+      "symbol": "LDO",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x14b0fdd73e47fac12d98182c0fd1054f362262a6",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
+      "symbol": "LDO",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x214b0b7d3c925b7710601e437aec942b5cbd8d48",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
+      "symbol": "RPL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xa53620f536e2c06d18f02791f1c1178c1d51f955",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "symbol": "WBTC",
+      "decimals": 8
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x7174c5aadc47e0b706c333467d2a3b126eb6ed15",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xe60779cc1b2c1d0580611c526a8df0e3f870ec48",
+      "symbol": "USH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xeb0f2c77ee979adb69f718b4027d3783b27b0f9e",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xe60779cc1b2c1d0580611c526a8df0e3f870ec48",
+      "symbol": "USH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x3fd899eaf2dda35cf2c7bfcdb27a23d727d9a67c",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
+      "symbol": "PEPE",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xa51822839bfa4685b27ad60305264a37eae28a68",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3",
+      "symbol": "OETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xe57a06955551fab973676bc9b0da7c06491286ff",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x2a8e1e676ec238d8a992307b495b45b3feaa5e86",
+      "symbol": "OUSD",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "symbol": "USDT",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x229748ff91d935ae23e0275edf2f3d5de0c79241",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xe60779cc1b2c1d0580611c526a8df0e3f870ec48",
+      "symbol": "USH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x2f468f991136f49c2ef2e42e48260322b86843e7",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "symbol": "USDT",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x8afffa69c9f659a8a150f541e64999bc3eaa86fa",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "symbol": "WBTC",
+      "decimals": 8
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x845979edb15df2a0975d728044d1fa57080b0029",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "symbol": "USDT",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x73c61bebf78f68a2f6fed576e1c7d2e66f1c7108",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x01d12859e2eaaec7baf7b8c2548c8b91e5afbc62",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5283d291dbcf85356a21ba090e6db59121208b44",
+      "symbol": "BLUR",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x96bfb2729486ea32570891ed5ead71d2ec380f62",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x183015a9ba6ff60230fdeadc3f43b3d788b13e21",
+      "symbol": "R",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+      "symbol": "wstETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xd7ed09a25b4745ec6332fb433dd6788cdeaa4bcc",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x183015a9ba6ff60230fdeadc3f43b3d788b13e21",
+      "symbol": "R",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x4380ebc92450da9e1cbbb1be03e67e0fd5901ba9",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x64aa3364f17a4d01c6f1751fd97c2bd3d7e7f1d5",
+      "symbol": "OHM",
+      "decimals": 9
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xef608497df0f4c8bea4dcacf11b712a646f49fba",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "symbol": "WBTC",
+      "decimals": 8
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x5ac79bfeb598706591fbe6ab9ab789311f6fbdfd",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xe60779cc1b2c1d0580611c526a8df0e3f870ec48",
+      "symbol": "USH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x90606dd0f51ea01e62751e6b1b0c9ae6a225c64c",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5283d291dbcf85356a21ba090e6db59121208b44",
+      "symbol": "BLUR",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xd0b2f5018b5d22759724af6d4281ac0b13266360",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "symbol": "USDT",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x61b9b9095465ccdbca4e3230aba95bf4992fa18e",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x183015a9ba6ff60230fdeadc3f43b3d788b13e21",
+      "symbol": "R",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+      "symbol": "wstETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x330abefd4270ffb58b3176f104cf325444a0a115",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x183015a9ba6ff60230fdeadc3f43b3d788b13e21",
+      "symbol": "R",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xa4d843e756406b497d6bfdcf9f3a74b470371f52",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
+      "symbol": "wBETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x8381568d10de788582d00becd57250e072e1c883",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x183015a9ba6ff60230fdeadc3f43b3d788b13e21",
+      "symbol": "R",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xae78736cd615f374d3085123a210448e74fc6393",
+      "symbol": "rETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x88e35a1e1555d32df59d3154806f1add8f9229b5",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x7448c7456a97769f6cd04f1e83a4a23ccdc46abd",
+      "symbol": "MAV",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xd8cbebb8534def7d20b1c852064fadca5fb1ef64",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x7448c7456a97769f6cd04f1e83a4a23ccdc46abd",
+      "symbol": "MAV",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xab4b7730bad5d0d5b1f7d714ec67b12d20383968",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x7448c7456a97769f6cd04f1e83a4a23ccdc46abd",
+      "symbol": "MAV",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x2df64ac2e8874c43021675ed7a65d3429e30b96b",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x7448c7456a97769f6cd04f1e83a4a23ccdc46abd",
+      "symbol": "MAV",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x08e84e758a47d60890652c6363b463b40a9933fa",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x7448c7456a97769f6cd04f1e83a4a23ccdc46abd",
+      "symbol": "MAV",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  }
+]
