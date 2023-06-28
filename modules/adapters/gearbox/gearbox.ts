@@ -126,7 +126,7 @@ export class GearboxAdapter extends Adapter {
     const web3 = new Web3(EnvConfig.blockchains[options.chain].nodeRpc);
     const contract = new web3.eth.Contract(CreditFacadeAbi as any, options.address);
     try {
-      const creditManagerAddress = await contract.methods.creditManager.call();
+      const creditManagerAddress = await contract.methods.creditManager().call();
       if (creditManagerAddress) {
         for (const pool of this.config.staticData.pools) {
           if (compareAddress(pool.creditManager, creditManagerAddress)) {
