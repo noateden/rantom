@@ -72,10 +72,10 @@ export class MaverickAdapter extends Adapter {
           const binDeltas = event.binDeltas as unknown as Array<any>;
           for (const binDelta of binDeltas) {
             amountA = amountA.plus(
-              new BigNumber(binDelta.deltaA.toString()).dividedBy(new BigNumber(10).pow(poolInfo.tokenA.decimals))
+              new BigNumber(binDelta.deltaA.toString()).dividedBy(1e18)
             );
             amountB = amountB.plus(
-              new BigNumber(binDelta.deltaB.toString()).dividedBy(new BigNumber(10).pow(poolInfo.tokenB.decimals))
+              new BigNumber(binDelta.deltaB.toString()).dividedBy(1e18)
             );
           }
 
