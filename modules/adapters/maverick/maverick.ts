@@ -71,12 +71,8 @@ export class MaverickAdapter extends Adapter {
           let amountB = new BigNumber(0);
           const binDeltas = event.binDeltas as unknown as Array<any>;
           for (const binDelta of binDeltas) {
-            amountA = amountA.plus(
-              new BigNumber(binDelta.deltaA.toString()).dividedBy(1e18)
-            );
-            amountB = amountB.plus(
-              new BigNumber(binDelta.deltaB.toString()).dividedBy(1e18)
-            );
+            amountA = amountA.plus(new BigNumber(binDelta.deltaA.toString()).dividedBy(1e18));
+            amountB = amountB.plus(new BigNumber(binDelta.deltaB.toString()).dividedBy(1e18));
           }
 
           const sender = normalizeAddress(event.sender);
