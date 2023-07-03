@@ -76,7 +76,7 @@ export class BancorAdapter extends Adapter {
       }
     }
 
-    if (this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
+    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
       if (signature === Signatures.TokensDeposited || signature === Signatures.TokensWithdrawn) {
         const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
         const user = normalizeAddress(event.provider);

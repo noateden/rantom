@@ -30,7 +30,8 @@ export class LoopringAdapter extends Adapter {
     const signature = topics[0];
     if (
       (signature === Signatures.Deposit || signature === Signatures.Withdraw) &&
-      this.config.contracts[chain].indexOf(address) !== -11
+      this.config.contracts[chain] &&
+      this.config.contracts[chain].indexOf(address) !== -1
     ) {
       const web3 = new Web3();
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));

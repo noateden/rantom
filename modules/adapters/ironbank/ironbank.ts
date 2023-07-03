@@ -36,6 +36,7 @@ export class IronbankAdapter extends CompoundAdapter {
     const { chain, address, topics, data } = options;
     const signature = topics[0];
     if (
+      this.config.contracts[chain] &&
       this.config.contracts[chain].indexOf(address) !== -1 &&
       EventSignatureMapping[signature] &&
       signature === Signatures.Flashloan

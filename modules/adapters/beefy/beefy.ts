@@ -41,7 +41,7 @@ export class BeefyAdapter extends Adapter {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
-    if (this.config.contracts[chain].indexOf(address) !== -1) {
+    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(address) !== -1) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
       const rpcWrapper = this.getRpcWrapper();
       const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));

@@ -36,6 +36,7 @@ export class EulerAdapter extends Adapter {
 
     const signature = topics[0];
     if (
+      this.config.contracts[chain] &&
       this.config.contracts[chain].indexOf(address) !== -1 &&
       (EventSignatureMapping[signature] ||
         (this.config.customEventMapping && this.config.customEventMapping[signature]))

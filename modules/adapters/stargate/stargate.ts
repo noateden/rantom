@@ -34,7 +34,7 @@ export class StargateAdapter extends Adapter {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
-    if (this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
+    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
       let token: Token | null = null;
       for (const pool of this.config.staticData.pools) {
         if (compareAddress(address, pool.address)) {

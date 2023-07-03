@@ -30,6 +30,7 @@ export class RocketpoolAdapter extends Adapter {
 
     const signature = topics[0];
     if (
+      this.config.contracts[chain] &&
       this.config.contracts[chain].indexOf(address) !== -1 &&
       (signature === Signatures.Deposit || signature === Signatures.Withdraw)
     ) {

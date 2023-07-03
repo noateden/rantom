@@ -49,7 +49,11 @@ export class BeanstalkAdapter extends Adapter {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
-    if (this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1 && this.eventMappings[signature]) {
+    if (
+      this.config.contracts[chain] &&
+      this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1 &&
+      this.eventMappings[signature]
+    ) {
       const web3 = new Web3();
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
 

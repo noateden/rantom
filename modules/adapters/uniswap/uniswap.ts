@@ -52,7 +52,10 @@ export class UniswapAdapter extends Adapter {
         const token0Address = results[1][0];
         const token1Address = results[2][0];
 
-        if (this.config.contracts[chain].indexOf(normalizeAddress(factoryAddress)) !== -1) {
+        if (
+          this.config.contracts[chain] &&
+          this.config.contracts[chain].indexOf(normalizeAddress(factoryAddress)) !== -1
+        ) {
           const token0 = await this.getWeb3Helper().getErc20Metadata(chain, token0Address);
           const token1 = await this.getWeb3Helper().getErc20Metadata(chain, token1Address);
 
