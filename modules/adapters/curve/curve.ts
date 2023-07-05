@@ -316,10 +316,9 @@ export class CurveAdapter extends Adapter {
 
     const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
     const signature = topics[0];
-    const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
-
     if (signature === Signatures.Deposit || signature === Signatures.Withdraw) {
       if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
+        const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
         const provider = normalizeAddress(event.provider);
         const token = Tokens.ethereum.CRV;
         const amount = new BigNumber(event.value.toString()).dividedBy(1e18).toString(10);
