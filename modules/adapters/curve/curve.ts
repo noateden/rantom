@@ -340,6 +340,7 @@ export class CurveAdapter extends Adapter {
         };
       }
     } else {
+      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
       const poolConfig = this.getPoolConfig(address);
 
       // support configured pools
