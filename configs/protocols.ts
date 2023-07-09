@@ -41,7 +41,7 @@ export const Uniswapv2Configs: ProtocolConfig = {
       version: 'univ2',
       birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
       filters: {},
-      endpoint: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v2',
+      endpoint: 'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v2-dev',
     },
   ],
   staticData: {
