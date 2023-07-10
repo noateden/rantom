@@ -1648,6 +1648,108 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['TokenExchange(address,uint256,uint256,uint256,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        name: 'buyer',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'sold_id',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'tokens_sold',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'bought_id',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'tokens_bought',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'fee',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'packed_price_scale',
+        type: 'uint256',
+        indexed: false,
+      },
+    ],
+  },
+  [Signatures['AddLiquidity(address,uint256[3],uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        name: 'provider',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'token_amounts',
+        type: 'uint256[3]',
+        indexed: false,
+      },
+      {
+        name: 'fee',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'token_supply',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'packed_price_scale',
+        type: 'uint256',
+        indexed: false,
+      },
+    ],
+  },
+  [Signatures['RemoveLiquidityOne(address,uint256,uint256,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        name: 'provider',
+        type: 'address',
+        indexed: true,
+      },
+      {
+        name: 'token_amount',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'coin_index',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'coin_amount',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'approx_fee',
+        type: 'uint256',
+        indexed: false,
+      },
+      {
+        name: 'packed_price_scale',
+        type: 'uint256',
+        indexed: false,
+      },
+    ],
+  },
 
   [Signatures['RemoveLiquidity(address,uint256[3],uint256[3],uint256)']]: {
     abi: [

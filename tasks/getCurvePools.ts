@@ -6,6 +6,8 @@ import { CurveHelper, CurvePoolInfo, CurvePoolType } from '../modules/adapters/c
 const CurvePools: Array<string> = [
   'ethereum:3:plain:0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7', // 3Crv: DAI-USDC-USDT
   'ethereum:3:plainWithCoinIndex:0xd51a44d3fae010294c616388b506acda1bfaae46', // 3Crypto: USDT-WETH-WBTC
+  'ethereum:3:plainWithCoinIndex:0x7f86bf177dd4f3494b841a37e810a34dd56c829b', // 3Crypto: USDC-WETH-WBTC
+  'ethereum:3:plainWithCoinIndex:0xf5f5b97624542d72a9e06f04804bf81baa15e2b4', // 3Crypto: USDT-WETH-WBTC
   'ethereum:2:plain:0xdc24316b9ae028f1497c275eb9192a3ea0f67022', // ETH-stETH
   'ethereum:2:plainWithoutCoinIndex:0xdcef968d416a41cdac0ed8702fac8128a64241a2', // crvFRAX: FRAX-USDC
   'ethereum:2:plainWithoutCoinIndex:0xae34574ac03a15cd58a92dc79de7b1a0800f1ce3', // FRAX-USDP
@@ -13,6 +15,7 @@ const CurvePools: Array<string> = [
   'ethereum:2:plainWithoutCoinIndex:0x4dece678ceceb27446b35c672dc7d61f30bad69e', // crvUSD-USDC
   'ethereum:2:plainWithoutCoinIndex:0x34d655069f4cac1547e4c8ca284ffff5ad4a8db0', // crvUSD-TUSD
   'ethereum:2:plainWithoutCoinIndex:0x390f3595bca2df7d23783dfd126427cceb997bf4', // crvUSD-USDT
+  'ethereum:2:plainWithoutCoinIndex:0x0cd6f267b2086bea681e922e19d40512511be538', // crvUSD-FRAX
   'ethereum:2:plainWithCoinIndex:0x8301ae4fc9c624d1d396cbdaa1ed877821d7c511', // WETH-CRV
   'ethereum:4:old:0xa5407eae9ba41422680e2e00537571bcc53efbfd', // DAI-USDC-USDT-sUSD
   'ethereum:2:meta:0xd632f22692fac7611d2aa1c0d552930d43caed3b', // FRAX-3Crv

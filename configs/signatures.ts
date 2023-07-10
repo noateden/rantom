@@ -105,6 +105,12 @@ export const Signatures: { [key: string]: string } = {
     '0xd013ca23e77a65003c2c659c5442c00c805371b7fc1ebd4c206c41d1536bd90b',
   'AddLiquidity(address,uint256[4],uint256[4],uint256,uint256)':
     '0x3f1915775e0c9a38a57a7bb7f1f9005f486fb904e1f84aa215364d567319a58d',
+  'TokenExchange(address,uint256,uint256,uint256,uint256,uint256,uint256)':
+    '0x143f1f8e861fbdeddd5b46e844b7d3ac7b86a122f36e8c463859ee6811b1f29c',
+  'AddLiquidity(address,uint256[3],uint256,uint256,uint256)':
+    '0xe1b60455bd9e33720b547f60e4e0cfbf1252d0f2ee0147d53029945f39fe3c1a',
+  'RemoveLiquidityOne(address,uint256,uint256,uint256,uint256,uint256)':
+    '0xe200e24d4a4c7cd367dd9befe394dc8a14e6d58c88ff5e2f512d65a9e0aa9c5c',
   'Trade(address,address,address,uint256,uint256,uint256,bytes)':
     '0xa07a543ab8a018198e99ca0184c93fe9050a79400a0a723441f84de1d972cc17',
   'DepositRequested(address,address,address,uint16,uint96)':

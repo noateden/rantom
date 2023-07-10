@@ -46,6 +46,11 @@ const Signatures = {
   // vyper version 0.3.0
   AddLiquidityVersion030: '0x540ab385f9b5d450a27404172caade516b3ba3f4be88239ac56a2ad1de2a1f5a',
   RemoveLiquidityVersion030: '0xdd3c0336a16f1b64f172b7bb0dad5b2b3c7c76f91e8c4aafd6aae60dce800153',
+
+  // vyper version 0.3.9
+  TokenExchangeUnderlyingVersion039: '0x143f1f8e861fbdeddd5b46e844b7d3ac7b86a122f36e8c463859ee6811b1f29c',
+  AddLiquidityVersion039: '0xe1b60455bd9e33720b547f60e4e0cfbf1252d0f2ee0147d53029945f39fe3c1a',
+  RemoveLiquidityOneVersion039: '0xe200e24d4a4c7cd367dd9befe394dc8a14e6d58c88ff5e2f512d65a9e0aa9c5c',
 };
 
 export class CurveAdapter extends Adapter {
@@ -82,6 +87,11 @@ export class CurveAdapter extends Adapter {
 
       [Signatures.AddLiquidityVersion030]: EventSignatureMapping[Signatures.AddLiquidityVersion030],
       [Signatures.RemoveLiquidityVersion030]: EventSignatureMapping[Signatures.RemoveLiquidityVersion030],
+
+      [Signatures.TokenExchangeUnderlyingVersion039]:
+        EventSignatureMapping[Signatures.TokenExchangeUnderlyingVersion039],
+      [Signatures.AddLiquidityVersion039]: EventSignatureMapping[Signatures.AddLiquidityVersion039],
+      [Signatures.RemoveLiquidityOneVersion039]: EventSignatureMapping[Signatures.RemoveLiquidityOneVersion039],
     });
   }
 
@@ -108,7 +118,8 @@ export class CurveAdapter extends Adapter {
     switch (signature) {
       case Signatures.TokenExchange:
       case Signatures.TokenExchangeUnderlying:
-      case Signatures.TokenExchangeVersion0212: {
+      case Signatures.TokenExchangeVersion0212:
+      case Signatures.TokenExchangeUnderlyingVersion039: {
         let token0;
         let token1;
 
@@ -156,7 +167,8 @@ export class CurveAdapter extends Adapter {
         break;
       }
       case Signatures.RemoveLiquidityOne:
-      case Signatures.RemoveLiquidityOneVersion0212: {
+      case Signatures.RemoveLiquidityOneVersion0212:
+      case Signatures.RemoveLiquidityOneVersion039: {
         let token: Token | null = null;
         let coinAmount = new BigNumber(0);
 
@@ -261,6 +273,7 @@ export class CurveAdapter extends Adapter {
       case Signatures.AddLiquidityVersion028:
       case Signatures.AddLiquidityVersion0212:
       case Signatures.AddLiquidityVersion030:
+      case Signatures.AddLiquidityVersion039:
       case Signatures.RemoveLiquidity:
       case Signatures.RemoveLiquidityVersion010:
       case Signatures.RemoveLiquidityVersion028:
@@ -288,10 +301,11 @@ export class CurveAdapter extends Adapter {
         if (
           [
             Signatures.AddLiquidity,
+            Signatures.AddLiquidityVersion010,
             Signatures.AddLiquidityVersion028,
             Signatures.AddLiquidityVersion0212,
             Signatures.AddLiquidityVersion030,
-            Signatures.AddLiquidityVersion010,
+            Signatures.AddLiquidityVersion039,
           ].indexOf(signature) !== -1
         ) {
           action = 'deposit';

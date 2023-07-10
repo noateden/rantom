@@ -20,6 +20,26 @@
     ]
   },
   {
+    "type": "plainWithCoinIndex",
+    "chain": "ethereum",
+    "address": "0x7f86bf177dd4f3494b841a37e810a34dd56c829b",
+    "tokens": [
+      { "chain": "ethereum", "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "symbol": "USDC", "decimals": 6 },
+      { "chain": "ethereum", "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599", "symbol": "WBTC", "decimals": 8 },
+      { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "type": "plainWithCoinIndex",
+    "chain": "ethereum",
+    "address": "0xf5f5b97624542d72a9e06f04804bf81baa15e2b4",
+    "tokens": [
+      { "chain": "ethereum", "address": "0xdac17f958d2ee523a2206206994597c13d831ec7", "symbol": "USDT", "decimals": 6 },
+      { "chain": "ethereum", "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599", "symbol": "WBTC", "decimals": 8 },
+      { "chain": "ethereum", "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
     "type": "plain",
     "chain": "ethereum",
     "address": "0xdc24316b9ae028f1497c275eb9192a3ea0f67022",
@@ -119,6 +139,25 @@
     "address": "0x390f3595bca2df7d23783dfd126427cceb997bf4",
     "tokens": [
       { "chain": "ethereum", "address": "0xdac17f958d2ee523a2206206994597c13d831ec7", "symbol": "USDT", "decimals": 6 },
+      {
+        "chain": "ethereum",
+        "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
+        "symbol": "crvUSD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "type": "plainWithoutCoinIndex",
+    "chain": "ethereum",
+    "address": "0x0cd6f267b2086bea681e922e19d40512511be538",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+        "symbol": "FRAX",
+        "decimals": 18
+      },
       {
         "chain": "ethereum",
         "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
