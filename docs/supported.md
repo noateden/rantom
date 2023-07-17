@@ -72,6 +72,7 @@
 | Crvusd               | Borrow, Repay, RemoveCollateral, Liquidate                                                                           |     🌱 |
 | OpenOcean.Finance    | Swapped                                                                                                              |     🌱 |
 | Maverick (mav.xyz)   | Swap, AddLiquidity, RemoveLiquidity                                                                                  |     🌱 |
+| GravitaProtocol.com  | VesselUpdated                                                                                                        |     🌱 |
 
 ### Nft Marketplaces
 
