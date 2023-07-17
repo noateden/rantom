@@ -22,6 +22,7 @@ import { ExactlyContracts } from '../../configs/contracts/exactly';
 import { FraxethContracts } from '../../configs/contracts/fraxeth';
 import { FraxlendContracts } from '../../configs/contracts/fraxlend';
 import { GearboxContracts } from '../../configs/contracts/gearbox';
+import { GravitaContracts } from '../../configs/contracts/gravita';
 import { KyberswapClassicContracts } from '../../configs/contracts/kyperswap';
 import { LidoContracts } from '../../configs/contracts/lido';
 import { LiquityContracts } from '../../configs/contracts/liquity';
@@ -93,5 +94,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     crvusd: new ContractWorker(providers, CrvusdContracts),
     openocean: new ContractWorker(providers, OpenoceanContracts),
     maverick: new ContractWorker(providers, MaverickContracts),
+    gravita: new ContractWorker(providers, GravitaContracts),
   };
 }
