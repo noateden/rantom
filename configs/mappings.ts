@@ -8460,4 +8460,44 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['VesselUpdated(address,address,uint256,uint256,uint256,uint8)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_asset',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_borrower',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_debt',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_coll',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'stake',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'enum IBorrowerOperations.BorrowerOperation',
+        name: 'operation',
+        type: 'uint8',
+      },
+    ],
+  },
 };

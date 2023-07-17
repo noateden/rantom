@@ -1922,3 +1922,18 @@ export const MaverickConfigs: ProtocolConfig = {
     pools: MaverickPools,
   },
 };
+
+export const GravitaConfigs: ProtocolConfig = {
+  protocol: 'gravita',
+  categories: ['lending'],
+  contracts: {
+    ethereum: [
+      '0x2bca0300c2aa65de6f19c2d241b54a445c9990e2', // Borrow Operations
+    ],
+  },
+  staticData: {
+    vesselManagers: {
+      ethereum: '0xdb5dacb1dfbe16326c3656a88017f0cb4ece0977',
+    },
+  },
+};

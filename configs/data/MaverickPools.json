@@ -1198,5 +1198,69 @@
       "symbol": "USDC",
       "decimals": 6
     }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xcd4098b8e61de15d0c2e416d3a14442f35ce910e",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x1a7e4e63778b4f12a199c062f3efdd288afcbce8",
+      "symbol": "agEUR",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0x1abaea1f7c830bd89acc67ec4af516284b1bc33c",
+      "symbol": "EUROC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xa3be0ae630e4c68aa0f45e2c742681a618a8336d",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xa35b1b31ce002fbf2058d22f30f95d405200a15b",
+      "symbol": "ETHx",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xb0ba344cdf607dd952c6cbf70b21caed77c3d200",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x22fc5a29bd3d6cce19a06f844019fd506fce4455",
+      "symbol": "ePendle",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0x808507121b80c02388fad14726482e061b8da827",
+      "symbol": "PENDLE",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xba3ce1b50ce0afd378a62a7be9b13c1fb5c95498",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "symbol": "WBTC",
+      "decimals": 8
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
   }
 ]

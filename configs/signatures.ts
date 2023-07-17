@@ -487,4 +487,8 @@ export const Signatures: { [key: string]: string } = {
     '0x133a027327582be2089f6ca47137e3d337be4ca2cd921e5f0b178c9c2d5b8364',
   'RemoveLiquidity(address,address,uint256,(uint128,uint128,uint256,uint128,uint8,int32,bool)[])':
     '0x65da280c1e973a1c5884c38d63e2c2b3c2a3158a0761e76545b64035e2489dfe',
+
+  // gravitaprotocol.com
+  'VesselUpdated(address,address,uint256,uint256,uint256,uint8)':
+    '0xd03b2126581644d5026a8e77091b71644f3f16efe9d9e5930c4d533301c731e8',
 };

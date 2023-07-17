@@ -1,0 +1,76 @@
+import { GravitaConfigs } from '../../../configs/protocols';
+import { normalizeAddress } from '../../../lib/helper';
+import { GravitaAdapter } from '../../../modules/adapters/gravita/gravita';
+import { TestLog } from '../../types';
+
+export const GravitaActionTestLogs: Array<TestLog> = [
+  {
+    chain: 'ethereum',
+    hash: '0xec94029611cf0343129a546c031bcad92370a6467d0d60e7c8a40521cdd48dcf',
+    sender: normalizeAddress('0x8493eca71bbe028ce959c760e209e3ad73ecc86c'),
+    address: normalizeAddress('0x2bca0300c2aa65de6f19c2d241b54a445c9990e2'),
+    log: {
+      address: '0x2bca0300c2aa65de6f19c2d241b54a445c9990e2',
+      topics: [
+        '0xd03b2126581644d5026a8e77091b71644f3f16efe9d9e5930c4d533301c731e8',
+        '0x0000000000000000000000007f39c581f595b53c5cb19bd0b3f8da6c935e2ca0',
+        '0x0000000000000000000000008493eca71bbe028ce959c760e209e3ad73ecc86c',
+      ],
+      data: '0x000000000000000000000000000000000000000000000096e7cbdf197b2bc00000000000000000000000000000000000000000000000000021389e6ad98fc1dc00000000000000000000000000000000000000000000000021389e6ad98fc1dc0000000000000000000000000000000000000000000000000000000000000000',
+      blockNumber: '0x10e449a',
+      transactionHash: '0xec94029611cf0343129a546c031bcad92370a6467d0d60e7c8a40521cdd48dcf',
+      transactionIndex: '0x70',
+      blockHash: '0xb6f9cc55b1fd978a04d870d6f7b6cea853a0ef1aa53e7ef49081aa69aa1b0589',
+      logIndex: '0x141',
+      removed: false,
+    },
+    adapter: new GravitaAdapter(GravitaConfigs, null),
+    action: 'borrow',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0xb474605d298d052ac83894111321b0798f7198650570c91ad901f1479f6ec0ea',
+    sender: normalizeAddress('0xac0168b4fd7427bfd616e3a47fc05dd8175d5b64'),
+    address: normalizeAddress('0x2bca0300c2aa65de6f19c2d241b54a445c9990e2'),
+    log: {
+      address: '0x2bca0300c2aa65de6f19c2d241b54a445c9990e2',
+      topics: [
+        '0xd03b2126581644d5026a8e77091b71644f3f16efe9d9e5930c4d533301c731e8',
+        '0x0000000000000000000000007f39c581f595b53c5cb19bd0b3f8da6c935e2ca0',
+        '0x000000000000000000000000ac0168b4fd7427bfd616e3a47fc05dd8175d5b64',
+      ],
+      data: '0x000000000000000000000000000000000000000000009503a747c59c0ed0000000000000000000000000000000000000000000000000001cc20817ddf689656800000000000000000000000000000000000000000000001cc20817ddf68965680000000000000000000000000000000000000000000000000000000000000002',
+      blockNumber: '0x10e40f1',
+      transactionHash: '0xb474605d298d052ac83894111321b0798f7198650570c91ad901f1479f6ec0ea',
+      transactionIndex: '0x44',
+      blockHash: '0xe4b4d464c1cd95f8b99bd95e9274369973b586403b0447e349a626ce472d9ed4',
+      logIndex: '0x84',
+      removed: false,
+    },
+    adapter: new GravitaAdapter(GravitaConfigs, null),
+    action: 'borrow',
+  },
+  {
+    chain: 'ethereum',
+    hash: '0xc83900a24db125f547799120b0a661e9d699923fff40720c320ba2b42bd2e116',
+    sender: normalizeAddress('0xe7a5edaf9b6ae11ee574b524be9c623a86537d4f'),
+    address: normalizeAddress('0x2bca0300c2aa65de6f19c2d241b54a445c9990e2'),
+    log: {
+      address: '0x2bca0300c2aa65de6f19c2d241b54a445c9990e2',
+      topics: [
+        '0xd03b2126581644d5026a8e77091b71644f3f16efe9d9e5930c4d533301c731e8',
+        '0x000000000000000000000000f951e335afb289353dc249e82926178eac7ded78',
+        '0x000000000000000000000000e7a5edaf9b6ae11ee574b524be9c623a86537d4f',
+      ],
+      data: '0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001',
+      blockNumber: '0x10e3547',
+      transactionHash: '0xc83900a24db125f547799120b0a661e9d699923fff40720c320ba2b42bd2e116',
+      transactionIndex: '0x61',
+      blockHash: '0xb40e88b6d80bf4e96e5ef37835bf9f4da922a9fff6de88e9a714ad0b2a3d3e69',
+      logIndex: '0x110',
+      removed: false,
+    },
+    adapter: new GravitaAdapter(GravitaConfigs, null),
+    action: 'repay',
+  },
+];

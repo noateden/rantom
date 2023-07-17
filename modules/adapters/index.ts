@@ -36,6 +36,7 @@ import {
   FraxlendConfigs,
   FraxswapConfigs,
   GearboxConfigs,
+  GravitaConfigs,
   HopConfigs,
   InstadappConfigs,
   IronbankConfigs,
@@ -114,6 +115,7 @@ import { ExactlyAdapter } from './exactly/exactly';
 import { FraxethAdapter } from './fraxeth/fraxeth';
 import { FraxlendAdapter } from './fraxlend/fraxlend';
 import { GearboxAdapter } from './gearbox/gearbox';
+import { GravitaAdapter } from './gravita/gravita';
 import { HopAdapter } from './hop/hop';
 import { InstadappAdapter } from './instadapp/instadapp';
 import { IronbankAdapter } from './ironbank/ironbank';
@@ -236,5 +238,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     instadapp: new InstadappAdapter(InstadappConfigs, providers),
     defisaver: new DefisaverAdapter(DefisaverConfigs, providers),
     maverick: new MaverickAdapter(MaverickConfigs, providers),
+    gravita: new GravitaAdapter(GravitaConfigs, providers),
   };
 }

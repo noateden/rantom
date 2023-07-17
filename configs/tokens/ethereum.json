@@ -143,6 +143,12 @@
     "symbol": "GEAR",
     "decimals": 18
   },
+  "GRAI": {
+    "chain": "ethereum",
+    "address": "0x15f74458ae0bfdaa1a96ca1aa779d715cc1eefe4",
+    "symbol": "GRAI",
+    "decimals": 18
+  },
   "GUSD": {
     "chain": "ethereum",
     "address": "0x056fd409e1d7a124bd7017459dfea2f387b6d5cd",
