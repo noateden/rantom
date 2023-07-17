@@ -179,5 +179,6 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x6352a56caadc4f1e25cd6c75970fa768a3304e64', // Openocean exchange v2
     '0x881d40237659c251811cec9c364ef91dc08d300c', // Metamask swap router
     '0x2bca0300c2aa65de6f19c2d241b54a445c9990e2', // GravitaProtocol.com borrow operations
+    '0x3caca7b48d0573d793d3b0279b5f0029180e83b6', // Gelato network
   ],
 };

@@ -491,4 +491,8 @@ export const Signatures: { [key: string]: string } = {
   // gravitaprotocol.com
   'VesselUpdated(address,address,uint256,uint256,uint256,uint8)':
     '0xd03b2126581644d5026a8e77091b71644f3f16efe9d9e5930c4d533301c731e8',
+
+  // gelato network
+  'LogExecSuccess(address,address,address,uint256,uint256,uint256)':
+    '0x66c4011e59db1d425e14edc51069e4f5ec3d042d2a254511a8dbc6e3996c9140',
 };

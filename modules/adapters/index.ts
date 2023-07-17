@@ -36,6 +36,7 @@ import {
   FraxlendConfigs,
   FraxswapConfigs,
   GearboxConfigs,
+  GelatoConfigs,
   GravitaConfigs,
   HopConfigs,
   InstadappConfigs,
@@ -115,6 +116,7 @@ import { ExactlyAdapter } from './exactly/exactly';
 import { FraxethAdapter } from './fraxeth/fraxeth';
 import { FraxlendAdapter } from './fraxlend/fraxlend';
 import { GearboxAdapter } from './gearbox/gearbox';
+import { GelatoAdapter } from './gelato/gelato';
 import { GravitaAdapter } from './gravita/gravita';
 import { HopAdapter } from './hop/hop';
 import { InstadappAdapter } from './instadapp/instadapp';
@@ -239,5 +241,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     defisaver: new DefisaverAdapter(DefisaverConfigs, providers),
     maverick: new MaverickAdapter(MaverickConfigs, providers),
     gravita: new GravitaAdapter(GravitaConfigs, providers),
+    gelato: new GelatoAdapter(GelatoConfigs, providers),
   };
 }

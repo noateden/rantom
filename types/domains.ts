@@ -40,6 +40,7 @@ export const Actions = [
 
   'useContract', // for calls to smart contracts: DSProxy, Instadapp account, ...
   'executeRecipe', // execute recipe on DeFi Saver
+  'executeTask', // execute task on gelato.network
 
   'openAccount',
   'closeAccount',

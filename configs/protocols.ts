@@ -1937,3 +1937,13 @@ export const GravitaConfigs: ProtocolConfig = {
     },
   },
 };
+
+export const GelatoConfigs: ProtocolConfig = {
+  protocol: 'gelato',
+  categories: ['service'],
+  contracts: {
+    ethereum: [
+      '0x3caca7b48d0573d793d3b0279b5f0029180e83b6', // Gelato Network
+    ],
+  },
+};

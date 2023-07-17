@@ -73,6 +73,7 @@
 | OpenOcean.Finance    | Swapped                                                                                                              |     🌱 |
 | Maverick (mav.xyz)   | Swap, AddLiquidity, RemoveLiquidity                                                                                  |     🌱 |
 | GravitaProtocol.com  | VesselUpdated                                                                                                        |     🌱 |
+| Gelato Network       | LogExecSuccess                                                                                                       |     🌱 |
 
 ### Nft Marketplaces
 
