@@ -143,6 +143,12 @@
     "symbol": "GEAR",
     "decimals": 18
   },
+  "GHO": {
+    "chain": "ethereum",
+    "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
+    "symbol": "GHO",
+    "decimals": 18
+  },
   "GRAI": {
     "chain": "ethereum",
     "address": "0x15f74458ae0bfdaa1a96ca1aa779d715cc1eefe4",
@@ -323,6 +329,12 @@
     "address": "0xa693b19d2931d498c5b318df961919bb4aee87a5",
     "symbol": "UST",
     "decimals": 6
+  },
+  "UZD": {
+    "chain": "ethereum",
+    "address": "0xb40b6608b2743e691c9b54ddbdee7bf03cd79f1c",
+    "symbol": "UZD",
+    "decimals": 18
   },
   "WBTC": {
     "chain": "ethereum",
