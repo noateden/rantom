@@ -1632,6 +1632,7 @@ export const DodoConfigs: ProtocolConfig = {
       '0x50f9bde1c76bba997a5d6e7fefff695ec8536194', // DODOFeeRouteProxy
       '0x21b9f852534fb9ddc3a0a7b24f067b50d8ac9a99', // FeeRouteProxy(for widget)
       '0x3058ef90929cb8180174d74c507176cca6835d73', // USDT-DAI stable pool
+      '0xc9f93163c99695c6526b799ebca2207fdf7d61ad', // USDT-USDC stable pool
     ],
   },
 };

@@ -8290,6 +8290,50 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['SellBaseToken(address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'seller',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'payBase',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'receiveQuote',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['BuyBaseToken(address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'buyer',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'receiveBase',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'payQuote',
+        type: 'uint256',
+      },
+    ],
+  },
   [Signatures['Swap(address,address,bool,bool,uint256,uint256,int32)']]: {
     abi: [
       {

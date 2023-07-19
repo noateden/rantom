@@ -394,6 +394,8 @@ export const Signatures: { [key: string]: string } = {
     '0x92ceb067a9883c85aba061e46b9edf505a0d6e81927c4b966ebed543a5221787',
   'DODOSwap(address,address,uint256,uint256,address,address)':
     '0xc2c0245e056d5fb095f04cd6373bc770802ebd1e6c918eb78fdef843cdb37b0f',
+  'SellBaseToken(address,uint256,uint256)': '0xd8648b6ac54162763c86fd54bf2005af8ecd2f9cb273a5775921fd7f91e17b2d',
+  'BuyBaseToken(address,uint256,uint256)': '0xe93ad76094f247c0dafc1c61adc2187de1ac2738f7a3b49cb20b2263420251a3',
 
   // Curve veCRV
   'Deposit(address,uint256,uint256,int128,uint256)':
