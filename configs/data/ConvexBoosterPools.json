@@ -7,6 +7,13 @@
       "address": "0x845838df265dcd2c412a1dc9e959c7d08537f8a2",
       "symbol": "cDAI+cUSDC",
       "decimals": 18
+    },
+    "rewardPool": "0xf34DFF761145FF0B05e917811d488B441F33a968",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -16,6 +23,13 @@
       "chain": "ethereum",
       "address": "0x9fc689ccada600b6df723d9e47d84d76664a1f23",
       "symbol": "cDAI+cUSDC+USDT",
+      "decimals": 18
+    },
+    "rewardPool": "0x8B55351ea358e5Eda371575B031ee24F462d503e",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -27,6 +41,13 @@
       "address": "0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8",
       "symbol": "yDAI+yUSDC+yUSDT+yTUSD",
       "decimals": 18
+    },
+    "rewardPool": "0xd802a8351A76ED5eCd89A7502Ca615F2225A585d",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -36,6 +57,13 @@
       "chain": "ethereum",
       "address": "0x3b3ac5386837dc563660fb6a0937dfaa5924333b",
       "symbol": "yDAI+yUSDC+yUSDT+yBUSD",
+      "decimals": 18
+    },
+    "rewardPool": "0x602c4cD53a715D8a7cf648540FAb0d3a2d546560",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -47,6 +75,13 @@
       "address": "0xc25a3a3b969415c80451098fa907ec722572917f",
       "symbol": "crvPlain3andSUSD",
       "decimals": 18
+    },
+    "rewardPool": "0x22eE18aca7F3Ee920D01F25dA85840D12d98E8Ca",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -56,6 +91,13 @@
       "chain": "ethereum",
       "address": "0xd905e2eaebe188fc92179b6350807d8bd91db0d8",
       "symbol": "ypaxCrv",
+      "decimals": 18
+    },
+    "rewardPool": "0xe3DaafC8C14147d5B4A7a56F0BfdED240158e51e",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -67,6 +109,13 @@
       "address": "0x49849c98ae39fff122806c06791fa73784fb3675",
       "symbol": "crvRenWBTC",
       "decimals": 18
+    },
+    "rewardPool": "0x8E299C62EeD737a5d5a53539dF37b5356a27b07D",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -76,6 +125,13 @@
       "chain": "ethereum",
       "address": "0x075b1bb99792c9e1041ba13afef80c91a1e70fb3",
       "symbol": "crvRenWSBTC",
+      "decimals": 18
+    },
+    "rewardPool": "0xd727A5A6D1C7b31Ff9Db4Db4d24045B7dF0CFF93",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -87,6 +143,13 @@
       "address": "0xb19059ebb43466c323583928285a49f558e572fd",
       "symbol": "hCRV",
       "decimals": 18
+    },
+    "rewardPool": "0x618BD6cBA676a46958c63700C04318c84a7b7c0A",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -96,6 +159,13 @@
       "chain": "ethereum",
       "address": "0x6c3f90f043a72fa612cbac8115ee7e52bde6e490",
       "symbol": "3Crv",
+      "decimals": 18
+    },
+    "rewardPool": "0x689440f2Ff927E1f24c72F1087E1FAF471eCe1c8",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -107,6 +177,13 @@
       "address": "0xd2967f45c4f384deea880f807be904762a3dea07",
       "symbol": "gusd3CRV",
       "decimals": 18
+    },
+    "rewardPool": "0x7A7bBf95C44b144979360C3300B54A7D34b44985",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -116,6 +193,13 @@
       "chain": "ethereum",
       "address": "0x5b5cfe992adac0c9d48e05854b2d91c73a003858",
       "symbol": "husd3CRV",
+      "decimals": 18
+    },
+    "rewardPool": "0x353e489311b21355461353fEC2d02B73EF0eDe7f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -127,6 +211,13 @@
       "address": "0x97e2768e8e73511ca874545dc5ff8067eb19b787",
       "symbol": "usdk3CRV",
       "decimals": 18
+    },
+    "rewardPool": "0xa50e9071aCaD20b31cd2bbe4dAa816882De82BBe",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -136,6 +227,13 @@
       "chain": "ethereum",
       "address": "0x4f3e8f405cf5afc05d68142f3783bdfe13811522",
       "symbol": "usdn3CRV",
+      "decimals": 18
+    },
+    "rewardPool": "0x4a2631d090e8b40bBDe245e687BF09e5e534A239",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -147,6 +245,13 @@
       "address": "0x1aef73d49dedc4b1778d0706583995958dc862e6",
       "symbol": "musd3CRV",
       "decimals": 18
+    },
+    "rewardPool": "0xDBFa6187C79f4fE4Cda20609E75760C5AaE88e52",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -156,6 +261,13 @@
       "chain": "ethereum",
       "address": "0xc2ee6b0334c261ed60c72f6054450b61b8f18e35",
       "symbol": "rsv3CRV",
+      "decimals": 18
+    },
+    "rewardPool": "0xedfCCF611D7c40F43e77a1340cE2C29EEEC27205",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -167,6 +279,13 @@
       "address": "0x64eda51d3ad40d56b9dfc5554e06f94e1dd786fd",
       "symbol": "tbtc/sbtcCrv",
       "decimals": 18
+    },
+    "rewardPool": "0x081A6672f07B615B402e7558a867C97FA080Ce35",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -176,6 +295,13 @@
       "chain": "ethereum",
       "address": "0x3a664ab939fd8482048609f652f9a0b0677337b9",
       "symbol": "dusd3CRV",
+      "decimals": 18
+    },
+    "rewardPool": "0x1992b82A8cCFC8f89785129D6403b13925d6226E",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -187,6 +313,13 @@
       "address": "0xde5331ac4b3630f94853ff322b66407e0d6331e8",
       "symbol": "pBTC/sbtcCRV",
       "decimals": 18
+    },
+    "rewardPool": "0x2d3C90AEB11D1393CA839Afc9587515B1325D77A",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -196,6 +329,13 @@
       "chain": "ethereum",
       "address": "0x410e3e86ef427e30b9235497143881f717d93c2a",
       "symbol": "bBTC/sbtcCRV",
+      "decimals": 18
+    },
+    "rewardPool": "0x61D741045cCAA5a215cF4E5e55f20E1199B4B843",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -207,6 +347,13 @@
       "address": "0x2fe94ea3d5d4a175184081439753de15aef9d614",
       "symbol": "oBTC/sbtcCRV",
       "decimals": 18
+    },
+    "rewardPool": "0xeeeCE77e0bc5e59c77fc408789A9A172A504bD2f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -216,6 +363,13 @@
       "chain": "ethereum",
       "address": "0x94e131324b6054c0d789b190b2dac504e4361b53",
       "symbol": "ust3CRV",
+      "decimals": 18
+    },
+    "rewardPool": "0xd4Be1911F8a0df178d6e7fF5cE39919c273E2B7B",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -227,6 +381,13 @@
       "address": "0x194ebd173f6cdace046c53eacce9b953f28411d1",
       "symbol": "eursCRV",
       "decimals": 18
+    },
+    "rewardPool": "0xcB8F69E0064d8cdD29cbEb45A14cf771D904BcD3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -236,6 +397,13 @@
       "chain": "ethereum",
       "address": "0xa3d87fffce63b53e0d54faa1cc983b7eb0b74a9c",
       "symbol": "eCRV",
+      "decimals": 18
+    },
+    "rewardPool": "0x192469CadE297D6B21F418cFA8c366b63FFC9f9b",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -247,6 +415,13 @@
       "address": "0xfd2a8fa60abd58efe3eee34dd494cd491dc14900",
       "symbol": "a3CRV",
       "decimals": 18
+    },
+    "rewardPool": "0xE82c1eB4BC6F92f85BF7EB6421ab3b882C3F5a7B",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -256,6 +431,13 @@
       "chain": "ethereum",
       "address": "0x06325440d014e39736583c165c2963ba99faf14e",
       "symbol": "steCRV",
+      "decimals": 18
+    },
+    "rewardPool": "0x0A760466E1B4621579a82a39CB56Dda2F4E70f03",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -267,6 +449,13 @@
       "address": "0x02d341ccb60faaf662bc0554d13778015d1b285c",
       "symbol": "saCRV",
       "decimals": 18
+    },
+    "rewardPool": "0xF86AE6790654b70727dbE58BF1a863B270317fD0",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -276,6 +465,13 @@
       "chain": "ethereum",
       "address": "0xaa17a236f2badc98ddc0cf999abb47d47fc0a6cf",
       "symbol": "ankrCRV",
+      "decimals": 18
+    },
+    "rewardPool": "0x8798b81b0261934aa850C8de8622472bfdc143F4",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -287,6 +483,13 @@
       "address": "0x7eb40e450b9655f4b3cc4259bcc731c63ff55ae6",
       "symbol": "usdp3CRV",
       "decimals": 18
+    },
+    "rewardPool": "0x24DfFd1949F888F91A0c8341Fc98a3F280a782a8",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -296,6 +499,13 @@
       "chain": "ethereum",
       "address": "0x5282a4ef67d9c33135340fb3289cc1711c13638c",
       "symbol": "ib3CRV",
+      "decimals": 18
+    },
+    "rewardPool": "0x3E03fFF82F77073cc590b656D42FceB12E4910A8",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -307,6 +517,13 @@
       "address": "0xcee60cfa923170e4f8204ae08b4fa6a3f5656f3a",
       "symbol": "linkCRV",
       "decimals": 18
+    },
+    "rewardPool": "0x9700152175dc22E7d1f3245fE3c1D2cfa3602548",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -316,6 +533,13 @@
       "chain": "ethereum",
       "address": "0xecd5e75afb02efa118af914515d6521aabd189f1",
       "symbol": "TUSD3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x308b48F037AAa75406426dACFACA864ebd88eDbA",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -327,6 +551,13 @@
       "address": "0xd632f22692fac7611d2aa1c0d552930d43caed3b",
       "symbol": "FRAX3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0xB900EF131301B307dB5eFcbed9DBb50A3e209B2e",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -336,6 +567,13 @@
       "chain": "ethereum",
       "address": "0xed279fdd11ca84beef15af5d39bb4d4bee23f0ca",
       "symbol": "LUSD3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x2ad92A7aE036a038ff02B96c88de868ddf3f8190",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -347,6 +585,13 @@
       "address": "0x4807862aa8b2bf68830e4c8dc86d0e9a998e085a",
       "symbol": "BUSD3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0xbD223812d360C9587921292D0644D18aDb6a2ad0",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -356,6 +601,13 @@
       "chain": "ethereum",
       "address": "0x53a901d48795c58f485cbb38df08fa96a24669d5",
       "symbol": "rCRV",
+      "decimals": 18
+    },
+    "rewardPool": "0x61dB6c2321f784c8fAb8d5eF80f58F27C831dCc8",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -367,6 +619,13 @@
       "address": "0x43b4fdfd4ff969587185cdb6f0bd875c5fc83f8c",
       "symbol": "alUSD3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0x02E2151D4F351881017ABdF2DD2b51150841d5B3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -376,6 +635,13 @@
       "chain": "ethereum",
       "address": "0xca3d75ac011bf5ad07a98d02f18225f9bd9a6bdf",
       "symbol": "crvTricrypto",
+      "decimals": 18
+    },
+    "rewardPool": "0x5Edced358e6C0B435D53CC30fbE6f5f0833F404F",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -387,6 +653,13 @@
       "address": "0xc4ad29ba4b3c580e6d59105fff484999997675ff",
       "symbol": "crv3crypto",
       "decimals": 18
+    },
+    "rewardPool": "0x9D5C5E364D81DaB193b72db9E9BE9D8ee669B652",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -396,6 +669,13 @@
       "chain": "ethereum",
       "address": "0xfd5db7463a3ab53fd211b4af195c5bccc1a03890",
       "symbol": "EURT-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xD814BFC091111E1417a669672144aFFAA081c3CE",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -407,6 +687,13 @@
       "address": "0x5a6a4d54456819380173272a5e8e9b9904bdf41b",
       "symbol": "MIM-3LP3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0xFd5AbF66b003881b88567EB9Ed9c651F14Dc4771",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -416,6 +703,13 @@
       "chain": "ethereum",
       "address": "0x9d0464996170c6b9e75eed71c68b99ddedf279e8",
       "symbol": "cvxcrv-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x0392321e86F42C2F94FBb0c6853052487db521F0",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -427,6 +721,13 @@
       "address": "0x8818a9bb44fbf33502be7c15c500d0c783b73067",
       "symbol": "ibJPY+sJPY-f",
       "decimals": 18
+    },
+    "rewardPool": "0xbA8fE590498ed24D330Bb925E69913b1Ac35a81E",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -436,6 +737,13 @@
       "chain": "ethereum",
       "address": "0xd6ac1cb9019137a896343da59dde6d097f710538",
       "symbol": "ibGBP+sGBP-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x51a16DA36c79E28dD3C8c0c19214D8aF413984Aa",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -447,6 +755,13 @@
       "address": "0x3f1b0278a9ee595635b61817630cc19de792f506",
       "symbol": "ibAUD+sAUD-f",
       "decimals": 18
+    },
+    "rewardPool": "0xb1Fae59F23CaCe4949Ae734E63E42168aDb0CcB3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -456,6 +771,13 @@
       "chain": "ethereum",
       "address": "0x19b080fe1ffa0553469d20ca36219f17fcf03859",
       "symbol": "ibEUR+sEUR-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xCd0559ADb6fAa2fc83aB21Cf4497c3b9b45bB29f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -467,6 +789,13 @@
       "address": "0x9c2c8910f113181783c249d8f6aa41b51cde0f0c",
       "symbol": "ibCHF+sCHF-f",
       "decimals": 18
+    },
+    "rewardPool": "0xa5A5905efc55B05059eE247d5CaC6DD6791Cfc33",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -476,6 +805,13 @@
       "chain": "ethereum",
       "address": "0x8461a004b50d321cb22b7d034969ce6803911899",
       "symbol": "ibKRW+sKRW-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x8F18C0AF0d7d511E8Bdc6B3c64926B04EDfE4892",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -487,6 +823,13 @@
       "address": "0xb15ffb543211b558d40160811e5dcbcd7d5aaac9",
       "symbol": "cvxRT",
       "decimals": 18
+    },
+    "rewardPool": "0xc3628b8FAaDe10aCeAe88c9b982cE0AAc9bBaaD3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -496,6 +839,13 @@
       "chain": "ethereum",
       "address": "0xc4c319e2d4d66cca4464c0c2b32c9bd23ebe784e",
       "symbol": "alETH+ETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x48Bc302d8295FeA1f8c3e7F57D4dDC9981FEE410",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -507,6 +857,13 @@
       "address": "0x3fb78e61784c9c637d560ede23ad57ca1294c14a",
       "symbol": "EURN/EURT-f",
       "decimals": 18
+    },
+    "rewardPool": "0x7CDA2a83D29d7Fc2ccb8F7716b5c1c34781aeb12",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -516,6 +873,13 @@
       "chain": "ethereum",
       "address": "0x5b3b5df2bf2b6543f78e053bd91c4bdd820929f1",
       "symbol": "USDM3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xA689C00F3fd87dD3871C79C73343cd9F7957377E",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -527,6 +891,13 @@
       "address": "0x55a8a39bc9694714e2874c1ce77aa1e599461e18",
       "symbol": "MIM-UST-f",
       "decimals": 18
+    },
+    "rewardPool": "0xC62DE533ea77D46f3172516aB6b1000dAf577E89",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -536,6 +907,13 @@
       "chain": "ethereum",
       "address": "0xfbdca68601f835b27790d98bbb8ec7f05fdeaa9b",
       "symbol": "ibbtc/sbtcCRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x4F2b8a15d0Dd58c1eB60bd53e966872828519Cee",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -547,6 +925,13 @@
       "address": "0x3d229e1b4faab62f621ef2f6a610961f7bd7b23b",
       "symbol": "crvEURSUSDC",
       "decimals": 18
+    },
+    "rewardPool": "0xb0c1B7b83Baae51284B8BbBa02Ec37742440199d",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -556,6 +941,13 @@
       "chain": "ethereum",
       "address": "0x3b6831c0077a1e44ed0a21841c3bc4dc11bce833",
       "symbol": "crvEURTUSD",
+      "decimals": 18
+    },
+    "rewardPool": "0xD2B756Af4E345A8657C0656C148aDCD3000C97A4",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -567,6 +959,13 @@
       "address": "0x87650d7bbfc3a9f10587d7778206671719d9910d",
       "symbol": "OUSD3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0x7D536a737C13561e0D2Decf1152a653B4e615158",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -576,6 +975,13 @@
       "chain": "ethereum",
       "address": "0xc270b3b858c335b6ba5d5b10e2da8a09976005ad",
       "symbol": "pax-usdp3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x500E169c15961DE8798Edb52e0f88a8662d30EC5",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -587,6 +993,13 @@
       "address": "0xbaaa1f5dba42c3389bdbc2c9d2de134f5cd0dc89",
       "symbol": "D3-f",
       "decimals": 18
+    },
+    "rewardPool": "0x329cb014b562d5d42927cfF0dEdF4c13ab0442EF",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -596,6 +1009,13 @@
       "chain": "ethereum",
       "address": "0xceaf7747579696a2f0bb206a14210e3c9e6fb269",
       "symbol": "UST_whv23CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x7e2b9B5244bcFa5108A76D5E7b507CFD5581AD4A",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -607,6 +1027,13 @@
       "address": "0xb9446c4ef5ebe66268da6700d26f96273de3d571",
       "symbol": "3EURpool-f",
       "decimals": 18
+    },
+    "rewardPool": "0x4a9b7eDD67f58654a2c33B587f98c5709AC7d482",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -616,6 +1043,13 @@
       "chain": "ethereum",
       "address": "0xed4064f376cb8d68f770fb1ff088a3d0f3ff5c4d",
       "symbol": "crvCRVETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x085A2054c51eA5c91dbF7f90d65e728c0f2A270f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -627,6 +1061,13 @@
       "address": "0xaa5a67c256e27a5d80712c51971408db3370927d",
       "symbol": "DOLA3POOL3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0x835f69e58087E5B6bffEf182fe2bf959Fe253c3c",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -636,6 +1077,13 @@
       "chain": "ethereum",
       "address": "0x6ba5b4e438fa0aaf7c1bd179285af65d13bd3d90",
       "symbol": "RAI3CRV",
+      "decimals": 18
+    },
+    "rewardPool": "0x29B91c6CEC4F43aFdb6f6d71FAf1C03d6b712f55",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -647,6 +1095,13 @@
       "address": "0x3a283d9c08e8b55966afb64c515f5143cf907611",
       "symbol": "crvCVXETH",
       "decimals": 18
+    },
+    "rewardPool": "0xb1Fb0BA0676A1fFA83882c7F4805408bA232C1fA",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -656,6 +1111,13 @@
       "chain": "ethereum",
       "address": "0x8484673ca7bff40f82b041916881aea15ee84834",
       "symbol": "crvXAUTUSD",
+      "decimals": 18
+    },
+    "rewardPool": "0x6cb1933E49C48AE8ec12d39aD7D85695b247deDB",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -667,6 +1129,13 @@
       "address": "0x8282bd15dca2ea2bdf24163e8f2781b30c43a2ef",
       "symbol": "crvSPELLETH",
       "decimals": 18
+    },
+    "rewardPool": "0xb2f0bB6352417c1Bf017862aC165E67623611aF3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -676,6 +1145,13 @@
       "chain": "ethereum",
       "address": "0xcb08717451aae9ef950a2524e33b6dcaba60147b",
       "symbol": "crvTETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x3E91E7c822AC8b4b7905d108c3faCF22A3ee5d2c",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -687,6 +1163,13 @@
       "address": "0x29059568bb40344487d62f7450e78b8e6c74e0e5",
       "symbol": "YFIETH-f",
       "decimals": 18
+    },
+    "rewardPool": "0x3207bDc327aB67f182B82948fd3DF757F8771324",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -696,6 +1179,13 @@
       "chain": "ethereum",
       "address": "0x90244f43d548a4f8dfecfad91a193465b1fad6f7",
       "symbol": "FXSETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xAA0e8Ef60BaBda02Ef11c89a061D82b1D61a462C",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -707,6 +1197,13 @@
       "address": "0xb37d6c07482bc11cd28a1f11f1a6ad7b66dec933",
       "symbol": "ag+ib-EUR-f",
       "decimals": 18
+    },
+    "rewardPool": "0x769499A7B4093b2AA35E3F3C00B1ab5dc8EF7146",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -716,6 +1213,13 @@
       "chain": "ethereum",
       "address": "0x06cb22615ba53e60d67bf6c341a0fd5e718e1655",
       "symbol": "FEI3CRV3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x3133A4428AAC0b4ad96a09845363386ECd289A9c",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -727,6 +1231,13 @@
       "address": "0xf3a43307dcafa93275993862aae628fcb50dc768",
       "symbol": "cvxFXSFXS-f",
       "decimals": 18
+    },
+    "rewardPool": "0xf27AFAD0142393e4b3E5510aBc5fe3743Ad669Cb",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -736,6 +1247,13 @@
       "chain": "ethereum",
       "address": "0x447ddd4960d9fdbf6af9a790560d0af76795cb08",
       "symbol": "rETHwstETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x5c463069b99AfC9333F4dC2203a9f0c6C7658cCc",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -747,6 +1265,13 @@
       "address": "0x137469b55d1f15651ba46a89d0588e97dd0b6562",
       "symbol": "BADGERWBTC-f",
       "decimals": 18
+    },
+    "rewardPool": "0x36c7E7F9031647A74687ce46A8e16BcEA84f3865",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -756,6 +1281,13 @@
       "chain": "ethereum",
       "address": "0xe160364fd8407ffc8b163e278300c6c5d18ff61d",
       "symbol": "BTRFLYETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x41565A76DC949E57486Ca4550C2e086D95AEfb19",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -767,6 +1299,13 @@
       "address": "0xbcb91e689114b9cc865ad7871845c95241df4105",
       "symbol": "PWRD3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0xC4d009E61a904BfDf39144295F12870E8305D4d9",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -776,6 +1315,13 @@
       "chain": "ethereum",
       "address": "0xc9467e453620f16b57a34a770c6bcebece002587",
       "symbol": "pbtc/sbtcCRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x589761B61D8d1C8ecc36F3cFE35932670749015a",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -787,6 +1333,13 @@
       "address": "0x2302aabe69e6e7a1b0aa23aac68fccb8a4d2b460",
       "symbol": "silofrax-f",
       "decimals": 18
+    },
+    "rewardPool": "0xE259d085f55825624bBA8571eD20984c125Ba720",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -796,6 +1349,13 @@
       "chain": "ethereum",
       "address": "0x1054ff2ffa34c055a13dcd9e0b4c0ca5b3aeceb9",
       "symbol": "CADCUSDC-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x8731A63dD6aF83c044F623A89ABD50A8bb5a5022",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -807,6 +1367,13 @@
       "address": "0x3a70dfa7d2262988064a2d051dd47521e43c9bdd",
       "symbol": "BEAN3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0x414d43EfDf60010428B55CEEE5fec187E2ebB284",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -816,6 +1383,13 @@
       "chain": "ethereum",
       "address": "0x401322b9fddba8c0a8d40fbcece1d1752c12316b",
       "symbol": "LFTETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x87d258F95Cf6D6d13E3c9D5365dD7B46EF050FbF",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -827,6 +1401,13 @@
       "address": "0x4704ab1fb693ce163f7c9d3a31b3ff4eaf797714",
       "symbol": "FPIFRAX-f",
       "decimals": 18
+    },
+    "rewardPool": "0x1A8D59cCbbC81ecD556B86969680faD2F238F18f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -836,6 +1417,13 @@
       "chain": "ethereum",
       "address": "0x6359b6d3e327c497453d4376561ee276c6933323",
       "symbol": "SDTETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xeBd7E324b6b086986efb97804929538Bf4bF2047",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -847,6 +1435,13 @@
       "address": "0x54c8ecf46a81496eeb0608bd3353388b5d7a2a33",
       "symbol": "ibAUDUSDC-f",
       "decimals": 18
+    },
+    "rewardPool": "0xbAFC4FAeB733C18411886A04679F11877D8629b1",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -856,6 +1451,13 @@
       "chain": "ethereum",
       "address": "0x08cea8e5b4551722deb97113c139dd83c26c5398",
       "symbol": "ibCHFUSDC-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x9BEc26bDd9702F4e0e4de853dd65Ec75F90b1F2e",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -867,6 +1469,13 @@
       "address": "0x8682fbf0cbf312c891532ba9f1a91e44f81ad7df",
       "symbol": "ibEURUSDC-f",
       "decimals": 18
+    },
+    "rewardPool": "0xAab7202D93B5633eB7FB3b80873C817B240F6F44",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -876,6 +1485,13 @@
       "chain": "ethereum",
       "address": "0x22cf19eb64226e0e1a79c69b345b31466fd273a7",
       "symbol": "ibGBPUSDC-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x8C87E32000ADD1a7D7D69a1AE180C415AF769361",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -887,6 +1503,13 @@
       "address": "0x127091ede112aed7bae281747771b3150bb047bb",
       "symbol": "ibJPYUSDC-f",
       "decimals": 18
+    },
+    "rewardPool": "0x58563C872c791196d0eA17c4E53e77fa1d381D4c",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -896,6 +1519,13 @@
       "chain": "ethereum",
       "address": "0x80caccdbd3f07bbdb558db4a9e146d099933d677",
       "symbol": "ibKRWUSDC-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x1900249c7a90D27b246032792004FF0E092Ac2cE",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -907,6 +1537,13 @@
       "address": "0x4647b6d835f3b393c7a955df51eefcf0db961606",
       "symbol": "KP3RETH-f",
       "decimals": 18
+    },
+    "rewardPool": "0x0c2da920E577960f39991030CfBdd4cF0a0CfEBD",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -916,6 +1553,13 @@
       "chain": "ethereum",
       "address": "0x8ee017541375f6bcd802ba119bddc94dad6911a1",
       "symbol": "PUSd-3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x83a3CE160915675F5bC7cC3CfDA5f4CeBC7B7a5a",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -927,6 +1571,13 @@
       "address": "0x3660bd168494d61ffdac21e403d0f6356cf90fd7",
       "symbol": "OHMETH-f",
       "decimals": 18
+    },
+    "rewardPool": "0xd683C7051a28fA150EB3F4BD92263865D4a67778",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -936,6 +1587,13 @@
       "chain": "ethereum",
       "address": "0xf7b55c3732ad8b2c2da7c24f30a69f55c54fb717",
       "symbol": "sdCRVCRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xA7FC7e90c45C2657A9069CA99011894a76eaB82D",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -947,6 +1605,13 @@
       "address": "0x48ff31bbbd8ab553ebe7cbd84e1ea3dba8f54957",
       "symbol": "sdAGAG-f",
       "decimals": 18
+    },
+    "rewardPool": "0xC5B3B2537499e3943C9A359886193F3F89EdDc6a",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -956,6 +1621,13 @@
       "chain": "ethereum",
       "address": "0xdf55670e27be5cde7228dd0a6849181891c9eba1",
       "symbol": "STGUSDC-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x17E3Bc273cFcB972167059E55104DBCC8f8431bE",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -967,6 +1639,13 @@
       "address": "0xe6b5cc1b4b47305c58392ce3d359b10282fc36ea",
       "symbol": "USDD3CRV3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0x7D475cc8A5E0416f0e63042547aDB94ca7045A5b",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -976,6 +1655,13 @@
       "chain": "ethereum",
       "address": "0xbe4f3ad6c9458b901c81b734cb22d9eae9ad8b50",
       "symbol": "PALETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xcc4687A893C1Fa137e0CAcd96591422dEb7B717c",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -987,6 +1673,13 @@
       "address": "0x8c524635d52bd7b1bd55e062303177a7d916c046",
       "symbol": "sdFXSFXS-f",
       "decimals": 18
+    },
+    "rewardPool": "0xA84f2187371e8A61fa6634eCB3Ff6D89dF299e0e",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -996,6 +1689,13 @@
       "chain": "ethereum",
       "address": "0x7ea4ad8c803653498bf6ac1d2debc04dce8fd2ad",
       "symbol": "TOKEETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x3382607d00cfb668AbaB80D8EE781a2720CbC9ea",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1007,6 +1707,13 @@
       "address": "0x3175df0976dfa876431c2e9ee6bc45b65d3473cc",
       "symbol": "crvFRAX",
       "decimals": 18
+    },
+    "rewardPool": "0x7e880867363A7e321f5d260Cade2B0Bb2F717B02",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1016,6 +1723,13 @@
       "chain": "ethereum",
       "address": "0xe3c190c57b5959ae62efe3b6797058b76ba2f5ef",
       "symbol": "SUSDFRAXBP3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x3fABBDfe05487De1720a9420fE2e16d2c3e79A9D",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1027,6 +1741,13 @@
       "address": "0x497ce58f34605b9944e6b15ecafe6b001206fd25",
       "symbol": "LUSDFRAXBP3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0x053e1dad223A206e6BCa24C77786bb69a10e427d",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1036,6 +1757,13 @@
       "chain": "ethereum",
       "address": "0x04b727c7e246ca70d496ecf52e6b6280f3c8077d",
       "symbol": "APEUSDBP3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x51e6B84968D56a1E5BC93Ee264e95b1Ea577339c",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1047,6 +1775,13 @@
       "address": "0x4e43151b78b5fbb16298c1161fcbf7531d5f8d93",
       "symbol": "GUSDFRAXBP3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0x47809eE386D1dEC29c0b13f21ba30F564517538B",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1056,6 +1791,13 @@
       "chain": "ethereum",
       "address": "0x8fdb0bb9365a46b145db80d0b1c5c5e979c84190",
       "symbol": "BUSDFRAXBP3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x9e6Daf019767D5cEAdE416ce77E8d187b5B254F3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1067,6 +1809,13 @@
       "address": "0xb30da2376f63de30b42dc055c93fa474f31330a5",
       "symbol": "alUSDFRAXB3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0x26598e3E511ADFadefD70ab2C3475Ff741741104",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1076,6 +1825,13 @@
       "chain": "ethereum",
       "address": "0x4606326b4db89373f5377c316d3b0f6e55bc6a20",
       "symbol": "USDDFRAXBP3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x546cd3B917c1d8A6525b4A312bB0014BE031Eb28",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1087,6 +1843,13 @@
       "address": "0x33baeda08b8afacc4d3d07cf31d49fc1f1f3e893",
       "symbol": "TUSDFRAXBP3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0x4a744870fD705971c8c00aC510eAc2206C93d5bb",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1096,6 +1859,13 @@
       "chain": "ethereum",
       "address": "0xdadfd00a2bbeb1abc4936b1644a3033e1b653228",
       "symbol": "xFraxTplLP-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x43217822E188b39E90AFA54A5fcf1c76AB0F323a",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1107,6 +1877,13 @@
       "address": "0x70fc957eb90e37af82acdbd12675699797745f68",
       "symbol": "EUROC3CRV",
       "decimals": 18
+    },
+    "rewardPool": "0x7d955C7076566550f6B35357E7cdDF95272333F5",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1116,6 +1893,13 @@
       "chain": "ethereum",
       "address": "0xfa65aa60a9d45623c57d383fb4cf8fb8b854cc4d",
       "symbol": "tbtc2/sbtcCRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x455AC43CcE0E17774C0bF240ba709DD5822102f3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1127,6 +1911,13 @@
       "address": "0xe7a3b38c39f97e977723bd1239c3470702568e7b",
       "symbol": "europool-f",
       "decimals": 18
+    },
+    "rewardPool": "0x14F02f3b47B407A7a0cdb9292AA077Ce9E124803",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1136,6 +1927,13 @@
       "chain": "ethereum",
       "address": "0xba3436fd341f2c8a928452db3c5a3670d1d5cc73",
       "symbol": "agEUREUROC-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xA91fccC1ec9d4A2271B7A86a7509Ca05057C1A98",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1147,6 +1945,13 @@
       "address": "0xc47ebd6c0f68fd5963005d28d0ba533750e5c11b",
       "symbol": "pUSDFRAXBP3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0x6d096C99Cc2Ea52490355311b73D86365Acf087f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1156,6 +1961,13 @@
       "chain": "ethereum",
       "address": "0xe57180685e3348589e9521aa53af0bcd497e884d",
       "symbol": "DOLAFRAXBP3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x0404d05F3992347d2f0dC3a97bdd147D77C85c1c",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1167,6 +1979,13 @@
       "address": "0x22e859ee894c2068920858a60b51dc03ac5581c1",
       "symbol": "agEURFRAXB-f",
       "decimals": 18
+    },
+    "rewardPool": "0x17962aB30c7F291b125A0A38d0ad220ab22F8a5B",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1176,6 +1995,13 @@
       "chain": "ethereum",
       "address": "0x7f17a6c77c3938d235b014818092eb6305bda110",
       "symbol": "CVXFRAXBP-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xf02B3A77b1e7775de10294d78a4c3d77772B484A",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1187,6 +2013,13 @@
       "address": "0x527331f3f550f6f85acfecab9cc0889180c6f1d5",
       "symbol": "cvxCrvFrax-f",
       "decimals": 18
+    },
+    "rewardPool": "0xdEbc7B51043b4D0dd4f3310C68A12382b8843ceE",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1196,6 +2029,13 @@
       "chain": "ethereum",
       "address": "0xf57ccad8122b898a147cc8601b1eca88b1662c7e",
       "symbol": "cvxFxsFrax-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x19eA715F854dB2196C6f45A174541a5Ac884D2f9",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1207,6 +2047,13 @@
       "address": "0xf985005a3793dba4cce241b3c19ddcd3fe069ff4",
       "symbol": "ALCXFRAXBP-f",
       "decimals": 18
+    },
+    "rewardPool": "0xC10fD95fd3B56535668426B2c8681AD1E15Be608",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1216,6 +2063,13 @@
       "chain": "ethereum",
       "address": "0x66e335622ad7a6c9c72c98dbfcce684996a20ef9",
       "symbol": "MAIPool3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xD3C412C3cEdbEC604425B23DCd79Aa1ac810622f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1227,6 +2081,13 @@
       "address": "0x9848482da3ee3076165ce6497eda906e66bb85c5",
       "symbol": "pETH-ETH-f",
       "decimals": 18
+    },
+    "rewardPool": "0xb235205E1096E0Ad221Fb7621a2E2cbaB875bE75",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1236,6 +2097,13 @@
       "chain": "ethereum",
       "address": "0x09b2e090531228d1b8e3d948c73b990cb6e60720",
       "symbol": "BADGERFRAX-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xe0705A91984b076C250d410A41f615380aF1C2ed",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1247,6 +2115,13 @@
       "address": "0x453d92c7d4263201c69aacfaf589ed14202d83a4",
       "symbol": "yCRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0xe94b4cC50aC9ebeC491c3665C3E5a017a87dCF19",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1256,6 +2131,13 @@
       "chain": "ethereum",
       "address": "0x3f436954afb722f5d14d868762a23fab6b0dabf0",
       "symbol": "RSRcrvFRAX-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x28441fb9b8b026487A6174Ff39Be015810611C0F",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1267,6 +2149,13 @@
       "address": "0x7483dd57f6488b0e194a151c57df6ec85c00ace9",
       "symbol": "BTRFLYETH-f",
       "decimals": 18
+    },
+    "rewardPool": "0x736431Ef2b5e7b9cB3Cdc5Bd7EaC395e04015559",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1276,6 +2165,13 @@
       "chain": "ethereum",
       "address": "0x5b6c539b224014a09b3388e51caaa8e354c959c8",
       "symbol": "cbETH/ETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x5d02EcD9B83f1187e92aD5be3d1bd2915CA03699",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1287,6 +2183,13 @@
       "address": "0xf43211935c781d5ca1a41d2041f397b8a7366c7a",
       "symbol": "frxETHCRV",
       "decimals": 18
+    },
+    "rewardPool": "0xbD5445402B0a287cbC77cb67B2a52e2FC635dce4",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1296,6 +2199,13 @@
       "chain": "ethereum",
       "address": "0x326290a1b0004eee78fa6ed4f1d8f4b2523ab669",
       "symbol": "XAIFRAXBP3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x4a866fE20A442Dff55FAA010684A5C1379151458",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1307,6 +2217,13 @@
       "address": "0x23e7817bc73645063fb2fa85c1d098effe84be90",
       "symbol": "JPEGpETH-f",
       "decimals": 18
+    },
+    "rewardPool": "0x820EFA9a92b2317D39D18cf5C964890dD8f9B6bE",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1316,6 +2233,13 @@
       "chain": "ethereum",
       "address": "0x893da8a02b487fef2f7e3f35df49d7625ae549a3",
       "symbol": "sdtfraxbp-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xc3df9cC2B8FFdB801E8e6E8FF9C1245E2dEcdA98",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1327,6 +2251,13 @@
       "address": "0x3a70dfa7d2262988064a2d051dd47521e43c9bdd",
       "symbol": "BEAN3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0xbf2A9B7412332A78D03BD27101635e30a6b941e4",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1336,6 +2267,13 @@
       "chain": "ethereum",
       "address": "0x5ca0313d44551e32e0d7a298ec024321c4bc59b4",
       "symbol": "bLUSDLUSD3-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xe5ba5E48114ecF21dF6d0Ba958372ce878592705",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1347,6 +2285,13 @@
       "address": "0x79e281bc69a03dabccd66858c65ef6724e50aebe",
       "symbol": "sdYFIYFI-f",
       "decimals": 18
+    },
+    "rewardPool": "0xF3bAc69b98301Eacae38CEAB97166a4d78F731BC",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1356,6 +2301,13 @@
       "chain": "ethereum",
       "address": "0x051d7e5609917bd9b73f04bac0ded8dd46a74301",
       "symbol": "crvWSBTC",
+      "decimals": 18
+    },
+    "rewardPool": "0x2a7b6a16Cf7Be51968b69768c3feCaA7E27524A5",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1367,6 +2319,13 @@
       "address": "0x5be6c45e2d074faa20700c49ada3e88a1cc0025d",
       "symbol": "crvGEARETH-f",
       "decimals": 18
+    },
+    "rewardPool": "0x502Cc0d946e79CeA4DaafCf21F374C6bce763067",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1376,6 +2335,13 @@
       "chain": "ethereum",
       "address": "0x2863a328a0b7fc6040f11614fa0728587db8e353",
       "symbol": "multibtc3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x41EAB7eB43b7b055B2Bf508cAcE932b11003029f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1387,6 +2353,13 @@
       "address": "0x5271045f7b73c17825a7a7aee6917ee46b0b7520",
       "symbol": "OHMFRAXBP-f",
       "decimals": 18
+    },
+    "rewardPool": "0x27A8c58e3DE84280826d615D80ddb33930383fE9",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1396,6 +2369,13 @@
       "chain": "ethereum",
       "address": "0xf9078fb962a7d13f55d40d49c8aa6472abd1a5a6",
       "symbol": "clevCVX-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x706f34D0aB8f4f9838F15b0D155C8Ef42229294B",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1407,6 +2387,13 @@
       "address": "0x84c333e94aea4a51a21f6cf0c7f528c50dc7592c",
       "symbol": "clevUSD3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0x710e85B2793b3AE88Cb1Da3cb25b3d62D810d180",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1416,6 +2403,13 @@
       "chain": "ethereum",
       "address": "0x6e0e681441be6cb1d8405752462488bd4d691e3a",
       "symbol": "TRYB3POOL-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x2A80d1B0aEC088cb447491c177bB0fD117e3C698",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1427,6 +2421,13 @@
       "address": "0x6c280db098db673d30d5b34ec04b6387185d3620",
       "symbol": "CLEVETH-f",
       "decimals": 18
+    },
+    "rewardPool": "0x6be96D00B50375AF852D63DB7d55656B306f398e",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1436,6 +2437,13 @@
       "chain": "ethereum",
       "address": "0x413928a25d6ea1a26f2625d633207755f67bf97c",
       "symbol": "agEUREURe-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x40fAF3f0205c32a00398E2e7826946356F42a76B",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1447,6 +2455,13 @@
       "address": "0xc3b19502f8c02be75f3f77fd673503520deb51dd",
       "symbol": "msUSDFRAX3CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0xF189A4a1E845Fd62944F93De497409798523B397",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1456,6 +2471,13 @@
       "chain": "ethereum",
       "address": "0xc897b98272aa23714464ea2a0bd5180f1b8c0025",
       "symbol": "msETH-ETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x14DC104D74372527fEC45b86E87Fe263C7215369",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1467,6 +2489,13 @@
       "address": "0xf95aaa7ebb1620e46221b73588502960ef63dba0",
       "symbol": "TBTCSBTC23CRV-f",
       "decimals": 18
+    },
+    "rewardPool": "0xcD491E40849a0E3c2fF84093bbbaAa25C1eF8dE6",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1476,6 +2505,13 @@
       "chain": "ethereum",
       "address": "0x3f0e7916681452d23cd36b1281457da721f2e5df",
       "symbol": "CTRETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xE1d8E3625c5C54b9dcbb52c2c8E4264c3A01450c",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1487,6 +2523,13 @@
       "address": "0xd8eb58d76af99547333cfeeb6a0f9bd1a63b6492",
       "symbol": "ETH MATIC-f",
       "decimals": 18
+    },
+    "rewardPool": "0x77C43369E50D68B7B3288EEFa7D7ab1F0F6D66b3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1496,6 +2539,13 @@
       "chain": "ethereum",
       "address": "0xb79565c01b7ae53618d9b847b9443aaf4f9011e7",
       "symbol": "LDOETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x8CA990E954611E5E3d2cc51C013fCC372c8c1D38",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1507,6 +2557,13 @@
       "address": "0x9de1c3d446237ab9baff74127eb4f303802a2683",
       "symbol": "STG/FRAXBP-f",
       "decimals": 18
+    },
+    "rewardPool": "0xAa57A289Bb22a1A0C583db306F6566AE2c0CAf21",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1516,6 +2573,13 @@
       "chain": "ethereum",
       "address": "0x4acc1bf7d6a591016641325aa6664a1cd178f002",
       "symbol": "DYDXETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x034cFd508d978018c93C5b91FbF7e927d6F5a780",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1527,6 +2591,13 @@
       "address": "0xf9835375f6b268743ea0a54d742aa156947f8c06",
       "symbol": "CNCETH-f",
       "decimals": 18
+    },
+    "rewardPool": "0x1A3c8B2F89B1C2593fa46C30ADA0b4E3D0133fF8",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1536,6 +2607,13 @@
       "chain": "ethereum",
       "address": "0x8109a51542294cdbb489ae5516f42ffbd92177aa",
       "symbol": "OGVETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x702F4f9d17d5A5D35Aa2a94AE9A7E6682bab04a7",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   },
@@ -1547,6 +2625,13 @@
       "address": "0x6c38ce8984a890f5e46e6df6117c26b3f1ecfc9c",
       "symbol": "rETH-f",
       "decimals": 18
+    },
+    "rewardPool": "0x65C8aa24db76e870DEDfC35701eff84de405D1ba",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1557,6 +2642,13 @@
       "address": "0x828b154032950c8ff7cf8085d841723db2696056",
       "symbol": "STETHETH_C-f",
       "decimals": 18
+    },
+    "rewardPool": "0xA61b57C452dadAF252D2f101f5Ba20aA86152992",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
     }
   },
   {
@@ -1566,6 +2658,812 @@
       "chain": "ethereum",
       "address": "0xaeda92e6a3b1028edc139a4ae56ec881f3064d4f",
       "symbol": "eUSD3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xB468dB2E478885B87D7ce0C8DA1D4373A756C138",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 157,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x971add32ea87f10bd192671630be3be8a11b8623",
+      "symbol": "cvxcrv-crv-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x39D78f11b246ea4A1f68573c3A5B64E83Cff2cAe",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 158,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x68934f60758243eafaf4d2cfed27bf8010bede3a",
+      "symbol": "UZDFRAXBP3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x820Fad75512c8C3E57Ad021d016846CEEB5F7105",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 159,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xfbb481a443382416357fa81f16db5a725dc6cec8",
+      "symbol": "cvxFpis-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x929c7Ac52ef6D2bB03b9d6c2131BE94E2a1cf5e3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 160,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8c88538688aca3b733ad08b12bee4574c0c00907",
+      "symbol": "eCFXETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x4F9a0f637B33B0D35135cda5782797617afef00e",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 161,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x4d9f9d15101eec665f77210cb999639f760f831e",
+      "symbol": "st-frxETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xC3D0B8170E105d6476fE407934492930CAc3BDAC",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 162,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc34993c9adf6a5ab3b4ca27dc71b9c7894a53974",
+      "symbol": "CRVfrxETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xd5dC65ec6948845C1C428fb60BE38FE59B50BD13",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 163,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x548e063ce6f3bac31457e4f5b4e2345286274257",
+      "symbol": "cbETHfrxET-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x0080d49D4a4921dF0F3853c5e4533462A51fbb29",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 164,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xba6c373992ad8ec1f7520e5878e5540eb36debf1",
+      "symbol": "rETHfrxETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x84754821b5484A69DB3164eF4eDC5A5657318039",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 165,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xa8e14f03124ea156a4fc416537c82ff91a647d50",
+      "symbol": "ankrfrxETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xc18695D5824C49cF50E054953B3A5910c45597A0",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 166,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xb657b895b265c38c53fff00166cf7f6a3c70587d",
+      "symbol": "alfrxETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xe0DbbCF08A5465db7c7401C86cce89030e11aB67",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 167,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x663ac72a1c3e1c4186cd3dcb184f216291f4878c",
+      "symbol": "s-frxETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x55cdF6c7E6d04b83835E4702ed395D0263237DA2",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 168,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x6e52cce4eafdf77091dd1c82183b2d97b776b397",
+      "symbol": "frxETHCVX-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xA064C1EeEbECD1DF41432f4B7264F508F005aF0C",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 169,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xfc2838a17d8e8b1d5456e0a351b0708a09211147",
+      "symbol": "crvfraxUSDP",
+      "decimals": 18
+    },
+    "rewardPool": "0x6991C1CD588c4e6f6f1de3A0bac5B8BbAb7aAF6d",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 170,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xb85010193fd15af8390dbd62790da70f46c1126b",
+      "symbol": "COILFRAX-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xAE0b6b66378C7DEFc0514D7cBc6E4e92Cf56b0af",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 171,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x2d600bbbcc3f1b6cb9910a70bab59ec9d5f81b9a",
+      "symbol": "msfrxETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x15507737f44446EB0A86147E2C72Aa6A111A64B2",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 172,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x596b330fa8ab2b449973309af6d6ddc002caa52d",
+      "symbol": "WACMEFRXET-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x1C47c8fCE85018AA6645b5aE39c4c61D708CB3f9",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 173,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x892d701d94a43bdbcb5ea28891daca2fa22a690b",
+      "symbol": "STBT3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xf8Fa0b3899DE5B4b3cb0cfF65b528AcDD2d163F3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 174,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x94b17476a93b3262d87b9a326965d1e91f9c13e7",
+      "symbol": "OETHCRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x24b65DC1cf053A8D96872c323d29e86ec43eB33A",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 175,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xbfab6fa95e0091ed66058ad493189d2cb29385e6",
+      "symbol": "ETHwBETHCRV",
+      "decimals": 18
+    },
+    "rewardPool": "0x6cD1a734F3d49Cc5b381c2b53CF17f12bfFA2bdD",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 176,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8bc3f1e82ca3d63987dc12f90538c6bf818fcd0f",
+      "symbol": "DCHF3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xA3D3D65101C99f7Dc8dd2D4f15E256341c8E40de",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 177,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x21e27a5e5513d6e65c4f830167390997aa84843a",
+      "symbol": "stETH-ng-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x6B27D7BC63F1999D14fF9bA900069ee516669ee8",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 178,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xf05cfb8b4382c69f3b451c5fb55210b232e0edfa",
+      "symbol": "agEUR-VEUR-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x60E4001E9D96618655C9e59Cdf5e9db40076b8e0",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 179,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x390f3595bca2df7d23783dfd126427cceb997bf4",
+      "symbol": "crvUSDUSDT-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xD1DdB0a0815fD28932fBb194C84003683AF8a824",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 180,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xca978a0528116dda3cba9acd3e68bc6191ca53d0",
+      "symbol": "crvUSDUSDP-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x80c64E468b774F7F96D4DFCe39caE2dd4C2B7f93",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 181,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x34d655069f4cac1547e4c8ca284ffff5ad4a8db0",
+      "symbol": "crvUSDTUSD-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x4e2637D6697ed953241D44E29Fba55748F651861",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 182,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x4dece678ceceb27446b35c672dc7d61f30bad69e",
+      "symbol": "crvUSDUSDC-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x44D8FaB7CD8b7877D5F79974c2F501aF6E65AbBA",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 183,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc794c6a95f30d0ebf7b3bbe85e8a0a95c9e411c1",
+      "symbol": "hyUSDeUSD-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x245Ec0d447e7f206B43120Ac292dED5E8bB9fe61",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 184,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x99f5acc8ec2da2bc0771c32814eff52b712de1e5",
+      "symbol": "yCRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x16aA741b46180bdCB83faFb65965B0A94D5a918C",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 185,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xe8a5677171c87fcb65b76957f2852515b404c7b1",
+      "symbol": "ETH+ETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x15b7011bDE1C5836C67f16E6e03033c272156193",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 186,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xe49addc2d1a131c6b8145f0eba1c946b7198e0ba",
+      "symbol": "swETHfxETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x91362eBf6DbFA5c0FD45CE4cF46DfFd4A8899c7C",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 187,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x0cd6f267b2086bea681e922e19d40512511be538",
+      "symbol": "crvUSDFRAX-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x3CfB4B26dc96B124D15A6f360503d028cF2a3c00",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 188,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xf5f5b97624542d72a9e06f04804bf81baa15e2b4",
+      "symbol": "crvUSDTWBTCWETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xb05262D4aaAA38D0Af4AaB244D446ebDb5afd4A7",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 189,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x7f86bf177dd4f3494b841a37e810a34dd56c829b",
+      "symbol": "crvUSDCWBTCWETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x57f4cf13b325Ad101CfE9AD3a84d3B2302AA96c8",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 190,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xca0253a98d16e9c1e3614cafda19318ee69772d0",
+      "symbol": "sdCRVlp-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xD22c1Dc9baEb5b549401Dd42E6227953cd816776",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 191,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x26f3f26f46cbee59d1f8860865e13aa39e36a8c0",
+      "symbol": "sdPENDLElp-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xD24e00740306A67e29F189B55343F4804683d231",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 192,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x71c91b173984d3955f7756914bbf9a7332538595",
+      "symbol": "sdFXSlp-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x27FB53CDA31de0BFc634086e180EE8c5f44a28Eb",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 193,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x96aae323e111a19b1e0e26f55e8de21f1dd01f26",
+      "symbol": "sdANGLElp-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x12261736A428580D53dfb2F213ae389e251Be4CF",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 194,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x852b90239c5034b5bb7a5e54ef1bef3ce3359cc8",
+      "symbol": "sdYFIpool-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xB94c129Cb0Adf7f5928e07476c668998251685F2",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 195,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x7c0d189e1fecb124487226dcba3748bd758f98e4",
+      "symbol": "dETHfrxETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x0106Bff3bD9C3BB9e4F8776591288F6855c4aF95",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 196,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x400d4c984779a747462e88373c3fe369ef9f5b50",
+      "symbol": "ZUSDFBP3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xFd3A7636694259b32B3896f59436997AD25380cA",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 197,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x2889302a794da87fbf1d6db415c1492194663d13",
+      "symbol": "crvCRVUSDTBTCWSTETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xdEC6Ad921212d9eFe9643DDBfc1A1F1d4731060d",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 198,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x94cc50e4521bd271c1a997a3a4dc815c2f920b41",
+      "symbol": "crvUSDSUSD-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xbe99C9A460488Ef88eF46db02a1222563acAd636",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 199,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x490217ea1e69042a56716698d803deabe8b9b148",
+      "symbol": "VCHFFRAXBP-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x6c3b5c66747645719726e232Ea005758f7817376",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 200,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xbe426b0f37c112dd20d5866769c8034171567b31",
+      "symbol": "crvUSDMIM-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xb3113f4dA77EA0Ec93Fb2aa0272c1aB73bf4F0B0",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 201,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x6663b6d50992ef4fc0380199397c87c2f5256075",
+      "symbol": "ALDETH-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x26cE86C54f779ea79be855b3B99201fe4dCf0c5b",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 202,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc73151dca19fff7a16ae421a9fb35455832d66d3",
+      "symbol": "DUSDFRAXBP3CRV-f",
+      "decimals": 18
+    },
+    "rewardPool": "0xA9717e6EA61075D4767708F28aB08D0Ae630bC7d",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 203,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x6a9014fb802dcc5efe3b97fd40aaa632585636d0",
+      "symbol": "cvxfxs-fxs-f",
+      "decimals": 18
+    },
+    "rewardPool": "0x19F3C877eA278e61fE1304770dbE5D78521792D2",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "symbol": "CRV",
       "decimals": 18
     }
   }

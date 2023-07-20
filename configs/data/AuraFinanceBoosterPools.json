@@ -7,6 +7,13 @@
       "address": "0xcfca23ca9ca720b6e98e3eb9b6aa0ffc4a5c08b9",
       "symbol": "50WETH-50AURA",
       "decimals": 18
+    },
+    "rewardPool": "0x712CC5BeD99aA06fC4D5FB50Aea3750fA5161D0f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -16,6 +23,13 @@
       "chain": "ethereum",
       "address": "0x3dd0843a028c86e0b760b1a76929d1c5ef93a2dd",
       "symbol": "B-auraBAL-STABLE",
+      "decimals": 18
+    },
+    "rewardPool": "0xACAdA51C320947E7ed1a0D0F6b939b0FF465E4c2",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -27,6 +41,13 @@
       "address": "0xa13a9247ea42d743238089903570127dda72fe44",
       "symbol": "bb-a-USD",
       "decimals": 18
+    },
+    "rewardPool": "0xFb6b1c1A1eA5618b3CfC20F81a11A97E930fA46B",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -36,6 +57,13 @@
       "chain": "ethereum",
       "address": "0x92762b42a06dcdddc5b7362cfb01e631c4d44b40",
       "symbol": "50COW-50GNO",
+      "decimals": 18
+    },
+    "rewardPool": "0x6256518aE9a97C408a03AAF1A244989Ce6B937F6",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -47,6 +75,13 @@
       "address": "0xde8c195aa41c11a0c4787372defbbddaa31306d2",
       "symbol": "50COW-50WETH",
       "decimals": 18
+    },
+    "rewardPool": "0x228054e9c056F024FC724F515A2a8764Ae175ED6",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -56,6 +91,13 @@
       "chain": "ethereum",
       "address": "0x3f7c10701b14197e2695dec6428a2ca4cf7fc3b8",
       "symbol": "50DFX-50WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x8C83370552e6418242594f997306584eABEdef79",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -67,6 +109,13 @@
       "address": "0xa7ff759dbef9f3efdd1d59beee44b966acafe214",
       "symbol": "USDC-PAL",
       "decimals": 18
+    },
+    "rewardPool": "0x569676f425c1231F8591bBb215dD53A3ee3C8d12",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -76,6 +125,13 @@
       "chain": "ethereum",
       "address": "0x27c9f71cc31464b906e0006d4fcbc8900f48f15f",
       "symbol": "80D2D-20USDC",
+      "decimals": 18
+    },
+    "rewardPool": "0x07BD9b4a3E364CD4b3bB49035972af70B2E8961f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -87,6 +143,13 @@
       "address": "0x5b3240b6be3e7487d61cd1afdfc7fe4fa1d81e64",
       "symbol": "DOLA BSP",
       "decimals": 18
+    },
+    "rewardPool": "0xa0E1D9619979f06Ff375251AfE90de2801B009d8",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -96,6 +159,13 @@
       "chain": "ethereum",
       "address": "0x25accb7943fd73dda5e23ba6329085a3c24bfb6a",
       "symbol": "50wstETH-50bb-a-USD",
+      "decimals": 18
+    },
+    "rewardPool": "0x8c9E4a04aDb0D543B33cAb644135BFcA523c40C8",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -107,6 +177,13 @@
       "address": "0x334c96d792e4b26b841d28f53235281cec1be1f2",
       "symbol": "50rETH-50bb-a-USD",
       "decimals": 18
+    },
+    "rewardPool": "0xB0A2fec539Aed6cF01FdfE38F318C1B20742Ca92",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -116,6 +193,13 @@
       "chain": "ethereum",
       "address": "0xe340ebfcaa544da8bb1ee9005f1a346d50ec422e",
       "symbol": "50BADGER-50rETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x4E867c6c76173539538B7a9335E89b00434Aec10",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -127,6 +211,13 @@
       "address": "0x4ce0bd7debf13434d3ae127430e9bd4291bfb61f",
       "symbol": "50STG-50bb-a-USD",
       "decimals": 18
+    },
+    "rewardPool": "0xaa8D332531B5B953938AA412730e7536178b4783",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -136,6 +227,13 @@
       "chain": "ethereum",
       "address": "0x8e85e97ed19c0fa13b2549309965291fbbc0048b",
       "symbol": "sfrxETH-stETH-rETH-BPT",
+      "decimals": 18
+    },
+    "rewardPool": "0x60CF485394E83d3879998281faAC6a1c3cf218c7",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -147,6 +245,13 @@
       "address": "0xae7bfd6fa54259fc477879712eebe34164d3a84f",
       "symbol": "80palStkAAVE-20AAVE",
       "decimals": 18
+    },
+    "rewardPool": "0xde6226Bda2f6C516486936D9b19Ec4b0d88BF025",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -156,6 +261,13 @@
       "chain": "ethereum",
       "address": "0x1e19cf2d73a72ef1332c882f20534b6519be0276",
       "symbol": "B-rETH-STABLE",
+      "decimals": 18
+    },
+    "rewardPool": "0x001B78CEC62DcFdc660E06A91Eb1bC966541d758",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -167,6 +279,13 @@
       "address": "0x99a14324cfd525a34bbc93ac7e348929909d57fd",
       "symbol": "50WETH-50FOLD",
       "decimals": 18
+    },
+    "rewardPool": "0x2c5b78610D69447Ded2A0B60a565c947f17A1668",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -176,6 +295,13 @@
       "chain": "ethereum",
       "address": "0xe8cc7e765647625b95f59c15848379d10b9ab4af",
       "symbol": "20WETH-80WNCG",
+      "decimals": 18
+    },
+    "rewardPool": "0x330F5e309b0F925e7594E8C9e2E24879e9146DE4",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -187,6 +313,13 @@
       "address": "0xb460daa847c45f1c4a41cb05bfb3b51c92e41b36",
       "symbol": "20WBTC-80BADGER",
       "decimals": 18
+    },
+    "rewardPool": "0x4EFc8DED860Bc472FA8d938dc3fD4946Bc1A0a18",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -196,6 +329,13 @@
       "chain": "ethereum",
       "address": "0x8eb6c82c3081bbbd45dcac5afa631aac53478b7c",
       "symbol": "40WBTC-40DIGG-20graviAURA",
+      "decimals": 18
+    },
+    "rewardPool": "0xD7c9c6922db15F47EF3131F2830d8E87f7637210",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -207,6 +347,13 @@
       "address": "0x6a5ead5433a50472642cd268e584dafa5a394490",
       "symbol": "50WSTETH-50LDO",
       "decimals": 18
+    },
+    "rewardPool": "0x6c3f6C327DE4aE51a2DfAaF3431b3c508ec8D3EB",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -216,6 +363,13 @@
       "chain": "ethereum",
       "address": "0x0fd5663d4893ae0d579d580584806aadd2dd0b8b",
       "symbol": "50rETH-50RPL",
+      "decimals": 18
+    },
+    "rewardPool": "0x21e2DF86658c8ad41a05453Fa5815A0d91273ee9",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -227,6 +381,13 @@
       "address": "0x441b8a1980f2f2e43a9397099d15cc2fe6d36250",
       "symbol": "50INV-50DOLA",
       "decimals": 18
+    },
+    "rewardPool": "0xA5D7A7690B72a89B7b720E43fC9cBda5419d0C71",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -236,6 +397,13 @@
       "chain": "ethereum",
       "address": "0x1b65fe4881800b91d4277ba738b567cbb200a60d",
       "symbol": "80TEMPLE-20DAI",
+      "decimals": 18
+    },
+    "rewardPool": "0x33E2AEd4d2Eb6F85495908260554fDbF4ff14583",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -247,6 +415,13 @@
       "address": "0xf3aeb3abba741f0eece8a1b1d2f11b85899951cb",
       "symbol": "MAI-USDC-SP",
       "decimals": 18
+    },
+    "rewardPool": "0x0C57a7CB838C215fad7ADe13062db956E91F1941",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -256,6 +431,13 @@
       "chain": "ethereum",
       "address": "0x48607651416a943bf5ac71c41be1420538e78f87",
       "symbol": "50Silo-50WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x201D5e6E9b760aE5b2Bc1874b5906DA42f125340",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -267,6 +449,13 @@
       "address": "0x06df3b2bbb68adc8b0e302443692037ed9f91b42",
       "symbol": "staBAL3",
       "decimals": 18
+    },
+    "rewardPool": "0xD73638829aEF73BA55f040858cD5E5B9Af66CF2B",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -276,6 +465,13 @@
       "chain": "ethereum",
       "address": "0x072f14b85add63488ddad88f855fda4a99d6ac9b",
       "symbol": "B-50SNX-50WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xc7c2AF26b1a8A350D2A53cc05604702ec27E228b",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -287,6 +483,13 @@
       "address": "0x0b09dea16768f0799065c475be02919503cb2a35",
       "symbol": "B-60WETH-40DAI",
       "decimals": 18
+    },
+    "rewardPool": "0xeD1527FD069465711490bCb3bAfa49AC3F3aF197",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -296,6 +499,13 @@
       "chain": "ethereum",
       "address": "0x32296969ef14eb0c6d29669c550d4a0449130230",
       "symbol": "B-stETH-STABLE",
+      "decimals": 18
+    },
+    "rewardPool": "0xe4683Fe8F53da14cA5DAc4251EaDFb3aa614d528",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -307,6 +517,13 @@
       "address": "0x96646936b91d6b9d7d0c47c496afbf3d6ec7b6f8",
       "symbol": "B-50USDC-50WETH",
       "decimals": 18
+    },
+    "rewardPool": "0x9a004491d82894e8D52698D5924bDE960530Da37",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -316,6 +533,13 @@
       "chain": "ethereum",
       "address": "0xa6f548df93de924d73be7d25dc02554c6bd66db5",
       "symbol": "B-50WBTC-50WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x7663EC8ee5073CdA94A8e1D72b017E22904fD44a",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -327,6 +551,13 @@
       "address": "0xbf96189eee9357a95c7719f4f5047f76bde804e5",
       "symbol": "B-80LDO-20WETH",
       "decimals": 18
+    },
+    "rewardPool": "0x208a62C257550b2eA1E57e4FA7148E2d2C4ba633",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -336,6 +567,13 @@
       "chain": "ethereum",
       "address": "0xf4c0dd9b82da36c07605df83c8a416f11724d88b",
       "symbol": "B-80GNO-20WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xD3780729035c5b302f76ced0E7F74cF0Fb7c739a",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -347,6 +585,13 @@
       "address": "0x186084ff790c65088ba694df11758fae4943ee9e",
       "symbol": "B-50WETH-50YFI",
       "decimals": 18
+    },
+    "rewardPool": "0x87AFD58d8dd4DEF356189E0930Ba8611B0546Bd9",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -356,6 +601,13 @@
       "chain": "ethereum",
       "address": "0x0578292cb20a443ba1cde459c985ce14ca2bdee5",
       "symbol": "33auraBAL-33graviAURA-33WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x2F74088d365a66bfbd0c2c55aF3b4977bf637FDD",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -367,6 +619,13 @@
       "address": "0x178e029173417b1f9c8bc16dcec6f697bc323746",
       "symbol": "FUD",
       "decimals": 18
+    },
+    "rewardPool": "0x4286c1239bC2705f4A1Fd90edb3582F7aF672356",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -376,6 +635,13 @@
       "chain": "ethereum",
       "address": "0x4edcb2b46377530bc18bb4d2c7fe46a992c73e10",
       "symbol": "cbETH-wstETH-BPT",
+      "decimals": 18
+    },
+    "rewardPool": "0x7D67BeB5cF289B015FCA7B3fc408860731d826E1",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -387,6 +653,13 @@
       "address": "0x173063a30e095313eee39411f07e95a8a806014e",
       "symbol": "50TEMPLE-50bb-a-USD",
       "decimals": 18
+    },
+    "rewardPool": "0x07A38A3aEa0b25364b1f9c66C8ddFA1FbD1c8fE0",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -396,6 +669,13 @@
       "chain": "ethereum",
       "address": "0x798b112420ad6391a4129ac25ef59663a44c88bb",
       "symbol": "wstETH-ACX",
+      "decimals": 18
+    },
+    "rewardPool": "0x9AccD370C03a3cc4Bf717a81aD5A46e6c88FA109",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -407,6 +687,13 @@
       "address": "0x5512a4bbe7b3051f92324bacf25c02b9000c4a50",
       "symbol": "33LUSD-33LQTY-33WETH",
       "decimals": 18
+    },
+    "rewardPool": "0x32380a7b485F75cce3b3Dced6a273F11846406FD",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -416,6 +703,13 @@
       "chain": "ethereum",
       "address": "0x8167a1117691f39e05e9131cfa88f0e3a620e967",
       "symbol": "20WETH-80T",
+      "decimals": 18
+    },
+    "rewardPool": "0x6F6E1ED8E6807C000248C45693C0abA50cdf0F66",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -427,6 +721,13 @@
       "address": "0xbaeec99c90e3420ec6c1e7a769d2a856d2898e4d",
       "symbol": "B-50VITA-50WETH",
       "decimals": 18
+    },
+    "rewardPool": "0x2A577Dc2F09B6baCc075C44912CFeB8065ded3B6",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -436,6 +737,13 @@
       "chain": "ethereum",
       "address": "0x350196326aeaa9b98f1903fb5e8fc2686f85318c",
       "symbol": "VBPT",
+      "decimals": 18
+    },
+    "rewardPool": "0xcFF0Ce58A624F116faF936C4F8b84affEffE9399",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -447,6 +755,13 @@
       "address": "0xc9c5ff67bb2fae526ae2467c359609d6bcb4c532",
       "symbol": "qETH-BPT",
       "decimals": 18
+    },
+    "rewardPool": "0xb5ACb8C828C7a8Be4eD3BaB6C34d4203c2c17b8f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -456,6 +771,13 @@
       "chain": "ethereum",
       "address": "0xff4ce5aaab5a627bf82f4a571ab1ce94aa365ea6",
       "symbol": "DOLA-USDC BSP",
+      "decimals": 18
+    },
+    "rewardPool": "0x22915f309EC0182c85cD8331C23bD187fd761360",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -467,6 +789,13 @@
       "address": "0xd590931466cdd6d488a25da1e89dd0539723800c",
       "symbol": "50RBN-50USDC",
       "decimals": 18
+    },
+    "rewardPool": "0xcBb7fF4e7c32b86994D1991e6Aeb198184c56554",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -476,6 +805,13 @@
       "chain": "ethereum",
       "address": "0x9c6d47ff73e0f5e51be5fd53236e3f595c5793f2",
       "symbol": "B-cbETH-wstETH-Stable",
+      "decimals": 18
+    },
+    "rewardPool": "0xe35ae62Ff773D518172d4B0b1af293704790B670",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -487,6 +823,13 @@
       "address": "0x8a34b5ad76f528bfec06c80d85ef3b53da7fc300",
       "symbol": "B-ankrETH-WETH-Stable",
       "decimals": 18
+    },
+    "rewardPool": "0x9c1d839FF75aC60e7C507F78607F006C021B9BAf",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -496,6 +839,13 @@
       "chain": "ethereum",
       "address": "0x4fd4687ec38220f805b6363c3c1e52d0df3b5023",
       "symbol": "50wstETH-50bb-euler-USD",
+      "decimals": 18
+    },
+    "rewardPool": "0x348BD45777d45af1935C761a778efa2f81aBCeD7",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -507,6 +857,13 @@
       "address": "0x5aee1e99fe86960377de9f88689616916d5dcabe",
       "symbol": "wstETH-rETH-sfrxETH-BPT",
       "decimals": 18
+    },
+    "rewardPool": "0xd26948E7a0223700e3C3cdEA21cA2471abCb8d47",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -516,6 +873,13 @@
       "chain": "ethereum",
       "address": "0x959216bb492b2efa72b15b7aacea5b5c984c3cca",
       "symbol": "50wstETH-50stk-APE",
+      "decimals": 18
+    },
+    "rewardPool": "0xDBfdd8440a57b4a27a4375d5788b6e66c664e7B5",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -527,6 +891,13 @@
       "address": "0x50cf90b954958480b8df7958a9e965752f627124",
       "symbol": "bb-euler-USD-BPT",
       "decimals": 18
+    },
+    "rewardPool": "0x9542ECd46f3E661E4a53ee63C0aB764196dF1f8A",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -536,6 +907,13 @@
       "chain": "ethereum",
       "address": "0x133d241f225750d2c92948e464a5a80111920331",
       "symbol": "DOLA-bb-e-USD-BPT",
+      "decimals": 18
+    },
+    "rewardPool": "0xFdbd847B7593Ef0034C58258aD5a18b34BA6cB29",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -547,6 +925,13 @@
       "address": "0xb5e3de837f869b0248825e0175da73d4e8c3db6b",
       "symbol": "50rETH-50bb-euler-USD",
       "decimals": 18
+    },
+    "rewardPool": "0x8D78215a1F9717C8f7Ec251c7875Bb89Bd79Ba43",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -556,6 +941,13 @@
       "chain": "ethereum",
       "address": "0xd1ec5e215e8148d76f4460e4097fd3d5ae0a3558",
       "symbol": "50OHM-50WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x978653C02f2fBBDfd67CbC7f45c42262f213e0b5",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -567,6 +959,13 @@
       "address": "0x76fcf0e8c7ff37a47a799fa2cd4c13cde0d981c9",
       "symbol": "50OHM-50DAI",
       "decimals": 18
+    },
+    "rewardPool": "0xB9D6ED734Ccbdd0b9CadFED712Cf8AC6D0917EcD",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -576,6 +975,13 @@
       "chain": "ethereum",
       "address": "0xdb0cbcf1b8282dedc90e8c2cefe11041d6d1e9f0",
       "symbol": "50SD-50USDC",
+      "decimals": 18
+    },
+    "rewardPool": "0x572aaA3E8dEd899c03781103eB94AfEb7ff151f3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -587,6 +993,13 @@
       "address": "0xe4010ef5e37dc23154680f23c4a0d48bfca91687",
       "symbol": "80SD-20WETH",
       "decimals": 18
+    },
+    "rewardPool": "0x890bdF60C6566Df09Ce37132DEb652050E5685bD",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -596,6 +1009,13 @@
       "chain": "ethereum",
       "address": "0xa718042e5622099e5f0ace4e7122058ab39e1bbe",
       "symbol": "50TEMPLE-50bb-euler-USD",
+      "decimals": 18
+    },
+    "rewardPool": "0x2Cfa7BbC6311A3FC6aDcEE5Ad9AC19B84187A2e0",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -607,6 +1027,13 @@
       "address": "0x36be1e97ea98ab43b4debf92742517266f5731a3",
       "symbol": "50wstETH-50ACX",
       "decimals": 18
+    },
+    "rewardPool": "0x55BFBb2a8De4D7001C5542d19C702433252C904b",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -616,6 +1043,13 @@
       "chain": "ethereum",
       "address": "0xfd1cf6fd41f229ca86ada0584c63c49c3d66bbc9",
       "symbol": "50PENDLE-50WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x08129a472dfb92A1596Bbe31f27c53914a990563",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -627,6 +1061,13 @@
       "address": "0xa3c500969accb3d8df08cba313c120818fe0ed9d",
       "symbol": "50SYN-50WETH",
       "decimals": 18
+    },
+    "rewardPool": "0x0796b22c755787cE662134d40CA29F90caC2D07d",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -636,6 +1077,13 @@
       "chain": "ethereum",
       "address": "0xb08885e6026bab4333a80024ec25a1a3e1ff2b8a",
       "symbol": "B-staFiETH-WETH-Stable",
+      "decimals": 18
+    },
+    "rewardPool": "0xB3ca8D6e938354303F60ec8827429b207e7B60A6",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -647,6 +1095,13 @@
       "address": "0x384f67aa430376efc4f8987eabf7f3f84eb9ea5d",
       "symbol": "DOLA-CUSD BSP",
       "decimals": 18
+    },
+    "rewardPool": "0x0995a508dF9606f1C6D512a2d6BA875Cf3cE94C3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -656,6 +1111,13 @@
       "chain": "ethereum",
       "address": "0x831261f44931b7da8ba0dcc547223c60bb75b47f",
       "symbol": "B-wUSDR-STABLE",
+      "decimals": 18
+    },
+    "rewardPool": "0x2a596E721A9F1824F36c484e71f5bE80675Cca2b",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -667,6 +1129,13 @@
       "address": "0x9f9d900462492d4c21e9523ca95a7cd86142f298",
       "symbol": "50rETH-50RPL",
       "decimals": 18
+    },
+    "rewardPool": "0x4B9f8F3cA7443f1ebcd959D9Bf169a4F03f12eaF",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -676,6 +1145,13 @@
       "chain": "ethereum",
       "address": "0x1ee442b5326009bb18f2f472d3e0061513d1a0ff",
       "symbol": "50rETH-50BADGER",
+      "decimals": 18
+    },
+    "rewardPool": "0xAAd4eE162Dbc9C25cCa26bA4340B36E3eF7C1A80",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -687,6 +1163,13 @@
       "address": "0x5f1f4e50ba51d723f12385a8a9606afc3a0555f5",
       "symbol": "50wstETH-50LDO",
       "decimals": 18
+    },
+    "rewardPool": "0x5209dB28b3cF22a944401c83370Af7A703ffFb08",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -696,6 +1179,13 @@
       "chain": "ethereum",
       "address": "0x15c1cdacd3da1e1c1304200b1beb080d50bbbc0f",
       "symbol": "50TRYB-50USDC",
+      "decimals": 18
+    },
+    "rewardPool": "0x20Fadb035ba55C54dE6BF105d70692521BE6b812",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -707,6 +1197,13 @@
       "address": "0x99c88ad7dc566616548adde8ed3effa730eb6c34",
       "symbol": "bb-g-USD",
       "decimals": 18
+    },
+    "rewardPool": "0x305205a0ff392337E0ec6F240eA5b9d9D3696DEB",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -716,6 +1213,13 @@
       "chain": "ethereum",
       "address": "0x483006684f422a9448023b2382615c57c5ecf18f",
       "symbol": "TUSD-bb-e-USD",
+      "decimals": 18
+    },
+    "rewardPool": "0x91996FeFf9787D14C7c375b064a4399EA2bB1b71",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   },
@@ -727,6 +1231,13 @@
       "address": "0x60683b05e9a39e3509d8fdb9c959f23170f8a0fa",
       "symbol": "bb-i-USD",
       "decimals": 18
+    },
+    "rewardPool": "0x4d585a29dF0a8E18c26f662C6586ded6703062a8",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
     }
   },
   {
@@ -736,6 +1247,999 @@
       "chain": "ethereum",
       "address": "0xd4f79ca0ac83192693bce4699d0c10c66aa6cf0f",
       "symbol": "OHM-wstETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x636024F9Ddef77e625161b2cCF3A2adfbfAd3615",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 74,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xf16aee6a71af1a9bc8f56975a4c2705ca7a782bc",
+      "symbol": "20WETH-80ALCX",
+      "decimals": 18
+    },
+    "rewardPool": "0x8B227E3D50117E80a02cd0c67Cd6F89A8b7B46d7",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 75,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x779d01f939d78a918a3de18cc236ee89221dfd4e",
+      "symbol": "bb-s-USD",
+      "decimals": 18
+    },
+    "rewardPool": "0x7849EF1A1F7dFbeD1eC18102837AC1E00A5a69D9",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 76,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x79c58f70905f734641735bc61e45c19dd9ad60bc",
+      "symbol": "USDC-DAI-USDT",
+      "decimals": 18
+    },
+    "rewardPool": "0x2d9d3e3D0655766Aa801Ae0f6dC925db2DF291A1",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 77,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xcaa052584b462198a5a9356c28bce0634d65f65c",
+      "symbol": "bb-ma2-USD",
+      "decimals": 18
+    },
+    "rewardPool": "0x81455dBF8aee385102d1e6BE4476671f34b123E7",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 78,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x9cc64ee4cb672bc04c54b00a37e1ed75b2cc19dd",
+      "symbol": "80Silo-20WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x2BDa0C27ac4A322c26727586700D0D42Be3db10E",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 79,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8bd4a1e74a27182d23b98c10fd21d4fbb0ed4ba0",
+      "symbol": "50TEMPLE-50DAI",
+      "decimals": 18
+    },
+    "rewardPool": "0x13544617b10E1923363c89D902b749bea331AC4E",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 80,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xd278166dabaf26707362f7cfdd204b277fd2a460",
+      "symbol": "50USH-50WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x162623B5943Ce426AC7935bf37780EEfaF1682fD",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 81,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xfebb0bbf162e64fb9d0dfe186e517d84c395f016",
+      "symbol": "bb-a-USD",
+      "decimals": 18
+    },
+    "rewardPool": "0xD48451A61d5190a1Ba7C9D17056490cB5d50999d",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 82,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x68e3266c9c8bbd44ad9dca5afbfe629022aee9fe",
+      "symbol": "B-wjAura-wETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x0583A75B3D91020E9Db90301Ded0A2676e55d1c0",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 83,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x639883476960a23b38579acfd7d71561a0f408cf",
+      "symbol": "50STG-50bbaUSD",
+      "decimals": 18
+    },
+    "rewardPool": "0x1A0AD04CeC2121604463EaE08e5e757F877C3577",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 84,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x08775ccb6674d6bdceb0797c364c2653ed84f384",
+      "symbol": "50WETH-50-3pool",
+      "decimals": 18
+    },
+    "rewardPool": "0x28dA1695c117F6876D79120A418cd3347A57ADb2",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 85,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xe0fcbf4d98f0ad982db260f86cf28b49845403c5",
+      "symbol": "wstETH-bb-a-WETH-BPT",
+      "decimals": 18
+    },
+    "rewardPool": "0x0b543B2b99Ed4ecc6B86A3DFc8F14152BCE6258C",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 86,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x02d928e68d8f10c0358566152677db51e1e2dc8c",
+      "symbol": "swETH-bb-a-WETH-BPT",
+      "decimals": 18
+    },
+    "rewardPool": "0xf814116a4d6c043a9fD63cCb0dDC15161A7564EC",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 87,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xd689abc77b82803f22c49de5c8a0049cc74d11fd",
+      "symbol": "80USH-20unshETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x6De884d95E50F38e8A817cE63B341199f49736B5",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 88,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xb5e2dcfbeb62abea603a0c585ca8f880eb709a9c",
+      "symbol": "50COIL-50USDC-gauge",
+      "decimals": 18
+    },
+    "rewardPool": "0xEccD26033C371D3B64380987A3916AE52F7E80f3",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 89,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x04248aabca09e9a1a3d5129a7ba05b7f17de7684",
+      "symbol": "qETH-bb-a-WETH-BPT",
+      "decimals": 18
+    },
+    "rewardPool": "0x39Efd95cdfE8863755ff64690B3E011370Dc03FA",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 90,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x87a867f5d240a782d43d90b6b06dea470f3f8f22",
+      "symbol": "B-50COMP-50wstETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xA2e9633e5211a09a580d1B0410D58Ae339196421",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 91,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3e953c6bf97284f736c5f95b3c3be8f4e48075f4",
+      "symbol": "wstETH/rETH/S",
+      "decimals": 18
+    },
+    "rewardPool": "0x56166Cbb458fce514aE04dEcBD4aF5E4068Ada91",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 92,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x0018c32d85d8aebea2efbe0b0f4a4eb9e4f1c8c9",
+      "symbol": "USDC/WETH/L",
+      "decimals": 18
+    },
+    "rewardPool": "0xC8415192Ebd4ecaFa1e28e7E05e622eAe376E17f",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 93,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x7e9afd25f5ec0eb24d7d4b089ae7ecb9651c8b1f",
+      "symbol": "B-baoUSD-LUSD-BPT",
+      "decimals": 18
+    },
+    "rewardPool": "0x158e9aeE324B97b32DA71178D4761C6B18baE02a",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 94,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x2e848426aec6dbf2260535a5bea048ed94d9ff3d",
+      "symbol": "wbETH-wstETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xeE66a8958EBFEEfA209769530b5E05A38762509a",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 95,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x42fbd9f666aacc0026ca1b88c94259519e03dd67",
+      "symbol": "50COIL-50USDC",
+      "decimals": 18
+    },
+    "rewardPool": "0x6f6801b49B5D8CA2Ea5FEAD9096F347B9355a330",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 96,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x793f2d5cd52dfafe7a1a1b0b3988940ba2d6a63d",
+      "symbol": "B-vETH-STABLE",
+      "decimals": 18
+    },
+    "rewardPool": "0x61672a679E0065f35892e2B428736Be8C5c3a159",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 97,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x20a61b948e33879ce7f23e535cc7baa3bc66c5a9",
+      "symbol": "R-DAI-BLP",
+      "decimals": 18
+    },
+    "rewardPool": "0xdC38CCAc2008547275878F5D89B642DA27910739",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 98,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x380aabe019ed2a9c2d632b51eddd30fd804d0fad",
+      "symbol": "50R-50wstETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xb83aA654fDAF392F0b19f0ca1537786546febaD0",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 99,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xa7ff759dbef9f3efdd1d59beee44b966acafe214",
+      "symbol": "USDC-PAL",
+      "decimals": 18
+    },
+    "rewardPool": "0x401B01d77890a5fE2D5c1c6e76777bD452AAb511",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 100,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xcfca23ca9ca720b6e98e3eb9b6aa0ffc4a5c08b9",
+      "symbol": "50WETH-50AURA",
+      "decimals": 18
+    },
+    "rewardPool": "0x1204f5060bE8b716F5A62b4Df4cE32acD01a69f5",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 101,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3dd0843a028c86e0b760b1a76929d1c5ef93a2dd",
+      "symbol": "B-auraBAL-STABLE",
+      "decimals": 18
+    },
+    "rewardPool": "0x89D3D732da8bf0f88659Cf3738E5E44e553f9ED7",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 102,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xeb567dde03f3da7fe185bdacd5ab495ab220769d",
+      "symbol": "ankrETH-bb-a-WETH-BPT",
+      "decimals": 18
+    },
+    "rewardPool": "0x3Df995384B4291e3dD750860f1668c63F4827c3D",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 103,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xdf2c03c12442c7a0895455a48569b889079ca52a",
+      "symbol": "80ARCH-20WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x6aE80805247fCbA050d73A034A628Ce1b37fB6Ce",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 104,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x92762b42a06dcdddc5b7362cfb01e631c4d44b40",
+      "symbol": "50COW-50GNO",
+      "decimals": 18
+    },
+    "rewardPool": "0x82FeB430d9D14eE5E635C41807e03fD8F5FfFDeC",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 105,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xde8c195aa41c11a0c4787372defbbddaa31306d2",
+      "symbol": "50COW-50WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xA6e54eA1C67396Bde9e92cA462197bE59Af3E875",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 106,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x3f7c10701b14197e2695dec6428a2ca4cf7fc3b8",
+      "symbol": "50DFX-50WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xD8A39b905F6823Aa46cA293A05Cc5240391a62Dc",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 107,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x27c9f71cc31464b906e0006d4fcbc8900f48f15f",
+      "symbol": "80D2D-20USDC",
+      "decimals": 18
+    },
+    "rewardPool": "0xe39570EF26fB9A562bf26F8c708b7433F65050af",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 108,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xae7bfd6fa54259fc477879712eebe34164d3a84f",
+      "symbol": "80palStkAAVE-20AAVE",
+      "decimals": 18
+    },
+    "rewardPool": "0xBf94480CF2c60a0c97993A5f5cFB49648b995d41",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 109,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x1e19cf2d73a72ef1332c882f20534b6519be0276",
+      "symbol": "B-rETH-STABLE",
+      "decimals": 18
+    },
+    "rewardPool": "0xDd1fE5AD401D4777cE89959b7fa587e569Bf125D",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 110,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xe8cc7e765647625b95f59c15848379d10b9ab4af",
+      "symbol": "20WETH-80WNCG",
+      "decimals": 18
+    },
+    "rewardPool": "0x1E356C39CAAC89Da64A7f50b47564ca52C8cACA9",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 111,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xb460daa847c45f1c4a41cb05bfb3b51c92e41b36",
+      "symbol": "20WBTC-80BADGER",
+      "decimals": 18
+    },
+    "rewardPool": "0xddf14A569dD91AF895E3B05d6dBCBB9db1c3834C",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 112,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8eb6c82c3081bbbd45dcac5afa631aac53478b7c",
+      "symbol": "40WBTC-40DIGG-20graviAURA",
+      "decimals": 18
+    },
+    "rewardPool": "0x80E355454B608D43402147834D05F424b6F706B8",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 113,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x441b8a1980f2f2e43a9397099d15cc2fe6d36250",
+      "symbol": "50INV-50DOLA",
+      "decimals": 18
+    },
+    "rewardPool": "0x6992299d078858C2f64D046A172AC963b89038f7",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 114,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x48607651416a943bf5ac71c41be1420538e78f87",
+      "symbol": "50Silo-50WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x540D5b77d09cF1A7b8caB88E70b32176Ef52c1CF",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 115,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x32296969ef14eb0c6d29669c550d4a0449130230",
+      "symbol": "B-stETH-STABLE",
+      "decimals": 18
+    },
+    "rewardPool": "0x59D66C58E83A26d6a0E35114323f65c3945c89c1",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 116,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xf4c0dd9b82da36c07605df83c8a416f11724d88b",
+      "symbol": "B-80GNO-20WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x971fAF6BE8C20f53fe3acF065fe6E14FBA0b8a9a",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 117,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x0578292cb20a443ba1cde459c985ce14ca2bdee5",
+      "symbol": "33auraBAL-33graviAURA-33WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x39e91Def6c54E3AEec73eBfFd6C701D881d36c74",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 118,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x5512a4bbe7b3051f92324bacf25c02b9000c4a50",
+      "symbol": "33LUSD-33LQTY-33WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xdD1EaF26e5117d4889856f7DD37F05eb5De5e427",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 119,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x8167a1117691f39e05e9131cfa88f0e3a620e967",
+      "symbol": "20WETH-80T",
+      "decimals": 18
+    },
+    "rewardPool": "0x77E20717a5a77893D1a94BbebC5f990b957062A7",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 120,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xbaeec99c90e3420ec6c1e7a769d2a856d2898e4d",
+      "symbol": "B-50VITA-50WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xFd3AAD58D79C106631bE9f6E1A652d4C5aABdDd2",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 121,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x350196326aeaa9b98f1903fb5e8fc2686f85318c",
+      "symbol": "VBPT",
+      "decimals": 18
+    },
+    "rewardPool": "0xf11ec932E168DE2D57ae0C05f9cf8978B0a2A48a",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 122,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xff4ce5aaab5a627bf82f4a571ab1ce94aa365ea6",
+      "symbol": "DOLA-USDC BSP",
+      "decimals": 18
+    },
+    "rewardPool": "0xb139946D2F0E71b38e2c75d03D87C5E16339d2CD",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 123,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xd590931466cdd6d488a25da1e89dd0539723800c",
+      "symbol": "50RBN-50USDC",
+      "decimals": 18
+    },
+    "rewardPool": "0x42E7b80D07b6C39F8AB7f183C2e88bAe9BB09814",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 124,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x9c6d47ff73e0f5e51be5fd53236e3f595c5793f2",
+      "symbol": "B-cbETH-wstETH-Stable",
+      "decimals": 18
+    },
+    "rewardPool": "0x062Df17509fA21bdB65a4190FAD1589C02c169e9",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 125,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xdfe6e7e18f6cc65fa13c8d8966013d4fda74b6ba",
+      "symbol": "ankrETH/wstETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xfCCb9288bf2a583b918E4eA810d8a75563404B21",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 126,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x9001cbbd96f54a658ff4e6e65ab564ded76a5431",
+      "symbol": "cbETH-bb-a-WETH-BPT",
+      "decimals": 18
+    },
+    "rewardPool": "0x800310378151a8c030bA3F2fA48bF00c1738c0c1",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 127,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x18fdf15ff782e44c1f9b6c5846ff6b0f0004f6a2",
+      "symbol": "50OHM-50LUSD",
+      "decimals": 18
+    },
+    "rewardPool": "0x3b395A27F77C3450393047fF564E893243aC29fF",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 128,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x156c02f3f7fef64a3a9d80ccf7085f23cce91d76",
+      "symbol": "vETH/WETH BPT",
+      "decimals": 18
+    },
+    "rewardPool": "0xF75D485E9cd0063947e255a214e60bc247fF40f5",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 129,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xbfce47224b4a938865e3e2727dc34e0faa5b1d82",
+      "symbol": "uniETH-WETH",
+      "decimals": 18
+    },
+    "rewardPool": "0xeEb5a165dcf3311Ccc7BD321eF2725Ee7332Ee7d",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 130,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0x9d7f992c900fbea0ec314bdd71b7cc1becf76a33",
+      "symbol": "50OHM/50bbaWETH",
+      "decimals": 18
+    },
+    "rewardPool": "0x426604841d66c7B1b3B57ed2c8E10B4261cBb58e",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "poolId": 131,
+    "lpToken": {
+      "chain": "ethereum",
+      "address": "0xc5dc1316ab670a2eed5716d7f19ced321191f382",
+      "symbol": "B-wstETH/bb-ma3-weth",
+      "decimals": 18
+    },
+    "rewardPool": "0xa9532eDc8a0692C1787cF8F560c4Dd807079dEEe",
+    "rewardToken": {
+      "chain": "ethereum",
+      "address": "0xba100000625a3754423978a60c9317c58a424e3d",
+      "symbol": "BAL",
       "decimals": 18
     }
   }

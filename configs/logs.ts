@@ -1,7 +1,9 @@
 import AbracadabraCauldrons from './data/AbracadabraCauldrons.json';
 import AgilityPools from './data/AgilityStakingPools.json';
 import ArrakisVaults from './data/ArrakisVaults.json';
+import AurafinancePools from './data/AuraFinanceBoosterPools.json';
 import BeefyVaults from './data/BeefyVaults.json';
+import ConvexPools from './data/ConvexBoosterPools.json';
 import CurvePools from './data/CurvePools.json';
 import ExactlyMarkets from './data/ExactlyMarkets.json';
 import FraxLendPairs from './data/FraxlendPairs.json';
@@ -25,10 +27,18 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...CurvePools.map((item) => item.address),
     ...MaverickPools.map((item) => item.address),
 
-    // we split these addresses into another sync process
+    // convex finance reward pools
+    ...ConvexPools.map((item) => item.rewardPool),
+
+    // aura finance reward pools
+    ...AurafinancePools.map((item) => item.rewardPool),
+
+    // we sync only top tvl and volume pools
+    // ignore malicious pools
     ...WhitelistUniPools,
     ...WhitelistSushiPools,
     ...WhitelistPancakePools,
+
     '0x000000000000ad05ccc4f10045630fb830b95127', // Blur Marketplace
     '0x00000000006c3852cbef3e08e8df289169ede581', // Seaport 1.1
     '0x00000000000006c7676171937c444f6bde3d6282', // Seaport 1.2
