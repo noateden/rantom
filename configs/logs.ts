@@ -193,5 +193,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x881d40237659c251811cec9c364ef91dc08d300c', // Metamask swap router
     '0x2bca0300c2aa65de6f19c2d241b54a445c9990e2', // GravitaProtocol.com borrow operations
     '0x3caca7b48d0573d793d3b0279b5f0029180e83b6', // Gelato network
+    '0xcba828153d3a85b30b5b912e1f2dacac5816ae9d', // Instadapp account implementation
+    '0xce7a977cac4a481bc84ac06b2da0df614e621cf3', // Defisaver logger
+    '0x1d6dedb49af91a11b5c5f34954fd3e8cc4f03a86', // Defisaver recipe executor
   ],
 };

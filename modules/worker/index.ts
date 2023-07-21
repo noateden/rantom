@@ -15,6 +15,7 @@ import { ConicContracts } from '../../configs/contracts/conic';
 import { ConvexContracts } from '../../configs/contracts/convex';
 import { CrvusdContracts } from '../../configs/contracts/crvusd';
 import { CurveContracts } from '../../configs/contracts/curve';
+import { DefisaverContracts } from '../../configs/contracts/defisaver';
 import { DodoContracts } from '../../configs/contracts/dodo';
 import { EnsContracts } from '../../configs/contracts/ens';
 import { Eth2Contracts } from '../../configs/contracts/eth2';
@@ -24,6 +25,7 @@ import { FraxlendContracts } from '../../configs/contracts/fraxlend';
 import { GearboxContracts } from '../../configs/contracts/gearbox';
 import { GelatoContracts } from '../../configs/contracts/gelato';
 import { GravitaContracts } from '../../configs/contracts/gravita';
+import { InstadappContracts } from '../../configs/contracts/instadapp';
 import { KyberswapClassicContracts } from '../../configs/contracts/kyperswap';
 import { LidoContracts } from '../../configs/contracts/lido';
 import { LiquityContracts } from '../../configs/contracts/liquity';
@@ -97,5 +99,7 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     maverick: new ContractWorker(providers, MaverickContracts),
     gravita: new ContractWorker(providers, GravitaContracts),
     gelato: new ContractWorker(providers, GelatoContracts),
+    defisaver: new ContractWorker(providers, DefisaverContracts),
+    instadapp: new ContractWorker(providers, InstadappContracts),
   };
 }
