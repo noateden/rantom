@@ -1262,5 +1262,69 @@
       "symbol": "USDC",
       "decimals": 6
     }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x139cbcad936cc0316eeccb467e2e80b6c5cef1ec",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+      "symbol": "LINK",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x735438229acc3edfca88c792d2f3ae7dac44dc73",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+      "symbol": "wstETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x2e9b3deca040abe4cb11b8ba4135da6f379a44b0",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f",
+      "symbol": "GHO",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",
+      "symbol": "LUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x1a736963458081428b37972e1c145d27194f5eb1",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0",
+      "symbol": "LUSD",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
+      "symbol": "crvUSD",
+      "decimals": 18
+    }
   }
 ]
