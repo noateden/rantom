@@ -510,9 +510,13 @@ export const AurafinanceConfigs: ProtocolConfig = {
       '0xa57b8d98dae62b26ec3bcc4a365338157060b234', // Booster
       '0x00a7ba8ae7bca0b10a32ea1f8e2a1da980c6cad2', // auraBAL staking
       '0x5e5ea2048475854a5702f5b8468a51ba1296efcc', // auraBAL staking 2
+      '0x3fa73f1e5d8a792c80f426fc8f84fbf7ce9bbcac', // aura locker
     ],
   },
   staticData: {
+    rewardToken: {
+      ethereum: Tokens.ethereum.AURA,
+    },
     pools: AuraFinanceBoosterPoolsData,
   },
 };
@@ -805,9 +809,14 @@ export const ConvexConfigs: ProtocolConfig = {
       '0xf403c135812408bfbe8713b5a23a04b3d48aae31', // Booster
       '0xcf50b810e57ac33b91dcf525c6ddd9881b139332', // Stake CVX earn CRV
       '0x3fe65692bfcd0e6cf84cb1e7d24108e434a7587e', // Stake cvxCRV earn CRV
+      '0xd18140b4b819b895a3dba5442f959fa44994af50', // CVX locker old
+      '0x72a19342e8f1838460ebfccef09f6585e32db86e', // CVX locker v2
     ],
   },
   staticData: {
+    rewardToken: {
+      ethereum: Tokens.ethereum.CVX,
+    },
     pools: ConvexBoosterPoolsData,
   },
 };

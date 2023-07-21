@@ -20,6 +20,11 @@ const Signatures: { [key: string]: string } = {
   Staked: '0x9e71bc8eea02a63969f509818f2dafb9254532904319f9dbda79b67bd34a5f3d', // CVX stake
   Withdrawn: '0x7084f5476618d8e60b11ef0d7d3f06914655adb8793e28ff7f018d4c76d505d5', // CVX unstake
   RewardPaid: '0xe2403640ba68fed3a2f88b7557551d1993f84b99bb10ff833f0cf8db0c5e0486', // CVX RewardPaid
+
+  CvxLockerStaked: '0xb4caaf29adda3eefee3ad552a8e85058589bf834c7466cae4ee58787f70589ed',
+  CvxLockerStakedV2: '0x9cfd25589d1eb8ad71e342a86a8524e83522e3936c0803048c08f6d9ad974f40',
+  CvxLockerStakedAura: '0x1449c6dd7851abc30abf37f57715f492010519147cc2652fbc38202c18a6ee90',
+  CvxLockerUnstaked: '0x2fd83d5e9f5d240bed47a97a24cf354e4047e25edc2da27b01fd95e5e8a0c9a5',
 };
 
 export class ConvexAdapter extends Adapter {
@@ -32,6 +37,10 @@ export class ConvexAdapter extends Adapter {
       [Signatures.Staked]: EventSignatureMapping[Signatures.Staked],
       [Signatures.Withdrawn]: EventSignatureMapping[Signatures.Withdrawn],
       [Signatures.RewardPaid]: EventSignatureMapping[Signatures.RewardPaid],
+      [Signatures.CvxLockerStaked]: EventSignatureMapping[Signatures.CvxLockerStaked],
+      [Signatures.CvxLockerStakedV2]: EventSignatureMapping[Signatures.CvxLockerStakedV2],
+      [Signatures.CvxLockerStakedAura]: EventSignatureMapping[Signatures.CvxLockerStakedAura],
+      [Signatures.CvxLockerUnstaked]: EventSignatureMapping[Signatures.CvxLockerUnstaked],
     });
   }
 
@@ -147,6 +156,27 @@ export class ConvexAdapter extends Adapter {
             readableString: `${user} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
           };
         }
+      } else if (
+        signature === Signatures.CvxLockerStaked ||
+        signature === Signatures.CvxLockerStakedV2 ||
+        signature === Signatures.CvxLockerStakedAura ||
+        signature === Signatures.CvxLockerUnstaked
+      ) {
+        const user = normalizeAddress(event._user);
+        const token: Token = this.config.staticData.rewardToken[chain];
+        const action: KnownAction = signature === Signatures.CvxLockerUnstaked ? 'unlock' : 'lock';
+        const amount = event._lockedAmount
+          ? new BigNumber(event._lockedAmount.toString()).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10)
+          : new BigNumber(event._amount.toString()).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
+
+        return {
+          protocol: this.config.protocol,
+          action: action,
+          addresses: [user],
+          tokens: [token],
+          tokenAmounts: [amount],
+          readableString: `${user} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+        };
       }
     } else if (signature === Signatures.RewardPaid) {
       for (const pool of this.config.staticData.pools) {

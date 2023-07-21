@@ -497,4 +497,13 @@ export const Signatures: { [key: string]: string } = {
   // gelato network
   'LogExecSuccess(address,address,address,uint256,uint256,uint256)':
     '0x66c4011e59db1d425e14edc51069e4f5ec3d042d2a254511a8dbc6e3996c9140',
+
+  // convex locker
+  'Staked(address,uint256,uint256,uint256)': '0xb4caaf29adda3eefee3ad552a8e85058589bf834c7466cae4ee58787f70589ed',
+  'Staked(address,uint256,uint256,uint256,uint256)':
+    '0x9cfd25589d1eb8ad71e342a86a8524e83522e3936c0803048c08f6d9ad974f40',
+  'Withdrawn(address,uint256,bool)': '0x2fd83d5e9f5d240bed47a97a24cf354e4047e25edc2da27b01fd95e5e8a0c9a5',
+
+  // aurafinance locker
+  'Staked(address,uint256,uint256)': '0x1449c6dd7851abc30abf37f57715f492010519147cc2652fbc38202c18a6ee90',
 };
