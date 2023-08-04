@@ -33,6 +33,10 @@ const envConfig: EnvConfig = {
       name: 'ethereum',
       nodeRpc: String(process.env.RANTOM_ETHEREUM_NODE),
     },
+    arbitrum: {
+      name: 'arbitrum',
+      nodeRpc: String(process.env.RANTOM_ARBITRUM_NODE),
+    },
   },
   security: {
     systemApiKey: String(process.env.RANTOM_SYSTEM_API_KEY),

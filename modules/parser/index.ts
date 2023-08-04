@@ -31,8 +31,14 @@ export class ParserProvider implements IParserProvider {
     for (const [, blockchain] of Object.entries(EnvConfig.blockchains)) {
       const web3 = new Web3(blockchain.nodeRpc);
 
+      let tx = null;
       try {
-        const tx = await web3.eth.getTransaction(options.hash);
+        tx = await web3.eth.getTransaction(options.hash);
+      } catch (e: any) {}
+
+      if (!tx) continue;
+
+      try {
         const block = await web3.eth.getBlock(Number(tx.blockNumber), false);
         const receipt = await web3.eth.getTransactionReceipt(options.hash);
 

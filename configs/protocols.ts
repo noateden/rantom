@@ -59,6 +59,9 @@ export const Uniswapv3Configs: ProtocolConfig = {
       // top pools
       ...UniLiquidityPools.filter((item) => item.protocol === 'uniswapv3').map((item) => item.address),
     ],
+    arbitrum: [
+      '0x1f98431c8ad98523631ae4a59f267346ea31f984', // v3 factory
+    ],
   },
   subgraphs: [
     {
@@ -102,6 +105,9 @@ export const SushiConfigs: ProtocolConfig = {
       // top pools
       ...UniLiquidityPools.filter((item) => item.protocol === 'sushi').map((item) => item.address),
     ],
+    arbitrum: [
+      '0xc35dadb65012ec5796536bd9864ed8773abc74c4', // factory v2
+    ],
   },
   staticData: {
     // masterchef pools
@@ -131,6 +137,9 @@ export const Sushiv3Configs: ProtocolConfig = {
 
       // top pools
       ...UniLiquidityPools.filter((item) => item.protocol === 'sushiv3').map((item) => item.address),
+    ],
+    arbitrum: [
+      '0x1af415a1eba07a4986a52b6f2e7de7003d82231e', // factory v3
     ],
   },
   staticData: {

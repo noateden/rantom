@@ -1,0 +1,1023 @@
+{
+  "1INCH": {
+    "chain": "arbitrum",
+    "symbol": "1INCH",
+    "decimals": 18,
+    "address": "0x6314c31a7a1652ce482cffe247e9cb7c3f4bb9af"
+  },
+  "AAVE": {
+    "chain": "arbitrum",
+    "symbol": "AAVE",
+    "decimals": 18,
+    "address": "0xba5ddd1f9d7f570dc94a51479a000e3bce967196"
+  },
+  "AGLD": {
+    "chain": "arbitrum",
+    "symbol": "AGLD",
+    "decimals": 18,
+    "address": "0xb7910e8b16e63efd51d5d1a093d56280012a3b9c"
+  },
+  "AIOZ": {
+    "chain": "arbitrum",
+    "symbol": "AIOZ",
+    "decimals": 18,
+    "address": "0xec76e8fe6e2242e6c2117caa244b9e2de1569923"
+  },
+  "ALEPH": {
+    "chain": "arbitrum",
+    "symbol": "ALEPH",
+    "decimals": 18,
+    "address": "0xe7dcd50836d0a28c959c72d72122fedb8e245a6c"
+  },
+  "ALI": {
+    "chain": "arbitrum",
+    "symbol": "ALI",
+    "decimals": 18,
+    "address": "0xef6124368c0b56556667e0de77ea008dfc0a71d1"
+  },
+  "ALPHA": {
+    "chain": "arbitrum",
+    "symbol": "ALPHA",
+    "decimals": 18,
+    "address": "0xc9cbf102c73fb77ec14f8b4c8bd88e050a6b2646"
+  },
+  "ANKR": {
+    "chain": "arbitrum",
+    "symbol": "ANKR",
+    "decimals": 18,
+    "address": "0x1bfc5d35bf0f7b9e15dc24c78b8c02dbc1e95447"
+  },
+  "APE": {
+    "chain": "arbitrum",
+    "symbol": "APE",
+    "decimals": 18,
+    "address": "0x74885b4d524d497261259b38900f54e6dbad2210"
+  },
+  "API3": {
+    "chain": "arbitrum",
+    "symbol": "API3",
+    "decimals": 18,
+    "address": "0xf01db12f50d0cdf5fe360ae005b9c52f92ca7811"
+  },
+  "ARB": {
+    "chain": "arbitrum",
+    "symbol": "ARB",
+    "decimals": 18,
+    "address": "0x912ce59144191c1204e64559fe8253a0e49e6548"
+  },
+  "ATA": {
+    "chain": "arbitrum",
+    "symbol": "ATA",
+    "decimals": 18,
+    "address": "0xac9ac2c17cdfed4abc80a53c5553388575714d03"
+  },
+  "AXL": {
+    "chain": "arbitrum",
+    "symbol": "AXL",
+    "decimals": 6,
+    "address": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f"
+  },
+  "AXS": {
+    "chain": "arbitrum",
+    "symbol": "AXS",
+    "decimals": 18,
+    "address": "0xe88998fb579266628af6a03e3821d5983e5d0089"
+  },
+  "BADGER": {
+    "chain": "arbitrum",
+    "symbol": "BADGER",
+    "decimals": 18,
+    "address": "0xbfa641051ba0a0ad1b0acf549a89536a0d76472e"
+  },
+  "BAL": {
+    "chain": "arbitrum",
+    "symbol": "BAL",
+    "decimals": 18,
+    "address": "0x040d1edc9569d4bab2d15287dc5a4f10f56a56b8"
+  },
+  "BAT": {
+    "chain": "arbitrum",
+    "symbol": "BAT",
+    "decimals": 18,
+    "address": "0x3450687ef141dcd6110b77c2dc44b008616aee75"
+  },
+  "BICO": {
+    "chain": "arbitrum",
+    "symbol": "BICO",
+    "decimals": 18,
+    "address": "0xa68ec98d7ca870cf1dd0b00ebbb7c4bf60a8e74d"
+  },
+  "BIT": {
+    "chain": "arbitrum",
+    "symbol": "BIT",
+    "decimals": 18,
+    "address": "0x406c8db506653d882295875f633bec0beb921c2a"
+  },
+  "BLUR": {
+    "chain": "arbitrum",
+    "symbol": "BLUR",
+    "decimals": 18,
+    "address": "0xef171a5ba71348eff16616fd692855c2fe606eb2"
+  },
+  "BOND": {
+    "chain": "arbitrum",
+    "symbol": "BOND",
+    "decimals": 18,
+    "address": "0x0d81e50bc677fa67341c44d7eaa9228dee64a4e1"
+  },
+  "BUSD": {
+    "chain": "arbitrum",
+    "symbol": "BUSD",
+    "decimals": 18,
+    "address": "0x31190254504622cefdfa55a7d3d272e6462629a2"
+  },
+  "cbETH": {
+    "chain": "arbitrum",
+    "symbol": "cbETH",
+    "decimals": 18,
+    "address": "0x1debd73e752beaf79865fd6446b0c970eae7732f"
+  },
+  "CELR": {
+    "chain": "arbitrum",
+    "symbol": "CELR",
+    "decimals": 18,
+    "address": "0x3a8b787f78d775aecfeea15706d4221b40f345ab"
+  },
+  "COMP": {
+    "chain": "arbitrum",
+    "symbol": "COMP",
+    "decimals": 18,
+    "address": "0x354a6da3fcde098f8389cad84b0182725c6c91de"
+  },
+  "COTI": {
+    "chain": "arbitrum",
+    "symbol": "COTI",
+    "decimals": 18,
+    "address": "0x6fe14d3cc2f7bddffba5cdb3bbe7467dd81ea101"
+  },
+  "CRO": {
+    "chain": "arbitrum",
+    "symbol": "CRO",
+    "decimals": 8,
+    "address": "0x8ea3156f834a0dfc78f1a5304fac2cda676f354c"
+  },
+  "CRV": {
+    "chain": "arbitrum",
+    "symbol": "CRV",
+    "decimals": 18,
+    "address": "0x11cdb42b0eb46d95f990bedd4695a6e3fa034978"
+  },
+  "CTSI": {
+    "chain": "arbitrum",
+    "symbol": "CTSI",
+    "decimals": 18,
+    "address": "0x319f865b287fcc10b30d8ce6144e8b6d1b476999"
+  },
+  "CTX": {
+    "chain": "arbitrum",
+    "symbol": "CTX",
+    "decimals": 18,
+    "address": "0x84f5c2cfba754e76dd5ae4fb369cfc920425e12b"
+  },
+  "CVC": {
+    "chain": "arbitrum",
+    "symbol": "CVC",
+    "decimals": 8,
+    "address": "0x9dffb23cad3322440bccff7ab1c58e781ddbf144"
+  },
+  "CVX": {
+    "chain": "arbitrum",
+    "symbol": "CVX",
+    "decimals": 18,
+    "address": "0xaafcfd42c9954c6689ef1901e03db742520829c5"
+  },
+  "DAI": {
+    "chain": "arbitrum",
+    "symbol": "DAI",
+    "decimals": 18,
+    "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
+  },
+  "DEXT": {
+    "chain": "arbitrum",
+    "symbol": "DEXT",
+    "decimals": 18,
+    "address": "0x3be7cb2e9413ef8f42b4a202a0114eb59b64e227"
+  },
+  "DIA": {
+    "chain": "arbitrum",
+    "symbol": "DIA",
+    "decimals": 18,
+    "address": "0xca642467c6ebe58c13cb4a7091317f34e17ac05e"
+  },
+  "DNT": {
+    "chain": "arbitrum",
+    "symbol": "DNT",
+    "decimals": 18,
+    "address": "0xe3696a02b2c9557639e29d829e9c45efa49ad47a"
+  },
+  "DPI": {
+    "chain": "arbitrum",
+    "symbol": "DPI",
+    "decimals": 18,
+    "address": "0x4667cf53c4edf659e402b733bea42b18b68dd74c"
+  },
+  "DYDX": {
+    "chain": "arbitrum",
+    "symbol": "DYDX",
+    "decimals": 18,
+    "address": "0x51863cb90ce5d6da9663106f292fa27c8cc90c5a"
+  },
+  "ELON": {
+    "chain": "arbitrum",
+    "symbol": "ELON",
+    "decimals": 18,
+    "address": "0x3e4cff6e50f37f731284a92d44ae943e17077fd4"
+  },
+  "ENJ": {
+    "chain": "arbitrum",
+    "symbol": "ENJ",
+    "decimals": 18,
+    "address": "0x7fa9549791efc9030e1ed3f25d18014163806758"
+  },
+  "ENS": {
+    "chain": "arbitrum",
+    "symbol": "ENS",
+    "decimals": 18,
+    "address": "0xfea31d704deb0975da8e77bf13e04239e70d7c28"
+  },
+  "ERN": {
+    "chain": "arbitrum",
+    "symbol": "ERN",
+    "decimals": 18,
+    "address": "0x2354c8e9ea898c751f1a15addeb048714d667f96"
+  },
+  "ETH": {
+    "chain": "ethereum",
+    "symbol": "ETH",
+    "decimals": 18,
+    "address": "0x0000000000000000000000000000000000000000"
+  },
+  "EUROC": {
+    "chain": "arbitrum",
+    "symbol": "EUROC",
+    "decimals": 6,
+    "address": "0x863708032b5c328e11abcbc0df9d79c71fc52a48"
+  },
+  "FARM": {
+    "chain": "arbitrum",
+    "symbol": "FARM",
+    "decimals": 18,
+    "address": "0x8553d254cb6934b16f87d2e486b64bbd24c83c70"
+  },
+  "FET": {
+    "chain": "arbitrum",
+    "symbol": "FET",
+    "decimals": 18,
+    "address": "0x4be87c766a7ce11d5cc864b6c3abb7457dcc4cc9"
+  },
+  "FIS": {
+    "chain": "arbitrum",
+    "symbol": "FIS",
+    "decimals": 18,
+    "address": "0x849b40ab2469309117ed1038c5a99894767c7282"
+  },
+  "FORT": {
+    "chain": "arbitrum",
+    "symbol": "FORT",
+    "decimals": 18,
+    "address": "0x3a1429d50e0cbbc45c997af600541fe1cc3d2923"
+  },
+  "FOX": {
+    "chain": "arbitrum",
+    "symbol": "FOX",
+    "decimals": 18,
+    "address": "0xf929de51d91c77e42f5090069e0ad7a09e513c73"
+  },
+  "FRAX": {
+    "chain": "arbitrum",
+    "symbol": "FRAX",
+    "decimals": 18,
+    "address": "0x7468a5d8e02245b00e8c0217fce021c70bc51305"
+  },
+  "FTM": {
+    "chain": "arbitrum",
+    "symbol": "FTM",
+    "decimals": 18,
+    "address": "0xd42785d323e608b9e99fa542bd8b1000d4c2df37"
+  },
+  "FXS": {
+    "chain": "arbitrum",
+    "symbol": "FXS",
+    "decimals": 18,
+    "address": "0xd9f9d2ee2d3efe420699079f16d9e924afffdea4"
+  },
+  "GALA": {
+    "chain": "arbitrum",
+    "symbol": "GALA",
+    "decimals": 8,
+    "address": "0x2ed5c8fa0d7ad71025638afe5fd72e4fbc5a2667"
+  },
+  "GNO": {
+    "chain": "arbitrum",
+    "symbol": "GNO",
+    "decimals": 18,
+    "address": "0xa0b862f60edef4452f25b4160f177db44deb6cf1"
+  },
+  "GRT": {
+    "chain": "arbitrum",
+    "symbol": "GRT",
+    "decimals": 18,
+    "address": "0x9623063377ad1b27544c965ccd7342f7ea7e88c7"
+  },
+  "GTC": {
+    "chain": "arbitrum",
+    "symbol": "GTC",
+    "decimals": 18,
+    "address": "0x7f9a7db853ca816b9a138aee3380ef34c437dee0"
+  },
+  "GYEN": {
+    "chain": "arbitrum",
+    "symbol": "GYEN",
+    "decimals": 6,
+    "address": "0x589d35656641d6ab57a545f08cf473ecd9b6d5f7"
+  },
+  "HIGH": {
+    "chain": "arbitrum",
+    "symbol": "HIGH",
+    "decimals": 18,
+    "address": "0xd12eeb0142d4efe7af82e4f29e5af382615bceea"
+  },
+  "HOPR": {
+    "chain": "arbitrum",
+    "symbol": "HOPR",
+    "decimals": 18,
+    "address": "0x177f394a3ed18faa85c1462ae626438a70294ef7"
+  },
+  "ILV": {
+    "chain": "arbitrum",
+    "symbol": "ILV",
+    "decimals": 18,
+    "address": "0x61ca9d186f6b9a793bc08f6c79fd35f205488673"
+  },
+  "IMX": {
+    "chain": "arbitrum",
+    "symbol": "IMX",
+    "decimals": 18,
+    "address": "0x3cfd99593a7f035f717142095a3898e3fca7783e"
+  },
+  "INJ": {
+    "chain": "arbitrum",
+    "symbol": "INJ",
+    "decimals": 18,
+    "address": "0x2a2053cb633cad465b4a8975ed3d7f09df608f80"
+  },
+  "LDO": {
+    "chain": "arbitrum",
+    "symbol": "LDO",
+    "decimals": 18,
+    "address": "0x13ad51ed4f1b7e9dc168d8a00cb3f4ddd85efa60"
+  },
+  "LINK": {
+    "chain": "arbitrum",
+    "symbol": "LINK",
+    "decimals": 18,
+    "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4"
+  },
+  "LPT": {
+    "chain": "arbitrum",
+    "symbol": "LPT",
+    "decimals": 18,
+    "address": "0x289ba1701c2f088cf0faf8b3705246331cb8a839"
+  },
+  "LQTY": {
+    "chain": "arbitrum",
+    "symbol": "LQTY",
+    "decimals": 18,
+    "address": "0xfb9e5d956d889d91a82737b9bfcdac1dce3e1449"
+  },
+  "LRC": {
+    "chain": "arbitrum",
+    "symbol": "LRC",
+    "decimals": 18,
+    "address": "0x46d0ce7de6247b0a95f67b43b589b4041bae7fbe"
+  },
+  "LUSD": {
+    "chain": "arbitrum",
+    "symbol": "LUSD",
+    "decimals": 18,
+    "address": "0x93b346b6bc2548da6a1e7d98e9a421b42541425b"
+  },
+  "MANA": {
+    "chain": "arbitrum",
+    "symbol": "MANA",
+    "decimals": 18,
+    "address": "0x442d24578a564ef628a65e6a7e3e7be2a165e231"
+  },
+  "MASK": {
+    "chain": "arbitrum",
+    "symbol": "MASK",
+    "decimals": 18,
+    "address": "0x533a7b414cd1236815a5e09f1e97fc7d5c313739"
+  },
+  "MATH": {
+    "chain": "arbitrum",
+    "symbol": "MATH",
+    "decimals": 18,
+    "address": "0x99f40b01ba9c469193b360f72740e416b17ac332"
+  },
+  "MATIC": {
+    "chain": "arbitrum",
+    "symbol": "MATIC",
+    "decimals": 18,
+    "address": "0x561877b6b3dd7651313794e5f2894b2f18be0766"
+  },
+  "METIS": {
+    "chain": "arbitrum",
+    "symbol": "METIS",
+    "decimals": 18,
+    "address": "0x7f728f3595db17b0b359f4fc47ae80fad2e33769"
+  },
+  "MIM": {
+    "chain": "arbitrum",
+    "symbol": "MIM",
+    "decimals": 18,
+    "address": "0xb20a02dffb172c474bc4bda3fd6f4ee70c04daf2"
+  },
+  "MKR": {
+    "chain": "arbitrum",
+    "symbol": "MKR",
+    "decimals": 18,
+    "address": "0x2e9a6df78e42a30712c10a9dc4b1c8656f8f2879"
+  },
+  "MLN": {
+    "chain": "arbitrum",
+    "symbol": "MLN",
+    "decimals": 18,
+    "address": "0x8f5c1a99b1df736ad685006cb6adca7b7ae4b514"
+  },
+  "MPL": {
+    "chain": "arbitrum",
+    "symbol": "MPL",
+    "decimals": 18,
+    "address": "0x29024832ec3babf5074d4f46102aa988097f0ca0"
+  },
+  "MXC": {
+    "chain": "arbitrum",
+    "symbol": "MXC",
+    "decimals": 18,
+    "address": "0x91b468fe3dce581d7a6cfe34189f1314b6862ed6"
+  },
+  "NCT": {
+    "chain": "arbitrum",
+    "symbol": "NCT",
+    "decimals": 18,
+    "address": "0x53236015a675fcb937485f1ae58040e4fb920d5b"
+  },
+  "NKN": {
+    "chain": "arbitrum",
+    "symbol": "NKN",
+    "decimals": 18,
+    "address": "0xbe06ca305a5cb49abf6b1840da7c42690406177b"
+  },
+  "NMR": {
+    "chain": "arbitrum",
+    "symbol": "NMR",
+    "decimals": 18,
+    "address": "0x597701b32553b9fa473e21362d480b3a6b569711"
+  },
+  "OCEAN": {
+    "chain": "arbitrum",
+    "symbol": "OCEAN",
+    "decimals": 18,
+    "address": "0x933d31561e470478079feb9a6dd2691fad8234df"
+  },
+  "OGN": {
+    "chain": "arbitrum",
+    "symbol": "OGN",
+    "decimals": 18,
+    "address": "0x6feb262feb0f775b5312d2e009923f7f58ae423e"
+  },
+  "PAXG": {
+    "chain": "arbitrum",
+    "symbol": "PAXG",
+    "decimals": 18,
+    "address": "0xfeb4dfc8c4cf7ed305bb08065d08ec6ee6728429"
+  },
+  "PEPE": {
+    "chain": "arbitrum",
+    "symbol": "PEPE",
+    "decimals": 18,
+    "address": "0x35e6a59f786d9266c7961ea28c7b768b33959cbb"
+  },
+  "PERP": {
+    "chain": "arbitrum",
+    "symbol": "PERP",
+    "decimals": 18,
+    "address": "0x753d224bcf9aafacd81558c32341416df61d3dac"
+  },
+  "POLS": {
+    "chain": "arbitrum",
+    "symbol": "POLS",
+    "decimals": 18,
+    "address": "0xeeeb5eac2db7a7fc28134aa3248580d48b016b64"
+  },
+  "POLY": {
+    "chain": "arbitrum",
+    "symbol": "POLY",
+    "decimals": 18,
+    "address": "0xe12f29704f635f4a6e7ae154838d21f9b33809e9"
+  },
+  "POND": {
+    "chain": "arbitrum",
+    "symbol": "POND",
+    "decimals": 18,
+    "address": "0xda0a57b710768ae17941a9fa33f8b720c8bd9ddd"
+  },
+  "POWR": {
+    "chain": "arbitrum",
+    "symbol": "POWR",
+    "decimals": 6,
+    "address": "0x4e91f2af1ee0f84b529478f19794f5afd423e4a6"
+  },
+  "PRIME": {
+    "chain": "arbitrum",
+    "symbol": "PRIME",
+    "decimals": 18,
+    "address": "0x8d8e1b6ffc6832e8d2ef0de8a3d957cae7ac5067"
+  },
+  "PRQ": {
+    "chain": "arbitrum",
+    "symbol": "PRQ",
+    "decimals": 18,
+    "address": "0x82164a8b646401a8776f9dc5c8cba35dcaf60cd2"
+  },
+  "QNT": {
+    "chain": "arbitrum",
+    "symbol": "QNT",
+    "decimals": 18,
+    "address": "0xc7557c73e0eca2e1bf7348bb6874aee63c7eff85"
+  },
+  "RAI": {
+    "chain": "arbitrum",
+    "symbol": "RAI",
+    "decimals": 18,
+    "address": "0xaef5bbcbfa438519a5ea80b4c7181b4e78d419f2"
+  },
+  "RARI": {
+    "chain": "arbitrum",
+    "symbol": "RARI",
+    "decimals": 18,
+    "address": "0xcf8600347dc375c5f2fdd6dab9bb66e0b6773cd7"
+  },
+  "RBC": {
+    "chain": "arbitrum",
+    "symbol": "RBC",
+    "decimals": 18,
+    "address": "0x2e9ae8f178d5ea81970c7799a377b3985cbc335f"
+  },
+  "REN": {
+    "chain": "arbitrum",
+    "symbol": "REN",
+    "decimals": 18,
+    "address": "0x9fa891e1db0a6d1eeac4b929b5aae1011c79a204"
+  },
+  "RGT": {
+    "chain": "arbitrum",
+    "symbol": "RGT",
+    "decimals": 18,
+    "address": "0xef888bca6ab6b1d26dbec977c455388ecd794794"
+  },
+  "RNDR": {
+    "chain": "arbitrum",
+    "symbol": "RNDR",
+    "decimals": 18,
+    "address": "0xc8a4eea31e9b6b61c406df013dd4fec76f21e279"
+  },
+  "SAND": {
+    "chain": "arbitrum",
+    "symbol": "SAND",
+    "decimals": 18,
+    "address": "0xd1318eb19dbf2647743c720ed35174efd64e3dac"
+  },
+  "SHIB": {
+    "chain": "arbitrum",
+    "symbol": "SHIB",
+    "decimals": 18,
+    "address": "0x5033833c9fe8b9d3e09eed2f73d2aaf7e3872fd1"
+  },
+  "SKL": {
+    "chain": "arbitrum",
+    "symbol": "SKL",
+    "decimals": 18,
+    "address": "0x4f9b7dedd8865871df65c5d26b1c2dd537267878"
+  },
+  "SNT": {
+    "chain": "arbitrum",
+    "symbol": "SNT",
+    "decimals": 18,
+    "address": "0x707f635951193ddafbb40971a0fcaab8a6415160"
+  },
+  "SNX": {
+    "chain": "arbitrum",
+    "symbol": "SNX",
+    "decimals": 18,
+    "address": "0xcba56cd8216fcbbf3fa6df6137f3147cbca37d60"
+  },
+  "SOCKS": {
+    "chain": "arbitrum",
+    "symbol": "SOCKS",
+    "decimals": 18,
+    "address": "0xb2be52744a804cc732d606817c2572c5a3b264e7"
+  },
+  "SOL": {
+    "chain": "arbitrum",
+    "symbol": "SOL",
+    "decimals": 9,
+    "address": "0xb74da9fe2f96b9e0a5f4a3cf0b92dd2bec617124"
+  },
+  "SPELL": {
+    "chain": "arbitrum",
+    "symbol": "SPELL",
+    "decimals": 18,
+    "address": "0x3e6648c5a70a150a88bce65f4ad4d506fe15d2af"
+  },
+  "STG": {
+    "chain": "arbitrum",
+    "symbol": "STG",
+    "decimals": 18,
+    "address": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6"
+  },
+  "SUPER": {
+    "chain": "arbitrum",
+    "symbol": "SUPER",
+    "decimals": 18,
+    "address": "0x7f9cf5a2630a0d58567122217df7609c26498956"
+  },
+  "sUSD": {
+    "chain": "arbitrum",
+    "symbol": "sUSD",
+    "decimals": 18,
+    "address": "0xa970af1a584579b618be4d69ad6f73459d112f95"
+  },
+  "SUSHI": {
+    "chain": "arbitrum",
+    "symbol": "SUSHI",
+    "decimals": 18,
+    "address": "0xd4d42f0b6def4ce0383636770ef773390d85c61a"
+  },
+  "SYN": {
+    "chain": "arbitrum",
+    "symbol": "SYN",
+    "decimals": 18,
+    "address": "0x1bcfc0b4ee1471674cd6a9f6b363a034375ead84"
+  },
+  "T": { "chain": "arbitrum", "symbol": "T", "decimals": 18, "address": "0x0945cae3ae47cb384b2d47bc448dc6a9dec21f55" },
+  "tBTC": {
+    "chain": "arbitrum",
+    "symbol": "tBTC",
+    "decimals": 18,
+    "address": "0x7e2a1edee171c5b19e6c54d73752396c0a572594"
+  },
+  "TRB": {
+    "chain": "arbitrum",
+    "symbol": "TRB",
+    "decimals": 18,
+    "address": "0xd58d345fd9c82262e087d2d0607624b410d88242"
+  },
+  "TRIBE": {
+    "chain": "arbitrum",
+    "symbol": "TRIBE",
+    "decimals": 18,
+    "address": "0xbfae6fecd8124ba33cbb2180aab0fe4c03914a5a"
+  },
+  "UMA": {
+    "chain": "arbitrum",
+    "symbol": "UMA",
+    "decimals": 18,
+    "address": "0xd693ec944a85eeca4247ec1c3b130dca9b0c3b22"
+  },
+  "UNI": {
+    "chain": "arbitrum",
+    "symbol": "UNI",
+    "decimals": 18,
+    "address": "0xfa7f8980b0f1e64a2062791cc3b0871572f1f7f0"
+  },
+  "USDC": {
+    "chain": "arbitrum",
+    "symbol": "USDC",
+    "decimals": 6,
+    "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+  },
+  "USDC.e": {
+    "chain": "arbitrum",
+    "symbol": "USDC.e",
+    "decimals": 6,
+    "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+  },
+  "USDT": {
+    "chain": "arbitrum",
+    "symbol": "USDT",
+    "decimals": 6,
+    "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
+  },
+  "WAMPL": {
+    "chain": "arbitrum",
+    "symbol": "WAMPL",
+    "decimals": 18,
+    "address": "0x1c8ec4de3c2bfd3050695d89853ec6d78ae650bb"
+  },
+  "WBTC": {
+    "chain": "arbitrum",
+    "symbol": "WBTC",
+    "decimals": 8,
+    "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f"
+  },
+  "WETH": {
+    "chain": "arbitrum",
+    "symbol": "WETH",
+    "decimals": 18,
+    "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+  },
+  "WOO": {
+    "chain": "arbitrum",
+    "symbol": "WOO",
+    "decimals": 18,
+    "address": "0xcafcd85d8ca7ad1e1c6f82f651fa15e33aefd07b"
+  },
+  "XCN": {
+    "chain": "arbitrum",
+    "symbol": "XCN",
+    "decimals": 18,
+    "address": "0x58bbc087e36db40a84b22c1b93a042294deeafed"
+  },
+  "YFI": {
+    "chain": "arbitrum",
+    "symbol": "YFI",
+    "decimals": 18,
+    "address": "0x82e3a8f066a6989666b031d916c43672085b1582"
+  },
+  "ZRX": {
+    "chain": "arbitrum",
+    "symbol": "ZRX",
+    "decimals": 18,
+    "address": "0xbd591bd4ddb64b77b5f76eab8f03d02519235ae2"
+  },
+  "wstETH": {
+    "chain": "arbitrum",
+    "symbol": "wstETH",
+    "decimals": 18,
+    "address": "0x5979d7b546e38e414f7e9822514be443a4800529"
+  },
+  "GMX": {
+    "chain": "arbitrum",
+    "symbol": "GMX",
+    "decimals": 18,
+    "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a"
+  },
+  "UNIDX": {
+    "chain": "arbitrum",
+    "symbol": "UNIDX",
+    "decimals": 18,
+    "address": "0x5429706887fcb58a595677b73e9b0441c25d993d"
+  },
+  "BFR": {
+    "chain": "arbitrum",
+    "symbol": "BFR",
+    "decimals": 18,
+    "address": "0x1a5b0aaf478bf1fda7b934c76e7692d722982a6d"
+  },
+  "RDNT": {
+    "chain": "arbitrum",
+    "symbol": "RDNT",
+    "decimals": 18,
+    "address": "0x3082cc23568ea640225c2467653db90e9250aaa0"
+  },
+  "GNS": {
+    "chain": "arbitrum",
+    "symbol": "GNS",
+    "decimals": 18,
+    "address": "0x18c11fd286c5ec11c3b683caa813b77f5163a122"
+  },
+  "RDPX": {
+    "chain": "arbitrum",
+    "symbol": "RDPX",
+    "decimals": 18,
+    "address": "0x32eb7902d4134bf98a28b963d26de779af92a212"
+  },
+  "DPX": {
+    "chain": "arbitrum",
+    "symbol": "DPX",
+    "decimals": 18,
+    "address": "0x6c2c06790b3e3e3c38e12ee22f8183b37a13ee55"
+  },
+  "GMD": {
+    "chain": "arbitrum",
+    "symbol": "GMD",
+    "decimals": 18,
+    "address": "0x4945970efeec98d393b4b979b9be265a3ae28a8b"
+  },
+  "SPA": {
+    "chain": "arbitrum",
+    "symbol": "SPA",
+    "decimals": 18,
+    "address": "0x5575552988a3a80504bbaeb1311674fcfd40ad4b"
+  },
+  "VSTA": {
+    "chain": "arbitrum",
+    "symbol": "VSTA",
+    "decimals": 18,
+    "address": "0xa684cd057951541187f288294a1e1c2646aa2d24"
+  },
+  "BTC.b": {
+    "chain": "arbitrum",
+    "symbol": "BTC.b",
+    "decimals": 8,
+    "address": "0x2297aebd383787a160dd0d9f71508148769342e3"
+  },
+  "MAGIC": {
+    "chain": "arbitrum",
+    "symbol": "MAGIC",
+    "decimals": 18,
+    "address": "0x539bde0d7dbd336b79148aa742883198bbf60342"
+  },
+  "VST": {
+    "chain": "arbitrum",
+    "symbol": "VST",
+    "decimals": 18,
+    "address": "0x64343594ab9b56e99087bfa6f2335db24c2d1f17"
+  },
+  "PLS": {
+    "chain": "arbitrum",
+    "symbol": "PLS",
+    "decimals": 18,
+    "address": "0x51318b7d00db7acc4026c88c3952b66278b6a67f"
+  },
+  "JOE": {
+    "chain": "arbitrum",
+    "symbol": "JOE",
+    "decimals": 18,
+    "address": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07"
+  },
+  "agEUR": {
+    "chain": "arbitrum",
+    "symbol": "agEUR",
+    "decimals": 18,
+    "address": "0xfa5ed56a203466cbbc2430a43c66b9d8723528e7"
+  },
+  "BETS": {
+    "chain": "arbitrum",
+    "symbol": "BETS",
+    "decimals": 18,
+    "address": "0xe26ae3d881f3d5def58d795f611753804e7a6b26"
+  },
+  "STEAK": {
+    "chain": "arbitrum",
+    "symbol": "STEAK",
+    "decimals": 18,
+    "address": "0xddbfbd5dc3ba0feb96cb513b689966b2176d4c09"
+  },
+  "VELA": {
+    "chain": "arbitrum",
+    "symbol": "VELA",
+    "decimals": 18,
+    "address": "0x088cd8f5ef3652623c22d48b1605dcfe860cd704"
+  },
+  "PSI": {
+    "chain": "arbitrum",
+    "symbol": "PSI",
+    "decimals": 9,
+    "address": "0x602eb0d99a5e3e76d1510372c4d2020e12eaea8a"
+  },
+  "HEGIC": {
+    "chain": "arbitrum",
+    "symbol": "HEGIC",
+    "decimals": 18,
+    "address": "0x431402e8b9de9aa016c743880e04e517074d8cec"
+  },
+  "TROVE": {
+    "chain": "arbitrum",
+    "symbol": "TROVE",
+    "decimals": 18,
+    "address": "0x982239d38af50b0168da33346d85fb12929c4c07"
+  },
+  "GRAIL": {
+    "chain": "arbitrum",
+    "symbol": "GRAIL",
+    "decimals": 18,
+    "address": "0x3d9907f9a368ad0a51be60f7da3b97cf940982d8"
+  },
+  "FCTR": {
+    "chain": "arbitrum",
+    "symbol": "FCTR",
+    "decimals": 18,
+    "address": "0x6dd963c510c2d2f09d5eddb48ede45fed063eb36"
+  },
+  "ARC": {
+    "chain": "arbitrum",
+    "symbol": "ARC",
+    "decimals": 18,
+    "address": "0x7f465507f058e17ad21623927a120ac05ca32741"
+  },
+  "MGP": {
+    "chain": "arbitrum",
+    "symbol": "MGP",
+    "decimals": 18,
+    "address": "0xa61f74247455a40b01b0559ff6274441fafa22a3"
+  },
+  "WOM": {
+    "chain": "arbitrum",
+    "symbol": "WOM",
+    "decimals": 18,
+    "address": "0x7b5eb3940021ec0e8e463d5dbb4b7b09a89ddf96"
+  },
+  "OBX": {
+    "chain": "arbitrum",
+    "symbol": "OBX",
+    "decimals": 18,
+    "address": "0x188fb5f5ae5bbe4154d5778f2bbb2fb985c94d25"
+  },
+  "RUX": {
+    "chain": "arbitrum",
+    "symbol": "RUX",
+    "decimals": 18,
+    "address": "0xc701f86e6d242b97d3035f6c2cecaf8e7087e898"
+  },
+  "PENDLE": {
+    "chain": "arbitrum",
+    "symbol": "PENDLE",
+    "decimals": 18,
+    "address": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8"
+  },
+  "LOTUS": {
+    "chain": "arbitrum",
+    "symbol": "LOTUS",
+    "decimals": 18,
+    "address": "0xef261714f7e5ba6b86f4780eb6e3bf26b10729cf"
+  },
+  "JIMBO": {
+    "chain": "arbitrum",
+    "symbol": "JIMBO",
+    "decimals": 18,
+    "address": "0xccb97ae0c1bc4ce196b6460395af7df5ee1212bc"
+  },
+  "FIEF": {
+    "chain": "arbitrum",
+    "symbol": "FIEF",
+    "decimals": 18,
+    "address": "0xe2105bea3819d3131b5b2306d44eb3271bfcfe0e"
+  },
+  "DMT": {
+    "chain": "arbitrum",
+    "symbol": "DMT",
+    "decimals": 18,
+    "address": "0x8b0e6f19ee57089f7649a455d89d7bc6314d04e8"
+  },
+  "EUROe": {
+    "chain": "arbitrum",
+    "symbol": "EUROe",
+    "decimals": 6,
+    "address": "0xcf985aba4647a432e60efceeb8054bbd64244305"
+  },
+  "LADDER": {
+    "chain": "arbitrum",
+    "symbol": "LADDER",
+    "decimals": 18,
+    "address": "0x6560c5ae3332bd6a036f48239a1d90ba3f51872a"
+  },
+  "LVL": {
+    "chain": "arbitrum",
+    "symbol": "LVL",
+    "decimals": 18,
+    "address": "0xb64e280e9d1b5dbec4accedb2257a87b400db149"
+  },
+  "ALP": {
+    "chain": "arbitrum",
+    "symbol": "ALP",
+    "decimals": 18,
+    "address": "0xb49b6a3fd1f4bb510ef776de7a88a9e65904478a"
+  },
+  "SVY": {
+    "chain": "arbitrum",
+    "symbol": "SVY",
+    "decimals": 18,
+    "address": "0x43ab8f7d2a8dd4102ccea6b438f6d747b1b9f034"
+  },
+  "svETH": {
+    "chain": "arbitrum",
+    "symbol": "svETH",
+    "decimals": 18,
+    "address": "0xf7728582002ef82908c8242cf552e969ba863ffa"
+  },
+  "svBTC": {
+    "chain": "arbitrum",
+    "symbol": "svBTC",
+    "decimals": 18,
+    "address": "0xeee18334c414a47fb886a7317e1885b2bfb8c2a6"
+  },
+  "svUSD": {
+    "chain": "arbitrum",
+    "symbol": "svUSD",
+    "decimals": 18,
+    "address": "0xf202ab403cd7e90197ec0f010ee897e283037706"
+  }
+}

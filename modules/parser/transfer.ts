@@ -1,6 +1,7 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
+import EnvConfig from '../../configs/envConfig';
 import { Signatures } from '../../configs/signatures';
 import { normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
@@ -32,7 +33,7 @@ export class TransferParser implements ITransferParser {
 
     const signature = topics[0];
     if (signature === Signatures['Transfer(address,address,uint256)']) {
-      const web3 = new Web3();
+      const web3 = new Web3(EnvConfig.blockchains[options.chain].nodeRpc);
 
       try {
         // try with ERC20

@@ -1,5 +1,6 @@
 import { NonFungibleTokenMetadata, Token } from '../types/configs';
 import EulerTokens from './data/EulerEAndDTokens.json';
+import ArbitrumTokens from './tokens/arbitrum.json';
 import EthereumTokens from './tokens/ethereum.json';
 
 export const MongodbPrefix = 'rantom';
@@ -13,14 +14,17 @@ export const InstadappAccountV2ImplementationContract = '0xcba828153d3a85b30b5b9
 
 export const Tokens: { [key: string]: { [key: string]: Token } } = {
   ethereum: EthereumTokens,
+  arbitrum: ArbitrumTokens,
 };
 
 export const MulticallContracts: { [key: string]: string } = {
-  ethereum: '0x5ba1e12693dc8f9c48aad8770482f4739beed696',
+  ethereum: '0xca11bde05977b3631167028862be2a173976ca11',
+  arbitrum: '0xca11bde05977b3631167028862be2a173976ca11',
 };
 
 export const BlockSubgraphs: { [key: string]: string } = {
   ethereum: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
+  arbitrum: 'https://api.thegraph.com/subgraphs/name/ianlapham/arbitrum-one-blocks',
 };
 
 export const LayerZeroChainIdMaps: { [key: number]: number } = {
@@ -37,6 +41,12 @@ export const LayerZeroChainIdMaps: { [key: number]: number } = {
 export const HardCodeTokens: { [key: string]: Token } = {
   'erc20-ethereum-0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee': {
     chain: 'ethereum',
+    address: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+    symbol: 'ETH',
+    decimals: 18,
+  },
+  'erc20-arbitrum-0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee': {
+    chain: 'arbitrum',
     address: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
     symbol: 'ETH',
     decimals: 18,
