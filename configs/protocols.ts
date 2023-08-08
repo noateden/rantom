@@ -707,6 +707,9 @@ export const ZeroxConfigs: ProtocolConfig = {
     ethereum: [
       '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // Proxy Exchange
     ],
+    arbitrum: [
+      '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // Proxy Exchange
+    ],
   },
 };
 
@@ -1651,6 +1654,12 @@ export const DodoConfigs: ProtocolConfig = {
       '0x21b9f852534fb9ddc3a0a7b24f067b50d8ac9a99', // FeeRouteProxy(for widget)
       '0x3058ef90929cb8180174d74c507176cca6835d73', // USDT-DAI stable pool
       '0xc9f93163c99695c6526b799ebca2207fdf7d61ad', // USDT-USDC stable pool
+    ],
+    arbitrum: [
+      '0x3b6067d4caa8a14c63fdbe6318f27a0bbc9f9237', // Router proxy
+      '0x88cbf433471a0cd8240d2a12354362988b4593e5', // Router proxy 02
+      '0xe05dd51e4eb5636f4f0e8e7fbe82ea31a2ecef16', // Router fee route
+      '0xc4a1a152812de96b2b1861e433f42290cdd7f113', // Router fee route for widget
     ],
   },
 };
