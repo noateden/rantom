@@ -10,8 +10,8 @@ import FraxLendPairs from './data/FraxlendPairs.json';
 import MaverickPools from './data/MaverickPools.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
+import UniLiquidityPools from './data/UniLiquidityPools.json';
 import YearnVaults from './data/YearnVaults.json';
-import { WhitelistPancakePools, WhitelistSushiPools, WhitelistUniPools } from './policies/whitelistUniPools';
 
 export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
   ethereum: [
@@ -35,9 +35,15 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
 
     // we sync only top tvl and volume pools
     // ignore malicious pools
-    ...WhitelistUniPools,
-    ...WhitelistSushiPools,
-    ...WhitelistPancakePools,
+    ...UniLiquidityPools.filter(
+      (item: any) => (item.protocol === 'uniswapv2' || item.protocol === 'uniswapv3') && item.chain === 'ethereum'
+    ).map((item: any) => item.address),
+    ...UniLiquidityPools.filter(
+      (item: any) => (item.protocol === 'sushi' || item.protocol === 'sushiv3') && item.chain === 'ethereum'
+    ).map((item: any) => item.address),
+    ...UniLiquidityPools.filter(
+      (item: any) => (item.protocol === 'pancakeswap' || item.protocol === 'pancakeswapv3') && item.chain === 'ethereum'
+    ).map((item: any) => item.address),
 
     '0x000000000000ad05ccc4f10045630fb830b95127', // Blur Marketplace
     '0x00000000006c3852cbef3e08e8df289169ede581', // Seaport 1.1
@@ -196,5 +202,16 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xcba828153d3a85b30b5b912e1f2dacac5816ae9d', // Instadapp account implementation
     '0xce7a977cac4a481bc84ac06b2da0df614e621cf3', // Defisaver logger
     '0x1d6dedb49af91a11b5c5f34954fd3e8cc4f03a86', // Defisaver recipe executor
+  ],
+
+  arbitrum: [
+    // we sync only top tvl and volume pools
+    // ignore malicious pools
+    ...UniLiquidityPools.filter(
+      (item: any) => (item.protocol === 'uniswapv2' || item.protocol === 'uniswapv3') && item.chain === 'arbitrum'
+    ).map((item: any) => item.address),
+    ...UniLiquidityPools.filter(
+      (item: any) => (item.protocol === 'sushi' || item.protocol === 'sushiv3') && item.chain === 'arbitrum'
+    ).map((item: any) => item.address),
   ],
 };

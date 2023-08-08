@@ -17,7 +17,7 @@ export class GetlogCommand extends BasicCommand {
     const blockWorker: IWorkerProvider = new GetlogWorker(providers);
 
     while (true) {
-      await blockWorker.run({ fromBlock: argv.fromBlock ? Number(argv.fromBlock) : 0, fromTime: 0 });
+      await blockWorker.run({ chain: argv.chain, fromBlock: argv.fromBlock ? Number(argv.fromBlock) : 0, fromTime: 0 });
       await sleep(60);
     }
   }

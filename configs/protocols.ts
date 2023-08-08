@@ -20,7 +20,6 @@ import SiloPools from './data/SiloPools.json';
 import SushiPools from './data/SushiPools.json';
 import UniLiquidityPools from './data/UniLiquidityPools.json';
 import YearnVaults from './data/YearnVaults.json';
-import { DefisaverActions } from './policies/defisaverActions';
 import { Signatures } from './signatures';
 
 export const Uniswapv2Configs: ProtocolConfig = {
@@ -71,6 +70,14 @@ export const Uniswapv3Configs: ProtocolConfig = {
       birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
       filters: {},
       endpoint: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3',
+    },
+    {
+      protocol: 'uniswapv3',
+      chain: 'arbitrum',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-arbitrum-one',
     },
   ],
   staticData: {
@@ -125,6 +132,14 @@ export const SushiConfigs: ProtocolConfig = {
       filters: {},
       endpoint: 'https://api.thegraph.com/subgraphs/name/sushiswap/exchange',
     },
+    {
+      protocol: 'sushi',
+      chain: 'arbitrum',
+      version: 'univ2',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/sushiswap/arbitrum-exchange',
+    },
   ],
 };
 
@@ -146,6 +161,24 @@ export const Sushiv3Configs: ProtocolConfig = {
     // dex pools
     liquidityPools: UniLiquidityPools.filter((item) => item.protocol === 'sushiv3'),
   },
+  subgraphs: [
+    {
+      protocol: 'sushiv3',
+      chain: 'ethereum',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/sushi-v3/v3-ethereum',
+    },
+    {
+      protocol: 'sushiv3',
+      chain: 'arbitrum',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/sushi-v3/v3-arbitrum',
+    },
+  ],
 };
 
 export const PancakeswapConfigs: ProtocolConfig = {
@@ -1829,9 +1862,6 @@ export const DefisaverConfigs: ProtocolConfig = {
       '0xce7a977cac4a481bc84ac06b2da0df614e621cf3', // Logger
       '0x1d6dedb49af91a11b5c5f34954fd3e8cc4f03a86', // Recipe executor
     ],
-  },
-  staticData: {
-    actions: DefisaverActions,
   },
 };
 
