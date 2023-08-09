@@ -49,7 +49,7 @@ export class ParaswapAdapter extends Adapter {
           addresses: [initiator, beneficiary],
           tokens: [token0, token1],
           tokenAmounts: [amount0, amount1],
-          readableString: `${initiator} trade ${amount0} ${token0.symbol} for ${amount1} ${token0.symbol} on ${this.config.protocol} chain ${chain}`,
+          readableString: `${initiator} trade ${amount0} ${token0.symbol} for ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
         };
       }
     }

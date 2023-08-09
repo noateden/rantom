@@ -213,6 +213,9 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...UniLiquidityPools.filter(
       (item: any) => (item.protocol === 'sushi' || item.protocol === 'sushiv3') && item.chain === 'arbitrum'
     ).map((item: any) => item.address),
+    ...UniLiquidityPools.filter(
+      (item: any) => (item.protocol === 'camelot' || item.protocol === 'camelotv3') && item.chain === 'arbitrum'
+    ).map((item: any) => item.address),
 
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault
     '0x794a61358d6845594f94dc1db02a252b5b4814ad', // Aave v3 lending pool

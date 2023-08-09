@@ -56,10 +56,17 @@ export const Uniswapv3Configs: ProtocolConfig = {
       '0x1f98431c8ad98523631ae4a59f267346ea31f984', // v3 Factory
 
       // top pools
-      ...UniLiquidityPools.filter((item) => item.protocol === 'uniswapv3').map((item) => item.address),
+      ...UniLiquidityPools.filter((item) => item.protocol === 'uniswapv3' && item.chain === 'ethereum').map(
+        (item) => item.address
+      ),
     ],
     arbitrum: [
       '0x1f98431c8ad98523631ae4a59f267346ea31f984', // v3 factory
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'uniswapv3' && item.chain === 'arbitrum').map(
+        (item) => item.address
+      ),
     ],
   },
   subgraphs: [
@@ -110,10 +117,17 @@ export const SushiConfigs: ProtocolConfig = {
       '0xef0881ec094552b2e128cf945ef17a6752b4ec5d', // masterchef v2
 
       // top pools
-      ...UniLiquidityPools.filter((item) => item.protocol === 'sushi').map((item) => item.address),
+      ...UniLiquidityPools.filter((item) => item.protocol === 'sushi' && item.chain === 'ethereum').map(
+        (item) => item.address
+      ),
     ],
     arbitrum: [
       '0xc35dadb65012ec5796536bd9864ed8773abc74c4', // factory v2
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'sushi' && item.chain === 'arbitrum').map(
+        (item) => item.address
+      ),
     ],
   },
   staticData: {
@@ -151,10 +165,17 @@ export const Sushiv3Configs: ProtocolConfig = {
       '0xbaceb8ec6b9355dfc0269c18bac9d6e2bdc29c4f', // sushi v3 Factory
 
       // top pools
-      ...UniLiquidityPools.filter((item) => item.protocol === 'sushiv3').map((item) => item.address),
+      ...UniLiquidityPools.filter((item) => item.protocol === 'sushiv3' && item.chain === 'ethereum').map(
+        (item) => item.address
+      ),
     ],
     arbitrum: [
       '0x1af415a1eba07a4986a52b6f2e7de7003d82231e', // factory v3
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'sushiv3' && item.chain === 'arbitrum').map(
+        (item) => item.address
+      ),
     ],
   },
   staticData: {
@@ -189,7 +210,9 @@ export const PancakeswapConfigs: ProtocolConfig = {
       '0x1097053fd2ea711dad45caccc45eff7548fcb362', // uni v2 Factory
 
       // top pools
-      ...UniLiquidityPools.filter((item) => item.protocol === 'pancakeswap').map((item) => item.address),
+      ...UniLiquidityPools.filter((item) => item.protocol === 'pancakeswap' && item.chain === 'ethereum').map(
+        (item) => item.address
+      ),
     ],
   },
   subgraphs: [
@@ -217,7 +240,9 @@ export const PancakeswapV3Configs: ProtocolConfig = {
       '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865', // pancakeswap v3 Factory
 
       // top pools
-      ...UniLiquidityPools.filter((item) => item.protocol === 'pancakeswapv3').map((item) => item.address),
+      ...UniLiquidityPools.filter((item) => item.protocol === 'pancakeswapv3' && item.chain === 'ethereum').map(
+        (item) => item.address
+      ),
     ],
   },
   subgraphs: [
@@ -758,6 +783,9 @@ export const ParaswapConfigs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap Augustus Swapper v5
+    ],
+    arbitrum: [
+      '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap Augustus Swapper
     ],
   },
 };
@@ -2020,4 +2048,54 @@ export const RadiantConfigs: ProtocolConfig = {
       '0xf4b1486dd74d07706052a33d31d7c0aafd0659e1', // Radiant Capital
     ],
   },
+};
+
+export const CamelotConfigs: ProtocolConfig = {
+  protocol: 'camelot',
+  categories: ['trading'],
+  contracts: {
+    arbitrum: [
+      '0x6eccab422d763ac031210895c81787e87b43a652', // factory v2
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'camelot' && item.chain === 'arbitrum').map(
+        (item) => item.address
+      ),
+    ],
+  },
+  subgraphs: [
+    {
+      protocol: 'camelot',
+      chain: 'arbitrum',
+      version: 'univ2',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/camelotlabs/camelot-amm',
+    },
+  ],
+};
+
+export const Camelotv3Configs: ProtocolConfig = {
+  protocol: 'camelotv3',
+  categories: ['trading'],
+  contracts: {
+    arbitrum: [
+      '0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b', // factory v3
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'camelotv3' && item.chain === 'arbitrum').map(
+        (item) => item.address
+      ),
+    ],
+  },
+  subgraphs: [
+    {
+      protocol: 'camelotv3',
+      chain: 'arbitrum',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/camelotlabs/camelot-amm-v3',
+    },
+  ],
 };

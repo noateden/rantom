@@ -16,6 +16,8 @@ import {
   BinanceStakedEthConfigs,
   BlurConfigs,
   BungeeConfigs,
+  CamelotConfigs,
+  Camelotv3Configs,
   CarbonConfigs,
   ChaiConfigs,
   ChainlinkConfigs,
@@ -244,5 +246,7 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     gravita: new GravitaAdapter(GravitaConfigs, providers),
     gelato: new GelatoAdapter(GelatoConfigs, providers),
     radiant: new Aavev2Adapter(RadiantConfigs, providers),
+    camelot: new Uniswapv2Adapter(CamelotConfigs, providers),
+    camelotv3: new Uniswapv3Adapter(Camelotv3Configs, providers),
   };
 }
