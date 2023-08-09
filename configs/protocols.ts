@@ -243,6 +243,9 @@ export const BalancerConfigs: ProtocolConfig = {
       '0xba12222222228d8ba445958a75a0704d566bf2c8', // vault
       '0xc128a9954e6c874ea3d62ce62b468ba073093f25', // veBAL
     ],
+    arbitrum: [
+      '0xba12222222228d8ba445958a75a0704d566bf2c8', // vault
+    ],
   },
   customEventMapping: {
     [Signatures['Withdraw(address,uint256,uint256)']]: {
@@ -293,6 +296,9 @@ export const Aavev3Configs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2', // lending pool v3
+    ],
+    arbitrum: [
+      '0x794a61358d6845594f94dc1db02a252b5b4814ad', // lending pool v3
     ],
   },
 };
@@ -2002,6 +2008,16 @@ export const GelatoConfigs: ProtocolConfig = {
   contracts: {
     ethereum: [
       '0x3caca7b48d0573d793d3b0279b5f0029180e83b6', // Gelato Network
+    ],
+  },
+};
+
+export const RadiantConfigs: ProtocolConfig = {
+  protocol: 'radiant',
+  categories: ['lending'],
+  contracts: {
+    arbitrum: [
+      '0xf4b1486dd74d07706052a33d31d7c0aafd0659e1', // Radiant Capital
     ],
   },
 };

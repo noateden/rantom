@@ -213,5 +213,9 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...UniLiquidityPools.filter(
       (item: any) => (item.protocol === 'sushi' || item.protocol === 'sushiv3') && item.chain === 'arbitrum'
     ).map((item: any) => item.address),
+
+    '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault
+    '0x794a61358d6845594f94dc1db02a252b5b4814ad', // Aave v3 lending pool
+    '0xf4b1486dd74d07706052a33d31d7c0aafd0659e1', // Radiant v2 lending pool
   ],
 };

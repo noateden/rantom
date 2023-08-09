@@ -60,6 +60,7 @@ import {
   PancakeswapV3Configs,
   ParaswapConfigs,
   PendleConfigs,
+  RadiantConfigs,
   RaftConfigs,
   RaribleConfigs,
   RocketpoolConfigs,
@@ -242,5 +243,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     maverick: new MaverickAdapter(MaverickConfigs, providers),
     gravita: new GravitaAdapter(GravitaConfigs, providers),
     gelato: new GelatoAdapter(GelatoConfigs, providers),
+    radiant: new Aavev2Adapter(RadiantConfigs, providers),
   };
 }

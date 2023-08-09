@@ -73,11 +73,11 @@ export class DodoAdapter extends Adapter {
         const amount0 =
           signature === Signatures.SellBaseToken
             ? new BigNumber(event.payBase).dividedBy(new BigNumber(10).pow(token0.decimals)).toString(10)
-            : new BigNumber(event.receiveQuote).dividedBy(new BigNumber(10).pow(token0.decimals)).toString(10);
+            : new BigNumber(event.payQuote).dividedBy(new BigNumber(10).pow(token0.decimals)).toString(10);
         const amount1 =
           signature === Signatures.BuyBaseToken
             ? new BigNumber(event.receiveBase).dividedBy(new BigNumber(10).pow(token1.decimals)).toString(10)
-            : new BigNumber(event.payQuote).dividedBy(new BigNumber(10).pow(token1.decimals)).toString(10);
+            : new BigNumber(event.receiveQuote).dividedBy(new BigNumber(10).pow(token1.decimals)).toString(10);
 
         const user = event.seller ? normalizeAddress(event.seller) : normalizeAddress(event.buyer);
 
