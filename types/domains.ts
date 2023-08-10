@@ -45,6 +45,7 @@ export const Actions = [
   // these actions used for leveraged functional
   'increaseLeverage',
   'decreaseLeverage',
+  'liquidateLeverage',
 
   'openAccount',
   'closeAccount',

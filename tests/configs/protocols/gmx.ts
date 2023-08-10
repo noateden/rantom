@@ -116,7 +116,7 @@ export const GmxActionTestLogs: Array<TestLog> = [
       transactionIndex: '0x1',
     },
     adapter: new GmxAdapter(GmxConfigs, null),
-    action: 'liquidate',
+    action: 'liquidateLeverage',
   },
   {
     chain: 'arbitrum',

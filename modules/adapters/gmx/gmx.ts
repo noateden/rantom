@@ -25,7 +25,7 @@ const Signatures = {
 };
 
 export class GmxAdapter extends Adapter {
-  public readonly name: string = 'adapter.chai';
+  public readonly name: string = 'adapter.gmx';
 
   constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
     super(config, providers, {
@@ -94,44 +94,50 @@ export class GmxAdapter extends Adapter {
           const action: KnownAction =
             signature === Signatures.IncreasePosition ? 'increaseLeverage' : 'decreaseLeverage';
           const account = normalizeAddress(event.account);
-          const collateralDelta = new BigNumber(event.collateralDelta.toString())
-            .dividedBy(new BigNumber(10).pow(collateralToken.decimals))
-            .toString(10);
-          const sizeDelta = new BigNumber(event.sizeDelta.toString())
-            .dividedBy(new BigNumber(10).pow(indexToken.decimals))
-            .toString(10);
 
+          // gmx uses 30 decimals precision
+          const collateralDelta = new BigNumber(event.collateralDelta.toString()).dividedBy(1e30).toString(10);
+          const sizeDelta = new BigNumber(event.sizeDelta.toString()).dividedBy(1e30).toString(10);
+
+          // should be long or short
+          const leverageAction: string = event.isLong ? 'long' : 'short';
+
+          // on perpetual protocol increase/decrease leverage action
+          // amount should be position size (or delta) in USD
+          // the first token is collateral, the second is index token
           return {
             protocol: this.config.protocol,
             action: action,
             addresses: [account],
             tokens: [collateralToken, indexToken],
             tokenAmounts: [collateralDelta, sizeDelta],
-            readableString: `${account} ${action} ${collateralDelta} ${collateralToken.symbol} size ${sizeDelta} ${indexToken.symbol} on ${this.config.protocol} chain ${chain}`,
+            readableString: `${account} ${action} ${leverageAction} ${indexToken.symbol} size $${sizeDelta} on ${this.config.protocol} chain ${chain}`,
             addition: {
-              leverageAction: event.isLong ? 'long' : 'short',
+              leverageAction: leverageAction,
             },
           };
         }
       } else if (signature === Signatures.LiquidatePosition) {
         const collateralToken = await this.getWeb3Helper().getErc20Metadata(chain, event.collateralToken);
         const indexToken = await this.getWeb3Helper().getErc20Metadata(chain, event.indexToken);
+
         if (collateralToken && indexToken) {
           const account = normalizeAddress(event.account);
-          const collateralDelta = new BigNumber(event.collateral.toString())
-            .dividedBy(new BigNumber(10).pow(collateralToken.decimals))
-            .toString(10);
-          const sizeDelta = new BigNumber(event.size.toString())
-            .dividedBy(new BigNumber(10).pow(indexToken.decimals))
-            .toString(10);
+          const collateralDelta = new BigNumber(event.collateral.toString()).dividedBy(1e30).toString(10);
+          const sizeDelta = new BigNumber(event.size.toString()).dividedBy(1e30).toString(10);
+
+          const leverageAction: string = event.isLong ? 'long' : 'short';
 
           return {
             protocol: this.config.protocol,
-            action: 'liquidate',
+            action: 'liquidateLeverage',
             addresses: [account],
             tokens: [collateralToken, indexToken],
             tokenAmounts: [collateralDelta, sizeDelta],
-            readableString: `${account} liquidate ${collateralDelta} ${collateralToken.symbol} on ${this.config.protocol} chain ${chain}`,
+            readableString: `${account} liquidate ${leverageAction} ${indexToken.symbol} size $${sizeDelta} on ${this.config.protocol} chain ${chain}`,
+            addition: {
+              leverageAction: leverageAction,
+            },
           };
         }
       } else if (signature === Signatures.Transfer) {
