@@ -120,9 +120,9 @@ export class GmxAdapter extends Adapter {
             protocol: this.config.protocol,
             action: action,
             addresses: [account],
-            tokens: [collateralToken, indexToken],
+            tokens: [indexToken, collateralToken],
             tokenAmounts: [],
-            usdAmounts: [collateralDelta, sizeDelta],
+            usdAmounts: [sizeDelta, collateralDelta],
             readableString: `${account} ${action} ${indexToken.symbol} size $${sizeDelta} on ${this.config.protocol} chain ${chain}`,
           };
         }
@@ -147,8 +147,8 @@ export class GmxAdapter extends Adapter {
             protocol: this.config.protocol,
             action: action,
             addresses: [account],
-            tokens: [collateralToken, indexToken],
-            tokenAmounts: [collateralDelta, sizeDelta],
+            tokens: [indexToken, collateralToken],
+            tokenAmounts: [sizeDelta, collateralDelta],
             readableString: `${account} ${action} ${indexToken.symbol} size $${sizeDelta} on ${this.config.protocol} chain ${chain}`,
           };
         }
