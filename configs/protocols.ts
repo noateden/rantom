@@ -2099,3 +2099,14 @@ export const Camelotv3Configs: ProtocolConfig = {
     },
   ],
 };
+
+export const GmxConfigs: ProtocolConfig = {
+  protocol: 'gmx',
+  categories: ['trading', 'perpetual'],
+  contracts: {
+    arbitrum: [
+      '0x489ee077994b6658eafa855c308275ead8097c4a', // Vault
+      '0xd2d1162512f927a7e282ef43a362659e4f2a728f', // GMX staking
+    ],
+  },
+};

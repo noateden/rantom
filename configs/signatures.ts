@@ -506,4 +506,19 @@ export const Signatures: { [key: string]: string } = {
 
   // aurafinance locker
   'Staked(address,uint256,uint256)': '0x1449c6dd7851abc30abf37f57715f492010519147cc2652fbc38202c18a6ee90',
+
+  // gmx.io
+  'BuyUSDG(address,address,uint256,uint256,uint256)':
+    '0xab4c77c74cd32c85f35416cf03e7ce9e2d4387f7b7f2c1f4bf53daaecf8ea72d',
+  'SellUSDG(address,address,uint256,uint256,uint256)':
+    '0xd732b7828fa6cee72c285eac756fc66a7477e3dc22e22e7c432f1c265d40b483',
+  'Swap(address,address,address,uint256,uint256,uint256,uint256)':
+    '0x0874b2d545cb271cdbda4e093020c452328b24af12382ed62c4d00f5c26709db',
+  'IncreasePosition(bytes32,address,address,address,uint256,uint256,bool,uint256,uint256)':
+    '0x2fe68525253654c21998f35787a8d0f361905ef647c854092430ab65f2f15022',
+  'DecreasePosition(bytes32,address,address,address,uint256,uint256,bool,uint256,uint256)':
+    '0x93d75d64d1f84fc6f430a64fc578bdd4c1e090e90ea2d51773e626d19de56d30',
+  'LiquidatePosition(bytes32,address,address,address,bool,uint256,uint256,uint256,int256,uint256)':
+    '0x2e1f85a64a2f22cf2f0c42584e7c919ed4abe8d53675cff0f62bf1e95a1c676f',
+  'Claim(address,uint256)': '0x47cee97cb7acd717b3c0aa1435d004cd5b3c8c57d70dbceb4e4458bbd60e39d4',
 };

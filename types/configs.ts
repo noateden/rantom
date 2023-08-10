@@ -97,6 +97,7 @@ export type ProtocolCategory =
   | 'staking'
   | 'marketplace'
   | 'trading'
+  | 'perpetual'
   | 'dexAggregator'
   | 'service'
   | 'bridge';

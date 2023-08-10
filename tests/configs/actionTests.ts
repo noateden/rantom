@@ -31,6 +31,7 @@ import { FraxethActionTestLogs } from './protocols/fraxeth';
 import { FraxlendActionTestLogs } from './protocols/fraxlend';
 import { GearboxActionTestLogs } from './protocols/gearbox';
 import { GelatoActionTestLogs } from './protocols/gelato';
+import { GmxActionTestLogs } from './protocols/gmx';
 import { GravitaActionTestLogs } from './protocols/gravita';
 import { HopActionTestLogs } from './protocols/hop';
 import { IronbankActionTestLogs } from './protocols/ironbank';
@@ -128,4 +129,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...MaverickActionTestLogs,
   ...GravitaActionTestLogs,
   ...GelatoActionTestLogs,
+  ...GmxActionTestLogs,
 ];

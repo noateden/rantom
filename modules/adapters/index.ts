@@ -39,6 +39,7 @@ import {
   FraxswapConfigs,
   GearboxConfigs,
   GelatoConfigs,
+  GmxConfigs,
   GravitaConfigs,
   HopConfigs,
   InstadappConfigs,
@@ -120,6 +121,7 @@ import { FraxethAdapter } from './fraxeth/fraxeth';
 import { FraxlendAdapter } from './fraxlend/fraxlend';
 import { GearboxAdapter } from './gearbox/gearbox';
 import { GelatoAdapter } from './gelato/gelato';
+import { GmxAdapter } from './gmx/gmx';
 import { GravitaAdapter } from './gravita/gravita';
 import { HopAdapter } from './hop/hop';
 import { InstadappAdapter } from './instadapp/instadapp';
@@ -248,5 +250,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     radiant: new Aavev2Adapter(RadiantConfigs, providers),
     camelot: new Uniswapv2Adapter(CamelotConfigs, providers),
     camelotv3: new Uniswapv3Adapter(Camelotv3Configs, providers),
+    gmx: new GmxAdapter(GmxConfigs, providers),
   };
 }

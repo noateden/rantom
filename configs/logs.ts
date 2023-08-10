@@ -220,5 +220,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault
     '0x794a61358d6845594f94dc1db02a252b5b4814ad', // Aave v3 lending pool
     '0xf4b1486dd74d07706052a33d31d7c0aafd0659e1', // Radiant v2 lending pool
+    '0x489ee077994b6658eafa855c308275ead8097c4a', // Gmx vault
+    '0xd2d1162512f927a7e282ef43a362659e4f2a728f', // Gmx staking
   ],
 };

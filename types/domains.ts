@@ -42,6 +42,10 @@ export const Actions = [
   'executeRecipe', // execute recipe on DeFi Saver
   'executeTask', // execute task on gelato.network
 
+  // these actions used for leveraged functional
+  'increaseLeverage',
+  'decreaseLeverage',
+
   'openAccount',
   'closeAccount',
 ] as const;
