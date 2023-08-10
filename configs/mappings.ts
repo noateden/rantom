@@ -9000,4 +9000,335 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['OpenPosition(address,uint8,(bytes32,uint8,bool,uint96,uint96,uint96,uint96,uint96,uint96,uint96))']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'trader',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'uint8',
+        name: 'assetId',
+        type: 'uint8',
+      },
+      {
+        components: [
+          {
+            internalType: 'bytes32',
+            name: 'subAccountId',
+            type: 'bytes32',
+          },
+          {
+            internalType: 'uint8',
+            name: 'collateralId',
+            type: 'uint8',
+          },
+          {
+            internalType: 'bool',
+            name: 'isLong',
+            type: 'bool',
+          },
+          {
+            internalType: 'uint96',
+            name: 'amount',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'assetPrice',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'collateralPrice',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'newEntryPrice',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'feeUsd',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'remainPosition',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'remainCollateral',
+            type: 'uint96',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct Events.OpenPositionArgs',
+        name: 'args',
+        type: 'tuple',
+      },
+    ],
+  },
+  [Signatures[
+    'ClosePosition(address,uint8,(bytes32,uint8,uint8,bool,uint96,uint96,uint96,uint96,uint96,bool,uint96,uint96,uint96))'
+  ]]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'trader',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'uint8',
+        name: 'assetId',
+        type: 'uint8',
+      },
+      {
+        components: [
+          {
+            internalType: 'bytes32',
+            name: 'subAccountId',
+            type: 'bytes32',
+          },
+          {
+            internalType: 'uint8',
+            name: 'collateralId',
+            type: 'uint8',
+          },
+          {
+            internalType: 'uint8',
+            name: 'profitAssetId',
+            type: 'uint8',
+          },
+          {
+            internalType: 'bool',
+            name: 'isLong',
+            type: 'bool',
+          },
+          {
+            internalType: 'uint96',
+            name: 'amount',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'assetPrice',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'collateralPrice',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'profitAssetPrice',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'feeUsd',
+            type: 'uint96',
+          },
+          {
+            internalType: 'bool',
+            name: 'hasProfit',
+            type: 'bool',
+          },
+          {
+            internalType: 'uint96',
+            name: 'pnlUsd',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'remainPosition',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'remainCollateral',
+            type: 'uint96',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct Events.ClosePositionArgs',
+        name: 'args',
+        type: 'tuple',
+      },
+    ],
+  },
+  [Signatures[
+    'Liquidate(address,uint8,(bytes32,uint8,uint8,bool,uint96,uint96,uint96,uint96,uint96,bool,uint96,uint96))'
+  ]]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'trader',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'uint8',
+        name: 'assetId',
+        type: 'uint8',
+      },
+      {
+        components: [
+          {
+            internalType: 'bytes32',
+            name: 'subAccountId',
+            type: 'bytes32',
+          },
+          {
+            internalType: 'uint8',
+            name: 'collateralId',
+            type: 'uint8',
+          },
+          {
+            internalType: 'uint8',
+            name: 'profitAssetId',
+            type: 'uint8',
+          },
+          {
+            internalType: 'bool',
+            name: 'isLong',
+            type: 'bool',
+          },
+          {
+            internalType: 'uint96',
+            name: 'amount',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'assetPrice',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'collateralPrice',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'profitAssetPrice',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'feeUsd',
+            type: 'uint96',
+          },
+          {
+            internalType: 'bool',
+            name: 'hasProfit',
+            type: 'bool',
+          },
+          {
+            internalType: 'uint96',
+            name: 'pnlUsd',
+            type: 'uint96',
+          },
+          {
+            internalType: 'uint96',
+            name: 'remainCollateral',
+            type: 'uint96',
+          },
+        ],
+        indexed: false,
+        internalType: 'struct Events.LiquidateArgs',
+        name: 'args',
+        type: 'tuple',
+      },
+    ],
+  },
+  [Signatures['AddLiquidity(address,uint8,uint96,uint96,uint96,uint96)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'trader',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'uint8',
+        name: 'tokenId',
+        type: 'uint8',
+      },
+      {
+        indexed: false,
+        internalType: 'uint96',
+        name: 'tokenPrice',
+        type: 'uint96',
+      },
+      {
+        indexed: false,
+        internalType: 'uint96',
+        name: 'mlpPrice',
+        type: 'uint96',
+      },
+      {
+        indexed: false,
+        internalType: 'uint96',
+        name: 'mlpAmount',
+        type: 'uint96',
+      },
+      {
+        indexed: false,
+        internalType: 'uint96',
+        name: 'fee',
+        type: 'uint96',
+      },
+    ],
+  },
+  [Signatures['RemoveLiquidity(address,uint8,uint96,uint96,uint96,uint96)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'trader',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'uint8',
+        name: 'tokenId',
+        type: 'uint8',
+      },
+      {
+        indexed: false,
+        internalType: 'uint96',
+        name: 'tokenPrice',
+        type: 'uint96',
+      },
+      {
+        indexed: false,
+        internalType: 'uint96',
+        name: 'mlpPrice',
+        type: 'uint96',
+      },
+      {
+        indexed: false,
+        internalType: 'uint96',
+        name: 'mlpAmount',
+        type: 'uint96',
+      },
+      {
+        indexed: false,
+        internalType: 'uint96',
+        name: 'fee',
+        type: 'uint96',
+      },
+    ],
+  },
 };

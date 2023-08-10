@@ -521,4 +521,16 @@ export const Signatures: { [key: string]: string } = {
   'LiquidatePosition(bytes32,address,address,address,bool,uint256,uint256,uint256,int256,uint256)':
     '0x2e1f85a64a2f22cf2f0c42584e7c919ed4abe8d53675cff0f62bf1e95a1c676f',
   'Claim(address,uint256)': '0x47cee97cb7acd717b3c0aa1435d004cd5b3c8c57d70dbceb4e4458bbd60e39d4',
+
+  // mux.network
+  'OpenPosition(address,uint8,(bytes32,uint8,bool,uint96,uint96,uint96,uint96,uint96,uint96,uint96))':
+    '0xdb27855d3e94a6c985e1e59c77870a73484ef3c40d29fbfe14bb3e686da86efb',
+  'ClosePosition(address,uint8,(bytes32,uint8,uint8,bool,uint96,uint96,uint96,uint96,uint96,bool,uint96,uint96,uint96))':
+    '0x645156066afee3ede009256908a9e96538cc1ad681c46b10114f6ce98ebd0600',
+  'Liquidate(address,uint8,(bytes32,uint8,uint8,bool,uint96,uint96,uint96,uint96,uint96,bool,uint96,uint96))':
+    '0xd63e21d9ddaf46f8d28d121f06e7ed33fcc0300af1f8c794e69056dbf37e2d6a',
+  'AddLiquidity(address,uint8,uint96,uint96,uint96,uint96)':
+    '0x4b834bda1e32273014eaae217dcc631b391d25d7d056066e2f008aecd86083e8',
+  'RemoveLiquidity(address,uint8,uint96,uint96,uint96,uint96)':
+    '0xd20afc5b5a4edaae7399b3eb4737f26d8688e6a86e1b525ffbe063574583b1aa',
 };

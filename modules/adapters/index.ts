@@ -56,6 +56,7 @@ import {
   MetamaskConfigs,
   MorphoConfigs,
   MultichainConfigs,
+  MuxConfigs,
   OpenOceanConfigs,
   OpenseaConfigs,
   OptimismConfigs,
@@ -138,6 +139,7 @@ import { MaverickAdapter } from './maverick/maverick';
 import { MetamaskAdapter } from './metamask/metamask';
 import { MorphoAdapter } from './morpho/morpho';
 import { MultichainAdapter } from './multichain/multichain';
+import { MuxAdapter } from './mux/mux';
 import { OpenoceanAdapter } from './openocean/openocean';
 import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
@@ -251,5 +253,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     camelot: new Uniswapv2Adapter(CamelotConfigs, providers),
     camelotv3: new Uniswapv3Adapter(Camelotv3Configs, providers),
     gmx: new GmxAdapter(GmxConfigs, providers),
+    mux: new MuxAdapter(MuxConfigs, providers),
   };
 }

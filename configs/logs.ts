@@ -222,5 +222,6 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xf4b1486dd74d07706052a33d31d7c0aafd0659e1', // Radiant v2 lending pool
     '0x489ee077994b6658eafa855c308275ead8097c4a', // Gmx vault
     '0xd2d1162512f927a7e282ef43a362659e4f2a728f', // Gmx staking
+    '0x3e0199792ce69dc29a0a36146bfa68bd7c8d6633', // Mux liquidity pool
   ],
 };

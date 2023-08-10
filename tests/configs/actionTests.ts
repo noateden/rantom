@@ -46,6 +46,7 @@ import { MaverickActionTestLogs } from './protocols/maverick';
 import { MetamaskActionTestLogs } from './protocols/metamask';
 import { MorphoActionTestLogs } from './protocols/morpho';
 import { MultichainActionTestLogs } from './protocols/multichain';
+import { MuxActionTestLogs } from './protocols/mux';
 import { OpenseaActionTestLogs } from './protocols/opensea';
 import { OptimismActionTestLogs } from './protocols/optimism';
 import { PancakeswapActionTestLogs } from './protocols/pancakeswap';
@@ -130,4 +131,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...GravitaActionTestLogs,
   ...GelatoActionTestLogs,
   ...GmxActionTestLogs,
+  ...MuxActionTestLogs,
 ];

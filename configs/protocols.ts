@@ -15,6 +15,7 @@ import FraxlendPairs from './data/FraxlendPairs.json';
 import IronbankMarkets from './data/IronbankMarkets.json';
 import MaverickPools from './data/MaverickPools.json';
 import MorphoMarkets from './data/MorphoMarkets.json';
+import MuxAssets from './data/MuxAssets.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import SushiPools from './data/SushiPools.json';
@@ -2108,5 +2109,18 @@ export const GmxConfigs: ProtocolConfig = {
       '0x489ee077994b6658eafa855c308275ead8097c4a', // Vault
       '0xd2d1162512f927a7e282ef43a362659e4f2a728f', // GMX staking
     ],
+  },
+};
+
+export const MuxConfigs: ProtocolConfig = {
+  protocol: 'mux',
+  categories: ['perpetual'],
+  contracts: {
+    arbitrum: [
+      '0x3e0199792ce69dc29a0a36146bfa68bd7c8d6633', // Liquidity pool
+    ],
+  },
+  staticData: {
+    assets: MuxAssets,
   },
 };

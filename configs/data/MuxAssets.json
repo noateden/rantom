@@ -1,0 +1,92 @@
+[
+  {
+    "chain": "arbitrum",
+    "assetId": 0,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "USDC.e",
+      "decimals": 6,
+      "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "assetId": 1,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "USDT",
+      "decimals": 6,
+      "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "assetId": 2,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "assetId": 3,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "assetId": 4,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "assetId": 7,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "FTM",
+      "decimals": 18,
+      "address": "0xd42785d323e608b9e99fa542bd8b1000d4c2df37"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "assetId": 8,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "BUSD",
+      "decimals": 18,
+      "address": "0x31190254504622cefdfa55a7d3d272e6462629a2"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "assetId": 10,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "ARB",
+      "decimals": 18,
+      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "assetId": 11,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    }
+  }
+]
