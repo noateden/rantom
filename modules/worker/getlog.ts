@@ -125,6 +125,7 @@ export class GetlogWorker implements IWorkerProvider {
                         addresses: action.addresses,
                         tokens: action.tokens,
                         amounts: action.tokenAmounts,
+                        usdAmounts: action.usdAmounts,
                         addition: action.addition,
                       },
                     },
