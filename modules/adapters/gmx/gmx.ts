@@ -121,7 +121,8 @@ export class GmxAdapter extends Adapter {
             action: action,
             addresses: [account],
             tokens: [collateralToken, indexToken],
-            tokenAmounts: [collateralDelta, sizeDelta],
+            tokenAmounts: [],
+            usdAmounts: [collateralDelta, sizeDelta],
             readableString: `${account} ${action} ${indexToken.symbol} size $${sizeDelta} on ${this.config.protocol} chain ${chain}`,
           };
         }

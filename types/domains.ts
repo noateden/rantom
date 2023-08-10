@@ -59,10 +59,16 @@ export type KnownAction = (typeof Actions)[number];
 export interface TransactionActionBase {
   protocol: string;
   action: KnownAction;
-  tokens: Array<Token>;
-  tokenAmounts: Array<string>; // should match with tokens
   addresses: Array<string>;
   readableString: string;
+
+  tokens: Array<Token>;
+
+  // should match with tokens
+  tokenAmounts: Array<string>;
+
+  // some protocol return amount in USD
+  usdAmounts?: Array<string>;
 }
 
 export interface TransactionAction extends TransactionActionBase {

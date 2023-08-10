@@ -63,8 +63,7 @@ export class MuxAdapter extends Adapter {
 
           const amount = new BigNumber(args.amount.toString())
             .multipliedBy(new BigNumber(args.assetPrice.toString()))
-            .dividedBy(new BigNumber(10).pow(token.decimals))
-            .dividedBy(new BigNumber(10).pow(token.decimals))
+            .dividedBy(1e36)
             .toString(10);
 
           let action: KnownAction;
@@ -93,7 +92,8 @@ export class MuxAdapter extends Adapter {
             action: action,
             addresses: [trader],
             tokens: [collateral, token],
-            tokenAmounts: [amount],
+            tokenAmounts: [],
+            usdAmounts: [amount],
             readableString: `${trader} ${action} ${token.symbol} size $${amount} on ${this.config.protocol} chain ${chain}`,
           };
         }
