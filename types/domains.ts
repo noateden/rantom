@@ -43,9 +43,13 @@ export const Actions = [
   'executeTask', // execute task on gelato.network
 
   // these actions used for leveraged functional
-  'increaseLeverage',
-  'decreaseLeverage',
-  'liquidateLeverage',
+  'leverage',
+  'increaseShort',
+  'increaseLong',
+  'decreaseShort',
+  'decreaseLong',
+  'liquidateShort',
+  'liquidateLong',
 
   'openAccount',
   'closeAccount',
