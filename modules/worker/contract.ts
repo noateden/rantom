@@ -148,6 +148,7 @@ export class ContractWorker implements IContractWorker {
                         tokens: action.tokens,
                         amounts: action.tokenAmounts,
                         addition: action.addition,
+                        usdAmounts: action.usdAmounts,
                       },
                     },
                     upsert: true,
