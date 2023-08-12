@@ -24,6 +24,7 @@ import { FraxethContracts } from '../../configs/contracts/fraxeth';
 import { FraxlendContracts } from '../../configs/contracts/fraxlend';
 import { GearboxContracts } from '../../configs/contracts/gearbox';
 import { GelatoContracts } from '../../configs/contracts/gelato';
+import { GmxContracts } from '../../configs/contracts/gmx';
 import { GravitaContracts } from '../../configs/contracts/gravita';
 import { InstadappContracts } from '../../configs/contracts/instadapp';
 import { KyberswapClassicContracts } from '../../configs/contracts/kyperswap';
@@ -34,6 +35,7 @@ import { MakerContracts } from '../../configs/contracts/maker';
 import { MaverickContracts } from '../../configs/contracts/maverick';
 import { MetamaskContracts } from '../../configs/contracts/metamask';
 import { MorphoContracts } from '../../configs/contracts/morpho';
+import { MuxContracts } from '../../configs/contracts/mux';
 import { OpenoceanContracts } from '../../configs/contracts/openocean';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { ParaswapContracts } from '../../configs/contracts/paraswap';
@@ -101,5 +103,7 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     gelato: new ContractWorker(providers, GelatoContracts),
     defisaver: new ContractWorker(providers, DefisaverContracts),
     instadapp: new ContractWorker(providers, InstadappContracts),
+    gmx: new ContractWorker(providers, GmxContracts),
+    mux: new ContractWorker(providers, MuxContracts),
   };
 }
