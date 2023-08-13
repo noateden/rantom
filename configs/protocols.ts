@@ -2124,3 +2124,14 @@ export const MuxConfigs: ProtocolConfig = {
     assets: MuxAssets,
   },
 };
+
+export const HmxConfigs: ProtocolConfig = {
+  protocol: 'hmx',
+  categories: ['perpetual'],
+  contracts: {
+    arbitrum: [
+      '0xe7d96684a56e60ffbaae0fc0683879da48dab383', // Liquidity service
+      '0x0a8d9c0a4a039dde3cb825ff4c2f063f8b54313a', // Margin service
+    ],
+  },
+};

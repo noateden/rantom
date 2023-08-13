@@ -23,6 +23,12 @@
     "decimals": 18,
     "address": "0xec76e8fe6e2242e6c2117caa244b9e2de1569923"
   },
+  "sGLP": {
+    "chain": "arbitrum",
+    "address": "0x5402b5f40310bded796c7d0f3ff6683f5c0cffdf",
+    "symbol": "sGLP",
+    "decimals": 18
+  },
   "ALEPH": {
     "chain": "arbitrum",
     "symbol": "ALEPH",

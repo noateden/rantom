@@ -33,6 +33,7 @@ import { GearboxActionTestLogs } from './protocols/gearbox';
 import { GelatoActionTestLogs } from './protocols/gelato';
 import { GmxActionTestLogs } from './protocols/gmx';
 import { GravitaActionTestLogs } from './protocols/gravita';
+import { HmxActionTestLogs } from './protocols/hmx';
 import { HopActionTestLogs } from './protocols/hop';
 import { IronbankActionTestLogs } from './protocols/ironbank';
 import { KyberswapActionTestLogs } from './protocols/kyberswap';
@@ -132,4 +133,5 @@ export const ActionTestLogs: Array<TestLog> = [
   ...GelatoActionTestLogs,
   ...GmxActionTestLogs,
   ...MuxActionTestLogs,
+  ...HmxActionTestLogs,
 ];

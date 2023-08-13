@@ -9331,4 +9331,382 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['AddLiquidity(address,address,uint256,uint256,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'aum',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'supply',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'usdDebt',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'mintAmount',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['RemoveLiquidity(address,address,uint256,uint256,uint256,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'tokenOut',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'liquidity',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'aum',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'supply',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'usdDebt',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountOut',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['CollectAddLiquidityFee(address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'user',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'feeUsd',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'fee',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['CollectRemoveLiquidityFee(address,address,uint256,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'user',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'feeUsd',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'fee',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['LogDepositCollateral(address,address,address,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'primaryAccount',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'subAccount',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['LogWithdrawCollateral(address,address,address,uint256,address)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'primaryAccount',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'subAccount',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'receiver',
+        type: 'address',
+      },
+    ],
+  },
+  [Signatures[
+    'LogIncreasePosition(bytes32,address,uint8,address,uint256,int256,int256,uint256,uint256,int256,int256,uint256,uint256)'
+  ]]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'positionId',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'primaryAccount',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint8',
+        name: 'subAccountId',
+        type: 'uint8',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'subAccount',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'marketIndex',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'int256',
+        name: 'size',
+        type: 'int256',
+      },
+      {
+        indexed: false,
+        internalType: 'int256',
+        name: 'increasedSize',
+        type: 'int256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'avgEntryPrice',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'entryBorrowingRate',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'int256',
+        name: 'lastFundingAccrued',
+        type: 'int256',
+      },
+      {
+        indexed: false,
+        internalType: 'int256',
+        name: 'realizedPnl',
+        type: 'int256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'reserveValueE30',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'price',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures[
+    'LogDecreasePosition(bytes32,address,uint8,address,uint256,int256,int256,uint256,uint256,int256,int256,uint256,uint256)'
+  ]]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'bytes32',
+        name: 'positionId',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'primaryAccount',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint8',
+        name: 'subAccountId',
+        type: 'uint8',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'subAccount',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'marketIndex',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'int256',
+        name: 'size',
+        type: 'int256',
+      },
+      {
+        indexed: false,
+        internalType: 'int256',
+        name: 'decreasedSize',
+        type: 'int256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'avgEntryPrice',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'entryBorrowingRate',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'int256',
+        name: 'lastFundingAccrued',
+        type: 'int256',
+      },
+      {
+        indexed: false,
+        internalType: 'int256',
+        name: 'realizedPnl',
+        type: 'int256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'reserveValueE30',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'price',
+        type: 'uint256',
+      },
+    ],
+  },
 };

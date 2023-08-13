@@ -41,6 +41,7 @@ import {
   GelatoConfigs,
   GmxConfigs,
   GravitaConfigs,
+  HmxConfigs,
   HopConfigs,
   InstadappConfigs,
   IronbankConfigs,
@@ -124,6 +125,7 @@ import { GearboxAdapter } from './gearbox/gearbox';
 import { GelatoAdapter } from './gelato/gelato';
 import { GmxAdapter } from './gmx/gmx';
 import { GravitaAdapter } from './gravita/gravita';
+import { HmxAdapter } from './hmx/hmx';
 import { HopAdapter } from './hop/hop';
 import { InstadappAdapter } from './instadapp/instadapp';
 import { IronbankAdapter } from './ironbank/ironbank';
@@ -254,5 +256,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     camelotv3: new Uniswapv3Adapter(Camelotv3Configs, providers),
     gmx: new GmxAdapter(GmxConfigs, providers),
     mux: new MuxAdapter(MuxConfigs, providers),
+    hmx: new HmxAdapter(HmxConfigs, providers),
   };
 }

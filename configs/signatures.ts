@@ -533,4 +533,22 @@ export const Signatures: { [key: string]: string } = {
     '0x4b834bda1e32273014eaae217dcc631b391d25d7d056066e2f008aecd86083e8',
   'RemoveLiquidity(address,uint8,uint96,uint96,uint96,uint96)':
     '0xd20afc5b5a4edaae7399b3eb4737f26d8688e6a86e1b525ffbe063574583b1aa',
+
+  // hmx.org
+  'AddLiquidity(address,address,uint256,uint256,uint256,uint256,uint256)':
+    '0x38dc38b96482be64113daffd8d464ebda93e856b70ccfc605e69ccf892ab981e',
+  'RemoveLiquidity(address,address,uint256,uint256,uint256,uint256,uint256)':
+    '0x87b9679bb9a4944bafa98c267e7cd4a00ab29fed48afdefae25f0fca5da27940',
+  'CollectAddLiquidityFee(address,address,uint256,uint256)':
+    '0x679774f179c892530fe3dc723b7f34a85f1ff88c607e4aa0efb842d846c9b017',
+  'CollectRemoveLiquidityFee(address,address,uint256,uint256)':
+    '0x8f924d7feb4dab4caf9b453296a6f4f826801a1decbc6f9c3d080947511c0385',
+  'LogDepositCollateral(address,address,address,uint256)':
+    '0x2f5b85fe8d9b983096143251707f847598823cf6bdaa0765cb22016f89c16707',
+  'LogWithdrawCollateral(address,address,address,uint256,address)':
+    '0xd2227e3b979e395b897a2e140dfab95c5e1a8187da33a3f5d149791aecc3c3d5',
+  'LogIncreasePosition(bytes32,address,uint8,address,uint256,int256,int256,uint256,uint256,int256,int256,uint256,uint256)':
+    '0x42371c9e0209a6156bffa0a0885b6e267ebd414839a5bbf0e3cd1a6513bd576b',
+  'LogDecreasePosition(bytes32,address,uint8,address,uint256,int256,int256,uint256,uint256,int256,int256,uint256,uint256)':
+    '0x297c02479f01f3699adc73f58e91f5c4dfe76fb2da099070f5150b05fe67ebe4',
 };
