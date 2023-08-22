@@ -34,7 +34,6 @@ export class ClipperAdapter extends Adapter {
       const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event.outAsset);
 
       if (token0 && token1) {
-        const sender = await this.getSenderAddress(options);
         const recipient = normalizeAddress(event.recipient);
         const amount0 = new BigNumber(event.inAmount).dividedBy(new BigNumber(10).pow(token0.decimals)).toString(10);
         const amount1 = new BigNumber(event.outAmount).dividedBy(new BigNumber(10).pow(token1.decimals)).toString(10);
@@ -42,10 +41,10 @@ export class ClipperAdapter extends Adapter {
         return {
           protocol: this.config.protocol,
           action: 'swap',
-          addresses: [sender, recipient],
+          addresses: [recipient],
           tokens: [token0, token1],
           tokenAmounts: [amount0, amount1],
-          readableString: `${sender} swap ${amount0} ${token0.symbol} for ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
+          readableString: `${recipient} swap ${amount0} ${token0.symbol} for ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
         };
       }
     }
