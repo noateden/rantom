@@ -116,6 +116,7 @@ export const SushiConfigs: ProtocolConfig = {
       '0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac', // uni v2 Factory
       '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // masterchef
       '0xef0881ec094552b2e128cf945ef17a6752b4ec5d', // masterchef v2
+      '0x8798249c2e607446efb7ad49ec89dd1865ff4272', // xSUSHI
 
       // top pools
       ...UniLiquidityPools.filter((item) => item.protocol === 'sushi' && item.chain === 'ethereum').map(
@@ -1907,6 +1908,9 @@ export const MetamaskConfigs: ProtocolConfig = {
     ethereum: [
       '0x881d40237659c251811cec9c364ef91dc08d300c', // Swap router
     ],
+    arbitrum: [
+      '0x9dda6ef3d919c9bc8885d5560999a3640431e8e6', // Swap router
+    ],
   },
 };
 
@@ -2138,7 +2142,7 @@ export const HmxConfigs: ProtocolConfig = {
 
 export const OneinchConfigs: ProtocolConfig = {
   protocol: 'oneinch',
-  categories: ['trading'],
+  categories: ['dexAggregator'],
   contracts: {
     ethereum: [
       '0x1111111254eeb25477b68fb85ed929f73a960582', // Aggregator v5

@@ -258,7 +258,13 @@
     "address": "0x2354c8e9ea898c751f1a15addeb048714d667f96"
   },
   "ETH": {
-    "chain": "ethereum",
+    "chain": "arbitrum",
+    "symbol": "ETH",
+    "decimals": 18,
+    "address": "0x0000000000000000000000000000000000000000"
+  },
+  "NativeCoin": {
+    "chain": "arbitrum",
     "symbol": "ETH",
     "decimals": 18,
     "address": "0x0000000000000000000000000000000000000000"

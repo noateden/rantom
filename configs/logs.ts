@@ -135,6 +135,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xae78736cd615f374d3085123a210448e74fc6393', // Rocketpool rETH
     '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // Sushi masterchef
     '0xef0881ec094552b2e128cf945ef17a6752b4ec5d', // Sushi masterchef v2
+    '0x8798249c2e607446efb7ad49ec89dd1865ff4272', // Sushi xSUSHI
     '0x5954ab967bc958940b7eb73ee84797dc8a2afbb9', // APE staking
     '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // 0x exchange
     '0xa7df60785e556d65292a2c9a077bb3a8fbf048bc', // Gearbox airdrop distributor
@@ -225,6 +226,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xd2d1162512f927a7e282ef43a362659e4f2a728f', // Gmx staking
     '0x3e0199792ce69dc29a0a36146bfa68bd7c8d6633', // Mux liquidity pool
     '0xe7b0ce0526fbe3969035a145c9e9691d4d9d216c', // Clipper exchange
+    '0x9dda6ef3d919c9bc8885d5560999a3640431e8e6', // Metamask swap router
   ],
 };
 
