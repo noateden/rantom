@@ -34,4 +34,31 @@ export const SushiContracts: Array<Contract> = [
       '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef', // Transfer
     ],
   },
+  {
+    chain: 'ethereum',
+    protocol: 'sushi',
+    abi: {},
+    address: '0xf5bce5077908a1b7370b9ae04adc565ebd643966',
+    birthday: 12094175,
+    events: [],
+    topics: [
+      '0xb2346165e782564f17f5b7e555c21f4fd96fbc93458572bf0113ea35a958fc55', // LogDeposit
+      '0xad9ab9ee6953d4d177f4a03b3a3ac3178ffcb9816319f348060194aa76b14486', // LogWithdraw
+      '0x3be9b85936d5d30a1655ea116a17ee3d827b2cd428cc026ce5bf2ac46a223204', // LogFlashLoan
+    ],
+  },
+  {
+    chain: 'arbitrum',
+    protocol: 'sushi',
+    abi: {},
+    address: '0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3',
+    birthday: 226981,
+    events: [],
+    topics: [
+      '0x02d7e648dd130fc184d383e55bb126ac4c9c60e8f94bf05acdf557ba2d540b47', // MinichefDeposit
+      '0x8166bf25f8a2b7ed3c85049207da4358d16edbed977d23fa2ee6f0dde3ec2132', // MinichefWithdraw
+      '0x2cac5e20e1541d836381527a43f651851e302817b71dc8e810284e69210c1c6b', // MinichefEmergencyWithdraw
+      '0x71bab65ced2e5750775a0613be067df48ef06cf92a496ebf7663ae0660924954', // MinichefHarvest
+    ],
+  },
 ];

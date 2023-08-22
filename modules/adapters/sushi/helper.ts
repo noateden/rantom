@@ -2,6 +2,7 @@ import Web3 from 'web3';
 
 import MasterchefAbi from '../../../configs/abi/sushi/masterchef.json';
 import MasterchefV2Abi from '../../../configs/abi/sushi/masterchefV2.json';
+import MinichefAbi from '../../../configs/abi/sushi/minichef.json';
 import UniswapV2Pool from '../../../configs/abi/uniswap/UniswapV2Pair.json';
 import EnvConfig from '../../../configs/envConfig';
 import { normalizeAddress } from '../../../lib/helper';
@@ -17,7 +18,7 @@ export interface SushiMasterchefPoolInfo {
   pid: number;
   chain: string;
   address: string;
-  version: 'masterchef' | 'masterchefV2';
+  version: 'masterchef' | 'masterchefV2' | 'minichef';
   lpToken: UniswapLpToken;
 }
 
@@ -25,7 +26,7 @@ export class SushiHelper {
   public static async getAllPool(
     chain: string,
     masterchefAddress: string,
-    version: 'masterchef' | 'masterchefV2'
+    version: 'masterchef' | 'masterchefV2' | 'minichef'
   ): Promise<Array<SushiMasterchefPoolInfo>> {
     const pools: Array<SushiMasterchefPoolInfo> = [];
 
@@ -35,6 +36,9 @@ export class SushiHelper {
     let contract = new web3.eth.Contract(MasterchefAbi as any, masterchefAddress);
     if (version === 'masterchefV2') {
       contract = new web3.eth.Contract(MasterchefV2Abi as any, masterchefAddress);
+    }
+    if (version === 'minichef') {
+      contract = new web3.eth.Contract(MinichefAbi as any, masterchefAddress);
     }
 
     // get the pool length
@@ -72,7 +76,9 @@ export class SushiHelper {
                 token1,
               },
             });
-            console.info(`Got pool pid:${i} ${token0.symbol}-${token1.symbol}`);
+            console.info(
+              `Got pool ${chain} ${masterchefAddress} ${version} pid:${i} ${token0.symbol}-${token1.symbol}`
+            );
           }
         }
       } catch (e: any) {

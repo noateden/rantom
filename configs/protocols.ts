@@ -117,6 +117,7 @@ export const SushiConfigs: ProtocolConfig = {
       '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd', // masterchef
       '0xef0881ec094552b2e128cf945ef17a6752b4ec5d', // masterchef v2
       '0x8798249c2e607446efb7ad49ec89dd1865ff4272', // xSUSHI
+      '0xf5bce5077908a1b7370b9ae04adc565ebd643966', // Bentobox
 
       // top pools
       ...UniLiquidityPools.filter((item) => item.protocol === 'sushi' && item.chain === 'ethereum').map(
@@ -125,6 +126,7 @@ export const SushiConfigs: ProtocolConfig = {
     ],
     arbitrum: [
       '0xc35dadb65012ec5796536bd9864ed8773abc74c4', // factory v2
+      '0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3', // minichef
 
       // top pools
       ...UniLiquidityPools.filter((item) => item.protocol === 'sushi' && item.chain === 'arbitrum').map(
@@ -157,6 +159,92 @@ export const SushiConfigs: ProtocolConfig = {
       endpoint: 'https://api.thegraph.com/subgraphs/name/sushiswap/arbitrum-exchange',
     },
   ],
+  customEventMapping: {
+    [Signatures['Deposit(address,uint256,uint256,address)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'user',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'uint256',
+          name: 'pid',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount',
+          type: 'uint256',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'to',
+          type: 'address',
+        },
+      ],
+    },
+    [Signatures['Withdraw(address,uint256,uint256,address)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'user',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'uint256',
+          name: 'pid',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount',
+          type: 'uint256',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'to',
+          type: 'address',
+        },
+      ],
+    },
+    [Signatures['EmergencyWithdraw(address,uint256,uint256,address)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'user',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'uint256',
+          name: 'pid',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount',
+          type: 'uint256',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'to',
+          type: 'address',
+        },
+      ],
+    },
+  },
 };
 
 export const Sushiv3Configs: ProtocolConfig = {

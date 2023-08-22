@@ -555,4 +555,13 @@ export const Signatures: { [key: string]: string } = {
   // clipper.exchange
   'Swapped(address,address,address,uint256,uint256,bytes)':
     '0x4be05c8d54f5e056ab2cfa033e9f582057001268c3e28561bb999d35d2c8f2c8',
+
+  // sushi
+  'Harvest(address,uint256,uint256)': '0x71bab65ced2e5750775a0613be067df48ef06cf92a496ebf7663ae0660924954',
+  'LogDeposit(address,address,address,uint256,uint256)':
+    '0xb2346165e782564f17f5b7e555c21f4fd96fbc93458572bf0113ea35a958fc55',
+  'LogWithdraw(address,address,address,uint256,uint256)':
+    '0xad9ab9ee6953d4d177f4a03b3a3ac3178ffcb9816319f348060194aa76b14486',
+  'LogFlashLoan(address,address,uint256,uint256,address)':
+    '0x3be9b85936d5d30a1655ea116a17ee3d827b2cd428cc026ce5bf2ac46a223204',
 };
