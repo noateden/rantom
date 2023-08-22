@@ -6,9 +6,19 @@ import { RpcWrapperProvider } from '../../services/rpc';
 import SentryProvider from '../../services/sentry';
 import { Web3HelperProvider } from '../../services/web3';
 import { EventMapping, ProtocolConfig } from '../../types/configs';
-import { KnownAction, ProtocolDailyStats, ProtocolSnapshotStats, TransactionAction } from '../../types/domains';
+import {
+  KnownAction,
+  ProtocolDailyStats,
+  ProtocolSnapshotStats,
+  TransactionAction,
+  TransactionFunction,
+} from '../../types/domains';
 import { GlobalProviders, IAdapter, IRpcWrapperProvider, IWeb3HelperProvider } from '../../types/namespaces';
-import { AdapterParseContractInfoOptions, AdapterParseLogOptions } from '../../types/options';
+import {
+  AdapterParseContractInfoOptions,
+  AdapterParseFunctionCallDataOptions,
+  AdapterParseLogOptions,
+} from '../../types/options';
 
 export class Adapter implements IAdapter {
   public readonly name: string = 'adapter';
@@ -44,6 +54,12 @@ export class Adapter implements IAdapter {
   }
 
   public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
+    return null;
+  }
+
+  public async tryParsingFunctionCallData(
+    options: AdapterParseFunctionCallDataOptions
+  ): Promise<TransactionFunction | null> {
     return null;
   }
 

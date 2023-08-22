@@ -5,7 +5,7 @@ import { AddressZero } from '../../configs/constants';
 import EnvConfig from '../../configs/envConfig';
 import { normalizeAddress } from '../../lib/helper';
 import logger from '../../lib/logger';
-import { Transaction, TransactionAction, TransactionTransfer } from '../../types/domains';
+import { Transaction, TransactionAction, TransactionFunction, TransactionTransfer } from '../../types/domains';
 import { GlobalProviders, IAdapter, IParserProvider, ITransferParser } from '../../types/namespaces';
 import { ParseTransactionOptions } from '../../types/options';
 import { getAdapters } from '../adapters';
@@ -51,9 +51,22 @@ export class ParserProvider implements IParserProvider {
           version: ParserVersion,
           from: receipt.from ? normalizeAddress(receipt.from) : '',
           to: receipt.to ? normalizeAddress(receipt.to) : '',
+          functions: [],
           actions: [],
           transfers: [],
         };
+
+        for (const adapter of this.adapters) {
+          const decodedFunction: TransactionFunction | null = await adapter.tryParsingFunctionCallData({
+            chain: blockchain.name,
+            address: normalizeAddress(tx.to ? tx.to : AddressZero),
+            input: tx.input,
+            context: receipt,
+          });
+          if (decodedFunction) {
+            transaction.functions.push(decodedFunction);
+          }
+        }
 
         // for every log, we try to found the signature
         for (const log of receipt.logs) {

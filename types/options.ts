@@ -32,6 +32,15 @@ export interface AdapterParseContractInfoOptions {
   address: string;
 }
 
+export interface AdapterParseFunctionCallDataOptions {
+  chain: string;
+  address: string; // contract address
+  input: string;
+
+  // full transaction receipt
+  context: any;
+}
+
 export type MultiCallResponse<T> = T | null;
 
 export interface MulticallCall {

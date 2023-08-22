@@ -9709,4 +9709,44 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Swapped(address,address,address,uint256,uint256,bytes)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'inAsset',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'outAsset',
+        type: 'address',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'recipient',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'inAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'outAmount',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes',
+        name: 'auxiliaryData',
+        type: 'bytes',
+      },
+    ],
+  },
 };

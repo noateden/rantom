@@ -11,10 +11,12 @@ import {
   TokenOracleResult,
   Transaction,
   TransactionAction,
+  TransactionFunction,
   TransactionTransfer,
 } from './domains';
 import {
   AdapterParseContractInfoOptions,
+  AdapterParseFunctionCallDataOptions,
   AdapterParseLogOptions,
   ApiQueryLogOptions,
   OracleGetTokenPriceOptions,
@@ -69,7 +71,12 @@ export interface IAdapter extends IProvider {
   eventMappings: { [key: string]: EventMapping };
 
   supportedSignature(signature: string): boolean;
+
+  // try parsing actions from transaction logs
   tryParsingActions: (options: AdapterParseLogOptions) => Promise<TransactionAction | null>;
+
+  // try to get actions from function call data
+  tryParsingFunctionCallData: (options: AdapterParseFunctionCallDataOptions) => Promise<TransactionFunction | null>;
 
   // return address label or null on nothing found
   tryParsingContractInfo: (options: AdapterParseContractInfoOptions) => Promise<string | null>;

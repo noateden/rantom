@@ -202,6 +202,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xcba828153d3a85b30b5b912e1f2dacac5816ae9d', // Instadapp account implementation
     '0xce7a977cac4a481bc84ac06b2da0df614e621cf3', // Defisaver logger
     '0x1d6dedb49af91a11b5c5f34954fd3e8cc4f03a86', // Defisaver recipe executor
+    '0x655edce464cc797526600a462a8154650eee4b77', // Clipper exchange
   ],
 
   arbitrum: [
@@ -223,5 +224,13 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x489ee077994b6658eafa855c308275ead8097c4a', // Gmx vault
     '0xd2d1162512f927a7e282ef43a362659e4f2a728f', // Gmx staking
     '0x3e0199792ce69dc29a0a36146bfa68bd7c8d6633', // Mux liquidity pool
+    '0xe7b0ce0526fbe3969035a145c9e9691d4d9d216c', // Clipper exchange
+  ],
+};
+
+// will parse transaction input if transaction is calling to these contracts
+export const ContractWhitelistedInputData: { [key: string]: Array<string> } = {
+  ethereum: [
+    '0x1111111254eeb25477b68fb85ed929f73a960582', // 1inch aggregator v5
   ],
 };

@@ -551,4 +551,8 @@ export const Signatures: { [key: string]: string } = {
     '0x42371c9e0209a6156bffa0a0885b6e267ebd414839a5bbf0e3cd1a6513bd576b',
   'LogDecreasePosition(bytes32,address,uint8,address,uint256,int256,int256,uint256,uint256,int256,int256,uint256,uint256)':
     '0x297c02479f01f3699adc73f58e91f5c4dfe76fb2da099070f5150b05fe67ebe4',
+
+  // clipper.exchange
+  'Swapped(address,address,address,uint256,uint256,bytes)':
+    '0x4be05c8d54f5e056ab2cfa033e9f582057001268c3e28561bb999d35d2c8f2c8',
 };

@@ -21,6 +21,7 @@ import {
   CarbonConfigs,
   ChaiConfigs,
   ChainlinkConfigs,
+  ClipperConfigs,
   CompoundConfigs,
   Compoundv3Configs,
   ConicConfigs,
@@ -58,6 +59,7 @@ import {
   MorphoConfigs,
   MultichainConfigs,
   MuxConfigs,
+  OneinchConfigs,
   OpenOceanConfigs,
   OpenseaConfigs,
   OptimismConfigs,
@@ -106,6 +108,7 @@ import { BungeeAdapter } from './bungee/bungee';
 import { CarbonAdapter } from './carbon/carbon';
 import { ChaiAdapter } from './chai/chai';
 import { ChainlinkAdapter } from './chainlink/chainlink';
+import { ClipperAdapter } from './clipper/clipper';
 import { CompoundAdapter } from './compound/compound';
 import { Compoundv3Adapter } from './compound/compoundv3';
 import { ConicAdapter } from './conic/conic';
@@ -142,6 +145,7 @@ import { MetamaskAdapter } from './metamask/metamask';
 import { MorphoAdapter } from './morpho/morpho';
 import { MultichainAdapter } from './multichain/multichain';
 import { MuxAdapter } from './mux/mux';
+import { OneinchAdapter } from './oneinch/oneinch';
 import { OpenoceanAdapter } from './openocean/openocean';
 import { OpenseaAdapter } from './opensea/opensea';
 import { OptimismAdapter } from './optimism/optimism';
@@ -257,5 +261,7 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     gmx: new GmxAdapter(GmxConfigs, providers),
     mux: new MuxAdapter(MuxConfigs, providers),
     hmx: new HmxAdapter(HmxConfigs, providers),
+    oneinch: new OneinchAdapter(OneinchConfigs, providers),
+    clipper: new ClipperAdapter(ClipperConfigs, providers),
   };
 }

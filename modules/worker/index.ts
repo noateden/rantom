@@ -10,6 +10,7 @@ import { BlurContracts } from '../../configs/contracts/blur';
 import { BungeeContracts } from '../../configs/contracts/bungee';
 import { CarbonContracts } from '../../configs/contracts/carbon';
 import { ChaiContracts } from '../../configs/contracts/chai';
+import { ClipperContracts } from '../../configs/contracts/clipper';
 import { Compoundv3Contracts } from '../../configs/contracts/compound';
 import { ConicContracts } from '../../configs/contracts/conic';
 import { ConvexContracts } from '../../configs/contracts/convex';
@@ -105,5 +106,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     instadapp: new ContractWorker(providers, InstadappContracts),
     gmx: new ContractWorker(providers, GmxContracts),
     mux: new ContractWorker(providers, MuxContracts),
+    clipper: new ContractWorker(providers, ClipperContracts),
   };
 }

@@ -2135,3 +2135,29 @@ export const HmxConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const OneinchConfigs: ProtocolConfig = {
+  protocol: 'oneinch',
+  categories: ['trading'],
+  contracts: {
+    ethereum: [
+      '0x1111111254eeb25477b68fb85ed929f73a960582', // Aggregator v5
+    ],
+    arbitrum: [
+      '0x1111111254eeb25477b68fb85ed929f73a960582', // Aggregator v5
+    ],
+  },
+};
+
+export const ClipperConfigs: ProtocolConfig = {
+  protocol: 'clipper',
+  categories: ['trading'],
+  contracts: {
+    ethereum: [
+      '0x655edce464cc797526600a462a8154650eee4b77', // Clipper Exchange
+    ],
+    arbitrum: [
+      '0xe7b0ce0526fbe3969035a145c9e9691d4d9d216c', // Clipper Exchange
+    ],
+  },
+};

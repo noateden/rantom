@@ -77,6 +77,12 @@ export interface TransactionAction extends TransactionActionBase {
   subActions?: Array<TransactionActionBase>;
 }
 
+// data parse from transaction input
+export interface TransactionFunction extends TransactionActionBase {
+  signature: string;
+  contract: string; // to contract
+}
+
 export interface TransactionTransfer {
   token: Token | NonFungibleTokenMetadata;
   from: string;
@@ -100,6 +106,7 @@ export interface Transaction {
   status: boolean;
   version: string;
   timestamp: number;
+  functions: Array<TransactionFunction>;
   actions: Array<TransactionAction>;
   transfers: Array<TransactionTransfer>;
 }
