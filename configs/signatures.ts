@@ -564,4 +564,12 @@ export const Signatures: { [key: string]: string } = {
     '0xad9ab9ee6953d4d177f4a03b3a3ac3178ffcb9816319f348060194aa76b14486',
   'LogFlashLoan(address,address,uint256,uint256,address)':
     '0x3be9b85936d5d30a1655ea116a17ee3d827b2cd428cc026ce5bf2ac46a223204',
+
+  // basin.exchange
+  'Swap(address,address,uint256,uint256,address)': '0xb39c9bc43f811e1a7ce159c5f147458fdb80266bf23c17322013316e27e086d0',
+  'AddLiquidity(uint256[],uint256,address)': '0x91a6d8e872c9887412278189089c9936e99450551cc971309ff282f79bfef56f',
+  'RemoveLiquidity(uint256,uint256[],address)': '0xf4358595ad4956678c919635516976c76f95de0ce5a56b61ef35931b8c05dc04',
+  'RemoveLiquidityOneToken(uint256,address,uint256,address)':
+    '0x6f08fb00dac40d918cc84a5080754603d4f9a13a2437d87e06fd75ab944c7575',
+  'Shift(uint256[],address,uint256,address)': '0x1ee4a8e2e74af07abadd6b0b5f8f8bd96a54656e3bb7d987c5075a0c8b9f0df5',
 };

@@ -5,6 +5,7 @@ import { AnkrContracts } from '../../configs/contracts/ankr';
 import { ArrakisContracts } from '../../configs/contracts/arrakis';
 import { AurafinanceContracts } from '../../configs/contracts/aurafinance';
 import { BalancerContracts } from '../../configs/contracts/balancer';
+import { BasinContracts } from '../../configs/contracts/basin';
 import { BinanceContracts } from '../../configs/contracts/binance';
 import { BlurContracts } from '../../configs/contracts/blur';
 import { BungeeContracts } from '../../configs/contracts/bungee';
@@ -107,5 +108,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     gmx: new ContractWorker(providers, GmxContracts),
     mux: new ContractWorker(providers, MuxContracts),
     clipper: new ContractWorker(providers, ClipperContracts),
+    basin: new ContractWorker(providers, BasinContracts),
   };
 }

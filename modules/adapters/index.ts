@@ -11,6 +11,7 @@ import {
   AurafinanceConfigs,
   BalancerConfigs,
   BancorConfigs,
+  BasinConfigs,
   BeanstalkConfigs,
   BeefyConfigs,
   BinanceStakedEthConfigs,
@@ -100,6 +101,7 @@ import { ArrakisAdapter } from './arrakis/arrakis';
 import { AurafinanceAdapter } from './aurafinance/aurafinance';
 import { BalancerAdapter } from './balancer/balancer';
 import { BancorAdapter } from './bancor/bancor';
+import { BasinAdapter } from './basin/basin';
 import { BeanstalkAdapter } from './beanstalk/beanstalk';
 import { BeefyAdapter } from './beefy/beefy';
 import { BinanceStakedAdapter } from './binance/stakedEth';
@@ -263,5 +265,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     hmx: new HmxAdapter(HmxConfigs, providers),
     oneinch: new OneinchAdapter(OneinchConfigs, providers),
     clipper: new ClipperAdapter(ClipperConfigs, providers),
+    basin: new BasinAdapter(BasinConfigs, providers),
   };
 }

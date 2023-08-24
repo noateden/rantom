@@ -2253,3 +2253,13 @@ export const ClipperConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const BasinConfigs: ProtocolConfig = {
+  protocol: 'basin',
+  categories: ['trading'],
+  contracts: {
+    ethereum: [
+      '0xbea0e11282e2bb5893bece110cf199501e872bad', // BEAN-WETH Well
+    ],
+  },
+};

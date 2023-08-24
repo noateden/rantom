@@ -9873,4 +9873,138 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Swap(address,address,uint256,uint256,address)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'contract IERC20',
+        name: 'fromToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'contract IERC20',
+        name: 'toToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountIn',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountOut',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'recipient',
+        type: 'address',
+      },
+    ],
+  },
+  [Signatures['AddLiquidity(uint256[],uint256,address)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'uint256[]',
+        name: 'tokenAmountsIn',
+        type: 'uint256[]',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'lpAmountOut',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'recipient',
+        type: 'address',
+      },
+    ],
+  },
+  [Signatures['RemoveLiquidity(uint256,uint256[],address)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'lpAmountIn',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256[]',
+        name: 'tokenAmountsOut',
+        type: 'uint256[]',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'recipient',
+        type: 'address',
+      },
+    ],
+  },
+  [Signatures['RemoveLiquidityOneToken(uint256,address,uint256,address)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'lpAmountIn',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'contract IERC20',
+        name: 'tokenOut',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'tokenAmountOut',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'recipient',
+        type: 'address',
+      },
+    ],
+  },
+  [Signatures['Shift(uint256[],address,uint256,address)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'uint256[]',
+        name: 'reserves',
+        type: 'uint256[]',
+      },
+      {
+        indexed: false,
+        internalType: 'contract IERC20',
+        name: 'toToken',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'amountOut',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'recipient',
+        type: 'address',
+      },
+    ],
+  },
 };
