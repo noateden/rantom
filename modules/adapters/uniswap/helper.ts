@@ -1,313 +1,115 @@
-import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
 import UniswapFactoryV2 from '../../../configs/abi/uniswap/UniswapV2Factory.json';
-import UniswapPoolAbiV2 from '../../../configs/abi/uniswap/UniswapV2Pair.json';
-import UniswapPoolAbiV3 from '../../../configs/abi/uniswap/UniswapV3Pool.json';
+import UniswapFactoryV3 from '../../../configs/abi/uniswap/UniswapV3Factory.json';
 import EnvConfig from '../../../configs/envConfig';
 import { normalizeAddress } from '../../../lib/helper';
-import { ProtocolSubgraphConfig, Token } from '../../../types/configs';
-import { TradingEvent } from '../../../types/domains';
+import { Web3HelperProvider } from '../../../services/web3';
+import { Token } from '../../../types/configs';
 
 export interface UniswapPoolConstant {
   chain: string;
-  version: 2 | 3;
-  poolAddress: string; // LP address
+  protocol: string;
+  version: 'univ2' | 'univ3';
+  address: string; // LP address
   token0: Token;
   token1: Token;
-
-  // the fee amount to enable, denominated in hundredths of a bip (i.e. 1e-6)
-  // if this a v3 pool, this value should be difference
-  // otherwise, this value should be 3000 ~ 0.3%
-  fee: number;
 }
 
 export class UniswapHelper {
-  public static transformSubgraphSwapEvent(
-    subgraphConfig: ProtocolSubgraphConfig,
-    subgraphEvents: Array<any>
-  ): Array<TradingEvent> {
-    const events: Array<TradingEvent> = [];
-
-    for (const swap of subgraphEvents) {
-      const event =
-        subgraphConfig.version === 'univ2'
-          ? UniswapHelper.transformSubgraphSwapEventV2(subgraphConfig, swap)
-          : UniswapHelper.transformSubgraphSwapEventV3(subgraphConfig, swap);
-      events.push(event);
-    }
-
-    return events;
-  }
-
-  public static transformSubgraphSwapEventV2(subgraphConfig: ProtocolSubgraphConfig, swap: any): TradingEvent {
-    let tokens: Array<Token> = [];
-    let amounts: Array<string> = [];
-
-    if (swap.amount0In === '0') {
-      tokens = [
-        {
-          chain: subgraphConfig.chain,
-          symbol: swap.pair.token1.symbol,
-          address: swap.pair.token1.id,
-          decimals: Number(swap.pair.token1.decimals),
-        },
-        {
-          chain: subgraphConfig.chain,
-          symbol: swap.pair.token0.symbol,
-          address: swap.pair.token0.id,
-          decimals: Number(swap.pair.token0.decimals),
-        },
-      ];
-      amounts = [swap.amount1In.toString(), swap.amount0Out.toString()];
-    } else {
-      tokens = [
-        {
-          chain: subgraphConfig.chain,
-          symbol: swap.pair.token0.symbol,
-          address: swap.pair.token0.id,
-          decimals: Number(swap.pair.token0.decimals),
-        },
-        {
-          chain: subgraphConfig.chain,
-          symbol: swap.pair.token1.symbol,
-          address: swap.pair.token1.id,
-          decimals: Number(swap.pair.token1.decimals),
-        },
-      ];
-      amounts = [swap.amount0In.toString(), swap.amount1Out.toString()];
-    }
-
-    return {
-      chain: subgraphConfig.chain,
-      contract: normalizeAddress(swap.pair.id),
-      transactionHash: swap.transaction.id,
-      logIndex: Number(swap.logIndex),
-      protocol: subgraphConfig.protocol,
-      timestamp: Number(swap.timestamp),
-      blockNumber:
-        subgraphConfig.filters && subgraphConfig.filters.transactionBlockNumber
-          ? Number(swap.transaction[subgraphConfig.filters.transactionBlockNumber])
-          : Number(swap.transaction.blockNumber),
-      action: 'swap',
-      tokens,
-      amounts,
-      caller: normalizeAddress(swap.sender),
-      user: normalizeAddress(swap.to),
-    };
-  }
-
-  public static transformSubgraphSwapEventV3(subgraphConfig: ProtocolSubgraphConfig, swap: any): TradingEvent {
-    let tokens: Array<Token> = [];
-    let amounts: Array<string> = [];
-
-    const amount0 = new BigNumber(swap.amount0);
-    const amount1 = new BigNumber(swap.amount1);
-
-    if (amount0.lt(0)) {
-      tokens = [
-        {
-          chain: subgraphConfig.chain,
-          symbol: swap.pool.token1.symbol,
-          address: swap.pool.token1.id,
-          decimals: Number(swap.pool.token1.decimals),
-        },
-        {
-          chain: subgraphConfig.chain,
-          symbol: swap.pool.token0.symbol,
-          address: swap.pool.token0.id,
-          decimals: Number(swap.pool.token0.decimals),
-        },
-      ];
-      amounts = [amount1.abs().toString(10), amount0.abs().toString(10)];
-    } else {
-      tokens = [
-        {
-          chain: subgraphConfig.chain,
-          symbol: swap.pool.token0.symbol,
-          address: swap.pool.token0.id,
-          decimals: Number(swap.pool.token0.decimals),
-        },
-        {
-          chain: subgraphConfig.chain,
-          symbol: swap.pool.token1.symbol,
-          address: swap.pool.token1.id,
-          decimals: Number(swap.pool.token1.decimals),
-        },
-      ];
-      amounts = [amount0.abs().toString(10), amount1.abs().toString(10)];
-    }
-
-    return {
-      chain: subgraphConfig.chain,
-      contract: normalizeAddress(swap.pool.id),
-      transactionHash: swap.transaction.id,
-      logIndex: Number(swap.logIndex),
-      protocol: subgraphConfig.protocol,
-      timestamp: Number(swap.timestamp),
-      blockNumber: Number(swap.transaction.blockNumber),
-      action: 'swap',
-      tokens,
-      amounts,
-      caller: normalizeAddress(swap.sender),
-      user: normalizeAddress(swap.origin),
-    };
-  }
-
-  public static transformSubgraphDepositEvent(
-    subgraphConfig: ProtocolSubgraphConfig,
-    subgraphEvents: Array<any>
-  ): Array<TradingEvent> {
-    const events: Array<TradingEvent> = [];
-
-    for (const event of subgraphEvents) {
-      if (!event.amount0 || !event.amount1) {
-        continue;
-      }
-
-      const token0: Token =
-        subgraphConfig.version === 'univ2'
-          ? {
-              chain: subgraphConfig.chain,
-              symbol: event.pair.token0.symbol,
-              address: event.pair.token0.id,
-              decimals: Number(event.pair.token0.decimals),
-            }
-          : {
-              chain: subgraphConfig.chain,
-              symbol: event.pool.token0.symbol,
-              address: event.pool.token0.id,
-              decimals: Number(event.pool.token0.decimals),
-            };
-      const token1: Token =
-        subgraphConfig.version === 'univ2'
-          ? {
-              chain: subgraphConfig.chain,
-              symbol: event.pair.token1.symbol,
-              address: event.pair.token1.id,
-              decimals: Number(event.pair.token1.decimals),
-            }
-          : {
-              chain: subgraphConfig.chain,
-              symbol: event.pool.token1.symbol,
-              address: event.pool.token1.id,
-              decimals: Number(event.pool.token1.decimals),
-            };
-
-      events.push({
-        chain: subgraphConfig.chain,
-        contract:
-          subgraphConfig.version === 'univ2' ? normalizeAddress(event.pair.id) : normalizeAddress(event.pool.id),
-        transactionHash: event.transaction.id,
-        logIndex: Number(event.logIndex),
-        protocol: subgraphConfig.protocol,
-        timestamp: Number(event.timestamp),
-        blockNumber:
-          subgraphConfig.filters && subgraphConfig.filters.transactionBlockNumber
-            ? Number(event.transaction[subgraphConfig.filters.transactionBlockNumber])
-            : Number(event.transaction.blockNumber),
-        action: 'deposit',
-        tokens: [token0, token1],
-        amounts: [event.amount0.toString(), event.amount1.toString()],
-        caller: normalizeAddress(event.sender),
-        user: subgraphConfig.version === 'univ2' ? normalizeAddress(event.to) : normalizeAddress(event.origin),
-      });
-    }
-
-    return events;
-  }
-
-  public static transformSubgraphWithdrawEvent(
-    subgraphConfig: ProtocolSubgraphConfig,
-    subgraphEvents: Array<any>
-  ): Array<TradingEvent> {
-    const events: Array<TradingEvent> = [];
-
-    for (const event of subgraphEvents) {
-      if (!event.amount0 || !event.amount1) {
-        continue;
-      }
-
-      const token0: Token =
-        subgraphConfig.version === 'univ2'
-          ? {
-              chain: subgraphConfig.chain,
-              symbol: event.pair.token0.symbol,
-              address: event.pair.token0.id,
-              decimals: Number(event.pair.token0.decimals),
-            }
-          : {
-              chain: subgraphConfig.chain,
-              symbol: event.pool.token0.symbol,
-              address: event.pool.token0.id,
-              decimals: Number(event.pool.token0.decimals),
-            };
-      const token1: Token =
-        subgraphConfig.version === 'univ2'
-          ? {
-              chain: subgraphConfig.chain,
-              symbol: event.pair.token1.symbol,
-              address: event.pair.token1.id,
-              decimals: Number(event.pair.token1.decimals),
-            }
-          : {
-              chain: subgraphConfig.chain,
-              symbol: event.pool.token1.symbol,
-              address: event.pool.token1.id,
-              decimals: Number(event.pool.token1.decimals),
-            };
-
-      events.push({
-        chain: subgraphConfig.chain,
-        contract:
-          subgraphConfig.version === 'univ2' ? normalizeAddress(event.pair.id) : normalizeAddress(event.pool.id),
-        transactionHash: event.transaction.id,
-        logIndex: Number(event.logIndex),
-        protocol: subgraphConfig.protocol,
-        timestamp: Number(event.timestamp),
-        blockNumber:
-          subgraphConfig.filters && subgraphConfig.filters.transactionBlockNumber
-            ? Number(event.transaction[subgraphConfig.filters.transactionBlockNumber])
-            : Number(event.transaction.blockNumber),
-        action: 'withdraw',
-        tokens: [token0, token1],
-        amounts: [event.amount0.toString(), event.amount1.toString()],
-        caller: subgraphConfig.version === 'univ2' ? normalizeAddress(event.sender) : normalizeAddress(event.owner),
-        user: subgraphConfig.version === 'univ2' ? normalizeAddress(event.to) : normalizeAddress(event.origin),
-      });
-    }
-
-    return events;
-  }
-
-  public static async getFactoryAddress(chain: string, poolAddress: string): Promise<string | null> {
-    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-
-    try {
-      const contract = new web3.eth.Contract(UniswapPoolAbiV2 as any, poolAddress);
-      const factory = await contract.methods.factory().call();
-      return normalizeAddress(factory);
-    } catch (e: any) {}
-
-    try {
-      const contract = new web3.eth.Contract(UniswapPoolAbiV3 as any, poolAddress);
-      const factory = await contract.methods.factory().call();
-      return normalizeAddress(factory);
-    } catch (e: any) {}
-
-    return null;
-  }
-
-  public static async getFactoryPoolV2(
+  public static async getFactoryPoolsV2(
     chain: string,
+    protocol: string,
     factoryAddress: string,
-    token0: string,
-    token1: string
-  ): Promise<string> {
+    fromBlock: number
+  ): Promise<Array<UniswapPoolConstant>> {
+    const web3Helper = new Web3HelperProvider(null);
     const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-    const contract = new web3.eth.Contract(UniswapFactoryV2 as any, factoryAddress);
-    const pairAddress = await contract.methods.getPair(token0, token1).call();
+    const factoryContract = new web3.eth.Contract(UniswapFactoryV2 as any, factoryAddress);
 
-    return normalizeAddress(pairAddress);
+    const pools: Array<UniswapPoolConstant> = [];
+
+    let startBlock = fromBlock;
+    const latestBlock = await web3.eth.getBlockNumber();
+
+    const range = 2000;
+    while (startBlock <= latestBlock) {
+      const toBlock = startBlock + range > latestBlock ? latestBlock : startBlock + range;
+
+      const logs = await factoryContract.getPastEvents('PairCreated', { fromBlock: startBlock, toBlock });
+      for (const log of logs) {
+        const token0 = await web3Helper.getErc20Metadata(chain, log.returnValues.token0);
+        const token1 = await web3Helper.getErc20Metadata(chain, log.returnValues.token1);
+
+        if (token0 && token1) {
+          pools.push({
+            chain,
+            protocol,
+            version: 'univ2',
+            address: normalizeAddress(log.returnValues.pair),
+            token0,
+            token1,
+          });
+
+          console.log(
+            `Got pool ${protocol}:${chain}:${normalizeAddress(log.returnValues.pair)}:${token0.symbol}-${
+              token1.symbol
+            } latestBlock:${toBlock}`
+          );
+        }
+      }
+
+      startBlock += range;
+    }
+
+    return pools;
+  }
+
+  public static async getFactoryPoolsV3(
+    chain: string,
+    protocol: string,
+    factoryAddress: string,
+    fromBlock: number
+  ): Promise<Array<UniswapPoolConstant>> {
+    const web3Helper = new Web3HelperProvider(null);
+    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+    const factoryContract = new web3.eth.Contract(UniswapFactoryV3 as any, factoryAddress);
+
+    const pools: Array<UniswapPoolConstant> = [];
+
+    let startBlock = fromBlock;
+    const latestBlock = await web3.eth.getBlockNumber();
+
+    const range = 2000;
+    while (startBlock <= latestBlock) {
+      const toBlock = startBlock + range > latestBlock ? latestBlock : startBlock + range;
+
+      const logs = await factoryContract.getPastEvents('PoolCreated', { fromBlock: startBlock, toBlock });
+      for (const log of logs) {
+        const token0 = await web3Helper.getErc20Metadata(chain, log.returnValues.token0);
+        const token1 = await web3Helper.getErc20Metadata(chain, log.returnValues.token1);
+
+        if (token0 && token1) {
+          pools.push({
+            chain,
+            protocol,
+            version: 'univ3',
+            address: normalizeAddress(log.returnValues.pool),
+            token0,
+            token1,
+          });
+
+          console.log(
+            `Got pool ${protocol}:${chain}:${normalizeAddress(log.returnValues.pool)}:${token0.symbol}-${
+              token1.symbol
+            } latestBlock:${toBlock}`
+          );
+        }
+      }
+
+      startBlock += range;
+    }
+
+    return pools;
   }
 }

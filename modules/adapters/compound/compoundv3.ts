@@ -65,7 +65,7 @@ export class Compoundv3Adapter extends Adapter {
       let poolConfig: CompoundMarketInfoV3 | null = null;
       if (this.config.staticData.pools) {
         for (const pool of this.config.staticData.pools) {
-          if (compareAddress(address, pool.address)) {
+          if (compareAddress(address, pool.address) && chain === pool.chain) {
             poolConfig = pool as CompoundMarketInfoV3;
           }
         }

@@ -37,6 +37,10 @@ const envConfig: EnvConfig = {
       name: 'arbitrum',
       nodeRpc: String(process.env.RANTOM_ARBITRUM_NODE),
     },
+    base: {
+      name: 'base',
+      nodeRpc: String(process.env.RANTOM_BASE_NODE),
+    },
   },
   security: {
     systemApiKey: String(process.env.RANTOM_SYSTEM_API_KEY),

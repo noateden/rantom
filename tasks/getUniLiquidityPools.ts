@@ -3,12 +3,7 @@
 import axios from 'axios';
 import fs from 'fs';
 
-// import Web3 from 'web3';
-//
-// import UniswapV3FactoryAbi from '../configs/abi/uniswap/UniswapV3Factory.json';
-// import UniswapV3PoolAbi from '../configs/abi/uniswap/UniswapV3Pool.json';
 import { AddressZero } from '../configs/constants';
-// import EnvConfig from '../configs/envConfig';
 import {
   CamelotConfigs,
   Camelotv3Configs,
@@ -22,7 +17,6 @@ import {
 } from '../configs/protocols';
 import { compareAddress, normalizeAddress } from '../lib/helper';
 import { KyberHelper } from '../modules/adapters/kyberswap/helper';
-// import { Web3HelperProvider } from '../services/web3';
 import { ProtocolConfig } from '../types/configs';
 import { UniLiquidityPool } from '../types/domains';
 

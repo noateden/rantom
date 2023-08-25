@@ -26,8 +26,11 @@ const CompoundMarkets: Array<string> = [
 ];
 
 const CompoundMarketsV3 = [
-  '0xc3d688b66703497daa19211eedff47f25384cdc3', // v3 USDC
-  '0xa17581a9e3356d9a858b789d68b4d866e593ae94', // v3 WETH
+  'ethereum:0xc3d688b66703497daa19211eedff47f25384cdc3', // v3 USDC
+  'ethereum:0xa17581a9e3356d9a858b789d68b4d866e593ae94', // v3 WETH
+  'arbitrum:0xa5edbdd9646f8dff606d7448e414884c7d905dca', // v3 USDC
+  'base:0x9c4ec768c28520B50860ea7a15bd7213a9fF58bf', // v3 USDbC
+  'base:0x46e6b214b524310239732d51387075e0e70970bf', // v3 WETH
 ];
 
 (async function () {
@@ -49,11 +52,12 @@ const CompoundMarketsV3 = [
   fs.writeFileSync(`./configs/data/CompoundMarkets.json`, JSON.stringify(allMarkets));
 
   const v3Markets = [];
-  for (const address of CompoundMarketsV3) {
-    const market = await CompoundHelper.getMarketInfoV3('ethereum', address);
+  for (const config of CompoundMarketsV3) {
+    const [chain, address] = config.split(':');
+    const market = await CompoundHelper.getMarketInfoV3(chain, address);
     if (market) {
       v3Markets.push(market);
-      console.info(`Got market v3 info address:${market.address} token:${market.baseToken.symbol}`);
+      console.info(`Got market v3 info chain:${chain} address:${market.address} token:${market.baseToken.symbol}`);
     }
   }
   fs.writeFileSync(`./configs/data/CompoundMarketsV3.json`, JSON.stringify(v3Markets));

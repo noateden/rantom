@@ -1,4 +1,4 @@
-export type ChainName = 'ethereum' | 'arbitrum';
+export type ChainName = 'ethereum' | 'arbitrum' | 'base';
 
 export interface Blockchain {
   name: ChainName;

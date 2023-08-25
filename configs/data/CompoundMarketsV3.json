@@ -49,5 +49,53 @@
         "decimals": 18
       }
     ]
+  },
+  {
+    "chain": "arbitrum",
+    "address": "0xa5edbdd9646f8dff606d7448e414884c7d905dca",
+    "baseToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC.e",
+      "decimals": 6,
+      "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+    },
+    "collaterals": [
+      { "chain": "arbitrum", "symbol": "ARB", "decimals": 18, "address": "0x912ce59144191c1204e64559fe8253a0e49e6548" },
+      { "chain": "arbitrum", "symbol": "GMX", "decimals": 18, "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a" },
+      {
+        "chain": "arbitrum",
+        "symbol": "WETH",
+        "decimals": 18,
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+      },
+      { "chain": "arbitrum", "symbol": "WBTC", "decimals": 8, "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f" }
+    ]
+  },
+  {
+    "chain": "base",
+    "address": "0x9c4ec768c28520b50860ea7a15bd7213a9ff58bf",
+    "baseToken": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    },
+    "collaterals": [
+      { "chain": "base", "symbol": "cbETH", "decimals": 18, "address": "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22" },
+      { "chain": "base", "symbol": "WETH", "decimals": 18, "address": "0x4200000000000000000000000000000000000006" }
+    ]
+  },
+  {
+    "chain": "base",
+    "address": "0x46e6b214b524310239732d51387075e0e70970bf",
+    "baseToken": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "collaterals": [
+      { "chain": "base", "symbol": "cbETH", "decimals": 18, "address": "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22" }
+    ]
   }
 ]

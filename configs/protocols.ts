@@ -69,6 +69,14 @@ export const Uniswapv3Configs: ProtocolConfig = {
         (item) => item.address
       ),
     ],
+    base: [
+      '0x33128a8fc17869897dce68ed026d694621f6fdfd', // v3 factory
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'uniswapv3' && item.chain === 'base').map(
+        (item) => item.address
+      ),
+    ],
   },
   subgraphs: [
     {
@@ -86,6 +94,14 @@ export const Uniswapv3Configs: ProtocolConfig = {
       birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
       filters: {},
       endpoint: 'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-arbitrum-one',
+    },
+    {
+      protocol: 'uniswapv3',
+      chain: 'base',
+      version: 'univ3',
+      birthday: 1689552000, // Mon Jul 17 2023 00:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/lynnshaoyu/uniswap-v3-base',
     },
   ],
   staticData: {
@@ -267,6 +283,14 @@ export const Sushiv3Configs: ProtocolConfig = {
         (item) => item.address
       ),
     ],
+    base: [
+      '0xc35dadb65012ec5796536bd9864ed8773abc74c4', // v3 factory
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'sushiv3' && item.chain === 'base').map(
+        (item) => item.address
+      ),
+    ],
   },
   staticData: {
     // dex pools
@@ -288,6 +312,14 @@ export const Sushiv3Configs: ProtocolConfig = {
       birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
       filters: {},
       endpoint: 'https://api.thegraph.com/subgraphs/name/sushi-v3/v3-arbitrum',
+    },
+    {
+      protocol: 'sushiv3',
+      chain: 'base',
+      version: 'univ3',
+      birthday: 1691020800, // Thu Aug 03 2023 00:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.studio.thegraph.com/query/32073/v3-base/v0.0.1',
     },
   ],
 };
@@ -361,6 +393,9 @@ export const BalancerConfigs: ProtocolConfig = {
     arbitrum: [
       '0xba12222222228d8ba445958a75a0704d566bf2c8', // vault
     ],
+    base: [
+      '0xba12222222228d8ba445958a75a0704d566bf2c8', // vault
+    ],
   },
   customEventMapping: {
     [Signatures['Withdraw(address,uint256,uint256)']]: {
@@ -414,6 +449,9 @@ export const Aavev3Configs: ProtocolConfig = {
     ],
     arbitrum: [
       '0x794a61358d6845594f94dc1db02a252b5b4814ad', // lending pool v3
+    ],
+    base: [
+      '0xa238dd80c259a72e81d7e4664a9801593f98d1c5', // lending pool v3
     ],
   },
 };
@@ -503,6 +541,13 @@ export const Compoundv3Configs: ProtocolConfig = {
       '0xc3d688b66703497daa19211eedff47f25384cdc3', // v3 USDC
       '0xa17581a9e3356d9a858b789d68b4d866e593ae94', // v3 ETH
       '0x1b0e765f6224c21223aea2af16c1c46e38885a40', // Comet rewards
+    ],
+    arbitrum: [
+      '0xa5edbdd9646f8dff606d7448e414884c7d905dca', // v3 USDC
+    ],
+    base: [
+      '0x9c4ec768c28520b50860ea7a15bd7213a9ff58bf', // v3 USDCbC
+      '0x46e6b214b524310239732d51387075e0e70970bf', // v3 WETH
     ],
   },
   staticData: {
@@ -2263,3 +2308,29 @@ export const BasinConfigs: ProtocolConfig = {
     ],
   },
 };
+
+// export const BaseswapConfigs: ProtocolConfig = {
+//   protocol: 'baseswap',
+//   categories: ['trading'],
+//   contracts: {
+//     base: [
+//       '0xfda619b6d20975be80a10332cd39b9a4b0faa8bb', // v2 Factory
+//
+//       // top pools
+//       ...UniLiquidityPools.filter((item) => item.protocol === 'baseswap').map((item) => item.address),
+//     ],
+//   },
+//   subgraphs: [
+//     {
+//       protocol: 'baseswap',
+//       chain: 'base',
+//       version: 'univ2',
+//       birthday: 1690495200, // Thu Jul 27 2023 22:00:00 GMT+0000
+//       filters: {},
+//       endpoint: 'https://api.thegraph.com/subgraphs/name/harleen-m/baseswap',
+//     },
+//   ],
+//   staticData: {
+//     liquidityPools: UniLiquidityPools.filter((item) => item.protocol === 'baseswap'),
+//   },
+// }

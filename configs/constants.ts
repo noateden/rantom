@@ -1,6 +1,7 @@
 import { NonFungibleTokenMetadata, Token } from '../types/configs';
 import EulerTokens from './data/EulerEAndDTokens.json';
 import ArbitrumTokens from './tokens/arbitrum.json';
+import BaseTokens from './tokens/base.json';
 import EthereumTokens from './tokens/ethereum.json';
 
 export const MongodbPrefix = 'rantom';
@@ -15,16 +16,19 @@ export const InstadappAccountV2ImplementationContract = '0xcba828153d3a85b30b5b9
 export const Tokens: { [key: string]: { [key: string]: Token } } = {
   ethereum: EthereumTokens,
   arbitrum: ArbitrumTokens,
+  base: BaseTokens,
 };
 
 export const MulticallContracts: { [key: string]: string } = {
   ethereum: '0xca11bde05977b3631167028862be2a173976ca11',
   arbitrum: '0xca11bde05977b3631167028862be2a173976ca11',
+  base: '0xca11bde05977b3631167028862be2a173976ca11',
 };
 
 export const BlockSubgraphs: { [key: string]: string } = {
   ethereum: 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks',
   arbitrum: 'https://api.thegraph.com/subgraphs/name/ianlapham/arbitrum-one-blocks',
+  base: 'https://api.studio.thegraph.com/query/48211/base-blocks/version/latest',
 };
 
 export const LayerZeroChainIdMaps: { [key: number]: number } = {

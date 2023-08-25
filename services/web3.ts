@@ -7,7 +7,6 @@ import { AddressZero, HardCodeTokens, HardcodeNft, Tokens } from '../configs/con
 import EnvConfig from '../configs/envConfig';
 import { compareAddress, normalizeAddress } from '../lib/helper';
 import logger from '../lib/logger';
-import { UniswapHelper } from '../modules/adapters/uniswap/helper';
 import { NonFungibleToken, NonFungibleTokenMetadata, Token } from '../types/configs';
 import { IMongodbProvider, IWeb3HelperProvider } from '../types/namespaces';
 import { CachingHelper, CachingProvider } from './caching';
@@ -173,68 +172,7 @@ export class Web3HelperProvider extends CachingProvider implements IWeb3HelperPr
         image: '',
       };
     }
-    // if (metadata) {
-    //   try {
-    //     // try to get tokenURI with ERC721 standard
-    //     const tokenUri = transformToHttpUrl(await contract.methods.tokenURI(new BigNumber(tokenId).toNumber()).call());
-    //     const response = await axios.get(tokenUri);
-    //
-    //     const token: NonFungibleToken = {
-    //       ...metadata,
-    //       tokenId: tokenId,
-    //       image: transformToHttpUrl(response.data.image),
-    //     };
-    //
-    //     await this.setCachingData(key, { token });
-    //
-    //     return token;
-    //   } catch (e: any) {
-    //     try {
-    //       // try to get tokenURI with ERC1155 standard
-    //       const erc1155Contract = new web3.eth.Contract(Erc1155Abi as any, tokenAddress);
-    //       const tokenUri = transformToHttpUrl(
-    //         await erc1155Contract.methods.uri(new BigNumber(tokenId).toNumber()).call()
-    //       );
-    //
-    //       const response = await axios.get(tokenUri);
-    //
-    //       const token: NonFungibleToken = {
-    //         ...metadata,
-    //         tokenId: tokenId,
-    //         image: transformToHttpUrl(response.data.image),
-    //       };
-    //
-    //       await this.setCachingData(key, { token });
-    //
-    //       return token;
-    //     } catch (e: any) {
-    //       const token: NonFungibleToken = {
-    //         ...metadata,
-    //         tokenId: tokenId,
-    //         image: '',
-    //       };
-    //
-    //       await this.setCachingData(key, { token });
-    //
-    //       return token;
-    //     }
-    //   }
-    // }
 
     return null;
-  }
-
-  public async getUniPoolFactoryAddress(chain: string, poolAddress: string): Promise<string | null> {
-    const key = CachingHelper.getUniswapPoolFactoryName(chain, poolAddress);
-
-    const cachingData = await this.getCachingData(key);
-    if (cachingData) {
-      return cachingData.factory;
-    }
-
-    const factory = await UniswapHelper.getFactoryAddress(chain, poolAddress);
-    await this.setCachingData(key, { factory });
-
-    return factory;
   }
 }
