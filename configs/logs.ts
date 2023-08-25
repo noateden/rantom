@@ -229,6 +229,22 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xe7b0ce0526fbe3969035a145c9e9691d4d9d216c', // Clipper exchange
     '0x9dda6ef3d919c9bc8885d5560999a3640431e8e6', // Metamask swap router
     '0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3', // Sushi minichef
+    '0xa5edbdd9646f8dff606d7448e414884c7d905dca', // Compound v3 USDC
+  ],
+
+  base: [
+    // we sync only top tvl and volume pools
+    // ignore malicious pools
+    ...UniLiquidityPools.filter((item: any) => item.protocol === 'uniswapv3' && item.chain === 'base').map(
+      (item: any) => item.address
+    ),
+    ...UniLiquidityPools.filter((item: any) => item.protocol === 'sushiv3' && item.chain === 'base').map(
+      (item: any) => item.address
+    ),
+    '0x9c4ec768c28520b50860ea7a15bd7213a9ff58bf', // Compound v3 USDCbC
+    '0x46e6b214b524310239732d51387075e0e70970bf', // Compound v3 WETH
+    '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault
+    '0xa238dd80c259a72e81d7e4664a9801593f98d1c5', // Aave v3 lending pool
   ],
 };
 

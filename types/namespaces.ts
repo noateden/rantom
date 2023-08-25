@@ -50,7 +50,6 @@ export interface IWeb3HelperProvider extends ICachingProvider {
   getErc20Metadata: (chain: string, tokenAddress: string) => Promise<Token | null>;
   getNonFungibleTokenMetadata: (chain: string, tokenAddress: string) => Promise<NonFungibleTokenMetadata | null>;
   getNonFungibleTokenData: (chain: string, tokenAddress: string, tokenId: string) => Promise<NonFungibleToken | null>;
-  getUniPoolFactoryAddress: (chain: string, poolAddress: string) => Promise<string | null>;
 }
 
 export interface IRpcWrapperProvider extends IProvider {
