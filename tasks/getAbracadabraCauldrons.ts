@@ -26,6 +26,9 @@ const Cauldrons: Array<string> = [
   'ethereum:v4:0x1062eb452f8c7a94276437ec1f4aaca9b1495b72', // StargateUSDT
   'ethereum:v4:0x7259e152103756e1616A77Ae982353c3751A6a90', // yvCrv3Crypto
   'ethereum:v4:0x692887E8877C6Dd31593cda44c382DB5b289B684', // magicAPE
+
+  'arbitrum:v2:0xc89958b03a55b5de2221acb25b58b89a000215e6', // ETH
+  'arbitrum:v4:0x726413d7402ff180609d0ebc79506df8633701b1', // magic GLP
 ];
 
 (async function () {

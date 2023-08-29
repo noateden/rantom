@@ -240,5 +240,27 @@
       "symbol": "mAPE",
       "decimals": 18
     }
+  },
+  {
+    "chain": "arbitrum",
+    "version": "v2",
+    "address": "0xc89958b03a55b5de2221acb25b58b89a000215e6",
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "version": "v4",
+    "address": "0x726413d7402ff180609d0ebc79506df8633701b1",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x85667409a723684fe1e57dd1abde8d88c2f54214",
+      "symbol": "mGLP",
+      "decimals": 18
+    }
   }
 ]

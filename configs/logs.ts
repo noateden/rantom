@@ -15,7 +15,7 @@ import YearnVaults from './data/YearnVaults.json';
 
 export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
   ethereum: [
-    ...AbracadabraCauldrons.map((item) => item.address),
+    ...AbracadabraCauldrons.filter((item) => item.chain === 'ethereum').map((item) => item.address),
     ...YearnVaults.map((item) => item.address),
     ...BeefyVaults.map((item) => item.address),
     ...FraxLendPairs.map((item) => item.address),
@@ -208,6 +208,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
   ],
 
   arbitrum: [
+    ...AbracadabraCauldrons.filter((item) => item.chain === 'arbitrum').map((item) => item.address),
     // we sync only top tvl and volume pools
     // ignore malicious pools
     ...UniLiquidityPools.filter(

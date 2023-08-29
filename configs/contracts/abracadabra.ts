@@ -2,13 +2,13 @@ import { Contract } from '../../types/configs';
 import Cauldrons from '../data/AbracadabraCauldrons.json';
 
 export const AbracadabraContracts: Array<Contract> = [
-  ...Cauldrons.map((item) => {
+  ...Cauldrons.filter((item) => item.chain === 'arbitrum').map((item) => {
     return {
       chain: item.chain,
       protocol: 'abracadabra',
       abi: {},
       address: item.address,
-      birthday: 16308190,
+      birthday: 845270,
       events: [],
       topics:
         item.version === 'v2'

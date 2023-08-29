@@ -1094,12 +1094,6 @@ export const AbracadabraConfigs: ProtocolConfig = {
     ],
   },
   staticData: {
-    magicInternetMoney: {
-      chain: 'ethereum',
-      symbol: 'MIM',
-      decimals: 18,
-      address: '0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3',
-    },
     cauldrons: AbracadabraCauldrons,
   },
 };

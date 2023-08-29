@@ -171,9 +171,9 @@ export class AbracadabraAdapter extends Adapter {
             protocol: this.config.protocol,
             action: action,
             addresses: [from, to],
-            tokens: [this.config.staticData.magicInternetMoney],
+            tokens: [Tokens[chain].MIM],
             tokenAmounts: [amount],
-            readableString: `${from} ${action} ${amount} ${this.config.staticData.magicInternetMoney.symbol} on ${this.config.protocol} chain ${chain}`,
+            readableString: `${from} ${action} ${amount} ${Tokens[chain].MIM.symbol} on ${this.config.protocol} chain ${chain}`,
           };
         } else if (signature === Signatures.LogLiquidation) {
           const from = normalizeAddress(event.from);
@@ -191,7 +191,7 @@ export class AbracadabraAdapter extends Adapter {
             tokenAmounts: [amount],
             readableString: `${from} liquidate ${amount} ${cauldronInfo.token.symbol} on ${this.config.protocol} chain ${chain}`,
             addition: {
-              debtToken: this.config.staticData.magicInternetMoney,
+              debtToken: Tokens[chain].MIM,
               debtAmount: debtAmount,
             },
           };
