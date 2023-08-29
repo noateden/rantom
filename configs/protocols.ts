@@ -2348,3 +2348,13 @@ export const UnibotConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const AmbientConfigs: ProtocolConfig = {
+  protocol: 'ambient',
+  categories: ['trading'],
+  contracts: {
+    ethereum: [
+      '0xaaaaaaaaa24eeeb8d57d431224f73832bc34f688', // CrocSwapDex
+    ],
+  },
+};

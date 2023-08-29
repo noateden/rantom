@@ -285,4 +285,78 @@ export const FunctionAbis: { [key: string]: any } = {
       },
     ],
   },
+
+  // ambient userCmd
+  // tx: https://etherscan.io/tx/0x9931d2b4f418075c61670b59c3d9b342c2c139aa30812e6283510445d57ab5fb
+  '0xa15112f9': {
+    abi: [
+      {
+        internalType: 'uint16',
+        name: 'callpath',
+        type: 'uint16',
+      },
+      {
+        internalType: 'bytes',
+        name: 'cmd',
+        type: 'bytes',
+      },
+    ],
+  },
+
+  // ambient swap
+  // tx: https://etherscan.io/tx/0xff66aaef246e21067ac64e00ee0aa4a9115c0c22ff251c825ce68bb5b1799d6e
+  '0x3d719cd9': {
+    abi: [
+      {
+        internalType: 'address',
+        name: 'base',
+        type: 'address',
+      },
+      {
+        internalType: 'address',
+        name: 'quote',
+        type: 'address',
+      },
+      {
+        internalType: 'uint256',
+        name: 'poolIdx',
+        type: 'uint256',
+      },
+      {
+        internalType: 'bool',
+        name: 'isBuy',
+        type: 'bool',
+      },
+      {
+        internalType: 'bool',
+        name: 'inBaseQty',
+        type: 'bool',
+      },
+      {
+        internalType: 'uint128',
+        name: 'qty',
+        type: 'uint128',
+      },
+      {
+        internalType: 'uint16',
+        name: 'tip',
+        type: 'uint16',
+      },
+      {
+        internalType: 'uint128',
+        name: 'limitPrice',
+        type: 'uint128',
+      },
+      {
+        internalType: 'uint128',
+        name: 'minOut',
+        type: 'uint128',
+      },
+      {
+        internalType: 'uint8',
+        name: 'reserveFlags',
+        type: 'uint8',
+      },
+    ],
+  },
 };

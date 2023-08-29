@@ -5,6 +5,7 @@ import {
   AbracadabraConfigs,
   AgilityConfigs,
   AirswapConfigs,
+  AmbientConfigs,
   AnkrConfigs,
   ApecoinConfigs,
   ArrakisConfigs,
@@ -96,6 +97,7 @@ import { Aavev3Adapter } from './aave/aavev3';
 import { AbracadabraAdapter } from './abracadabra/abracadabra';
 import { AgilityAdapter } from './agility/agility';
 import { AirswapAdapter } from './airswap/airswap';
+import { AmbientAdapter } from './ambient/ambient';
 import { AnkrAdapter } from './ankr/ankr';
 import { ApecoinAdapter } from './apecoin/apecoin';
 import { ArrakisAdapter } from './arrakis/arrakis';
@@ -269,5 +271,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     clipper: new ClipperAdapter(ClipperConfigs, providers),
     basin: new BasinAdapter(BasinConfigs, providers),
     unibot: new UnibotAdapter(UnibotConfigs, providers),
+    ambient: new AmbientAdapter(AmbientConfigs, providers),
   };
 }
