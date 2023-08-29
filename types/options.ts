@@ -39,6 +39,9 @@ export interface AdapterParseFunctionCallDataOptions {
 
   // full transaction receipt
   context: any;
+
+  // transaction data
+  tx: any;
 }
 
 export type MultiCallResponse<T> = T | null;

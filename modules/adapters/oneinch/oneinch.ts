@@ -58,7 +58,7 @@ export class OneinchAdapter extends Adapter {
               signature: signature,
               contract: normalizeAddress(address),
               protocol: this.config.protocol,
-              action: 'swap',
+              action: 'trade',
               addresses: [sender, receiver],
               tokens: [fromToken, toToken],
               tokenAmounts: [fromAmount, toAmount],
@@ -67,8 +67,7 @@ export class OneinchAdapter extends Adapter {
           }
         } catch (e: any) {}
       } else if (signature === Signatures.Unoswap) {
-        const params = web3.eth.abi.decodeParameters(FunctionAbis[signature].abi, input.slice(10));
-        console.log(params);
+        // const params = web3.eth.abi.decodeParameters(FunctionAbis[signature].abi, input.slice(10));
       } else if (signature === Signatures.ClipperSwap) {
         try {
           const params = web3.eth.abi.decodeParameters(FunctionAbis[signature].abi, input.slice(10));
@@ -88,7 +87,7 @@ export class OneinchAdapter extends Adapter {
               signature: signature,
               contract: normalizeAddress(address),
               protocol: this.config.protocol,
-              action: 'swap',
+              action: 'trade',
               addresses: [sender],
               tokens: [fromToken, toToken],
               tokenAmounts: [fromAmount, toAmount],

@@ -211,4 +211,78 @@ export const FunctionAbis: { [key: string]: any } = {
       },
     ],
   },
+
+  // unibot uniV2_sell_pctFee v9
+  // tx: 0x3b4381f440e4927f8dabedb33d36db38f92dacefd6090368361ce6a0da3a089e
+  '0x8ee938a9': {
+    abi: [
+      {
+        internalType: 'uint256',
+        name: 'amt_in',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'amt_out_min',
+        type: 'uint256',
+      },
+      {
+        internalType: 'address[]',
+        name: 'path',
+        type: 'address[]',
+      },
+      {
+        internalType: 'uint256',
+        name: 'pct_fee',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'deadline',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'referral',
+        type: 'string',
+      },
+    ],
+  },
+
+  // unibot uniV2_swapExactETHForTokens_pctFee_v9
+  // tx: 0xdd6388ef1f687819aaad5e85ec2d2be94ae4646036528645b0e96c542db02319
+  '0x19948479': {
+    abi: [
+      {
+        internalType: 'uint256',
+        name: 'amt_out_min',
+        type: 'uint256',
+      },
+      {
+        internalType: 'address[]',
+        name: 'path',
+        type: 'address[]',
+      },
+      {
+        internalType: 'address',
+        name: 'to',
+        type: 'address',
+      },
+      {
+        internalType: 'uint256',
+        name: 'pct_fee',
+        type: 'uint256',
+      },
+      {
+        internalType: 'uint256',
+        name: 'deadline',
+        type: 'uint256',
+      },
+      {
+        internalType: 'string',
+        name: 'referral',
+        type: 'string',
+      },
+    ],
+  },
 };

@@ -62,6 +62,7 @@ export class ParserProvider implements IParserProvider {
             address: normalizeAddress(tx.to ? tx.to : AddressZero),
             input: tx.input,
             context: receipt,
+            tx: tx,
           });
           if (decodedFunction) {
             transaction.functions.push(decodedFunction);

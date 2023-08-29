@@ -2336,3 +2336,15 @@ export const BasinConfigs: ProtocolConfig = {
 //     liquidityPools: UniLiquidityPools.filter((item) => item.protocol === 'baseswap'),
 //   },
 // }
+
+export const UnibotConfigs: ProtocolConfig = {
+  protocol: 'unibot',
+  categories: ['dexAggregator'],
+  contracts: {
+    ethereum: [
+      '0x07490d45a33d842ebb7ea8c22cc9f19326443c75', // Unibot router v9
+      '0xec6a3fd12176438969ebb0aed2d6b1d3885e38cc', // Unibot router v12
+      '0x3999d2c5207c06bbc5cf8a6bea52966cabb76d41', // Unibot router
+    ],
+  },
+};

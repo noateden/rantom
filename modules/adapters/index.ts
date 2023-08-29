@@ -82,6 +82,7 @@ import {
   Sushiv3Configs,
   SwellConfigs,
   TornadocashConfigs,
+  UnibotConfigs,
   Uniswapv2Configs,
   Uniswapv3Configs,
   X2y2Configs,
@@ -165,6 +166,7 @@ import { SushiAdapter } from './sushi/sushi';
 import { Sushiv3Adapter } from './sushi/sushiv3';
 import { SwellAdapter } from './swell/swell';
 import { TornadocashAdapter } from './tornadocash/tornadocash';
+import { UnibotAdapter } from './unibot/unibot';
 import { Uniswapv2Adapter } from './uniswap/uniswapv2';
 import { Uniswapv3Adapter } from './uniswap/uniswapv3';
 import { X2y2Adapter } from './x2y2/x2y2';
@@ -266,5 +268,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     oneinch: new OneinchAdapter(OneinchConfigs, providers),
     clipper: new ClipperAdapter(ClipperConfigs, providers),
     basin: new BasinAdapter(BasinConfigs, providers),
+    unibot: new UnibotAdapter(UnibotConfigs, providers),
   };
 }
