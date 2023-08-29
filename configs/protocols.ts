@@ -2278,6 +2278,8 @@ export const OneinchConfigs: ProtocolConfig = {
   categories: ['dexAggregator'],
   contracts: {
     ethereum: [
+      '0x11111112542d85b3ef69ae05771c2dccff4faa26', // Aggregator v3
+      '0x1111111254fb6c44bac0bed2854e76f90643097d', // Aggregator v4
       '0x1111111254eeb25477b68fb85ed929f73a960582', // Aggregator v5
     ],
     arbitrum: [

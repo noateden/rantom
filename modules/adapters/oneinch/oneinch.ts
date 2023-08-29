@@ -12,7 +12,9 @@ import { Adapter } from '../adapter';
 
 const Signatures: any = {
   Swap: '0x12aa3caf', // swap(address,(address,address,address,address,uint256,uint256,uint256),bytes,bytes)
+  SwapV3: '0x7c025200', // swap(address,(address,address,address,address,uint256,uint256,uint256,bytes),bytes)
   Unoswap: '0x0502b1c5', // unoswap(address,uint256,uint256,uint256[])
+  UnoswapV3: '0x2e95b6c8', // unoswap(address,uint256,uint256,bytes32[])
   ClipperSwap: '0x84bd6d29', // clipperSwap(address,address,address,uint256,uint256,uint256,bytes32,bytes32)
 };
 
@@ -36,7 +38,7 @@ export class OneinchAdapter extends Adapter {
       this.config.contracts[chain].indexOf(address) !== -1
     ) {
       const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      if (signature === Signatures.Swap) {
+      if (signature === Signatures.Swap || signature === Signatures.SwapV3) {
         try {
           const params = web3.eth.abi.decodeParameters(FunctionAbis[signature].abi, input.slice(10));
           const fromToken = await this.getWeb3Helper().getErc20Metadata(chain, params.desc.srcToken);

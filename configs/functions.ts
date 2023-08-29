@@ -74,7 +74,7 @@ export const FunctionAbis: { [key: string]: any } = {
     ],
   },
 
-  //oneinch unoswap
+  // oneinch unoswap
   // sample tx: https://etherscan.io/tx/0x0defb803e46c4e435326896360a24b0b2664fe2e40782618781f9dca76b7b70d
   '0x0502b1c5': {
     abi: [
@@ -101,7 +101,7 @@ export const FunctionAbis: { [key: string]: any } = {
     ],
   },
 
-  //oneinch clipperSwap
+  // oneinch clipperSwap
   // sample tx: https://etherscan.io/tx/0xf3b1c38a21940434511fd5876bccf6c7a5b506a1d5d5fc9f968bcd487b5e4bcb
   '0x84bd6d29': {
     abi: [
@@ -144,6 +144,70 @@ export const FunctionAbis: { [key: string]: any } = {
         internalType: 'bytes32',
         name: 'vs',
         type: 'bytes32',
+      },
+    ],
+  },
+
+  // oneinch swap router v3
+  // sample tx: 0x248b1c32c61a1adb774788a7a3f77c0b25d9852b9dc10eef2259594277e530ae
+  '0x7c025200': {
+    abi: [
+      {
+        internalType: 'contract IAggregationExecutor',
+        name: 'caller',
+        type: 'address',
+      },
+      {
+        components: [
+          {
+            internalType: 'contract IERC20',
+            name: 'srcToken',
+            type: 'address',
+          },
+          {
+            internalType: 'contract IERC20',
+            name: 'dstToken',
+            type: 'address',
+          },
+          {
+            internalType: 'address',
+            name: 'srcReceiver',
+            type: 'address',
+          },
+          {
+            internalType: 'address',
+            name: 'dstReceiver',
+            type: 'address',
+          },
+          {
+            internalType: 'uint256',
+            name: 'amount',
+            type: 'uint256',
+          },
+          {
+            internalType: 'uint256',
+            name: 'minReturnAmount',
+            type: 'uint256',
+          },
+          {
+            internalType: 'uint256',
+            name: 'flags',
+            type: 'uint256',
+          },
+          {
+            internalType: 'bytes',
+            name: 'permit',
+            type: 'bytes',
+          },
+        ],
+        internalType: 'struct AggregationRouterV3.SwapDescription',
+        name: 'desc',
+        type: 'tuple',
+      },
+      {
+        internalType: 'bytes',
+        name: 'data',
+        type: 'bytes',
       },
     ],
   },
