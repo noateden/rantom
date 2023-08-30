@@ -2352,3 +2352,98 @@ export const AmbientConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const SommelierConfigs: ProtocolConfig = {
+  protocol: 'sommelier',
+  categories: ['staking'],
+  contracts: {
+    ethereum: [
+      // v2
+      '0x97e6e0a40a3d02f12d1cec30ebfbae04e37c119e', // Real Yield USD - USDC
+      '0xb5b29320d2dde5ba5bafa1ebcd270052070483ec', // Real Yield ETH - WETH
+
+      // v1.5
+      '0x6b7f87279982d919bbf85182ddeab179b366d8f2', // ETH-BTC Trend
+      '0x6e2dac3b9e9adc0cbbae2d0b9fd81952a8d33872', // ETH-BTC Momentum
+      '0x3f07a84ecdf494310d397d24c1c78b041d2fa622', // Steady ETH
+      '0x4986fd36b6b16f49b43282ee2e24c5cf90ed166d', // Steady BTC
+      '0x6f069f711281618467dae7873541ecc082761b33', // Steady UNI
+      '0x05641a27c82799aaf22b436f20a3110410f29652', // Steady MATIC
+    ],
+  },
+  staticData: {
+    assets: {
+      '0x97e6e0a40a3d02f12d1cec30ebfbae04e37c119e': Tokens.ethereum.USDC,
+      '0xb5b29320d2dde5ba5bafa1ebcd270052070483ec': Tokens.ethereum.WETH,
+      '0x6b7f87279982d919bbf85182ddeab179b366d8f2': Tokens.ethereum.USDC,
+      '0x6e2dac3b9e9adc0cbbae2d0b9fd81952a8d33872': Tokens.ethereum.USDC,
+      '0x4986fd36b6b16f49b43282ee2e24c5cf90ed166d': Tokens.ethereum.USDC,
+      '0x6f069f711281618467dae7873541ecc082761b33': Tokens.ethereum.USDC,
+      '0x05641a27c82799aaf22b436f20a3110410f29652': Tokens.ethereum.USDC,
+    },
+  },
+  customEventMapping: {
+    [Signatures['Deposit(address,address,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'caller',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'owner',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'assets',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'shares',
+          type: 'uint256',
+        },
+      ],
+    },
+    [Signatures['Withdraw(address,address,address,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'caller',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'receiver',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'owner',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'assets',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'shares',
+          type: 'uint256',
+        },
+      ],
+    },
+  },
+};

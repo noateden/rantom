@@ -44,6 +44,7 @@ import { ParaswapContracts } from '../../configs/contracts/paraswap';
 import { PendleContracts } from '../../configs/contracts/pendle';
 import { RaftContracts } from '../../configs/contracts/raft';
 import { SiloContracts } from '../../configs/contracts/silo';
+import { SommelierContracts } from '../../configs/contracts/sommelier';
 import { SparkContracts } from '../../configs/contracts/spark';
 import { StakewiseContracts } from '../../configs/contracts/stakewise';
 import { SturdyContracts } from '../../configs/contracts/sturdy';
@@ -109,5 +110,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     mux: new ContractWorker(providers, MuxContracts),
     clipper: new ContractWorker(providers, ClipperContracts),
     basin: new ContractWorker(providers, BasinContracts),
+    sommelier: new ContractWorker(providers, SommelierContracts),
   };
 }

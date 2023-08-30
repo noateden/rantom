@@ -75,6 +75,7 @@ import {
   RocketpoolConfigs,
   ShibaswapConfigs,
   SiloConfigs,
+  SommelierConfigs,
   SparkConfigs,
   StakewiseConfigs,
   StargateConfigs,
@@ -161,6 +162,7 @@ import { RaftAdapter } from './raft/raft';
 import { RaribleAdapter } from './rarible/rarible';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SiloAdapter } from './silo/silo';
+import { SommelierAdapter } from './sommelier/sommelier';
 import { StakewiseAdapter } from './stakewise/stakewise';
 import { StargateAdapter } from './stargate/stargate';
 import { SturdyAdapter } from './sturdy/sturdy';
@@ -272,5 +274,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     basin: new BasinAdapter(BasinConfigs, providers),
     unibot: new UnibotAdapter(UnibotConfigs, providers),
     ambient: new AmbientAdapter(AmbientConfigs, providers),
+    sommelier: new SommelierAdapter(SommelierConfigs, providers),
   };
 }
