@@ -201,6 +201,7 @@ export class ContractWorker implements IContractWorker {
                   protocol: contract.protocol,
                   hash: log.transactionHash,
                   topic: log.topics[0],
+                  error: e.message,
                 },
               });
             }

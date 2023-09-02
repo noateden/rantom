@@ -69,6 +69,7 @@ import {
   PancakeswapV3Configs,
   ParaswapConfigs,
   PendleConfigs,
+  PrismaConfigs,
   RadiantConfigs,
   RaftConfigs,
   RaribleConfigs,
@@ -158,6 +159,7 @@ import { OptimismAdapter } from './optimism/optimism';
 import { Pancakeswapv3Adapter } from './pancakeswap/pancakeswapv3';
 import { ParaswapAdapter } from './paraswap/paraswap';
 import { PendleAdapter } from './pendle/pendle';
+import { PrismaAdapter } from './prisma/prisma';
 import { RaftAdapter } from './raft/raft';
 import { RaribleAdapter } from './rarible/rarible';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
@@ -275,5 +277,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     unibot: new UnibotAdapter(UnibotConfigs, providers),
     ambient: new AmbientAdapter(AmbientConfigs, providers),
     sommelier: new SommelierAdapter(SommelierConfigs, providers),
+    prisma: new PrismaAdapter(PrismaConfigs, providers),
   };
 }

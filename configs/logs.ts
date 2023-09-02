@@ -205,6 +205,19 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xce7a977cac4a481bc84ac06b2da0df614e621cf3', // Defisaver logger
     '0x1d6dedb49af91a11b5c5f34954fd3e8cc4f03a86', // Defisaver recipe executor
     '0x655edce464cc797526600a462a8154650eee4b77', // Clipper exchange
+    '0x72c590349535ad52e6953744cb2a36b409542719', // Prisma borrow operations
+    '0xf69282a7e7ba5428f92f610e7afa1c0cedc4e483', // Prisma trove manager sfrxETH
+    '0xbf6883a03fd2fcfa1b9fc588ad6193b3c3178f8f', // Prisma trove manager wstETH
+    '0xe0e255fd5281bec3bb8fa1569a20097d9064e445', // Prisma trove manager rETH
+    '0x63cc74334f4b1119276667cf0079ac0c8a96cfb2', // Prisma trove manager cbETH
+    '0x97e6e0a40a3d02f12d1cec30ebfbae04e37c119e', // Sommelier real Yield USD - USDC
+    '0xb5b29320d2dde5ba5bafa1ebcd270052070483ec', // Sommelier real Yield ETH - WETH
+    '0x6b7f87279982d919bbf85182ddeab179b366d8f2', // Sommelier ETH-BTC Trend
+    '0x6e2dac3b9e9adc0cbbae2d0b9fd81952a8d33872', // Sommelier ETH-BTC Momentum
+    '0x3f07a84ecdf494310d397d24c1c78b041d2fa622', // Sommelier steady ETH
+    '0x4986fd36b6b16f49b43282ee2e24c5cf90ed166d', // Sommelier steady BTC
+    '0x6f069f711281618467dae7873541ecc082761b33', // Sommelier steady UNI
+    '0x05641a27c82799aaf22b436f20a3110410f29652', // Sommelier steady MATIC
   ],
 
   arbitrum: [

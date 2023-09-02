@@ -67,7 +67,7 @@ export class LiquityAdapter extends Adapter {
     });
   }
 
-  private async getMarket(options: any): Promise<LiquityMarket> {
+  protected async getMarket(options: AdapterParseLogOptions): Promise<LiquityMarket | null> {
     return this.config.staticData.markets[0];
   }
 
@@ -121,6 +121,9 @@ export class LiquityAdapter extends Adapter {
 
         // liquity has only one market, LUSD-ETH
         const market = await this.getMarket(options);
+        if (!market) {
+          return null;
+        }
 
         if (!redeem) {
           // borrow/repay with borrow operation
@@ -160,16 +163,19 @@ export class LiquityAdapter extends Adapter {
             tokens: [market.debtToken],
             tokenAmounts: [debtAmount],
             readableString: `${borrower} ${action} ${debtAmount} ${Tokens.ethereum.LUSD.symbol} on ${this.config.protocol} chain ${chain}`,
-            subActions: [
-              {
-                protocol: this.config.protocol,
-                action: subAction,
-                addresses: [borrower],
-                tokens: [market.collToken],
-                tokenAmounts: [collAmount],
-                readableString: `${borrower} ${subAction} ${collAmount} ${market.collToken.symbol} on ${this.config.protocol} chain ${chain}`,
-              },
-            ],
+            subActions:
+              collAmount !== '0'
+                ? [
+                    {
+                      protocol: this.config.protocol,
+                      action: subAction,
+                      addresses: [borrower],
+                      tokens: [market.collToken],
+                      tokenAmounts: [collAmount],
+                      readableString: `${borrower} ${subAction} ${collAmount} ${market.collToken.symbol} on ${this.config.protocol} chain ${chain}`,
+                    },
+                  ]
+                : undefined,
           };
         } else {
           // redeem on trove manager
@@ -194,16 +200,19 @@ export class LiquityAdapter extends Adapter {
             tokens: [market.debtToken],
             tokenAmounts: [debtAmount],
             readableString: `${borrower} ${action} ${debtAmount} ${Tokens.ethereum.LUSD.symbol} on ${this.config.protocol} chain ${chain}`,
-            subActions: [
-              {
-                protocol: this.config.protocol,
-                action: subAction,
-                addresses: [borrower],
-                tokens: [market.collToken],
-                tokenAmounts: [collAmount],
-                readableString: `${borrower} ${subAction} ${collAmount} ${market.collToken.symbol} on ${this.config.protocol} chain ${chain}`,
-              },
-            ],
+            subActions:
+              collAmount !== '0'
+                ? [
+                    {
+                      protocol: this.config.protocol,
+                      action: subAction,
+                      addresses: [borrower],
+                      tokens: [market.collToken],
+                      tokenAmounts: [collAmount],
+                      readableString: `${borrower} ${subAction} ${collAmount} ${market.collToken.symbol} on ${this.config.protocol} chain ${chain}`,
+                    },
+                  ]
+                : undefined,
           };
         }
       } else if (signature === Signatures.TroveLiquidated) {

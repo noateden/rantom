@@ -42,6 +42,7 @@ import { OpenoceanContracts } from '../../configs/contracts/openocean';
 import { OpenseaContracts } from '../../configs/contracts/opensea';
 import { ParaswapContracts } from '../../configs/contracts/paraswap';
 import { PendleContracts } from '../../configs/contracts/pendle';
+import { PrismaContracts } from '../../configs/contracts/prisma';
 import { RaftContracts } from '../../configs/contracts/raft';
 import { SiloContracts } from '../../configs/contracts/silo';
 import { SommelierContracts } from '../../configs/contracts/sommelier';
@@ -111,5 +112,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     clipper: new ContractWorker(providers, ClipperContracts),
     basin: new ContractWorker(providers, BasinContracts),
     sommelier: new ContractWorker(providers, SommelierContracts),
+    prisma: new ContractWorker(providers, PrismaContracts),
   };
 }
