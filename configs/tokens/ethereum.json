@@ -432,6 +432,12 @@
     "symbol": "frxETH",
     "decimals": 18
   },
+  "mkUSD": {
+    "chain": "ethereum",
+    "address": "0x4591dbff62656e7859afe5e45f6f47d3669fbb28",
+    "symbol": "mkUSD",
+    "decimals": 18
+  },
   "pETH": {
     "chain": "ethereum",
     "address": "0x836a808d4828586a69364065a1e064609f5078c7",

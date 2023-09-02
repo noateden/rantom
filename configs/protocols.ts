@@ -1080,7 +1080,20 @@ export const LiquityConfigs: ProtocolConfig = {
     ],
   },
   staticData: {
-    troveManagerAddress: '0xa39739ef8b0231dbfa0dcda07d7e29faabcf4bb2',
+    rewardTokens: {
+      ethereum: Tokens.ethereum.LQTY,
+    },
+    borrowTokens: {
+      ethereum: Tokens.ethereum.LUSD,
+    },
+    markets: [
+      {
+        chain: 'ethereum',
+        debtToken: Tokens.ethereum.LUSD,
+        collToken: Tokens.ethereum.ETH,
+        troveManager: '0xa39739ef8b0231dbfa0dcda07d7e29faabcf4bb2',
+      },
+    ],
   },
 };
 
@@ -2444,6 +2457,26 @@ export const SommelierConfigs: ProtocolConfig = {
           type: 'uint256',
         },
       ],
+    },
+  },
+};
+
+export const PrismaConfigs: ProtocolConfig = {
+  protocol: 'prisma',
+  categories: ['lending'],
+  contracts: {
+    ethereum: [
+      '0x72c590349535ad52e6953744cb2a36b409542719', // Borrow operations
+    ],
+  },
+  staticData: {
+    troveManagers: {
+      ethereum: {
+        '0xf69282a7e7ba5428f92f610e7afa1c0cedc4e483': Tokens.ethereum.sfrxETH,
+        '0xbf6883a03fd2fcfa1b9fc588ad6193b3c3178f8f': Tokens.ethereum.wstETH,
+        '0xe0e255fd5281bec3bb8fa1569a20097d9064e445': Tokens.ethereum.rETH,
+        '0x63cc74334f4b1119276667cf0079ac0c8a96cfb2': Tokens.ethereum.cbETH,
+      },
     },
   },
 };

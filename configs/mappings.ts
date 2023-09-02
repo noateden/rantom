@@ -6409,6 +6409,22 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['LQTYPaidToFrontEnd(address,uint256)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: '_frontEnd',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_LQTY',
+        type: 'uint256',
+      },
+    ],
+  },
   [Signatures['ClaimedRewards(uint256,uint256)']]: {
     abi: [
       {
