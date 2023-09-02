@@ -10,6 +10,7 @@ import FraxLendPairs from './data/FraxlendPairs.json';
 import MaverickPools from './data/MaverickPools.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
+import UniFactoryPools from './data/UniFactoryPools.json';
 import UniLiquidityPools from './data/UniLiquidityPools.json';
 import YearnVaults from './data/YearnVaults.json';
 
@@ -218,6 +219,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x4986fd36b6b16f49b43282ee2e24c5cf90ed166d', // Sommelier steady BTC
     '0x6f069f711281618467dae7873541ecc082761b33', // Sommelier steady UNI
     '0x05641a27c82799aaf22b436f20a3110410f29652', // Sommelier steady MATIC
+    '0xbea0e11282e2bb5893bece110cf199501e872bad', // Basin BEAN-WETH Well
   ],
 
   arbitrum: [
@@ -253,6 +255,9 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
       (item: any) => item.address
     ),
     ...UniLiquidityPools.filter((item: any) => item.protocol === 'sushiv3' && item.chain === 'base').map(
+      (item: any) => item.address
+    ),
+    ...UniFactoryPools.filter((item: any) => item.protocol === 'aerodrome' && item.chain === 'base').map(
       (item: any) => item.address
     ),
     '0x9c4ec768c28520b50860ea7a15bd7213a9ff58bf', // Compound v3 USDCbC

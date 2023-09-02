@@ -573,4 +573,15 @@ export const Signatures: { [key: string]: string } = {
   'RemoveLiquidityOneToken(uint256,address,uint256,address)':
     '0x6f08fb00dac40d918cc84a5080754603d4f9a13a2437d87e06fd75ab944c7575',
   'Shift(uint256[],address,uint256,address)': '0x1ee4a8e2e74af07abadd6b0b5f8f8bd96a54656e3bb7d987c5075a0c8b9f0df5',
+
+  // aerodrome.finance
+  'Swap(address,address,uint256,uint256,uint256,uint256)':
+    '0xb3e2773606abfd36b5bd91394b3a54d1398336c65005baf7bf7a05efeffaf75b',
+
+  // use the same Mint event from Uniswap V2 Pair
+  // 'Mint(address,uint256,uint256)': '0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c6fef26394f4c03821c4f',
+
+  // use custom abi config
+  // 'Burn(address,address,uint256,uint256)': '0x5d624aa9c148153ab3446c1b154f660ee7701e549fe9b62dab7171b1c80e6fa2',
+  'Claim(address,address,uint256,uint256)': '0x865ca08d59f5cb456e85cd2f7ef63664ea4f73327414e9d8152c4158b0e94645',
 };

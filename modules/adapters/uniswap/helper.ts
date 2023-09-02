@@ -1,6 +1,5 @@
 import Web3 from 'web3';
 
-import UniswapFactoryV2 from '../../../configs/abi/uniswap/UniswapV2Factory.json';
 import UniswapFactoryV3 from '../../../configs/abi/uniswap/UniswapV3Factory.json';
 import EnvConfig from '../../../configs/envConfig';
 import { normalizeAddress } from '../../../lib/helper';
@@ -21,11 +20,13 @@ export class UniswapHelper {
     chain: string,
     protocol: string,
     factoryAddress: string,
+    factoryAbi: any,
+    factoryEvent: string = 'PoolCreated', // default uni v2
     fromBlock: number
   ): Promise<Array<UniswapPoolConstant>> {
     const web3Helper = new Web3HelperProvider(null);
     const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-    const factoryContract = new web3.eth.Contract(UniswapFactoryV2 as any, factoryAddress);
+    const factoryContract = new web3.eth.Contract(factoryAbi, factoryAddress);
 
     const pools: Array<UniswapPoolConstant> = [];
 
@@ -36,7 +37,7 @@ export class UniswapHelper {
     while (startBlock <= latestBlock) {
       const toBlock = startBlock + range > latestBlock ? latestBlock : startBlock + range;
 
-      const logs = await factoryContract.getPastEvents('PairCreated', { fromBlock: startBlock, toBlock });
+      const logs = await factoryContract.getPastEvents(factoryEvent, { fromBlock: startBlock, toBlock });
       for (const log of logs) {
         const token0 = await web3Helper.getErc20Metadata(chain, log.returnValues.token0);
         const token1 = await web3Helper.getErc20Metadata(chain, log.returnValues.token1);

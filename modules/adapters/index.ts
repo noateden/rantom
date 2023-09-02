@@ -3,6 +3,7 @@ import {
   Aavev2Configs,
   Aavev3Configs,
   AbracadabraConfigs,
+  AerodromeConfigs,
   AgilityConfigs,
   AirswapConfigs,
   AmbientConfigs,
@@ -97,6 +98,7 @@ import { Aavev1Adapter } from './aave/aavev1';
 import { Aavev2Adapter } from './aave/aavev2';
 import { Aavev3Adapter } from './aave/aavev3';
 import { AbracadabraAdapter } from './abracadabra/abracadabra';
+import { AerodromeAdapter } from './aerodrome/aerodrome';
 import { AgilityAdapter } from './agility/agility';
 import { AirswapAdapter } from './airswap/airswap';
 import { AmbientAdapter } from './ambient/ambient';
@@ -278,5 +280,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     ambient: new AmbientAdapter(AmbientConfigs, providers),
     sommelier: new SommelierAdapter(SommelierConfigs, providers),
     prisma: new PrismaAdapter(PrismaConfigs, providers),
+    aerodrome: new AerodromeAdapter(AerodromeConfigs, providers),
   };
 }

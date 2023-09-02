@@ -2509,3 +2509,43 @@ export const PrismaConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const AerodromeConfigs: ProtocolConfig = {
+  protocol: 'aerodrome',
+  categories: ['trading'],
+  contracts: {
+    base: [
+      '0x420dd381b31aef6683db6b902084cb0ffece40da', // factory
+    ],
+  },
+  customEventMapping: {
+    [Signatures['Burn(address,address,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'sender',
+          type: 'address',
+        },
+        {
+          indexed: true,
+          internalType: 'address',
+          name: 'to',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount0',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'amount1',
+          type: 'uint256',
+        },
+      ],
+    },
+  },
+};

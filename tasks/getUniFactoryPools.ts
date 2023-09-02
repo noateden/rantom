@@ -2,10 +2,11 @@
 // query factory events
 import fs from 'fs';
 
+import AerodromeFactoryAbi from '../configs/abi/aerodrome/Factory.json';
 import { UniswapHelper, UniswapPoolConstant } from '../modules/adapters/uniswap/helper';
 import { UniLiquidityPool } from '../types/domains';
 
-const Factories: Array<string> = ['baseswap:base:0xfda619b6d20975be80a10332cd39b9a4b0faa8bb:2059124'];
+const Factories: Array<string> = ['aerodrome:base:0x420dd381b31aef6683db6b902084cb0ffece40da:3200559'];
 
 (async function () {
   let allPools: Array<UniLiquidityPool> = [];
@@ -16,6 +17,8 @@ const Factories: Array<string> = ['baseswap:base:0xfda619b6d20975be80a10332cd39b
       chain,
       protocol,
       factory,
+      AerodromeFactoryAbi,
+      'PoolCreated',
       Number(fromBlock)
     );
 

@@ -1,0 +1,1712 @@
+[
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b",
+      "symbol": "tBTC",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b",
+      "symbol": "tBTC",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x26f3901ac8a79c50fb0d8289c74f0d09adc42e29",
+      "symbol": "T",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x2dad3a13ef0c6366220f989157009e501e7938f8",
+      "symbol": "EXTRA",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x4621b7a9c75199271f773ebd9a499dbd165c3191",
+      "symbol": "DOLA",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x6b4712ae9797c199edd44f897ca09bc57628a1cf",
+      "symbol": "UNIDX",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x00e1724885473b63bce08a9f0a52f35b0979e35a",
+      "symbol": "OATH",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xf7a0dd3317535ec4f4d29adf9d620b3d8d5d5069",
+      "symbol": "stERN",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0xa334884bf6b0a066d553d19e507315e839409e62",
+      "symbol": "ERN",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xf7a0dd3317535ec4f4d29adf9d620b3d8d5d5069",
+      "symbol": "stERN",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0xbf1aea8670d2528e08334083616dd9c5f3b087ae",
+      "symbol": "MAI",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x4621b7a9c75199271f773ebd9a499dbd165c3191",
+      "symbol": "DOLA",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xbf1aea8670d2528e08334083616dd9c5f3b087ae",
+      "symbol": "MAI",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xe3b53af74a4bf62ae5511055290838050bf764df",
+      "symbol": "STG",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xf544251d25f3d243a36b07e7e7962a678f952691",
+      "symbol": "TAROT",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x4a3a6dd60a34bb2aba60d73b4c88315e9ceb6a3d",
+      "symbol": "MIM",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x4a3a6dd60a34bb2aba60d73b4c88315e9ceb6a3d",
+      "symbol": "MIM",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc",
+      "symbol": "HOP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x65a2508c429a6078a7bc2f7df81ab575bd9d9275",
+      "symbol": "DAI+",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376",
+      "symbol": "USD+",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376",
+      "symbol": "USD+",
+      "decimals": 6
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xde5ed76e7c05ec5e4572cfc88d1acea165109e44",
+      "symbol": "DEUS",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+      "symbol": "AERO",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+      "symbol": "AERO",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x9e53e88dcff56d3062510a745952dec4cefdff9e",
+      "symbol": "DOG",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xab8a1c03b8e4e1d21c8ddd6edf9e07f26e843492",
+      "symbol": "OGRE",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xa8b58b9311988a0a6ba99c323e05c30fcdca17e3",
+      "symbol": "BaseDOGE",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x45622e5bce7524d911210a25f4f83b6c8766b735",
+      "symbol": "Balls",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xba5e6fa2f33f3955f0cef50c63dcc84861eab663",
+      "symbol": "BASED",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x8901cb2e82cc95c01e42206f8d1f417fe53e7af0",
+      "symbol": "YFX",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xa6c6502c020d58651a8a1dc044ba7514ac41bcce",
+      "symbol": "Gekko",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x9bb168e7ff1c0f2fbdd844b4348c755dc7500fe1",
+      "symbol": "HAIRY",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "cbETH",
+      "decimals": 18,
+      "address": "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22"
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x9065c9f6337fb742709a85402bad53c78236db36",
+      "symbol": "BASED Token",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x5c185329bc7720aebd804357043121d26036d1b3",
+      "symbol": "BAI",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0xcad58c7ff0410df842835eb55ba21649bd267d9c",
+      "symbol": "EVAWAT",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xe3eb37ce83fac09570482a9a86a193b94849e558",
+      "symbol": "SERAPH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xe3eb37ce83fac09570482a9a86a193b94849e558",
+      "symbol": "SERAPH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x5d1a42e32d84560ff46f4f06302fe4c69d28135d",
+      "symbol": "AAA",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x8544fe9d190fd7ec52860abbf45088e81ee24a8c",
+      "symbol": "TOSHI",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x9483ab65847a447e36d21af1cab8c87e9712ff93",
+      "symbol": "wUSDR",
+      "decimals": 9
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x5d1a42e32d84560ff46f4f06302fe4c69d28135d",
+      "symbol": "AAA",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xce71509ea8f3488404770c2a27f69013a00d28bd",
+      "symbol": "BBB",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x74ccbe53f77b08632ce0cb91d3a545bf6b8e0979",
+      "symbol": "fBOMB",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xff8adec2221f9f4d8dfbafa6b9a297d17603493d",
+      "symbol": "WELL",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x74ccbe53f77b08632ce0cb91d3a545bf6b8e0979",
+      "symbol": "fBOMB",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x8901cb2e82cc95c01e42206f8d1f417fe53e7af0",
+      "symbol": "YFX",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xd7c9621e3a5051f5e5a5982c8c430fd4b55eda22",
+      "symbol": "BLUE",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x5d1a42e32d84560ff46f4f06302fe4c69d28135d",
+      "symbol": "AAA",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x5d1a42e32d84560ff46f4f06302fe4c69d28135d",
+      "symbol": "AAA",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xd359d5440c5b68d43076b6475a5f18a3fef8fbd3",
+      "symbol": "AAA2",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376",
+      "symbol": "USD+",
+      "decimals": 6
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xf7a0dd3317535ec4f4d29adf9d620b3d8d5d5069",
+      "symbol": "stERN",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376",
+      "symbol": "USD+",
+      "decimals": 6
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x6c781131d8d4494fe32d8bc9394d0fef6b1a5b8c",
+      "symbol": "BSK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xf544251d25f3d243a36b07e7e7962a678f952691",
+      "symbol": "TAROT",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xf34e0cff046e154cafcae502c7541b9e5fd8c249",
+      "symbol": "THALES",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xf34e0cff046e154cafcae502c7541b9e5fd8c249",
+      "symbol": "THALES",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x2dad3a13ef0c6366220f989157009e501e7938f8",
+      "symbol": "EXTRA",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x27dcb425c7005dd7558f9583797eda39a8d70abd",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xfb3e929bab9796d2bee7cd15ab7954533d899dad",
+      "symbol": "BASED Token",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0xac8da2e2a1a114aafe50c774c588dcd93a028fc8",
+      "symbol": "gSIS",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376",
+      "symbol": "USD+",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x595675dcbe5d2ad1f4d7b910c50567c0f9230633",
+      "symbol": "SHIP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x213a8dc524e37be4c908702340c6eaad3670023d",
+      "symbol": "aAERO",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xfd949897b850258b41af56872ab310d6c7811f27",
+      "symbol": "CIVIC",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x74ccbe53f77b08632ce0cb91d3a545bf6b8e0979",
+      "symbol": "fBOMB",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+      "symbol": "AERO",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x27d2decb4bfc9c76f0309b8e88dec3a601fe25a8",
+      "symbol": "BALD",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0xa61beb4a3d02decb01039e378237032b351125b4",
+      "symbol": "agEUR",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x22a2488fe295047ba13bd8cccdbc8361dbd8cf7c",
+      "symbol": "SONNE",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0xc142171b138db17a1b7cb999c44526094a4dae05",
+      "symbol": "USX",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "cbETH",
+      "decimals": 18,
+      "address": "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xd830162411497faff8734ce4200c547faf2feae2",
+      "symbol": "TAX",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x63a522f6e7d5b96f7aebb74d2648545e9e14078d",
+      "symbol": "MOARRR",
+      "decimals": 9
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x74ccbe53f77b08632ce0cb91d3a545bf6b8e0979",
+      "symbol": "fBOMB",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xb53be0be88ba245b5086e558d00ad56ee7344556",
+      "symbol": "TOSHI",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x4621b7a9c75199271f773ebd9a499dbd165c3191",
+      "symbol": "DOLA",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xbbd6cd3a31cbc5cbd6f89d476d15d5bd2f260acb",
+      "symbol": "AERO",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xb75445a717d5a8c268f37045162837cfe72ac337",
+      "symbol": "BRYAN",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+      "symbol": "AERO",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x2dad3a13ef0c6366220f989157009e501e7938f8",
+      "symbol": "EXTRA",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+      "symbol": "AERO",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x65a2508c429a6078a7bc2f7df81ab575bd9d9275",
+      "symbol": "DAI+",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0xbf1aea8670d2528e08334083616dd9c5f3b087ae",
+      "symbol": "MAI",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x213a8dc524e37be4c908702340c6eaad3670023d",
+      "symbol": "aAERO",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+      "symbol": "AERO",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x60b72c00681a43e423f097ab61cc526a1045b048",
+      "symbol": "FRIEND",
+      "decimals": 8
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xbf1aea8670d2528e08334083616dd9c5f3b087ae",
+      "symbol": "MAI",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x5aacb870842382315b875f72ef66d4fa8d940c50",
+      "symbol": "🐸 ",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x37defbc399e5737d53dfb5533d9954572f5b19bf",
+      "symbol": "BLAZE",
+      "decimals": 9
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x26f3901ac8a79c50fb0d8289c74f0d09adc42e29",
+      "symbol": "T",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x65a2508c429a6078a7bc2f7df81ab575bd9d9275",
+      "symbol": "DAI+",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x9483ab65847a447e36d21af1cab8c87e9712ff93",
+      "symbol": "wUSDR",
+      "decimals": 9
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x03617dc1ab7f959cc3593bb43ca43e192e6662da",
+      "symbol": "DRONE",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xc0a1ceca76a4e3181998ee7cd785a5d761a9d686",
+      "symbol": "COLIBRI",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xdbe1489b63f65a11745ffade9233319df1b70dc9",
+      "symbol": "$ENEMY",
+      "decimals": 8
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x4783689f2907ab06226880939b2dd1be85d44c41",
+      "symbol": "AAA1",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xd359d5440c5b68d43076b6475a5f18a3fef8fbd3",
+      "symbol": "AAA2",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x12063cc18a7096d170e5fc410d8623ad97ee24b3",
+      "symbol": "FREN",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x2168eb98c6d416afb85e7beef5abdc4fb4177dfe",
+      "symbol": "BLP",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0x1f924db207529d3035116eb8f67a1b62a6af8769",
+      "symbol": "RA",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xf37923311d71c986d701cddb3394777322294e3a",
+      "symbol": "DOH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xbefd5c25a59ef2c1316c5a4944931171f30cd3e4",
+      "symbol": "GOLD",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0xc19669a405067927865b40ea045a2baabbbe57f5",
+      "symbol": "STAR",
+      "decimals": 18
+    },
+    "token1": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "address": "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376",
+      "symbol": "USD+",
+      "decimals": 6
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0xf7a0dd3317535ec4f4d29adf9d620b3d8d5d5069",
+      "symbol": "stERN",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "protocol": "aerodrome",
+    "version": "univ2",
+    "address": "",
+    "token0": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "token1": {
+      "chain": "base",
+      "address": "0x9cbd543f1b1166b2df36b68eb6bb1dce24e6abdf",
+      "symbol": "BASED",
+      "decimals": 18
+    }
+  }
+]
