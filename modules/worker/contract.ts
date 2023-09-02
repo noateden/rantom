@@ -155,6 +155,41 @@ export class ContractWorker implements IContractWorker {
                   },
                 });
 
+                if (action.subActions) {
+                  for (let i = 0; i < action.subActions.length; i++) {
+                    operations.push({
+                      updateOne: {
+                        filter: {
+                          chain: contract.chain,
+                          contract: normalizeAddress(log.address),
+                          transactionHash: log.transactionHash,
+
+                          // SubActionLogIndex = (SubActionIndex + 1) * 1000000 + ActionLogIndex
+                          logIndex: (i + 1) * 1000000 + log.logIndex,
+                        },
+                        update: {
+                          $set: {
+                            chain: contract.chain,
+                            contract: normalizeAddress(log.address),
+                            transactionHash: log.transactionHash,
+                            logIndex: (i + 1) * 1000000 + log.logIndex,
+                            blockNumber: log.blockNumber,
+                            timestamp: timestamp,
+
+                            protocol: action.subActions[i].protocol,
+                            action: action.subActions[i].action,
+                            addresses: action.subActions[i].addresses,
+                            tokens: action.subActions[i].tokens,
+                            amounts: action.subActions[i].tokenAmounts,
+                            usdAmounts: action.subActions[i].usdAmounts,
+                          },
+                        },
+                        upsert: true,
+                      },
+                    });
+                  }
+                }
+
                 break;
               }
             } catch (e: any) {
