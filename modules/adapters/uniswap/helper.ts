@@ -47,7 +47,7 @@ export class UniswapHelper {
             chain,
             protocol,
             version: 'univ2',
-            address: normalizeAddress(log.returnValues.pair),
+            address: normalizeAddress(log.returnValues.pair ? log.returnValues.pair : log.returnValues.pool),
             token0,
             token1,
           });
