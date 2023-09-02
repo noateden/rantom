@@ -78,6 +78,26 @@ export class BasinAdapter extends Adapter {
         } catch (e: any) {
           console.log(e);
         }
+      } else if (signature === Signatures.Swap) {
+        const fromToken = await this.getWeb3Helper().getErc20Metadata(chain, event.fromToken);
+        const toToken = await this.getWeb3Helper().getErc20Metadata(chain, event.toToken);
+        if (fromToken && toToken) {
+          const fromAmount = new BigNumber(event.amountIn.toString())
+            .dividedBy(new BigNumber(10).pow(fromToken.decimals))
+            .toString(10);
+          const toAmount = new BigNumber(event.amountOut.toString())
+            .dividedBy(new BigNumber(10).pow(toToken.decimals))
+            .toString(10);
+          const recipient = normalizeAddress(event.recipient);
+          return {
+            protocol: this.config.protocol,
+            action: 'swap',
+            addresses: [recipient],
+            tokens: [fromToken, toToken],
+            tokenAmounts: [fromAmount, toAmount],
+            readableString: `${recipient} swap ${fromAmount} ${fromToken.symbol} for ${toAmount} ${toToken.symbol} on ${this.config.protocol} chain ${chain}`,
+          };
+        }
       } else {
         const token = await this.getWeb3Helper().getErc20Metadata(
           chain,
@@ -88,10 +108,8 @@ export class BasinAdapter extends Adapter {
             .dividedBy(new BigNumber(10).pow(token.decimals))
             .toString(10);
           const recipient = normalizeAddress(event.recipient);
-          let action: KnownAction = 'swap';
-          if (signature === Signatures.RemoveLiquidityOneToken) {
-            action = 'withdraw';
-          } else if (signature === Signatures.Shift) {
+          let action: KnownAction = 'withdraw';
+          if (signature === Signatures.Shift) {
             action = 'collect';
           }
 
