@@ -18,6 +18,7 @@ import MorphoMarkets from './data/MorphoMarkets.json';
 import MuxAssets from './data/MuxAssets.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
+import SonnefinanceMarkets from './data/SonnefinanceMarkets.json';
 import SushiPools from './data/SushiPools.json';
 import UniLiquidityPools from './data/UniLiquidityPools.json';
 import YearnVaults from './data/YearnVaults.json';
@@ -2547,5 +2548,44 @@ export const AerodromeConfigs: ProtocolConfig = {
         },
       ],
     },
+  },
+};
+
+export const SonnefinanceConfigs: ProtocolConfig = {
+  protocol: 'sonnefinance',
+  categories: ['lending'],
+  contracts: {
+    base: [
+      '0x5f5c479fe590cd4442a05ae4a941dd991a633b8e', // soWETH
+      '0xb864ba2aab1f53bc3af7ae49a318202dd3fd54c2', // soDAI
+      '0x225886c9beb5eee254f79d58bbd80cf9f200d4d0', // soUSDbC
+    ],
+  },
+  customEventMapping: {
+    [Signatures['Mint(address,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: false,
+          internalType: 'address',
+          name: 'minter',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'mintAmount',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'mintTokens',
+          type: 'uint256',
+        },
+      ],
+    },
+  },
+  staticData: {
+    pools: SonnefinanceMarkets,
   },
 };

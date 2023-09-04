@@ -78,6 +78,7 @@ import {
   ShibaswapConfigs,
   SiloConfigs,
   SommelierConfigs,
+  SonnefinanceConfigs,
   SparkConfigs,
   StakewiseConfigs,
   StargateConfigs,
@@ -281,5 +282,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     sommelier: new SommelierAdapter(SommelierConfigs, providers),
     prisma: new PrismaAdapter(PrismaConfigs, providers),
     aerodrome: new AerodromeAdapter(AerodromeConfigs, providers),
+    sonnefinance: new CompoundAdapter(SonnefinanceConfigs, providers),
   };
 }

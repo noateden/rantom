@@ -64,7 +64,12 @@ export class AerodromeAdapter extends Adapter {
         },
       ];
 
-      const results = await multicallv2(chain, AerodromePoolAbi, calls);
+      let results: any;
+      try {
+        results = await multicallv2(chain, AerodromePoolAbi, calls);
+      } catch (e: any) {
+        return null;
+      }
 
       const factoryAddress = normalizeAddress(results[0][0]);
       const token0Address = normalizeAddress(results[1][0]);
