@@ -74,6 +74,7 @@ import {
   RadiantConfigs,
   RaftConfigs,
   RaribleConfigs,
+  ReflexerConfigs,
   RocketpoolConfigs,
   ShibaswapConfigs,
   SiloConfigs,
@@ -165,6 +166,7 @@ import { PendleAdapter } from './pendle/pendle';
 import { PrismaAdapter } from './prisma/prisma';
 import { RaftAdapter } from './raft/raft';
 import { RaribleAdapter } from './rarible/rarible';
+import { ReflexerAdapter } from './reflexer/reflexer';
 import { RocketpoolAdapter } from './rocketpool/rocketpool';
 import { SiloAdapter } from './silo/silo';
 import { SommelierAdapter } from './sommelier/sommelier';
@@ -283,5 +285,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     prisma: new PrismaAdapter(PrismaConfigs, providers),
     aerodrome: new AerodromeAdapter(AerodromeConfigs, providers),
     sonnefinance: new CompoundAdapter(SonnefinanceConfigs, providers),
+    reflexer: new ReflexerAdapter(ReflexerConfigs, providers),
   };
 }

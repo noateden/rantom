@@ -584,4 +584,8 @@ export const Signatures: { [key: string]: string } = {
   // use custom abi config
   // 'Burn(address,address,uint256,uint256)': '0x5d624aa9c148153ab3446c1b154f660ee7701e549fe9b62dab7171b1c80e6fa2',
   'Claim(address,address,uint256,uint256)': '0x865ca08d59f5cb456e85cd2f7ef63664ea4f73327414e9d8152c4158b0e94645',
+
+  // reflexer
+  'Join(address,address,uint256)': '0x0e64978d073561c3dfd4d4e3e4dce066cde2ab246a44f990fabb0a21a4a3bd95',
+  'Exit(address,address,uint256)': '0xbc2a67d422c268da6fe45f3e7d194e1d98906d221f1cfad62a5c80f2cd209f4c',
 };

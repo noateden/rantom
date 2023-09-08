@@ -220,6 +220,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x6f069f711281618467dae7873541ecc082761b33', // Sommelier steady UNI
     '0x05641a27c82799aaf22b436f20a3110410f29652', // Sommelier steady MATIC
     '0xbea0e11282e2bb5893bece110cf199501e872bad', // Basin BEAN-WETH Well
+    '0x2d3cd7b81c93f188f3cb8ad87c8acc73d6226e3a', // Reflexer ETH join
+    '0x0a5653cca4db1b6e265f47caf6969e64f1cfdc45', // Reflexer Coin join
   ],
 
   arbitrum: [

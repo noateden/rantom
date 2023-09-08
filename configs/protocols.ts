@@ -2589,3 +2589,14 @@ export const SonnefinanceConfigs: ProtocolConfig = {
     pools: SonnefinanceMarkets,
   },
 };
+
+export const ReflexerConfigs: ProtocolConfig = {
+  protocol: 'reflexer',
+  categories: ['lending'],
+  contracts: {
+    ethereum: [
+      '0x2d3cd7b81c93f188f3cb8ad87c8acc73d6226e3a', // ETH Join
+      '0x0a5653cca4db1b6e265f47caf6969e64f1cfdc45', // CoinJoin
+    ],
+  },
+};
