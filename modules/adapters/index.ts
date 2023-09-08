@@ -39,6 +39,7 @@ import {
   Eth2Configs,
   EulerConfigs,
   ExactlyConfigs,
+  FluxfinanceConfigs,
   FraxethConfigs,
   FraxlendConfigs,
   FraxswapConfigs,
@@ -289,5 +290,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     sonnefinance: new CompoundAdapter(SonnefinanceConfigs, providers),
     reflexer: new ReflexerAdapter(ReflexerConfigs, providers),
     eigenlayer: new EigenlayerAdapter(EigenlayerConfigs, providers),
+    fluxfinance: new CompoundAdapter(FluxfinanceConfigs, providers),
   };
 }

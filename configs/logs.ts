@@ -6,6 +6,7 @@ import BeefyVaults from './data/BeefyVaults.json';
 import ConvexPools from './data/ConvexBoosterPools.json';
 import CurvePools from './data/CurvePools.json';
 import ExactlyMarkets from './data/ExactlyMarkets.json';
+import FluxfinanceMarkets from './data/FluxfinanceMarkets.json';
 import FraxLendPairs from './data/FraxlendPairs.json';
 import MaverickPools from './data/MaverickPools.json';
 import PendleContracts from './data/PendleContracts.json';
@@ -27,6 +28,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...AgilityPools.map((item) => item.address),
     ...CurvePools.map((item) => item.address),
     ...MaverickPools.map((item) => item.address),
+    ...FluxfinanceMarkets.map((item) => item.address),
 
     // convex finance reward pools
     ...ConvexPools.map((item) => item.rewardPool),

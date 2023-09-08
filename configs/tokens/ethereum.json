@@ -245,6 +245,12 @@
     "decimals": 18,
     "address": "0x0000000000000000000000000000000000000000"
   },
+  "OUSG": {
+    "chain": "ethereum",
+    "address": "0x1b19c19393e2d034d8ff31ff34c81252fcbbee92",
+    "symbol": "OUSG",
+    "decimals": 18
+  },
   "R": { "chain": "ethereum", "address": "0x183015a9ba6ff60230fdeadc3f43b3d788b13e21", "symbol": "R", "decimals": 18 },
   "RAI": {
     "chain": "ethereum",

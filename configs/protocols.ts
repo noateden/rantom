@@ -11,6 +11,7 @@ import CompoundMarketsV3 from './data/CompoundMarketsV3.json';
 import ConvexBoosterPoolsData from './data/ConvexBoosterPools.json';
 import CurvePools from './data/CurvePools.json';
 import ExactlyMarkets from './data/ExactlyMarkets.json';
+import FluxfinanceMarkets from './data/FluxfinanceMarkets.json';
 import FraxlendPairs from './data/FraxlendPairs.json';
 import IronbankMarkets from './data/IronbankMarkets.json';
 import MaverickPools from './data/MaverickPools.json';
@@ -2617,5 +2618,46 @@ export const EigenlayerConfigs: ProtocolConfig = {
         '0x1bee69b7dfffa4e2d53c2a2df135c388ad25dcd2': Tokens.ethereum.rETH,
       },
     },
+  },
+};
+
+export const FluxfinanceConfigs: ProtocolConfig = {
+  protocol: 'fluxfinance',
+  categories: ['lending'],
+  contracts: {
+    ethereum: [
+      '0x465a5a630482f3abd6d3b84b39b29b07214d19e5', // fUSDC
+      '0xe2ba8693ce7474900a045757fe0efca900f6530b', // fDAI
+      '0x81994b9607e06ab3d5cf3afff9a67374f05f27d7', // fUSDT
+      '0x1c9a2d6b33b4826757273d47ebee0e2dddcd978b', // fFRAX
+      '0x1dd7950c266fb1be96180a8fdb0591f70200e018', // fOUSG
+    ],
+  },
+  customEventMapping: {
+    [Signatures['Mint(address,uint256,uint256)']]: {
+      abi: [
+        {
+          indexed: false,
+          internalType: 'address',
+          name: 'minter',
+          type: 'address',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'mintAmount',
+          type: 'uint256',
+        },
+        {
+          indexed: false,
+          internalType: 'uint256',
+          name: 'mintTokens',
+          type: 'uint256',
+        },
+      ],
+    },
+  },
+  staticData: {
+    pools: FluxfinanceMarkets,
   },
 };

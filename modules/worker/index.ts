@@ -23,6 +23,7 @@ import { EigenlayerContracts } from '../../configs/contracts/eigenlayer';
 import { EnsContracts } from '../../configs/contracts/ens';
 import { Eth2Contracts } from '../../configs/contracts/eth2';
 import { ExactlyContracts } from '../../configs/contracts/exactly';
+import { FluxfinanceContracts } from '../../configs/contracts/fluxfinance';
 import { FraxethContracts } from '../../configs/contracts/fraxeth';
 import { FraxlendContracts } from '../../configs/contracts/fraxlend';
 import { GearboxContracts } from '../../configs/contracts/gearbox';
@@ -117,5 +118,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     prisma: new ContractWorker(providers, PrismaContracts),
     reflexer: new ContractWorker(providers, ReflexerContracts),
     eigenlayer: new ContractWorker(providers, EigenlayerContracts),
+    fluxfinance: new ContractWorker(providers, FluxfinanceContracts),
   };
 }
