@@ -34,6 +34,7 @@ import {
   CurveConfigs,
   DefisaverConfigs,
   DodoConfigs,
+  EigenlayerConfigs,
   EnsConfigs,
   Eth2Configs,
   EulerConfigs,
@@ -129,6 +130,7 @@ import { CrvusdAdapter } from './crvusd/crvusd';
 import { CurveAdapter } from './curve/curve';
 import { DefisaverAdapter } from './defisaver/defisaver';
 import { DodoAdapter } from './dodo/dodo';
+import { EigenlayerAdapter } from './eigenlayer/eigenlayer';
 import { EnsAdapter } from './ens/ens';
 import { Eth2Adapter } from './eth2/eth2';
 import { EulerAdapter } from './euler/euler';
@@ -286,5 +288,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     aerodrome: new AerodromeAdapter(AerodromeConfigs, providers),
     sonnefinance: new CompoundAdapter(SonnefinanceConfigs, providers),
     reflexer: new ReflexerAdapter(ReflexerConfigs, providers),
+    eigenlayer: new EigenlayerAdapter(EigenlayerConfigs, providers),
   };
 }

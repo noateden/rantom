@@ -84,4 +84,16 @@ export class Adapter implements IAdapter {
       return '';
     }
   }
+
+  public async getTransactionInput(options: AdapterParseLogOptions): Promise<string> {
+    if (options.input) {
+      return options.input;
+    } else if (options.hash) {
+      const web3 = new Web3(EnvConfig.blockchains[options.chain].nodeRpc);
+      const tx = await web3.eth.getTransaction(options.hash);
+      return tx.input;
+    } else {
+      return '';
+    }
+  }
 }

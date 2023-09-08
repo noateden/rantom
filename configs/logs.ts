@@ -222,6 +222,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xbea0e11282e2bb5893bece110cf199501e872bad', // Basin BEAN-WETH Well
     '0x2d3cd7b81c93f188f3cb8ad87c8acc73d6226e3a', // Reflexer ETH join
     '0x0a5653cca4db1b6e265f47caf6969e64f1cfdc45', // Reflexer Coin join
+    '0x858646372cc42e1a627fce94aa7a7033e7cf075a', // Eigenlayer strategy manager
   ],
 
   arbitrum: [

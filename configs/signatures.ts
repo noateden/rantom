@@ -588,4 +588,9 @@ export const Signatures: { [key: string]: string } = {
   // reflexer
   'Join(address,address,uint256)': '0x0e64978d073561c3dfd4d4e3e4dce066cde2ab246a44f990fabb0a21a4a3bd95',
   'Exit(address,address,uint256)': '0xbc2a67d422c268da6fe45f3e7d194e1d98906d221f1cfad62a5c80f2cd209f4c',
+
+  // eigenlayer
+  'Deposit(address,address,address,uint256)': '0x7cfff908a4b583f36430b25d75964c458d8ede8a99bd61be750e97ee1b2f3a96',
+  'WithdrawalCompleted(address,uint96,address,bytes32)':
+    '0xe7eb0ca11b83744ece3d78e9be01b913425fbae70c32ce27726d0ecde92ef8d2',
 };

@@ -10135,4 +10135,60 @@ export const EventSignatureMapping: { [key: string]: EventMapping } = {
       },
     ],
   },
+  [Signatures['Deposit(address,address,address,uint256)']]: {
+    abi: [
+      {
+        indexed: false,
+        internalType: 'address',
+        name: 'depositor',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'contract IERC20',
+        name: 'token',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'contract IStrategy',
+        name: 'strategy',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: 'shares',
+        type: 'uint256',
+      },
+    ],
+  },
+  [Signatures['WithdrawalCompleted(address,uint96,address,bytes32)']]: {
+    abi: [
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'depositor',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'uint96',
+        name: 'nonce',
+        type: 'uint96',
+      },
+      {
+        indexed: true,
+        internalType: 'address',
+        name: 'withdrawer',
+        type: 'address',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: 'withdrawalRoot',
+        type: 'bytes32',
+      },
+    ],
+  },
 };

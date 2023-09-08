@@ -2600,3 +2600,22 @@ export const ReflexerConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const EigenlayerConfigs: ProtocolConfig = {
+  protocol: 'eigenlayer',
+  categories: ['staking'],
+  contracts: {
+    ethereum: [
+      '0x858646372cc42e1a627fce94aa7a7033e7cf075a', // Strategy Manager
+    ],
+  },
+  staticData: {
+    strategies: {
+      ethereum: {
+        '0x54945180db7943c0ed0fee7edab2bd24620256bc': Tokens.ethereum.cbETH,
+        '0x93c4b944d05dfe6df7645a86cd2206016c51564d': Tokens.ethereum.stETH,
+        '0x1bee69b7dfffa4e2d53c2a2df135c388ad25dcd2': Tokens.ethereum.rETH,
+      },
+    },
+  },
+};

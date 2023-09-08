@@ -19,6 +19,7 @@ import { CrvusdContracts } from '../../configs/contracts/crvusd';
 import { CurveContracts } from '../../configs/contracts/curve';
 import { DefisaverContracts } from '../../configs/contracts/defisaver';
 import { DodoContracts } from '../../configs/contracts/dodo';
+import { EigenlayerContracts } from '../../configs/contracts/eigenlayer';
 import { EnsContracts } from '../../configs/contracts/ens';
 import { Eth2Contracts } from '../../configs/contracts/eth2';
 import { ExactlyContracts } from '../../configs/contracts/exactly';
@@ -115,5 +116,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     sommelier: new ContractWorker(providers, SommelierContracts),
     prisma: new ContractWorker(providers, PrismaContracts),
     reflexer: new ContractWorker(providers, ReflexerContracts),
+    eigenlayer: new ContractWorker(providers, EigenlayerContracts),
   };
 }
