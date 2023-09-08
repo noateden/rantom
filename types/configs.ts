@@ -67,10 +67,7 @@ export interface EnvConfig {
       states: string;
       caching: string;
       apiLogs: string;
-
       logs: string;
-      reports: string;
-      metrics: string;
     };
   };
   sentry: {

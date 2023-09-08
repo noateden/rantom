@@ -8,12 +8,6 @@ export interface MongoCollections {
 
   // save logs, v2 API
   logsCollection: Collection;
-
-  // save system reports
-  reportsCollection: Collection;
-
-  // save protocol metrics
-  metricsCollection: Collection;
 }
 
 export const Actions = [

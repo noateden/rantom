@@ -17,12 +17,6 @@ const envConfig: EnvConfig = {
 
       // v2 api
       logs: `${MongodbPrefix}.logs`,
-
-      // system reports
-      reports: `${MongodbPrefix}.reports`,
-
-      // protocol metrics
-      metrics: `${MongodbPrefix}.metrics`,
     },
   },
   sentry: {
