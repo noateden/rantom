@@ -1,18 +1,12 @@
 import Web3 from 'web3';
 
 import EnvConfig from '../../configs/envConfig';
-import { getTimestamp, normalizeAddress } from '../../lib/helper';
+import { normalizeAddress } from '../../lib/helper';
 import { RpcWrapperProvider } from '../../services/rpc';
 import SentryProvider from '../../services/sentry';
 import { Web3HelperProvider } from '../../services/web3';
 import { EventMapping, ProtocolConfig } from '../../types/configs';
-import {
-  KnownAction,
-  ProtocolDailyStats,
-  ProtocolSnapshotStats,
-  TransactionAction,
-  TransactionFunction,
-} from '../../types/domains';
+import { TransactionAction, TransactionFunction } from '../../types/domains';
 import { GlobalProviders, IAdapter, IRpcWrapperProvider, IWeb3HelperProvider } from '../../types/namespaces';
 import {
   AdapterParseContractInfoOptions,
@@ -89,142 +83,5 @@ export class Adapter implements IAdapter {
     } else {
       return '';
     }
-  }
-
-  public async getDailyStats(): Promise<ProtocolDailyStats | null> {
-    if (this.providers) {
-      const currentTimestamp = getTimestamp();
-      const last24HourTimestamp = currentTimestamp - 24 * 60 * 60;
-
-      const stats: ProtocolDailyStats = {
-        protocol: this.config.protocol,
-
-        timestampFrom: last24HourTimestamp,
-        timestamp: currentTimestamp,
-
-        totalEventCount: 0,
-        totalTransactionCount: 0,
-
-        eventCountByActions: {},
-
-        volumeUsdByActions: {},
-      };
-
-      const collections = await this.providers.mongodb.requireCollections();
-      const cursor = await collections.logsCollection.find({
-        protocol: this.config.protocol,
-        timestamp: {
-          $lte: currentTimestamp,
-          $gte: last24HourTimestamp,
-        },
-      });
-
-      const transactions: { [key: string]: boolean } = {};
-      while (await cursor.hasNext()) {
-        const document = await cursor.next();
-
-        if (document) {
-          // count event
-          stats.totalEventCount += 1;
-          const action: KnownAction = document.action;
-          if (stats.eventCountByActions[action]) {
-            stats.eventCountByActions[action] += 1;
-          } else {
-            stats.eventCountByActions[action] = 1;
-          }
-
-          // count transaction
-          if (!transactions[document.transactionHash]) {
-            stats.totalTransactionCount += 1;
-            transactions[document.transactionHash] = true;
-          }
-
-          // we count token volume
-          // if (document.tokens.length > 0) {
-          //   const token: Token = document.tokens[0];
-          //   const tokenPriceResult = await oracle.getTokenSpotPriceUsd({
-          //     chain: document.chain,
-          //     address: token.address,
-          //     timestamp: currentTimestamp,
-          //   });
-          //
-          //   if (tokenPriceResult && tokenPriceResult.spotPriceUsd) {
-          //     const amountUsd = new BigNumber(document.amounts[0])
-          //       .multipliedBy(tokenPriceResult.spotPriceUsd)
-          //       .toNumber();
-          //     if (stats.volumeUsdByActions[action]) {
-          //       stats.volumeUsdByActions[action] += amountUsd;
-          //     } else {
-          //       stats.volumeUsdByActions[action] = amountUsd;
-          //     }
-          //   } else {
-          //     logger.onWarn({
-          //       service: this.name,
-          //       message: 'failed to get token price using oracle',
-          //       props: {
-          //         chain: document.chain,
-          //         token: token.address,
-          //         timestamp: currentTimestamp,
-          //       },
-          //     });
-          //   }
-          // }
-        }
-      }
-
-      return stats;
-    }
-
-    return null;
-  }
-
-  public async getSnapshotStats(fromTime: number, toTime: number): Promise<ProtocolSnapshotStats | null> {
-    if (this.providers) {
-      const stats: ProtocolSnapshotStats = {
-        protocol: this.config.protocol,
-
-        timestamp: toTime,
-
-        totalEventCount: 0,
-        totalTransactionCount: 0,
-
-        eventCountByActions: {},
-      };
-
-      const collections = await this.providers.mongodb.requireCollections();
-      const cursor = await collections.logsCollection.find({
-        protocol: this.config.protocol,
-        timestamp: {
-          $lte: toTime,
-          $gte: fromTime,
-        },
-      });
-
-      const transactions: { [key: string]: boolean } = {};
-      while (await cursor.hasNext()) {
-        const document = await cursor.next();
-
-        if (document) {
-          // count event
-          stats.totalEventCount += 1;
-          const action: KnownAction = document.action;
-          if (stats.eventCountByActions[action]) {
-            stats.eventCountByActions[action] += 1;
-          } else {
-            stats.eventCountByActions[action] = 1;
-          }
-
-          // count transaction
-          if (!transactions[document.transactionHash]) {
-            stats.totalTransactionCount += 1;
-            transactions[document.transactionHash] = true;
-          }
-        }
-      }
-
-      return stats;
-    }
-
-    return null;
   }
 }

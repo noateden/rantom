@@ -2,12 +2,7 @@ import { Collection } from 'mongodb';
 
 import { EventMapping, NonFungibleToken, NonFungibleTokenMetadata, ProtocolConfig, Token } from './configs';
 import {
-  AddressStats,
   MongoCollections,
-  ProtocolDailyStats,
-  ProtocolSnapshotStats,
-  ProtocolStats,
-  SystemReport,
   TokenOracleResult,
   Transaction,
   TransactionAction,
@@ -79,12 +74,6 @@ export interface IAdapter extends IProvider {
 
   // return address label or null on nothing found
   tryParsingContractInfo: (options: AdapterParseContractInfoOptions) => Promise<string | null>;
-
-  // get protocol daily stats
-  getDailyStats: () => Promise<ProtocolDailyStats | null>;
-
-  // get snapshot stats
-  getSnapshotStats: (fromTime: number, toTime: number) => Promise<ProtocolSnapshotStats | null>;
 }
 
 export interface ITransferParser extends IProvider {
@@ -111,15 +100,6 @@ export interface IWorkerProvider extends IProvider {
   run: (options: WorkerRunOptions) => Promise<void>;
 }
 
-export interface IReportProvider extends IProvider {
-  providers: GlobalProviders;
-
-  getSystemReport: () => Promise<SystemReport | null>;
-
-  // run reporter daemon
-  run: () => Promise<void>;
-}
-
 export interface IApiCachingProvider extends IProvider {
   providers: GlobalProviders;
 
@@ -130,22 +110,4 @@ export interface IContractWorker extends IProvider {
   providers: GlobalProviders;
 
   run: (options: WorkerRunOptions) => Promise<void>;
-}
-
-export interface IMetricProvider extends IProvider {
-  providers: GlobalProviders;
-
-  // get stats of given protocol
-  getProtocolStats: (protocol: string) => Promise<ProtocolStats | null>;
-
-  // get stats of given address
-  getAddressStats: (address: string) => Promise<AddressStats | null>;
-
-  // get daily stats of given protocol
-  getProtocolDailyStats: (protocol: string) => Promise<ProtocolDailyStats | null>;
-
-  getProtocolSnapshotStats: (protocol: string) => Promise<Array<ProtocolSnapshotStats>>;
-
-  // run collector daemon, update data
-  run: () => Promise<void>;
 }
