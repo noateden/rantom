@@ -21,6 +21,7 @@ import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import SonnefinanceMarkets from './data/SonnefinanceMarkets.json';
 import SushiPools from './data/SushiPools.json';
+import UniFactoryPools from './data/UniFactoryPools.json';
 import UniLiquidityPools from './data/UniLiquidityPools.json';
 import YearnVaults from './data/YearnVaults.json';
 import { Signatures } from './signatures';
@@ -2549,6 +2550,9 @@ export const AerodromeConfigs: ProtocolConfig = {
         },
       ],
     },
+  },
+  staticData: {
+    liquidityPools: UniFactoryPools.filter((item) => item.protocol === 'aerodrome'),
   },
 };
 
