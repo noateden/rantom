@@ -45,8 +45,8 @@ export class ChaiAdapter extends Adapter {
           let daiRate = '0';
 
           try {
-            if (options.context) {
-              blockNumber = options.context.blockNumber;
+            if (options.blockNumber) {
+              blockNumber = options.blockNumber;
             } else {
               const tx = await web3.eth.getTransactionReceipt(options.hash as string);
               blockNumber = tx.blockNumber;

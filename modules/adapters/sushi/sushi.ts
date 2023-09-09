@@ -87,14 +87,14 @@ export class SushiAdapter extends Uniswapv2Adapter {
       if (signature === Signatures.Transfer && chain === 'ethereum') {
         // sushi bar
         if (event.from === AddressZero || event.to === AddressZero) {
-          if (options.context) {
+          if (options.blockNumber) {
             const sushiContract = new web3.eth.Contract(Erc20Abi as any, Tokens.ethereum.SUSHI.address);
             const xSushiContract = new web3.eth.Contract(Erc20Abi as any, Tokens.ethereum.xSUSHI.address);
 
             const sushiBalance = await sushiContract.methods
               .balanceOf(Tokens.ethereum.xSUSHI.address)
-              .call(options.context.blockNumber - 1);
-            const xSushiSupply = await xSushiContract.methods.totalSupply().call(options.context.blockNumber - 1);
+              .call(options.blockNumber - 1);
+            const xSushiSupply = await xSushiContract.methods.totalSupply().call(options.blockNumber - 1);
             const xSushiPrice = new BigNumber(sushiBalance.toString())
               .multipliedBy(1e18)
               .dividedBy(new BigNumber(xSushiSupply.toString()));

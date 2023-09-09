@@ -115,6 +115,7 @@ export class ContractWorker implements IContractWorker {
                 hash: log.transactionHash,
                 topics: log.topics,
                 data: log.data,
+                blockNumber: log.blockNumber,
               });
               if (action) {
                 let timestamp =

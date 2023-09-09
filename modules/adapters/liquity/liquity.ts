@@ -76,7 +76,7 @@ export class LiquityAdapter extends Adapter {
     const rpcWrapper = this.getRpcWrapper();
 
     // get trove snapshot from previous block
-    let blockNumber = options.context ? options.context.blockNumber : null;
+    let blockNumber = options.context.blockNumber ? options.context.blockNumber : null;
     if (!blockNumber) {
       const transaction = await web3.eth.getTransaction(options.hash as string);
       blockNumber = transaction.blockNumber;
@@ -237,7 +237,7 @@ export class LiquityAdapter extends Adapter {
         const newDeposit = new BigNumber(event._newDeposit).dividedBy(1e18);
 
         // get balance snapshot from previous block
-        let blockNumber = options.context ? options.context.blockNumber : null;
+        let blockNumber = options.blockNumber ? options.blockNumber : null;
         if (!blockNumber) {
           const transaction = await web3.eth.getTransaction(options.hash as string);
           blockNumber = transaction.blockNumber;
@@ -249,7 +249,7 @@ export class LiquityAdapter extends Adapter {
           contract: address,
           method: 'deposits',
           params: [depositor],
-          blockNumber: blockNumber - 1,
+          blockNumber: Number(blockNumber) - 1,
         });
 
         const token = this.config.staticData.borrowTokens[chain] as Token;

@@ -35,7 +35,7 @@ export class EigenlayerAdapter extends Adapter {
       const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
       try {
-        let blockNumber = options.context ? options.context.blockNumber : null;
+        let blockNumber = options.blockNumber ? options.blockNumber : null;
         if (!blockNumber) {
           const transaction = await web3.eth.getTransaction(options.hash as string);
           blockNumber = transaction.blockNumber;

@@ -101,6 +101,7 @@ export class ParserProvider implements IParserProvider {
                 topics: log.topics,
                 data: log.data,
                 input: transaction.input,
+                blockNumber: log.blockNumber,
                 context: receipt,
               };
 

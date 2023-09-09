@@ -68,7 +68,7 @@ export class GravitaAdapter extends Adapter {
           const borrower = normalizeAddress(event._borrower);
 
           // get vault state from previous block
-          let blockNumber = options.context ? options.context.blockNumber : null;
+          let blockNumber = options.blockNumber ? options.blockNumber : null;
           if (!blockNumber) {
             const transaction = await web3.eth.getTransaction(options.hash as string);
             blockNumber = transaction.blockNumber;
@@ -79,7 +79,7 @@ export class GravitaAdapter extends Adapter {
             contract: this.config.staticData.vesselManagers[chain],
             method: 'Vessels',
             params: [borrower, token.address],
-            blockNumber: blockNumber - 1,
+            blockNumber: Number(blockNumber) - 1,
           });
 
           if (vaultPreviousState) {
