@@ -593,4 +593,26 @@ export const Signatures: { [key: string]: string } = {
   'Deposit(address,address,address,uint256)': '0x7cfff908a4b583f36430b25d75964c458d8ede8a99bd61be750e97ee1b2f3a96',
   'WithdrawalCompleted(address,uint96,address,bytes32)':
     '0xe7eb0ca11b83744ece3d78e9be01b913425fbae70c32ce27726d0ecde92ef8d2',
+
+  // level.finance
+  'IncreasePosition(bytes32,address,address,address,uint256,uint256,uint8,uint256,uint256)':
+    '0x8f1a004341b7c2e1e0799b80c6b849e04431c20757ba9b8c9064d5132405465d',
+  'DecreasePosition(bytes32,address,address,address,uint256,uint256,uint8,uint256,int256,uint256)':
+    '0x8b8cf2b995650a0e5239d131bc9ace3606d59971f1c0370675babdbc1fc48e5f',
+  'LiquidatePosition(bytes32,address,address,address,uint8,uint256,uint256,uint256,uint256,int256,uint256)':
+    '0x136cbd19b29e7d7cbbb67178581f238ef5029382a513cd55f0096e974441a6fb',
+  'LiquidityAdded(address,address,address,uint256,uint256,uint256)':
+    '0x43c967b388d3a4ccad3f7ab80167852e322e5a3fde9893f530252281b2ae8b70',
+  'LiquidityRemoved(address,address,address,uint256,uint256,uint256)':
+    '0xd765e08eef31c0983ecca03ecd166297ac485ecd5dd69e291c848f0a020333c1',
+  'Swap(address,address,address,uint256,uint256,uint256,uint256,uint256)':
+    '0xb24b74123b08b3e5d2af6b47e948b1c8eed24d9f717f27a4b2fc3aa82699696e',
+
+  // zeroliquid.xyz
+  'Deposit(address,address,uint256,address)': '0x364bb76a44233df8584c690de6da7810626a5e77192f3ebc942c35bcb1add24f',
+  'Withdraw(address,address,uint256,address)': '0x3ed4ee04a905a278b050a856bbe7ddaaf327a30514373e65aa6103beeae488c3',
+  'Mint(address,uint256,address)': '0xbcad3d7d3dfccb90d49c6063bf70f828901fefc88937d90af74e58e6e55bc39d',
+  'Burn(address,uint256,address)': '0xdbdf9b8e4b75e75b162d151ec8fc7f0561cabab5fcccfa2600be62223e4300c4',
+  'Liquidate(address,address,address,uint256,uint256)':
+    '0x8246cc71ab01533b5bebc672a636df812f10637ad720797319d5741d5ebb3962',
 };

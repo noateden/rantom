@@ -251,6 +251,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x9dda6ef3d919c9bc8885d5560999a3640431e8e6', // Metamask swap router
     '0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3', // Sushi minichef
     '0xa5edbdd9646f8dff606d7448e414884c7d905dca', // Compound v3 USDC
+    '0x32b7bf19cb8b95c27e644183837813d4b595dcc6', // Level Finance liquidity pool
   ],
 
   base: [
@@ -269,6 +270,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x46e6b214b524310239732d51387075e0e70970bf', // Compound v3 WETH
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault
     '0xa238dd80c259a72e81d7e4664a9801593f98d1c5', // Aave v3 lending pool
+    '0x8f44fd754285aa6a2b8b9b97739b79746e0475a7', // Seamless lending pool
   ],
 };
 

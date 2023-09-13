@@ -32,6 +32,7 @@ import { GmxContracts } from '../../configs/contracts/gmx';
 import { GravitaContracts } from '../../configs/contracts/gravita';
 import { InstadappContracts } from '../../configs/contracts/instadapp';
 import { KyberswapClassicContracts } from '../../configs/contracts/kyperswap';
+import { LevelfinanceContracts } from '../../configs/contracts/levelfinance';
 import { LidoContracts } from '../../configs/contracts/lido';
 import { LiquityContracts } from '../../configs/contracts/liquity';
 import { LybraContracts } from '../../configs/contracts/lybra';
@@ -47,6 +48,7 @@ import { PendleContracts } from '../../configs/contracts/pendle';
 import { PrismaContracts } from '../../configs/contracts/prisma';
 import { RaftContracts } from '../../configs/contracts/raft';
 import { ReflexerContracts } from '../../configs/contracts/reflexer';
+import { SeamlessContracts } from '../../configs/contracts/seamless';
 import { SiloContracts } from '../../configs/contracts/silo';
 import { SommelierContracts } from '../../configs/contracts/sommelier';
 import { SparkContracts } from '../../configs/contracts/spark';
@@ -119,5 +121,7 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     reflexer: new ContractWorker(providers, ReflexerContracts),
     eigenlayer: new ContractWorker(providers, EigenlayerContracts),
     fluxfinance: new ContractWorker(providers, FluxfinanceContracts),
+    seamless: new ContractWorker(providers, SeamlessContracts),
+    levelfinance: new ContractWorker(providers, LevelfinanceContracts),
   };
 }

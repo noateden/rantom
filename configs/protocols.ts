@@ -2665,3 +2665,23 @@ export const FluxfinanceConfigs: ProtocolConfig = {
     pools: FluxfinanceMarkets,
   },
 };
+
+export const LevelfinanceConfigs: ProtocolConfig = {
+  protocol: 'levelfinance',
+  categories: ['trading', 'perpetual'],
+  contracts: {
+    arbitrum: [
+      '0x32b7bf19cb8b95c27e644183837813d4b595dcc6', // Liquidity Pool
+    ],
+  },
+};
+
+export const SeamlessConfigs: ProtocolConfig = {
+  protocol: 'seamless',
+  categories: ['lending'],
+  contracts: {
+    base: [
+      '0x8f44fd754285aa6a2b8b9b97739b79746e0475a7', // lending pool - forked from aave lending pool v3
+    ],
+  },
+};

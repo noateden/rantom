@@ -53,6 +53,7 @@ import {
   IronbankConfigs,
   KyberswapAggregatorConfigs,
   KyberswapClassicConfigs,
+  LevelfinanceConfigs,
   LidoConfigs,
   LiquityConfigs,
   LooksrareConfigs,
@@ -78,6 +79,7 @@ import {
   RaribleConfigs,
   ReflexerConfigs,
   RocketpoolConfigs,
+  SeamlessConfigs,
   ShibaswapConfigs,
   SiloConfigs,
   SommelierConfigs,
@@ -148,6 +150,7 @@ import { InstadappAdapter } from './instadapp/instadapp';
 import { IronbankAdapter } from './ironbank/ironbank';
 import { KyberswapAggregatorAdapter } from './kyberswap/kyberswapAggregator';
 import { KyberswapClassicAdapter } from './kyberswap/kyberswapClassic';
+import { LevelfinanceAdapter } from './levelfinance/levelfinance';
 import { LidoAdapter } from './lido/lido';
 import { LiquityAdapter } from './liquity/liquity';
 import { LooksrareAdapter } from './looksrare/looksrare';
@@ -291,5 +294,7 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     reflexer: new ReflexerAdapter(ReflexerConfigs, providers),
     eigenlayer: new EigenlayerAdapter(EigenlayerConfigs, providers),
     fluxfinance: new CompoundAdapter(FluxfinanceConfigs, providers),
+    seamless: new Aavev3Adapter(SeamlessConfigs, providers),
+    levelfinance: new LevelfinanceAdapter(LevelfinanceConfigs, providers),
   };
 }
