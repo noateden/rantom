@@ -339,6 +339,12 @@ export const PancakeswapConfigs: ProtocolConfig = {
         (item) => item.address
       ),
     ],
+    arbitrum: [
+      '0x02a84c1b3bbd7401a5f7fa98a384ebc70bb5749e', // uni v2 factory
+    ],
+    base: [
+      '0x02a84c1b3bbd7401a5f7fa98a384ebc70bb5749e', // uni v2 factory
+    ],
   },
   subgraphs: [
     {
@@ -350,6 +356,26 @@ export const PancakeswapConfigs: ProtocolConfig = {
         transactionBlockNumber: 'block',
       },
       endpoint: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exhange-eth',
+    },
+    {
+      protocol: 'pancakeswap',
+      chain: 'arbitrum',
+      version: 'univ2',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {
+        transactionBlockNumber: 'block',
+      },
+      endpoint: 'https://api.studio.thegraph.com/query/45376/exchange-v2-arbitrum/version/latest',
+    },
+    {
+      protocol: 'pancakeswap',
+      chain: 'base',
+      version: 'univ2',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {
+        transactionBlockNumber: 'block',
+      },
+      endpoint: 'https://api.studio.thegraph.com/query/45376/exchange-v2-base/version/latest',
     },
   ],
   staticData: {
@@ -369,6 +395,12 @@ export const PancakeswapV3Configs: ProtocolConfig = {
         (item) => item.address
       ),
     ],
+    arbitrum: [
+      '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865', // pancakeswap v3 fatory
+    ],
+    base: [
+      '0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865', // pancakeswap v3 fatory
+    ],
   },
   subgraphs: [
     {
@@ -378,6 +410,22 @@ export const PancakeswapV3Configs: ProtocolConfig = {
       birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
       filters: {},
       endpoint: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-v3-eth',
+    },
+    {
+      protocol: 'pancakeswapv3',
+      chain: 'arbitrum',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.studio.thegraph.com/query/45376/exchange-v3-arbitrum/version/latest',
+    },
+    {
+      protocol: 'pancakeswapv3',
+      chain: 'base',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.studio.thegraph.com/query/45376/exchange-v3-base/version/latest',
     },
   ],
   staticData: {

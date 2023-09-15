@@ -153,7 +153,11 @@ export class Uniswapv3Adapter extends UniswapAdapter {
           }
         }
       }
-    } else if (signature === Signatures.PoolCreated && this.config.contracts[chain].indexOf(address) !== -1) {
+    } else if (
+      signature === Signatures.PoolCreated &&
+      this.config.contracts[chain] &&
+      this.config.contracts[chain].indexOf(address) !== -1
+    ) {
       // new pool created on factory contract
       const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
       const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event.token0);
