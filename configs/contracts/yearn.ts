@@ -14,9 +14,9 @@ export const YearnContracts: Array<Contract> = [
       '0xf279e6a1f5e320cca91135676d9cb6e44ca8a08c0b88342bcdb1144f6511b568', // Withdraw
     ],
   },
-  ...YearnVaultData.map((item) => {
+  ...YearnVaultData.filter((item) => item.chain === 'arbitrum' || item.chain === 'base').map((item) => {
     return {
-      chain: 'ethereum',
+      chain: item.chain,
       protocol: 'yearn',
       abi: {},
       address: item.address,
