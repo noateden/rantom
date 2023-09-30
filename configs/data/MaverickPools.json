@@ -1598,5 +1598,341 @@
       "symbol": "SDT",
       "decimals": 18
     }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0xc99cb249c4e6db995ed1b028afad303d170474a8",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xf951e335afb289353dc249e82926178eac7ded78",
+      "symbol": "swETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "address": "0x34ee698c686663922634e8fc13bdecdbf449ffef",
+    "tokenA": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "ethereum",
+      "address": "0xf951e335afb289353dc249e82926178eac7ded78",
+      "symbol": "swETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x6d64fd1c338b8bdbf8c2cb60958e63bff332ed6c",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x06e6736ca9e922766279a22b75a600fe8b8473b6",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x2cebcf66f023aa88003593804504a8df882d12e6",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "cbETH",
+      "decimals": 18,
+      "address": "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22"
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0xdcc8a6ba71a6c0053cbb32f935e9b4b64d465ea3",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x5498aa450e629ec1421ee5a55ef721cd2d060159",
+    "tokenA": {
+      "chain": "base",
+      "address": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
+      "symbol": "MAV",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0xe6917fbf0f44053fd42b55657555afa89806cc24",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "tokenB": {
+      "chain": "base",
+      "address": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
+      "symbol": "MAV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x5bdb08ae195c8f085704582a27d566028a719265",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0xae74dfd9808d74424e8e97ac78c65297e0683d66",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x84415b028d6bf8ac993bfa8cd586d02a65f1c98a",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0xade3960167deebc117f3a6dce4ceb74e5a1c6b8e",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x699d167e9c94b6581a01eca98b8aa1571a403732",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x92a4561acf6746d33016c0aa0488da27c6bb6a9a",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "tokenB": {
+      "chain": "base",
+      "address": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
+      "symbol": "MAV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x43335f7eb6b17c28221c93ec31e7402413540baf",
+    "tokenA": {
+      "chain": "base",
+      "address": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
+      "symbol": "MAV",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0xa9512070e25dbd2016b1f44c03a767002ef18921",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "cbETH",
+      "decimals": 18,
+      "address": "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22"
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x71f5f8ccfcdbf4521463650e65ed9b81a376bac6",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x6850af9d1bf824e62294f90d1f8f7962215c74f5",
+    "tokenA": {
+      "chain": "base",
+      "address": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
+      "symbol": "MAV",
+      "decimals": 18
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x2978f120400b4467ff209ca8ee64ed9b93200dd6",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "tokenB": {
+      "chain": "base",
+      "address": "0x64b88c73a5dfa78d1713fe1b4c69a22d7e0faaa7",
+      "symbol": "MAV",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x3d70b2f31f75dc84acdd5e1588695221959b2d37",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    },
+    "tokenB": {
+      "chain": "base",
+      "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "base",
+    "address": "0x8cb4c74d4bdbc665f64629a97a69232129c9ea8e",
+    "tokenA": {
+      "chain": "base",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
+    },
+    "tokenB": {
+      "chain": "base",
+      "symbol": "USDbC",
+      "decimals": 6,
+      "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
+    }
   }
 ]

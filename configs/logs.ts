@@ -27,7 +27,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...PendleContracts.syTokens.map((item) => item.address),
     ...AgilityPools.map((item) => item.address),
     ...CurvePools.map((item) => item.address),
-    ...MaverickPools.map((item) => item.address),
+    ...MaverickPools.filter((item) => item.chain === 'ethereum').map((item) => item.address),
     ...FluxfinanceMarkets.map((item) => item.address),
 
     // convex finance reward pools
@@ -274,6 +274,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
       (item: any) => (item.protocol === 'pancakeswap' || item.protocol === 'pancakeswapv3') && item.chain === 'base'
     ).map((item: any) => item.address),
     ...YearnVaults.filter((item) => item.chain === 'base').map((item) => item.address),
+    ...MaverickPools.filter((item) => item.chain === 'ethereum').map((item) => item.address),
     '0x9c4ec768c28520b50860ea7a15bd7213a9ff58bf', // Compound v3 USDCbC
     '0x46e6b214b524310239732d51387075e0e70970bf', // Compound v3 WETH
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault

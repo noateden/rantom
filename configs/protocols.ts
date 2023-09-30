@@ -2204,7 +2204,8 @@ export const MaverickConfigs: ProtocolConfig = {
   protocol: 'maverick',
   categories: ['trading'],
   contracts: {
-    ethereum: MaverickPools.map((item) => item.address),
+    ethereum: MaverickPools.filter((item) => item.chain === 'ethereum').map((item) => item.address),
+    base: MaverickPools.filter((item) => item.chain === 'base').map((item) => item.address),
   },
   staticData: {
     pools: MaverickPools,
