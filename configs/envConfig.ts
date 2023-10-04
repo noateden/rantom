@@ -35,6 +35,10 @@ const envConfig: EnvConfig = {
       name: 'base',
       nodeRpc: String(process.env.RANTOM_BASE_NODE),
     },
+    mantle: {
+      name: 'mantle',
+      nodeRpc: String(process.env.RANTOM_MANTLE_NODE),
+    },
   },
   security: {
     systemApiKey: String(process.env.RANTOM_SYSTEM_API_KEY),

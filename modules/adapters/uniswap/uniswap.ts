@@ -1,4 +1,5 @@
 import UniswapV2PairAbi from '../../../configs/abi/uniswap/UniswapV2Pair.json';
+import UniswapV3PairAbi from '../../../configs/abi/uniswap/UniswapV3Pool.json';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
 import logger from '../../../lib/logger';
 import { multicallv2 } from '../../../lib/multicall';
@@ -28,7 +29,7 @@ export class UniswapAdapter extends Adapter {
 
     if (!poolConfig) {
       try {
-        const calls: Array<MulticallCall> = [
+        let calls: Array<MulticallCall> = [
           {
             name: 'factory',
             address: address,
@@ -46,29 +47,40 @@ export class UniswapAdapter extends Adapter {
           },
         ];
 
-        const results = await multicallv2(chain, UniswapV2PairAbi, calls);
+        let results: any;
+        try {
+          results = await multicallv2(chain, UniswapV2PairAbi, calls);
+        } catch (e: any) {
+          try {
+            results = await multicallv2(chain, UniswapV3PairAbi, calls);
+          } catch (e: any) {}
+        }
 
-        const factoryAddress = results[0][0];
-        const token0Address = results[1][0];
-        const token1Address = results[2][0];
+        if (results) {
+          const factoryAddress = results[0][0];
+          const token0Address = results[1][0];
+          const token1Address = results[2][0];
 
-        if (
-          this.config.contracts[chain] &&
-          this.config.contracts[chain].indexOf(normalizeAddress(factoryAddress)) !== -1
-        ) {
-          const token0 = await this.getWeb3Helper().getErc20Metadata(chain, token0Address);
-          const token1 = await this.getWeb3Helper().getErc20Metadata(chain, token1Address);
+          if (
+            this.config.contracts[chain] &&
+            this.config.contracts[chain].indexOf(normalizeAddress(factoryAddress)) !== -1
+          ) {
+            const token0 = await this.getWeb3Helper().getErc20Metadata(chain, token0Address);
+            const token1 = await this.getWeb3Helper().getErc20Metadata(chain, token1Address);
 
-          if (token0 && token1) {
-            poolConfig = {
-              chain,
-              protocol: this.config.protocol,
-              version: 'univ2',
-              address: normalizeAddress(address),
-              token0: token0,
-              token1: token1,
-            };
+            if (token0 && token1) {
+              poolConfig = {
+                chain,
+                protocol: this.config.protocol,
+                version: 'univ2',
+                address: normalizeAddress(address),
+                token0: token0,
+                token1: token1,
+              };
+            }
           }
+        } else {
+          return null;
         }
       } catch (e: any) {
         logger.onDebug({
@@ -78,6 +90,7 @@ export class UniswapAdapter extends Adapter {
             protocol: this.config.protocol,
             chain: chain,
             pool: normalizeAddress(address),
+            error: e.message,
           },
         });
       }

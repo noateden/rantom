@@ -5,6 +5,7 @@ import {
   AbracadabraConfigs,
   AerodromeConfigs,
   AgilityConfigs,
+  AgnifinanceConfigs,
   AirswapConfigs,
   AmbientConfigs,
   AnkrConfigs,
@@ -296,5 +297,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     fluxfinance: new CompoundAdapter(FluxfinanceConfigs, providers),
     seamless: new Aavev3Adapter(SeamlessConfigs, providers),
     levelfinance: new LevelfinanceAdapter(LevelfinanceConfigs, providers),
+    agnifinance: new Pancakeswapv3Adapter(AgnifinanceConfigs, providers),
   };
 }
