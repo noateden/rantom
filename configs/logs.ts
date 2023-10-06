@@ -265,6 +265,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xf39b7be294cb36de8c510e267b82bb588705d977', // Stargate pool MAI
     '0x600e576f9d853c95d58029093a16ee49646f3ca5', // Stargate pool LUSD
     '0x3a23f943181408eac424116af7b7790c94cb97a5', // Bungee gateway
+    '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Kyberswap aggregator meta router v2
   ],
 
   base: [
@@ -292,6 +293,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x28fc411f9e1c480ad312b3d9c60c22b965015c6b', // Stargate pool ETH
     '0x4c80e24119cfb836cdf0a6b53dc23f04f7e652ca', // Stargate pool USDC
     '0x3a23f943181408eac424116af7b7790c94cb97a5', // Bungee gateway
+    '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Kyberswap aggregator meta router v2
   ],
 };
 
