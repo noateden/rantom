@@ -1,730 +1,730 @@
 [
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xafebf9bba7984954e42d7551ab0ce47130bfdc0a",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
       "symbol": "ARB",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x7ec3717f70894f6d9ba0be00774610394ce006ee",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
       "symbol": "USDC",
       "decimals": 6
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xa51ee8b744e6cc1f2ac12b9eeaae8deb27619c6b",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x539bde0d7dbd336b79148aa742883198bbf60342",
       "symbol": "MAGIC",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x13fda18516eafe5e8ae930f86fa51ae4b6c35e8f",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
       "symbol": "USDT",
       "decimals": 6
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
       "symbol": "USDC",
       "decimals": 6
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xa0fd049466d57fc3637e27ca585d59e0ad86b902",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
       "symbol": "JOE",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x5fbbef48ce0850e5a73bc3f4a6e903458b3c0af4",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
       "symbol": "GMX",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xc308a81cf3985baacc0a4496d937936339033407",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
       "symbol": "ARB",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
       "symbol": "USDC",
       "decimals": 6
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xa10e36814601e0a826e25147714c0b7b15964850",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x3082cc23568ea640225c2467653db90e9250aaa0",
       "symbol": "RDNT",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x686262fecf12fbf1c76352691b238d51c46b8fd5",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x3082cc23568ea640225c2467653db90e9250aaa0",
       "symbol": "RDNT",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x5813ce0679e67ddaf0e9002939550710856c06d4",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x0c4681e6c0235179ec3d4f4fc4df3d14fdd96017",
       "symbol": "RDNT",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xf3013b72a4c70a8475ff5331d8f2937e5faf135f",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
       "symbol": "ARB",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
       "symbol": "USDC",
       "decimals": 6
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x84a2edfe3551a0dee68fa3d399bd67ec575889b0",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
       "symbol": "USDT",
       "decimals": 6
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xc710ab0e740b40c3b1ad5d6d8b22f8bcb7473749",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x18c11fd286c5ec11c3b683caa813b77f5163a122",
       "symbol": "GNS",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xba7c96e66f7808699f47c364e388272f95a8bfa8",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
       "symbol": "JOE",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
       "symbol": "USDC",
       "decimals": 6
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x1e38bffe4a032bb1f921f59ecb4b560499566ccd",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
       "symbol": "ARB",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x4183885f851687300beb0ee7694727417d75dd13",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
       "symbol": "WBTC",
       "decimals": 8
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x22300140ab7f5e20d48c2e4d826bd95a13458baa",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x2297aebd383787a160dd0d9f71508148769342e3",
       "symbol": "BTC.b",
       "decimals": 8
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x8f7bc49b48e3c5a13717a83f56f85a71b2c1a3f0",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x4945970efeec98d393b4b979b9be265a3ae28a8b",
       "symbol": "GMD",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xa14dbce13c22c97fd99daa0de3b1b480c7c3fdf6",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x6c2c06790b3e3e3c38e12ee22f8183b37a13ee55",
       "symbol": "DPX",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x7412abb0af1b753e1c5b0fd95936ac5b47c0e378",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
       "symbol": "STG",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x5d5b29301936f0c8af52425efc2bc5330c73956d",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x32eb7902d4134bf98a28b963d26de779af92a212",
       "symbol": "RDPX",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x3a3da6464bee25a1d98526402a12241b0787b84c",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x1a5b0aaf478bf1fda7b934c76e7692d722982a6d",
       "symbol": "BFR",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x06565f0358d5f382acaee8342cdb684714168623",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x088cd8f5ef3652623c22d48b1605dcfe860cd704",
       "symbol": "VELA",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x2d7d00424d7e61a198afda2109407d60199ecffe",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
       "symbol": "DAI",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
       "symbol": "USDC",
       "decimals": 6
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x562414c3c36226e37981d2ccc68b591f3c840c02",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
       "symbol": "JOE",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x71c910aaacafab7a2151b8daee6a3766c34117b1",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x7f465507f058e17ad21623927a120ac05ca32741",
       "symbol": "ARC",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
       "symbol": "USDC",
       "decimals": 6
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x37cd8216deae09093bbf6940b27612fcef995b36",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x5979d7b546e38e414f7e9822514be443a4800529",
       "symbol": "wstETH",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xc841ab46357a8a9dfabd23be2d2ce8cd8ffde3d1",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x5429706887fcb58a595677b73e9b0441c25d993d",
       "symbol": "UNIDX",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xbeab0dfac5f93cc30b714502b16ba39dbf20c091",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x982239d38af50b0168da33346d85fb12929c4c07",
       "symbol": "TROVE",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x805600dc8ad916d221e635da6731e357845d32f9",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
       "symbol": "WBTC",
       "decimals": 8
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
       "symbol": "USDC",
       "decimals": 6
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x68863072683fc0c8de2c894e0e83647eee44b41d",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x3d9907f9a368ad0a51be60f7da3b97cf940982d8",
       "symbol": "GRAIL",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x14f39ec18ea02633d4502e65896459a9ef6f3c08",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x431402e8b9de9aa016c743880e04e517074d8cec",
       "symbol": "HEGIC",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
       "symbol": "USDC",
       "decimals": 6
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x021352af332c70817e25a47578a8f0d8c0fa9210",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
       "symbol": "GMX",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
       "symbol": "USDC",
       "decimals": 6
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xe71fd21a901f3d105de7760bb6f07c6af204d908",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x7b5eb3940021ec0e8e463d5dbb4b7b09a89ddf96",
       "symbol": "WOM",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x22780c4d8ea5de924e1a451c83273019ea644a7e",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xa61f74247455a40b01b0559ff6274441fafa22a3",
       "symbol": "MGP",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x1f4cd17fae59324522f9d50aaa498282e3328b7c",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4",
       "symbol": "LINK",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xed3e570fb95b1c69095af3d8a30eba911d9ff627",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xe26ae3d881f3d5def58d795f611753804e7a6b26",
       "symbol": "BETS",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x71781246174a073537ec2ee7414ea54aaf831f47",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x602eb0d99a5e3e76d1510372c4d2020e12eaea8a",
       "symbol": "PSI",
       "decimals": 9
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xcba0b8384adfddf2fa4b99b29f0145e8979beb29",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x7f465507f058e17ad21623927a120ac05ca32741",
       "symbol": "ARC",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0xcca7bc4c85736339ecacdb6f55a077cba6db255e",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x6dd963c510c2d2f09d5eddb48ede45fed063eb36",
       "symbol": "FCTR",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x278dac990ad042e6712f840ac139449f033a9028",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
       "symbol": "STG",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
       "symbol": "USDC",
       "decimals": 6
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x74b77fc12cff46fb775e1237e7780be384c26429",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x539bde0d7dbd336b79148aa742883198bbf60342",
       "symbol": "MAGIC",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18
     }
   },
   {
-    "chain": "ethereum",
+    "chain": "arbitrum",
     "address": "0x442153cb56ef3aee77b2eaacc042b2de311f30e0",
     "factory": "0x1886d09c9ade0c5db822d85d21678db67b6c2982",
     "tokenX": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
       "symbol": "GMX",
       "decimals": 18
     },
     "tokenY": {
-      "chain": "ethereum",
+      "chain": "arbitrum",
       "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
       "decimals": 18

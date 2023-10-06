@@ -2747,7 +2747,7 @@ export const TraderjoeConfigs: ProtocolConfig = {
   subgraphs: [
     {
       protocol: 'traderjoe',
-      chain: 'ethereum',
+      chain: 'arbitrum',
       version: 'traderjoeLiquidityBook',
       birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
       filters: {},
@@ -2757,7 +2757,7 @@ export const TraderjoeConfigs: ProtocolConfig = {
   staticData: {
     lbPairs: TraderjoeLbPairs,
   },
-}
+};
 
 export const AgnifinanceConfigs: ProtocolConfig = {
   protocol: 'agnifinance',
@@ -2767,4 +2767,4 @@ export const AgnifinanceConfigs: ProtocolConfig = {
       '0x25780dc8fc3cfbd75f33bfdab65e969b603b2035', // Factory
     ],
   },
-}
+};
