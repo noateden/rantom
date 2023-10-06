@@ -258,6 +258,13 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3', // Sushi minichef
     '0xa5edbdd9646f8dff606d7448e414884c7d905dca', // Compound v3 USDC
     '0x32b7bf19cb8b95c27e644183837813d4b595dcc6', // Level Finance liquidity pool
+    '0x915a55e36a01285a14f05de6e81ed9ce89772f8e', // Stargate pool ETH
+    '0x892785f33cdee22a30aef750f285e18c18040c3e', // Stargate pool USDC
+    '0xb6cfcf89a7b22988bfc96632ac2a9d6dab60d641', // Stargate pool USDT
+    '0xaa4bf442f024820b2c28cd0fd72b82c63e66f56c', // Stargate pool FRAX
+    '0xf39b7be294cb36de8c510e267b82bb588705d977', // Stargate pool MAI
+    '0x600e576f9d853c95d58029093a16ee49646f3ca5', // Stargate pool LUSD
+    '0x3a23f943181408eac424116af7b7790c94cb97a5', // Bungee gateway
   ],
 
   base: [
@@ -282,6 +289,9 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault
     '0xa238dd80c259a72e81d7e4664a9801593f98d1c5', // Aave v3 lending pool
     '0x8f44fd754285aa6a2b8b9b97739b79746e0475a7', // Seamless lending pool
+    '0x28fc411f9e1c480ad312b3d9c60c22b965015c6b', // Stargate pool ETH
+    '0x4c80e24119cfb836cdf0a6b53dc23f04f7e652ca', // Stargate pool USDC
+    '0x3a23f943181408eac424116af7b7790c94cb97a5', // Bungee gateway
   ],
 };
 

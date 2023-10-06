@@ -1308,19 +1308,22 @@ export const StargateConfigs: ProtocolConfig = {
       '0xe8f55368c82d38bbbbdb5533e7f56afc2e978cc2', // Pool LUSD
       '0x9cef9a0b1be0d289ac9f4a98ff317c33eaa84eb8', // Pool MAI
       '0xd8772edbf88bba2667ed011542343b0eddacda47', // Pool METIS
+      '0x430ebff5e3e80a6c58e7e6ada1d90f5c28aa116d', // Pool METIS USDT
+    ],
+    arbitrum: [
+      '0x915a55e36a01285a14f05de6e81ed9ce89772f8e', // Pool ETH
+      '0x892785f33cdee22a30aef750f285e18c18040c3e', // Pool USDC
+      '0xb6cfcf89a7b22988bfc96632ac2a9d6dab60d641', // Pool USDT
+      '0xaa4bf442f024820b2c28cd0fd72b82c63e66f56c', // Pool FRAX
+      '0xf39b7be294cb36de8c510e267b82bb588705d977', // Pool MAI
+      '0x600e576f9d853c95d58029093a16ee49646f3ca5', // Pool LUSD
+    ],
+    base: [
+      '0x28fc411f9e1c480ad312b3d9c60c22b965015c6b', // Pool ETH
+      '0x4c80e24119cfb836cdf0a6b53dc23f04f7e652ca', // Pool USDC
     ],
   },
   staticData: {
-    chainIds: {
-      ethereum: 101,
-      bnbchain: 102,
-      avalanche: 106,
-      polygon: 109,
-      arbitrum: 110,
-      optimism: 111,
-      fantom: 112,
-      metis: 151,
-    },
     pools: [
       {
         chain: 'ethereum',
@@ -1371,6 +1374,53 @@ export const StargateConfigs: ProtocolConfig = {
         chain: 'ethereum',
         address: '0xd8772edbf88bba2667ed011542343b0eddacda47',
         token: Tokens.ethereum.METIS,
+      },
+      {
+        chain: 'ethereum',
+        address: '0x430ebff5e3e80a6c58e7e6ada1d90f5c28aa116d',
+        token: Tokens.ethereum.USDT,
+      },
+
+      {
+        chain: 'arbitrum',
+        address: '0x915a55e36a01285a14f05de6e81ed9ce89772f8e',
+        token: Tokens.arbitrum.ETH,
+      },
+      {
+        chain: 'arbitrum',
+        address: '0x892785f33cdee22a30aef750f285e18c18040c3e',
+        token: Tokens.arbitrum.USDC,
+      },
+      {
+        chain: 'arbitrum',
+        address: '0xb6cfcf89a7b22988bfc96632ac2a9d6dab60d641',
+        token: Tokens.arbitrum.USDT,
+      },
+      {
+        chain: 'arbitrum',
+        address: '0xaa4bf442f024820b2c28cd0fd72b82c63e66f56c',
+        token: Tokens.arbitrum.FRAX,
+      },
+      {
+        chain: 'arbitrum',
+        address: '0xf39b7be294cb36de8c510e267b82bb588705d977',
+        token: Tokens.arbitrum.MAI,
+      },
+      {
+        chain: 'arbitrum',
+        address: '0x600e576f9d853c95d58029093a16ee49646f3ca5',
+        token: Tokens.arbitrum.LUSD,
+      },
+
+      {
+        chain: 'base',
+        address: '0x28fc411f9e1c480ad312b3d9c60c22b965015c6b',
+        token: Tokens.base.ETH,
+      },
+      {
+        chain: 'base',
+        address: '0x4c80e24119cfb836cdf0a6b53dc23f04f7e652ca',
+        token: Tokens.base.USDC,
       },
     ],
   },
@@ -2122,6 +2172,12 @@ export const BungeeConfigs: ProtocolConfig = {
   categories: ['bridge'],
   contracts: {
     ethereum: [
+      '0x3a23f943181408eac424116af7b7790c94cb97a5', // Socket gateway
+    ],
+    arbitrum: [
+      '0x3a23f943181408eac424116af7b7790c94cb97a5', // Socket gateway
+    ],
+    base: [
       '0x3a23f943181408eac424116af7b7790c94cb97a5', // Socket gateway
     ],
   },

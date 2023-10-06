@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
-import { LayerZeroChainIdMaps } from '../../../configs/constants';
+import { CommonChainIdMaps, LayerZeroChainIdMaps } from '../../../configs/constants';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
@@ -37,7 +37,7 @@ export class StargateAdapter extends Adapter {
     if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
       let token: Token | null = null;
       for (const pool of this.config.staticData.pools) {
-        if (compareAddress(address, pool.address)) {
+        if (compareAddress(address, pool.address) && pool.chain === chain) {
           token = pool.token;
         }
       }
@@ -71,7 +71,7 @@ export class StargateAdapter extends Adapter {
             addresses: [provider],
             readableString: `${provider} bridge ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
             addition: {
-              fromChain: chain,
+              fromChain: CommonChainIdMaps[chain].toString(),
               toChain: LayerZeroChainIdMaps[Number(event.chainId)]
                 ? LayerZeroChainIdMaps[Number(event.chainId)].toString()
                 : event.chainId.toString(),

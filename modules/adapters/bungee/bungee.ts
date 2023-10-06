@@ -1,6 +1,7 @@
 import BigNumber from 'bignumber.js';
 import Web3 from 'web3';
 
+import { CommonChainIdMaps } from '../../../configs/constants';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { normalizeAddress } from '../../../lib/helper';
@@ -47,7 +48,7 @@ export class BungeeAdapter extends Adapter {
             token.symbol
           } from ${chain} to ${event.toChainId.toString()} on ${this.config.protocol}`,
           addition: {
-            fromChain: chain,
+            fromChain: CommonChainIdMaps[chain].toString(),
             toChain: event.toChainId.toString(),
           },
         };

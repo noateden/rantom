@@ -43,6 +43,24 @@ export const LayerZeroChainIdMaps: { [key: number]: number } = {
   111: 10, // optimism
   112: 250, // fantom
   151: 1088, // metis
+  184: 8453, // base
+  183: 59144, // linea
+  177: 2222, // kava
+};
+
+export const CommonChainIdMaps: { [key: string]: number } = {
+  ethereum: 1, // ethereum
+  bnbchain: 56, // bnbchain
+  avalanche: 43114, // avalanche
+  polygon: 137, // polygon
+  arbitrum: 42161, // arbitrum
+  optimism: 10, // optimism
+  fantom: 250, // fantom
+  metis: 1088, // metis
+  base: 8453, // base
+  linea: 59144, // linea
+  kava: 2222, // kava
+  mantle: 5000, // kava
 };
 
 export const HardCodeTokens: { [key: string]: Token } = {
