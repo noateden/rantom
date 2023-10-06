@@ -102,7 +102,7 @@ export type ProtocolCategory =
 export interface ProtocolSubgraphConfig {
   chain: string;
   protocol: string;
-  version: 'univ2' | 'univ3';
+  version: 'univ2' | 'univ3' | 'traderjoeLiquidityBook';
   filters: any;
   endpoint: string;
   birthday: number;

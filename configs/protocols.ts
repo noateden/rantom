@@ -21,6 +21,7 @@ import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
 import SonnefinanceMarkets from './data/SonnefinanceMarkets.json';
 import SushiPools from './data/SushiPools.json';
+import TraderjoeLbPairs from './data/TraderjoeLbPairs.json';
 import UniFactoryPools from './data/UniFactoryPools.json';
 import UniLiquidityPools from './data/UniLiquidityPools.json';
 import YearnVaults from './data/YearnVaults.json';
@@ -2732,5 +2733,28 @@ export const SeamlessConfigs: ProtocolConfig = {
     base: [
       '0x8f44fd754285aa6a2b8b9b97739b79746e0475a7', // lending pool - forked from aave lending pool v3
     ],
+  },
+};
+
+export const TraderjoeConfigs: ProtocolConfig = {
+  protocol: 'traderjoe',
+  categories: ['trading'],
+  contracts: {
+    arbitrum: [
+      '0x1886d09c9ade0c5db822d85d21678db67b6c2982', // LB Factory
+    ],
+  },
+  subgraphs: [
+    {
+      protocol: 'traderjoe',
+      chain: 'ethereum',
+      version: 'traderjoeLiquidityBook',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/traderjoe-xyz/joe-v2-arbitrum',
+    },
+  ],
+  staticData: {
+    lbPairs: TraderjoeLbPairs,
   },
 };

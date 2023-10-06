@@ -615,4 +615,14 @@ export const Signatures: { [key: string]: string } = {
   'Burn(address,uint256,address)': '0xdbdf9b8e4b75e75b162d151ec8fc7f0561cabab5fcccfa2600be62223e4300c4',
   'Liquidate(address,address,address,uint256,uint256)':
     '0x8246cc71ab01533b5bebc672a636df812f10637ad720797319d5741d5ebb3962',
+
+  // traderjoe
+  'Swap(address,address,uint256,bool,uint256,uint256,uint256,uint256)':
+    '0xc528cda9e500228b16ce84fadae290d9a49aecb17483110004c5af0a07f6fd73',
+  'DepositedToBin(address,address,uint256,uint256,uint256)':
+    '0x4216cc3bd0c40a90259d92f800c06ede5c47765f41a488072b7e7104a1f95841',
+  'WithdrawnFromBin(address,address,uint256,uint256,uint256)':
+    '0xda5e7177dface55f5e0eff7dfc67420a1db4243ddfcf0ecc84ed93e034dd8cc2',
+  'FlashLoan(address,address,address,uint256,uint256)':
+    '0x3659d15bd4bb92ab352a8d35bc3119ec6e7e0ab48e4d46201c8a28e02b6a8a86',
 };

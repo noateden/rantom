@@ -92,6 +92,7 @@ import {
   Sushiv3Configs,
   SwellConfigs,
   TornadocashConfigs,
+  TraderjoeConfigs,
   UnibotConfigs,
   Uniswapv2Configs,
   Uniswapv3Configs,
@@ -183,6 +184,7 @@ import { SushiAdapter } from './sushi/sushi';
 import { Sushiv3Adapter } from './sushi/sushiv3';
 import { SwellAdapter } from './swell/swell';
 import { TornadocashAdapter } from './tornadocash/tornadocash';
+import { TraderjoeAdapter } from './traderjoe/traderjoe';
 import { UnibotAdapter } from './unibot/unibot';
 import { Uniswapv2Adapter } from './uniswap/uniswapv2';
 import { Uniswapv3Adapter } from './uniswap/uniswapv3';
@@ -296,5 +298,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     fluxfinance: new CompoundAdapter(FluxfinanceConfigs, providers),
     seamless: new Aavev3Adapter(SeamlessConfigs, providers),
     levelfinance: new LevelfinanceAdapter(LevelfinanceConfigs, providers),
+    traderjoe: new TraderjoeAdapter(TraderjoeConfigs, providers),
   };
 }

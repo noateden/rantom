@@ -11,6 +11,7 @@ import FraxLendPairs from './data/FraxlendPairs.json';
 import MaverickPools from './data/MaverickPools.json';
 import PendleContracts from './data/PendleContracts.json';
 import SiloPools from './data/SiloPools.json';
+import TraderjoeLbPairs from './data/TraderjoeLbPairs.json';
 import UniFactoryPools from './data/UniFactoryPools.json';
 import UniLiquidityPools from './data/UniLiquidityPools.json';
 import YearnVaults from './data/YearnVaults.json';
@@ -244,6 +245,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
       (item: any) => (item.protocol === 'pancakeswap' || item.protocol === 'pancakeswapv3') && item.chain === 'arbitrum'
     ).map((item: any) => item.address),
     ...YearnVaults.filter((item) => item.chain === 'arbitrum').map((item) => item.address),
+    ...TraderjoeLbPairs.filter((item) => item.chain === 'arbitrum').map((item) => item.address),
 
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault
     '0x794a61358d6845594f94dc1db02a252b5b4814ad', // Aave v3 lending pool
