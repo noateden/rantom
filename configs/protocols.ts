@@ -2757,4 +2757,14 @@ export const TraderjoeConfigs: ProtocolConfig = {
   staticData: {
     lbPairs: TraderjoeLbPairs,
   },
-};
+}
+
+export const AgnifinanceConfigs: ProtocolConfig = {
+  protocol: 'agnifinance',
+  categories: ['trading'],
+  contracts: {
+    mantle: [
+      '0x25780dc8fc3cfbd75f33bfdab65e969b603b2035', // Factory
+    ],
+  },
+}
