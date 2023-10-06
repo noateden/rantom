@@ -54,6 +54,7 @@ import {
   IronbankConfigs,
   KyberswapAggregatorConfigs,
   KyberswapClassicConfigs,
+  KyberswapElasticConfigs,
   LevelfinanceConfigs,
   LidoConfigs,
   LiquityConfigs,
@@ -301,5 +302,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     levelfinance: new LevelfinanceAdapter(LevelfinanceConfigs, providers),
     traderjoe: new TraderjoeAdapter(TraderjoeConfigs, providers),
     agnifinance: new Pancakeswapv3Adapter(AgnifinanceConfigs, providers),
+    'kyberswap-elastic': new Uniswapv3Adapter(KyberswapElasticConfigs, providers),
   };
 }

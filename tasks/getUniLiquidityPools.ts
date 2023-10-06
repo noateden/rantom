@@ -8,6 +8,7 @@ import {
   CamelotConfigs,
   Camelotv3Configs,
   KyberswapClassicConfigs,
+  KyberswapElasticConfigs,
   PancakeswapConfigs,
   PancakeswapV3Configs,
   SushiConfigs,
@@ -15,7 +16,7 @@ import {
   Uniswapv2Configs,
   Uniswapv3Configs,
 } from '../configs/protocols';
-import { compareAddress, normalizeAddress } from '../lib/helper';
+import { compareAddress, normalizeAddress, sleep } from '../lib/helper';
 import { KyberHelper } from '../modules/adapters/kyberswap/helper';
 import { ProtocolConfig } from '../types/configs';
 import { UniLiquidityPool } from '../types/domains';
@@ -80,6 +81,7 @@ const TopPoolCount = 50;
     PancakeswapConfigs,
     PancakeswapV3Configs,
     KyberswapClassicConfigs,
+    KyberswapElasticConfigs,
     CamelotConfigs,
     Camelotv3Configs,
   ];
@@ -87,6 +89,7 @@ const TopPoolCount = 50;
   for (const config of configs) {
     if (config.subgraphs) {
       for (const subgraph of config.subgraphs) {
+        await sleep(5);
         console.log(
           `getting top liquidity pools, ${config.protocol} ${subgraph.version} ${subgraph.chain} ${subgraph.endpoint}`
         );

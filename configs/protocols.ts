@@ -1872,6 +1872,57 @@ export const KyberswapClassicConfigs: ProtocolConfig = {
   ],
 };
 
+export const KyberswapElasticConfigs: ProtocolConfig = {
+  protocol: 'kyberswap-elastic',
+  categories: ['trading'],
+  contracts: {
+    ethereum: [
+      '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a', // Factory
+      ...UniLiquidityPools.filter((item) => item.protocol === 'kyberswap-elastic' && item.chain === 'ethereum').map(
+        (item) => item.address
+      ),
+    ],
+    arbitrum: [
+      '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a', // Factory
+      ...UniLiquidityPools.filter((item) => item.protocol === 'kyberswap-elastic' && item.chain === 'arbitrum').map(
+        (item) => item.address
+      ),
+    ],
+    base: [
+      '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a', // Factory
+      ...UniLiquidityPools.filter((item) => item.protocol === 'kyberswap-elastic' && item.chain === 'base').map(
+        (item) => item.address
+      ),
+    ],
+  },
+  subgraphs: [
+    {
+      protocol: 'kyberswap-elastic',
+      chain: 'ethereum',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-elastic-mainnet',
+    },
+    {
+      protocol: 'kyberswap-elastic',
+      chain: 'arbitrum',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-elastic-arbitrum-one',
+    },
+    {
+      protocol: 'kyberswap-elastic',
+      chain: 'base',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://base-graph.kyberengineering.io/subgraphs/name/kybernetwork/kyberswap-elastic-base',
+    },
+  ],
+};
+
 export const ArrakisConfigs: ProtocolConfig = {
   protocol: 'arrakis',
   categories: ['staking'],
