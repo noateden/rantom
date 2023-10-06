@@ -111,7 +111,7 @@ export class TraderjoeAdapter extends Adapter {
                 protocol: this.config.protocol,
                 action: 'flashloan',
                 addresses: [sender, receiver],
-                tokens: [lbPairInfo.tokenX, lbPairInfo.tokenY],
+                tokens: [token],
                 tokenAmounts: [amount],
                 readableString: `${sender} flashloan ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
               };
