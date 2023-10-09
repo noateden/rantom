@@ -4,6 +4,21 @@ import fs from 'fs';
 import { CurveHelper, CurvePoolInfo, CurvePoolType } from '../modules/adapters/curve/helper';
 
 const CurvePools: Array<string> = [
+  'base:4:plainWithoutCoinIndex:0xf6c5f01c7f3148891ad0e19df78743d31e390d1f', // USDC - USDbC - axlUSDC - crvUSD
+  'base:2:plain:0x11c1fbd4b3de66bc0565779b35171a6cf3e71f59', // cbETH - ETH
+  'base:3:plainWithCoinIndex:0x6e53131f68a034873b6bfa15502af094ef0c5854', // ETH - tBTC - crvUSD
+  'base:2:plainWithCoinIndex:0xde37e221442fa15c35dc19fbae11ed106ba52fb2', // CRV - crvUSD
+  'base:2:plainWithoutCoinIndex:0xda3de145054ed30ee937865d31b500505c4bdfe7', // USD+ - crvUSD
+
+  'arbitrum:2:plainWithoutCoinIndex:0x7f90122bf0700f9e7e1f688fe926940e8839f353', // USDC-USDT
+  'arbitrum:2:meta:0x30df229cefa463e991e29d42db0bae2e122b2ac7', // MIN-2CRV
+  'arbitrum:2:meta:0x2ce5fd6f6f4a159987eac99ff5158b7b62189acf', // USX-2CRV
+  'arbitrum:2:plain:0x6eb2dc694eb516b16dc9fbc678c60052bbdd7d80', // wstETH-ETH
+  'arbitrum:2:plainWithoutCoinIndex:0x1e2ebe2fffa7c9fa83486188f7c19f9acd1bb990', // peUSD-USDC.e
+  'arbitrum:2:plainWithoutCoinIndex:0x59bf0545fca0e5ad48e13da269facd2e8c886ba4', // FRAX-VST
+  'arbitrum:2:plainWithoutCoinIndex:0xc9b8a3fdecb9d5b218d02555a8baf332e5b740d5', // FRAX-USDC.e
+  'arbitrum:2:plainWithoutCoinIndex:0x755d6688ad74661add2fb29212ef9153d40fca46', // FRAX-USDC.e
+
   'ethereum:3:plain:0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7', // 3Crv: DAI-USDC-USDT
   'ethereum:3:plainWithCoinIndex:0xd51a44d3fae010294c616388b506acda1bfaae46', // 3Crypto: USDT-WETH-WBTC
   'ethereum:3:plainWithCoinIndex:0x7f86bf177dd4f3494b841a37e810a34dd56c829b', // 3Crypto: USDC-WETH-WBTC

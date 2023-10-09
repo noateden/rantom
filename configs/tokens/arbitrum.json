@@ -263,6 +263,12 @@
     "decimals": 18,
     "address": "0x0000000000000000000000000000000000000000"
   },
+  "peUSD": {
+    "chain": "arbitrum",
+    "symbol": "peUSD",
+    "decimals": 18,
+    "address": "0xdce765f021410b3266aa0053c93cb4535f1e12e0"
+  },
   "NativeCoin": {
     "chain": "arbitrum",
     "symbol": "ETH",
@@ -839,6 +845,12 @@
     "symbol": "VSTA",
     "decimals": 18,
     "address": "0xa684cd057951541187f288294a1e1c2646aa2d24"
+  },
+  "USX": {
+    "chain": "arbitrum",
+    "symbol": "USX",
+    "decimals": 18,
+    "address": "0x641441c631e2f909700d2f41fd87f0aa6a6b4edb"
   },
   "BTC.b": {
     "chain": "arbitrum",

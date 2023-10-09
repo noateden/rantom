@@ -29,6 +29,24 @@
     "decimals": 18,
     "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
   },
+  "USD+": {
+    "chain": "base",
+    "symbol": "USD+",
+    "decimals": 6,
+    "address": "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376"
+  },
+  "crvUSD": {
+    "chain": "base",
+    "symbol": "crvUSD",
+    "decimals": 18,
+    "address": "0x417Ac0e078398C154EdFadD9Ef675d30Be60Af93"
+  },
+  "tBTC": {
+    "chain": "base",
+    "symbol": "tBTC",
+    "decimals": 18,
+    "address": "0x236aa50979D5f3De3Bd1Eeb40E81137F22ab794b"
+  },
   "FARM": {
     "chain": "base",
     "symbol": "FARM",

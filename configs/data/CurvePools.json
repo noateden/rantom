@@ -1,5 +1,155 @@
 [
   {
+    "type": "plainWithoutCoinIndex",
+    "chain": "base",
+    "address": "0xf6c5f01c7f3148891ad0e19df78743d31e390d1f",
+    "tokens": [
+      { "chain": "base", "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", "symbol": "USDC", "decimals": 6 },
+      { "chain": "base", "symbol": "USDbC", "decimals": 6, "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca" },
+      { "chain": "base", "address": "0xeb466342c4d449bc9f53a865d5cb90586f405215", "symbol": "axlUSDC", "decimals": 6 },
+      { "chain": "base", "symbol": "crvUSD", "decimals": 18, "address": "0x417Ac0e078398C154EdFadD9Ef675d30Be60Af93" }
+    ]
+  },
+  {
+    "type": "plain",
+    "chain": "base",
+    "address": "0x11c1fbd4b3de66bc0565779b35171a6cf3e71f59",
+    "tokens": [
+      { "chain": "base", "symbol": "WETH", "decimals": 18, "address": "0x4200000000000000000000000000000000000006" },
+      { "chain": "base", "symbol": "cbETH", "decimals": 18, "address": "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22" }
+    ]
+  },
+  {
+    "type": "plainWithCoinIndex",
+    "chain": "base",
+    "address": "0x6e53131f68a034873b6bfa15502af094ef0c5854",
+    "tokens": [
+      { "chain": "base", "symbol": "crvUSD", "decimals": 18, "address": "0x417Ac0e078398C154EdFadD9Ef675d30Be60Af93" },
+      { "chain": "base", "symbol": "tBTC", "decimals": 18, "address": "0x236aa50979D5f3De3Bd1Eeb40E81137F22ab794b" },
+      { "chain": "base", "symbol": "WETH", "decimals": 18, "address": "0x4200000000000000000000000000000000000006" }
+    ]
+  },
+  {
+    "type": "plainWithCoinIndex",
+    "chain": "base",
+    "address": "0xde37e221442fa15c35dc19fbae11ed106ba52fb2",
+    "tokens": [
+      { "chain": "base", "address": "0x8ee73c484a26e0a5df2ee2a4960b789967dd0415", "symbol": "CRV", "decimals": 18 },
+      { "chain": "base", "symbol": "crvUSD", "decimals": 18, "address": "0x417Ac0e078398C154EdFadD9Ef675d30Be60Af93" }
+    ]
+  },
+  {
+    "type": "plainWithoutCoinIndex",
+    "chain": "base",
+    "address": "0xda3de145054ed30ee937865d31b500505c4bdfe7",
+    "tokens": [
+      { "chain": "base", "symbol": "USD+", "decimals": 6, "address": "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376" },
+      { "chain": "base", "symbol": "crvUSD", "decimals": 18, "address": "0x417Ac0e078398C154EdFadD9Ef675d30Be60Af93" }
+    ]
+  },
+  {
+    "type": "plainWithoutCoinIndex",
+    "chain": "arbitrum",
+    "address": "0x7f90122bf0700f9e7e1f688fe926940e8839f353",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "symbol": "USDC.e",
+        "decimals": 6,
+        "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+      },
+      { "chain": "arbitrum", "symbol": "USDT", "decimals": 6, "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9" }
+    ]
+  },
+  {
+    "type": "meta",
+    "chain": "arbitrum",
+    "address": "0x30df229cefa463e991e29d42db0bae2e122b2ac7",
+    "tokens": [
+      { "chain": "arbitrum", "symbol": "MIM", "decimals": 18, "address": "0xfea7a6a0b346362bf88a9e4a88416b77a57d6c2a" },
+      { "chain": "arbitrum", "address": "0x7f90122bf0700f9e7e1f688fe926940e8839f353", "symbol": "2CRV", "decimals": 18 }
+    ]
+  },
+  {
+    "type": "meta",
+    "chain": "arbitrum",
+    "address": "0x2ce5fd6f6f4a159987eac99ff5158b7b62189acf",
+    "tokens": [
+      { "chain": "arbitrum", "symbol": "USX", "decimals": 18, "address": "0x641441c631e2f909700d2f41fd87f0aa6a6b4edb" },
+      { "chain": "arbitrum", "address": "0x7f90122bf0700f9e7e1f688fe926940e8839f353", "symbol": "2CRV", "decimals": 18 }
+    ]
+  },
+  {
+    "type": "plain",
+    "chain": "arbitrum",
+    "address": "0x6eb2dc694eb516b16dc9fbc678c60052bbdd7d80",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "symbol": "ETH", "decimals": 18 },
+      {
+        "chain": "arbitrum",
+        "symbol": "wstETH",
+        "decimals": 18,
+        "address": "0x5979d7b546e38e414f7e9822514be443a4800529"
+      }
+    ]
+  },
+  {
+    "type": "plainWithoutCoinIndex",
+    "chain": "arbitrum",
+    "address": "0x1e2ebe2fffa7c9fa83486188f7c19f9acd1bb990",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "symbol": "USDC.e",
+        "decimals": 6,
+        "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+      },
+      {
+        "chain": "arbitrum",
+        "symbol": "peUSD",
+        "decimals": 18,
+        "address": "0xdce765f021410b3266aa0053c93cb4535f1e12e0"
+      }
+    ]
+  },
+  {
+    "type": "plainWithoutCoinIndex",
+    "chain": "arbitrum",
+    "address": "0x59bf0545fca0e5ad48e13da269facd2e8c886ba4",
+    "tokens": [
+      { "chain": "arbitrum", "symbol": "VST", "decimals": 18, "address": "0x64343594ab9b56e99087bfa6f2335db24c2d1f17" },
+      { "chain": "arbitrum", "address": "0x17fc002b466eec40dae837fc4be5c67993ddbd6f", "symbol": "FRAX", "decimals": 18 }
+    ]
+  },
+  {
+    "type": "plainWithoutCoinIndex",
+    "chain": "arbitrum",
+    "address": "0xc9b8a3fdecb9d5b218d02555a8baf332e5b740d5",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x17fc002b466eec40dae837fc4be5c67993ddbd6f",
+        "symbol": "FRAX",
+        "decimals": 18
+      },
+      {
+        "chain": "arbitrum",
+        "symbol": "USDC.e",
+        "decimals": 6,
+        "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+      }
+    ]
+  },
+  {
+    "type": "plainWithoutCoinIndex",
+    "chain": "arbitrum",
+    "address": "0x755d6688ad74661add2fb29212ef9153d40fca46",
+    "tokens": [
+      { "chain": "arbitrum", "symbol": "WBTC", "decimals": 8, "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f" },
+      { "chain": "arbitrum", "address": "0x6c84a8f1c29108f47a79964b5fe888d4f4d0de40", "symbol": "tBTC", "decimals": 18 }
+    ]
+  },
+  {
     "type": "plain",
     "chain": "ethereum",
     "address": "0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7",

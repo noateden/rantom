@@ -27,7 +27,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...ArrakisVaults.map((item) => item.address),
     ...PendleContracts.syTokens.map((item) => item.address),
     ...AgilityPools.map((item) => item.address),
-    ...CurvePools.map((item) => item.address),
+    ...CurvePools.filter((item) => item.chain === 'ethereum').map((item) => item.address),
     ...MaverickPools.filter((item) => item.chain === 'ethereum').map((item) => item.address),
     ...FluxfinanceMarkets.map((item) => item.address),
 
@@ -252,6 +252,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...UniLiquidityPools.filter((item: any) => item.protocol === 'kyberswap-elastic' && item.chain === 'arbitrum').map(
       (item: any) => item.address
     ),
+    ...CurvePools.filter((item) => item.chain === 'arbitrum').map((item) => item.address),
 
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault
     '0x794a61358d6845594f94dc1db02a252b5b4814ad', // Aave v3 lending pool
@@ -295,6 +296,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...UniLiquidityPools.filter((item: any) => item.protocol === 'kyberswap-elastic' && item.chain === 'base').map(
       (item: any) => item.address
     ),
+    ...CurvePools.filter((item) => item.chain === 'base').map((item) => item.address),
+
     '0x9c4ec768c28520b50860ea7a15bd7213a9ff58bf', // Compound v3 USDCbC
     '0x46e6b214b524310239732d51387075e0e70970bf', // Compound v3 WETH
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault

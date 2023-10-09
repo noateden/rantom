@@ -724,6 +724,11 @@ export const CurveConfigs: ProtocolConfig = {
       '0x028171bca77440897b824ca71d1c56cac55b68a3': Tokens.ethereum.DAI,
       '0xbcca60bb61934080951369a648fb03df4f96263c': Tokens.ethereum.USDC,
       '0x3ed3b47dd13ec9a98b44e6204a523e766b225811': Tokens.ethereum.USDT,
+
+      // arbitrum USDC - USDT
+      '0x7f90122bf0700f9e7e1f688fe926940e8839f353': CurvePools.filter(
+        (item) => item.address === normalizeAddress('0x7f90122bf0700f9e7e1f688fe926940e8839f353')
+      )[0],
     },
   },
 };
