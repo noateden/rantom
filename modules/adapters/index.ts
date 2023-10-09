@@ -47,6 +47,7 @@ import {
   GearboxConfigs,
   GelatoConfigs,
   GmxConfigs,
+  Gmxv2Configs,
   GravitaConfigs,
   HmxConfigs,
   HopConfigs,
@@ -146,6 +147,7 @@ import { FraxlendAdapter } from './fraxlend/fraxlend';
 import { GearboxAdapter } from './gearbox/gearbox';
 import { GelatoAdapter } from './gelato/gelato';
 import { GmxAdapter } from './gmx/gmx';
+import { Gmxv2Adapter } from './gmx/gmxv2';
 import { GravitaAdapter } from './gravita/gravita';
 import { HmxAdapter } from './hmx/hmx';
 import { HopAdapter } from './hop/hop';
@@ -284,6 +286,7 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     camelot: new Uniswapv2Adapter(CamelotConfigs, providers),
     camelotv3: new Uniswapv3Adapter(Camelotv3Configs, providers),
     gmx: new GmxAdapter(GmxConfigs, providers),
+    gmxv2: new Gmxv2Adapter(Gmxv2Configs, providers),
     mux: new MuxAdapter(MuxConfigs, providers),
     hmx: new HmxAdapter(HmxConfigs, providers),
     oneinch: new OneinchAdapter(OneinchConfigs, providers),

@@ -13,6 +13,7 @@ import CurvePools from './data/CurvePools.json';
 import ExactlyMarkets from './data/ExactlyMarkets.json';
 import FluxfinanceMarkets from './data/FluxfinanceMarkets.json';
 import FraxlendPairs from './data/FraxlendPairs.json';
+import Gmxv2Markets from './data/Gmxv2Markets.json';
 import IronbankMarkets from './data/IronbankMarkets.json';
 import MaverickPools from './data/MaverickPools.json';
 import MorphoMarkets from './data/MorphoMarkets.json';
@@ -2879,5 +2880,18 @@ export const AgnifinanceConfigs: ProtocolConfig = {
     mantle: [
       '0x25780dc8fc3cfbd75f33bfdab65e969b603b2035', // Factory
     ],
+  },
+};
+
+export const Gmxv2Configs: ProtocolConfig = {
+  protocol: 'gmxv2',
+  categories: ['trading', 'perpetual'],
+  contracts: {
+    arbitrum: [
+      '0xc8ee91a54287db53897056e12d9819156d3822fb', // Event emitter
+    ],
+  },
+  staticData: {
+    markets: Gmxv2Markets,
   },
 };

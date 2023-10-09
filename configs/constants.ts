@@ -135,6 +135,32 @@ export const HardCodeTokens: { [key: string]: Token } = {
 
   // Euler.Finance e and d tokens
   ...EulerTokens,
+
+  // gmxv2 index tokens
+  'erc20-arbitrum-0x47904963fc8b2340414262125af798b9655e58cd': {
+    chain: 'arbitrum',
+    address: '0x47904963fc8b2340414262125af798b9655e58cd',
+    symbol: 'BTC',
+    decimals: 18,
+  },
+  'erc20-arbitrum-0xc4da4c24fd591125c3f47b340b6f4f76111883d8': {
+    chain: 'arbitrum',
+    address: '0xc4da4c24fd591125c3f47b340b6f4f76111883d8',
+    symbol: 'DOGE',
+    decimals: 18,
+  },
+  'erc20-arbitrum-0xc14e065b0067de91534e032868f5ac6ecf2c6868': {
+    chain: 'arbitrum',
+    address: '0xc14e065b0067de91534e032868f5ac6ecf2c6868',
+    symbol: 'XRP',
+    decimals: 18,
+  },
+  'erc20-arbitrum-0xb46a094bc4b0adbd801e14b9db95e05e28962764': {
+    chain: 'arbitrum',
+    address: '0xb46a094bc4b0adbd801e14b9db95e05e28962764',
+    symbol: 'LTC',
+    decimals: 18,
+  },
 };
 
 export const HardcodeNft: { [key: string]: NonFungibleTokenMetadata } = {

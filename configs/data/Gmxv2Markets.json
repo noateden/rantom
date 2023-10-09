@@ -1,0 +1,266 @@
+[
+  {
+    "chain": "arbitrum",
+    "address": "0x47c031236e19d024b42f8ae6780e44a573170703",
+    "indexToken": {
+      "chain": "arbitrum",
+      "address": "0x47904963fc8b2340414262125af798b9655e58cd",
+      "symbol": "BTC",
+      "decimals": 18
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f"
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "address": "0x0ccb4faa6f1f1b30911619f1184082ab4e25813c",
+    "indexToken": {
+      "chain": "arbitrum",
+      "address": "0xc14e065b0067de91534e032868f5ac6ecf2c6868",
+      "symbol": "XRP",
+      "decimals": 18
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "address": "0x70d95587d40a2caf56bd97485ab3eec10bee6336",
+    "indexToken": {
+      "chain": "arbitrum",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "address": "0x6853ea96ff216fab11d2d930ce3c508556a4bdc4",
+    "indexToken": {
+      "chain": "arbitrum",
+      "address": "0xc4da4c24fd591125c3f47b340b6f4f76111883d8",
+      "symbol": "DOGE",
+      "decimals": 18
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "address": "0x09400d9db990d5ed3f35d7be61dfaeb900af03c9",
+    "indexToken": {
+      "chain": "arbitrum",
+      "address": "0x2bcc6d6cdbbdc0a4071e48bb3b969b06b3330c07",
+      "symbol": "SOL",
+      "decimals": 9
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "address": "0x2bcc6d6cdbbdc0a4071e48bb3b969b06b3330c07",
+      "symbol": "SOL",
+      "decimals": 9
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "address": "0xd9535bb5f58a1a75032416f2dfe7880c30575a41",
+    "indexToken": {
+      "chain": "arbitrum",
+      "address": "0xb46a094bc4b0adbd801e14b9db95e05e28962764",
+      "symbol": "LTC",
+      "decimals": 18
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "address": "0xc7abb2c5f3bf3ceb389df0eecd6120d451170b50",
+    "indexToken": {
+      "chain": "arbitrum",
+      "symbol": "UNI",
+      "decimals": 18,
+      "address": "0xfa7f8980b0f1e64a2062791cc3b0871572f1f7f0"
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "symbol": "UNI",
+      "decimals": 18,
+      "address": "0xfa7f8980b0f1e64a2062791cc3b0871572f1f7f0"
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "address": "0x7f1fa204bb700853d36994da19f830b6ad18455c",
+    "indexToken": {
+      "chain": "arbitrum",
+      "symbol": "LINK",
+      "decimals": 18,
+      "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4"
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "symbol": "LINK",
+      "decimals": 18,
+      "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4"
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "address": "0xc25cef6061cf5de5eb761b50e4743c1f5d7e5407",
+    "indexToken": {
+      "chain": "arbitrum",
+      "symbol": "ARB",
+      "decimals": 18,
+      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548"
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "symbol": "ARB",
+      "decimals": 18,
+      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548"
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "address": "0x9c2433dfd71096c435be9465220bb2b189375ea7",
+    "indexToken": {
+      "chain": "arbitrum",
+      "symbol": "ETH",
+      "decimals": 18,
+      "address": "0x0000000000000000000000000000000000000000"
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC.e",
+      "decimals": 6,
+      "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "address": "0xb686bcb112660343e6d15bdb65297e110c8311c4",
+    "indexToken": {
+      "chain": "arbitrum",
+      "symbol": "ETH",
+      "decimals": 18,
+      "address": "0x0000000000000000000000000000000000000000"
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "symbol": "USDT",
+      "decimals": 6,
+      "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "address": "0xe2fedb9e6139a182b98e7c2688ccfa3e9a53c665",
+    "indexToken": {
+      "chain": "arbitrum",
+      "symbol": "ETH",
+      "decimals": 18,
+      "address": "0x0000000000000000000000000000000000000000"
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
+    }
+  }
+]

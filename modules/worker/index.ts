@@ -28,7 +28,7 @@ import { FraxethContracts } from '../../configs/contracts/fraxeth';
 import { FraxlendContracts } from '../../configs/contracts/fraxlend';
 import { GearboxContracts } from '../../configs/contracts/gearbox';
 import { GelatoContracts } from '../../configs/contracts/gelato';
-import { GmxContracts } from '../../configs/contracts/gmx';
+import { GmxContracts, Gmxv2Contracts } from '../../configs/contracts/gmx';
 import { GravitaContracts } from '../../configs/contracts/gravita';
 import { InstadappContracts } from '../../configs/contracts/instadapp';
 import { KyberswapClassicContracts } from '../../configs/contracts/kyperswap';
@@ -123,5 +123,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     fluxfinance: new ContractWorker(providers, FluxfinanceContracts),
     seamless: new ContractWorker(providers, SeamlessContracts),
     levelfinance: new ContractWorker(providers, LevelfinanceContracts),
+    gmxv2: new ContractWorker(providers, Gmxv2Contracts),
   };
 }

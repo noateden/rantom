@@ -258,6 +258,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xf4b1486dd74d07706052a33d31d7c0aafd0659e1', // Radiant v2 lending pool
     '0x489ee077994b6658eafa855c308275ead8097c4a', // Gmx vault
     '0xd2d1162512f927a7e282ef43a362659e4f2a728f', // Gmx staking
+    '0xc8ee91a54287db53897056e12d9819156d3822fb', // Gmx v2 event emitter
     '0x3e0199792ce69dc29a0a36146bfa68bd7c8d6633', // Mux liquidity pool
     '0xe7b0ce0526fbe3969035a145c9e9691d4d9d216c', // Clipper exchange
     '0x9dda6ef3d919c9bc8885d5560999a3640431e8e6', // Metamask swap router

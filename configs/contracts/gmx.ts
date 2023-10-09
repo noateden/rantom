@@ -18,3 +18,15 @@ export const GmxContracts: Array<Contract> = [
     ],
   },
 ];
+
+export const Gmxv2Contracts: Array<Contract> = [
+  {
+    chain: 'arbitrum',
+    protocol: 'gmxv2',
+    abi: {},
+    address: '0xc8ee91a54287db53897056e12d9819156d3822fb',
+    birthday: 107737756,
+    events: [],
+    topics: ['0x137a44067c8961cd7e1d876f4754a5a3a75989b4552f1843fc69c3b372def160'],
+  },
+];
