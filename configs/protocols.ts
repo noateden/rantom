@@ -82,6 +82,22 @@ export const Uniswapv3Configs: ProtocolConfig = {
         (item) => item.address
       ),
     ],
+    optimism: [
+      '0x1f98431c8ad98523631ae4a59f267346ea31f984', // v3 factory
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'uniswapv3' && item.chain === 'optimism').map(
+        (item) => item.address
+      ),
+    ],
+    polygon: [
+      '0x1f98431c8ad98523631ae4a59f267346ea31f984', // v3 factory
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'uniswapv3' && item.chain === 'polygon').map(
+        (item) => item.address
+      ),
+    ],
   },
   subgraphs: [
     {
@@ -107,6 +123,22 @@ export const Uniswapv3Configs: ProtocolConfig = {
       birthday: 1689552000, // Mon Jul 17 2023 00:00:00 GMT+0000
       filters: {},
       endpoint: 'https://api.thegraph.com/subgraphs/name/lynnshaoyu/uniswap-v3-base',
+    },
+    {
+      protocol: 'uniswapv3',
+      chain: 'optimism',
+      version: 'univ3',
+      birthday: 1689552000, // Mon Jul 17 2023 00:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/ianlapham/optimism-post-regenesis',
+    },
+    {
+      protocol: 'uniswapv3',
+      chain: 'polygon',
+      version: 'univ3',
+      birthday: 1689552000, // Mon Jul 17 2023 00:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v3-polygon',
     },
   ],
   staticData: {

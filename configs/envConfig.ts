@@ -35,6 +35,14 @@ const envConfig: EnvConfig = {
       name: 'base',
       nodeRpc: String(process.env.RANTOM_BASE_NODE),
     },
+    optimism: {
+      name: 'optimism',
+      nodeRpc: String(process.env.RANTOM_OPTIMISM_NODE),
+    },
+    polygon: {
+      name: 'polygon',
+      nodeRpc: String(process.env.RANTOM_POLYGON_NODE),
+    },
     mantle: {
       name: 'mantle',
       nodeRpc: String(process.env.RANTOM_MANTLE_NODE),

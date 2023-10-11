@@ -1,0 +1,92 @@
+{
+  "AAVE": {
+    "chain": "optimism",
+    "symbol": "AAVE",
+    "decimals": 18,
+    "address": "0x76fb31fb4af56892a25e32cfc43de717950c9278"
+  },
+  "DAI": {
+    "chain": "optimism",
+    "symbol": "DAI",
+    "decimals": 18,
+    "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
+  },
+  "LINK": {
+    "chain": "optimism",
+    "symbol": "LINK",
+    "decimals": 18,
+    "address": "0x350a791bfc2c21f9ed5d10980dad2e2638ffa7f6"
+  },
+  "LUSD": {
+    "chain": "optimism",
+    "symbol": "LUSD",
+    "decimals": 18,
+    "address": "0xc40f949f8a4e094d1b49a23ea9241d289b7b2819"
+  },
+  "MAI": {
+    "chain": "optimism",
+    "address": "0xdfa46478f9e5ea86d57387849598dbfb2e964b02",
+    "symbol": "MAI",
+    "decimals": 18
+  },
+  "OP": {
+    "chain": "optimism",
+    "symbol": "OP",
+    "decimals": 18,
+    "address": "0x4200000000000000000000000000000000000042"
+  },
+  "USDC": {
+    "chain": "optimism",
+    "symbol": "USDC",
+    "decimals": 6,
+    "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607"
+  },
+  "ETH": {
+    "chain": "optimism",
+    "symbol": "ETH",
+    "decimals": 18,
+    "address": "0x0000000000000000000000000000000000000000"
+  },
+  "NativeCoin": {
+    "chain": "optimism",
+    "symbol": "ETH",
+    "decimals": 18,
+    "address": "0x0000000000000000000000000000000000000000"
+  },
+  "USDT": {
+    "chain": "optimism",
+    "symbol": "USDT",
+    "decimals": 6,
+    "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58"
+  },
+  "WBTC": {
+    "chain": "optimism",
+    "symbol": "WBTC",
+    "decimals": 8,
+    "address": "0x68f180fcce6836688e9084f035309e29bf0a2095"
+  },
+  "WETH": {
+    "chain": "optimism",
+    "symbol": "WETH",
+    "decimals": 18,
+    "address": "0x4200000000000000000000000000000000000006"
+  },
+  "rETH": {
+    "chain": "optimism",
+    "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+    "symbol": "rETH",
+    "decimals": 18
+  },
+  "sUSD": {
+    "chain": "optimism",
+    "symbol": "sUSD",
+    "decimals": 18,
+    "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9"
+  },
+  "wstETH": {
+    "chain": "optimism",
+    "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+    "symbol": "wstETH",
+    "decimals": 18
+  }
+}
