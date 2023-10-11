@@ -57,128 +57,133 @@ export class YearnyethAdapter extends Adapter {
     const { chain, address, topics, data } = options;
 
     const signature = topics[0];
-    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-    const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
-    if (signature === Signatures.Swap) {
-      const tokenIn = await this.getAsset(chain, address, Number(event.asset_in));
-      const tokenOut = await this.getAsset(chain, address, Number(event.asset_out));
+    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
+      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
 
-      if (tokenIn && tokenOut) {
-        const account = normalizeAddress(event.account);
-        const receiver = normalizeAddress(event.receiver);
-        const amountIn = new BigNumber(event.amount_in.toString())
-          .dividedBy(new BigNumber(10).pow(tokenIn.decimals))
-          .toString(10);
-        const amountOut = new BigNumber(event.amount_out.toString())
-          .dividedBy(new BigNumber(10).pow(tokenOut.decimals))
-          .toString(10);
+      if (signature === Signatures.Swap) {
+        const tokenIn = await this.getAsset(chain, address, Number(event.asset_in));
+        const tokenOut = await this.getAsset(chain, address, Number(event.asset_out));
 
-        return {
-          protocol: this.config.protocol,
-          action: 'swap',
-          addresses: [receiver, account],
-          tokens: [tokenIn, tokenOut],
-          tokenAmounts: [amountIn, amountOut],
-          readableString: `${receiver} swap ${amountIn} ${tokenIn.symbol} for ${amountOut} ${tokenOut.symbol} on ${this.config.protocol} chain ${chain}`,
-        };
-      }
-    } else if (signature === Signatures.AddLiquidity) {
-      const tokens: Array<Token> = [];
-      const tokenAmounts: Array<string> = [];
-      const account = normalizeAddress(event.account);
-      const receiver = normalizeAddress(event.receiver);
-      for (let i = 0; i < event.amounts_in.length; i++) {
-        const token = await this.getAsset(chain, address, i);
-        if (token) {
-          tokens.push(token);
-          tokenAmounts.push(
-            new BigNumber(event.amounts_in[i].toString()).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10)
-          );
+        if (tokenIn && tokenOut) {
+          const account = normalizeAddress(event.account);
+          const receiver = normalizeAddress(event.receiver);
+          const amountIn = new BigNumber(event.amount_in.toString())
+            .dividedBy(new BigNumber(10).pow(tokenIn.decimals))
+            .toString(10);
+          const amountOut = new BigNumber(event.amount_out.toString())
+            .dividedBy(new BigNumber(10).pow(tokenOut.decimals))
+            .toString(10);
+
+          return {
+            protocol: this.config.protocol,
+            action: 'swap',
+            addresses: [receiver, account],
+            tokens: [tokenIn, tokenOut],
+            tokenAmounts: [amountIn, amountOut],
+            readableString: `${receiver} swap ${amountIn} ${tokenIn.symbol} for ${amountOut} ${tokenOut.symbol} on ${this.config.protocol} chain ${chain}`,
+          };
         }
-      }
-
-      return {
-        protocol: this.config.protocol,
-        action: 'deposit',
-        addresses: [receiver, account],
-        tokens: tokens,
-        tokenAmounts: tokenAmounts,
-        readableString: `${receiver} deposit ${tokens.length} tokens on ${this.config.protocol} chain ${chain}`,
-      };
-    } else if (signature === Signatures.RemoveLiquidity) {
-      const account = normalizeAddress(event.account);
-      const receiver = normalizeAddress(event.receiver);
-
-      if (options.context) {
+      } else if (signature === Signatures.AddLiquidity) {
         const tokens: Array<Token> = [];
         const tokenAmounts: Array<string> = [];
-        for (const token of this.config.staticData.assets[chain]) {
-          for (const log of options.context.logs) {
-            if (
-              log.topics[0] === '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef' &&
-              compareAddress(log.address, token.address)
-            ) {
-              const transferEvent = web3.eth.abi.decodeLog(
-                EventSignatureMapping[log.topics[0]].abi,
-                log.data,
-                log.topics.slice(1)
-              );
-              if (compareAddress(transferEvent.from, address) && compareAddress(transferEvent.to, receiver)) {
-                tokens.push(token);
-                tokenAmounts.push(
-                  new BigNumber(transferEvent.value.toString())
-                    .dividedBy(new BigNumber(10).pow(token.decimals))
-                    .toString(10)
-                );
-              }
-            }
+        const account = normalizeAddress(event.account);
+        const receiver = normalizeAddress(event.receiver);
+        for (let i = 0; i < event.amounts_in.length; i++) {
+          const token = await this.getAsset(chain, address, i);
+          if (token) {
+            tokens.push(token);
+            tokenAmounts.push(
+              new BigNumber(event.amounts_in[i].toString())
+                .dividedBy(new BigNumber(10).pow(token.decimals))
+                .toString(10)
+            );
           }
         }
 
         return {
           protocol: this.config.protocol,
-          action: 'withdraw',
+          action: 'deposit',
           addresses: [receiver, account],
           tokens: tokens,
           tokenAmounts: tokenAmounts,
-          readableString: `${receiver} withdraw ${tokens.length} tokens on ${this.config.protocol} chain ${chain}`,
+          readableString: `${receiver} deposit ${tokens.length} tokens on ${this.config.protocol} chain ${chain}`,
         };
-      }
-    } else if (signature === Signatures.RemoveLiquiditySingle) {
-      const account = normalizeAddress(event.account);
-      const receiver = normalizeAddress(event.receiver);
-      const token = await this.getAsset(chain, address, Number(event.asset));
-      if (token) {
-        const amount = new BigNumber(event.amount_out.toString())
+      } else if (signature === Signatures.RemoveLiquidity) {
+        const account = normalizeAddress(event.account);
+        const receiver = normalizeAddress(event.receiver);
+
+        if (options.context) {
+          const tokens: Array<Token> = [];
+          const tokenAmounts: Array<string> = [];
+          for (const token of this.config.staticData.assets[chain]) {
+            for (const log of options.context.logs) {
+              if (
+                log.topics[0] === '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef' &&
+                compareAddress(log.address, token.address)
+              ) {
+                const transferEvent = web3.eth.abi.decodeLog(
+                  EventSignatureMapping[log.topics[0]].abi,
+                  log.data,
+                  log.topics.slice(1)
+                );
+                if (compareAddress(transferEvent.from, address) && compareAddress(transferEvent.to, receiver)) {
+                  tokens.push(token);
+                  tokenAmounts.push(
+                    new BigNumber(transferEvent.value.toString())
+                      .dividedBy(new BigNumber(10).pow(token.decimals))
+                      .toString(10)
+                  );
+                }
+              }
+            }
+          }
+
+          return {
+            protocol: this.config.protocol,
+            action: 'withdraw',
+            addresses: [receiver, account],
+            tokens: tokens,
+            tokenAmounts: tokenAmounts,
+            readableString: `${receiver} withdraw ${tokens.length} tokens on ${this.config.protocol} chain ${chain}`,
+          };
+        }
+      } else if (signature === Signatures.RemoveLiquiditySingle) {
+        const account = normalizeAddress(event.account);
+        const receiver = normalizeAddress(event.receiver);
+        const token = await this.getAsset(chain, address, Number(event.asset));
+        if (token) {
+          const amount = new BigNumber(event.amount_out.toString())
+            .dividedBy(new BigNumber(10).pow(token.decimals))
+            .toString(10);
+          return {
+            protocol: this.config.protocol,
+            action: 'withdraw',
+            addresses: [receiver, account],
+            tokens: [token],
+            tokenAmounts: [amount],
+            readableString: `${receiver} withdraw ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+          };
+        }
+      } else if (signature === Signatures.Deposit || signature === Signatures.Withdraw) {
+        const sender = normalizeAddress(event.sender);
+        const owner = normalizeAddress(event.owner);
+
+        const token = Tokens.ethereum.yETH;
+        const amount = new BigNumber(event.assets.toString())
           .dividedBy(new BigNumber(10).pow(token.decimals))
           .toString(10);
+        const action: KnownAction = signature === Signatures.Deposit ? 'deposit' : 'withdraw';
         return {
           protocol: this.config.protocol,
-          action: 'withdraw',
-          addresses: [receiver, account],
+          action: action,
+          addresses: [owner, sender],
           tokens: [token],
           tokenAmounts: [amount],
-          readableString: `${receiver} withdraw ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
+          readableString: `${owner} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
         };
       }
-    } else if (signature === Signatures.Deposit || signature === Signatures.Withdraw) {
-      const sender = normalizeAddress(event.sender);
-      const owner = normalizeAddress(event.owner);
-
-      const token = Tokens.ethereum.yETH;
-      const amount = new BigNumber(event.assets.toString())
-        .dividedBy(new BigNumber(10).pow(token.decimals))
-        .toString(10);
-      const action: KnownAction = signature === Signatures.Deposit ? 'deposit' : 'withdraw';
-      return {
-        protocol: this.config.protocol,
-        action: action,
-        addresses: [owner, sender],
-        tokens: [token],
-        tokenAmounts: [amount],
-        readableString: `${owner} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-      };
     }
 
     return null;
