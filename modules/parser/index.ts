@@ -47,13 +47,14 @@ export class ParserProvider implements IParserProvider {
           hash: options.hash,
           input: tx.input,
           timestamp: Number(block.timestamp),
-          status: receipt.status,
           version: ParserVersion,
           from: receipt.from ? normalizeAddress(receipt.from) : '',
           to: receipt.to ? normalizeAddress(receipt.to) : '',
+          receipt: receipt,
           functions: [],
           actions: [],
           transfers: [],
+          addressesLabels: {},
         };
 
         for (const adapter of this.adapters) {
@@ -119,12 +120,11 @@ export class ParserProvider implements IParserProvider {
         for (const adapter of this.adapters) {
           const label = await adapter.tryParsingContractInfo({
             chain: blockchain.name,
-            address: tx.to ? tx.to : AddressZero,
+            address: receipt.to,
           });
           if (label) {
-            transaction.addressesLabels = {
-              [normalizeAddress(tx.to ? tx.to : AddressZero)]: label,
-            };
+            const key = normalizeAddress(receipt.to);
+            transaction.addressesLabels[key] = label;
             break;
           }
         }

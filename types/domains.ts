@@ -1,4 +1,5 @@
 import { Collection } from 'mongodb';
+import { TransactionReceipt } from 'web3-core';
 
 import { NonFungibleTokenMetadata, Token } from './configs';
 
@@ -86,23 +87,43 @@ export interface TransactionTransfer {
 }
 
 export interface Transaction {
+  // blockchain
   chain: string;
+
+  // the parser version
+  version: string;
+
+  // the transaction hash
   hash: string;
-  from: string; // sender address
+
+  // sender address
+  from: string;
+
+  // to address, could be contract
   to: string;
 
+  // the transactions data input if any
+  input: string;
+
+  // timestamp from blockNumber
+  timestamp: number;
+
+  // the transaction receipt
+  receipt: TransactionReceipt;
+
+  // what we got from transaction input
+  functions: Array<TransactionFunction>;
+
+  // what we got from transaction receipt logs
+  actions: Array<TransactionAction>;
+
+  // all token ERC20, ERC721, ERC1155 transfer logs
+  transfers: Array<TransactionTransfer>;
+
   // we also try to get information and label for to addresses
-  addressesLabels?: {
+  addressesLabels: {
     [key: string]: string;
   };
-
-  input: string;
-  status: boolean;
-  version: string;
-  timestamp: number;
-  functions: Array<TransactionFunction>;
-  actions: Array<TransactionAction>;
-  transfers: Array<TransactionTransfer>;
 }
 
 export interface EventBase {
