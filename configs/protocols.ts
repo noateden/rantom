@@ -1024,7 +1024,7 @@ export const YearnConfigs: ProtocolConfig = {
 };
 
 export const YearnyethConfigs: ProtocolConfig = {
-  protocol: 'yearn',
+  protocol: 'yearnyeth',
   categories: ['staking', 'trading'],
   contracts: {
     ethereum: [
