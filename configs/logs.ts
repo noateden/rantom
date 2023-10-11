@@ -231,6 +231,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x2d3cd7b81c93f188f3cb8ad87c8acc73d6226e3a', // Reflexer ETH join
     '0x0a5653cca4db1b6e265f47caf6969e64f1cfdc45', // Reflexer Coin join
     '0x858646372cc42e1a627fce94aa7a7033e7cf075a', // Eigenlayer strategy manager
+    '0x2cced4ffa804adbe1269cdfc22d7904471abde63', // Yearn yETH liquidity pool
+    '0x583019ff0f430721ada9cfb4fac8f06ca104d0b4', // Yearn yETH staking
   ],
 
   arbitrum: [

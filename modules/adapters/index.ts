@@ -101,6 +101,7 @@ import {
   Uniswapv3Configs,
   X2y2Configs,
   YearnConfigs,
+  YearnyethConfigs,
   ZeroxConfigs,
 } from '../../configs/protocols';
 import { GlobalProviders, IAdapter } from '../../types/namespaces';
@@ -194,6 +195,7 @@ import { Uniswapv2Adapter } from './uniswap/uniswapv2';
 import { Uniswapv3Adapter } from './uniswap/uniswapv3';
 import { X2y2Adapter } from './x2y2/x2y2';
 import { YearnAdapter } from './yearn/yearn';
+import { YearnyethAdapter } from './yearn/yeth';
 import { ZeroxAdapter } from './zerox/zerox';
 
 export function getAdapters(providers: GlobalProviders | null): Array<IAdapter> {
@@ -306,5 +308,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     traderjoe: new TraderjoeAdapter(TraderjoeConfigs, providers),
     agnifinance: new Pancakeswapv3Adapter(AgnifinanceConfigs, providers),
     'kyberswap-elastic': new Uniswapv3Adapter(KyberswapElasticConfigs, providers),
+    yearnyeth: new YearnyethAdapter(YearnyethConfigs, providers),
   };
 }

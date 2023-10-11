@@ -125,6 +125,12 @@
     "decimals": 18,
     "address": "0x0000000000000000000000000000000000000000"
   },
+  "ETHx": {
+    "chain": "ethereum",
+    "address": "0xa35b1b31ce002fbf2058d22f30f95d405200a15b",
+    "symbol": "ETHx",
+    "decimals": 18
+  },
   "EURS": {
     "chain": "ethereum",
     "address": "0xdb25f211ab05b1c97d595516f45794528a807ad8",
@@ -486,6 +492,12 @@
     "symbol": "stETH",
     "decimals": 18
   },
+  "swETH": {
+    "chain": "ethereum",
+    "address": "0xf951e335afb289353dc249e82926178eac7ded78",
+    "symbol": "swETH",
+    "decimals": 18
+  },
   "tBTC": {
     "chain": "ethereum",
     "address": "0x18084fba666a33d37592fa2633fd49a74dd93a88",
@@ -502,6 +514,12 @@
     "chain": "ethereum",
     "address": "0x8798249c2e607446efb7ad49ec89dd1865ff4272",
     "symbol": "xSUSHI",
+    "decimals": 18
+  },
+  "yETH": {
+    "chain": "ethereum",
+    "address": "0x1bed97cbc3c24a4fb5c069c6e311a967386131f7",
+    "symbol": "yETH",
     "decimals": 18
   }
 }

@@ -1023,6 +1023,28 @@ export const YearnConfigs: ProtocolConfig = {
   },
 };
 
+export const YearnyethConfigs: ProtocolConfig = {
+  protocol: 'yearn',
+  categories: ['staking', 'trading'],
+  contracts: {
+    ethereum: [
+      '0x2cced4ffa804adbe1269cdfc22d7904471abde63', // Liquidity Pool
+      '0x583019ff0f430721ada9cfb4fac8f06ca104d0b4', // yETH Staking
+    ],
+  },
+  staticData: {
+    assets: {
+      ethereum: [
+        Tokens.ethereum.sfrxETH,
+        Tokens.ethereum.swETH,
+        Tokens.ethereum.wstETH,
+        Tokens.ethereum.ETHx,
+        Tokens.ethereum.cbETH,
+      ],
+    },
+  },
+};
+
 export const TornadocashConfigs: ProtocolConfig = {
   protocol: 'tornadocash',
   categories: ['staking'],

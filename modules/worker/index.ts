@@ -58,6 +58,7 @@ import { SushiContracts } from '../../configs/contracts/sushi';
 import { SwellContracts } from '../../configs/contracts/swell';
 import { TornadocashContracts } from '../../configs/contracts/tornadocash';
 import { YearnContracts } from '../../configs/contracts/yearn';
+import { YearnyethContracts } from '../../configs/contracts/yearnyeth';
 import { GlobalProviders, IContractWorker } from '../../types/namespaces';
 import { ContractWorker } from './contract';
 
@@ -124,5 +125,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     seamless: new ContractWorker(providers, SeamlessContracts),
     levelfinance: new ContractWorker(providers, LevelfinanceContracts),
     gmxv2: new ContractWorker(providers, Gmxv2Contracts),
+    yearnyeth: new ContractWorker(providers, YearnyethContracts),
   };
 }
