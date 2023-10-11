@@ -778,6 +778,9 @@ export const AurafinanceConfigs: ProtocolConfig = {
       '0x5e5ea2048475854a5702f5b8468a51ba1296efcc', // auraBAL staking 2
       '0x3fa73f1e5d8a792c80f426fc8f84fbf7ce9bbcac', // aura locker
     ],
+    arbitrum: [
+      '0x98ef32edd24e2c92525e59afc4475c1242a30184', // Booster lite
+    ],
   },
   staticData: {
     rewardToken: {
@@ -1084,10 +1087,14 @@ export const ConvexConfigs: ProtocolConfig = {
       '0xd18140b4b819b895a3dba5442f959fa44994af50', // CVX locker old
       '0x72a19342e8f1838460ebfccef09f6585e32db86e', // CVX locker v2
     ],
+    arbitrum: [
+      '0xf403c135812408bfbe8713b5a23a04b3d48aae31', // Booster
+    ],
   },
   staticData: {
     rewardToken: {
       ethereum: Tokens.ethereum.CVX,
+      arbitrum: Tokens.arbitrum.CVX,
     },
     pools: ConvexBoosterPoolsData,
   },

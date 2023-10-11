@@ -3,7 +3,7 @@ import Web3 from 'web3';
 
 import Erc20Abi from '../configs/abi/ERC20.json';
 import Erc721Abi from '../configs/abi/ERC721.json';
-import {AddressZero, HardCodeTokens, HardcodeNft, Tokens, AddressEEE} from '../configs/constants';
+import { AddressEEE, AddressZero, HardCodeTokens, HardcodeNft, Tokens } from '../configs/constants';
 import EnvConfig from '../configs/envConfig';
 import { compareAddress, normalizeAddress } from '../lib/helper';
 import logger from '../lib/logger';

@@ -2,7 +2,10 @@ import Web3 from 'web3';
 
 import BaseRewardPoolAbi from '../../../configs/abi/convex/BaseRewardPool.json';
 import ConvexBoosterAbi from '../../../configs/abi/convex/Booster.json';
+import ConvexBoosterV2Abi from '../../../configs/abi/convex/BoosterV2.json';
+import ConvexRewardPoolAbi from '../../../configs/abi/convex/ConvexRewardPool.json';
 import EnvConfig from '../../../configs/envConfig';
+import { normalizeAddress } from '../../../lib/helper';
 import { Web3HelperProvider } from '../../../services/web3';
 import { Token } from '../../../types/configs';
 
@@ -36,7 +39,39 @@ export class ConvexHelper {
           chain,
           poolId: poolId,
           lpToken: token,
-          rewardPool: crvRewards,
+          rewardPool: normalizeAddress(crvRewards),
+          rewardToken: rewardToken,
+        };
+      }
+    } catch (e: any) {
+      console.info(e);
+    }
+
+    return null;
+  }
+
+  public static async getBoosterPoolV2(
+    chain: string,
+    boosterAddress: string,
+    poolId: number
+  ): Promise<ConvexBoosterPool | null> {
+    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+    const contract = new web3.eth.Contract(ConvexBoosterV2Abi as any, boosterAddress);
+    try {
+      const { lptoken, rewards } = await contract.methods.poolInfo(poolId).call();
+
+      const rewardPoolContract = new web3.eth.Contract(ConvexRewardPoolAbi as any, rewards);
+      const { reward_token } = await rewardPoolContract.methods.rewards(0).call();
+
+      const web3Helper = new Web3HelperProvider(null);
+      const token = await web3Helper.getErc20Metadata(chain, lptoken);
+      const rewardToken = await web3Helper.getErc20Metadata(chain, reward_token);
+      if (token && rewardToken) {
+        return {
+          chain,
+          poolId: poolId,
+          lpToken: token,
+          rewardPool: normalizeAddress(rewards),
           rewardToken: rewardToken,
         };
       }

@@ -274,6 +274,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x600e576f9d853c95d58029093a16ee49646f3ca5', // Stargate pool LUSD
     '0x3a23f943181408eac424116af7b7790c94cb97a5', // Bungee gateway
     '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Kyberswap aggregator meta router v2
+    '0xf403c135812408bfbe8713b5a23a04b3d48aae31', // Convex booster
+    '0x98ef32edd24e2c92525e59afc4475c1242a30184', // Aura Finance booster lite
   ],
 
   base: [
