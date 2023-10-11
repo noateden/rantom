@@ -486,6 +486,12 @@
     "symbol": "stETH",
     "decimals": 18
   },
+  "tBTC": {
+    "chain": "ethereum",
+    "address": "0x18084fba666a33d37592fa2633fd49a74dd93a88",
+    "symbol": "tBTC",
+    "decimals": 18
+  },
   "wstETH": {
     "chain": "ethereum",
     "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
