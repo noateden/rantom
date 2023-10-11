@@ -5,7 +5,6 @@ import UniswapV2PairAbi from '../../../configs/abi/uniswap/UniswapV2Pair.json';
 import EnvConfig from '../../../configs/envConfig';
 import { EventSignatureMapping } from '../../../configs/mappings';
 import { compareAddress, normalizeAddress } from '../../../lib/helper';
-import logger from '../../../lib/logger';
 import { multicallv2 } from '../../../lib/multicall';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction, UniLiquidityPool } from '../../../types/domains';
@@ -35,6 +34,10 @@ export class AerodromeAdapter extends Adapter {
   }
 
   protected async getPool(chain: string, address: string): Promise<UniLiquidityPool | null> {
+    if (!this.config.contracts[chain]) {
+      return null;
+    }
+
     let poolConfig: UniLiquidityPool | null = null;
     if (this.config.staticData) {
       for (const pool of this.config.staticData.liquidityPools) {
@@ -88,17 +91,7 @@ export class AerodromeAdapter extends Adapter {
             };
           }
         }
-      } catch (e: any) {
-        logger.onDebug({
-          service: this.name,
-          message: 'failed to get uni pool info',
-          props: {
-            protocol: this.config.protocol,
-            chain: chain,
-            pool: normalizeAddress(address),
-          },
-        });
-      }
+      } catch (e: any) {}
     }
 
     return poolConfig;
