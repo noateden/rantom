@@ -50,7 +50,16 @@ export class ParserProvider implements IParserProvider {
           version: ParserVersion,
           from: receipt.from ? normalizeAddress(receipt.from) : '',
           to: receipt.to ? normalizeAddress(receipt.to) : '',
+
+          nonce: tx.nonce,
+          value: tx.value.toString(),
+          gasPrice: tx.gasPrice.toString(),
+          maxPriorityFeePerGas: tx.maxPriorityFeePerGas ? tx.maxPriorityFeePerGas.toString() : undefined,
+          maxFeePerGas: tx.maxFeePerGas ? tx.maxFeePerGas.toString() : undefined,
+          gas: tx.gas,
+
           receipt: receipt,
+
           functions: [],
           actions: [],
           transfers: [],

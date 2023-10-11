@@ -108,6 +108,13 @@ export interface Transaction {
   // timestamp from blockNumber
   timestamp: number;
 
+  nonce: number;
+  value: string;
+  gasPrice: string;
+  maxPriorityFeePerGas?: string;
+  maxFeePerGas?: string;
+  gas: number;
+
   // the transaction receipt
   receipt: TransactionReceipt;
 
