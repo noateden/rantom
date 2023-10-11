@@ -17,6 +17,12 @@
     "decimals": 18,
     "address": "0x0000000000000000000000000000000000000000"
   },
+  "NativeCoin": {
+    "chain": "base",
+    "symbol": "ETH",
+    "decimals": 18,
+    "address": "0x0000000000000000000000000000000000000000"
+  },
   "COMP": {
     "chain": "base",
     "symbol": "COMP",

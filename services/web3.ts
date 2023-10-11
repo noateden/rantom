@@ -3,7 +3,7 @@ import Web3 from 'web3';
 
 import Erc20Abi from '../configs/abi/ERC20.json';
 import Erc721Abi from '../configs/abi/ERC721.json';
-import { AddressZero, HardCodeTokens, HardcodeNft, Tokens } from '../configs/constants';
+import {AddressZero, HardCodeTokens, HardcodeNft, Tokens, AddressEEE} from '../configs/constants';
 import EnvConfig from '../configs/envConfig';
 import { compareAddress, normalizeAddress } from '../lib/helper';
 import logger from '../lib/logger';
@@ -53,7 +53,7 @@ export class Web3HelperProvider extends CachingProvider implements IWeb3HelperPr
   public async getErc20Metadata(chain: string, tokenAddress: string): Promise<Token | null> {
     const key = CachingHelper.getErc20CacheName(chain, tokenAddress);
 
-    if (compareAddress(tokenAddress, AddressZero)) {
+    if (compareAddress(tokenAddress, AddressZero) || compareAddress(tokenAddress, AddressEEE)) {
       return Tokens[chain].NativeCoin;
     }
 
