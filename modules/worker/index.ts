@@ -26,6 +26,7 @@ import { ExactlyContracts } from '../../configs/contracts/exactly';
 import { FluxfinanceContracts } from '../../configs/contracts/fluxfinance';
 import { FraxethContracts } from '../../configs/contracts/fraxeth';
 import { FraxlendContracts } from '../../configs/contracts/fraxlend';
+import { GainsContracts } from '../../configs/contracts/gains';
 import { GearboxContracts } from '../../configs/contracts/gearbox';
 import { GelatoContracts } from '../../configs/contracts/gelato';
 import { GmxContracts, Gmxv2Contracts } from '../../configs/contracts/gmx';
@@ -126,5 +127,6 @@ export function getContractWorkers(providers: GlobalProviders): { [key: string]:
     levelfinance: new ContractWorker(providers, LevelfinanceContracts),
     gmxv2: new ContractWorker(providers, Gmxv2Contracts),
     yearnyeth: new ContractWorker(providers, YearnyethContracts),
+    gains: new ContractWorker(providers, GainsContracts),
   };
 }

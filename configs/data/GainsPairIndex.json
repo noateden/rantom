@@ -1,0 +1,182 @@
+[
+  {
+    "chain": "arbitrum",
+    "pairIndex": 0,
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x47904963fc8b2340414262125af798b9655e58cd",
+      "symbol": "BTC",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 1,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "ETH",
+      "decimals": 18,
+      "address": "0x0000000000000000000000000000000000000000"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 2,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "LINK",
+      "decimals": 18,
+      "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 3,
+    "token": {
+      "chain": "arbitrum",
+      "address": "0xc4da4c24fd591125c3f47b340b6f4f76111883d8",
+      "symbol": "DOGE",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 4,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "MATIC",
+      "decimals": 18,
+      "address": "0x561877b6b3dd7651313794e5f2894b2f18be0766"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 5,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "ADA",
+      "decimals": 18,
+      "address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 6,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "SUSHI",
+      "decimals": 18,
+      "address": "0xd4d42f0b6def4ce0383636770ef773390d85c61a"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 7,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "AAVE",
+      "decimals": 18,
+      "address": "0xba5ddd1f9d7f570dc94a51479a000e3bce967196"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 8,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "ALGO",
+      "decimals": 18,
+      "address": "0xgains-trade-pair-index-crypto-algo"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 9,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "BAT",
+      "decimals": 18,
+      "address": "0x3450687ef141dcd6110b77c2dc44b008616aee75"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 10,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "COMP",
+      "decimals": 18,
+      "address": "0x354a6da3fcde098f8389cad84b0182725c6c91de"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 11,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "DOT",
+      "decimals": 18,
+      "address": "0xgains-trade-pair-index-crypto-dot"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 12,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "EOS",
+      "decimals": 18,
+      "address": "0xgains-trade-pair-index-crypto-eos"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 13,
+    "token": {
+      "chain": "arbitrum",
+      "address": "0xb46a094bc4b0adbd801e14b9db95e05e28962764",
+      "symbol": "LTC",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 14,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "MANA",
+      "decimals": 18,
+      "address": "0x442d24578a564ef628a65e6a7e3e7be2a165e231"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 15,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "OMG",
+      "decimals": 18,
+      "address": "0xgains-trade-pair-index-crypto-omg"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 16,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "SNX",
+      "decimals": 18,
+      "address": "0xcba56cd8216fcbbf3fa6df6137f3147cbca37d60"
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "pairIndex": 17,
+    "token": {
+      "chain": "arbitrum",
+      "symbol": "UNI",
+      "decimals": 18,
+      "address": "0xfa7f8980b0f1e64a2062791cc3b0871572f1f7f0"
+    }
+  }
+]

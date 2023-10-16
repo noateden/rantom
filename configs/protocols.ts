@@ -13,6 +13,7 @@ import CurvePools from './data/CurvePools.json';
 import ExactlyMarkets from './data/ExactlyMarkets.json';
 import FluxfinanceMarkets from './data/FluxfinanceMarkets.json';
 import FraxlendPairs from './data/FraxlendPairs.json';
+import GainsPairIndex from './data/GainsPairIndex.json';
 import Gmxv2Markets from './data/Gmxv2Markets.json';
 import IronbankMarkets from './data/IronbankMarkets.json';
 import MaverickPools from './data/MaverickPools.json';
@@ -2961,5 +2962,20 @@ export const Gmxv2Configs: ProtocolConfig = {
   },
   staticData: {
     markets: Gmxv2Markets,
+  },
+};
+
+export const GainsConfigs: ProtocolConfig = {
+  protocol: 'gains',
+  categories: ['perpetual'],
+  contracts: {
+    arbitrum: [
+      '0x298a695906e16aea0a184a2815a76ead1a0b7522', // Trading Callbacks
+    ],
+  },
+  staticData: {
+    pairsIndex: {
+      arbitrum: GainsPairIndex.filter((item) => item.chain === 'arbitrum'),
+    },
   },
 };

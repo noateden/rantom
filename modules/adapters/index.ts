@@ -44,6 +44,7 @@ import {
   FraxethConfigs,
   FraxlendConfigs,
   FraxswapConfigs,
+  GainsConfigs,
   GearboxConfigs,
   GelatoConfigs,
   GmxConfigs,
@@ -145,6 +146,7 @@ import { EulerAdapter } from './euler/euler';
 import { ExactlyAdapter } from './exactly/exactly';
 import { FraxethAdapter } from './fraxeth/fraxeth';
 import { FraxlendAdapter } from './fraxlend/fraxlend';
+import { GainsAdapter } from './gains/gains';
 import { GearboxAdapter } from './gearbox/gearbox';
 import { GelatoAdapter } from './gelato/gelato';
 import { GmxAdapter } from './gmx/gmx';
@@ -309,5 +311,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     agnifinance: new Pancakeswapv3Adapter(AgnifinanceConfigs, providers),
     'kyberswap-elastic': new Uniswapv3Adapter(KyberswapElasticConfigs, providers),
     yearnyeth: new YearnyethAdapter(YearnyethConfigs, providers),
+    gains: new GainsAdapter(GainsConfigs, providers),
   };
 }
