@@ -114,7 +114,7 @@ export class MuxAdapter extends Adapter {
           const amount = new BigNumber(event.mlpPrice.toString())
             .multipliedBy(new BigNumber(event.mlpAmount.toString()))
             .dividedBy(new BigNumber(event.tokenPrice))
-            .dividedBy(new BigNumber(10).pow(token.decimals))
+            .dividedBy(1e18)
             .toString(10);
 
           const action: KnownAction = signature === Signatures.AddLiquidity ? 'deposit' : 'withdraw';
