@@ -3043,8 +3043,8 @@ export const GainsConfigs: ProtocolConfig = {
   },
 };
 
-export const BethovenxConfigs: ProtocolConfig = {
-  protocol: 'bethovenx',
+export const BeethovenxConfigs: ProtocolConfig = {
+  protocol: 'beethovenx',
   categories: ['trading'],
   contracts: {
     optimism: [

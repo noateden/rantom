@@ -17,7 +17,7 @@ import {
   BasinConfigs,
   BeanstalkConfigs,
   BeefyConfigs,
-  BethovenxConfigs,
+  BeethovenxConfigs,
   BinanceStakedEthConfigs,
   BlurConfigs,
   BungeeConfigs,
@@ -313,6 +313,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     'kyberswap-elastic': new Uniswapv3Adapter(KyberswapElasticConfigs, providers),
     yearnyeth: new YearnyethAdapter(YearnyethConfigs, providers),
     gains: new GainsAdapter(GainsConfigs, providers),
-    bethovenx: new BalancerAdapter(BethovenxConfigs, providers),
+    beethovenx: new BalancerAdapter(BeethovenxConfigs, providers),
   };
 }
