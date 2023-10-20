@@ -187,6 +187,14 @@ export const SushiConfigs: ProtocolConfig = {
         (item) => item.address
       ),
     ],
+    polygon: [
+      '0xc35dadb65012ec5796536bd9864ed8773abc74c4', // factory v2
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'sushi' && item.chain === 'polygon').map(
+        (item) => item.address
+      ),
+    ],
   },
   staticData: {
     // masterchef pools
@@ -211,6 +219,14 @@ export const SushiConfigs: ProtocolConfig = {
       birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
       filters: {},
       endpoint: 'https://api.thegraph.com/subgraphs/name/sushiswap/arbitrum-exchange',
+    },
+    {
+      protocol: 'sushi',
+      chain: 'polygon',
+      version: 'univ2',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/sushiswap/matic-exchange',
     },
   ],
   customEventMapping: {
@@ -329,6 +345,22 @@ export const Sushiv3Configs: ProtocolConfig = {
         (item) => item.address
       ),
     ],
+    polygon: [
+      '0x917933899c6a5f8e37f31e19f92cdbff7e8ff0e2', // v3 factory
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'sushiv3' && item.chain === 'polygon').map(
+        (item) => item.address
+      ),
+    ],
+    optimism: [
+      '0x9c6522117e2ed1fe5bdb72bb0ed5e3f2bde7dbe0', // v3 factory
+
+      // top pools
+      ...UniLiquidityPools.filter((item) => item.protocol === 'sushiv3' && item.chain === 'optimism').map(
+        (item) => item.address
+      ),
+    ],
   },
   staticData: {
     // dex pools
@@ -358,6 +390,22 @@ export const Sushiv3Configs: ProtocolConfig = {
       birthday: 1691020800, // Thu Aug 03 2023 00:00:00 GMT+0000
       filters: {},
       endpoint: 'https://api.studio.thegraph.com/query/32073/v3-base/v0.0.1',
+    },
+    {
+      protocol: 'sushiv3',
+      chain: 'optimism',
+      version: 'univ3',
+      birthday: 1691020800, // Thu Aug 03 2023 00:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/sushi-v3/v3-optimism',
+    },
+    {
+      protocol: 'sushiv3',
+      chain: 'polygon',
+      version: 'univ3',
+      birthday: 1691020800, // Thu Aug 03 2023 00:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/sushi-v3/v3-polygon',
     },
   ],
 };
@@ -482,6 +530,9 @@ export const BalancerConfigs: ProtocolConfig = {
     base: [
       '0xba12222222228d8ba445958a75a0704d566bf2c8', // vault
     ],
+    polygon: [
+      '0xba12222222228d8ba445958a75a0704d566bf2c8', // vault
+    ],
   },
   customEventMapping: {
     [Signatures['Withdraw(address,uint256,uint256)']]: {
@@ -523,6 +574,9 @@ export const Aavev2Configs: ProtocolConfig = {
     ethereum: [
       '0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9', // lending pool v2
     ],
+    polygon: [
+      '0x8dff5e27ea6b7ac08ebfdf9eb090f32ee9a30fcf', // lending pool v2
+    ],
   },
 };
 
@@ -538,6 +592,12 @@ export const Aavev3Configs: ProtocolConfig = {
     ],
     base: [
       '0xa238dd80c259a72e81d7e4664a9801593f98d1c5', // lending pool v3
+    ],
+    optimism: [
+      '0x794a61358d6845594f94dc1db02a252b5b4814ad', // lending pool v3
+    ],
+    polygon: [
+      '0x794a61358d6845594f94dc1db02a252b5b4814ad', // lending pool v3
     ],
   },
 };
@@ -634,6 +694,9 @@ export const Compoundv3Configs: ProtocolConfig = {
     base: [
       '0x9c4ec768c28520b50860ea7a15bd7213a9ff58bf', // v3 USDCbC
       '0x46e6b214b524310239732d51387075e0e70970bf', // v3 WETH
+    ],
+    polygon: [
+      '0xf25212e676d1f7f89cd72ffee66158f541246445', // v3 USDC
     ],
   },
   staticData: {
@@ -2976,6 +3039,37 @@ export const GainsConfigs: ProtocolConfig = {
   staticData: {
     pairsIndex: {
       arbitrum: GainsPairIndex.filter((item) => item.chain === 'arbitrum'),
+    },
+  },
+};
+
+export const BethovenxConfigs: ProtocolConfig = {
+  protocol: 'bethovenx',
+  categories: ['trading'],
+  contracts: {
+    optimism: [
+      '0xba12222222228d8ba445958a75a0704d566bf2c8', // vault
+    ],
+  },
+  customEventMapping: {
+    [Signatures['Withdraw(address,uint256,uint256)']]: {
+      abi: [
+        {
+          type: 'address',
+          name: 'provider',
+          indexed: true,
+        },
+        {
+          type: 'uint256',
+          name: 'value',
+          indexed: false,
+        },
+        {
+          type: 'uint256',
+          name: 'ts',
+          indexed: false,
+        },
+      ],
     },
   },
 };

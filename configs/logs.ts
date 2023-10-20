@@ -315,11 +315,36 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x3a23f943181408eac424116af7b7790c94cb97a5', // Bungee gateway
     '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Kyberswap aggregator meta router v2
   ],
-};
 
-// will parse transaction input if transaction is calling to these contracts
-export const ContractWhitelistedInputData: { [key: string]: Array<string> } = {
-  ethereum: [
-    '0x1111111254eeb25477b68fb85ed929f73a960582', // 1inch aggregator v5
+  optimism: [
+    // we sync only top tvl and volume pools
+    // ignore malicious pools
+    ...UniLiquidityPools.filter((item: any) => item.protocol === 'uniswapv3' && item.chain === 'optimism').map(
+      (item: any) => item.address
+    ),
+    ...UniLiquidityPools.filter((item: any) => item.protocol === 'sushiv3' && item.chain === 'optimism').map(
+      (item: any) => item.address
+    ),
+    '0x794a61358d6845594f94dc1db02a252b5b4814ad', // Aave v3 lending pool
+    '0xba12222222228d8ba445958a75a0704d566bf2c8', // Bethovenx vault
+  ],
+
+  polygon: [
+    // we sync only top tvl and volume pools
+    // ignore malicious pools
+    ...UniLiquidityPools.filter((item: any) => item.protocol === 'uniswapv3' && item.chain === 'polygon').map(
+      (item: any) => item.address
+    ),
+    ...UniLiquidityPools.filter((item: any) => item.protocol === 'sushi' && item.chain === 'polygon').map(
+      (item: any) => item.address
+    ),
+    ...UniLiquidityPools.filter((item: any) => item.protocol === 'sushiv3' && item.chain === 'polygon').map(
+      (item: any) => item.address
+    ),
+
+    '0x8dff5e27ea6b7ac08ebfdf9eb090f32ee9a30fcf', // Aave v2 lending pool
+    '0x794a61358d6845594f94dc1db02a252b5b4814ad', // Aave v3 lending pool
+    '0xf25212e676d1f7f89cd72ffee66158f541246445', // Compound v3 USDC
+    '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault
   ],
 };

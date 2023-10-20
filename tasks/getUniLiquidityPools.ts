@@ -66,6 +66,9 @@ const HidePools: Array<string> = [
   '0xf842a419bad027e962918ab795964f169f4c1692', // COCO
   '0x52d8ca895d215843886324899d8855a95e60456c', // ARB SCAM
   '0xde204d12c04188c5b069887fc4aed5a61df51496', // MEEET
+
+  // sushi v2 ethereum
+  '0xcbaf9d3e0cae494cd77e49621995062107848a5b',
 ];
 
 const TopPoolCount = 50;

@@ -31,6 +31,7 @@ const CompoundMarketsV3 = [
   'arbitrum:0xa5edbdd9646f8dff606d7448e414884c7d905dca', // v3 USDC
   'base:0x9c4ec768c28520B50860ea7a15bd7213a9fF58bf', // v3 USDbC
   'base:0x46e6b214b524310239732d51387075e0e70970bf', // v3 WETH
+  'polygon:0xf25212e676d1f7f89cd72ffee66158f541246445', // v3 USDC
 ];
 
 (async function () {
