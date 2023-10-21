@@ -234,6 +234,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x2cced4ffa804adbe1269cdfc22d7904471abde63', // Yearn yETH liquidity pool
     '0x583019ff0f430721ada9cfb4fac8f06ca104d0b4', // Yearn yETH staking
     '0x5427fefa711eff984124bfbb1ab6fbf5e3da1820', // Celer cbridge
+    '0xcf5540fffcdc3d510b18bfca6d2b9987b0772559', // Odos router v2
   ],
 
   arbitrum: [
@@ -283,6 +284,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x98ef32edd24e2c92525e59afc4475c1242a30184', // Aura Finance booster lite
     '0x298a695906e16aea0a184a2815a76ead1a0b7522', // Gains Trade callbacks
     '0x1619de6b6b20ed217a58d00f37b9d47c7663feca', // Celer cbridge
+    '0xa669e7a0d4b3e4fa48af2de86bd4cd7126be4e13', // Odos router v2
   ],
 
   base: [
@@ -318,6 +320,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Kyberswap aggregator meta router v2
     '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // 0x exchange proxy
     '0x59c7c832e96d2568bea6db468c1aadcbbda08a52', // Paraswap swapper
+    '0x19ceead7105607cd444f5ad10dd51356436095a1', // Odos router v2
   ],
 
   optimism: [
@@ -334,6 +337,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xdef1abe32c034e558cdd535791643c58a13acc10', // 0x exchange proxy
     '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap swapper
     '0x9d39fc627a6d9d9f8c831c16995b209548cc3401', // Celer cbridge
+    '0xca423977156bb05b13a2ba3b76bc5419e2fe9680', // Odos router v2
   ],
 
   polygon: [
@@ -356,5 +360,6 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // 0x exchange proxy
     '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap swapper
     '0x88dcdc47d2f83a99cf0000fdf667a468bb958a78', // Celer cbridge
+    '0x4e3288c9ca110bcc82bf38f09a7b425c095d92bf', // Odos router v2
   ],
 };

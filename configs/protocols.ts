@@ -3110,3 +3110,25 @@ export const CelerbridgeConfigs: ProtocolConfig = {
     ],
   },
 };
+
+export const OdosConfigs: ProtocolConfig = {
+  protocol: 'odos',
+  categories: ['dexAggregator'],
+  contracts: {
+    ethereum: [
+      '0xcf5540fffcdc3d510b18bfca6d2b9987b0772559', // router v2
+    ],
+    arbitrum: [
+      '0xa669e7a0d4b3e4fa48af2de86bd4cd7126be4e13', // router v2
+    ],
+    base: [
+      '0x19ceead7105607cd444f5ad10dd51356436095a1', // router v2
+    ],
+    optimism: [
+      '0xca423977156bb05b13a2ba3b76bc5419e2fe9680', // router v2
+    ],
+    polygon: [
+      '0x4e3288c9ca110bcc82bf38f09a7b425c095d92bf', // router v2
+    ],
+  },
+};

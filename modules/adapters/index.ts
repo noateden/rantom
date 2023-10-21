@@ -71,6 +71,7 @@ import {
   MorphoConfigs,
   MultichainConfigs,
   MuxConfigs,
+  OdosConfigs,
   OneinchConfigs,
   OpenOceanConfigs,
   OpenseaConfigs,
@@ -173,6 +174,7 @@ import { MetamaskAdapter } from './metamask/metamask';
 import { MorphoAdapter } from './morpho/morpho';
 import { MultichainAdapter } from './multichain/multichain';
 import { MuxAdapter } from './mux/mux';
+import { OdosAdapter } from './odos/odos';
 import { OneinchAdapter } from './oneinch/oneinch';
 import { OpenoceanAdapter } from './openocean/openocean';
 import { OpenseaAdapter } from './opensea/opensea';
@@ -317,5 +319,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     gains: new GainsAdapter(GainsConfigs, providers),
     beethovenx: new BalancerAdapter(BeethovenxConfigs, providers),
     celerbridge: new CelerbridgeAdapter(CelerbridgeConfigs, providers),
+    odos: new OdosAdapter(OdosConfigs, providers),
   };
 }
