@@ -1066,6 +1066,15 @@ export const ZeroxConfigs: ProtocolConfig = {
     arbitrum: [
       '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // Proxy Exchange
     ],
+    base: [
+      '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // Proxy Exchange
+    ],
+    polygon: [
+      '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // Proxy Exchange
+    ],
+    optimism: [
+      '0xdef1abe32c034e558cdd535791643c58a13acc10', // Proxy Exchange
+    ],
   },
 };
 
@@ -1077,6 +1086,15 @@ export const ParaswapConfigs: ProtocolConfig = {
       '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap Augustus Swapper v5
     ],
     arbitrum: [
+      '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap Augustus Swapper
+    ],
+    base: [
+      '0x59c7c832e96d2568bea6db468c1aadcbbda08a52', // Paraswap Augustus Swapper
+    ],
+    optimism: [
+      '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap Augustus Swapper
+    ],
+    polygon: [
       '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap Augustus Swapper
     ],
   },

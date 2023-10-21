@@ -314,6 +314,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x4c80e24119cfb836cdf0a6b53dc23f04f7e652ca', // Stargate pool USDC
     '0x3a23f943181408eac424116af7b7790c94cb97a5', // Bungee gateway
     '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Kyberswap aggregator meta router v2
+    '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // 0x exchange proxy
+    '0x59c7c832e96d2568bea6db468c1aadcbbda08a52', // Paraswap swapper
   ],
 
   optimism: [
@@ -327,6 +329,8 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ),
     '0x794a61358d6845594f94dc1db02a252b5b4814ad', // Aave v3 lending pool
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Bethovenx vault
+    '0xdef1abe32c034e558cdd535791643c58a13acc10', // 0x exchange proxy
+    '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap swapper
   ],
 
   polygon: [
@@ -346,5 +350,7 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0x794a61358d6845594f94dc1db02a252b5b4814ad', // Aave v3 lending pool
     '0xf25212e676d1f7f89cd72ffee66158f541246445', // Compound v3 USDC
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Balancer vault
+    '0xdef1c0ded9bec7f1a1670819833240f027b25eff', // 0x exchange proxy
+    '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap swapper
   ],
 };
