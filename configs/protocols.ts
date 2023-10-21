@@ -3091,3 +3091,22 @@ export const BeethovenxConfigs: ProtocolConfig = {
     },
   },
 };
+
+export const CelerbridgeConfigs: ProtocolConfig = {
+  protocol: 'celerbridge',
+  categories: ['bridge'],
+  contracts: {
+    ethereum: [
+      '0x5427fefa711eff984124bfbb1ab6fbf5e3da1820', // cBridge
+    ],
+    arbitrum: [
+      '0x1619de6b6b20ed217a58d00f37b9d47c7663feca', // cBridge
+    ],
+    optimism: [
+      '0x9d39fc627a6d9d9f8c831c16995b209548cc3401', // cBridge
+    ],
+    polygon: [
+      '0x88dcdc47d2f83a99cf0000fdf667a468bb958a78', // cBridge
+    ],
+  },
+};

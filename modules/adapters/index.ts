@@ -24,6 +24,7 @@ import {
   CamelotConfigs,
   Camelotv3Configs,
   CarbonConfigs,
+  CelerbridgeConfigs,
   ChaiConfigs,
   ChainlinkConfigs,
   ClipperConfigs,
@@ -128,6 +129,7 @@ import { BinanceStakedAdapter } from './binance/stakedEth';
 import { BlurAdapter } from './blur/blur';
 import { BungeeAdapter } from './bungee/bungee';
 import { CarbonAdapter } from './carbon/carbon';
+import { CelerbridgeAdapter } from './celerbridge/celerbridge';
 import { ChaiAdapter } from './chai/chai';
 import { ChainlinkAdapter } from './chainlink/chainlink';
 import { ClipperAdapter } from './clipper/clipper';
@@ -314,5 +316,6 @@ export function getAdapterMapping(providers: GlobalProviders | null): { [key: st
     yearnyeth: new YearnyethAdapter(YearnyethConfigs, providers),
     gains: new GainsAdapter(GainsConfigs, providers),
     beethovenx: new BalancerAdapter(BeethovenxConfigs, providers),
+    celerbridge: new CelerbridgeAdapter(CelerbridgeConfigs, providers),
   };
 }
