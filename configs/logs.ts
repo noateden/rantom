@@ -332,12 +332,17 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...UniLiquidityPools.filter((item: any) => item.protocol === 'sushiv3' && item.chain === 'optimism').map(
       (item: any) => item.address
     ),
+    ...UniLiquidityPools.filter((item: any) => item.protocol === 'kyberswap-elastic' && item.chain === 'optimism').map(
+      (item: any) => item.address
+    ),
+
     '0x794a61358d6845594f94dc1db02a252b5b4814ad', // Aave v3 lending pool
     '0xba12222222228d8ba445958a75a0704d566bf2c8', // Bethovenx vault
     '0xdef1abe32c034e558cdd535791643c58a13acc10', // 0x exchange proxy
     '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap swapper
     '0x9d39fc627a6d9d9f8c831c16995b209548cc3401', // Celer cbridge
     '0xca423977156bb05b13a2ba3b76bc5419e2fe9680', // Odos router v2
+    '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // kyberswap meta router
   ],
 
   polygon: [
@@ -352,6 +357,9 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     ...UniLiquidityPools.filter((item: any) => item.protocol === 'sushiv3' && item.chain === 'polygon').map(
       (item: any) => item.address
     ),
+    ...UniLiquidityPools.filter((item: any) => item.protocol === 'kyberswap-elastic' && item.chain === 'polygon').map(
+      (item: any) => item.address
+    ),
 
     '0x8dff5e27ea6b7ac08ebfdf9eb090f32ee9a30fcf', // Aave v2 lending pool
     '0x794a61358d6845594f94dc1db02a252b5b4814ad', // Aave v3 lending pool
@@ -361,5 +369,6 @@ export const ContractWhitelistedGetLogs: { [key: string]: Array<string> } = {
     '0xdef171fe48cf0115b1d80b88dc8eab59176fee57', // Paraswap swapper
     '0x88dcdc47d2f83a99cf0000fdf667a468bb958a78', // Celer cbridge
     '0x4e3288c9ca110bcc82bf38f09a7b425c095d92bf', // Odos router v2
+    '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // kyberswap meta router
   ],
 };

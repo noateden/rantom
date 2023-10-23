@@ -1997,6 +1997,12 @@ export const KyberswapAggregatorConfigs: ProtocolConfig = {
     base: [
       '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Meta Router v2
     ],
+    optimism: [
+      '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Meta Router v2
+    ],
+    polygon: [
+      '0x6131b5fae19ea4f9d964eac0408e4408b66337b5', // Meta Router v2
+    ],
   },
 };
 
@@ -2043,6 +2049,18 @@ export const KyberswapElasticConfigs: ProtocolConfig = {
         (item) => item.address
       ),
     ],
+    optimism: [
+      '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a', // Factory
+      ...UniLiquidityPools.filter((item) => item.protocol === 'kyberswap-elastic' && item.chain === 'optimism').map(
+        (item) => item.address
+      ),
+    ],
+    polygon: [
+      '0xc7a590291e07b9fe9e64b86c58fd8fc764308c4a', // Factory
+      ...UniLiquidityPools.filter((item) => item.protocol === 'kyberswap-elastic' && item.chain === 'polygon').map(
+        (item) => item.address
+      ),
+    ],
   },
   subgraphs: [
     {
@@ -2068,6 +2086,22 @@ export const KyberswapElasticConfigs: ProtocolConfig = {
       birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
       filters: {},
       endpoint: 'https://base-graph.kyberengineering.io/subgraphs/name/kybernetwork/kyberswap-elastic-base',
+    },
+    {
+      protocol: 'kyberswap-elastic',
+      chain: 'optimism',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-elastic-optimism',
+    },
+    {
+      protocol: 'kyberswap-elastic',
+      chain: 'polygon',
+      version: 'univ3',
+      birthday: 1672567200, // Sun Jan 01 2023 10:00:00 GMT+0000
+      filters: {},
+      endpoint: 'https://api.thegraph.com/subgraphs/name/kybernetwork/kyberswap-elastic-matic',
     },
   ],
 };
