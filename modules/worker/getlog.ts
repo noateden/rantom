@@ -45,7 +45,7 @@ export class GetlogWorker implements IWorkerProvider {
       if (states.length > 0) {
         startBlock = states[0].blockNumber;
       } else {
-        startBlock = WorkerGenesisBlocks[chain];
+        startBlock = latestBlock - 1000;
       }
     }
 
