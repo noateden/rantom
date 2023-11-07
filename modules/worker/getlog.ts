@@ -1,6 +1,5 @@
 import Web3 from 'web3';
 
-import { WorkerGenesisBlocks } from '../../configs';
 import { BlockSubgraphs } from '../../configs/constants';
 import EnvConfig from '../../configs/envConfig';
 import { ContractWhitelistedGetLogs } from '../../configs/logs';
