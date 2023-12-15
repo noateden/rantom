@@ -1,152 +1,141 @@
 import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
 
 import VesselManagerAbi from '../../../configs/abi/gravita/VesselManager.json';
-import { Tokens } from '../../../configs/constants';
-import EnvConfig from '../../../configs/envConfig';
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
-import { ProtocolConfig } from '../../../types/configs';
+import { GravitaConfig } from '../../../configs/protocols/gravita';
+import { normalizeAddress } from '../../../lib/utils';
+import { formatFromDecimals } from '../../../lib/utils';
+import { ContractConfig, ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { GravitaAbiMappings } from './abis';
 
-const Signatures = {
-  VesselUpdated: '0xd03b2126581644d5026a8e77091b71644f3f16efe9d9e5930c4d533301c731e8',
-};
-
-export class GravitaAdapter extends Adapter {
+export default class GravitaAdapter extends Adapter {
   public readonly name: string = 'adapter.gravita';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.VesselUpdated]: EventSignatureMapping[Signatures.VesselUpdated],
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, {
+      protocol: config.protocol,
+      contracts: config.contracts as Array<ContractConfig>,
     });
+
+    this.config = config;
+    this.eventMappings = GravitaAbiMappings;
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
 
-    const signature = topics[0];
-    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(address) !== -1) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const rpcWrapper = this.getRpcWrapper();
-      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
+    if (this.supportedContract(options.chain, options.log.address)) {
+      const signature = options.log.topics[0];
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
 
-      const token = await this.getWeb3Helper().getErc20Metadata(chain, event._asset);
-      if (token) {
+      const asset = await this.services.blockchain.getTokenInfo({
+        chain: options.chain,
+        address: event._asset,
+      });
+      if (asset) {
+        const config: GravitaConfig = this.config as GravitaConfig;
+
         const borrower = normalizeAddress(event._borrower);
-        const debts = new BigNumber(event._debt.toString()).dividedBy(1e18).toString();
-        const collateral = new BigNumber(event._coll.toString())
-          .dividedBy(new BigNumber(10).pow(token.decimals))
-          .toString(10);
+        const debtAMount = formatFromDecimals(event._debt.toString(), config.debtToken.decimals);
+        const collateralAmount = formatFromDecimals(event._coll.toString(), asset.decimals);
 
         const operation = Number(event.operation);
         if (operation === 0) {
           // open vault
-          return {
-            protocol: this.config.protocol,
-            action: 'borrow',
-            addresses: [borrower],
-            tokens: [Tokens.ethereum.GRAI],
-            tokenAmounts: [debts],
-            readableString: `${borrower} borrow ${debts} GRAI on ${this.config.protocol} chain ${chain}`,
-            subActions: [
-              {
-                protocol: this.config.protocol,
-                action: 'deposit',
-                addresses: [borrower],
-                tokens: [token],
-                tokenAmounts: [collateral],
-                readableString: `${borrower} deposit ${collateral} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-              },
-            ],
-          };
+          actions.push(
+            this.buildUpAction({
+              ...options,
+              action: 'borrow',
+              addresses: [borrower],
+              tokens: [config.debtToken],
+              tokenAmounts: [debtAMount],
+            })
+          );
+          actions.push({
+            ...this.buildUpAction({
+              ...options,
+              action: 'deposit',
+              addresses: [borrower],
+              tokens: [asset],
+              tokenAmounts: [collateralAmount],
+            }),
+            logIndex: `${options.log.logIndex}:1`,
+          });
         } else if (operation === 1 || operation === 2) {
           // adjust vault
-          const borrower = normalizeAddress(event._borrower);
-
-          // get vault state from previous block
-          let blockNumber = options.blockNumber ? options.blockNumber : null;
-          if (!blockNumber) {
-            const transaction = await web3.eth.getTransaction(options.hash as string);
-            blockNumber = transaction.blockNumber;
-          }
-          const vaultPreviousState = await rpcWrapper.queryContract({
-            chain,
+          const vaultPreviousState = await this.services.blockchain.singlecall({
+            chain: options.chain,
             abi: VesselManagerAbi,
-            contract: this.config.staticData.vesselManagers[chain],
+            target: config.vesselManager.address,
             method: 'Vessels',
-            params: [borrower, token.address],
-            blockNumber: Number(blockNumber) - 1,
+            params: [borrower, asset.address],
+            blockNumber: Number(options.log.blockNumber) - 1,
           });
-
           if (vaultPreviousState) {
-            const previousDebt = new BigNumber(vaultPreviousState.debt.toString()).dividedBy(1e18);
-            const previousColl = new BigNumber(vaultPreviousState.coll.toString()).dividedBy(
-              new BigNumber(10).pow(token.decimals)
-            );
+            const previousDebt = new BigNumber(vaultPreviousState.debt.toString());
+            const previousColl = new BigNumber(vaultPreviousState.coll.toString());
 
             if (operation === 1) {
               // close vault
-              return {
-                protocol: this.config.protocol,
-                action: 'repay',
-                addresses: [borrower],
-                tokens: [Tokens.ethereum.GRAI],
-                tokenAmounts: [previousDebt.toString(10)],
-                readableString: `${borrower} repay ${previousDebt.toString(10)} GRAI on ${
-                  this.config.protocol
-                } chain ${chain}`,
-                subActions: [
-                  {
-                    protocol: this.config.protocol,
-                    action: 'withdraw',
-                    addresses: [borrower],
-                    tokens: [token],
-                    tokenAmounts: [previousColl.toString(10)],
-                    readableString: `${borrower} withdraw ${previousColl.toString(10)} ${token.symbol} on ${
-                      this.config.protocol
-                    } chain ${chain}`,
-                  },
-                ],
-              };
+              actions.push(
+                this.buildUpAction({
+                  ...options,
+                  action: 'repay',
+                  addresses: [borrower],
+                  tokens: [config.debtToken],
+                  tokenAmounts: [formatFromDecimals(previousDebt.toString(10), config.debtToken.decimals)],
+                })
+              );
+              actions.push({
+                ...this.buildUpAction({
+                  ...options,
+                  action: 'withdraw',
+                  addresses: [borrower],
+                  tokens: [asset],
+                  tokenAmounts: [formatFromDecimals(previousColl.toString(10), asset.decimals)],
+                }),
+                logIndex: `${options.log.logIndex}:1`,
+              });
             } else {
-              const diffDebt = new BigNumber(debts).minus(previousDebt);
-              const diffColl = new BigNumber(previousColl).minus(collateral);
-
+              const diffDebt = new BigNumber(event._debt.toString()).minus(previousDebt);
+              const diffColl = new BigNumber(event._coll.toString()).minus(previousColl);
               const action: KnownAction = diffDebt.gte(0) ? 'borrow' : 'repay';
               const subAction: KnownAction = diffColl.gte(0) ? 'deposit' : 'withdraw';
 
-              return {
-                protocol: this.config.protocol,
-                action: action,
-                addresses: [borrower],
-                tokens: [Tokens.ethereum.GRAI],
-                tokenAmounts: [diffDebt.abs().toString(10)],
-                readableString: `${borrower} ${action} ${diffDebt.abs().toString(10)} GRAI on ${
-                  this.config.protocol
-                } chain ${chain}`,
-                subActions: [
-                  {
-                    protocol: this.config.protocol,
-                    action: subAction,
-                    addresses: [borrower],
-                    tokens: [token],
-                    tokenAmounts: [diffColl.abs().toString(10)],
-                    readableString: `${borrower} ${subAction} ${diffColl.abs().toString(10)} ${token.symbol} on ${
-                      this.config.protocol
-                    } chain ${chain}`,
-                  },
-                ],
-              };
+              actions.push(
+                this.buildUpAction({
+                  ...options,
+                  action: action,
+                  addresses: [borrower],
+                  tokens: [config.debtToken],
+                  tokenAmounts: [formatFromDecimals(diffDebt.abs().toString(10), config.debtToken.decimals)],
+                })
+              );
+              actions.push({
+                ...this.buildUpAction({
+                  ...options,
+                  action: subAction,
+                  addresses: [borrower],
+                  tokens: [asset],
+                  tokenAmounts: [formatFromDecimals(diffColl.abs().toString(10), asset.decimals)],
+                }),
+                logIndex: `${options.log.logIndex}:1`,
+              });
             }
           }
         }
       }
     }
 
-    return null;
+    return actions;
   }
 }

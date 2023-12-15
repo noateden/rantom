@@ -1,57 +1,57 @@
-import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
-
-import { Tokens } from '../../../configs/constants';
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
-import { ProtocolConfig } from '../../../types/configs';
+import { AddressZero } from '../../../configs/constants/addresses';
+import { normalizeAddress } from '../../../lib/utils';
+import { formatFromDecimals } from '../../../lib/utils';
+import { ProtocolConfig, Token } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { RocketpoolAbiMappings, RocketpoolEventSignatures } from './abis';
 
-const Signatures = {
-  Deposit: '0x6155cfd0fd028b0ca77e8495a60cbe563e8bce8611f0aad6fedbdaafc05d44a2',
-  Withdraw: '0x19783b34589160c168487dc7f9c51ae0bcefe67a47d6708fba90f6ce0366d3d1',
-};
-
-export class RocketpoolAdapter extends Adapter {
+export default class RocketpoolAdapter extends Adapter {
   public readonly name: string = 'adapter.rocketpool';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.Deposit]: EventSignatureMapping[Signatures.Deposit],
-      [Signatures.Withdraw]: EventSignatureMapping[Signatures.Withdraw],
-    });
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, config);
+
+    this.config = config;
+    this.eventMappings = RocketpoolAbiMappings;
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
 
-    const signature = topics[0];
-    if (
-      this.config.contracts[chain] &&
-      this.config.contracts[chain].indexOf(address) !== -1 &&
-      (signature === Signatures.Deposit || signature === Signatures.Withdraw)
-    ) {
-      const web3 = new Web3();
-      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+    if (this.supportedContract(options.chain, options.log.address)) {
+      const signature = options.log.topics[0];
 
-      const user = event.to ? normalizeAddress(event.to) : normalizeAddress(event.from);
-      const amount = new BigNumber(event.ethAmount.toString()).dividedBy(1e18).toString(10);
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
 
-      return {
-        protocol: this.config.protocol,
-        action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
-        addresses: [user],
-        tokens: [Tokens.ethereum.NativeCoin],
-        tokenAmounts: [amount],
-        readableString: `${user} ${signature === Signatures.Deposit ? 'deposit' : 'withdraw'} ${amount} ${
-          Tokens.ethereum.NativeCoin.symbol
-        } on ${this.config.protocol} chain ${chain}`,
+      const token: Token = {
+        chain: 'ethereum',
+        symbol: 'ETH',
+        decimals: 18,
+        address: AddressZero,
       };
+      const user = event.to ? normalizeAddress(event.to) : normalizeAddress(event.from);
+      const amount = formatFromDecimals(event.ethAmount.toString(), token.decimals);
+
+      actions.push(
+        this.buildUpAction({
+          ...options,
+          action: signature === RocketpoolEventSignatures.Deposit ? 'deposit' : 'withdraw',
+          addresses: [user],
+          tokens: [token],
+          tokenAmounts: [amount],
+        })
+      );
     }
 
-    return null;
+    return actions;
   }
 }

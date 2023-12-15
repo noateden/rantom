@@ -1,0 +1,5830 @@
+{
+  "840": {
+    "chain": "bnbchain",
+    "symbol": "840",
+    "decimals": 18,
+    "address": "0xc9944f69dc936dc43a8a87421bd7704d9dc357c5"
+  },
+  "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000": {
+    "chain": "bnbchain",
+    "address": "0x49d5cc521f75e13fa8eb4e89e9d381352c897c96",
+    "symbol": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000 \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "decimals": 6
+  },
+  "$GOLD": {
+    "chain": "bnbchain",
+    "symbol": "$GOLD",
+    "decimals": 18,
+    "address": "0xd0f653ad03ca32a792abfa6d6711cdf1311e5d9d"
+  },
+  "$ROUL": {
+    "chain": "bnbchain",
+    "symbol": "$ROUL",
+    "decimals": 18,
+    "address": "0x712661a1976992a8f8c82fe74ba4e81a82de1f32"
+  },
+  "$THUNDER": {
+    "chain": "bnbchain",
+    "symbol": "$THUNDER",
+    "decimals": 8,
+    "address": "0xee84e260fae848f55ebde322b9595682590c456c"
+  },
+  "$dARK": {
+    "chain": "bnbchain",
+    "symbol": "$dARK",
+    "decimals": 8,
+    "address": "0x6204a9f075eee382e485b27b7d44a38b9f9a0cba"
+  },
+  "0xBNB❖": {
+    "chain": "bnbchain",
+    "address": "0x5037ff2f4598d130788fbd937d82d08b5c05a0cd",
+    "symbol": "0xBNB❖",
+    "decimals": 18
+  },
+  "100x": {
+    "chain": "bnbchain",
+    "symbol": "100x",
+    "decimals": 18,
+    "address": "0x016c285d5b918b92aa85ef1e147498badfe30d69"
+  },
+  "10SET": {
+    "chain": "bnbchain",
+    "address": "0x1ae369a6ab222aff166325b7b87eb9af06c86e57",
+    "symbol": "10SET",
+    "decimals": 18
+  },
+  "1INCH": {
+    "chain": "bnbchain",
+    "address": "0x111111111117dc0aa78b770fa6a738034120c302",
+    "symbol": "1INCH",
+    "decimals": 18
+  },
+  "1TRC": {
+    "chain": "bnbchain",
+    "symbol": "1TRC",
+    "decimals": 18,
+    "address": "0x97300a4f628701672096460b5469c41a8d3ecb1a"
+  },
+  "2LIFE": {
+    "chain": "bnbchain",
+    "address": "0x696abfb9b662e6545be8eec16c31cb4b891f3c2e",
+    "symbol": "2LIFE",
+    "decimals": 18
+  },
+  "88Lotto": {
+    "chain": "bnbchain",
+    "symbol": "88Lotto",
+    "decimals": 8,
+    "address": "0x30ae1fddc9686e94dd9c249991f2e352969d8ec3"
+  },
+  "8PAY": {
+    "chain": "bnbchain",
+    "symbol": "8PAY",
+    "decimals": 18,
+    "address": "0xfeea0bdd3d07eb6fe305938878c0cadbfa169042"
+  },
+  "AAVE": {
+    "chain": "bnbchain",
+    "address": "0xfb6115445bff7b52feb98650c87f44907e58f802",
+    "symbol": "AAVE",
+    "decimals": 18
+  },
+  "ABS": {
+    "chain": "bnbchain",
+    "symbol": "ABS",
+    "decimals": 18,
+    "address": "0x6c5fe6e99d2484db7e4bf34f365aba42d0e4dc20"
+  },
+  "ACH": {
+    "chain": "bnbchain",
+    "symbol": "ACH",
+    "decimals": 8,
+    "address": "0xbc7d6b50616989655afd682fb42743507003056d",
+    "logoURI": "https://assets.coingecko.com/coins/images/12390/thumb/ACH_%281%29.png?1599691266"
+  },
+  "ACHTOOLS": {
+    "chain": "bnbchain",
+    "symbol": "ACHTOOLS",
+    "decimals": 8,
+    "address": "0xc13a1b47377a8382bd3f6f9105137c1e838758b9"
+  },
+  "ACS": {
+    "chain": "bnbchain",
+    "symbol": "ACS",
+    "decimals": 18,
+    "address": "0x4197c6ef3879a08cd51e5560da5064b773aa1d29"
+  },
+  "ACSI": {
+    "chain": "bnbchain",
+    "symbol": "ACSI",
+    "decimals": 18,
+    "address": "0x5b17b4d5e4009b5c43e3e3d63a5229f794cba389"
+  },
+  "ACT": {
+    "chain": "bnbchain",
+    "address": "0x9f3bcbe48e8b754f331dfc694a894e8e686ac31d",
+    "symbol": "ACT",
+    "decimals": 18
+  },
+  "ADA": {
+    "chain": "bnbchain",
+    "address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
+    "symbol": "ADA",
+    "decimals": 18
+  },
+  "ADDCLAS": {
+    "chain": "bnbchain",
+    "address": "0x4edff5eb8731b6d4eeaa662804b7282d1c22103a",
+    "symbol": "ADDCLAS",
+    "decimals": 18
+  },
+  "ADX": {
+    "chain": "bnbchain",
+    "symbol": "ADX",
+    "decimals": 18,
+    "address": "0x6bff4fb161347ad7de4a625ae5aa3a1ca7077819",
+    "logoURI": "https://assets.coingecko.com/coins/images/847/thumb/Ambire_AdEx_Symbol_color.png?1655432540"
+  },
+  "AFD": {
+    "chain": "bnbchain",
+    "address": "0x198271b868dae875bfea6e6e4045cdda5d6b9829",
+    "symbol": "AFD",
+    "decimals": 18
+  },
+  "AICREA": {
+    "chain": "bnbchain",
+    "address": "0x2c16627ed63b82f6690a6919f8e1ece92bcf5868",
+    "symbol": "AICREA",
+    "decimals": 18
+  },
+  "AIOZ": {
+    "chain": "bnbchain",
+    "symbol": "AIOZ",
+    "decimals": 18,
+    "address": "0x33d08d8c7a168333a85285a68c0042b39fc3741d",
+    "logoURI": "https://assets.coingecko.com/coins/images/14631/thumb/aioz_logo.png?1617413126"
+  },
+  "AITECH": {
+    "chain": "bnbchain",
+    "address": "0x2d060ef4d6bf7f9e5edde373ab735513c0e4f944",
+    "symbol": "AITECH",
+    "decimals": 18
+  },
+  "AIXION": {
+    "chain": "bnbchain",
+    "address": "0xd2e115c9d3da33a29a667c70ccd4d27e2f811ced",
+    "symbol": "AIXION",
+    "decimals": 18
+  },
+  "ALEPH": {
+    "chain": "bnbchain",
+    "symbol": "ALEPH",
+    "decimals": 18,
+    "address": "0x82d2f8e02afb160dd5a480a617692e62de9038c4",
+    "logoURI": "https://assets.coingecko.com/coins/images/11676/thumb/Monochram-aleph.png?1608483725"
+  },
+  "ALICE": {
+    "chain": "bnbchain",
+    "symbol": "ALICE",
+    "decimals": 6,
+    "address": "0xac51066d7bec65dc4589368da368b212745d63e8",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xAC51066d7bEC65Dc4589368da368b212745d63E8.png"
+  },
+  "ALIX": {
+    "chain": "bnbchain",
+    "symbol": "ALIX",
+    "decimals": 18,
+    "address": "0xaf6bd11a6f8f9c44b9d18f5fa116e403db599f8e",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xaF6Bd11A6F8f9c44b9D18f5FA116E403db599f8E/logo.png"
+  },
+  "ALPA": {
+    "chain": "bnbchain",
+    "symbol": "ALPA",
+    "decimals": 18,
+    "address": "0xc5e6689c9c8b02be7c49912ef19e79cf24977f03"
+  },
+  "ALPACA": {
+    "chain": "bnbchain",
+    "symbol": "ALPACA",
+    "decimals": 18,
+    "address": "0x8f0528ce5ef7b51152a59745befdd91d97091d2f"
+  },
+  "ALPHA": {
+    "chain": "bnbchain",
+    "address": "0xa1faa113cbe53436df28ff0aee54275c13b40975",
+    "symbol": "ALPHA",
+    "decimals": 18
+  },
+  "ALU": {
+    "chain": "bnbchain",
+    "address": "0x8263cd1601fe73c066bf49cc09841f35348e3be0",
+    "symbol": "ALU",
+    "decimals": 18
+  },
+  "AMT": {
+    "chain": "bnbchain",
+    "address": "0x6ae0a238a6f51df8eee084b1756a54dd8a8e85d3",
+    "symbol": "AMT",
+    "decimals": 18
+  },
+  "ANA": {
+    "chain": "bnbchain",
+    "address": "0x02f82f00e2261ae23aededf97fce29b7e92efa00",
+    "symbol": "ANA",
+    "decimals": 18
+  },
+  "ANI": {
+    "chain": "bnbchain",
+    "symbol": "ANI",
+    "decimals": 18,
+    "address": "0xac472d0eed2b8a2f57a6e304ea7ebd8e88d1d36f"
+  },
+  "ANKR": {
+    "chain": "bnbchain",
+    "address": "0xf307910a4c7bbc79691fd374889b36d8531b08e3",
+    "symbol": "ANKR",
+    "decimals": 18
+  },
+  "AP3": {
+    "chain": "bnbchain",
+    "symbol": "AP3",
+    "decimals": 18,
+    "address": "0xe459c0b11c62e3fd83da52537bd6191b56ab1b5a"
+  },
+  "APE": {
+    "chain": "bnbchain",
+    "symbol": "APE",
+    "decimals": 18,
+    "address": "0xa9ea4b786ee5b7a733c035564bfd9341a4c9fc1e"
+  },
+  "APX": {
+    "chain": "bnbchain",
+    "address": "0x78f5d389f5cdccfc41594abab4b0ed02f31398b3",
+    "symbol": "APX",
+    "decimals": 18
+  },
+  "APYD": {
+    "chain": "bnbchain",
+    "symbol": "APYD",
+    "decimals": 18,
+    "address": "0xc5310dc104473f5e0dd025f1862bb697b3912296"
+  },
+  "ARA": {
+    "chain": "bnbchain",
+    "address": "0x5542958fa9bd89c96cb86d1a6cb7a3e644a3d46e",
+    "symbol": "ARA",
+    "decimals": 18
+  },
+  "ARGON": {
+    "chain": "bnbchain",
+    "symbol": "ARGON",
+    "decimals": 18,
+    "address": "0x851f7a700c5d67db59612b871338a85526752c25"
+  },
+  "ARI": {
+    "chain": "bnbchain",
+    "symbol": "ARI",
+    "decimals": 9,
+    "address": "0xcb77d84066f6192ab79bbc6d6450ddbe72661d7c"
+  },
+  "ARPA": {
+    "chain": "bnbchain",
+    "symbol": "ARPA",
+    "decimals": 18,
+    "address": "0x6f769e65c14ebd1f68817f5f1dcdb61cfa2d6f7e",
+    "logoURI": "https://assets.coingecko.com/coins/images/8506/thumb/9u0a23XY_400x400.jpg?1559027357"
+  },
+  "ARV": {
+    "chain": "bnbchain",
+    "address": "0x6679eb24f59dfe111864aec72b443d1da666b360",
+    "symbol": "ARV",
+    "decimals": 8
+  },
+  "ASCEND": {
+    "chain": "bnbchain",
+    "symbol": "ASCEND",
+    "decimals": 9,
+    "address": "0xf664264e835bc27cbf71da6a6633a6c7b99b9de1"
+  },
+  "ASET": {
+    "chain": "bnbchain",
+    "address": "0x591aaadbc85e19065c88a1b0c2ed3f58295f47df",
+    "symbol": "ASET",
+    "decimals": 18
+  },
+  "ASTRA": {
+    "chain": "bnbchain",
+    "symbol": "ASTRA",
+    "decimals": 8,
+    "address": "0x6eb6b5ca233140e501b24e6c355c7ebfd2d35219"
+  },
+  "AT": {
+    "chain": "bnbchain",
+    "address": "0xa7e5543181110270a7cb7d04189ab357ee7e28fe",
+    "symbol": "AT",
+    "decimals": 18
+  },
+  "ATA": {
+    "chain": "bnbchain",
+    "symbol": "ATA",
+    "decimals": 18,
+    "address": "0xa2120b9e674d3fc3875f415a7df52e382f141225",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xA2120b9e674d3fC3875f415A7DF52e382F141225.png"
+  },
+  "ATEM": {
+    "chain": "bnbchain",
+    "address": "0x26806fd4831e6847094f4c6f48e8ebd71b84d609",
+    "symbol": "ATEM",
+    "decimals": 18
+  },
+  "ATOM": {
+    "chain": "bnbchain",
+    "address": "0x0eb3a705fc54725037cc9e008bdede697f62f335",
+    "symbol": "ATOM",
+    "decimals": 18
+  },
+  "AURA": {
+    "chain": "bnbchain",
+    "address": "0x23c5d1164662758b3799103effe19cc064d897d6",
+    "symbol": "AURA",
+    "decimals": 6
+  },
+  "AUTO": {
+    "chain": "bnbchain",
+    "symbol": "AUTO",
+    "decimals": 18,
+    "address": "0xa184088a740c695e156f91f5cc086a06bb78b827"
+  },
+  "AVAX": {
+    "chain": "bnbchain",
+    "address": "0x1ce0c2827e2ef14d5c4f29a091d735a204794041",
+    "symbol": "AVAX",
+    "decimals": 18
+  },
+  "AXL": {
+    "chain": "bnbchain",
+    "symbol": "AXL",
+    "decimals": 6,
+    "address": "0x8b1f4432f943c465a973fedc6d7aa50fc96f1f65",
+    "logoURI": "https://assets.coingecko.com/coins/images/27277/large/V-65_xQ1_400x400.jpeg"
+  },
+  "AXS": {
+    "chain": "bnbchain",
+    "symbol": "AXS",
+    "decimals": 18,
+    "address": "0x715d400f88c167884bbcc41c5fea407ed4d2f8a0",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x715D400F88C167884bbCc41C5FeA407ed4D2f8A0.png"
+  },
+  "AZTEQ": {
+    "chain": "bnbchain",
+    "address": "0x9194d7e750217f9637d5f35592411459bd587dae",
+    "symbol": "AZTEQ",
+    "decimals": 18
+  },
+  "AceD": {
+    "chain": "bnbchain",
+    "symbol": "AceD",
+    "decimals": 18,
+    "address": "0x3b98bbefe14b98000f10124ca95ed298ac9db3ff"
+  },
+  "Amsnft": {
+    "chain": "bnbchain",
+    "address": "0x2b2189d80165e66da4555508c95ac1c2c267fa9f",
+    "symbol": "Amsnft",
+    "decimals": 18
+  },
+  "Arbitrum": {
+    "chain": "bnbchain",
+    "symbol": "Arbitrum",
+    "decimals": 18,
+    "address": "0xa050ffb3eeb8200eeb7f61ce34ff644420fd3522",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xa050FFb3eEb8200eEB7F61ce34FF644420FD3522.png"
+  },
+  "BABBC": {
+    "chain": "bnbchain",
+    "address": "0xe83ce6bfb580583bd6a62b4be7b34fc25f02910d",
+    "symbol": "BABBC",
+    "decimals": 8
+  },
+  "BABYDOGE": {
+    "chain": "bnbchain",
+    "symbol": "BABYDOGE",
+    "decimals": 9,
+    "address": "0xc748673057861a797275cd8a068abb95a902e8de",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xc748673057861a797275CD8A068AbB95A902e8de/logo.png"
+  },
+  "BAKE": {
+    "chain": "bnbchain",
+    "address": "0xe02df9e3e622debdd69fb838bb799e3f168902c5",
+    "symbol": "BAKE",
+    "decimals": 18
+  },
+  "BALL": {
+    "chain": "bnbchain",
+    "symbol": "BALL",
+    "decimals": 18,
+    "address": "0xc87eafc1d1c3f46148ea5446d7a645602340b1e6"
+  },
+  "BANANA": {
+    "chain": "bnbchain",
+    "symbol": "BANANA",
+    "decimals": 18,
+    "address": "0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95"
+  },
+  "BAND": {
+    "chain": "bnbchain",
+    "address": "0xad6caeb32cd2c308980a548bd0bc5aa4306c6c18",
+    "symbol": "BAND",
+    "decimals": 18
+  },
+  "BANUS": {
+    "chain": "bnbchain",
+    "address": "0x98999aa1b0d17fb832fd509e13b67fe506513a6d",
+    "symbol": "BANUS",
+    "decimals": 18
+  },
+  "BART": {
+    "chain": "bnbchain",
+    "address": "0xab3293547b6711490959c5728ea442f87194ac6f",
+    "symbol": "BART",
+    "decimals": 9
+  },
+  "BASI": {
+    "chain": "bnbchain",
+    "symbol": "BASI",
+    "decimals": 18,
+    "address": "0x8f671544a39b2c0905beac1c1009389d6922305f"
+  },
+  "BB": { "chain": "bnbchain", "symbol": "BB", "decimals": 0, "address": "0x86bbc9838c3370e0fd570b4ee8087f5aca299977" },
+  "BBOO": {
+    "chain": "bnbchain",
+    "symbol": "BBOO",
+    "decimals": 18,
+    "address": "0xd909840613fcb0fadc6ee7e5ecf30cdef4281a68"
+  },
+  "BBTC": {
+    "chain": "bnbchain",
+    "address": "0xb1527362f114138a8ee879623fa9988949ee1865",
+    "symbol": "BBTC",
+    "decimals": 18
+  },
+  "BBZ": {
+    "chain": "bnbchain",
+    "address": "0x863a02b83b4b49c242abd925321d19cd202a1559",
+    "symbol": "BBZ",
+    "decimals": 12
+  },
+  "BCH": {
+    "chain": "bnbchain",
+    "address": "0x8ff795a6f4d97e7887c79bea79aba5cc76444adf",
+    "symbol": "BCH",
+    "decimals": 18
+  },
+  "BCP": {
+    "chain": "bnbchain",
+    "address": "0xd88aa56e7214e9bd8e5a5df5312b516c7bd4fd27",
+    "symbol": "BCP",
+    "decimals": 18
+  },
+  "BCU": {
+    "chain": "bnbchain",
+    "symbol": "BCU",
+    "decimals": 18,
+    "address": "0xc294a07df611cfc515dcdc7d377648a7a0d85c8f"
+  },
+  "BDCHR": {
+    "chain": "bnbchain",
+    "symbol": "BDCHR",
+    "decimals": 18,
+    "address": "0x141523c9c07a1ef060d9ba4c86e25564865fd3e3"
+  },
+  "BDO": {
+    "chain": "bnbchain",
+    "symbol": "BDO",
+    "decimals": 18,
+    "address": "0x190b589cf9fb8ddeabbfeae36a813ffb2a702454"
+  },
+  "BDOGE": {
+    "chain": "bnbchain",
+    "address": "0x7b3b1d7d4375e78e061b3a6782828c71d6a4d5d4",
+    "symbol": "BDOGE",
+    "decimals": 6
+  },
+  "BDT": {
+    "chain": "bnbchain",
+    "symbol": "BDT",
+    "decimals": 18,
+    "address": "0x286a61a9b193f1b92d3a0fab4fd16028786273f3"
+  },
+  "BEAR": {
+    "chain": "bnbchain",
+    "symbol": "BEAR",
+    "decimals": 18,
+    "address": "0xc3eae9b061aa0e1b9bd3436080dc57d2d63fedc1",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xc3EAE9b061Aa0e1B9BD3436080Dc57D2d63FEdc1/logo.png"
+  },
+  "BEER": {
+    "chain": "bnbchain",
+    "symbol": "BEER",
+    "decimals": 9,
+    "address": "0xd5a0dad4e6f399cdc346ff04fd90ec0b511fcef9"
+  },
+  "BEL": {
+    "chain": "bnbchain",
+    "symbol": "BEL",
+    "decimals": 18,
+    "address": "0x8443f091997f06a61670b735ed92734f5628692f",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x8443f091997f06a61670B735ED92734F5628692F.png"
+  },
+  "BELT": {
+    "chain": "bnbchain",
+    "symbol": "BELT",
+    "decimals": 18,
+    "address": "0xe0e514c71282b6f4e823703a39374cf58dc3ea4f",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xE0e514c71282b6f4e823703a39374Cf58dc3eA4f.png"
+  },
+  "BERSEK": {
+    "chain": "bnbchain",
+    "address": "0x9346fae23b983555b3d44785ffd4403c6d48f80f",
+    "symbol": "BERSEK",
+    "decimals": 9
+  },
+  "BETAF": {
+    "chain": "bnbchain",
+    "symbol": "BETAF",
+    "decimals": 18,
+    "address": "0x8df7cdad824ea5983f97ba1043eec22c815930cf"
+  },
+  "BETH": {
+    "chain": "bnbchain",
+    "symbol": "BETH",
+    "decimals": 18,
+    "address": "0x250632378e573c6be1ac2f97fcdf00515d0aa91b"
+  },
+  "BETS": {
+    "chain": "bnbchain",
+    "address": "0x94025780a1ab58868d9b2dbbb775f44b32e8e6e5",
+    "symbol": "BETS",
+    "decimals": 18
+  },
+  "BFHT": {
+    "chain": "bnbchain",
+    "address": "0x577ad06f635b402fc2724efd6a53a3a0aed3d155",
+    "symbol": "BFHT",
+    "decimals": 6
+  },
+  "BFI": {
+    "chain": "bnbchain",
+    "symbol": "BFI",
+    "decimals": 18,
+    "address": "0x81859801b01764d4f0fa5e64729f5a6c3b91435b"
+  },
+  "BGEO": {
+    "chain": "bnbchain",
+    "symbol": "BGEO",
+    "decimals": 18,
+    "address": "0xc342774492b54ce5f8ac662113ed702fc1b34972"
+  },
+  "BGO": {
+    "chain": "bnbchain",
+    "symbol": "BGO",
+    "decimals": 18,
+    "address": "0x579a6277a6c2c63a5b25006f63bce5dc8d9c25e7"
+  },
+  "BGOV": {
+    "chain": "bnbchain",
+    "symbol": "BGOV",
+    "decimals": 18,
+    "address": "0xf8e026dc4c0860771f691ecffbbdfe2fa51c77cf"
+  },
+  "BHC": {
+    "chain": "bnbchain",
+    "symbol": "BHC",
+    "decimals": 18,
+    "address": "0x6fd7c98458a943f469e1cf4ea85b173f5cd342f4"
+  },
+  "BIBI": {
+    "chain": "bnbchain",
+    "address": "0xfe8bf5b8f5e4eb5f9bc2be16303f7dab8cf56aa8",
+    "symbol": "BIBI",
+    "decimals": 18
+  },
+  "BICHON": {
+    "chain": "bnbchain",
+    "symbol": "BICHON",
+    "decimals": 9,
+    "address": "0xdf394853d830424cafccf7be7df065366cf31a69"
+  },
+  "BIFI": {
+    "chain": "bnbchain",
+    "address": "0xca3f508b8e4dd382ee878a314789373d80a5190a",
+    "symbol": "BIFI",
+    "decimals": 18
+  },
+  "BIGNITE": {
+    "chain": "bnbchain",
+    "symbol": "BIGNITE",
+    "decimals": 9,
+    "address": "0x0cf2b5aabf844b49480dbf5e6192b873a865fae4"
+  },
+  "BIN": {
+    "chain": "bnbchain",
+    "symbol": "BIN",
+    "decimals": 18,
+    "address": "0xe56842ed550ff2794f010738554db45e60730371",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xe56842Ed550Ff2794F010738554db45E60730371/logo.png"
+  },
+  "BINGUS": {
+    "chain": "bnbchain",
+    "symbol": "BINGUS",
+    "decimals": 9,
+    "address": "0xda20c8a5c3b1ab48e31ba6e43f0f2830e50218d8"
+  },
+  "BITT": {
+    "chain": "bnbchain",
+    "address": "0x518445f0db93863e5e93a7f70617c05afa8048f1",
+    "symbol": "BITT",
+    "decimals": 18
+  },
+  "BKD": {
+    "chain": "bnbchain",
+    "address": "0xbe3359ac36f06311c3adc32cb6c368f41dea8b4a",
+    "symbol": "BKD",
+    "decimals": 18
+  },
+  "BLES": {
+    "chain": "bnbchain",
+    "symbol": "BLES",
+    "decimals": 18,
+    "address": "0x393d87e44c7b1f5ba521b351532c24ece253b849"
+  },
+  "BLIQ": {
+    "chain": "bnbchain",
+    "symbol": "BLIQ",
+    "decimals": 18,
+    "address": "0xc97fac34ceb0bb1b2bdaf3b59ada378b99111a22"
+  },
+  "BLOWF": {
+    "chain": "bnbchain",
+    "symbol": "BLOWF",
+    "decimals": 18,
+    "address": "0xa55bb91de33b4abdf3ac64913d98a55ad84dc3a8"
+  },
+  "BLZ": {
+    "chain": "bnbchain",
+    "symbol": "BLZ",
+    "decimals": 18,
+    "address": "0x935a544bf5816e3a7c13db2efe3009ffda0acda2",
+    "logoURI": "https://assets.coingecko.com/coins/images/2848/thumb/ColorIcon_3x.png?1622516510"
+  },
+  "BMON": {
+    "chain": "bnbchain",
+    "symbol": "BMON",
+    "decimals": 18,
+    "address": "0x08ba0619b1e7a582e0bce5bbe9843322c954c340",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x08ba0619b1e7A582E0BCe5BBE9843322C954C340.png"
+  },
+  "BNB": {
+    "chain": "bnbchain",
+    "address": "0x0000000000000000000000000000000000000000",
+    "symbol": "BNB",
+    "decimals": 18
+  },
+  "BNBx": {
+    "chain": "bnbchain",
+    "address": "0x1bdd3cf7f79cfb8edbb955f20ad99211551ba275",
+    "symbol": "BNBx",
+    "decimals": 18
+  },
+  "BNFY": {
+    "chain": "bnbchain",
+    "symbol": "BNFY",
+    "decimals": 18,
+    "address": "0xd3a3a69c575d81ce8e7cf1298ce760055a5669c1"
+  },
+  "BNG": {
+    "chain": "bnbchain",
+    "symbol": "BNG",
+    "decimals": 18,
+    "address": "0xbdcd6014b53f8a955562bac454f2a6b5224aca7b"
+  },
+  "BNW": {
+    "chain": "bnbchain",
+    "symbol": "BNW",
+    "decimals": 18,
+    "address": "0xa15083664eb19899885ccc2b4fd03977b26d3a2d"
+  },
+  "BNX": {
+    "chain": "bnbchain",
+    "address": "0x8c851d1a123ff703bd1f9dabe631b69902df5f97",
+    "symbol": "BNX",
+    "decimals": 18
+  },
+  "BOB": {
+    "chain": "bnbchain",
+    "address": "0xb0b195aefa3650a6908f15cdac7d92f8a5791b0b",
+    "symbol": "BOB",
+    "decimals": 18
+  },
+  "BOBC": {
+    "chain": "bnbchain",
+    "address": "0x590eb2920486486c2d9bb3eb651f73b81df87bcf",
+    "symbol": "BOBC",
+    "decimals": 18
+  },
+  "BOG": {
+    "chain": "bnbchain",
+    "symbol": "BOG",
+    "decimals": 18,
+    "address": "0xd7b729ef857aa773f47d37088a1181bb3fbf0099"
+  },
+  "BOGE": {
+    "chain": "bnbchain",
+    "symbol": "BOGE",
+    "decimals": 9,
+    "address": "0x248c45af3b2f73bc40fa159f2a90ce9cad7a77ba"
+  },
+  "BOLT": {
+    "chain": "bnbchain",
+    "symbol": "BOLT",
+    "decimals": 8,
+    "address": "0x01ec3200a0895f2c92a9e38a104362442d77658b"
+  },
+  "BORE": {
+    "chain": "bnbchain",
+    "symbol": "BORE",
+    "decimals": 18,
+    "address": "0x62d7aa57125169101626a993fa46685313a774ce"
+  },
+  "BOSS": {
+    "chain": "bnbchain",
+    "address": "0x7759d1f8fb7863f0595f0e88575063996dcde426",
+    "symbol": "BOSS",
+    "decimals": 18
+  },
+  "BOT": {
+    "chain": "bnbchain",
+    "address": "0x59a80dbcea7c3537d91fdc780a4b58b888888888",
+    "symbol": "BOT",
+    "decimals": 18
+  },
+  "BP": {
+    "chain": "bnbchain",
+    "symbol": "BP",
+    "decimals": 18,
+    "address": "0xacb8f52dc63bb752a51186d1c55868adbffee9c1",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xACB8f52DC63BB752a51186D1c55868ADbFfEe9C1.png"
+  },
+  "BPRCY": {
+    "chain": "bnbchain",
+    "address": "0xdfc3829b127761a3218bfcee7fc92e1232c9d116",
+    "symbol": "BPRCY",
+    "decimals": 8
+  },
+  "BR34P": {
+    "chain": "bnbchain",
+    "symbol": "BR34P",
+    "decimals": 8,
+    "address": "0xa86d305a36cdb815af991834b46ad3d7fbb38523"
+  },
+  "BRBC": {
+    "chain": "bnbchain",
+    "symbol": "BRBC",
+    "decimals": 18,
+    "address": "0x8e3bcc334657560253b83f08331d85267316e08a"
+  },
+  "BREW": {
+    "chain": "bnbchain",
+    "symbol": "BREW",
+    "decimals": 18,
+    "address": "0x790be81c3ca0e53974be2688cdb954732c9862e1"
+  },
+  "BRICK": {
+    "chain": "bnbchain",
+    "symbol": "BRICK",
+    "decimals": 18,
+    "address": "0xc4daa5a9f2b832ed0f9bc579662883cd53ea9d61"
+  },
+  "BRIDGE": {
+    "chain": "bnbchain",
+    "symbol": "BRIDGE",
+    "decimals": 18,
+    "address": "0x2763b15b36797f9152a6edf8bbe83ab889e2f69c"
+  },
+  "BRN": {
+    "chain": "bnbchain",
+    "symbol": "BRN",
+    "decimals": 8,
+    "address": "0x5749085c36a521f71ad2050cb600b2165aabdf68"
+  },
+  "BRT": {
+    "chain": "bnbchain",
+    "address": "0xdda4942a95e3311a5062ca2368d20e7ba11724a6",
+    "symbol": "BRT",
+    "decimals": 18
+  },
+  "BRY": {
+    "chain": "bnbchain",
+    "symbol": "BRY",
+    "decimals": 18,
+    "address": "0xf859bf77cbe8699013d6dbc7c2b926aaf307f830"
+  },
+  "BSCL": {
+    "chain": "bnbchain",
+    "symbol": "BSCL",
+    "decimals": 18,
+    "address": "0x2eea102f84080f37dadda3fef02308d0b8600330"
+  },
+  "BSCPAD": {
+    "chain": "bnbchain",
+    "symbol": "BSCPAD",
+    "decimals": 18,
+    "address": "0x5a3010d4d8d3b5fb49f8b6e57fb9e48063f16700",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x5A3010d4d8D3B5fB49f8B6E57FB9E48063f16700.png"
+  },
+  "BSCV": {
+    "chain": "bnbchain",
+    "symbol": "BSCV",
+    "decimals": 18,
+    "address": "0xbb3837fa11d4b789717c8f622ec4f6eee5375c49"
+  },
+  "BSCX": {
+    "chain": "bnbchain",
+    "symbol": "BSCX",
+    "decimals": 18,
+    "address": "0x5ac52ee5b2a633895292ff6d8a89bb9190451587"
+  },
+  "BSW": {
+    "chain": "bnbchain",
+    "address": "0x965f527d9159dce6288a2219db51fc6eef120dd1",
+    "symbol": "BSW",
+    "decimals": 18
+  },
+  "BTA": {
+    "chain": "bnbchain",
+    "symbol": "BTA",
+    "decimals": 18,
+    "address": "0xad9787017e82f6368bbe4893b475caada2258564"
+  },
+  "BTC": {
+    "chain": "bnbchain",
+    "address": "0xfc2a0c088c519553595d2b8510e5e3a976f773c3",
+    "symbol": "BTC",
+    "decimals": 18
+  },
+  "BTC.b": {
+    "chain": "bnbchain",
+    "symbol": "BTC.b",
+    "decimals": 8,
+    "address": "0x2297aebd383787a160dd0d9f71508148769342e3"
+  },
+  "BTCB": {
+    "chain": "bnbchain",
+    "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+    "symbol": "BTCB",
+    "decimals": 18
+  },
+  "BTCBR": {
+    "chain": "bnbchain",
+    "address": "0x0cf8e180350253271f4b917ccfb0accc4862f262",
+    "symbol": "BTCBR",
+    "decimals": 18
+  },
+  "BTCC": {
+    "chain": "bnbchain",
+    "address": "0xc48a0352f22eb94c002ca712117346c1ddfb725c",
+    "symbol": "BTCC",
+    "decimals": 8
+  },
+  "BTCMT": {
+    "chain": "bnbchain",
+    "address": "0x410a56541bd912f9b60943fcb344f1e3d6f09567",
+    "symbol": "BTCMT",
+    "decimals": 18
+  },
+  "BTD": {
+    "chain": "bnbchain",
+    "symbol": "BTD",
+    "decimals": 18,
+    "address": "0xd1102332a213e21faf78b69c03572031f3552c33"
+  },
+  "BTEC": {
+    "chain": "bnbchain",
+    "address": "0xaf307c4ea25c8d2a7029dc0322396a6b4b00a0fc",
+    "symbol": "BTEC",
+    "decimals": 9
+  },
+  "BTOWN": {
+    "chain": "bnbchain",
+    "symbol": "BTOWN",
+    "decimals": 9,
+    "address": "0x6119e160c2eeb1dcfba7263293d8bc4b788a82ad"
+  },
+  "BTS": {
+    "chain": "bnbchain",
+    "symbol": "BTS",
+    "decimals": 18,
+    "address": "0xc2e1acef50ae55661855e8dcb72adb182a3cc259"
+  },
+  "BTT": {
+    "chain": "bnbchain",
+    "address": "0x352cb5e19b12fc216548a2677bd0fce83bae434b",
+    "symbol": "BTT",
+    "decimals": 18
+  },
+  "BTTOLD": {
+    "chain": "bnbchain",
+    "symbol": "BTTOLD",
+    "decimals": 18,
+    "address": "0x8595f9da7b868b1822194faed312235e43007b49",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x8595F9dA7b868b1822194fAEd312235E43007b49.png"
+  },
+  "BUDZ": {
+    "chain": "bnbchain",
+    "symbol": "BUDZ",
+    "decimals": 18,
+    "address": "0x1e0a4d330b60babf3386125aed73b81c6afc8526"
+  },
+  "BUNN": {
+    "chain": "bnbchain",
+    "symbol": "BUNN",
+    "decimals": 0,
+    "address": "0xc54aaecf5fa1b6c007d019a9d14dfb4a77cc3039"
+  },
+  "BUNNY": {
+    "chain": "bnbchain",
+    "symbol": "BUNNY",
+    "decimals": 18,
+    "address": "0xc9849e6fdb743d08faee3e34dd2d1bc69ea11a51"
+  },
+  "BURGER": {
+    "chain": "bnbchain",
+    "symbol": "BURGER",
+    "decimals": 18,
+    "address": "0xae9269f27437f0fcbc232d39ec814844a51d6b8f"
+  },
+  "BUSD": {
+    "chain": "bnbchain",
+    "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+    "symbol": "BUSD",
+    "decimals": 18
+  },
+  "BVSD": {
+    "chain": "bnbchain",
+    "address": "0x7f9ad7a5854658d984924e868187b2135514fb88",
+    "symbol": "BVSD",
+    "decimals": 18
+  },
+  "BabyDoge": {
+    "chain": "bnbchain",
+    "address": "0xc748673057861a797275cd8a068abb95a902e8de",
+    "symbol": "BabyDoge",
+    "decimals": 9
+  },
+  "BabyShibaInu": {
+    "chain": "bnbchain",
+    "address": "0xaecf6d1aff214fef70042740054f0f6d0caa98ab",
+    "symbol": "BabyShibaInu",
+    "decimals": 9
+  },
+  "Black Hole": {
+    "chain": "bnbchain",
+    "address": "0x4c5d122cf8da182b9effccba746af66d346ec3be",
+    "symbol": "Black Hole",
+    "decimals": 18
+  },
+  "Bluedoge": {
+    "chain": "bnbchain",
+    "address": "0xd0d0e6b1c8cfc5b62d8ce901fe209e791ee40544",
+    "symbol": "Bluedoge",
+    "decimals": 18
+  },
+  "C98": {
+    "chain": "bnbchain",
+    "address": "0xaec945e04baf28b135fa7c640f624f8d90f1c3a6",
+    "symbol": "C98",
+    "decimals": 18
+  },
+  "CAKE": {
+    "chain": "bnbchain",
+    "symbol": "CAKE",
+    "decimals": 18,
+    "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+    "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png"
+  },
+  "CAPO": {
+    "chain": "bnbchain",
+    "address": "0x922722e9ef614ec9a3e94b78496e92abfbb5a624",
+    "symbol": "CAPO",
+    "decimals": 18
+  },
+  "CAPSULE": {
+    "chain": "bnbchain",
+    "address": "0x3271f3db4100db095684f83dae6530f466d21d6d",
+    "symbol": "CAPSULE",
+    "decimals": 18
+  },
+  "CARBO": {
+    "chain": "bnbchain",
+    "symbol": "CARBO",
+    "decimals": 18,
+    "address": "0xc3236733841893ddbd8eac9f647eec29da63f400"
+  },
+  "CAS": {
+    "chain": "bnbchain",
+    "symbol": "CAS",
+    "decimals": 18,
+    "address": "0x780207b8c0fdc32cf60e957415bfa1f2d4d9718c"
+  },
+  "CATE": {
+    "chain": "bnbchain",
+    "address": "0xe4fae3faa8300810c835970b9187c268f55d998f",
+    "symbol": "CATE",
+    "decimals": 9
+  },
+  "CATGIRL": {
+    "chain": "bnbchain",
+    "address": "0x79ebc9a2ce02277a4b5b3a768b1c0a4ed75bd936",
+    "symbol": "CATGIRL",
+    "decimals": 9
+  },
+  "CBD": {
+    "chain": "bnbchain",
+    "symbol": "CBD",
+    "decimals": 8,
+    "address": "0x516495657206d91bc8025f2b1dd59ef58804f1f9"
+  },
+  "CBET": {
+    "chain": "bnbchain",
+    "address": "0xc212d39e35f22f259457be79fc2d822fa7122e6e",
+    "symbol": "CBET",
+    "decimals": 9
+  },
+  "CC": { "chain": "bnbchain", "address": "0xa28ea68177e6ae59d567aaaf365d570158995a63", "symbol": "CC", "decimals": 6 },
+  "CCDAO": {
+    "chain": "bnbchain",
+    "address": "0x200f73aba0d6f8919086f64035ef900669ea2de2",
+    "symbol": "CCDAO",
+    "decimals": 18
+  },
+  "CCDS": {
+    "chain": "bnbchain",
+    "address": "0xbfd48cc239bc7e7cd5ad9f9630319f9b59e0b9e1",
+    "symbol": "CCDS",
+    "decimals": 18
+  },
+  "CCOIN": {
+    "chain": "bnbchain",
+    "address": "0xc209831f7349d4e200d420326b3401899ab9ae68",
+    "symbol": "CCOIN",
+    "decimals": 18
+  },
+  "CDT": {
+    "chain": "bnbchain",
+    "address": "0x0cbd6fadcf8096cc9a43d90b45f65826102e3ece",
+    "symbol": "CDT",
+    "decimals": 18
+  },
+  "CELL": {
+    "chain": "bnbchain",
+    "address": "0xd98438889ae7364c7e2a3540547fad042fb24642",
+    "symbol": "CELL",
+    "decimals": 18
+  },
+  "CER": {
+    "chain": "bnbchain",
+    "address": "0xc52fd8106a8cdeb4ff774fc3f176101553f4ed13",
+    "symbol": "CER",
+    "decimals": 6
+  },
+  "CFA🏳️": {
+    "chain": "bnbchain",
+    "address": "0xceb048cf6acd03e335864ebf094b075430ee37ee",
+    "symbol": "CFA🏳️",
+    "decimals": 18
+  },
+  "CGG": {
+    "chain": "bnbchain",
+    "address": "0x1613957159e9b0ac6c80e824f7eea748a32a0ae2",
+    "symbol": "CGG",
+    "decimals": 18
+  },
+  "CGPT": {
+    "chain": "bnbchain",
+    "address": "0x9840652dc04fb9db2c43853633f0f62be6f00f98",
+    "symbol": "CGPT",
+    "decimals": 18
+  },
+  "CHESS": {
+    "chain": "bnbchain",
+    "symbol": "CHESS",
+    "decimals": 18,
+    "address": "0x20de22029ab63cf9a7cf5feb2b737ca1ee4c82a6",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x20de22029ab63cf9A7Cf5fEB2b737Ca1eE4c82A6.png"
+  },
+  "CHNG": {
+    "chain": "bnbchain",
+    "address": "0xed0294dbd2a0e52a09c3f38a09f6e03de2c44fcf",
+    "symbol": "CHNG",
+    "decimals": 18
+  },
+  "CHORD": {
+    "chain": "bnbchain",
+    "symbol": "CHORD",
+    "decimals": 18,
+    "address": "0xb2f7797389ad34ebd3a30ac6402861844fac7f5e"
+  },
+  "CHOW": {
+    "chain": "bnbchain",
+    "symbol": "CHOW",
+    "decimals": 9,
+    "address": "0x925f2c11b99c1a4c46606898ee91ed3d450cfeda"
+  },
+  "CHR": {
+    "chain": "bnbchain",
+    "symbol": "CHR",
+    "decimals": 6,
+    "address": "0xf9cec8d50f6c8ad3fb6dccec577e05aa32b224fe",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xf9CeC8d50f6c8ad3Fb6dcCEC577e05aA32B224FE.png"
+  },
+  "CHZ006": {
+    "chain": "bnbchain",
+    "symbol": "CHZ006",
+    "decimals": 8,
+    "address": "0x706954491ebfd6b38e5b1e6f079dbefae0f5eba0"
+  },
+  "CLIMB": {
+    "chain": "bnbchain",
+    "symbol": "CLIMB",
+    "decimals": 8,
+    "address": "0x2a1d286ed5edad78befd6e0d8beb38791e8cd69d"
+  },
+  "CLV": {
+    "chain": "bnbchain",
+    "symbol": "CLV",
+    "decimals": 18,
+    "address": "0x09e889bb4d5b474f561db0491c38702f367a4e4d",
+    "logoURI": "https://assets.coingecko.com/coins/images/15278/thumb/clover.png?1645084454"
+  },
+  "CMA": {
+    "chain": "bnbchain",
+    "address": "0xdcf0929aa20077c7ff96da0cd91ab5183c29abdd",
+    "symbol": "CMA",
+    "decimals": 18
+  },
+  "COBRA": {
+    "chain": "bnbchain",
+    "symbol": "COBRA",
+    "decimals": 18,
+    "address": "0x21a29979d68f35a21e477e06be96a8cd5de1ab3d"
+  },
+  "COCO": {
+    "chain": "bnbchain",
+    "symbol": "COCO",
+    "decimals": 18,
+    "address": "0xfd431cb76965cf80c6fcec011a273b46df23eb04"
+  },
+  "CODEX": {
+    "chain": "bnbchain",
+    "symbol": "CODEX",
+    "decimals": 18,
+    "address": "0x9e95cb3d0560f9cba88991f828322526851bfb56"
+  },
+  "COMP": {
+    "chain": "bnbchain",
+    "symbol": "COMP",
+    "decimals": 18,
+    "address": "0x52ce071bd9b1c4b00a0b92d298c512478cad67e8"
+  },
+  "COP": {
+    "chain": "bnbchain",
+    "symbol": "COP",
+    "decimals": 18,
+    "address": "0x8789337a176e6e7223ff115f1cd85c993d42c25c"
+  },
+  "COPI": {
+    "chain": "bnbchain",
+    "address": "0xfea292e5ea4510881bdb840e3cec63abd43f936f",
+    "symbol": "COPI",
+    "decimals": 18
+  },
+  "CORD": {
+    "chain": "bnbchain",
+    "symbol": "CORD",
+    "decimals": 18,
+    "address": "0xa3506a4f978862a296b29816c4e65cf1a6f54aaa"
+  },
+  "COSMIC": {
+    "chain": "bnbchain",
+    "address": "0xbabacc135bbf2ce30f9c0f12665b244d3689a29c",
+    "symbol": "COSMIC",
+    "decimals": 18
+  },
+  "COTI": {
+    "chain": "bnbchain",
+    "symbol": "COTI",
+    "decimals": 18,
+    "address": "0xadbaf88b39d37dc68775ed1541f1bf83a5a45feb"
+  },
+  "COVAL": {
+    "chain": "bnbchain",
+    "symbol": "COVAL",
+    "decimals": 8,
+    "address": "0xd15cee1deafbad6c0b3fd7489677cc102b141464",
+    "logoURI": "https://assets.coingecko.com/coins/images/588/thumb/coval-logo.png?1599493950"
+  },
+  "CP": {
+    "chain": "bnbchain",
+    "symbol": "CP",
+    "decimals": 18,
+    "address": "0x82c19905b036bf4e329740989dcf6ae441ae26c1",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x82C19905B036bf4E329740989DCF6aE441AE26c1/logo.png"
+  },
+  "CPX": {
+    "chain": "bnbchain",
+    "symbol": "CPX",
+    "decimals": 18,
+    "address": "0xb7b1bd104645d5a06120d369c63822b2aead1598"
+  },
+  "CR7": {
+    "chain": "bnbchain",
+    "address": "0x6c43751fef27c956f7e75d5c345a65df1465f7e0",
+    "symbol": "CR7",
+    "decimals": 18
+  },
+  "CROW": {
+    "chain": "bnbchain",
+    "symbol": "CROW",
+    "decimals": 18,
+    "address": "0xcc2e12a9b5b75360c6fbf23b584c275d52cddb0e"
+  },
+  "CRX": {
+    "chain": "bnbchain",
+    "symbol": "CRX",
+    "decimals": 18,
+    "address": "0x97a30c692ece9c317235d48287d23d358170fc40"
+  },
+  "CSIX": {
+    "chain": "bnbchain",
+    "address": "0x04756126f044634c9a0f0e985e60c88a51acc206",
+    "symbol": "CSIX",
+    "decimals": 18
+  },
+  "CTA": {
+    "chain": "bnbchain",
+    "address": "0xb33b34cafb0172569a013a74edc0c70aa1844e15",
+    "symbol": "CTA",
+    "decimals": 18
+  },
+  "CTB": {
+    "chain": "bnbchain",
+    "address": "0xbc66460b9300bee6ba61db1cf0b07f8f0ee0a0d8",
+    "symbol": "CTB",
+    "decimals": 18
+  },
+  "CTF": {
+    "chain": "bnbchain",
+    "symbol": "CTF",
+    "decimals": 18,
+    "address": "0x410319197d3394652b7dddc669e58fbe30b56090"
+  },
+  "CTK": {
+    "chain": "bnbchain",
+    "address": "0xa8c2b8eec3d368c0253ad3dae65a5f2bbb89c929",
+    "symbol": "CTK",
+    "decimals": 6
+  },
+  "CTSI": {
+    "chain": "bnbchain",
+    "symbol": "CTSI",
+    "decimals": 18,
+    "address": "0x8da443f84fea710266c8eb6bc34b71702d033ef2",
+    "logoURI": "https://assets.coingecko.com/coins/images/11038/thumb/cartesi.png?1592288021"
+  },
+  "CTX": {
+    "chain": "bnbchain",
+    "address": "0x12dae26ffc1c608dc6fcb1c4a1c4abc409bf92cd",
+    "symbol": "CTX",
+    "decimals": 18
+  },
+  "CUB": {
+    "chain": "bnbchain",
+    "symbol": "CUB",
+    "decimals": 18,
+    "address": "0x50d809c74e0b8e49e7b4c65bb3109abe3ff4c1c1"
+  },
+  "CUE": {
+    "chain": "bnbchain",
+    "symbol": "CUE",
+    "decimals": 18,
+    "address": "0x9b9d617d3445f0147ece2322bace8db2768d2770"
+  },
+  "CUMMIES": {
+    "chain": "bnbchain",
+    "symbol": "CUMMIES",
+    "decimals": 18,
+    "address": "0x27ae27110350b98d564b9a3eed31baebc82d878d"
+  },
+  "CUNT": {
+    "chain": "bnbchain",
+    "symbol": "CUNT",
+    "decimals": 18,
+    "address": "0x5bf5a3c97dd86064a6b97432b04ddb5ffcf98331"
+  },
+  "CYBER": {
+    "chain": "bnbchain",
+    "address": "0x14778860e937f509e651192a90589de711fb88a9",
+    "symbol": "CYBER",
+    "decimals": 18
+  },
+  "CYCLE": {
+    "chain": "bnbchain",
+    "symbol": "CYCLE",
+    "decimals": 18,
+    "address": "0x5fe2a9183804e8d3094d695cb0610d3e00e1f355"
+  },
+  "Cake": {
+    "chain": "bnbchain",
+    "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+    "symbol": "Cake",
+    "decimals": 18
+  },
+  "DAFT": {
+    "chain": "bnbchain",
+    "symbol": "DAFT",
+    "decimals": 8,
+    "address": "0x8e83eb3cc2585b9648687c3d1d9c7a2d17448772"
+  },
+  "DAH": {
+    "chain": "bnbchain",
+    "address": "0x0859716ff42c80382d6889c58a3e4822af17aa2b",
+    "symbol": "DAH",
+    "decimals": 18
+  },
+  "DAI": {
+    "chain": "bnbchain",
+    "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+    "symbol": "DAI",
+    "decimals": 18
+  },
+  "DAO": {
+    "chain": "bnbchain",
+    "address": "0x4d2d32d8652058bf98c772953e1df5c5c85d9f45",
+    "symbol": "DAO",
+    "decimals": 18
+  },
+  "DAR": {
+    "chain": "bnbchain",
+    "symbol": "DAR",
+    "decimals": 6,
+    "address": "0x23ce9e926048273ef83be0a3a8ba9cb6d45cd978",
+    "logoURI": "https://assets.coingecko.com/coins/images/19837/thumb/dar.png?1636014223"
+  },
+  "DBALL": {
+    "chain": "bnbchain",
+    "symbol": "DBALL",
+    "decimals": 18,
+    "address": "0xceb2f5e9c7f2d3bcd12a7560d73c56f3396af3f9"
+  },
+  "DBX": {
+    "chain": "bnbchain",
+    "address": "0x4af60aa1ca7589ab2ec4a0239cbd5630938f4667",
+    "symbol": "DBX",
+    "decimals": 18
+  },
+  "DCK": {
+    "chain": "bnbchain",
+    "address": "0x16faf9daa401aa42506af503aa3d80b871c467a3",
+    "symbol": "DCK",
+    "decimals": 18
+  },
+  "DCX": {
+    "chain": "bnbchain",
+    "symbol": "DCX",
+    "decimals": 18,
+    "address": "0xba7d84c76b1cb41ee787e63164f38372791c9c56"
+  },
+  "DDIM": {
+    "chain": "bnbchain",
+    "symbol": "DDIM",
+    "decimals": 18,
+    "address": "0xc9132c76060f6b319764ea075973a650a1a53bc9"
+  },
+  "DDOS": {
+    "chain": "bnbchain",
+    "symbol": "DDOS",
+    "decimals": 18,
+    "address": "0x7fbec0bb6a7152e77c30d005b5d49cbc08a602c3"
+  },
+  "DEBT": {
+    "chain": "bnbchain",
+    "address": "0xc632f90affec7121120275610bf17df9963f181c",
+    "symbol": "DEBT",
+    "decimals": 8
+  },
+  "DEC": {
+    "chain": "bnbchain",
+    "symbol": "DEC",
+    "decimals": 3,
+    "address": "0xe9d7023f2132d55cbd4ee1f78273cb7a3e74f10a"
+  },
+  "DEEP": {
+    "chain": "bnbchain",
+    "symbol": "DEEP",
+    "decimals": 18,
+    "address": "0x60de5f9386b637fe97af1cc05f25548e9baaee19"
+  },
+  "DEER": {
+    "chain": "bnbchain",
+    "symbol": "DEER",
+    "decimals": 18,
+    "address": "0xb05cae0ce4ded675c9829aca7fdd0c4025351351"
+  },
+  "DEGENR": {
+    "chain": "bnbchain",
+    "symbol": "DEGENR",
+    "decimals": 18,
+    "address": "0x4d6d0335e3b715341eb4f10b5751771cbcb7cea3"
+  },
+  "DEGO": {
+    "chain": "bnbchain",
+    "symbol": "DEGO",
+    "decimals": 18,
+    "address": "0x3fda9383a84c05ec8f7630fe10adf1fac13241cc"
+  },
+  "DERC": {
+    "chain": "bnbchain",
+    "symbol": "DERC",
+    "decimals": 18,
+    "address": "0x373e768f79c820aa441540d254dca6d045c6d25b",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x373E768f79c820aA441540d254dCA6d045c6d25b/logo.png"
+  },
+  "DEXT": {
+    "chain": "bnbchain",
+    "address": "0xe91a8d2c584ca93c7405f15c22cdfe53c29896e3",
+    "symbol": "DEXT",
+    "decimals": 18
+  },
+  "DF": {
+    "chain": "bnbchain",
+    "address": "0x4a9a2b2b04549c3927dd2c9668a5ef3fca473623",
+    "symbol": "DF",
+    "decimals": 18
+  },
+  "DFN": {
+    "chain": "bnbchain",
+    "symbol": "DFN",
+    "decimals": 18,
+    "address": "0xcb52860adb0556999b13ddf58967a881d1aa1c10"
+  },
+  "DGN": {
+    "chain": "bnbchain",
+    "symbol": "DGN",
+    "decimals": 18,
+    "address": "0x72f28c09be1342447fa01ebc76ef508473d08c5c"
+  },
+  "DGT": {
+    "chain": "bnbchain",
+    "address": "0x90fe761c696066672190cc62a84a2a41bc630a1b",
+    "symbol": "DGT",
+    "decimals": 18
+  },
+  "DIA": {
+    "chain": "bnbchain",
+    "symbol": "DIA",
+    "decimals": 18,
+    "address": "0x99956d38059cf7beda96ec91aa7bb2477e0901dd",
+    "logoURI": "https://assets.coingecko.com/coins/images/11955/thumb/image.png?1646041751"
+  },
+  "DIESEL": {
+    "chain": "bnbchain",
+    "symbol": "DIESEL",
+    "decimals": 18,
+    "address": "0xe1ea2e1907d93f154234ce3b5a7418faf175fe11"
+  },
+  "DINA": {
+    "chain": "bnbchain",
+    "address": "0xa75e17a061ed826c65f138b7a85b44c5d3156aff",
+    "symbol": "DINA",
+    "decimals": 9
+  },
+  "DINO": {
+    "chain": "bnbchain",
+    "symbol": "DINO",
+    "decimals": 18,
+    "address": "0xf317932ee2c30fa5d0e14416775977801734812d"
+  },
+  "DIS": {
+    "chain": "bnbchain",
+    "symbol": "DIS",
+    "decimals": 18,
+    "address": "0x57effde2759b68d86c544e88f7977e3314144859"
+  },
+  "DISC": {
+    "chain": "bnbchain",
+    "symbol": "DISC",
+    "decimals": 18,
+    "address": "0x2bcdcf1ef1320fc5f9a71ca0bd1504d6125f7569"
+  },
+  "DITTO": {
+    "chain": "bnbchain",
+    "symbol": "DITTO",
+    "decimals": 9,
+    "address": "0x233d91a0713155003fc4dce0afa871b508b3b715"
+  },
+  "DK": {
+    "chain": "bnbchain",
+    "address": "0xeaf0acd7fe39f2ea5ac52b0a8c20d3878082cc36",
+    "symbol": "DK",
+    "decimals": 18
+  },
+  "DMDHANDS": {
+    "chain": "bnbchain",
+    "symbol": "DMDHANDS",
+    "decimals": 10,
+    "address": "0x3ec58e6e861931dc21ca955096a5ecdc704fa76a"
+  },
+  "DMS": {
+    "chain": "bnbchain",
+    "symbol": "DMS",
+    "decimals": 18,
+    "address": "0x7cce48f8f4b67e2318f22f676975c49ff58d0fbe"
+  },
+  "DND": {
+    "chain": "bnbchain",
+    "symbol": "DND",
+    "decimals": 18,
+    "address": "0x14c358b573a4ce45364a3dbd84bbb4dae87af034"
+  },
+  "DODO": {
+    "chain": "bnbchain",
+    "symbol": "DODO",
+    "decimals": 18,
+    "address": "0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x67ee3Cb086F8a16f34beE3ca72FAD36F7Db929e2.png"
+  },
+  "DOGE": {
+    "chain": "bnbchain",
+    "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43",
+    "symbol": "DOGE",
+    "decimals": 8
+  },
+  "DOGEBASE": {
+    "chain": "bnbchain",
+    "symbol": "DOGEBASE",
+    "decimals": 18,
+    "address": "0x7f02fadba29fe0026fac10c065942f76f7ddde2d"
+  },
+  "DOGOWN": {
+    "chain": "bnbchain",
+    "symbol": "DOGOWN",
+    "decimals": 18,
+    "address": "0xfa5dbe839c674c5a8a74db57ee661fade60bbf58"
+  },
+  "DOT": {
+    "chain": "bnbchain",
+    "address": "0x7083609fce4d1d8dc0c979aab8c869ea2c873402",
+    "symbol": "DOT",
+    "decimals": 18
+  },
+  "DPET": {
+    "chain": "bnbchain",
+    "symbol": "DPET",
+    "decimals": 18,
+    "address": "0xfb62ae373aca027177d1c18ee0862817f9080d08",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xfb62AE373acA027177D1c18Ee0862817f9080d08/logo.png"
+  },
+  "DR": {
+    "chain": "bnbchain",
+    "address": "0x920a7cbd0b5aed31827385783e7af245331ca9ee",
+    "symbol": "DR",
+    "decimals": 18
+  },
+  "DRACE": {
+    "chain": "bnbchain",
+    "symbol": "DRACE",
+    "decimals": 18,
+    "address": "0xa6c897caaca3db7fd6e2d2ce1a00744f40ab87bb",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xA6c897CaaCA3Db7fD6e2D2cE1a00744f40aB87Bb/logo.png"
+  },
+  "DRAGON": {
+    "chain": "bnbchain",
+    "symbol": "DRAGON",
+    "decimals": 8,
+    "address": "0x251a3184857488dc90fa9c9a52fd2d8df473d92c"
+  },
+  "DREP": {
+    "chain": "bnbchain",
+    "symbol": "DREP",
+    "decimals": 18,
+    "address": "0xec583f25a049cc145da9a256cdbe9b6201a705ff",
+    "logoURI": "https://assets.coingecko.com/coins/images/14578/thumb/KotgsCgS_400x400.jpg?1617094445"
+  },
+  "DROPS": {
+    "chain": "bnbchain",
+    "symbol": "DROPS",
+    "decimals": 18,
+    "address": "0x4d2e266267f756d54c09afd1d1473c7739eb7020"
+  },
+  "DRS": {
+    "chain": "bnbchain",
+    "symbol": "DRS",
+    "decimals": 9,
+    "address": "0xc8e8ecb2a5b5d1ecff007bf74d15a86434aa0c5c",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xc8E8ecB2A5B5d1eCFf007BF74d15A86434aA0c5C/logo.png"
+  },
+  "DUCK": {
+    "chain": "bnbchain",
+    "symbol": "DUCK",
+    "decimals": 18,
+    "address": "0x5d186e28934c6b0ff5fc2fece15d1f34f78cbd87"
+  },
+  "DUSA": {
+    "chain": "bnbchain",
+    "symbol": "DUSA",
+    "decimals": 8,
+    "address": "0x376ba3ffac2643555731349fae9fc8ca28e2c9a2"
+  },
+  "DVI": {
+    "chain": "bnbchain",
+    "symbol": "DVI",
+    "decimals": 18,
+    "address": "0x758fb037a375f17c7e195cc634d77da4f554255b",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x758FB037A375F17c7e195CC634D77dA4F554255B.png"
+  },
+  "DX": {
+    "chain": "bnbchain",
+    "symbol": "DX",
+    "decimals": 18,
+    "address": "0xca7bbec6839965ac8dfe077b52ebb6519fffe155"
+  },
+  "DYP": {
+    "chain": "bnbchain",
+    "symbol": "DYP",
+    "decimals": 18,
+    "address": "0x961c8c0b1aad0c0b10a51fef6a867e3091bcef17"
+  },
+  "DaddyDoge": {
+    "chain": "bnbchain",
+    "address": "0x7cce94c0b2c8ae7661f02544e62178377fe8cf92",
+    "symbol": "DaddyDoge",
+    "decimals": 9
+  },
+  "Daily": {
+    "chain": "bnbchain",
+    "symbol": "Daily",
+    "decimals": 18,
+    "address": "0xb20b17d86f868b9c2a1e6201ba881d68c1325de4"
+  },
+  "Dove": {
+    "chain": "bnbchain",
+    "symbol": "Dove",
+    "decimals": 18,
+    "address": "0x2bf56908b0f2440ad11169d281967eb76665f8c6"
+  },
+  "EAC": {
+    "chain": "bnbchain",
+    "symbol": "EAC",
+    "decimals": 18,
+    "address": "0x89f7de81870eabf2f46c2320c419c38252443b02"
+  },
+  "EARTH": {
+    "chain": "bnbchain",
+    "symbol": "EARTH",
+    "decimals": 18,
+    "address": "0x65b050dea610ec5b70c170d078c03937b01b9c76"
+  },
+  "EBC": {
+    "chain": "bnbchain",
+    "address": "0x6168bb3d2b10943987c136fcfae49988274c5e4e",
+    "symbol": "EBC",
+    "decimals": 8
+  },
+  "EBRH": {
+    "chain": "bnbchain",
+    "symbol": "EBRH",
+    "decimals": 18,
+    "address": "0xeae68564c96b1e1c471093a539836ae8bf7c1b65"
+  },
+  "EC": { "chain": "bnbchain", "symbol": "EC", "decimals": 9, "address": "0x400df62c3052fdbaad8c74c0226147f9bfaaf7ec" },
+  "ECC": {
+    "chain": "bnbchain",
+    "symbol": "ECC",
+    "decimals": 8,
+    "address": "0x8d047f4f57a190c96c8b9704b39a1379e999d82b",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x8D047F4F57A190C96c8b9704B39A1379E999D82B/logo.png"
+  },
+  "ECHO": {
+    "chain": "bnbchain",
+    "symbol": "ECHO",
+    "decimals": 18,
+    "address": "0x6aaa14929d74b8533343c1a5b6e42443f59b6f6f"
+  },
+  "EDU": {
+    "chain": "bnbchain",
+    "address": "0xbdeae1ca48894a1759a8374d63925f21f2ee2639",
+    "symbol": "EDU",
+    "decimals": 18
+  },
+  "EGC": {
+    "chain": "bnbchain",
+    "address": "0xc001bbe2b87079294c63ece98bdd0a88d761434e",
+    "symbol": "EGC",
+    "decimals": 9
+  },
+  "EGG": {
+    "chain": "bnbchain",
+    "symbol": "EGG",
+    "decimals": 18,
+    "address": "0xf952fc3ca7325cc27d15885d37117676d25bfda6"
+  },
+  "EGLD": {
+    "chain": "bnbchain",
+    "symbol": "EGLD",
+    "decimals": 18,
+    "address": "0xbf7c81fff98bbe61b40ed186e4afd6ddd01337fe"
+  },
+  "EKTA v2": {
+    "chain": "bnbchain",
+    "address": "0x45808ce43eb2d7685ff0242631f0feb6f3d8701a",
+    "symbol": "EKTA v2",
+    "decimals": 18
+  },
+  "ELE": {
+    "chain": "bnbchain",
+    "symbol": "ELE",
+    "decimals": 18,
+    "address": "0xacd7b3d9c10e97d0efa418903c0c7669e702e4c0"
+  },
+  "ELEPHANT": {
+    "chain": "bnbchain",
+    "address": "0xe283d0e3b8c102badf5e8166b73e02d96d92f688",
+    "symbol": "ELEPHANT",
+    "decimals": 9
+  },
+  "ELK": {
+    "chain": "bnbchain",
+    "address": "0xeeeeeb57642040be42185f49c52f7e9b38f8eeee",
+    "symbol": "ELK",
+    "decimals": 18
+  },
+  "ELON": {
+    "chain": "bnbchain",
+    "symbol": "ELON",
+    "decimals": 18,
+    "address": "0x7bd6fabd64813c48545c9c0e312a0099d9be2540",
+    "logoURI": "https://assets.coingecko.com/coins/images/14962/thumb/6GxcPRo3_400x400.jpg?1619157413"
+  },
+  "ELP": {
+    "chain": "bnbchain",
+    "symbol": "ELP",
+    "decimals": 18,
+    "address": "0xe3894cb9e92ca78524fb6a30ff072fa5e533c162"
+  },
+  "EMP": {
+    "chain": "bnbchain",
+    "address": "0x3b248cefa87f836a4e6f6d6c9b42991b88dc1d58",
+    "symbol": "EMP",
+    "decimals": 18
+  },
+  "ENV": {
+    "chain": "bnbchain",
+    "symbol": "ENV",
+    "decimals": 8,
+    "address": "0x4d2b1966f347e48b2d247f684d7677854083e4ab"
+  },
+  "EOS": {
+    "chain": "bnbchain",
+    "symbol": "EOS",
+    "decimals": 18,
+    "address": "0x56b6fb708fc5732dec1afc8d8556423a2edccbd6"
+  },
+  "EPIK": {
+    "chain": "bnbchain",
+    "address": "0x368ce786ea190f32439074e8d22e12ecb718b44c",
+    "symbol": "EPIK",
+    "decimals": 18
+  },
+  "EPS": {
+    "chain": "bnbchain",
+    "symbol": "EPS",
+    "decimals": 18,
+    "address": "0xa7f552078dcc247c2684336020c03648500c6d9f",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xA7f552078dcC247C2684336020c03648500C6d9F.png"
+  },
+  "EQZ": {
+    "chain": "bnbchain",
+    "symbol": "EQZ",
+    "decimals": 18,
+    "address": "0x1da87b114f35e1dc91f72bf57fc07a768ad40bb0"
+  },
+  "ERC20": {
+    "chain": "bnbchain",
+    "symbol": "ERC20",
+    "decimals": 18,
+    "address": "0x58730ae0faa10d73b0cddb5e7b87c3594f7a20cb"
+  },
+  "ERN": {
+    "chain": "bnbchain",
+    "address": "0xce1e3cc1950d2aaeb47de04de2dec2dc86380e0a",
+    "symbol": "ERN",
+    "decimals": 18
+  },
+  "ESWAP": {
+    "chain": "bnbchain",
+    "symbol": "ESWAP",
+    "decimals": 8,
+    "address": "0x1b79708eea29900dbbbca8a5ae620ac741618ae4"
+  },
+  "ETH": {
+    "chain": "bnbchain",
+    "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "ETHM": {
+    "chain": "bnbchain",
+    "address": "0x0b33542240d6fa323c796749f6d6869fdb7f13ca",
+    "symbol": "ETHM",
+    "decimals": 18
+  },
+  "ETNA": {
+    "chain": "bnbchain",
+    "symbol": "ETNA",
+    "decimals": 18,
+    "address": "0x51f35073ff7cf54c9e86b7042e59a8cc9709fc46"
+  },
+  "ETPEPE": {
+    "chain": "bnbchain",
+    "address": "0x2ac0946d07bf0aeefa71aa3587b82957dd0cad43",
+    "symbol": "ETPEPE",
+    "decimals": 18
+  },
+  "EULER": {
+    "chain": "bnbchain",
+    "symbol": "EULER",
+    "decimals": 18,
+    "address": "0x3920123482070c1a2dff73aad695c60e7c6f6862"
+  },
+  "EXF": {
+    "chain": "bnbchain",
+    "symbol": "EXF",
+    "decimals": 9,
+    "address": "0x6306e883493824ccf606d90e25f68a28e47b98a3"
+  },
+  "FARA": {
+    "chain": "bnbchain",
+    "symbol": "FARA",
+    "decimals": 18,
+    "address": "0xf4ed363144981d3a65f42e7d0dc54ff9eef559a1",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xF4Ed363144981D3A65f42e7D0DC54FF9EEf559A1/logo.png"
+  },
+  "FARM": {
+    "chain": "bnbchain",
+    "symbol": "FARM",
+    "decimals": 18,
+    "address": "0x4b5c23cac08a567ecf0c1ffca8372a45a5d33743",
+    "logoURI": "https://assets.coingecko.com/coins/images/12304/thumb/Harvest.png?1613016180"
+  },
+  "FAT": {
+    "chain": "bnbchain",
+    "symbol": "FAT",
+    "decimals": 18,
+    "address": "0x90e767a68a7d707b74d569c8e79f9bbb79b98a8b"
+  },
+  "FDOGE": {
+    "chain": "bnbchain",
+    "symbol": "FDOGE",
+    "decimals": 18,
+    "address": "0xc53ec020b24a9d9bef30985fde98203134ee5274"
+  },
+  "FEB": {
+    "chain": "bnbchain",
+    "symbol": "FEB",
+    "decimals": 0,
+    "address": "0xa72a0564d0e887123112e6a4dc1aba7611ad861d"
+  },
+  "FEG": {
+    "chain": "bnbchain",
+    "symbol": "FEG",
+    "decimals": 9,
+    "address": "0xacfc95585d80ab62f67a14c566c1b7a49fe91167"
+  },
+  "FET": {
+    "chain": "bnbchain",
+    "address": "0x031b41e504677879370e9dbcf937283a8691fa7f",
+    "symbol": "FET",
+    "decimals": 18
+  },
+  "FETA": {
+    "chain": "bnbchain",
+    "symbol": "FETA",
+    "decimals": 9,
+    "address": "0xcb5edcb7a2ade21ae4a695a5c7ffb7aa01dfaa5d"
+  },
+  "FIL": {
+    "chain": "bnbchain",
+    "address": "0x0d8ce2a99bb6e3b7db580ed848240e4a0f9ae153",
+    "symbol": "FIL",
+    "decimals": 18
+  },
+  "FIP": {
+    "chain": "bnbchain",
+    "address": "0x401745f8f07d3ec9524754a79fe9213f9d13ef50",
+    "symbol": "FIP",
+    "decimals": 10
+  },
+  "FISH": {
+    "chain": "bnbchain",
+    "symbol": "FISH",
+    "decimals": 18,
+    "address": "0xd9a0dc07d25ed65da8ed4321c42f7f35de81bf2d"
+  },
+  "FIST": {
+    "chain": "bnbchain",
+    "address": "0xc9882def23bc42d53895b8361d0b1edc7570bc6a",
+    "symbol": "FIST",
+    "decimals": 6
+  },
+  "FLOKI": {
+    "chain": "bnbchain",
+    "address": "0xfb5b838b6cfeedc2873ab27866079ac55363d37e",
+    "symbol": "FLOKI",
+    "decimals": 9
+  },
+  "FLP": {
+    "chain": "bnbchain",
+    "symbol": "FLP",
+    "decimals": 18,
+    "address": "0x87ff96aba480f1813af5c780387d8de7cf7d8261"
+  },
+  "FMG": {
+    "chain": "bnbchain",
+    "symbol": "FMG",
+    "decimals": 18,
+    "address": "0x72a167c9783b7d4fff91d43a60e00d25957a50f8"
+  },
+  "FNX": {
+    "chain": "bnbchain",
+    "address": "0xdfd9e2a17596cad6295ecffda42d9b6f63f7b5d5",
+    "symbol": "FNX",
+    "decimals": 18
+  },
+  "FOMO": {
+    "chain": "bnbchain",
+    "symbol": "FOMO",
+    "decimals": 18,
+    "address": "0x5eef8c4320e2bf8d1e6231a31500fd7a87d02985"
+  },
+  "FOR": {
+    "chain": "bnbchain",
+    "symbol": "FOR",
+    "decimals": 18,
+    "address": "0x658a109c5900bc6d2357c87549b651670e5b0539"
+  },
+  "FORM": {
+    "chain": "bnbchain",
+    "symbol": "FORM",
+    "decimals": 18,
+    "address": "0x25a528af62e56512a19ce8c3cab427807c28cc19",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x25A528af62e56512A19ce8c3cAB427807c28CC19.png"
+  },
+  "FRAT": {
+    "chain": "bnbchain",
+    "symbol": "FRAT",
+    "decimals": 18,
+    "address": "0x7352eebeda1ff0e625452cc27d811a88216243fb"
+  },
+  "FRAX": {
+    "chain": "bnbchain",
+    "symbol": "FRAX",
+    "decimals": 18,
+    "address": "0x29ced01c447166958605519f10dcf8b0255fb379"
+  },
+  "FREN": {
+    "chain": "bnbchain",
+    "symbol": "FREN",
+    "decimals": 18,
+    "address": "0x13958e1eb63dfb8540eaf6ed7dcbbc1a60fd52af"
+  },
+  "FRIDGE": {
+    "chain": "bnbchain",
+    "symbol": "FRIDGE",
+    "decimals": 18,
+    "address": "0x145fad68704371b4ca62a44845b46d12f46137e8"
+  },
+  "FROG": {
+    "chain": "bnbchain",
+    "symbol": "FROG",
+    "decimals": 8,
+    "address": "0x035f0470755dbb305fb2b4ff775fb7b4ce2354e5"
+  },
+  "FRONT": {
+    "chain": "bnbchain",
+    "symbol": "FRONT",
+    "decimals": 18,
+    "address": "0x928e55dab735aa8260af3cedada18b5f70c72f1b",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x928e55daB735aa8260AF3cEDadA18B5f70C72f1b.png"
+  },
+  "FSN": {
+    "chain": "bnbchain",
+    "address": "0xfa4fa764f15d0f6e20aaec8e0d696870e5b77c6e",
+    "symbol": "FSN",
+    "decimals": 18
+  },
+  "FSV": {
+    "chain": "bnbchain",
+    "address": "0xe9c7a827a4ba133b338b844c19241c864e95d75f",
+    "symbol": "FSV",
+    "decimals": 6
+  },
+  "FSXU": {
+    "chain": "bnbchain",
+    "symbol": "FSXU",
+    "decimals": 8,
+    "address": "0xa94b7a842aadb617a0b08fa744e033c6de2f7595"
+  },
+  "FTC": {
+    "chain": "bnbchain",
+    "address": "0x04f46cdfe8dd348e41902eef1aff19ace1661f4c",
+    "symbol": "FTC",
+    "decimals": 18
+  },
+  "FTH": {
+    "chain": "bnbchain",
+    "address": "0x19a00e359990ec7daf6e9dd9a2fb7664014bb5f7",
+    "symbol": "FTH",
+    "decimals": 18
+  },
+  "FTM": {
+    "chain": "bnbchain",
+    "address": "0xad29abb318791d579433d831ed122afeaf29dcfe",
+    "symbol": "FTM",
+    "decimals": 18
+  },
+  "FUN": {
+    "chain": "bnbchain",
+    "address": "0x97c389e36abaab328dfb4ce637001d6cc569622a",
+    "symbol": "FUN",
+    "decimals": 18
+  },
+  "FUSII": {
+    "chain": "bnbchain",
+    "symbol": "FUSII",
+    "decimals": 18,
+    "address": "0x3a50d6daacc82f17a2434184fe904fc45542a734"
+  },
+  "FXS": {
+    "chain": "bnbchain",
+    "symbol": "FXS",
+    "decimals": 18,
+    "address": "0xde2f075f6f14eb9d96755b24e416a53e736ca363"
+  },
+  "FairLambo": {
+    "chain": "bnbchain",
+    "symbol": "FairLambo",
+    "decimals": 18,
+    "address": "0xe395734be9d9e2d490b0756591c6aa64e6ee6a62"
+  },
+  "Foxy": {
+    "chain": "bnbchain",
+    "symbol": "Foxy",
+    "decimals": 9,
+    "address": "0x4354a4f710182966e55ea30cfa807fa1b821a67b"
+  },
+  "Fuel": {
+    "chain": "bnbchain",
+    "symbol": "Fuel",
+    "decimals": 18,
+    "address": "0x2090c8295769791ab7a3cf1cc6e0aa19f35e441a"
+  },
+  "G-Fi": {
+    "chain": "bnbchain",
+    "symbol": "G-Fi",
+    "decimals": 8,
+    "address": "0xc82c80e03e491b252cae745575ea2d1c2fdde25a"
+  },
+  "GADOSHI": {
+    "chain": "bnbchain",
+    "symbol": "GADOSHI",
+    "decimals": 8,
+    "address": "0x619b20c554df4f915173a0f4f34c82e6c2cd944d"
+  },
+  "GAL": {
+    "chain": "bnbchain",
+    "address": "0xe4cc45bb5dbda06db6183e8bf016569f40497aa5",
+    "symbol": "GAL",
+    "decimals": 18
+  },
+  "GANJA": {
+    "chain": "bnbchain",
+    "symbol": "GANJA",
+    "decimals": 18,
+    "address": "0x447c324f7eb99e512ff18308203b36d3c2607e0e"
+  },
+  "GBD": {
+    "chain": "bnbchain",
+    "address": "0x0d6ce0096158004525669a8a82d8686c3774723e",
+    "symbol": "GBD",
+    "decimals": 18
+  },
+  "GBERN": {
+    "chain": "bnbchain",
+    "symbol": "GBERN",
+    "decimals": 0,
+    "address": "0x430290c7250affe0cb87442907f7edffff98c2c2"
+  },
+  "GBL": {
+    "chain": "bnbchain",
+    "address": "0xc14a7747cfec02cfea62e72bb93538de6b2078e6",
+    "symbol": "GBL",
+    "decimals": 18
+  },
+  "GEC": {
+    "chain": "bnbchain",
+    "address": "0x124123c7af9efd2a86f4d41daa88ac164d02a3d5",
+    "symbol": "GEC",
+    "decimals": 18
+  },
+  "GEN": {
+    "chain": "bnbchain",
+    "symbol": "GEN",
+    "decimals": 18,
+    "address": "0xb0f2939a1c0e43683e5954c9fe142f7df9f8d967"
+  },
+  "GERA": {
+    "chain": "bnbchain",
+    "address": "0xde5ea375ffbdc8b25a80fe13d631e8ba0ab4bb02",
+    "symbol": "GERA",
+    "decimals": 8
+  },
+  "GEZY": {
+    "chain": "bnbchain",
+    "address": "0x2c8d970d7c8c878db422c4bcd7d2542104ecfa2c",
+    "symbol": "GEZY",
+    "decimals": 2
+  },
+  "GFAL": {
+    "chain": "bnbchain",
+    "address": "0x47c454ca6be2f6def6f32b638c80f91c9c3c5949",
+    "symbol": "GFAL",
+    "decimals": 18
+  },
+  "GLD": {
+    "chain": "bnbchain",
+    "address": "0x4bf87eb459cdc52e17fbe310139f0134065cd065",
+    "symbol": "GLD",
+    "decimals": 18
+  },
+  "GMT": {
+    "chain": "bnbchain",
+    "address": "0x3019bf2a2ef8040c242c9a4c5c4bd4c81678b2a1",
+    "symbol": "GMT",
+    "decimals": 8
+  },
+  "GNO": {
+    "chain": "bnbchain",
+    "address": "0x418a7c55a6b9298a1d866ddecddb4672b8487928",
+    "symbol": "GNO",
+    "decimals": 18
+  },
+  "GNSSLAB": {
+    "chain": "bnbchain",
+    "address": "0xc2767889f53a1dfc53dd6b40cfd1a4bebdc7b30f",
+    "symbol": "GNSSLAB",
+    "decimals": 18
+  },
+  "GOAT": {
+    "chain": "bnbchain",
+    "address": "0xff19952351e9bf7dc3c71d91f84d3f535df7515f",
+    "symbol": "GOAT",
+    "decimals": 18
+  },
+  "GOFI": {
+    "chain": "bnbchain",
+    "symbol": "GOFI",
+    "decimals": 18,
+    "address": "0x6b8227a0e18bd35a10849601db194b24aab2c8ea"
+  },
+  "GOLD": {
+    "chain": "bnbchain",
+    "symbol": "GOLD",
+    "decimals": 18,
+    "address": "0xb3a6381070b1a15169dea646166ec0699fdaea79",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xb3a6381070B1a15169DEA646166EC0699fDAeA79/logo.png"
+  },
+  "GPT": {
+    "chain": "bnbchain",
+    "address": "0x153c0c947177e631e3dfc594ba28750d3a921fb5",
+    "symbol": "GPT",
+    "decimals": 18
+  },
+  "GQ": {
+    "chain": "bnbchain",
+    "address": "0xf700d4c708c2be1463e355f337603183d20e0808",
+    "symbol": "GQ",
+    "decimals": 18
+  },
+  "GROOOT": {
+    "chain": "bnbchain",
+    "symbol": "GROOOT",
+    "decimals": 9,
+    "address": "0x5ab41eaa399e0dbdb35bdf49dc8ca0c0692f5fc5"
+  },
+  "GS": {
+    "chain": "bnbchain",
+    "symbol": "GS",
+    "decimals": 18,
+    "address": "0x9ba4c78b048eeed69f4ed3cfddeda7b51baf7ca8"
+  },
+  "GST": {
+    "chain": "bnbchain",
+    "symbol": "GST",
+    "decimals": 18,
+    "address": "0x444a0e0c139cac67e8f9be945c6dfe01a2766ed1"
+  },
+  "GSTRM": {
+    "chain": "bnbchain",
+    "address": "0xa0d2ca44a6880c4703b48b77efd0f9d6166fc9ab",
+    "symbol": "GSTRM",
+    "decimals": 18
+  },
+  "GUT": {
+    "chain": "bnbchain",
+    "address": "0x36e714d63b676236b72a0a4405f726337b06b6e5",
+    "symbol": "GUT",
+    "decimals": 18
+  },
+  "Gold": {
+    "chain": "bnbchain",
+    "address": "0xb3a6381070b1a15169dea646166ec0699fdaea79",
+    "symbol": "Gold",
+    "decimals": 18
+  },
+  "HAKKA": {
+    "chain": "bnbchain",
+    "symbol": "HAKKA",
+    "decimals": 18,
+    "address": "0x1d1eb8e8293222e1a29d2c0e4ce6c0acfd89aaac"
+  },
+  "HAM": {
+    "chain": "bnbchain",
+    "address": "0xb7b36ca86685af52186f1f9394e91d115a9da654",
+    "symbol": "HAM",
+    "decimals": 18
+  },
+  "HAPI": {
+    "chain": "bnbchain",
+    "symbol": "HAPI",
+    "decimals": 18,
+    "address": "0xd9c2d319cd7e6177336b0a9c93c21cb48d84fb54"
+  },
+  "HAR": {
+    "chain": "bnbchain",
+    "address": "0xb8c4516982b1c56f63cc1301f3f174cc1896c6c4",
+    "symbol": "HAR",
+    "decimals": 18
+  },
+  "HARAMBE": {
+    "chain": "bnbchain",
+    "symbol": "HARAMBE",
+    "decimals": 9,
+    "address": "0xced745b7c37eb1bc243b90da962f907022d1b219"
+  },
+  "HARD": {
+    "chain": "bnbchain",
+    "symbol": "HARD",
+    "decimals": 6,
+    "address": "0xf79037f6f6be66832de4e7516be52826bc3cbcc4"
+  },
+  "HASH": {
+    "chain": "bnbchain",
+    "address": "0xeb1112ac78d537853150e2a07e8b765e29d3f019",
+    "symbol": "HASH",
+    "decimals": 18
+  },
+  "HAY": {
+    "chain": "bnbchain",
+    "address": "0x0782b6d8c4551b9760e74c0545a9bcd90bdc41e5",
+    "symbol": "HAY",
+    "decimals": 18
+  },
+  "HAZE": {
+    "chain": "bnbchain",
+    "symbol": "HAZE",
+    "decimals": 18,
+    "address": "0x78832bd03078fb75a72d72fbf567ba90b6dab317"
+  },
+  "HELLO": {
+    "chain": "bnbchain",
+    "address": "0x0f1cbed8efa0e012adbccb1638d0ab0147d5ac00",
+    "symbol": "HELLO",
+    "decimals": 18
+  },
+  "HERO": {
+    "chain": "bnbchain",
+    "address": "0xd40bedb44c081d2935eeba6ef5a3c8a31a1bbe13",
+    "symbol": "HERO",
+    "decimals": 18
+  },
+  "HFT": {
+    "chain": "bnbchain",
+    "symbol": "HFT",
+    "decimals": 18,
+    "address": "0x44ec807ce2f4a6f2737a92e985f318d035883e47",
+    "logoURI": "https://assets.coingecko.com/coins/images/26136/large/hashflow-icon-cmc.png"
+  },
+  "HIGH": {
+    "chain": "bnbchain",
+    "symbol": "HIGH",
+    "decimals": 18,
+    "address": "0x5f4bde007dc06b867f86ebfe4802e34a1ffeed63",
+    "logoURI": "https://assets.coingecko.com/coins/images/18973/thumb/logosq200200Coingecko.png?1634090470"
+  },
+  "HIP": {
+    "chain": "bnbchain",
+    "symbol": "HIP",
+    "decimals": 18,
+    "address": "0xd71a0c0a47358fbbd1c4db64aaf9cb1d6d50c1e8"
+  },
+  "HKT": {
+    "chain": "bnbchain",
+    "address": "0x39ea7d26a53fac2da406cc85daf843cee3777fc0",
+    "symbol": "HKT",
+    "decimals": 18
+  },
+  "HLD": {
+    "chain": "bnbchain",
+    "symbol": "HLD",
+    "decimals": 18,
+    "address": "0xd520ddbdf81323f4b9a0ea0adbb692ebef6ce280"
+  },
+  "HMNG": {
+    "chain": "bnbchain",
+    "symbol": "HMNG",
+    "decimals": 9,
+    "address": "0x14357d294fbabbe0fbf59503370c772d563b35b6"
+  },
+  "HODL": {
+    "chain": "bnbchain",
+    "symbol": "HODL",
+    "decimals": 9,
+    "address": "0xd7bf683cad197f4f869678cddc345b38b483d8e4"
+  },
+  "HOGECLASSIC": {
+    "chain": "bnbchain",
+    "symbol": "HOGECLASSIC",
+    "decimals": 9,
+    "address": "0xb7e4c57dc7ea754b2949e2c4203a42af08786faa"
+  },
+  "HOGL": {
+    "chain": "bnbchain",
+    "symbol": "HOGL",
+    "decimals": 18,
+    "address": "0x182c763a4b2fbd18c9b5f2d18102a0ddd9d5df26"
+  },
+  "HONEY": {
+    "chain": "bnbchain",
+    "symbol": "HONEY",
+    "decimals": 18,
+    "address": "0xfa363022816abf82f18a9c2809dcd2bb393f6ac5",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xFa363022816aBf82f18a9C2809dCd2BB393F6AC5/logo.png"
+  },
+  "HOPE": {
+    "chain": "bnbchain",
+    "symbol": "HOPE",
+    "decimals": 18,
+    "address": "0x6f2afbf4f5e5e804c5b954889d7bf3768a3c9a45"
+  },
+  "HOTCROSS": {
+    "chain": "bnbchain",
+    "address": "0x4fa7163e153419e0e1064e418dd7a99314ed27b6",
+    "symbol": "HOTCROSS",
+    "decimals": 18
+  },
+  "HPO": {
+    "chain": "bnbchain",
+    "address": "0xa0ed3c520dc0632657ad2eaaf19e26c4fd431a84",
+    "symbol": "HPO",
+    "decimals": 18
+  },
+  "HTEST2": {
+    "chain": "bnbchain",
+    "address": "0x62ca3c6250e221fc136639bbd1f484e0dbb0c55b",
+    "symbol": "HTEST2",
+    "decimals": 9
+  },
+  "HUGO": {
+    "chain": "bnbchain",
+    "symbol": "HUGO",
+    "decimals": 9,
+    "address": "0xce195c777e1ce96c30ebec54c91d20417a068706"
+  },
+  "HUH": {
+    "chain": "bnbchain",
+    "address": "0xc15e89f2149bcc0cbd5fb204c9e77fe878f1e9b2",
+    "symbol": "HUH",
+    "decimals": 9
+  },
+  "HUNGRY": {
+    "chain": "bnbchain",
+    "symbol": "HUNGRY",
+    "decimals": 8,
+    "address": "0x812ff2420ec87eb40da80a596f14756acf98dacc"
+  },
+  "HUNNY": {
+    "chain": "bnbchain",
+    "symbol": "HUNNY",
+    "decimals": 18,
+    "address": "0x565b72163f17849832a692a3c5928cc502f46d69",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x565b72163f17849832A692A3c5928cc502f46D69/logo.png"
+  },
+  "HYFI": {
+    "chain": "bnbchain",
+    "symbol": "HYFI",
+    "decimals": 18,
+    "address": "0x9a319b959e33369c5eaa494a770117ee3e585318"
+  },
+  "HYVE": {
+    "chain": "bnbchain",
+    "symbol": "HYVE",
+    "decimals": 18,
+    "address": "0xf6565a97dc832d93dc83b75ee9aa5c7e8ecb0f9d"
+  },
+  "HZN": {
+    "chain": "bnbchain",
+    "symbol": "HZN",
+    "decimals": 18,
+    "address": "0xc0eff7749b125444953ef89682201fb8c6a917cd"
+  },
+  "Helmet": {
+    "chain": "bnbchain",
+    "symbol": "Helmet",
+    "decimals": 18,
+    "address": "0x948d2a81086a075b3130bac19e4c6dee1d2e3fe8"
+  },
+  "HyPC": {
+    "chain": "bnbchain",
+    "address": "0x7881cd2b5724431372f57c50e91611352557a606",
+    "symbol": "HyPC",
+    "decimals": 6
+  },
+  "ICE": {
+    "chain": "bnbchain",
+    "address": "0xf16e81dce15b08f326220742020379b855b87df9",
+    "symbol": "ICE",
+    "decimals": 18
+  },
+  "ID": {
+    "chain": "bnbchain",
+    "address": "0x2dff88a56767223a5529ea5960da7a3f5f766406",
+    "symbol": "ID",
+    "decimals": 18
+  },
+  "IDO": {
+    "chain": "bnbchain",
+    "symbol": "IDO",
+    "decimals": 18,
+    "address": "0x1773926aabce24d50cc6d28589654c2e9d237d2b"
+  },
+  "IGT": {
+    "chain": "bnbchain",
+    "symbol": "IGT",
+    "decimals": 18,
+    "address": "0x6814dc8f102adc36c4000cd6aa54ef90994da20c"
+  },
+  "IHOP": {
+    "chain": "bnbchain",
+    "address": "0x676376d0ea251d37d3e04bcc447b89b670a119fa",
+    "symbol": "IHOP",
+    "decimals": 9
+  },
+  "IMO": {
+    "chain": "bnbchain",
+    "symbol": "IMO",
+    "decimals": 18,
+    "address": "0x94d79c325268c898d2902050730f27a478c56cc1"
+  },
+  "INFINITY": {
+    "chain": "bnbchain",
+    "address": "0x3702117bb800dee5b833f72180c4310392cdd6b9",
+    "symbol": "INFINITY",
+    "decimals": 18
+  },
+  "INJ": {
+    "chain": "bnbchain",
+    "address": "0xa2b726b1145a4773f68593cf171187d8ebe4d495",
+    "symbol": "INJ",
+    "decimals": 18
+  },
+  "INRx": {
+    "chain": "bnbchain",
+    "address": "0xcd6970d5211efdf2516a4fc73163db7ba812b212",
+    "symbol": "INRx",
+    "decimals": 2
+  },
+  "IOTX": {
+    "chain": "bnbchain",
+    "symbol": "IOTX",
+    "decimals": 18,
+    "address": "0x9678e42cebeb63f23197d726b29b1cb20d0064e5",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x9678E42ceBEb63F23197D726B29b1CB20d0064E5.png"
+  },
+  "IPP": {
+    "chain": "bnbchain",
+    "address": "0xade2321efcc54b1d0676a29e331579da7b82aa76",
+    "symbol": "IPP",
+    "decimals": 18
+  },
+  "IVI": {
+    "chain": "bnbchain",
+    "address": "0x059ca11ba3099683dc2e46f048063f5799a7f34c",
+    "symbol": "IVI",
+    "decimals": 18
+  },
+  "IWELL": {
+    "chain": "bnbchain",
+    "address": "0x643d89fbe699068353d24acf55eb33366d57f533",
+    "symbol": "IWELL",
+    "decimals": 18
+  },
+  "JADE": {
+    "chain": "bnbchain",
+    "symbol": "JADE",
+    "decimals": 9,
+    "address": "0x7ad7242a99f21aa543f9650a56d141c57e4f6081",
+    "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x7ad7242A99F21aa543F9650A56D141C57e4F6081/logo.png"
+  },
+  "JGN": {
+    "chain": "bnbchain",
+    "symbol": "JGN",
+    "decimals": 18,
+    "address": "0xc13b7a43223bb9bf4b69bd68ab20ca1b79d81c75"
+  },
+  "JK": {
+    "chain": "bnbchain",
+    "address": "0x1ec58fe5e681e35e490b5d4cbecdf42b29c1b063",
+    "symbol": "JK",
+    "decimals": 18
+  },
+  "JMPT": {
+    "chain": "bnbchain",
+    "address": "0x88d7e9b65dc24cf54f5edef929225fc3e1580c25",
+    "symbol": "JMPT",
+    "decimals": 18
+  },
+  "JNTR/b": {
+    "chain": "bnbchain",
+    "symbol": "JNTR/b",
+    "decimals": 18,
+    "address": "0x78e1936f065fd4082387622878c7d11c9f05ecf4"
+  },
+  "JOE": {
+    "chain": "bnbchain",
+    "symbol": "JOE",
+    "decimals": 18,
+    "address": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07"
+  },
+  "JULb": {
+    "chain": "bnbchain",
+    "symbol": "JULb",
+    "decimals": 18,
+    "address": "0x32dffc3fe8e3ef3571bf8a72c0d0015c5373f41d"
+  },
+  "JUP": {
+    "chain": "bnbchain",
+    "symbol": "JUP",
+    "decimals": 18,
+    "address": "0x0231f91e02debd20345ae8ab7d71a41f8e140ce7",
+    "logoURI": "https://assets.coingecko.com/coins/images/10351/thumb/logo512.png?1632480932"
+  },
+  "JulD": {
+    "chain": "bnbchain",
+    "symbol": "JulD",
+    "decimals": 18,
+    "address": "0x5a41f637c3f7553dba6ddc2d3ca92641096577ea"
+  },
+  "KABOSU": {
+    "chain": "bnbchain",
+    "address": "0x4a824ee819955a7d769e03fe36f9e0c3bd3aa60b",
+    "symbol": "KABOSU",
+    "decimals": 9
+  },
+  "KABY": {
+    "chain": "bnbchain",
+    "symbol": "KABY",
+    "decimals": 18,
+    "address": "0x02a40c048ee2607b5f5606e445cfc3633fb20b58",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x02A40C048eE2607B5f5606e445CFc3633Fb20b58/logo.png"
+  },
+  "KAVA": {
+    "chain": "bnbchain",
+    "symbol": "KAVA",
+    "decimals": 6,
+    "address": "0x5f88ab06e8dfe89df127b2430bba4af600866035"
+  },
+  "KDM": {
+    "chain": "bnbchain",
+    "address": "0xa9c04f23ee2298613285a102a41267922c6cc205",
+    "symbol": "KDM",
+    "decimals": 18
+  },
+  "KEBAB": {
+    "chain": "bnbchain",
+    "symbol": "KEBAB",
+    "decimals": 18,
+    "address": "0x7979f6c54eba05e18ded44c4f986f49a5de551c2"
+  },
+  "KEL": {
+    "chain": "bnbchain",
+    "symbol": "KEL",
+    "decimals": 18,
+    "address": "0x4e1b16ef22935a575a6811d4616f98c4077e4408"
+  },
+  "KET": {
+    "chain": "bnbchain",
+    "symbol": "KET",
+    "decimals": 8,
+    "address": "0x5ddae05d2f854926e8070b435d2dfe5edca246d9"
+  },
+  "KEX": {
+    "chain": "bnbchain",
+    "symbol": "KEX",
+    "decimals": 6,
+    "address": "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e"
+  },
+  "KEYFI": {
+    "chain": "bnbchain",
+    "symbol": "KEYFI",
+    "decimals": 18,
+    "address": "0x4b6000f9163de2e3f0a01ec37e06e1469dbbce9d"
+  },
+  "KIDS": {
+    "chain": "bnbchain",
+    "address": "0x7acf49997e9598843cb9051389fa755969e551bb",
+    "symbol": "KIDS",
+    "decimals": 9
+  },
+  "KILI": {
+    "chain": "bnbchain",
+    "symbol": "KILI",
+    "decimals": 4,
+    "address": "0x865d0c78d08bd6e5f0db6bcbf36d3f8eb4ad48f8"
+  },
+  "KIND": {
+    "chain": "bnbchain",
+    "symbol": "KIND",
+    "decimals": 8,
+    "address": "0xe3ba88c38d2789fe58465020cc0fb60b70c10d32"
+  },
+  "KIT": {
+    "chain": "bnbchain",
+    "symbol": "KIT",
+    "decimals": 18,
+    "address": "0x314593fa9a2fa16432913dbccc96104541d32d11"
+  },
+  "KLT": {
+    "chain": "bnbchain",
+    "symbol": "KLT",
+    "decimals": 18,
+    "address": "0xf95995d642c652e9a7d124d546a7bdf297c6d0fb"
+  },
+  "KMON": {
+    "chain": "bnbchain",
+    "symbol": "KMON",
+    "decimals": 18,
+    "address": "0xc732b6586a93b6b7cf5fed3470808bc74998224d",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xc732B6586A93b6B7CF5FeD3470808Bc74998224D/logo.png"
+  },
+  "KNC": {
+    "chain": "bnbchain",
+    "address": "0xfe56d5892bdffc7bf58f2e84be1b2c32d21c308b",
+    "symbol": "KNC",
+    "decimals": 18
+  },
+  "KNIGHT": {
+    "chain": "bnbchain",
+    "symbol": "KNIGHT",
+    "decimals": 18,
+    "address": "0x16c0e0936e1b38ff1f9b8a1e75d8ba29adf87d30"
+  },
+  "KOGE": {
+    "chain": "bnbchain",
+    "address": "0xe6df05ce8c8301223373cf5b969afcb1498c5528",
+    "symbol": "KOGE",
+    "decimals": 18
+  },
+  "KOI": {
+    "chain": "bnbchain",
+    "address": "0x31fadea5f486fa28fbc2b7d1f1f7da2ef51d0cf7",
+    "symbol": "KOI",
+    "decimals": 18
+  },
+  "KONG": {
+    "chain": "bnbchain",
+    "address": "0xc9fe9a2fc53c845f60f44f52b2ee8fe856f86df0",
+    "symbol": "KONG",
+    "decimals": 18
+  },
+  "KOTH": {
+    "chain": "bnbchain",
+    "symbol": "KOTH",
+    "decimals": 18,
+    "address": "0x068968b263fcbd260b73175e930c6c920e7e1ba0"
+  },
+  "KPAD": {
+    "chain": "bnbchain",
+    "symbol": "KPAD",
+    "decimals": 18,
+    "address": "0xcfefa64b0ddd611b125157c41cd3827f2e8e8615"
+  },
+  "KPOP": {
+    "chain": "bnbchain",
+    "symbol": "KPOP",
+    "decimals": 18,
+    "address": "0x779859313567b96d5d3fb7f531b73e1bf008c4a9"
+  },
+  "KRY": {
+    "chain": "bnbchain",
+    "address": "0x62b112edaec9b5d9ec6003d007f28c75323576f5",
+    "symbol": "KRY",
+    "decimals": 9
+  },
+  "KYTE": {
+    "chain": "bnbchain",
+    "symbol": "KYTE",
+    "decimals": 18,
+    "address": "0x0995d8643645dd0cea60ab1acfa5ad2f642273d3"
+  },
+  "Kennel": {
+    "chain": "bnbchain",
+    "symbol": "Kennel",
+    "decimals": 18,
+    "address": "0x2c319cde4e46f85f7a1004b9a81d4a52d896e208"
+  },
+  "LABO": {
+    "chain": "bnbchain",
+    "symbol": "LABO",
+    "decimals": 18,
+    "address": "0x171401a3d18b21bfa3f9bf4f9637f3691158365a"
+  },
+  "LABS": {
+    "chain": "bnbchain",
+    "address": "0x510ca7d22a84599e7d0f15f09e674056a6255389",
+    "symbol": "LABS",
+    "decimals": 18
+  },
+  "LAIKA": {
+    "chain": "bnbchain",
+    "address": "0xf2c9c8e016a511eb0bf4823e340c3567d6de1390",
+    "symbol": "LAIKA",
+    "decimals": 18
+  },
+  "LAUNCH": {
+    "chain": "bnbchain",
+    "symbol": "LAUNCH",
+    "decimals": 18,
+    "address": "0xb5389a679151c4b8621b1098c6e0961a3cfee8d4"
+  },
+  "LBR": {
+    "chain": "bnbchain",
+    "address": "0xab1e65e6ed95cd8a165925db7caa931797db7dd2",
+    "symbol": "LBR",
+    "decimals": 18
+  },
+  "LC": {
+    "chain": "bnbchain",
+    "address": "0xf8cbbf8855c89dd4bf3483faf131bfe6626707f4",
+    "symbol": "LC",
+    "decimals": 18
+  },
+  "LGO": {
+    "chain": "bnbchain",
+    "address": "0xbe2b6c5e31f292009f495ddbda88e28391c9815e",
+    "symbol": "LGO",
+    "decimals": 18
+  },
+  "LGT": {
+    "chain": "bnbchain",
+    "address": "0xb0fd95723534af7a08021813bc9f792a083947b2",
+    "symbol": "LGT",
+    "decimals": 18
+  },
+  "LIEN": {
+    "chain": "bnbchain",
+    "symbol": "LIEN",
+    "decimals": 8,
+    "address": "0x5d684adaf3fcfe9cfb5cede3abf02f0cdd1012e3"
+  },
+  "LIGHT": {
+    "chain": "bnbchain",
+    "symbol": "LIGHT",
+    "decimals": 8,
+    "address": "0x7b9c3df47f3326fbc0674d51dc3eb0f2df29f37f"
+  },
+  "LINA": {
+    "chain": "bnbchain",
+    "symbol": "LINA",
+    "decimals": 18,
+    "address": "0x762539b45a1dcce3d36d080f74d1aed37844b878",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x762539b45A1dCcE3D36d080F74d1AED37844b878.png"
+  },
+  "LINK": {
+    "chain": "bnbchain",
+    "address": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd",
+    "symbol": "LINK",
+    "decimals": 18
+  },
+  "LIT": {
+    "chain": "bnbchain",
+    "address": "0x6625eef2d2e10e913ce6d5ab72ac199851641d1e",
+    "symbol": "LIT",
+    "decimals": 18
+  },
+  "LLT": {
+    "chain": "bnbchain",
+    "symbol": "LLT",
+    "decimals": 8,
+    "address": "0xd37c1417da7bf5b02ffdea8d5427022dc88a0ee2"
+  },
+  "LMG": {
+    "chain": "bnbchain",
+    "symbol": "LMG",
+    "decimals": 12,
+    "address": "0x37a1eebae213f6e8d1579bd65f127aa936aec8bf"
+  },
+  "LMT": {
+    "chain": "bnbchain",
+    "symbol": "LMT",
+    "decimals": 18,
+    "address": "0x54b8a657c75ee5ffa60dc919bcefa73cc279ff70"
+  },
+  "LODGE": {
+    "chain": "bnbchain",
+    "address": "0x78a163ba3196fa22c50a879c8ff0fb34910c2bf1",
+    "symbol": "LODGE",
+    "decimals": 18
+  },
+  "LONG": {
+    "chain": "bnbchain",
+    "symbol": "LONG",
+    "decimals": 18,
+    "address": "0xd6004836cb07d063f2cb498c25e351cc93194079"
+  },
+  "LOT": {
+    "chain": "bnbchain",
+    "symbol": "LOT",
+    "decimals": 9,
+    "address": "0x26898013a78754022aa2165dabae3f01c8f6d9bd"
+  },
+  "LPK": {
+    "chain": "bnbchain",
+    "address": "0x9b71b5511998e0798625b8fa74e86d8192de78c1",
+    "symbol": "LPK",
+    "decimals": 18
+  },
+  "LSD": {
+    "chain": "bnbchain",
+    "address": "0xcd1b51b87a8a7137d6421ba5a976225187a26777",
+    "symbol": "LSD",
+    "decimals": 18
+  },
+  "LTC": {
+    "chain": "bnbchain",
+    "address": "0x4338665cbb7b2485a8855a139b75d5e34ab0db94",
+    "symbol": "LTC",
+    "decimals": 18
+  },
+  "LUCHOW": {
+    "chain": "bnbchain",
+    "address": "0xe4e8e6878718bfe533702d4a6571eb74d79b0915",
+    "symbol": "LUCHOW",
+    "decimals": 18
+  },
+  "LUCKY": {
+    "chain": "bnbchain",
+    "symbol": "LUCKY",
+    "decimals": 18,
+    "address": "0x607a338c0c9cefe8275109835159d1c11a8b48c5"
+  },
+  "LUNA": {
+    "chain": "bnbchain",
+    "address": "0x156ab3346823b651294766e23e6cf87254d68962",
+    "symbol": "LUNA",
+    "decimals": 6
+  },
+  "LVL": {
+    "chain": "bnbchain",
+    "address": "0xb64e280e9d1b5dbec4accedb2257a87b400db149",
+    "symbol": "LVL",
+    "decimals": 18
+  },
+  "MAGI": {
+    "chain": "bnbchain",
+    "symbol": "MAGI",
+    "decimals": 8,
+    "address": "0xc603b1fba6a5b502be4f1ab27591bf4e75a3460c"
+  },
+  "MAI": {
+    "chain": "bnbchain",
+    "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+    "symbol": "MAI",
+    "decimals": 18
+  },
+  "MAIN": {
+    "chain": "bnbchain",
+    "address": "0xa5f249f401ba8931899a364d8e2699b5fa1d87a9",
+    "symbol": "MAIN",
+    "decimals": 18
+  },
+  "MARU": {
+    "chain": "bnbchain",
+    "address": "0x08a84af1368cd333073ac5dfb2254208e06b3a70",
+    "symbol": "MARU",
+    "decimals": 18
+  },
+  "MASH": {
+    "chain": "bnbchain",
+    "symbol": "MASH",
+    "decimals": 18,
+    "address": "0x787732f27d18495494cea3792ed7946bbcff8db2"
+  },
+  "MASK": {
+    "chain": "bnbchain",
+    "symbol": "MASK",
+    "decimals": 18,
+    "address": "0x2ed9a5c8c13b93955103b9a7c167b67ef4d568a3"
+  },
+  "MATH": {
+    "chain": "bnbchain",
+    "symbol": "MATH",
+    "decimals": 18,
+    "address": "0xf218184af829cf2b0019f8e6f0b2423498a36983",
+    "logoURI": "https://assets.coingecko.com/coins/images/11335/thumb/2020-05-19-token-200.png?1589940590"
+  },
+  "MATIC": {
+    "chain": "bnbchain",
+    "address": "0xcc42724c6683b7e57334c4e856f4c9965ed682bd",
+    "symbol": "MATIC",
+    "decimals": 18
+  },
+  "MAV": {
+    "chain": "bnbchain",
+    "address": "0xd691d9a68c887bdf34da8c36f63487333acfd103",
+    "symbol": "MAV",
+    "decimals": 18
+  },
+  "MBIT": {
+    "chain": "bnbchain",
+    "address": "0x4d8edca96e6eac9b987c88a179cc580bf75e8462",
+    "symbol": "MBIT",
+    "decimals": 8
+  },
+  "MBOX": {
+    "chain": "bnbchain",
+    "address": "0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377",
+    "symbol": "MBOX",
+    "decimals": 18
+  },
+  "MBUD": {
+    "chain": "bnbchain",
+    "symbol": "MBUD",
+    "decimals": 9,
+    "address": "0xbe8183612f145986a41ad8e8fcfefed1c2f9deba"
+  },
+  "MC": {
+    "chain": "bnbchain",
+    "symbol": "MC",
+    "decimals": 18,
+    "address": "0x949d48eca67b17269629c7194f4b727d4ef9e5d6",
+    "logoURI": "https://assets.coingecko.com/coins/images/19304/thumb/Db4XqML.png?1634972154"
+  },
+  "MDO": {
+    "chain": "bnbchain",
+    "symbol": "MDO",
+    "decimals": 18,
+    "address": "0x35e869b7456462b81cdb5e6e42434bd27f3f788c"
+  },
+  "MDS": {
+    "chain": "bnbchain",
+    "symbol": "MDS",
+    "decimals": 18,
+    "address": "0x242e46490397acca94ed930f2c4edf16250237fa"
+  },
+  "MDX": {
+    "chain": "bnbchain",
+    "symbol": "MDX",
+    "decimals": 18,
+    "address": "0x9c65ab58d8d978db963e63f2bfb7121627e3a739"
+  },
+  "MEGA": {
+    "chain": "bnbchain",
+    "address": "0x0af8c016620d3ed0c56381060e8ab2917775885e",
+    "symbol": "MEGA",
+    "decimals": 18
+  },
+  "MEL": {
+    "chain": "bnbchain",
+    "symbol": "MEL",
+    "decimals": 18,
+    "address": "0x7ce1e651374ec5324e6f37c4ff312d53428f0d50"
+  },
+  "MELB": {
+    "chain": "bnbchain",
+    "address": "0x92d28e49a4ffd443c1e2a907dcc07d2a41e67f4d",
+    "symbol": "MELB",
+    "decimals": 18
+  },
+  "MERO": {
+    "chain": "bnbchain",
+    "address": "0x476da763fb6d22b8465f7886d2d652a428a93984",
+    "symbol": "MERO",
+    "decimals": 18
+  },
+  "METFI": {
+    "chain": "bnbchain",
+    "address": "0x3e7f1039896454b9cb27c53cc7383e1ab9d9512a",
+    "symbol": "METFI",
+    "decimals": 18
+  },
+  "METIS": {
+    "chain": "bnbchain",
+    "symbol": "METIS",
+    "decimals": 18,
+    "address": "0xe552fb52a4f19e44ef5a967632dbc320b0820639",
+    "logoURI": "https://assets.coingecko.com/coins/images/15595/thumb/metis.jpeg?1660285312"
+  },
+  "MEXP": {
+    "chain": "bnbchain",
+    "address": "0xfca4dbb00858030ef0dfae7ebb60b1aa7ac151b1",
+    "symbol": "MEXP",
+    "decimals": 9
+  },
+  "MGP": {
+    "chain": "bnbchain",
+    "address": "0xd06716e1ff2e492cc5034c2e81805562dd3b45fa",
+    "symbol": "MGP",
+    "decimals": 18
+  },
+  "MHAPPY": {
+    "chain": "bnbchain",
+    "address": "0xdb5ee2a3d48f17a81bdcf513d6988ed430bbe7ab",
+    "symbol": "MHAPPY",
+    "decimals": 8
+  },
+  "MILF": {
+    "chain": "bnbchain",
+    "symbol": "MILF",
+    "decimals": 9,
+    "address": "0x4f200873cf6201a389cf8dc13d00f7f4f8f3dbb6"
+  },
+  "MIM": {
+    "chain": "bnbchain",
+    "address": "0xfe19f0b51438fd612f6fd59c1dbb3ea319f433ba",
+    "symbol": "MIM",
+    "decimals": 18
+  },
+  "MIMBO": {
+    "chain": "bnbchain",
+    "address": "0xbf76dbf84b16da71366fc73cf8c19600449ce71a",
+    "symbol": "MIMBO",
+    "decimals": 18
+  },
+  "MINIFOOTBALL": {
+    "chain": "bnbchain",
+    "symbol": "MINIFOOTBALL",
+    "decimals": 9,
+    "address": "0xd024ac1195762f6f13f8cfdf3cdd2c97b33b248b",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xD024Ac1195762F6F13f8CfDF3cdd2c97b33B248b/logo.png"
+  },
+  "MIR": {
+    "chain": "bnbchain",
+    "symbol": "MIR",
+    "decimals": 18,
+    "address": "0x5b6dcf557e2abe2323c48445e8cc948910d8c2c9"
+  },
+  "MIST": {
+    "chain": "bnbchain",
+    "symbol": "MIST",
+    "decimals": 18,
+    "address": "0x68e374f856bf25468d365e539b700b648bf94b67",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x68E374F856bF25468D365E539b700b648Bf94B67/logo.png"
+  },
+  "MM": {
+    "chain": "bnbchain",
+    "address": "0xbf05279f9bf1ce69bbfed670813b7e431142afa4",
+    "symbol": "MM",
+    "decimals": 18
+  },
+  "MND": {
+    "chain": "bnbchain",
+    "symbol": "MND",
+    "decimals": 18,
+    "address": "0x4c97c901b5147f8c1c7ce3c5cf3eb83b44f244fe",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x4c97c901B5147F8C1C7Ce3c5cF3eB83B44F244fE/logo.png"
+  },
+  "MNTN": {
+    "chain": "bnbchain",
+    "symbol": "MNTN",
+    "decimals": 18,
+    "address": "0xa7fcb2baabda9db593e24b25a1a32bfb5168018b"
+  },
+  "MNTT": {
+    "chain": "bnbchain",
+    "symbol": "MNTT",
+    "decimals": 18,
+    "address": "0x390037d710c86f88f05174599425b77c72eda305"
+  },
+  "MOD": {
+    "chain": "bnbchain",
+    "symbol": "MOD",
+    "decimals": 18,
+    "address": "0xd4fbc57b6233f268e7fba3b66e62719d74deecbc"
+  },
+  "MOMO": {
+    "chain": "bnbchain",
+    "symbol": "MOMO",
+    "decimals": 18,
+    "address": "0xafb2997fe9a99022e61c7e01b974e0e3d7704b02"
+  },
+  "MONEY": {
+    "chain": "bnbchain",
+    "address": "0xce5a19d3c159d4eab61dd158053de7e18eb809b6",
+    "symbol": "MONEY",
+    "decimals": 18
+  },
+  "MONI": {
+    "chain": "bnbchain",
+    "symbol": "MONI",
+    "decimals": 18,
+    "address": "0x9573c88ae3e37508f87649f87c4dd5373c9f31e0",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x9573c88aE3e37508f87649f87c4dd5373C9F31e0/logo.png"
+  },
+  "MOONSTOP": {
+    "chain": "bnbchain",
+    "symbol": "MOONSTOP",
+    "decimals": 18,
+    "address": "0xa62780d62e826340c18feec187668326f35ccc0d"
+  },
+  "MOOSE": {
+    "chain": "bnbchain",
+    "symbol": "MOOSE",
+    "decimals": 18,
+    "address": "0xb204b5a6bec76f7fc1e64d7d0bf1f74c56c9886a"
+  },
+  "MOR": {
+    "chain": "bnbchain",
+    "symbol": "MOR",
+    "decimals": 18,
+    "address": "0x85e5682cc4513358f765cb8df98f1dd140c6cf86"
+  },
+  "MORPH": {
+    "chain": "bnbchain",
+    "symbol": "MORPH",
+    "decimals": 18,
+    "address": "0x2b15bc62d1fb46ade4763a3c5ea0917460bb25f1"
+  },
+  "MOS": {
+    "chain": "bnbchain",
+    "address": "0xc9c8050639c4cc0df159e0e47020d6e392191407",
+    "symbol": "MOS",
+    "decimals": 18
+  },
+  "MOSPACE": {
+    "chain": "bnbchain",
+    "address": "0x5de466a5786397185bf415794366cf1aa4021756",
+    "symbol": "MOSPACE",
+    "decimals": 18
+  },
+  "MSC": {
+    "chain": "bnbchain",
+    "symbol": "MSC",
+    "decimals": 18,
+    "address": "0x8c784c49097dcc637b93232e15810d53871992bf"
+  },
+  "MTP": {
+    "chain": "bnbchain",
+    "symbol": "MTP",
+    "decimals": 18,
+    "address": "0xe56f12123c583de823720a603b2dc11d659c12fc"
+  },
+  "MULTI": {
+    "chain": "bnbchain",
+    "address": "0x9fb9a33956351cf4fa040f65a13b835a3c8764e3",
+    "symbol": "MULTI",
+    "decimals": 18
+  },
+  "MVN": {
+    "chain": "bnbchain",
+    "symbol": "MVN",
+    "decimals": 12,
+    "address": "0x0323e7752c2d404718e2beaa57d7b6ee4021ae36"
+  },
+  "MXF": {
+    "chain": "bnbchain",
+    "symbol": "MXF",
+    "decimals": 18,
+    "address": "0xdf065aa3a18ae67055ff44bd26506fde6ce13312"
+  },
+  "MYTHIC": {
+    "chain": "bnbchain",
+    "symbol": "MYTHIC",
+    "decimals": 18,
+    "address": "0xc558e7eb17592e698ca5d7da78d4bcf758e96fde"
+  },
+  "Metis": {
+    "chain": "bnbchain",
+    "address": "0xe552fb52a4f19e44ef5a967632dbc320b0820639",
+    "symbol": "Metis",
+    "decimals": 18
+  },
+  "N2": {
+    "chain": "bnbchain",
+    "address": "0xda708a3137e7742c1407307451bed3327734cc2f",
+    "symbol": "N2",
+    "decimals": 18
+  },
+  "NAFT": {
+    "chain": "bnbchain",
+    "symbol": "NAFT",
+    "decimals": 18,
+    "address": "0xd7730681b1dc8f6f969166b29d8a5ea8568616a3",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xD7730681B1DC8f6F969166B29D8A5EA8568616a3/logo.png"
+  },
+  "NANA": {
+    "chain": "bnbchain",
+    "symbol": "NANA",
+    "decimals": 9,
+    "address": "0x355ad7abb7bdd53bec94c068f3abbcb2e2571d0d"
+  },
+  "NANAZ": {
+    "chain": "bnbchain",
+    "symbol": "NANAZ",
+    "decimals": 18,
+    "address": "0x3b7e4e48cdc9a7ba84b66d4541ee01aa70b0272c"
+  },
+  "NARUTO2": {
+    "chain": "bnbchain",
+    "symbol": "NARUTO2",
+    "decimals": 9,
+    "address": "0xe3c40ca5a0d8b48c45a2609e558cea98c5805351"
+  },
+  "NAUT": {
+    "chain": "bnbchain",
+    "symbol": "NAUT",
+    "decimals": 8,
+    "address": "0x05b339b0a346bf01f851dde47a5d485c34fe220c"
+  },
+  "NBL": {
+    "chain": "bnbchain",
+    "symbol": "NBL",
+    "decimals": 18,
+    "address": "0xa67a13c9283da5aabb199da54a9cb4cd8b9b16ba",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xA67a13c9283Da5AABB199Da54a9Cb4cD8B9b16bA/logo.png"
+  },
+  "NCP": {
+    "chain": "bnbchain",
+    "symbol": "NCP",
+    "decimals": 9,
+    "address": "0x3f4ca61e82a9ec1e89d1244397e976524fc9ae18"
+  },
+  "NCX": {
+    "chain": "bnbchain",
+    "address": "0xe3aa630bab82a680f330abdc88d999ebf5dc3956",
+    "symbol": "NCX",
+    "decimals": 18
+  },
+  "NEAR": {
+    "chain": "bnbchain",
+    "address": "0x1fa4a73a3f0133f0025378af00236f3abdee5d63",
+    "symbol": "NEAR",
+    "decimals": 18
+  },
+  "NEON": {
+    "chain": "bnbchain",
+    "symbol": "NEON",
+    "decimals": 18,
+    "address": "0x94026f0227ce0c9611e8a228f114f9f19cc3fa87"
+  },
+  "NEST": {
+    "chain": "bnbchain",
+    "symbol": "NEST",
+    "decimals": 18,
+    "address": "0x98f8669f6481ebb341b522fcd3663f79a3d1a6a7",
+    "logoURI": "https://assets.coingecko.com/coins/images/11284/thumb/52954052.png?1589868539"
+  },
+  "NEU": {
+    "chain": "bnbchain",
+    "address": "0xf1d547fb5829c9b1a0e46a610c6f2ecac7630804",
+    "symbol": "NEU",
+    "decimals": 18
+  },
+  "NEWW": {
+    "chain": "bnbchain",
+    "symbol": "NEWW",
+    "decimals": 18,
+    "address": "0x143364622fc215cacaf155ff9239369643126a55"
+  },
+  "NFI": {
+    "chain": "bnbchain",
+    "symbol": "NFI",
+    "decimals": 18,
+    "address": "0x43f001914c7d347d152f296e8539086fe49f8bd6"
+  },
+  "NFTART": {
+    "chain": "bnbchain",
+    "symbol": "NFTART",
+    "decimals": 9,
+    "address": "0xf7844cb890f4c339c497aeab599abdc3c874b67a"
+  },
+  "NFTB": {
+    "chain": "bnbchain",
+    "symbol": "NFTB",
+    "decimals": 18,
+    "address": "0xde3dbbe30cfa9f437b293294d1fd64b26045c71a",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xde3dbBE30cfa9F437b293294d1fD64B26045C71A/logo.png"
+  },
+  "NFTL": {
+    "chain": "bnbchain",
+    "symbol": "NFTL",
+    "decimals": 18,
+    "address": "0xe5904e9816b309d3ed4d061c922f5aa8f3b24c92"
+  },
+  "NGNT": {
+    "chain": "bnbchain",
+    "symbol": "NGNT",
+    "decimals": 2,
+    "address": "0xb7d9905edf8b7b093e3c74af8d6982d0f3d37762"
+  },
+  "NIU": {
+    "chain": "bnbchain",
+    "symbol": "NIU",
+    "decimals": 18,
+    "address": "0xfa90d5d5ff08d9a06c9fdf89b4b22217b9dbc418"
+  },
+  "NMX": {
+    "chain": "bnbchain",
+    "symbol": "NMX",
+    "decimals": 18,
+    "address": "0xd32d01a43c869edcd1117c640fbdcfcfd97d9d65"
+  },
+  "NRCH": {
+    "chain": "bnbchain",
+    "address": "0x69fa8e7f6bf1ca1fb0de61e1366f7412b827cc51",
+    "symbol": "NRCH",
+    "decimals": 9
+  },
+  "NRV": {
+    "chain": "bnbchain",
+    "symbol": "NRV",
+    "decimals": 18,
+    "address": "0x42f6f551ae042cbe50c739158b4f0cac0edb9096",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x42F6f551ae042cBe50C739158b4f0CAC0Edb9096.png"
+  },
+  "NSFW": {
+    "chain": "bnbchain",
+    "address": "0xaa076b62efc6f357882e07665157a271ab46a063",
+    "symbol": "NSFW",
+    "decimals": 18
+  },
+  "NST": {
+    "chain": "bnbchain",
+    "symbol": "NST",
+    "decimals": 18,
+    "address": "0x8e07df508ca9c16362a84fa742b91db3912dd290"
+  },
+  "NWC": {
+    "chain": "bnbchain",
+    "symbol": "NWC",
+    "decimals": 18,
+    "address": "0x968f6f898a6df937fc1859b323ac2f14643e3fed"
+  },
+  "NfDAO": {
+    "chain": "bnbchain",
+    "address": "0x3ab7014d0e896a8e486fbf5bc590eeb93d6f44bf",
+    "symbol": "NfDAO",
+    "decimals": 18
+  },
+  "OAK": {
+    "chain": "bnbchain",
+    "symbol": "OAK",
+    "decimals": 18,
+    "address": "0x4e0f2fd3cada61d891c653a7fbbf2df7e2214757"
+  },
+  "OCT": {
+    "chain": "bnbchain",
+    "symbol": "OCT",
+    "decimals": 8,
+    "address": "0x49277cc5be56b519901e561096bfd416277b4f6d"
+  },
+  "ODIN": {
+    "chain": "bnbchain",
+    "symbol": "ODIN",
+    "decimals": 18,
+    "address": "0x2802eb3a20f5892956d5b9528f6bf13e648534db"
+  },
+  "OFN": {
+    "chain": "bnbchain",
+    "address": "0x8899ec96ed8c96b5c86c23c3f069c3def75b6d97",
+    "symbol": "OFN",
+    "decimals": 18
+  },
+  "OIL": {
+    "chain": "bnbchain",
+    "symbol": "OIL",
+    "decimals": 18,
+    "address": "0xb1b17dff66d75b29d34f0bf8622c406d8219b507"
+  },
+  "ONE": {
+    "chain": "bnbchain",
+    "address": "0x03ff0ff224f904be3118461335064bb48df47938",
+    "symbol": "ONE",
+    "decimals": 18
+  },
+  "ONEX": {
+    "chain": "bnbchain",
+    "address": "0x33dc5a6e2e01702c39f038f3a1c1cfefb81f2857",
+    "symbol": "ONEX",
+    "decimals": 18
+  },
+  "ONT": {
+    "chain": "bnbchain",
+    "symbol": "ONT",
+    "decimals": 18,
+    "address": "0xfd7b3a77848f1c2d67e05e54d78d174a0c850335"
+  },
+  "OP": {
+    "chain": "bnbchain",
+    "symbol": "OP",
+    "decimals": 18,
+    "address": "0x170c84e3b1d282f9628229836086716141995200",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x170C84E3b1D282f9628229836086716141995200.png"
+  },
+  "ORAI": {
+    "chain": "bnbchain",
+    "symbol": "ORAI",
+    "decimals": 18,
+    "address": "0xa325ad6d9c92b55a3fc5ad7e412b1518f96441c0"
+  },
+  "OT": {
+    "chain": "bnbchain",
+    "address": "0xf10e371dfa7f924953ba451e7a59b57ca5e529f1",
+    "symbol": "OT",
+    "decimals": 18
+  },
+  "OWL": {
+    "chain": "bnbchain",
+    "symbol": "OWL",
+    "decimals": 0,
+    "address": "0x63e3350cdd8f0c1f46b67132e1f9fa80e0331f7b"
+  },
+  "OXB": {
+    "chain": "bnbchain",
+    "symbol": "OXB",
+    "decimals": 9,
+    "address": "0x3fd5b5746315e3f8d43a46b09c826a001ebb977d"
+  },
+  "P": { "chain": "bnbchain", "address": "0x3dca999c44b7af9dde6e8a2679ff1497530062cf", "symbol": "P", "decimals": 18 },
+  "P$S": {
+    "chain": "bnbchain",
+    "address": "0x697a692d0a0fb63d4d78364ff31821cd35e5856d",
+    "symbol": "P$S",
+    "decimals": 9
+  },
+  "PAID": {
+    "chain": "bnbchain",
+    "symbol": "PAID",
+    "decimals": 18,
+    "address": "0xad86d0e9764ba90ddd68747d64bffbd79879a238",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xAD86d0E9764ba90DDD68747D64BFfBd79879a238/logo.png"
+  },
+  "PALM": {
+    "chain": "bnbchain",
+    "symbol": "PALM",
+    "decimals": 18,
+    "address": "0x9768e5b2d8e761905bc81dfc554f9437a46cdcc6"
+  },
+  "PAPP": {
+    "chain": "bnbchain",
+    "symbol": "PAPP",
+    "decimals": 18,
+    "address": "0xcd77880edea8e7d1f2be011be560b45b96ba68ad"
+  },
+  "PASTA": {
+    "chain": "bnbchain",
+    "symbol": "PASTA",
+    "decimals": 18,
+    "address": "0xab9d0fae6eb062f2698c2d429a1be9185a5d4f6e"
+  },
+  "PATRIOT": {
+    "chain": "bnbchain",
+    "symbol": "PATRIOT",
+    "decimals": 8,
+    "address": "0x74f61927de6eceeb16df776cfdb307f202dd9196"
+  },
+  "PAYB": {
+    "chain": "bnbchain",
+    "symbol": "PAYB",
+    "decimals": 18,
+    "address": "0x916792fd41855914ba4b71285c8a05b866f0618b"
+  },
+  "PAYU": {
+    "chain": "bnbchain",
+    "address": "0x9aeb2e6dd8d55e14292acfcfc4077e33106e4144",
+    "symbol": "PAYU",
+    "decimals": 18
+  },
+  "PBOM": {
+    "chain": "bnbchain",
+    "symbol": "PBOM",
+    "decimals": 9,
+    "address": "0x3ea50b7ef6a7eaf7e966e2cb72b519c16557497c"
+  },
+  "PBT ": {
+    "chain": "bnbchain",
+    "symbol": "PBT ",
+    "decimals": 18,
+    "address": "0x7ca89b3a7159d3fd20812a8b45b9aff6d9adc9a4"
+  },
+  "PDAO": {
+    "chain": "bnbchain",
+    "symbol": "PDAO",
+    "decimals": 9,
+    "address": "0x1af3b59a839e97e944c65177ab3a024b499133f8"
+  },
+  "PDO": {
+    "chain": "bnbchain",
+    "symbol": "PDO",
+    "decimals": 18,
+    "address": "0x5bccfbd33873a5498f8406146868eddd5e998962"
+  },
+  "PEAK": {
+    "chain": "bnbchain",
+    "symbol": "PEAK",
+    "decimals": 8,
+    "address": "0x630d98424efe0ea27fb1b3ab7741907dffeaad78"
+  },
+  "PEKC": {
+    "chain": "bnbchain",
+    "symbol": "PEKC",
+    "decimals": 9,
+    "address": "0x050787de0cf5da03d9387b344334d51cae5dd0fd"
+  },
+  "PENDLE": {
+    "chain": "bnbchain",
+    "address": "0xb3ed0a426155b79b898849803e3b36552f7ed507",
+    "symbol": "PENDLE",
+    "decimals": 18
+  },
+  "PEPE": {
+    "chain": "bnbchain",
+    "address": "0x25d887ce7a35172c62febfd67a1856f20faebb00",
+    "symbol": "PEPE",
+    "decimals": 18
+  },
+  "PEPPE": {
+    "chain": "bnbchain",
+    "address": "0x52df72b35e8acca017ff95a2f52ea742c5ed922c",
+    "symbol": "PEPPE",
+    "decimals": 18
+  },
+  "PERL": {
+    "chain": "bnbchain",
+    "symbol": "PERL",
+    "decimals": 18,
+    "address": "0x0f9e4d49f25de22c2202af916b681fbb3790497b"
+  },
+  "PERP": {
+    "chain": "bnbchain",
+    "symbol": "PERP",
+    "decimals": 18,
+    "address": "0x4e7f408be2d4e9d60f49a64b89bb619c84c7c6f5",
+    "logoURI": "https://assets.coingecko.com/coins/images/12381/thumb/60d18e06844a844ad75901a9_mark_only_03.png?1628674771"
+  },
+  "PERRY": {
+    "chain": "bnbchain",
+    "address": "0xb52575ce47c4534f7b0ba88acfba7546350197d8",
+    "symbol": "PERRY",
+    "decimals": 18
+  },
+  "PERSEUS": {
+    "chain": "bnbchain",
+    "symbol": "PERSEUS",
+    "decimals": 8,
+    "address": "0xb6a44818431f6638a7a4ebb2fa3044ffdbaf6a3e"
+  },
+  "PETG": {
+    "chain": "bnbchain",
+    "symbol": "PETG",
+    "decimals": 18,
+    "address": "0x09607078980cbb0665aba9c6d1b84b8ead246aa0",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x09607078980CbB0665ABa9c6D1B84b8eAD246aA0/logo.png"
+  },
+  "PHN": {
+    "chain": "bnbchain",
+    "symbol": "PHN",
+    "decimals": 18,
+    "address": "0x1bd549630c4c26dfdb2850fa7a0ddb166dd25693"
+  },
+  "PHX": {
+    "chain": "bnbchain",
+    "symbol": "PHX",
+    "decimals": 18,
+    "address": "0x3b1b01441f8ae64d7d72c1e8a4a8646831fda0c2"
+  },
+  "PHY": {
+    "chain": "bnbchain",
+    "symbol": "PHY",
+    "decimals": 18,
+    "address": "0xae63595ed0bcfddeff2ebb74a20ae96727783a67"
+  },
+  "PIE": {
+    "chain": "bnbchain",
+    "symbol": "PIE",
+    "decimals": 18,
+    "address": "0xc4b35d3a24e3e8941c5d87fd21d0725642f50308"
+  },
+  "PIKA": {
+    "chain": "bnbchain",
+    "symbol": "PIKA",
+    "decimals": 18,
+    "address": "0x50d370cc853217099bef3815faabfc563139ec2a"
+  },
+  "PINK": {
+    "chain": "bnbchain",
+    "symbol": "PINK",
+    "decimals": 18,
+    "address": "0x9133049fb1fddc110c92bf5b7df635abb70c89dc",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x9133049Fb1FdDC110c92BF5b7Df635abB70C89DC/logo.png"
+  },
+  "PINKSALE": {
+    "chain": "bnbchain",
+    "address": "0x602ba546a7b06e0fc7f58fd27eb6996ecc824689",
+    "symbol": "PINKSALE",
+    "decimals": 18
+  },
+  "PLANET": {
+    "chain": "bnbchain",
+    "address": "0xca6d678e74f553f0e59cccc03ae644a3c2c5ee7d",
+    "symbol": "PLANET",
+    "decimals": 18
+  },
+  "PLAY": {
+    "chain": "bnbchain",
+    "address": "0xd069599e718f963bd84502b49ba8f8657faf5b3a",
+    "symbol": "PLAY",
+    "decimals": 18
+  },
+  "PLZ": {
+    "chain": "bnbchain",
+    "symbol": "PLZ",
+    "decimals": 8,
+    "address": "0x9ce15e6ac4b22b9163a668747b8d93cefbae5099"
+  },
+  "PMON": {
+    "chain": "bnbchain",
+    "address": "0x1796ae0b0fa4862485106a0de9b654efe301d0b2",
+    "symbol": "PMON",
+    "decimals": 18
+  },
+  "PMP": {
+    "chain": "bnbchain",
+    "symbol": "PMP",
+    "decimals": 18,
+    "address": "0x8d4fbb3ac63bf33851dce80d63613df1a515bc00"
+  },
+  "PNB": {
+    "chain": "bnbchain",
+    "address": "0xf5bde7eb378661f04c841b22ba057326b0370153",
+    "symbol": "PNB",
+    "decimals": 18
+  },
+  "PNDA": {
+    "chain": "bnbchain",
+    "symbol": "PNDA",
+    "decimals": 18,
+    "address": "0x4273d797ebc0063d5d887b1e67dad4a43e2fd244"
+  },
+  "PNIX": {
+    "chain": "bnbchain",
+    "symbol": "PNIX",
+    "decimals": 8,
+    "address": "0xc25d94fc3f8d7bd1d88f89802fe075338f71dec7"
+  },
+  "PNIXS": {
+    "chain": "bnbchain",
+    "symbol": "PNIXS",
+    "decimals": 18,
+    "address": "0x509949c4ee0c1c2c765cf9b23c75d823981e22ae"
+  },
+  "POCO": {
+    "chain": "bnbchain",
+    "symbol": "POCO",
+    "decimals": 18,
+    "address": "0x394bba8f309f3462b31238b3fd04b83f71a98848",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x394bBA8F309f3462b31238B3fd04b83F71A98848/logo.png"
+  },
+  "POLIS": {
+    "chain": "bnbchain",
+    "symbol": "POLIS",
+    "decimals": 18,
+    "address": "0xb5bea8a26d587cf665f2d78f077cca3c7f6341bd"
+  },
+  "POLS": {
+    "chain": "bnbchain",
+    "symbol": "POLS",
+    "decimals": 18,
+    "address": "0x7e624fa0e1c4abfd309cc15719b7e2580887f570",
+    "logoURI": "https://assets.coingecko.com/coins/images/12648/thumb/polkastarter.png?1609813702"
+  },
+  "POMP": {
+    "chain": "bnbchain",
+    "symbol": "POMP",
+    "decimals": 18,
+    "address": "0xdb8689a8faba4de3bc95189df6157f87af0736d2"
+  },
+  "POOCOIN": {
+    "chain": "bnbchain",
+    "symbol": "POOCOIN",
+    "decimals": 8,
+    "address": "0xb27adaffb9fea1801459a1a81b17218288c097cc"
+  },
+  "PORNROCKET": {
+    "chain": "bnbchain",
+    "address": "0xcf9f991b14620f5ad144eec11f9bc7bf08987622",
+    "symbol": "PORNROCKET",
+    "decimals": 9
+  },
+  "POT": {
+    "chain": "bnbchain",
+    "address": "0x1bec5734b1e4559979158052dfa5c6f0156282f2",
+    "symbol": "POT",
+    "decimals": 18
+  },
+  "POTS": {
+    "chain": "bnbchain",
+    "symbol": "POTS",
+    "decimals": 18,
+    "address": "0x3fcca8648651e5b974dd6d3e50f61567779772a8",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x3Fcca8648651E5b974DD6d3e50F61567779772A8.png"
+  },
+  "PPLANE": {
+    "chain": "bnbchain",
+    "symbol": "PPLANE",
+    "decimals": 18,
+    "address": "0x8feff2d4e0bd1625dbd4161c7a93553de1b5c1cb"
+  },
+  "PRCRM": {
+    "chain": "bnbchain",
+    "address": "0x6f57c04f29b5c9ff8cc3b7f708e7394b62bfac4c",
+    "symbol": "PRCRM",
+    "decimals": 18
+  },
+  "PROPEL": {
+    "chain": "bnbchain",
+    "symbol": "PROPEL",
+    "decimals": 18,
+    "address": "0x9b44df3318972be845d83f961735609137c4c23c"
+  },
+  "PRQ": {
+    "chain": "bnbchain",
+    "symbol": "PRQ",
+    "decimals": 18,
+    "address": "0xd21d29b38374528675c34936bf7d5dd693d2a577",
+    "logoURI": "https://assets.coingecko.com/coins/images/11973/thumb/DsNgK0O.png?1596590280"
+  },
+  "PSC": {
+    "chain": "bnbchain",
+    "symbol": "PSC",
+    "decimals": 18,
+    "address": "0x0f510a6e7e8164c37e4d97e289db107308f03b92"
+  },
+  "PSI": {
+    "chain": "bnbchain",
+    "symbol": "PSI",
+    "decimals": 9,
+    "address": "0x9a5d9c681db43d9863e9279c800a39449b7e1d6f"
+  },
+  "PSR": {
+    "chain": "bnbchain",
+    "address": "0xb72ba371c900aa68bb9fa473e93cfbe212030fcb",
+    "symbol": "PSR",
+    "decimals": 18
+  },
+  "PSTAKE": {
+    "chain": "bnbchain",
+    "symbol": "PSTAKE",
+    "decimals": 18,
+    "address": "0x4c882ec256823ee773b25b414d36f92ef58a7c0c",
+    "logoURI": "https://assets.coingecko.com/coins/images/23931/thumb/PSTAKE_Dark.png?1645709930"
+  },
+  "PSWAP": {
+    "chain": "bnbchain",
+    "symbol": "PSWAP",
+    "decimals": 18,
+    "address": "0x42539f50c5f8a0c929e7895eb265391f58b22a19"
+  },
+  "PVC": {
+    "chain": "bnbchain",
+    "address": "0x75ca521892de7f2ecfb070cab545c250d0ceb7e3",
+    "symbol": "PVC",
+    "decimals": 9
+  },
+  "PVU": {
+    "chain": "bnbchain",
+    "address": "0x31471e0791fcdbe82fbf4c44943255e923f1b794",
+    "symbol": "PVU",
+    "decimals": 18
+  },
+  "PWT": {
+    "chain": "bnbchain",
+    "symbol": "PWT",
+    "decimals": 8,
+    "address": "0xf3edd4f14a018df4b6f02bf1b2cf17a8120519a2",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xf3eDD4f14a018df4b6f02Bf1b2cF17A8120519A2/logo.png"
+  },
+  "PYX": {
+    "chain": "bnbchain",
+    "symbol": "PYX",
+    "decimals": 18,
+    "address": "0x3ebb316d8c387ef235baa38978cbb9b97c8c3017"
+  },
+  "PZP": {
+    "chain": "bnbchain",
+    "address": "0x6ad9e9c098a45b2b41b519119c31c3dcb02accb2",
+    "symbol": "PZP",
+    "decimals": 18
+  },
+  "PoFi": {
+    "chain": "bnbchain",
+    "symbol": "PoFi",
+    "decimals": 18,
+    "address": "0x461f6c9ae13a7dac7055c73fbf8dab529d667041"
+  },
+  "PurrX": {
+    "chain": "bnbchain",
+    "address": "0xd4cadc39c1294a6ce118aa08dced32efadac4a7f",
+    "symbol": "PurrX",
+    "decimals": 18
+  },
+  "QAA": {
+    "chain": "bnbchain",
+    "address": "0x5959e5baa4dc2b78a4aad0e6a3b61f0141191004",
+    "symbol": "QAA",
+    "decimals": 13
+  },
+  "QAAA": {
+    "chain": "bnbchain",
+    "address": "0xed2f884f980582f7a41d7ed8c2b9ef0e04e1fa09",
+    "symbol": "QAAA",
+    "decimals": 13
+  },
+  "QBT": {
+    "chain": "bnbchain",
+    "symbol": "QBT",
+    "decimals": 18,
+    "address": "0x17b7163cf1dbd286e262ddc68b553d899b93f526",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x17B7163cf1Dbd286E262ddc68b553D899B93f526.png"
+  },
+  "QGEM": {
+    "chain": "bnbchain",
+    "address": "0x197bdc90d262ba26b70a8a273d167bd93b66e1e1",
+    "symbol": "QGEM",
+    "decimals": 18
+  },
+  "QILIN": {
+    "chain": "bnbchain",
+    "address": "0xa2ef8fd3b704048ca4e5f613f7f5b1b94374af8c",
+    "symbol": "QILIN",
+    "decimals": 18
+  },
+  "QUACK": {
+    "chain": "bnbchain",
+    "address": "0xd74b782e05aa25c50e7330af541d46e18f36661c",
+    "symbol": "QUACK",
+    "decimals": 9
+  },
+  "QUAI": {
+    "chain": "bnbchain",
+    "symbol": "QUAI",
+    "decimals": 18,
+    "address": "0x3dc2d7434bdbb4ca1a8a6bcc8a8075aeae2d2179"
+  },
+  "QUAM": {
+    "chain": "bnbchain",
+    "symbol": "QUAM",
+    "decimals": 18,
+    "address": "0x1ade17b4b38b472b5259bbc938618226df7b5ca8"
+  },
+  "QUSD": {
+    "chain": "bnbchain",
+    "symbol": "QUSD",
+    "decimals": 18,
+    "address": "0xb8c540d00dd0bf76ea12e4b4b95efc90804f924e"
+  },
+  "RACA": {
+    "chain": "bnbchain",
+    "address": "0x12bb890508c125661e03b09ec06e404bc9289040",
+    "symbol": "RACA",
+    "decimals": 18
+  },
+  "RAKE": {
+    "chain": "bnbchain",
+    "symbol": "RAKE",
+    "decimals": 18,
+    "address": "0xbda8d53fe0f164915b46cd2ecffd94254b6086a2"
+  },
+  "RAMP": {
+    "chain": "bnbchain",
+    "symbol": "RAMP",
+    "decimals": 18,
+    "address": "0x8519ea49c997f50ceffa444d240fb655e89248aa",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x8519EA49c997f50cefFa444d240fB655e89248Aa.png"
+  },
+  "RAZOR": {
+    "chain": "bnbchain",
+    "symbol": "RAZOR",
+    "decimals": 18,
+    "address": "0x50de6856358cc35f3a9a57eaaa34bd4cb707d2cd"
+  },
+  "RCUBE": {
+    "chain": "bnbchain",
+    "symbol": "RCUBE",
+    "decimals": 8,
+    "address": "0xa6e53f07bd410df069e20ced725bdc9135146fe9"
+  },
+  "RDNT": {
+    "chain": "bnbchain",
+    "address": "0xf7de7e8a6bd59ed41a4b5fe50278b3b7f31384df",
+    "symbol": "RDNT",
+    "decimals": 18
+  },
+  "REB": {
+    "chain": "bnbchain",
+    "address": "0x0aa93a07848fc2e566788a82f9cdcd7e950af4c8",
+    "symbol": "REB",
+    "decimals": 18
+  },
+  "RECH": {
+    "chain": "bnbchain",
+    "symbol": "RECH",
+    "decimals": 9,
+    "address": "0xf4db3dd2046d05d81980be2e65ea325597f0743b"
+  },
+  "REEF": {
+    "chain": "bnbchain",
+    "address": "0xf21768ccbc73ea5b6fd3c687208a7c2def2d966e",
+    "symbol": "REEF",
+    "decimals": 18
+  },
+  "REFI": {
+    "chain": "bnbchain",
+    "symbol": "REFI",
+    "decimals": 18,
+    "address": "0x641a6dc991a49f7be9fe3c72c5d0fbb223edb12f"
+  },
+  "REVO": {
+    "chain": "bnbchain",
+    "symbol": "REVO",
+    "decimals": 18,
+    "address": "0x678e5f70b6b582dfadb3dbd68af17801d34555c5"
+  },
+  "REVV": {
+    "chain": "bnbchain",
+    "symbol": "REVV",
+    "decimals": 18,
+    "address": "0x833f307ac507d47309fd8cdd1f835bef8d702a93",
+    "logoURI": "https://assets.coingecko.com/coins/images/12373/thumb/REVV_TOKEN_Refined_2021_%281%29.png?1627652390"
+  },
+  "RFO": {
+    "chain": "bnbchain",
+    "address": "0xe379a1cabb18d17db3ea3ad4d34d5f0ef99d8a61",
+    "symbol": "RFO",
+    "decimals": 18
+  },
+  "RGP": {
+    "chain": "bnbchain",
+    "symbol": "RGP",
+    "decimals": 18,
+    "address": "0xfa262f303aa244f9cc66f312f0755d89c3793192"
+  },
+  "RNT": {
+    "chain": "bnbchain",
+    "address": "0x974e9f2075b8cc77a54f8b439042f242df353990",
+    "symbol": "RNT",
+    "decimals": 18
+  },
+  "ROAD": {
+    "chain": "bnbchain",
+    "symbol": "ROAD",
+    "decimals": 18,
+    "address": "0x1a3057027032a1af433f6f596cab15271e4d8196"
+  },
+  "ROY": {
+    "chain": "bnbchain",
+    "symbol": "ROY",
+    "decimals": 18,
+    "address": "0xcbcb497d505469f34463bbd5490cc46ae43f81ca"
+  },
+  "RUGBUST": {
+    "chain": "bnbchain",
+    "symbol": "RUGBUST",
+    "decimals": 18,
+    "address": "0x57bb0f40479d7dd0caa67f2a579273a8e9c038ee"
+  },
+  "RUNE": {
+    "chain": "bnbchain",
+    "symbol": "RUNE",
+    "decimals": 18,
+    "address": "0xa9776b590bfc2f956711b3419910a5ec1f63153e"
+  },
+  "RUSD": {
+    "chain": "bnbchain",
+    "symbol": "RUSD",
+    "decimals": 18,
+    "address": "0x07663837218a003e66310a01596af4bf4e44623d",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x07663837218A003e66310a01596af4bf4e44623D.png"
+  },
+  "RWT": {
+    "chain": "bnbchain",
+    "address": "0xec1f55b5be7ee8c24ee26b6cc931ce4d7fd5955c",
+    "symbol": "RWT",
+    "decimals": 18
+  },
+  "Rai": {
+    "chain": "bnbchain",
+    "symbol": "Rai",
+    "decimals": 18,
+    "address": "0x0e128fb9f266f0cfedeb3b789f6fd4af50d51b84"
+  },
+  "Ramen": {
+    "chain": "bnbchain",
+    "symbol": "Ramen",
+    "decimals": 18,
+    "address": "0x4f47a0d15c1e53f3d94c069c7d16977c29f9cb6b"
+  },
+  "Rely": {
+    "chain": "bnbchain",
+    "symbol": "Rely",
+    "decimals": 9,
+    "address": "0x727d0b444b86be03dba3ece809d8af292c6ad5fc"
+  },
+  "SAFEMOON": {
+    "chain": "bnbchain",
+    "address": "0x8076c74c5e3f5852037f31ff0093eeb8c8add8d3",
+    "symbol": "SAFEMOON",
+    "decimals": 9
+  },
+  "SAFEMUSK": {
+    "chain": "bnbchain",
+    "symbol": "SAFEMUSK",
+    "decimals": 9,
+    "address": "0x7aa0f568a5cc0b5395694cb5ad8c9423f8c41a80"
+  },
+  "SAFT": {
+    "chain": "bnbchain",
+    "symbol": "SAFT",
+    "decimals": 18,
+    "address": "0xd4ed4a27ff7eae121c487d841e530cd0da65c6b5"
+  },
+  "SAFU": {
+    "chain": "bnbchain",
+    "symbol": "SAFU",
+    "decimals": 18,
+    "address": "0x21e6d42f4176d6ca1a97fc606f80d500416f2650"
+  },
+  "SAKE": {
+    "chain": "bnbchain",
+    "symbol": "SAKE",
+    "decimals": 18,
+    "address": "0x8bd778b12b15416359a227f0533ce2d91844e1ed"
+  },
+  "SALE": {
+    "chain": "bnbchain",
+    "symbol": "SALE",
+    "decimals": 18,
+    "address": "0x97bb08ba41f033beaac315169fc566ac9e0daf52"
+  },
+  "SALT": {
+    "chain": "bnbchain",
+    "symbol": "SALT",
+    "decimals": 18,
+    "address": "0x2849b1ae7e04a3d9bc288673a92477cf63f28af4"
+  },
+  "SATOZ": {
+    "chain": "bnbchain",
+    "symbol": "SATOZ",
+    "decimals": 8,
+    "address": "0xf4341fa52669cea0c1836095529a7e9b04b8b88d"
+  },
+  "SCB": {
+    "chain": "bnbchain",
+    "symbol": "SCB",
+    "decimals": 18,
+    "address": "0xdcaf1afc07d9e1c057bd5cd144659910c4b91682"
+  },
+  "SDAO": {
+    "chain": "bnbchain",
+    "address": "0x90ed8f1dc86388f14b64ba8fb4bbd23099f18240",
+    "symbol": "SDAO",
+    "decimals": 18
+  },
+  "SEAMAN": {
+    "chain": "bnbchain",
+    "address": "0x6bc9b4976ba6f8c9574326375204ee469993d038",
+    "symbol": "SEAMAN",
+    "decimals": 18
+  },
+  "SEED": {
+    "chain": "bnbchain",
+    "symbol": "SEED",
+    "decimals": 18,
+    "address": "0x40b34cc972908060d6d527276e17c105d224559d"
+  },
+  "SEEDx": {
+    "chain": "bnbchain",
+    "address": "0x0cbfdea4f45a486cc7db53cb6e37b312a137c605",
+    "symbol": "SEEDx",
+    "decimals": 18
+  },
+  "SELF": {
+    "chain": "bnbchain",
+    "address": "0x50c34995a273075a80c23625f69f40d56ce414de",
+    "symbol": "SELF",
+    "decimals": 18
+  },
+  "SENZU": {
+    "chain": "bnbchain",
+    "symbol": "SENZU",
+    "decimals": 18,
+    "address": "0xcba1813ede683333020cedea7c3b63fbac28e78e"
+  },
+  "SFMC": {
+    "chain": "bnbchain",
+    "symbol": "SFMC",
+    "decimals": 18,
+    "address": "0x30b16a8dcf457ec72928e38f3bd3059d44db3014"
+  },
+  "SFP": {
+    "chain": "bnbchain",
+    "address": "0xd41fdb03ba84762dd66a0af1a6c8540ff1ba5dfb",
+    "symbol": "SFP",
+    "decimals": 18
+  },
+  "SFUND": {
+    "chain": "bnbchain",
+    "address": "0x477bc8d23c634c154061869478bce96be6045d12",
+    "symbol": "SFUND",
+    "decimals": 18
+  },
+  "SFUV": {
+    "chain": "bnbchain",
+    "symbol": "SFUV",
+    "decimals": 18,
+    "address": "0x0923cfc847da033da2294f44403067255978b189"
+  },
+  "SGRv2": {
+    "chain": "bnbchain",
+    "address": "0x56231d55391bd6382bc2a0761a644ea188b007cc",
+    "symbol": "SGRv2",
+    "decimals": 18
+  },
+  "SHEESHA": {
+    "chain": "bnbchain",
+    "symbol": "SHEESHA",
+    "decimals": 18,
+    "address": "0x232fb065d9d24c34708eedbf03724f2e95abe768"
+  },
+  "SHI": {
+    "chain": "bnbchain",
+    "symbol": "SHI",
+    "decimals": 18,
+    "address": "0x7269d98af4aa705e0b1a5d8512fadb4d45817d5a",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x7269d98Af4aA705e0B1A5D8512FadB4d45817d5a/logo.png"
+  },
+  "SHIB": {
+    "chain": "bnbchain",
+    "address": "0x2859e4544c4bb03966803b044a93563bd2d0dd4d",
+    "symbol": "SHIB",
+    "decimals": 18
+  },
+  "SHILD": {
+    "chain": "bnbchain",
+    "symbol": "SHILD",
+    "decimals": 18,
+    "address": "0x0e690ee6fcc26bc09fed2d2287268c23d4a81e42"
+  },
+  "SHIRO": {
+    "chain": "bnbchain",
+    "address": "0x9df604afbf57a4b2bdd5ed2e451f20055804bd18",
+    "symbol": "SHIRO",
+    "decimals": 9
+  },
+  "SHOW": {
+    "chain": "bnbchain",
+    "symbol": "SHOW",
+    "decimals": 18,
+    "address": "0xf93bf375d759fc3e37b165411a6cc3c7d1b28078"
+  },
+  "SHRMP": {
+    "chain": "bnbchain",
+    "symbol": "SHRMP",
+    "decimals": 18,
+    "address": "0xeeeeeeee82a747508b66431cfe9443ace4e30881"
+  },
+  "SHWA": {
+    "chain": "bnbchain",
+    "address": "0x4a2940263acfd179dbc1c6b69a3392671accaf5b",
+    "symbol": "SHWA",
+    "decimals": 18
+  },
+  "SIC": {
+    "chain": "bnbchain",
+    "address": "0x3b7709482cd3862766bb2c7815e93b4755a83b61",
+    "symbol": "SIC",
+    "decimals": 18
+  },
+  "SKILL": {
+    "chain": "bnbchain",
+    "symbol": "SKILL",
+    "decimals": 18,
+    "address": "0x154a9f9cbd3449ad22fdae23044319d6ef2a1fab",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x154A9F9cbd3449AD22FDaE23044319D6eF2a1Fab.png"
+  },
+  "SLi": {
+    "chain": "bnbchain",
+    "address": "0xa6bd2a843b911d4d27dc81ff9d2ff4ee1054a40b",
+    "symbol": "SLi",
+    "decimals": 8
+  },
+  "SMARS": {
+    "chain": "bnbchain",
+    "address": "0xc0366a104b429f0806bfa98d0008daa9555b2bed",
+    "symbol": "SMARS",
+    "decimals": 9
+  },
+  "SMG": {
+    "chain": "bnbchain",
+    "symbol": "SMG",
+    "decimals": 8,
+    "address": "0x6bfd576220e8444ca4cc5f89efbd7f02a4c94c16"
+  },
+  "SML": {
+    "chain": "bnbchain",
+    "symbol": "SML",
+    "decimals": 9,
+    "address": "0xd930f493e153d745afb124f9859be8479e4b1862"
+  },
+  "SMON": {
+    "chain": "bnbchain",
+    "symbol": "SMON",
+    "decimals": 18,
+    "address": "0xab15b79880f11cffb58db25ec2bc39d28c4d80d2",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xAB15B79880f11cFfb58dB25eC2bc39d28c4d80d2/logo.png"
+  },
+  "SMU": {
+    "chain": "bnbchain",
+    "address": "0xa5522ae272b74b014bc20ef7ef2e2b87af0787d8",
+    "symbol": "SMU",
+    "decimals": 18
+  },
+  "SOAK": {
+    "chain": "bnbchain",
+    "symbol": "SOAK",
+    "decimals": 18,
+    "address": "0x849233ff1aea15d80ef658b2871664c9ca994063"
+  },
+  "SOL": {
+    "chain": "bnbchain",
+    "address": "0x570a5d26f7765ecb712c0924e4de545b89fd43df",
+    "symbol": "SOL",
+    "decimals": 18
+  },
+  "SOUL": {
+    "chain": "bnbchain",
+    "symbol": "SOUL",
+    "decimals": 8,
+    "address": "0x67d012f731c23f0313cea1186d0121779c77fcfe"
+  },
+  "SOUP": {
+    "chain": "bnbchain",
+    "symbol": "SOUP",
+    "decimals": 18,
+    "address": "0x94f559ae621f1c810f31a6a620ad7376776fe09e"
+  },
+  "SPACE": {
+    "chain": "bnbchain",
+    "symbol": "SPACE",
+    "decimals": 18,
+    "address": "0x0abd3e3502c15ec252f90f64341cba74a24fba06"
+  },
+  "SPG": {
+    "chain": "bnbchain",
+    "symbol": "SPG",
+    "decimals": 9,
+    "address": "0x3aabcf53a1930a42e18d938c019e83ebee50a849"
+  },
+  "SPORE": {
+    "chain": "bnbchain",
+    "symbol": "SPORE",
+    "decimals": 18,
+    "address": "0x77f6a5f1b7a2b6d6c322af8581317d6bb0a52689"
+  },
+  "SPS": {
+    "chain": "bnbchain",
+    "symbol": "SPS",
+    "decimals": 18,
+    "address": "0x1633b7157e7638c4d6593436111bf125ee74703f",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x1633b7157e7638C4d6593436111Bf125Ee74703F.png"
+  },
+  "SPYON": {
+    "chain": "bnbchain",
+    "symbol": "SPYON",
+    "decimals": 9,
+    "address": "0x7e77dac95bfbe4f14c88e7e3fb4e0176e62f4717"
+  },
+  "SROCKET": {
+    "chain": "bnbchain",
+    "symbol": "SROCKET",
+    "decimals": 18,
+    "address": "0x859e2e45833c655f92ee2c55976722d22c5ae818"
+  },
+  "SST": {
+    "chain": "bnbchain",
+    "address": "0xc5a3b4d39812744848f6017137f64f05396add68",
+    "symbol": "SST",
+    "decimals": 18
+  },
+  "START": {
+    "chain": "bnbchain",
+    "symbol": "START",
+    "decimals": 18,
+    "address": "0x31d0a7ada4d4c131eb612db48861211f63e57610"
+  },
+  "STAX": {
+    "chain": "bnbchain",
+    "symbol": "STAX",
+    "decimals": 18,
+    "address": "0x0da6ed8b13214ff28e9ca979dd37439e8a88f6c4"
+  },
+  "STC": {
+    "chain": "bnbchain",
+    "address": "0x80702018c28988dfe3c900561745f7af1b9fdb37",
+    "symbol": "STC",
+    "decimals": 18
+  },
+  "STEAM": {
+    "chain": "bnbchain",
+    "symbol": "STEAM",
+    "decimals": 18,
+    "address": "0x072e3d0d4f14dd82a16b0a33678c6104e9009ed9"
+  },
+  "STG": {
+    "chain": "bnbchain",
+    "address": "0xb0d502e938ed5f4df2e681fe6e419ff29631d62b",
+    "symbol": "STG",
+    "decimals": 18
+  },
+  "STOCH": {
+    "chain": "bnbchain",
+    "symbol": "STOCH",
+    "decimals": 18,
+    "address": "0xb57a5bff7141ec4a95a08c7321cb14fafd7952a8"
+  },
+  "STONE": {
+    "chain": "bnbchain",
+    "address": "0xc9ef9c76b2df7b544d6c0a4ca0fe92c0ec66c3c5",
+    "symbol": "STONE",
+    "decimals": 18
+  },
+  "STR": {
+    "chain": "bnbchain",
+    "address": "0x30dcf96a8a0c742aa1f534fac79e99d320c97901",
+    "symbol": "STR",
+    "decimals": 13
+  },
+  "STRAC": {
+    "chain": "bnbchain",
+    "address": "0xbcc527351606dd5c9a059e6b0fea56061767db9c",
+    "symbol": "STRAC",
+    "decimals": 18
+  },
+  "STRAINZ": {
+    "chain": "bnbchain",
+    "symbol": "STRAINZ",
+    "decimals": 0,
+    "address": "0x7f1addbb144363730a433a21acdab7b36f988252"
+  },
+  "STRI": {
+    "chain": "bnbchain",
+    "symbol": "STRI",
+    "decimals": 18,
+    "address": "0x9b93c29595dd603f75854eba3c5f4ee078ee4454"
+  },
+  "STRIKE": {
+    "chain": "bnbchain",
+    "symbol": "STRIKE",
+    "decimals": 3,
+    "address": "0xbe2a26889ce30a1515055a192797083b1fde8844"
+  },
+  "STRM": {
+    "chain": "bnbchain",
+    "address": "0xc598275452fa319d75ee5f176fd3b8384925b425",
+    "symbol": "STRM",
+    "decimals": 18
+  },
+  "STV": {
+    "chain": "bnbchain",
+    "address": "0x01ee9c2ec468236368dab097babaea4875fb4f81",
+    "symbol": "STV",
+    "decimals": 18
+  },
+  "SUPER": {
+    "chain": "bnbchain",
+    "symbol": "SUPER",
+    "decimals": 10,
+    "address": "0x9c47b18a2af4b5a8aaa1b93e8f35460e8867bfdb"
+  },
+  "SUSHI": {
+    "chain": "bnbchain",
+    "address": "0x947950bcc74888a40ffa2593c5798f11fc9124c4",
+    "symbol": "SUSHI",
+    "decimals": 18
+  },
+  "SWAMP": {
+    "chain": "bnbchain",
+    "symbol": "SWAMP",
+    "decimals": 18,
+    "address": "0xc5a49b4cbe004b6fd55b30ba1de6ac360ff9765d"
+  },
+  "SWAPS": {
+    "chain": "bnbchain",
+    "symbol": "SWAPS",
+    "decimals": 18,
+    "address": "0xc536462e5a9fdacd4f1008a91e7daba1374c0226"
+  },
+  "SWFTC": {
+    "chain": "bnbchain",
+    "symbol": "SWFTC",
+    "decimals": 18,
+    "address": "0xe64e30276c2f826febd3784958d6da7b55dfbad3",
+    "logoURI": "https://assets.coingecko.com/coins/images/2346/thumb/SWFTCoin.jpg?1618392022"
+  },
+  "SWINGBY": {
+    "chain": "bnbchain",
+    "symbol": "SWINGBY",
+    "decimals": 18,
+    "address": "0x71de20e0c4616e7fcbfdd3f875d568492cbe4739"
+  },
+  "SWIRL": {
+    "chain": "bnbchain",
+    "symbol": "SWIRL",
+    "decimals": 18,
+    "address": "0x52d86850bc8207b520340b7e39cdaf22561b9e56"
+  },
+  "SXP": {
+    "chain": "bnbchain",
+    "address": "0x47bead2563dcbf3bf2c9407fea4dc236faba485a",
+    "symbol": "SXP",
+    "decimals": 18
+  },
+  "SYN": {
+    "chain": "bnbchain",
+    "address": "0xa4080f1778e69467e905b8d6f72f6e441f9e9484",
+    "symbol": "SYN",
+    "decimals": 18
+  },
+  "SafeGalaxyClassic": {
+    "chain": "bnbchain",
+    "symbol": "SafeGalaxyClassic",
+    "decimals": 18,
+    "address": "0x6827aed0e64478b1a7af75431e56f9a449852c63"
+  },
+  "Sheesh": {
+    "chain": "bnbchain",
+    "symbol": "Sheesh",
+    "decimals": 18,
+    "address": "0x7e5d52c3335c91af0da392bea4bb9e43f2aba62c"
+  },
+  "ShiCo": {
+    "chain": "bnbchain",
+    "symbol": "ShiCo",
+    "decimals": 9,
+    "address": "0x092bbec1342afffd16cfb41b56343d5a299cdf0d"
+  },
+  "SnBNB": {
+    "chain": "bnbchain",
+    "address": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
+    "symbol": "SnBNB",
+    "decimals": 18
+  },
+  "TABLE": {
+    "chain": "bnbchain",
+    "symbol": "TABLE",
+    "decimals": 18,
+    "address": "0xf5a2f7418035ce76967f515f39d65719bb0453b6"
+  },
+  "TACO": {
+    "chain": "bnbchain",
+    "symbol": "TACO",
+    "decimals": 18,
+    "address": "0x9066e87bac891409d690cfefa41379b34af06391"
+  },
+  "TAO": {
+    "chain": "bnbchain",
+    "symbol": "TAO",
+    "decimals": 9,
+    "address": "0xf0443834b7b21104b7102edbe8f9ec06204cd395"
+  },
+  "TCPFM": {
+    "chain": "bnbchain",
+    "symbol": "TCPFM",
+    "decimals": 18,
+    "address": "0xfd121aed91e9efb3b37a9459642317f283f9ef73"
+  },
+  "TEN": {
+    "chain": "bnbchain",
+    "symbol": "TEN",
+    "decimals": 18,
+    "address": "0xdff8cb622790b7f92686c722b02cab55592f152c"
+  },
+  "TEO": {
+    "chain": "bnbchain",
+    "address": "0xafda600b05e21a732e1d1755a63945d96c1121aa",
+    "symbol": "TEO",
+    "decimals": 18
+  },
+  "TETE": {
+    "chain": "bnbchain",
+    "address": "0xb904f061da857fb32528da89b09cfc17b0f346b9",
+    "symbol": "TETE",
+    "decimals": 18
+  },
+  "THOR": {
+    "chain": "bnbchain",
+    "symbol": "THOR",
+    "decimals": 18,
+    "address": "0x91a92482526eb04e60e4372a919b74027f1ad935"
+  },
+  "TIC": {
+    "chain": "bnbchain",
+    "address": "0x0cc3754442d15aeeceafdc1f56624b592eb0bb99",
+    "symbol": "TIC",
+    "decimals": 18
+  },
+  "TIME": {
+    "chain": "bnbchain",
+    "symbol": "TIME",
+    "decimals": 8,
+    "address": "0x3b198e26e473b8fab2085b37978e36c9de5d7f68",
+    "logoURI": "https://assets.coingecko.com/coins/images/604/thumb/time-32x32.png?1627130666"
+  },
+  "TKO": {
+    "chain": "bnbchain",
+    "symbol": "TKO",
+    "decimals": 18,
+    "address": "0x9f589e3eabe42ebc94a44727b3f3531c0c877809",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x9f589e3eabe42ebC94A44727b3f3531C0c877809.png"
+  },
+  "TLM": {
+    "chain": "bnbchain",
+    "symbol": "TLM",
+    "decimals": 4,
+    "address": "0x2222227e22102fe3322098e4cbfe18cfebd57c95",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x2222227E22102Fe3322098e4CBfE18cFebD57c95.png"
+  },
+  "TNDR": {
+    "chain": "bnbchain",
+    "symbol": "TNDR",
+    "decimals": 18,
+    "address": "0x7cc46141ab1057b1928de5ad5ee78bb37efc4868"
+  },
+  "TOAD": {
+    "chain": "bnbchain",
+    "symbol": "TOAD",
+    "decimals": 18,
+    "address": "0x463e737d8f740395abf44f7aac2d9531d8d539e9"
+  },
+  "TOFY": {
+    "chain": "bnbchain",
+    "symbol": "TOFY",
+    "decimals": 18,
+    "address": "0xe1f2d89a6c79b4242f300f880e490a70083e9a1c"
+  },
+  "TOKEN": {
+    "chain": "bnbchain",
+    "address": "0x4507cef57c46789ef8d1a19ea45f4216bae2b528",
+    "symbol": "TOKEN",
+    "decimals": 9
+  },
+  "TONCOIN": {
+    "chain": "bnbchain",
+    "address": "0x76a797a59ba2c17726896976b7b3747bfd1d220f",
+    "symbol": "TONCOIN",
+    "decimals": 9
+  },
+  "TOOLS": {
+    "chain": "bnbchain",
+    "symbol": "TOOLS",
+    "decimals": 18,
+    "address": "0x1311b352467d2b5c296881badea82850bcd8f886"
+  },
+  "TOPP": {
+    "chain": "bnbchain",
+    "address": "0x6fbecb06f180149aba836c58b06d44d1cb55a0c1",
+    "symbol": "TOPP",
+    "decimals": 18
+  },
+  "TOPS": {
+    "chain": "bnbchain",
+    "symbol": "TOPS",
+    "decimals": 8,
+    "address": "0x842446d1fd581fa12a4c34663a745c9df51e9364"
+  },
+  "TOTORO": {
+    "chain": "bnbchain",
+    "symbol": "TOTORO",
+    "decimals": 0,
+    "address": "0x83c43fdc737541196c6085ae4378db3dbaa90c99"
+  },
+  "TPT": {
+    "chain": "bnbchain",
+    "symbol": "TPT",
+    "decimals": 4,
+    "address": "0xeca41281c24451168a37211f0bc2b8645af45092",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xECa41281c24451168a37211F0bc2b8645AF45092.png"
+  },
+  "TRADE": {
+    "chain": "bnbchain",
+    "symbol": "TRADE",
+    "decimals": 18,
+    "address": "0x7af173f350d916358af3e218bdf2178494beb748"
+  },
+  "TRDG": {
+    "chain": "bnbchain",
+    "symbol": "TRDG",
+    "decimals": 9,
+    "address": "0x92a42db88ed0f02c71d439e55962ca7cab0168b5"
+  },
+  "TREE": {
+    "chain": "bnbchain",
+    "symbol": "TREE",
+    "decimals": 18,
+    "address": "0xf0fcd737fce18f95621cc7841ebe0ea6efccf77e"
+  },
+  "TRI": {
+    "chain": "bnbchain",
+    "symbol": "TRI",
+    "decimals": 18,
+    "address": "0x18782b1d35d377905368de4a18ebad055594862d"
+  },
+  "TRONPAD": {
+    "chain": "bnbchain",
+    "symbol": "TRONPAD",
+    "decimals": 18,
+    "address": "0x1bf7aedec439d6bfe38f8f9b20cf3dc99e3571c4",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x1Bf7AedeC439D6BFE38f8f9b20CF3dc99e3571C4/logo.png"
+  },
+  "TRUNK": {
+    "chain": "bnbchain",
+    "address": "0xdd325c38b12903b727d16961e61333f4871a70e0",
+    "symbol": "TRUNK",
+    "decimals": 18
+  },
+  "TRUST": {
+    "chain": "bnbchain",
+    "symbol": "TRUST",
+    "decimals": 18,
+    "address": "0x2dbd86a424a815ad2a08a2d8dae07007fed6dc91"
+  },
+  "TRUSTK": {
+    "chain": "bnbchain",
+    "address": "0xee89bd9af5e72b19b48cac3e51acde3a09a3ade3",
+    "symbol": "TRUSTK",
+    "decimals": 18
+  },
+  "TRX": {
+    "chain": "bnbchain",
+    "address": "0xce7de646e7208a4ef112cb6ed5038fa6cc6b12e3",
+    "symbol": "TRX",
+    "decimals": 6
+  },
+  "TRYON": {
+    "chain": "bnbchain",
+    "symbol": "TRYON",
+    "decimals": 18,
+    "address": "0x050f65bef6bd15de57462cf75d06bafeb2a59118"
+  },
+  "TS": {
+    "chain": "bnbchain",
+    "address": "0x9879406c2ef6578ceb59009d64151ef3f225830b",
+    "symbol": "TS",
+    "decimals": 18
+  },
+  "TSC": {
+    "chain": "bnbchain",
+    "symbol": "TSC",
+    "decimals": 9,
+    "address": "0xa2a26349448ddafae34949a6cc2cecf78c0497ac",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xA2a26349448ddAfAe34949a6Cc2cEcF78c0497aC/logo.png"
+  },
+  "TT": {
+    "chain": "bnbchain",
+    "symbol": "TT",
+    "decimals": 18,
+    "address": "0x990e7154bb999faa9b2fa5ed29e822703311ea85"
+  },
+  "TUSD": {
+    "chain": "bnbchain",
+    "address": "0x40af3827f39d0eacbf4a168f8d4ee67c121d11c9",
+    "symbol": "TUSD",
+    "decimals": 18
+  },
+  "TWT": {
+    "chain": "bnbchain",
+    "address": "0x4b0f1812e5df2a09796481ff14017e6005508003",
+    "symbol": "TWT",
+    "decimals": 18
+  },
+  "TXL": {
+    "chain": "bnbchain",
+    "symbol": "TXL",
+    "decimals": 18,
+    "address": "0x1ffd0b47127fdd4097e54521c9e2c7f0d66aafc5"
+  },
+  "TYPH": {
+    "chain": "bnbchain",
+    "symbol": "TYPH",
+    "decimals": 18,
+    "address": "0x4090e535f2e251f5f88518998b18b54d26b3b07c"
+  },
+  "Tcake": {
+    "chain": "bnbchain",
+    "symbol": "Tcake",
+    "decimals": 18,
+    "address": "0x3b831d36ed418e893f42d46ff308c326c239429f"
+  },
+  "TooL": {
+    "chain": "bnbchain",
+    "address": "0xe11d666365abdc739fbda4da2e8df40bec972315",
+    "symbol": "TooL",
+    "decimals": 18
+  },
+  "UBU": {
+    "chain": "bnbchain",
+    "symbol": "UBU",
+    "decimals": 18,
+    "address": "0xd2ddfba7bb12f6e70c2aab6b6bf9edaef42ed22f"
+  },
+  "UFD": {
+    "chain": "bnbchain",
+    "address": "0x936685c7d81a03a204219cc7d0e61684c65471ca",
+    "symbol": "UFD",
+    "decimals": 18
+  },
+  "ULX": {
+    "chain": "bnbchain",
+    "address": "0xd983ab71a284d6371908420d8ac6407ca943f810",
+    "symbol": "ULX",
+    "decimals": 18
+  },
+  "UMT": {
+    "chain": "bnbchain",
+    "address": "0xca861e289f04cb9c67fd6b87ca7eafa59192f164",
+    "symbol": "UMT",
+    "decimals": 18
+  },
+  "UNC": {
+    "chain": "bnbchain",
+    "address": "0x35da89a339de2c78f8fb1c5e1a9a9c6539e2fa8a",
+    "symbol": "UNC",
+    "decimals": 18
+  },
+  "UNCL": {
+    "chain": "bnbchain",
+    "symbol": "UNCL",
+    "decimals": 18,
+    "address": "0x0e8d5504bf54d9e44260f8d153ecd5412130cabb",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x0E8D5504bF54D9E44260f8d153EcD5412130CaBb/logo.png"
+  },
+  "UNCX": {
+    "chain": "bnbchain",
+    "symbol": "UNCX",
+    "decimals": 18,
+    "address": "0x09a6c44c3947b69e2b45f4d51b67e6a39acfb506",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x09a6c44c3947B69E2B45F4D51b67E6a39ACfB506/logo.png"
+  },
+  "UND": {
+    "chain": "bnbchain",
+    "address": "0xe7c04392a3a426d532f83ca968bcc0341e99583d",
+    "symbol": "UND",
+    "decimals": 18
+  },
+  "UNFI": {
+    "chain": "bnbchain",
+    "symbol": "UNFI",
+    "decimals": 18,
+    "address": "0x728c5bac3c3e370e372fc4671f9ef6916b814d8b"
+  },
+  "UNI": {
+    "chain": "bnbchain",
+    "address": "0xbf5140a22578168fd562dccf235e5d43a02ce9b1",
+    "symbol": "UNI",
+    "decimals": 18
+  },
+  "UNICORN": {
+    "chain": "bnbchain",
+    "symbol": "UNICORN",
+    "decimals": 18,
+    "address": "0xe3e1fabeabd48491bd6902b0c32fdeee8d2ff12b"
+  },
+  "UPI": {
+    "chain": "bnbchain",
+    "symbol": "UPI",
+    "decimals": 18,
+    "address": "0x0d35a2b85c5a63188d566d104bebf7c694334ee4",
+    "logoURI": "https://assets.coingecko.com/coins/images/12186/thumb/pawtocol.jpg?1597962008"
+  },
+  "USD+": {
+    "chain": "bnbchain",
+    "address": "0xe80772eaf6e2e18b651f160bc9158b2a5cafca65",
+    "symbol": "USD+",
+    "decimals": 6
+  },
+  "USDC": {
+    "chain": "bnbchain",
+    "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+    "symbol": "USDC",
+    "decimals": 18
+  },
+  "USDD": {
+    "chain": "bnbchain",
+    "address": "0xd17479997f34dd9156deef8f95a52d81d265be9c",
+    "symbol": "USDD",
+    "decimals": 18
+  },
+  "USDFI": {
+    "chain": "bnbchain",
+    "address": "0x11a38e06699b238d6d9a0c7a01f3ac63a07ad318",
+    "symbol": "USDFI",
+    "decimals": 18
+  },
+  "USDT": {
+    "chain": "bnbchain",
+    "address": "0x55d398326f99059ff775485246999027b3197955",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "USDT+": {
+    "chain": "bnbchain",
+    "address": "0x5335e87930b410b8c5bb4d43c3360aca15ec0c8c",
+    "symbol": "USDT+",
+    "decimals": 18
+  },
+  "USDTc": {
+    "chain": "bnbchain",
+    "address": "0x2e8eda9c595ed07172d7b296d5f2602358103a2e",
+    "symbol": "USDTc",
+    "decimals": 6
+  },
+  "USDV": {
+    "chain": "bnbchain",
+    "address": "0x323665443cef804a3b5206103304bd4872ea4253",
+    "symbol": "USDV",
+    "decimals": 6
+  },
+  "USH": {
+    "chain": "bnbchain",
+    "address": "0x91d6d6af7635b7b23a8ced9508117965180e2362",
+    "symbol": "USH",
+    "decimals": 18
+  },
+  "UST": {
+    "chain": "bnbchain",
+    "address": "0x23396cf899ca06c4472205fc903bdb4de249d6fc",
+    "symbol": "UST",
+    "decimals": 18
+  },
+  "USX": {
+    "chain": "bnbchain",
+    "address": "0xb5102cee1528ce2c760893034a4603663495fd72",
+    "symbol": "USX",
+    "decimals": 18
+  },
+  "VAI": {
+    "chain": "bnbchain",
+    "symbol": "VAI",
+    "decimals": 18,
+    "address": "0x4bd17003473389a42daf6a0a729f6fdb328bbbd7",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0x4BD17003473389A42DAF6a0a729f6Fdb328BbBd7.png"
+  },
+  "VANCAT": {
+    "chain": "bnbchain",
+    "symbol": "VANCAT",
+    "decimals": 0,
+    "address": "0x8597ba143ac509189e89aab3ba28d661a5dd9830"
+  },
+  "VAULT": {
+    "chain": "bnbchain",
+    "symbol": "VAULT",
+    "decimals": 18,
+    "address": "0xd456be0ff7007b3d8ad656136487a23e771f5762"
+  },
+  "VBCE": {
+    "chain": "bnbchain",
+    "address": "0x0797907abbbc526c042e8f0e708b957f18a34c1a",
+    "symbol": "VBCE",
+    "decimals": 18
+  },
+  "VGD": {
+    "chain": "bnbchain",
+    "symbol": "VGD",
+    "decimals": 18,
+    "address": "0xfd91fa8fab5ca11569e256fa8844bc2abecc331d"
+  },
+  "VIKING": {
+    "chain": "bnbchain",
+    "symbol": "VIKING",
+    "decimals": 18,
+    "address": "0x896ede222d3f7f3414e136a2791bdb08aaa25ce0"
+  },
+  "VLAD": {
+    "chain": "bnbchain",
+    "symbol": "VLAD",
+    "decimals": 8,
+    "address": "0x279d41f3f78fe5c1f0ba41ae963d6e545113c973"
+  },
+  "VLT": {
+    "chain": "bnbchain",
+    "symbol": "VLT",
+    "decimals": 18,
+    "address": "0x82da15e36f23a4b603bc8a57c27813f2faeb04b2"
+  },
+  "VOLLAR": {
+    "chain": "bnbchain",
+    "address": "0x2d6e7de3e470bbef38cdfed589fa88102ba3134a",
+    "symbol": "VOLLAR",
+    "decimals": 8
+  },
+  "VOLT": {
+    "chain": "bnbchain",
+    "address": "0x7f792db54b0e580cdc755178443f0430cf799aca",
+    "symbol": "VOLT",
+    "decimals": 9
+  },
+  "VPC": {
+    "chain": "bnbchain",
+    "address": "0x1651f961d5cead3f42a06eefe4a1fba3b408fda2",
+    "symbol": "VPC",
+    "decimals": 18
+  },
+  "VRM": {
+    "chain": "bnbchain",
+    "symbol": "VRM",
+    "decimals": 18,
+    "address": "0x5ed934d24eba708e04b910d21828bea2dc919246"
+  },
+  "VSEG": {
+    "chain": "bnbchain",
+    "address": "0x401a6243115f6d8a81191544eecae5900538cb45",
+    "symbol": "VSEG",
+    "decimals": 18
+  },
+  "VT": {
+    "chain": "bnbchain",
+    "address": "0x45abd7773b55d74095b80b3312faf6e657b77b5b",
+    "symbol": "VT",
+    "decimals": 18
+  },
+  "VTUBE": {
+    "chain": "bnbchain",
+    "symbol": "VTUBE",
+    "decimals": 18,
+    "address": "0x25dfe3386525465802af6bfe499ded48017155ad"
+  },
+  "VTX": {
+    "chain": "bnbchain",
+    "symbol": "VTX",
+    "decimals": 18,
+    "address": "0x070625d5a14706c30b8e2264753b2f5d035bc1b4"
+  },
+  "VUSD": {
+    "chain": "bnbchain",
+    "address": "0xa80d76abb3087f730ce14aaf54b211611bac0be8",
+    "symbol": "VUSD",
+    "decimals": 18
+  },
+  "Vista": {
+    "chain": "bnbchain",
+    "symbol": "Vista",
+    "decimals": 8,
+    "address": "0xd16983f76c83d6ded8a20483da3d2a5dae74ac7c"
+  },
+  "WAF": {
+    "chain": "bnbchain",
+    "symbol": "WAF",
+    "decimals": 18,
+    "address": "0x650febe5ad8a17a8f27f17ec80fd208e23e9246c"
+  },
+  "WAGE": {
+    "chain": "bnbchain",
+    "address": "0x30fe0333504a199a099042a403ce069af8136344",
+    "symbol": "WAGE",
+    "decimals": 18
+  },
+  "WANA": {
+    "chain": "bnbchain",
+    "symbol": "WANA",
+    "decimals": 18,
+    "address": "0x339c72829ab7dd45c3c52f965e7abe358dd8761e",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x339C72829AB7DD45C3C52f965E7ABe358dd8761E/logo.png"
+  },
+  "WATCH": {
+    "chain": "bnbchain",
+    "symbol": "WATCH",
+    "decimals": 18,
+    "address": "0x7a9f28eb62c791422aa23ceae1da9c847cbec9b0"
+  },
+  "WATER": {
+    "chain": "bnbchain",
+    "address": "0xb3391ec205cc37834e9aaa85741203b4d51922b8",
+    "symbol": "WATER",
+    "decimals": 18
+  },
+  "WAULT": {
+    "chain": "bnbchain",
+    "symbol": "WAULT",
+    "decimals": 18,
+    "address": "0x6ff2d9e5891a7a7c554b80e0d1b791483c78bce9"
+  },
+  "WBNB": {
+    "chain": "bnbchain",
+    "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+    "symbol": "WBNB",
+    "decimals": 18
+  },
+  "WDYMEME": {
+    "chain": "bnbchain",
+    "symbol": "WDYMEME",
+    "decimals": 18,
+    "address": "0x7643f0c207172497810ba6b76c5f3924d4ee7569"
+  },
+  "WEC": {
+    "chain": "bnbchain",
+    "address": "0x2ad69e58071b95c047bf78dc804db3662275b64a",
+    "symbol": "WEC",
+    "decimals": 18
+  },
+  "WETH": {
+    "chain": "bnbchain",
+    "address": "0x4db5a66e937a9f4473fa95b1caf1d1e1d62e29ea",
+    "symbol": "WETH",
+    "decimals": 18
+  },
+  "WEYU": {
+    "chain": "bnbchain",
+    "symbol": "WEYU",
+    "decimals": 18,
+    "address": "0xfafd4cb703b25cb22f43d017e7e0d75febc26743",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xFAfD4CB703B25CB22f43D017e7e0d75FEBc26743/logo.png"
+  },
+  "WGBDX": {
+    "chain": "bnbchain",
+    "address": "0x0ad97c2bc18c55ddfa531d08971508ed9b21c83d",
+    "symbol": "WGBDX",
+    "decimals": 18
+  },
+  "WGR": {
+    "chain": "bnbchain",
+    "symbol": "WGR",
+    "decimals": 18,
+    "address": "0xdbf8265b1d5244a13424f13977723acf5395eab2"
+  },
+  "WIN": {
+    "chain": "bnbchain",
+    "symbol": "WIN",
+    "decimals": 18,
+    "address": "0xaef0d72a118ce24fee3cd1d43d383897d05b4e99",
+    "logoURI": "https://tokens.pancakeswap.finance/images/0xaeF0d72a118ce24feE3cD1d43d383897D05B4e99.png"
+  },
+  "WINDY": {
+    "chain": "bnbchain",
+    "symbol": "WINDY",
+    "decimals": 8,
+    "address": "0xd1587ee50e0333f0c4adcf261379a61b1486c5d2"
+  },
+  "WKBO": {
+    "chain": "bnbchain",
+    "address": "0xf48a6134aae5fc7186fee6a7f874426af69aecf8",
+    "symbol": "WKBO",
+    "decimals": 18
+  },
+  "WLT": {
+    "chain": "bnbchain",
+    "symbol": "WLT",
+    "decimals": 9,
+    "address": "0xb7b262b0ac4939d8936685e20189d809bdb5dac6"
+  },
+  "WMASS": {
+    "chain": "bnbchain",
+    "symbol": "WMASS",
+    "decimals": 8,
+    "address": "0x7e396bfc8a2f84748701167c2d622f041a1d7a17"
+  },
+  "WMATIC": {
+    "chain": "bnbchain",
+    "address": "0xc836d8dc361e44dbe64c4862d55ba041f88ddd39",
+    "symbol": "WMATIC",
+    "decimals": 18
+  },
+  "WNYC": {
+    "chain": "bnbchain",
+    "address": "0x6c015277b0f9b8c24b20bd8bbbd29fdb25738a69",
+    "symbol": "WNYC",
+    "decimals": 18
+  },
+  "WOFO1": {
+    "chain": "bnbchain",
+    "address": "0xad2c9433c8cada6aa01271edb300975a68db7d02",
+    "symbol": "WOFO1",
+    "decimals": 18
+  },
+  "WOJAK": {
+    "chain": "bnbchain",
+    "address": "0x4c44b1cab1c4ca44d4326b38964a0372cfb52533",
+    "symbol": "WOJAK",
+    "decimals": 18
+  },
+  "WOO": {
+    "chain": "bnbchain",
+    "symbol": "WOO",
+    "decimals": 18,
+    "address": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
+    "logoURI": "https://assets.coingecko.com/coins/images/12921/thumb/w2UiemF__400x400.jpg?1603670367"
+  },
+  "WOR": {
+    "chain": "bnbchain",
+    "address": "0xd6edbb510af7901b2c049ce778b65a740c4aeb7f",
+    "symbol": "WOR",
+    "decimals": 18
+  },
+  "WORLD": {
+    "chain": "bnbchain",
+    "symbol": "WORLD",
+    "decimals": 18,
+    "address": "0x31ffbe9bf84b4d9d02cd40eccab4af1e2877bbc6"
+  },
+  "WORMv2": {
+    "chain": "bnbchain",
+    "symbol": "WORMv2",
+    "decimals": 18,
+    "address": "0xb88d645b41909f74e1379129e2852920aa65ddce"
+  },
+  "WOW": {
+    "chain": "bnbchain",
+    "symbol": "WOW",
+    "decimals": 18,
+    "address": "0x4da996c5fe84755c80e108cf96fe705174c5e36a"
+  },
+  "WSB": {
+    "chain": "bnbchain",
+    "symbol": "WSB",
+    "decimals": 18,
+    "address": "0x22168882276e5d5e1da694343b41dd7726eeb288"
+  },
+  "WSBT": {
+    "chain": "bnbchain",
+    "symbol": "WSBT",
+    "decimals": 18,
+    "address": "0x8244609023097aef71c702ccbaefc0bde5b48694"
+  },
+  "WTBC": {
+    "chain": "bnbchain",
+    "address": "0xa0af9c615a14a4914dbf239d9769b9de8ee65fac",
+    "symbol": "WTBC",
+    "decimals": 9
+  },
+  "WYNAUT": {
+    "chain": "bnbchain",
+    "symbol": "WYNAUT",
+    "decimals": 8,
+    "address": "0x067a5ad3f0f91acf512ffe66ea77f37b4dcaaf18"
+  },
+  "Wed": {
+    "chain": "bnbchain",
+    "address": "0xebd35ff8ee51aef61defaa05052c7b5117640b39",
+    "symbol": "Wed",
+    "decimals": 18
+  },
+  "Welle": {
+    "chain": "bnbchain",
+    "address": "0x71cb7ef7980c44dfbbe5744973c0587764116d26",
+    "symbol": "Welle",
+    "decimals": 18
+  },
+  "XBN": {
+    "chain": "bnbchain",
+    "symbol": "XBN",
+    "decimals": 18,
+    "address": "0x547cbe0f0c25085e7015aa6939b28402eb0ccdac"
+  },
+  "XBSC": {
+    "chain": "bnbchain",
+    "symbol": "XBSC",
+    "decimals": 18,
+    "address": "0x809257844b26dd40fd14170c1e2b887e29bbe274"
+  },
+  "XCN": {
+    "chain": "bnbchain",
+    "symbol": "XCN",
+    "decimals": 18,
+    "address": "0x7324c7c0d95cebc73eea7e85cbaac0dbdf88a05b",
+    "logoURI": "https://assets.coingecko.com/coins/images/24210/thumb/Chain_icon_200x200.png?1646895054"
+  },
+  "XEND": {
+    "chain": "bnbchain",
+    "symbol": "XEND",
+    "decimals": 18,
+    "address": "0x4a080377f83d669d7bb83b3184a8a5e61b500608"
+  },
+  "XKAT": {
+    "chain": "bnbchain",
+    "symbol": "XKAT",
+    "decimals": 18,
+    "address": "0x513f20943c7a5b46c084c7254c0a5533fa72459c"
+  },
+  "XNS": {
+    "chain": "bnbchain",
+    "symbol": "XNS",
+    "decimals": 18,
+    "address": "0x805d53d9b85c56aaa059005c553b65c084bcea85"
+  },
+  "XPO": {
+    "chain": "bnbchain",
+    "symbol": "XPO",
+    "decimals": 18,
+    "address": "0xebb59cebfb63f218db6b5094dc14abf34d56d35d"
+  },
+  "XRP": {
+    "chain": "bnbchain",
+    "address": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe",
+    "symbol": "XRP",
+    "decimals": 18
+  },
+  "XRT": {
+    "chain": "bnbchain",
+    "symbol": "XRT",
+    "decimals": 9,
+    "address": "0xc0a51ac9d548bdcde53fa59448029e41a39feb20"
+  },
+  "XTZ": {
+    "chain": "bnbchain",
+    "symbol": "XTZ",
+    "decimals": 18,
+    "address": "0x16939ef78684453bfdfb47825f8a5f714f12623a"
+  },
+  "XVS": {
+    "chain": "bnbchain",
+    "address": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
+    "symbol": "XVS",
+    "decimals": 18
+  },
+  "XWG": {
+    "chain": "bnbchain",
+    "symbol": "XWG",
+    "decimals": 18,
+    "address": "0x6b23c89196deb721e6fd9726e6c76e4810a464bc",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x6b23C89196DeB721e6Fd9726E6C76E4810a464bc/logo.png"
+  },
+  "XWIN": {
+    "chain": "bnbchain",
+    "symbol": "XWIN",
+    "decimals": 18,
+    "address": "0xd88ca08d8eec1e9e09562213ae83a7853ebb5d28"
+  },
+  "XXAI": {
+    "chain": "bnbchain",
+    "symbol": "XXAI",
+    "decimals": 18,
+    "address": "0x30a2f5b205420438eb4c9365f845025d1d75417e"
+  },
+  "YARRR": {
+    "chain": "bnbchain",
+    "symbol": "YARRR",
+    "decimals": 9,
+    "address": "0x6f0c00185d476dd1d6d547e15ae42beeae9b15c8"
+  },
+  "YAY": {
+    "chain": "bnbchain",
+    "symbol": "YAY",
+    "decimals": 18,
+    "address": "0x524df384bffb18c0c8f3f43d012011f8f9795579",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x524dF384BFFB18C0C8f3f43d012011F8F9795579/logo.png"
+  },
+  "YES": {
+    "chain": "bnbchain",
+    "symbol": "YES",
+    "decimals": 18,
+    "address": "0x164fa1e6cf4125769df68245e942ea2f456ad47c"
+  },
+  "YFI": {
+    "chain": "bnbchain",
+    "address": "0x8772eb993841c335185afc1a55c1d9347099e2e9",
+    "symbol": "YFI",
+    "decimals": 18
+  },
+  "YFII": {
+    "chain": "bnbchain",
+    "symbol": "YFII",
+    "decimals": 18,
+    "address": "0x7f70642d88cf1c4a3a7abb072b53b929b653eda5",
+    "logoURI": "https://cdn.paraswap.io/token/YFII.png"
+  },
+  "YIN": {
+    "chain": "bnbchain",
+    "address": "0x794baab6b878467f93ef17e2f2851ce04e3e34c8",
+    "symbol": "YIN",
+    "decimals": 18
+  },
+  "YOKAI": {
+    "chain": "bnbchain",
+    "symbol": "YOKAI",
+    "decimals": 18,
+    "address": "0xff4245b8fd43f75476608a94768ebb29bb678c2c"
+  },
+  "YOOSHI": {
+    "chain": "bnbchain",
+    "address": "0x02ff5065692783374947393723dba9599e59f591",
+    "symbol": "YOOSHI",
+    "decimals": 9
+  },
+  "YOP": {
+    "chain": "bnbchain",
+    "symbol": "YOP",
+    "decimals": 8,
+    "address": "0xae1eaae3f627aaca434127644371b67b18444051"
+  },
+  "YVS": {
+    "chain": "bnbchain",
+    "symbol": "YVS",
+    "decimals": 18,
+    "address": "0x47c1c7b9d7941a7265d123dcfb100d8fb5348213"
+  },
+  "YYDS": {
+    "chain": "bnbchain",
+    "address": "0x2171fff713ae2ac9c5f9e29e366419788e0b8aaa",
+    "symbol": "YYDS",
+    "decimals": 18
+  },
+  "YoloDraw": {
+    "chain": "bnbchain",
+    "symbol": "YoloDraw",
+    "decimals": 18,
+    "address": "0xf19a0a7bdabd710fa2c33df432760c9bec195011"
+  },
+  "ZD": {
+    "chain": "bnbchain",
+    "symbol": "ZD",
+    "decimals": 18,
+    "address": "0x1c213179c2c08906fb759878860652a61727ed14"
+  },
+  "ZDCASH": {
+    "chain": "bnbchain",
+    "symbol": "ZDCASH",
+    "decimals": 18,
+    "address": "0xd0759956fae5f5e55c84fdff2341b93d0303a62d"
+  },
+  "ZEC": {
+    "chain": "bnbchain",
+    "symbol": "ZEC",
+    "decimals": 18,
+    "address": "0x1ba42e5193dfa8b03d15dd1b86a3113bbbef8eeb"
+  },
+  "ZEE": {
+    "chain": "bnbchain",
+    "symbol": "ZEE",
+    "decimals": 18,
+    "address": "0x44754455564474a89358b2c2265883df993b12f0"
+  },
+  "ZGC": {
+    "chain": "bnbchain",
+    "address": "0xd9628be9ef42b75ca171128e8ce32eceecd858fd",
+    "symbol": "ZGC",
+    "decimals": 6
+  },
+  "ZIL": {
+    "chain": "bnbchain",
+    "symbol": "ZIL",
+    "decimals": 12,
+    "address": "0xb86abcb37c3a4b64f74f59301aff131a1becc787"
+  },
+  "ZIN": {
+    "chain": "bnbchain",
+    "symbol": "ZIN",
+    "decimals": 18,
+    "address": "0xfbe0b4ae6e5a200c36a341299604d5f71a5f0a48",
+    "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xFbe0b4aE6E5a200c36A341299604D5f71A5F0a48/logo.png"
+  },
+  "ZYX": {
+    "chain": "bnbchain",
+    "symbol": "ZYX",
+    "decimals": 18,
+    "address": "0x10b2aac3a2b82a288a3569228bfbb5148c248203"
+  },
+  "_matugalnik": {
+    "chain": "bnbchain",
+    "address": "0xc7b15e17c95c6b31e5818e3c51ed8163d84d7cbe",
+    "symbol": "_matugalnik",
+    "decimals": 18
+  },
+  "agEUR": {
+    "chain": "bnbchain",
+    "address": "0x12f31b73d812c6bb0d735a218c086d44d5fe5f89",
+    "symbol": "agEUR",
+    "decimals": 18
+  },
+  "ankrBNB": {
+    "chain": "bnbchain",
+    "address": "0x52f24a5e03aee338da5fd9df68d2b6fae1178827",
+    "symbol": "ankrBNB",
+    "decimals": 18
+  },
+  "anyBTC": {
+    "chain": "bnbchain",
+    "symbol": "anyBTC",
+    "decimals": 8,
+    "address": "0x54261774905f3e6e9718f2abb10ed6555cae308a"
+  },
+  "anyETH": {
+    "chain": "bnbchain",
+    "symbol": "anyETH",
+    "decimals": 18,
+    "address": "0x6f817a0ce8f7640add3bc0c1c2298635043c2423"
+  },
+  "anyMTLX": {
+    "chain": "bnbchain",
+    "symbol": "anyMTLX",
+    "decimals": 18,
+    "address": "0x5921dee8556c4593eefcfad3ca5e2f618606483b"
+  },
+  "axlTIA": {
+    "chain": "bnbchain",
+    "address": "0x420eeed09cbc6e8416decd28857ff3c7d991fc46",
+    "symbol": "axlTIA",
+    "decimals": 6
+  },
+  "axlUSDC": {
+    "chain": "bnbchain",
+    "address": "0x686a2ca329bb92ba3e36ec94fd5c208a2938ec07",
+    "symbol": "axlUSDC",
+    "decimals": 6
+  },
+  "axlWMAI": {
+    "chain": "bnbchain",
+    "address": "0x501e3d716a72e11e1e22edcf0365556b357da0c9",
+    "symbol": "axlWMAI",
+    "decimals": 18
+  },
+  "b1MT": {
+    "chain": "bnbchain",
+    "symbol": "b1MT",
+    "decimals": 7,
+    "address": "0x8d67448d4f6231abc070a42a8905084b79e09136"
+  },
+  "bAKITA": {
+    "chain": "bnbchain",
+    "symbol": "bAKITA",
+    "decimals": 18,
+    "address": "0x76522a7d5e0d924e72ed740da06bb1dd8ebac23b"
+  },
+  "bALBT": {
+    "chain": "bnbchain",
+    "symbol": "bALBT",
+    "decimals": 18,
+    "address": "0x72faa679e1008ad8382959ff48e392042a8b06f7"
+  },
+  "bBADGER": {
+    "chain": "bnbchain",
+    "symbol": "bBADGER",
+    "decimals": 18,
+    "address": "0x1f7216fdb338247512ec99715587bb97bbf96eae"
+  },
+  "bBDO": {
+    "chain": "bnbchain",
+    "symbol": "bBDO",
+    "decimals": 18,
+    "address": "0x9586b02b09bd68a7cd4aa9167a61b78f43092063"
+  },
+  "bBFLY": {
+    "chain": "bnbchain",
+    "symbol": "bBFLY",
+    "decimals": 18,
+    "address": "0x56cdf1385e01357dc362383bee6a5eba1d6f0967"
+  },
+  "bCFX": {
+    "chain": "bnbchain",
+    "address": "0x045c4324039da91c52c55df5d785385aab073dcf",
+    "symbol": "bCFX",
+    "decimals": 18
+  },
+  "bCHAIN": {
+    "chain": "bnbchain",
+    "symbol": "bCHAIN",
+    "decimals": 18,
+    "address": "0x35de111558f691f77f791fb0c08b2d6b931a9d47"
+  },
+  "bCORGI": {
+    "chain": "bnbchain",
+    "symbol": "bCORGI",
+    "decimals": 9,
+    "address": "0xbf746586e1758e4a3038768144b4da8f09022f77"
+  },
+  "bDIGG": {
+    "chain": "bnbchain",
+    "symbol": "bDIGG",
+    "decimals": 18,
+    "address": "0x5986d5c77c65e5801a5caa4fae80089f870a71da"
+  },
+  "bDXN": {
+    "chain": "bnbchain",
+    "address": "0xccd09b80453335aa914f5d9174984b6586c315ec",
+    "symbol": "bDXN",
+    "decimals": 18
+  },
+  "bHAREM": {
+    "chain": "bnbchain",
+    "symbol": "bHAREM",
+    "decimals": 18,
+    "address": "0xe62ebb28028f80f7471144f12a6666e1915b1e11"
+  },
+  "bLEO": {
+    "chain": "bnbchain",
+    "symbol": "bLEO",
+    "decimals": 3,
+    "address": "0x6421531af54c7b14ea805719035ebf1e3661c44a"
+  },
+  "bMCH": {
+    "chain": "bnbchain",
+    "symbol": "bMCH",
+    "decimals": 18,
+    "address": "0x16a437ec46321e674bf0f9167d44f9e0159e0115"
+  },
+  "bMYC": {
+    "chain": "bnbchain",
+    "symbol": "bMYC",
+    "decimals": 18,
+    "address": "0x6180d382913e0585062336e5fd5e85cec5ac6c78"
+  },
+  "bOPEN": {
+    "chain": "bnbchain",
+    "symbol": "bOPEN",
+    "decimals": 18,
+    "address": "0xf35262a9d427f96d2437379ef090db986eae5d42"
+  },
+  "bTBB": {
+    "chain": "bnbchain",
+    "symbol": "bTBB",
+    "decimals": 18,
+    "address": "0xb1ac5dac9099fda18390901371ce03c5ec637c89"
+  },
+  "bUNDB": {
+    "chain": "bnbchain",
+    "symbol": "bUNDB",
+    "decimals": 18,
+    "address": "0x3dc8311b7d0fbc88ef600174e079bb0a34d370e6"
+  },
+  "bWBUNNY": {
+    "chain": "bnbchain",
+    "symbol": "bWBUNNY",
+    "decimals": 9,
+    "address": "0xb41037cf7237f5d231c9c60dcb50f605e846488f"
+  },
+  "bXEN": {
+    "chain": "bnbchain",
+    "address": "0x2ab0e9e4ee70fff1fb9d67031e44f6410170d00e",
+    "symbol": "bXEN",
+    "decimals": 18
+  },
+  "blink": {
+    "chain": "bnbchain",
+    "symbol": "blink",
+    "decimals": 6,
+    "address": "0x63870a18b6e42b01ef1ad8a2302ef50b7132054f"
+  },
+  "bpDOT": {
+    "chain": "bnbchain",
+    "symbol": "bpDOT",
+    "decimals": 18,
+    "address": "0x557b3ab377bbd68dfc6dadefafa3cc4e4b6677c6"
+  },
+  "bpEUR": {
+    "chain": "bnbchain",
+    "symbol": "bpEUR",
+    "decimals": 18,
+    "address": "0xc66087b151e5de3a414a22d442f073c0e19f17f2"
+  },
+  "bpXAU": {
+    "chain": "bnbchain",
+    "symbol": "bpXAU",
+    "decimals": 18,
+    "address": "0xeaaf11ff129c2e44801ca6c169c32bee728cfe8e"
+  },
+  "bscDUCO": {
+    "chain": "bnbchain",
+    "address": "0xcf572ca0ab84d8ce1652b175e930292e2320785b",
+    "symbol": "bscDUCO",
+    "decimals": 18
+  },
+  "bwJUP": {
+    "chain": "bnbchain",
+    "symbol": "bwJUP",
+    "decimals": 18,
+    "address": "0x0231f91e02debd20345ae8ab7d71a41f8e140ce7"
+  },
+  "cDOGE": {
+    "chain": "bnbchain",
+    "symbol": "cDOGE",
+    "decimals": 10,
+    "address": "0xb541a24d39bc803f56eb8e2f8bae5e98d4d9faf9"
+  },
+  "ccCLO": {
+    "chain": "bnbchain",
+    "address": "0xccbf1c9e8b4f2cdf3bfba1098b8f56f97d219d53",
+    "symbol": "ccCLO",
+    "decimals": 18
+  },
+  "dBSGG": {
+    "chain": "bnbchain",
+    "address": "0xe2cfb50ac479e562c707d585a91e2f497ba56a45",
+    "symbol": "dBSGG",
+    "decimals": 6
+  },
+  "eQOM": {
+    "chain": "bnbchain",
+    "address": "0x154843c4fc4d4ae6b02e7f7c1e2c799f9e62a7ab",
+    "symbol": "eQOM",
+    "decimals": 18
+  },
+  "fUSDT": {
+    "chain": "bnbchain",
+    "address": "0x049d68029688eabf473097a2fc38ef61633a3c7a",
+    "symbol": "fUSDT",
+    "decimals": 6
+  },
+  "lUSD": {
+    "chain": "bnbchain",
+    "symbol": "lUSD",
+    "decimals": 18,
+    "address": "0x23e8a70534308a4aaf76fb8c32ec13d17a3bd89e"
+  },
+  "mAMZN": {
+    "chain": "bnbchain",
+    "symbol": "mAMZN",
+    "decimals": 18,
+    "address": "0x3947b992dc0147d2d89df0392213781b04b25075"
+  },
+  "mGOOGL": {
+    "chain": "bnbchain",
+    "symbol": "mGOOGL",
+    "decimals": 18,
+    "address": "0x62d71b23bf15218c7d2d7e48dbbd9e9c650b173f"
+  },
+  "mNFLX": {
+    "chain": "bnbchain",
+    "symbol": "mNFLX",
+    "decimals": 18,
+    "address": "0xa04f060077d90fe2647b61e4da4ad1f97d6649dc"
+  },
+  "mTSLA": {
+    "chain": "bnbchain",
+    "symbol": "mTSLA",
+    "decimals": 18,
+    "address": "0xf215a127a196e3988c09d052e16bcfd365cd7aa3"
+  },
+  "oneDODO": {
+    "chain": "bnbchain",
+    "address": "0x2c30b4cb4b3001afa5b8c43c5a7ca548067562a0",
+    "symbol": "oneDODO",
+    "decimals": 18
+  },
+  "sALPACA": {
+    "chain": "bnbchain",
+    "symbol": "sALPACA",
+    "decimals": 18,
+    "address": "0x6f695bd5ffd25149176629f8491a5099426ce7a7"
+  },
+  "sBDO": {
+    "chain": "bnbchain",
+    "symbol": "sBDO",
+    "decimals": 18,
+    "address": "0x0d9319565be7f53cefe84ad201be3f40feae2740"
+  },
+  "sBEAR": {
+    "chain": "bnbchain",
+    "symbol": "sBEAR",
+    "decimals": 18,
+    "address": "0xdec858d5ee93568ce4ea5bbf9169cea23d2de305"
+  },
+  "sBGO": {
+    "chain": "bnbchain",
+    "symbol": "sBGO",
+    "decimals": 18,
+    "address": "0x53f39324fbb209693332b87aa94d5519a1a49ab0"
+  },
+  "sDOGE": {
+    "chain": "bnbchain",
+    "symbol": "sDOGE",
+    "decimals": 18,
+    "address": "0xed4c1c07898305ecf01163842666116deb406ca3"
+  },
+  "sPDO": {
+    "chain": "bnbchain",
+    "symbol": "sPDO",
+    "decimals": 18,
+    "address": "0xc1e3bdf0e580de25d6a8c2a419da8c859589ed9d"
+  },
+  "sdCAKE": {
+    "chain": "bnbchain",
+    "address": "0xf79b275e0b602d82b822895074552e487412a41a",
+    "symbol": "sdCAKE",
+    "decimals": 18
+  },
+  "stkBNB": {
+    "chain": "bnbchain",
+    "address": "0xc2e9d07f66a89c44062459a47a0d2dc038e4fb16",
+    "symbol": "stkBNB",
+    "decimals": 18
+  },
+  "tBART": {
+    "chain": "bnbchain",
+    "symbol": "tBART",
+    "decimals": 18,
+    "address": "0x1bdf1ec9d5e2f6e0e6e95419bca0f65c8e6c26b3"
+  },
+  "wBETH": {
+    "chain": "bnbchain",
+    "address": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
+    "symbol": "wBETH",
+    "decimals": 18
+  },
+  "wBTC": {
+    "chain": "bnbchain",
+    "address": "0xa01b9cafe2230093fbf0000b43701e03717f77ce",
+    "symbol": "wBTC",
+    "decimals": 8
+  },
+  "wGOLD": {
+    "chain": "bnbchain",
+    "symbol": "wGOLD",
+    "decimals": 18,
+    "address": "0x7ab6eedd9443e0e98e5ea93667ca5b250b8dda51"
+  },
+  "xBLZD": {
+    "chain": "bnbchain",
+    "symbol": "xBLZD",
+    "decimals": 18,
+    "address": "0x9a946c3cb16c08334b69ae249690c236ebd5583e"
+  },
+  "xVON": {
+    "chain": "bnbchain",
+    "address": "0xd42220de5f5260ccc4c80fe3b08dae0968688d13",
+    "symbol": "xVON",
+    "decimals": 18
+  },
+  "xVUSD": {
+    "chain": "bnbchain",
+    "address": "0x75ff8225db6de141dd72efc06f1e0b09d0baab7b",
+    "symbol": "xVUSD",
+    "decimals": 18
+  },
+  "yAPE": {
+    "chain": "bnbchain",
+    "symbol": "yAPE",
+    "decimals": 8,
+    "address": "0x64b783a80d0c05bed0e2f1a638465a7ba3f4a6fb"
+  },
+  "yBEAR": {
+    "chain": "bnbchain",
+    "symbol": "yBEAR",
+    "decimals": 9,
+    "address": "0xa8da060ebd32a753005c6ee476a0d79177c6ea8b"
+  },
+  "yPANDA": {
+    "chain": "bnbchain",
+    "symbol": "yPANDA",
+    "decimals": 8,
+    "address": "0x9806aec346064183b5ce441313231dff89811f7a"
+  },
+  "zSEED": {
+    "chain": "bnbchain",
+    "symbol": "zSEED",
+    "decimals": 18,
+    "address": "0x5cd50aae14e14b3fdf3ff13c7a40e8cf5ae8b0a5"
+  },
+  "zksync": {
+    "chain": "bnbchain",
+    "address": "0xd27aaeead8fde08ba292c1e08f53a14c00e7f7c8",
+    "symbol": "zksync",
+    "decimals": 8
+  }
+}

@@ -1,0 +1,1352 @@
+{
+  "1INCH": {
+    "chain": "optimism",
+    "symbol": "1INCH",
+    "decimals": 18,
+    "address": "0xad42d013ac31486b73b6b059e748172994736426",
+    "logoURI": "https://assets.coingecko.com/coins/images/13469/thumb/1inch-token.png?1608803028"
+  },
+  "80OVN/20wUSD+": {
+    "chain": "optimism",
+    "address": "0x00b82bc5edea6e5e6c77635e31a1a25aad99f881",
+    "symbol": "80OVN/20wUSD+",
+    "decimals": 18
+  },
+  "AAVE": {
+    "chain": "optimism",
+    "address": "0x76fb31fb4af56892a25e32cfc43de717950c9278",
+    "symbol": "AAVE",
+    "decimals": 18
+  },
+  "AELIN": {
+    "chain": "optimism",
+    "address": "0x61baadcf22d2565b0f471b291c475db5555e0b76",
+    "symbol": "AELIN",
+    "decimals": 18
+  },
+  "ARPA": {
+    "chain": "optimism",
+    "symbol": "ARPA",
+    "decimals": 18,
+    "address": "0x334cc734866e97d8452ae6261d68fd9bc9bfa31e",
+    "logoURI": "https://assets.coingecko.com/coins/images/8506/thumb/9u0a23XY_400x400.jpg?1559027357"
+  },
+  "AXL": {
+    "chain": "optimism",
+    "address": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
+    "symbol": "AXL",
+    "decimals": 6
+  },
+  "BAL": {
+    "chain": "optimism",
+    "symbol": "BAL",
+    "decimals": 18,
+    "address": "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xba100000625a3754423978a60c9317c58a424e3D/logo.png"
+  },
+  "BEAST": {
+    "chain": "optimism",
+    "address": "0xc99156c34260ae579c9eaf63f0e88fd47af064b9",
+    "symbol": "BEAST",
+    "decimals": 18
+  },
+  "BLID": {
+    "chain": "optimism",
+    "address": "0x048c6bad48c51436764ed1fdb3c9d1c25d2c0ada",
+    "symbol": "BLID",
+    "decimals": 18
+  },
+  "BOB": {
+    "chain": "optimism",
+    "address": "0xb0b195aefa3650a6908f15cdac7d92f8a5791b0b",
+    "symbol": "BOB",
+    "decimals": 18
+  },
+  "BOJACK": {
+    "chain": "optimism",
+    "address": "0x0c3827522c199422af82585eb67c9fde4a589ce6",
+    "symbol": "BOJACK",
+    "decimals": 18
+  },
+  "BOND": {
+    "chain": "optimism",
+    "symbol": "BOND",
+    "decimals": 18,
+    "address": "0x3e7ef8f50246f725885102e8238cbba33f276747",
+    "logoURI": "https://assets.coingecko.com/coins/images/12811/thumb/barnbridge.jpg?1602728853"
+  },
+  "BP": { "chain": "optimism", "address": "0xb976f21c75d0245e94d3949c79f48be6c745175d", "symbol": "BP", "decimals": 9 },
+  "BPT-BOATH": {
+    "chain": "optimism",
+    "address": "0xd20f6f1d8a675cdca155cb07b5dc9042c467153f",
+    "symbol": "BPT-BOATH",
+    "decimals": 18
+  },
+  "BPT-OPARA": {
+    "chain": "optimism",
+    "address": "0x0244b0025264dc5f5c113d472d579c9c994a59ce",
+    "symbol": "BPT-OPARA",
+    "decimals": 18
+  },
+  "BPT-RESERVE": {
+    "chain": "optimism",
+    "address": "0x1d95129c18a8c91c464111fdf7d0eb241b37a985",
+    "symbol": "BPT-RESERVE",
+    "decimals": 18
+  },
+  "BPT-ROAD": {
+    "chain": "optimism",
+    "address": "0x39965c9dab5448482cf7e002f583c812ceb53046",
+    "symbol": "BPT-ROAD",
+    "decimals": 18
+  },
+  "BPT-WSTETH-WETH": {
+    "chain": "optimism",
+    "address": "0x7b50775383d3d6f0215a8f290f2c9e2eebbeceb2",
+    "symbol": "BPT-WSTETH-WETH",
+    "decimals": 18
+  },
+  "BPT-rETH-ETH": {
+    "chain": "optimism",
+    "address": "0x4fd63966879300cafafbb35d157dc5229278ed23",
+    "symbol": "BPT-rETH-ETH",
+    "decimals": 18
+  },
+  "BTC.b": {
+    "chain": "optimism",
+    "address": "0x2297aebd383787a160dd0d9f71508148769342e3",
+    "symbol": "BTC.b",
+    "decimals": 8
+  },
+  "BTRST": {
+    "chain": "optimism",
+    "symbol": "BTRST",
+    "decimals": 18,
+    "address": "0xed50ace88bd42b45cb0f49be15395021e141254e",
+    "logoURI": "https://assets.coingecko.com/coins/images/18100/thumb/braintrust.PNG?1630475394"
+  },
+  "BUSD": {
+    "chain": "optimism",
+    "symbol": "BUSD",
+    "decimals": 18,
+    "address": "0x9c9e5fd8bbc25984b178fdce6117defa39d2db39",
+    "logoURI": "https://assets.coingecko.com/coins/images/9576/thumb/BUSD.png?1568947766"
+  },
+  "CELO": {
+    "chain": "optimism",
+    "symbol": "CELO",
+    "decimals": 18,
+    "address": "0x9b88d293b7a791e40d36a39765ffd5a1b9b5c349",
+    "logoURI": "https://raw.githubusercontent.com/wormhole-foundation/wormhole-token-list/main/assets/celo_wh.png"
+  },
+  "COLLAB": {
+    "chain": "optimism",
+    "address": "0x8b21e9b7daf2c4325bf3d18c1beb79a347fe902a",
+    "symbol": "COLLAB",
+    "decimals": 18
+  },
+  "CRV": {
+    "chain": "optimism",
+    "address": "0x0994206dfe8de6ec6920ff4d779b0d950605fb53",
+    "symbol": "CRV",
+    "decimals": 18
+  },
+  "CTSI": {
+    "chain": "optimism",
+    "symbol": "CTSI",
+    "decimals": 18,
+    "address": "0xec6adef5e1006bb305bb1975333e8fc4071295bf",
+    "logoURI": "https://assets.coingecko.com/coins/images/11038/thumb/cartesi.png?1592288021"
+  },
+  "CYBER": {
+    "chain": "optimism",
+    "address": "0x14778860e937f509e651192a90589de711fb88a9",
+    "symbol": "CYBER",
+    "decimals": 18
+  },
+  "DAI": {
+    "chain": "optimism",
+    "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+    "symbol": "DAI",
+    "decimals": 18
+  },
+  "DINERO": {
+    "chain": "optimism",
+    "address": "0xbe827f2975f2da78feb3683c558b143e3c6dcd07",
+    "symbol": "DINERO",
+    "decimals": 6
+  },
+  "Dk": {
+    "chain": "optimism",
+    "address": "0xe3dbff4789cdfecde326b0f2c79cb6e22989f63c",
+    "symbol": "Dk",
+    "decimals": 18
+  },
+  "ECLP-wstETH-WETH": {
+    "chain": "optimism",
+    "address": "0x7ca75bdea9dede97f8b13c6641b768650cb83782",
+    "symbol": "ECLP-wstETH-WETH",
+    "decimals": 18
+  },
+  "ELK": {
+    "chain": "optimism",
+    "address": "0xeeeeeb57642040be42185f49c52f7e9b38f8eeee",
+    "symbol": "ELK",
+    "decimals": 18
+  },
+  "ENS": {
+    "chain": "optimism",
+    "symbol": "ENS",
+    "decimals": 18,
+    "address": "0x65559aa14915a70190438ef90104769e5e890a00",
+    "logoURI": "https://assets.coingecko.com/coins/images/19785/thumb/acatxTm8_400x400.jpg?1635850140"
+  },
+  "ETH": {
+    "chain": "optimism",
+    "address": "0x0000000000000000000000000000000000000000",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "FIS": {
+    "chain": "optimism",
+    "symbol": "FIS",
+    "decimals": 18,
+    "address": "0xd8737ca46aa6285de7b8777a8e3db232911bad41",
+    "logoURI": "https://assets.coingecko.com/coins/images/12423/thumb/stafi_logo.jpg?1599730991"
+  },
+  "FIVE": {
+    "chain": "optimism",
+    "address": "0x9e8862e39496bd336565dd15ce2c0b90bc7dc121",
+    "symbol": "FIVE",
+    "decimals": 18
+  },
+  "FOX": {
+    "chain": "optimism",
+    "symbol": "FOX",
+    "decimals": 18,
+    "address": "0xf1a0da3367bc7aa04f8d94ba57b862ff37ced174",
+    "logoURI": "https://assets.coingecko.com/coins/images/9988/thumb/FOX.png?1574330622"
+  },
+  "FRAX": {
+    "chain": "optimism",
+    "address": "0x2e3d870790dc77a83dd1d18184acc7439a53f475",
+    "symbol": "FRAX",
+    "decimals": 18
+  },
+  "FXS": {
+    "chain": "optimism",
+    "address": "0x67ccea5bb16181e7b4109c9c2143c24a1c2205be",
+    "symbol": "FXS",
+    "decimals": 18
+  },
+  "GETH": {
+    "chain": "optimism",
+    "address": "0xdd69db25f6d620a7bad3023c5d32761d353d3de9",
+    "symbol": "GETH",
+    "decimals": 18
+  },
+  "GTC": {
+    "chain": "optimism",
+    "symbol": "GTC",
+    "decimals": 18,
+    "address": "0x1eba7a6a72c894026cd654ac5cdcf83a46445b08",
+    "logoURI": "https://assets.coingecko.com/coins/images/15810/thumb/gitcoin.png?1621992929"
+  },
+  "GYEN": {
+    "chain": "optimism",
+    "symbol": "GYEN",
+    "decimals": 6,
+    "address": "0x589d35656641d6ab57a545f08cf473ecd9b6d5f7",
+    "logoURI": "https://assets.coingecko.com/coins/images/14191/thumb/icon_gyen_200_200.png?1614843343"
+  },
+  "HAN": {
+    "chain": "optimism",
+    "address": "0x50bce64397c75488465253c0a034b8097fea6578",
+    "symbol": "HAN",
+    "decimals": 18
+  },
+  "KNC": {
+    "chain": "optimism",
+    "address": "0xa00e3a3511aac35ca78530c85007afcd31753819",
+    "symbol": "KNC",
+    "decimals": 18
+  },
+  "KWENTA": {
+    "chain": "optimism",
+    "address": "0x920cf626a271321c151d027030d5d08af699456b",
+    "symbol": "KWENTA",
+    "decimals": 18
+  },
+  "L2DAO": {
+    "chain": "optimism",
+    "address": "0xd52f94df742a6f4b4c8b033369fe13a41782bf44",
+    "symbol": "L2DAO",
+    "decimals": 18
+  },
+  "LDO": {
+    "chain": "optimism",
+    "address": "0xfdb794692724153d1488ccdbe0c56c252596735f",
+    "symbol": "LDO",
+    "decimals": 18
+  },
+  "LINK": {
+    "chain": "optimism",
+    "address": "0x350a791bfc2c21f9ed5d10980dad2e2638ffa7f6",
+    "symbol": "LINK",
+    "decimals": 18
+  },
+  "LRC": {
+    "chain": "optimism",
+    "symbol": "LRC",
+    "decimals": 18,
+    "address": "0xfeaa9194f9f8c1b65429e31341a103071464907e",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xBBbbCA6A901c926F240b89EacB641d8Aec7AEafD/logo.png"
+  },
+  "LSD": {
+    "chain": "optimism",
+    "address": "0xab1047894da4ec207c71be0aef5c7885e07b2daf",
+    "symbol": "LSD",
+    "decimals": 18
+  },
+  "LUSD": {
+    "chain": "optimism",
+    "address": "0xc40f949f8a4e094d1b49a23ea9241d289b7b2819",
+    "symbol": "LUSD",
+    "decimals": 18
+  },
+  "LYRA": {
+    "chain": "optimism",
+    "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb",
+    "symbol": "LYRA",
+    "decimals": 18
+  },
+  "MAI": {
+    "chain": "optimism",
+    "address": "0xdfa46478f9e5ea86d57387849598dbfb2e964b02",
+    "symbol": "MAI",
+    "decimals": 18
+  },
+  "MASK": {
+    "chain": "optimism",
+    "symbol": "MASK",
+    "decimals": 18,
+    "address": "0x3390108e913824b8ead638444cc52b9abdf63798",
+    "logoURI": "https://assets.coingecko.com/coins/images/14051/thumb/Mask_Network.jpg?1614050316"
+  },
+  "MKR": {
+    "chain": "optimism",
+    "symbol": "MKR",
+    "decimals": 18,
+    "address": "0xab7badef82e9fe11f6f33f87bc9bc2aa27f2fcb5",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2/logo.png"
+  },
+  "NFTE": {
+    "chain": "optimism",
+    "address": "0x8637725ada78db0674a679cea2a5e0a0869ef4a1",
+    "symbol": "NFTE",
+    "decimals": 18
+  },
+  "OP": {
+    "chain": "optimism",
+    "address": "0x4200000000000000000000000000000000000042",
+    "symbol": "OP",
+    "decimals": 18
+  },
+  "OW": {
+    "chain": "optimism",
+    "address": "0xfcb33a44c8b1a9434b4a7b023ae31a1eb3c11b71",
+    "symbol": "OW",
+    "decimals": 18
+  },
+  "PENGANGGURAN": {
+    "chain": "optimism",
+    "address": "0xaf408a6da5947a3686efc1c360da4db23ea2c23b",
+    "symbol": "PENGANGGURAN",
+    "decimals": 18
+  },
+  "PEPE": {
+    "chain": "optimism",
+    "symbol": "PEPE",
+    "decimals": 18,
+    "address": "0xc1c167cc44f7923cd0062c4370df962f9ddb16f5",
+    "logoURI": "https://assets.coingecko.com/coins/images/29850/large/pepe-token.jpeg?1682922725"
+  },
+  "PERP": {
+    "chain": "optimism",
+    "address": "0x9e1028f5f1d5ede59748ffcee5532509976840e0",
+    "symbol": "PERP",
+    "decimals": 18
+  },
+  "PIKA": {
+    "chain": "optimism",
+    "address": "0x9a601c5bb360811d96a23689066af316a30c3027",
+    "symbol": "PIKA",
+    "decimals": 18
+  },
+  "RAI": {
+    "chain": "optimism",
+    "symbol": "RAI",
+    "decimals": 18,
+    "address": "0x7fb688ccf682d58f86d7e38e03f9d22e7705448b",
+    "logoURI": "https://assets.coingecko.com/coins/images/14004/thumb/RAI-logo-coin.png?1613592334"
+  },
+  "RGT": {
+    "chain": "optimism",
+    "symbol": "RGT",
+    "decimals": 18,
+    "address": "0xb548f63d4405466b36c0c0ac3318a22fdcec711a",
+    "logoURI": "https://assets.coingecko.com/coins/images/12900/thumb/Rari_Logo_Transparent.png?1613978014"
+  },
+  "SNT": {
+    "chain": "optimism",
+    "symbol": "SNT",
+    "decimals": 18,
+    "address": "0x650af3c15af43dcb218406d30784416d64cfb6b2",
+    "logoURI": "https://assets.coingecko.com/coins/images/779/thumb/status.png?1548610778"
+  },
+  "SNX": {
+    "chain": "optimism",
+    "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+    "symbol": "SNX",
+    "decimals": 18
+  },
+  "SOL": {
+    "chain": "optimism",
+    "symbol": "SOL",
+    "decimals": 9,
+    "address": "0xba1cf949c382a32a09a17b2adf3587fc7fa664f1",
+    "logoURI": "https://assets.coingecko.com/coins/images/22876/thumb/SOL_wh_small.png?1644224316"
+  },
+  "STG": {
+    "chain": "optimism",
+    "address": "0x296f55f8fb28e498b858d0bcda06d955b2cb3f97",
+    "symbol": "STG",
+    "decimals": 18
+  },
+  "SUKU": {
+    "chain": "optimism",
+    "symbol": "SUKU",
+    "decimals": 18,
+    "address": "0xef6301da234fc7b0545c6e877d3359fe0b9e50a4",
+    "logoURI": "https://assets.coingecko.com/coins/images/11969/thumb/UmfW5S6f_400x400.jpg?1596602238"
+  },
+  "SUSD": {
+    "chain": "optimism",
+    "symbol": "SUSD",
+    "decimals": 18,
+    "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9"
+  },
+  "SUSHI": {
+    "chain": "optimism",
+    "address": "0x3eaeb77b03dbc0f6321ae1b72b2e9adb0f60112b",
+    "symbol": "SUSHI",
+    "decimals": 18
+  },
+  "T": {
+    "chain": "optimism",
+    "symbol": "T",
+    "decimals": 18,
+    "address": "0x747e42eb0591547a0ab429b3627816208c734ea7",
+    "logoURI": "https://assets.coingecko.com/coins/images/22228/thumb/nFPNiSbL_400x400.jpg?1641220340"
+  },
+  "TFA": {
+    "chain": "optimism",
+    "address": "0x8b0b94712e75fcdef255af23e38b8b4896093a58",
+    "symbol": "TFA",
+    "decimals": 18
+  },
+  "THALES": {
+    "chain": "optimism",
+    "address": "0x217d47011b23bb961eb6d93ca9945b7501a5bb11",
+    "symbol": "THALES",
+    "decimals": 18
+  },
+  "TRB": {
+    "chain": "optimism",
+    "symbol": "TRB",
+    "decimals": 18,
+    "address": "0xaf8ca653fa2772d58f4368b0a71980e9e3ceb888",
+    "logoURI": "https://assets.coingecko.com/coins/images/9644/thumb/Blk_icon_current.png?1584980686"
+  },
+  "UMA": {
+    "chain": "optimism",
+    "symbol": "UMA",
+    "decimals": 18,
+    "address": "0xe7798f023fc62146e8aa1b36da45fb70855a77ea",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828/logo.png"
+  },
+  "UNI": {
+    "chain": "optimism",
+    "address": "0x6fd9d7ad17242c41f7131d257212c54a0e816691",
+    "symbol": "UNI",
+    "decimals": 18
+  },
+  "UNIDX": {
+    "chain": "optimism",
+    "address": "0x28b42698caf46b4b012cf38b6c75867e0762186d",
+    "symbol": "UNIDX",
+    "decimals": 18
+  },
+  "USD+": {
+    "chain": "optimism",
+    "address": "0x73cb180bf0521828d8849bc8cf2b920918e23032",
+    "symbol": "USD+",
+    "decimals": 6
+  },
+  "USDC": {
+    "chain": "optimism",
+    "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+    "symbol": "USDC",
+    "decimals": 6
+  },
+  "USDC.e": {
+    "chain": "optimism",
+    "symbol": "USDC.e",
+    "decimals": 6,
+    "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+    "logoURI": "https://ethereum-optimism.github.io/data/USDC/logo.png"
+  },
+  "USDT": {
+    "chain": "optimism",
+    "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+    "symbol": "USDT",
+    "decimals": 6
+  },
+  "USDV": {
+    "chain": "optimism",
+    "address": "0x323665443cef804a3b5206103304bd4872ea4253",
+    "symbol": "USDV",
+    "decimals": 6
+  },
+  "VELO": {
+    "chain": "optimism",
+    "address": "0x9560e827af36c94d2ac33a39bce1fe78631088db",
+    "symbol": "VELO",
+    "decimals": 18
+  },
+  "WBTC": {
+    "chain": "optimism",
+    "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+    "symbol": "WBTC",
+    "decimals": 8
+  },
+  "WETH": {
+    "chain": "optimism",
+    "address": "0x4200000000000000000000000000000000000006",
+    "symbol": "WETH",
+    "decimals": 18
+  },
+  "WLD": {
+    "chain": "optimism",
+    "address": "0x13f07ee22493187c20437be03042bac33426e43b",
+    "symbol": "WLD",
+    "decimals": 18
+  },
+  "WOO": {
+    "chain": "optimism",
+    "symbol": "WOO",
+    "decimals": 18,
+    "address": "0x871f2f2ff935fd1ed867842ff2a7bfd051a5e527",
+    "logoURI": "https://assets.coingecko.com/coins/images/12921/thumb/w2UiemF__400x400.jpg?1603670367"
+  },
+  "YFI": {
+    "chain": "optimism",
+    "symbol": "YFI",
+    "decimals": 18,
+    "address": "0x9046d36440290ffde54fe0dd84db8b1cfee9107b",
+    "logoURI": "https://assets.coingecko.com/coins/images/11849/thumb/yfi-192x192.png?1598325330"
+  },
+  "ZRX": {
+    "chain": "optimism",
+    "symbol": "ZRX",
+    "decimals": 18,
+    "address": "0xd1917629b3e6a72e6772aab5dbe58eb7fa3c2f33",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xE41d2489571d322189246DaFA5ebDe1F4699F498/logo.png"
+  },
+  "aOptAAVE": {
+    "chain": "optimism",
+    "symbol": "aOptAAVE",
+    "decimals": 18,
+    "address": "0xf329e36c7bf6e5e86ce2150875a84ce77f477375"
+  },
+  "aOptDAI": {
+    "chain": "optimism",
+    "symbol": "aOptDAI",
+    "decimals": 18,
+    "address": "0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee"
+  },
+  "aOptLINK": {
+    "chain": "optimism",
+    "symbol": "aOptLINK",
+    "decimals": 18,
+    "address": "0x191c10aa4af7c30e871e70c95db0e4eb77237530"
+  },
+  "aOptSUSD": {
+    "chain": "optimism",
+    "symbol": "aOptSUSD",
+    "decimals": 18,
+    "address": "0x6d80113e533a2c0fe82eabd35f1875dcea89ea97"
+  },
+  "aOptUSDC": {
+    "chain": "optimism",
+    "symbol": "aOptUSDC",
+    "decimals": 6,
+    "address": "0x625e7708f30ca75bfd92586e17077590c60eb4cd"
+  },
+  "aOptUSDT": {
+    "chain": "optimism",
+    "symbol": "aOptUSDT",
+    "decimals": 6,
+    "address": "0x6ab707aca953edaefbc4fd23ba73294241490620"
+  },
+  "aOptWBTC": {
+    "chain": "optimism",
+    "symbol": "aOptWBTC",
+    "decimals": 8,
+    "address": "0x078f358208685046a11c85e8ad32895ded33a249"
+  },
+  "aOptWETH": {
+    "chain": "optimism",
+    "symbol": "aOptWETH",
+    "decimals": 18,
+    "address": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8"
+  },
+  "agEUR": {
+    "chain": "optimism",
+    "address": "0x9485aca5bbbe1667ad97c7fe7c4531a624c8b1ed",
+    "symbol": "agEUR",
+    "decimals": 18
+  },
+  "axl-wstETH": {
+    "chain": "optimism",
+    "address": "0x9cfb13e6c11054ac9fcb92ba89644f30775436e4",
+    "symbol": "axl-wstETH",
+    "decimals": 18
+  },
+  "axlKNC": {
+    "chain": "optimism",
+    "address": "0xb448ec505c924944ca8b2c55ef05c299ee0781df",
+    "symbol": "axlKNC",
+    "decimals": 18
+  },
+  "axlUSDC": {
+    "chain": "optimism",
+    "address": "0xeb466342c4d449bc9f53a865d5cb90586f405215",
+    "symbol": "axlUSDC",
+    "decimals": 6
+  },
+  "axlWMAI": {
+    "chain": "optimism",
+    "address": "0x88dfaaabaf06f3a41d2606ea98bc8eda109abebb",
+    "symbol": "axlWMAI",
+    "decimals": 18
+  },
+  "bb-rf-SOTRI": {
+    "chain": "optimism",
+    "address": "0x098f32d98d0d64dba199fc1923d3bf4192e78719",
+    "symbol": "bb-rf-SOTRI",
+    "decimals": 18
+  },
+  "bb-rf-triple": {
+    "chain": "optimism",
+    "address": "0x8a2872fd28f42bd9f6559907235e83fbf4167f48",
+    "symbol": "bb-rf-triple",
+    "decimals": 18
+  },
+  "bb-rf-usd": {
+    "chain": "optimism",
+    "address": "0xcd7b2232b7435595bbc7fd7962f1f352fc2cc61a",
+    "symbol": "bb-rf-usd",
+    "decimals": 18
+  },
+  "bpt-ankrgalaharm": {
+    "chain": "optimism",
+    "address": "0x004700ba0a4f5f22e1e78a277fca55e36f47e09c",
+    "symbol": "bpt-ankrgalaharm",
+    "decimals": 18
+  },
+  "bpt-dolausdc": {
+    "chain": "optimism",
+    "address": "0xacfe9b4782910a853b68abba60f3fd8049ffe638",
+    "symbol": "bpt-dolausdc",
+    "decimals": 18
+  },
+  "bpt-ethtri": {
+    "chain": "optimism",
+    "address": "0x5f8893506ddc4c271837187d14a9c87964a074dc",
+    "symbol": "bpt-ethtri",
+    "decimals": 18
+  },
+  "bpt-roabee": {
+    "chain": "optimism",
+    "address": "0xc1f46ce83439886f0ea9c21512b36e7e67239d2c",
+    "symbol": "bpt-roabee",
+    "decimals": 18
+  },
+  "bpt-stablebeets": {
+    "chain": "optimism",
+    "address": "0x9da11ff60bfc5af527f58fd61679c3ac98d040d9",
+    "symbol": "bpt-stablebeets",
+    "decimals": 18
+  },
+  "bpt-steamounrhyt": {
+    "chain": "optimism",
+    "address": "0xc05ab1b0ad472ce802e2c8db6f23e4a2865fdca6",
+    "symbol": "bpt-steamounrhyt",
+    "decimals": 18
+  },
+  "cbETH": {
+    "chain": "optimism",
+    "address": "0xaddb6a0412de1ba0f936dcaeb8aaa24578dcf3b2",
+    "symbol": "cbETH",
+    "decimals": 18
+  },
+  "hETH": {
+    "chain": "optimism",
+    "address": "0xe38faf9040c7f09958c638bbdb977083722c5156",
+    "symbol": "hETH",
+    "decimals": 18
+  },
+  "ntx": {
+    "chain": "optimism",
+    "address": "0x1391f778ec2cae7941700a6ccffc3563eefef90b",
+    "symbol": "ntx",
+    "decimals": 18
+  },
+  "oerc": {
+    "chain": "optimism",
+    "address": "0xd95610e852339275a456b3f7e56934f7c00f0461",
+    "symbol": "oerc",
+    "decimals": 18
+  },
+  "opXEN": {
+    "chain": "optimism",
+    "address": "0xeb585163debb1e637c6d617de3bef99347cd75c8",
+    "symbol": "opXEN",
+    "decimals": 18
+  },
+  "rETH": {
+    "chain": "optimism",
+    "address": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
+    "symbol": "rETH",
+    "decimals": 18
+  },
+  "sAMM-USDC/DOLA": {
+    "chain": "optimism",
+    "address": "0x6c5019d345ec05004a7e7b0623a91a0d9b8d590d",
+    "symbol": "sAMM-USDC/DOLA",
+    "decimals": 18
+  },
+  "sAMM-USDC/MAI": {
+    "chain": "optimism",
+    "address": "0xd62c9d8a3d4fd98b27caaefe3571782a3af0a737",
+    "symbol": "sAMM-USDC/MAI",
+    "decimals": 18
+  },
+  "sAMM-USDC/sUSD": {
+    "chain": "optimism",
+    "address": "0xd16232ad60188b68076a235c65d692090caba155",
+    "symbol": "sAMM-USDC/sUSD",
+    "decimals": 18
+  },
+  "sAMMV2-CHI/DAI": {
+    "chain": "optimism",
+    "address": "0x41cc89b91d0abe260f2cb53c1abda07b321e71df",
+    "symbol": "sAMMV2-CHI/DAI",
+    "decimals": 18
+  },
+  "sAMMV2-DOLA/ERN": {
+    "chain": "optimism",
+    "address": "0xeea82dcab12c855e3736558d80500ed52c8598cd",
+    "symbol": "sAMMV2-DOLA/ERN",
+    "decimals": 18
+  },
+  "sAMMV2-DOLA/MAI": {
+    "chain": "optimism",
+    "address": "0xbe418771bc91f75c4d2bce1d5e2b7286f50992da",
+    "symbol": "sAMMV2-DOLA/MAI",
+    "decimals": 18
+  },
+  "sAMMV2-FRAX/DOLA": {
+    "chain": "optimism",
+    "address": "0x1f8b46abe1eabf5a60cbbb5fb2e4a6a46fa0b6e6",
+    "symbol": "sAMMV2-FRAX/DOLA",
+    "decimals": 18
+  },
+  "sAMMV2-FRAX/MAI": {
+    "chain": "optimism",
+    "address": "0xc37a0a37664aeb3848f98c5dd5d7ae286a1e9ebd",
+    "symbol": "sAMMV2-FRAX/MAI",
+    "decimals": 18
+  },
+  "sAMMV2-FRAX/USD+": {
+    "chain": "optimism",
+    "address": "0xd330841ef9527e3bd0abc28a230c7ca8dec9423b",
+    "symbol": "sAMMV2-FRAX/USD+",
+    "decimals": 18
+  },
+  "sAMMV2-FRAX/USDC": {
+    "chain": "optimism",
+    "address": "0x8542dd4744edea38b8a9306268b08f4d26d38581",
+    "symbol": "sAMMV2-FRAX/USDC",
+    "decimals": 18
+  },
+  "sAMMV2-FRAX/alUSD": {
+    "chain": "optimism",
+    "address": "0xaf03f51de7a0e62bf061f6fc3931cf79166b0a29",
+    "symbol": "sAMMV2-FRAX/alUSD",
+    "decimals": 18
+  },
+  "sAMMV2-LUSD/ERN": {
+    "chain": "optimism",
+    "address": "0xf31cbe21bbbb8056b75d6ca21e8ffd2cd38bd5c5",
+    "symbol": "sAMMV2-LUSD/ERN",
+    "decimals": 18
+  },
+  "sAMMV2-USD+/DAI+": {
+    "chain": "optimism",
+    "address": "0x667002f9dc61ebcba8ee1cbeb2ad04060388f223",
+    "symbol": "sAMMV2-USD+/DAI+",
+    "decimals": 18
+  },
+  "sAMMV2-USD+/DOLA": {
+    "chain": "optimism",
+    "address": "0x0b28c2e41058edc7d66c516c617b664ea86eec5d",
+    "symbol": "sAMMV2-USD+/DOLA",
+    "decimals": 18
+  },
+  "sAMMV2-USD+/USDC": {
+    "chain": "optimism",
+    "address": "0xd95e98fc33670dc033424e7aa0578d742d00f9c7",
+    "symbol": "sAMMV2-USD+/USDC",
+    "decimals": 18
+  },
+  "sAMMV2-USDC/DAI": {
+    "chain": "optimism",
+    "address": "0x19715771e30c93915a5bbda134d782b81a820076",
+    "symbol": "sAMMV2-USDC/DAI",
+    "decimals": 18
+  },
+  "sAMMV2-USDC/DOLA": {
+    "chain": "optimism",
+    "address": "0xb720fbc32d60bb6dcc955be86b98d8fd3c4ba645",
+    "symbol": "sAMMV2-USDC/DOLA",
+    "decimals": 18
+  },
+  "sAMMV2-USDC/LUSD": {
+    "chain": "optimism",
+    "address": "0xf04458f7b21265b80fc340de7ee598e24485c5bb",
+    "symbol": "sAMMV2-USDC/LUSD",
+    "decimals": 18
+  },
+  "sAMMV2-USDC/MAI": {
+    "chain": "optimism",
+    "address": "0xe54e4020d1c3afdb312095d90054103e68fe34b0",
+    "symbol": "sAMMV2-USDC/MAI",
+    "decimals": 18
+  },
+  "sAMMV2-USDC/MIM": {
+    "chain": "optimism",
+    "address": "0xb2791477da69dde9cd2986349f8855b8e2da7245",
+    "symbol": "sAMMV2-USDC/MIM",
+    "decimals": 18
+  },
+  "sAMMV2-USDC/USDT": {
+    "chain": "optimism",
+    "address": "0x2b47c794c3789f499d8a54ec12f949eecce8ba16",
+    "symbol": "sAMMV2-USDC/USDT",
+    "decimals": 18
+  },
+  "sAMMV2-USDC/USX": {
+    "chain": "optimism",
+    "address": "0xed47e3ce6d9c05f562c469ab1bf1244cc697aa73",
+    "symbol": "sAMMV2-USDC/USX",
+    "decimals": 18
+  },
+  "sAMMV2-USDC/alUSD": {
+    "chain": "optimism",
+    "address": "0x4d7959d17b9710be87e3657e69d946914221bb88",
+    "symbol": "sAMMV2-USDC/alUSD",
+    "decimals": 18
+  },
+  "sAMMV2-USDC/msUSD": {
+    "chain": "optimism",
+    "address": "0xe148d6ae042de77c1f9fe0d6c495ebfd7b705b4c",
+    "symbol": "sAMMV2-USDC/msUSD",
+    "decimals": 18
+  },
+  "sAMMV2-USDC/sUSD": {
+    "chain": "optimism",
+    "address": "0x6d5ba400640226e24b50214d2bbb3d4db8e6e15a",
+    "symbol": "sAMMV2-USDC/sUSD",
+    "decimals": 18
+  },
+  "sAMMV2-WBTC/tBTC": {
+    "chain": "optimism",
+    "address": "0x6e57b9e54ea043a829584b22182ad22bf446926c",
+    "symbol": "sAMMV2-WBTC/tBTC",
+    "decimals": 18
+  },
+  "sAMMV2-WETH/frxETH": {
+    "chain": "optimism",
+    "address": "0x3f42dc59dc4df5cd607163bc620168f7ff7ab970",
+    "symbol": "sAMMV2-WETH/frxETH",
+    "decimals": 18
+  },
+  "sAMMV2-WETH/sETH": {
+    "chain": "optimism",
+    "address": "0x5e5a37445fadeb71f23514ae7d675ffc644e5e5a",
+    "symbol": "sAMMV2-WETH/sETH",
+    "decimals": 18
+  },
+  "sAMMV2-alETH/WETH": {
+    "chain": "optimism",
+    "address": "0xa1055762336f92b4b8d2edc032a0ce45ead6280a",
+    "symbol": "sAMMV2-alETH/WETH",
+    "decimals": 18
+  },
+  "sAMMV2-alETH/frxETH": {
+    "chain": "optimism",
+    "address": "0x1ad06ca54de04dbe9e2817f4c13ecb406dcbeaf0",
+    "symbol": "sAMMV2-alETH/frxETH",
+    "decimals": 18
+  },
+  "sAMMV2-alUSD/MAI": {
+    "chain": "optimism",
+    "address": "0xfa09479d72e2b3f8b6df63399772237ad6658d76",
+    "symbol": "sAMMV2-alUSD/MAI",
+    "decimals": 18
+  },
+  "sAMMV2-msETH/WETH": {
+    "chain": "optimism",
+    "address": "0x917aa69d539d6518440dd0bea2eaac142a8d5610",
+    "symbol": "sAMMV2-msETH/WETH",
+    "decimals": 18
+  },
+  "sAMMV2-sfrxETH/frxETH": {
+    "chain": "optimism",
+    "address": "0xff5318f81dd791e92d51b8a54fa3538832d2890d",
+    "symbol": "sAMMV2-sfrxETH/frxETH",
+    "decimals": 18
+  },
+  "sETH": {
+    "chain": "optimism",
+    "address": "0xe405de8f52ba7559f9df3c368500b6e6ae6cee49",
+    "symbol": "sETH",
+    "decimals": 18
+  },
+  "sUSD": {
+    "chain": "optimism",
+    "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9",
+    "symbol": "sUSD",
+    "decimals": 18
+  },
+  "sUSD3CRV-f": {
+    "chain": "optimism",
+    "address": "0x061b87122ed14b9526a813209c8a59a633257bab",
+    "symbol": "sUSD3CRV-f",
+    "decimals": 18
+  },
+  "seth-f": {
+    "chain": "optimism",
+    "address": "0x7bc5728bc2b59b45a58d9a576e2ffc5f0505b35e",
+    "symbol": "seth-f",
+    "decimals": 18
+  },
+  "vAAVE": {
+    "chain": "optimism",
+    "address": "0x34235c8489b06482a99bb7fcab6d7c467b92d248",
+    "symbol": "vAAVE",
+    "decimals": 18
+  },
+  "vAMMV2-EXA/WETH": {
+    "chain": "optimism",
+    "address": "0xf3c45b45223df6071a478851b9c17e0630fdf535",
+    "symbol": "vAMMV2-EXA/WETH",
+    "decimals": 18
+  },
+  "vAMMV2-IB/WETH": {
+    "chain": "optimism",
+    "address": "0xb545592e38b603f4a904a5260a6ffc538bfcb424",
+    "symbol": "vAMMV2-IB/WETH",
+    "decimals": 18
+  },
+  "vAMMV2-LYRA/USDC": {
+    "chain": "optimism",
+    "address": "0xdb61f9b480f0a8b817811cfaa89a1c219c355224",
+    "symbol": "vAMMV2-LYRA/USDC",
+    "decimals": 18
+  },
+  "vAMMV2-OATH/WETH": {
+    "chain": "optimism",
+    "address": "0xc3439bc1a747e545887192d6b7f8be47f608473f",
+    "symbol": "vAMMV2-OATH/WETH",
+    "decimals": 18
+  },
+  "vAMMV2-OP/USDC": {
+    "chain": "optimism",
+    "address": "0x0df083de449f75691fc5a36477a6f3284c269108",
+    "symbol": "vAMMV2-OP/USDC",
+    "decimals": 18
+  },
+  "vAMMV2-OP/VELO": {
+    "chain": "optimism",
+    "address": "0xe9581d0f1a628b038fc8b2a7f5a7d904f0e2f937",
+    "symbol": "vAMMV2-OP/VELO",
+    "decimals": 18
+  },
+  "vAMMV2-OVN/USD+": {
+    "chain": "optimism",
+    "address": "0x844d7d2fca6786be7de6721aabdff6957ace73a0",
+    "symbol": "vAMMV2-OVN/USD+",
+    "decimals": 18
+  },
+  "vAMMV2-QI/USDC": {
+    "chain": "optimism",
+    "address": "0x1c8d7fc2eaa85af18188f7619b99f939db34836d",
+    "symbol": "vAMMV2-QI/USDC",
+    "decimals": 18
+  },
+  "vAMMV2-RED/OP": {
+    "chain": "optimism",
+    "address": "0x4e316557f63c2156eafdfec08f31df4957136203",
+    "symbol": "vAMMV2-RED/OP",
+    "decimals": 18
+  },
+  "vAMMV2-RED/VELO": {
+    "chain": "optimism",
+    "address": "0x7a7f1187c4710010db17d0a9ad3fce85e6ecd90a",
+    "symbol": "vAMMV2-RED/VELO",
+    "decimals": 18
+  },
+  "vAMMV2-SONNE/USDC": {
+    "chain": "optimism",
+    "address": "0x4e60495550071693bc8bdffc40033d278157eac7",
+    "symbol": "vAMMV2-SONNE/USDC",
+    "decimals": 18
+  },
+  "vAMMV2-STG/USDC": {
+    "chain": "optimism",
+    "address": "0x56770b94279539416855fe29ef14b26438b5e421",
+    "symbol": "vAMMV2-STG/USDC",
+    "decimals": 18
+  },
+  "vAMMV2-TAROT/OP": {
+    "chain": "optimism",
+    "address": "0xf2d42c46528116362aca448837a0236459b53c63",
+    "symbol": "vAMMV2-TAROT/OP",
+    "decimals": 18
+  },
+  "vAMMV2-TAROT/USDC": {
+    "chain": "optimism",
+    "address": "0x2e931de1fcb2681dc98601e0b513308da9c5ceae",
+    "symbol": "vAMMV2-TAROT/USDC",
+    "decimals": 18
+  },
+  "vAMMV2-TAROTv1/OP": {
+    "chain": "optimism",
+    "address": "0xda0253a7cdccc4b4defbbef863dba1294bf5e3b1",
+    "symbol": "vAMMV2-TAROTv1/OP",
+    "decimals": 18
+  },
+  "vAMMV2-TAROTv1/USDC": {
+    "chain": "optimism",
+    "address": "0x9c78da24f2843ccdd02085bdec2484106554ca48",
+    "symbol": "vAMMV2-TAROTv1/USDC",
+    "decimals": 18
+  },
+  "vAMMV2-THALES/USDC": {
+    "chain": "optimism",
+    "address": "0xe5f28fc43bb40cdf7202ebe406793815b6f07fbd",
+    "symbol": "vAMMV2-THALES/USDC",
+    "decimals": 18
+  },
+  "vAMMV2-THALES/WETH": {
+    "chain": "optimism",
+    "address": "0xdff90e4a6c229565f25337b1db9fa12f6d8cb118",
+    "symbol": "vAMMV2-THALES/WETH",
+    "decimals": 18
+  },
+  "vAMMV2-UNIDX/DAI": {
+    "chain": "optimism",
+    "address": "0xc0a0adf5e3b07e383c2c1533b2f0878a3195c622",
+    "symbol": "vAMMV2-UNIDX/DAI",
+    "decimals": 18
+  },
+  "vAMMV2-UNLOCK/VELO": {
+    "chain": "optimism",
+    "address": "0x6e6046e9b5e3d90eac2abba610bca725834ca5b3",
+    "symbol": "vAMMV2-UNLOCK/VELO",
+    "decimals": 18
+  },
+  "vAMMV2-USDC/BLU": {
+    "chain": "optimism",
+    "address": "0x615b9dd61f1f9a80f5bcd33a53eb79c37b20addc",
+    "symbol": "vAMMV2-USDC/BLU",
+    "decimals": 18
+  },
+  "vAMMV2-USDC/MTA": {
+    "chain": "optimism",
+    "address": "0x8453cc52f2108ff9d1636b6a108db06ac137b72f",
+    "symbol": "vAMMV2-USDC/MTA",
+    "decimals": 18
+  },
+  "vAMMV2-USDC/PERP": {
+    "chain": "optimism",
+    "address": "0x4ed90ca704f4f6f3955169f202ea35365e41b424",
+    "symbol": "vAMMV2-USDC/PERP",
+    "decimals": 18
+  },
+  "vAMMV2-USDC/SNX": {
+    "chain": "optimism",
+    "address": "0x71d53b5b7141e1ec9a3fc9cc48b4766102d14a4a",
+    "symbol": "vAMMV2-USDC/SNX",
+    "decimals": 18
+  },
+  "vAMMV2-USDC/VELO": {
+    "chain": "optimism",
+    "address": "0x8134a2fdc127549480865fb8e5a9e8a8a95a54c5",
+    "symbol": "vAMMV2-USDC/VELO",
+    "decimals": 18
+  },
+  "vAMMV2-USDC/agEUR": {
+    "chain": "optimism",
+    "address": "0x4be2cbe40521279b8fc561e65bb842bf73ec3a80",
+    "symbol": "vAMMV2-USDC/agEUR",
+    "decimals": 18
+  },
+  "vAMMV2-USDC/wTBT": {
+    "chain": "optimism",
+    "address": "0x5e6e17f745ff620e87324b7c6ec672b5743bd0b4",
+    "symbol": "vAMMV2-USDC/wTBT",
+    "decimals": 18
+  },
+  "vAMMV2-USDC/wUSDR": {
+    "chain": "optimism",
+    "address": "0x95a05d06decf8e1eb93ae09b612fbd342f2f9e2e",
+    "symbol": "vAMMV2-USDC/wUSDR",
+    "decimals": 18
+  },
+  "vAMMV2-WETH/ERN": {
+    "chain": "optimism",
+    "address": "0xfff37730744930cb61be34c0014068f4f1ec28cf",
+    "symbol": "vAMMV2-WETH/ERN",
+    "decimals": 18
+  },
+  "vAMMV2-WETH/KWENTA": {
+    "chain": "optimism",
+    "address": "0x8f47041adbef5bf321c9f63a0660326614ab6b60",
+    "symbol": "vAMMV2-WETH/KWENTA",
+    "decimals": 18
+  },
+  "vAMMV2-WETH/LUSD": {
+    "chain": "optimism",
+    "address": "0x6387765ffa609ab9a1da1b16c455548bfed7cbea",
+    "symbol": "vAMMV2-WETH/LUSD",
+    "decimals": 18
+  },
+  "vAMMV2-WETH/OP": {
+    "chain": "optimism",
+    "address": "0xd25711edfbf747efce181442cc1d8f5f8fc8a0d3",
+    "symbol": "vAMMV2-WETH/OP",
+    "decimals": 18
+  },
+  "vAMMV2-WETH/UNIDX": {
+    "chain": "optimism",
+    "address": "0xe39120b27e5bfec953524402c2e261763c76519e",
+    "symbol": "vAMMV2-WETH/UNIDX",
+    "decimals": 18
+  },
+  "vAMMV2-WETH/USDC": {
+    "chain": "optimism",
+    "address": "0x0493bf8b6dbb159ce2db2e0e8403e753abd1235b",
+    "symbol": "vAMMV2-WETH/USDC",
+    "decimals": 18
+  },
+  "vAMMV2-WETH/rETH": {
+    "chain": "optimism",
+    "address": "0x7e0f65fab1524da9e2e5711d160541cf1199912e",
+    "symbol": "vAMMV2-WETH/rETH",
+    "decimals": 18
+  },
+  "vAMMV2-WETH/tBTC": {
+    "chain": "optimism",
+    "address": "0xadbb23bcc3c1b9810491897cb0690cf645b858b1",
+    "symbol": "vAMMV2-WETH/tBTC",
+    "decimals": 18
+  },
+  "vAMMV2-stERN/ERN": {
+    "chain": "optimism",
+    "address": "0x4706e50fde911525e4b904c240056c4ea0884aa6",
+    "symbol": "vAMMV2-stERN/ERN",
+    "decimals": 18
+  },
+  "vAMMV2-wUSDR/USDC": {
+    "chain": "optimism",
+    "address": "0x77b6d0279c9cef559ef7c32c31d9a5d8acb664fe",
+    "symbol": "vAMMV2-wUSDR/USDC",
+    "decimals": 18
+  },
+  "vAMMV2-wstETH/LDO": {
+    "chain": "optimism",
+    "address": "0xc5c247580a4a6e4d3811c0da6215057aac480bac",
+    "symbol": "vAMMV2-wstETH/LDO",
+    "decimals": 18
+  },
+  "vAMMV2-wstETH/OP": {
+    "chain": "optimism",
+    "address": "0x7178f61694ba9109205b8d6f686282307625e62d",
+    "symbol": "vAMMV2-wstETH/OP",
+    "decimals": 18
+  },
+  "vAMMV2-wstETH/WETH": {
+    "chain": "optimism",
+    "address": "0x6da98bde0068d10ddd11b468b197ea97d96f96bc",
+    "symbol": "vAMMV2-wstETH/WETH",
+    "decimals": 18
+  },
+  "vAPE": {
+    "chain": "optimism",
+    "address": "0x9d34f1d15c22e4c0924804e2a38cbe93dfb84bc2",
+    "symbol": "vAPE",
+    "decimals": 18
+  },
+  "vATOM": {
+    "chain": "optimism",
+    "address": "0x5f714b5347f0b5de9f9598e39840e176ce889b9c",
+    "symbol": "vATOM",
+    "decimals": 18
+  },
+  "vAVAX": {
+    "chain": "optimism",
+    "address": "0x5faa136fc58b6136ffdaeaac320076c4865c070f",
+    "symbol": "vAVAX",
+    "decimals": 18
+  },
+  "vBNB": {
+    "chain": "optimism",
+    "address": "0xb6599bd362120dc70d48409b8a08888807050700",
+    "symbol": "vBNB",
+    "decimals": 18
+  },
+  "vBTC": {
+    "chain": "optimism",
+    "address": "0x86f1e0420c26a858fc203a3645dd1a36868f18e5",
+    "symbol": "vBTC",
+    "decimals": 18
+  },
+  "vCRV": {
+    "chain": "optimism",
+    "address": "0x7161c3416e08abaa5cd38e68d9a28e43a694e037",
+    "symbol": "vCRV",
+    "decimals": 18
+  },
+  "vDOGE": {
+    "chain": "optimism",
+    "address": "0x8711ac690984badc42e7abe71f351b5ac2a2ad0d",
+    "symbol": "vDOGE",
+    "decimals": 18
+  },
+  "vETH": {
+    "chain": "optimism",
+    "address": "0x8c835dfaa34e2ae61775e80ee29e2c724c6ae2bb",
+    "symbol": "vETH",
+    "decimals": 18
+  },
+  "vFLOW": {
+    "chain": "optimism",
+    "address": "0x7eada83e15acd08d22ad85a1dce92e5a257acb92",
+    "symbol": "vFLOW",
+    "decimals": 18
+  },
+  "vFTM": {
+    "chain": "optimism",
+    "address": "0x2db8d2db86ca3a4c7040e778244451776570359b",
+    "symbol": "vFTM",
+    "decimals": 18
+  },
+  "vLINK": {
+    "chain": "optimism",
+    "address": "0x2f198182ec54469195a4a06262a9431a42462373",
+    "symbol": "vLINK",
+    "decimals": 18
+  },
+  "vLUNA": {
+    "chain": "optimism",
+    "address": "0xb24f50dd9918934ab2228be7a097411ca28f6c14",
+    "symbol": "vLUNA",
+    "decimals": 18
+  },
+  "vMATIC": {
+    "chain": "optimism",
+    "address": "0xbe5de48197fc974600929196239e264ecb703ee8",
+    "symbol": "vMATIC",
+    "decimals": 18
+  },
+  "vNEAR": {
+    "chain": "optimism",
+    "address": "0x3fb3282e3ba34a0bff94845f1800eb93cc6850d4",
+    "symbol": "vNEAR",
+    "decimals": 18
+  },
+  "vONE": {
+    "chain": "optimism",
+    "address": "0x77d0cc9568605bfff32f918c8ffaa53f72901416",
+    "symbol": "vONE",
+    "decimals": 18
+  },
+  "vOP": {
+    "chain": "optimism",
+    "address": "0x5a7ed3ce6096228a9fe1b673830e6a78c9cfb71b",
+    "symbol": "vOP",
+    "decimals": 18
+  },
+  "vPERP": {
+    "chain": "optimism",
+    "address": "0x9482aafdced6b899626f465e1fa0cf1b1418d797",
+    "symbol": "vPERP",
+    "decimals": 18
+  },
+  "vSAND": {
+    "chain": "optimism",
+    "address": "0x333b1ea429a88d0dd48ce7c06c16609cd76f43a8",
+    "symbol": "vSAND",
+    "decimals": 18
+  },
+  "vSNX": {
+    "chain": "optimism",
+    "address": "0x35af19826c79c21f54612d1913f3f471dbad44e0",
+    "symbol": "vSNX",
+    "decimals": 18
+  },
+  "vSOL": {
+    "chain": "optimism",
+    "address": "0x151bb01c79f4516c233948d69dae39869bccb737",
+    "symbol": "vSOL",
+    "decimals": 18
+  },
+  "vUSD": {
+    "chain": "optimism",
+    "address": "0xc84da6c8ec7a57cd10b939e79eaf9d2d17834e04",
+    "symbol": "vUSD",
+    "decimals": 18
+  },
+  "vWLD": {
+    "chain": "optimism",
+    "address": "0x32bd830aab3bcae5422e241a04a72b417e75e397",
+    "symbol": "vWLD",
+    "decimals": 18
+  },
+  "wOptiDoge": {
+    "chain": "optimism",
+    "address": "0xc26921b5b9ee80773774d36c84328ccb22c3a819",
+    "symbol": "wOptiDoge",
+    "decimals": 18
+  },
+  "wstETH": {
+    "chain": "optimism",
+    "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+    "symbol": "wstETH",
+    "decimals": 18
+  }
+}

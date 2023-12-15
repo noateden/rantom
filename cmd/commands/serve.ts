@@ -3,22 +3,24 @@ import express from 'express';
 import path from 'path';
 
 import logger from '../../lib/logger';
-import getRouter from '../../modules/api';
-import { GlobalProviders } from '../../types/namespaces';
+import getRouter from '../../modules/api/api';
+import { ContextServices } from '../../types/namespaces';
 import { BasicCommand } from '../basic';
 
 export class ServeCommand extends BasicCommand {
   public readonly name: string = 'serve';
-  public readonly describe: string = 'Serve restful API server';
+  public readonly describe: string = 'Run the restful api server';
 
   constructor() {
     super();
   }
 
   public async execute(argv: any) {
-    const providers: GlobalProviders = await super.getProviders();
+    // connect database
+    const services: ContextServices = await super.getServices();
+    await super.preHook(services);
 
-    const router = getRouter(providers);
+    const router = getRouter(services);
 
     const port = argv.port || process.env.PORT || '8080';
 
@@ -27,17 +29,14 @@ export class ServeCommand extends BasicCommand {
     app.use(cors());
     app.use(express.json());
 
-    app.use('/api/v1', router);
+    app.use('/api', router);
 
     app.use('/', express.static(path.join('.', 'public')));
 
     app.listen(port, () => {
-      logger.onInfo({
+      logger.info('started the restful api service', {
         service: 'api',
-        message: 'started rest API service',
-        props: {
-          address: `0.0.0.0:${port}`,
-        },
+        address: `0.0.0.0:${port}`,
       });
     });
   }

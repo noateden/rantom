@@ -1,10 +1,8 @@
 import envConfig from '../configs/envConfig';
-import { OracleProvider } from '../modules/oracles/oracle';
-import { CachingProvider } from '../services/caching';
-import MongodbProvider from '../services/mongo';
-import SentryProvider from '../services/sentry';
-import { Web3HelperProvider } from '../services/web3';
-import { GlobalProviders } from '../types/namespaces';
+import BlockchainService from '../services/blockchains/blockchain';
+import DatabaseService from '../services/database/database';
+import Datastore from '../services/datastore/datastore';
+import { ContextServices } from '../types/namespaces';
 
 export class BasicCommand {
   public readonly name: string = 'command';
@@ -12,20 +10,21 @@ export class BasicCommand {
 
   constructor() {}
 
-  public async getProviders(): Promise<GlobalProviders> {
-    const mongodb = new MongodbProvider();
+  public async getServices(): Promise<ContextServices> {
+    const database = new DatabaseService();
+    const blockchain = new BlockchainService(database);
+    const datastore = new Datastore();
 
-    const providers: GlobalProviders = {
-      mongodb: mongodb,
-      sentry: new SentryProvider(process.env.RANTOM_SENTRY_DNS as string),
-      caching: new CachingProvider(mongodb),
-      web3Helper: new Web3HelperProvider(mongodb),
-      oracle: new OracleProvider(mongodb),
+    return {
+      database: database,
+      blockchain: blockchain,
+      datastore: datastore,
     };
+  }
 
-    await providers.mongodb.connect(envConfig.mongodb.connectionUri, envConfig.mongodb.databaseName);
-
-    return providers;
+  public async preHook(services: ContextServices): Promise<void> {
+    await services.database.connect(envConfig.mongodb.connectionUri, envConfig.mongodb.databaseName);
+    await services.datastore.loadData();
   }
 
   public async execute(argv: any) {}

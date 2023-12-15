@@ -1,93 +1,57 @@
-export interface ParseTransactionOptions {
-  hash: string;
-  force: boolean;
-}
-
-export interface TransferParseLogOptions {
+export interface BlockchainIndexingRunOptions {
   chain: string;
-  address: string;
-  topics: Array<string>;
-  data: string;
-}
 
-export interface AdapterParseLogOptions {
-  chain: string;
-  sender: string; // transaction caller address
-  hash?: string;
-  to?: string; // transaction to address
-  address: string;
-  topics: Array<string>;
-  data: string;
-
-  blockNumber?: number;
-
-  input?: string;
-
-  // full transaction receipt
-  context?: any;
-}
-
-export interface AdapterParseContractInfoOptions {
-  chain: string;
-  address: string;
-}
-
-export interface AdapterParseFunctionCallDataOptions {
-  chain: string;
-  address: string; // contract address
-  input: string;
-
-  // full transaction receipt
-  context: any;
-
-  // transaction data
-  tx: any;
-}
-
-export type MultiCallResponse<T> = T | null;
-
-export interface MulticallCall {
-  address: string; // Address of the contract
-  name: string; // Function name on the contract (example: balanceOf)
-  params?: any[]; // Function params
-}
-
-export interface MulticallOptions {
-  requireSuccess?: boolean;
-}
-
-export interface WorkerRunOptions {
-  chain?: string;
-  force?: boolean;
+  // force to sync from the contract birthBlock
   fromBlock: number;
-  fromTime: number;
 }
 
-export interface SubgraphJobRunOptions {
-  job: string;
-  fromTime: number;
-}
-
-export interface OracleGetTokenPriceOptions {
+export interface EventlogIndexingRunOptions {
   chain: string;
-  address: string;
-  timestamp: number;
+
+  // force to sync from the contract birthBlock
+  fromBlock: number;
 }
 
-export interface ApiQueryLogOptions {
-  query: any;
-  limit: number;
-  order: number;
-  skip: number;
+export interface ProtocolIndexingRunOptions {
+  protocol: string;
+
+  // if chain was given
+  // sync only data from given chain
+  chain?: string;
+
+  // sync only data from contract
+  // if it was given
+  contract?: string;
+
+  // it works only when combine with
+  // chain, contract, ot both options
+  fromBlock?: number;
 }
 
-export interface RpcWrapperQueryContractOptions {
+export interface HandleHookEventLogOptions {
   chain: string;
-  abi: any;
-  contract: string;
-  method: string;
-  params: Array<any>;
+  log: any;
+}
 
-  // if blockNumber is not given, just call data from latest block
-  blockNumber?: number;
+export interface ParseTransactionOptions {
+  chain?: string;
+  hash: string;
+}
+
+export interface ParseEventLogOptions {
+  chain: string;
+
+  // full list of logs were emitted in the same transaction
+  // some protocol need these logs
+  allLogs: Array<any>;
+
+  // the main log entry
+  log: any;
+
+  // the transaction where the log was emitted
+  transaction?: any;
+
+  // get missing data onchain
+  // this option will decrease parser speed
+  onchain?: boolean;
 }

@@ -1,83 +1,93 @@
-import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
-
-import { Tokens } from '../../../configs/constants';
-import EnvConfig from '../../../configs/envConfig';
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
-import { ProtocolConfig } from '../../../types/configs';
+import { AddressZero } from '../../../configs/constants/addresses';
+import { normalizeAddress } from '../../../lib/utils';
+import { formatFromDecimals } from '../../../lib/utils';
+import { ProtocolConfig, Token } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { EnsAbiMappings, EnsEventSignatures } from './abis';
 
-const Signatures: { [key: string]: string } = {
-  Register: '0xca6abbe9d7f11422cb6ca7629fbf6fe9efb1c621f71ce8f02b9f2a230097404f',
-  Register2: '0x69e37f151eb98a09618ddaa80c8cfaf1ce5996867c489f45b555b412271ebf27',
-  ReNew: '0x3da24c024582931cfaf8267d8ed24d13a82a8068d5bd337d30ec45cea4e506ae',
-};
-
-export class EnsAdapter extends Adapter {
+export default class EnsAdapter extends Adapter {
   public readonly name: string = 'adapter.ens';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.Register]: EventSignatureMapping[Signatures.Register],
-      [Signatures.Register2]: EventSignatureMapping[Signatures.Register2],
-      [Signatures.ReNew]: EventSignatureMapping[Signatures.ReNew],
-    });
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, config);
+
+    this.config = config;
+    this.eventMappings = EnsAbiMappings;
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
 
-    const signature = topics[0];
-    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
+    if (this.supportedContract(options.chain, options.log.address)) {
+      const signature = options.log.topics[0];
 
-      if (signature === Signatures.Register || signature === Signatures.Register2) {
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
+
+      const token: Token = {
+        chain: options.chain,
+        symbol: 'ETH',
+        decimals: 18,
+        address: AddressZero,
+      };
+
+      if (signature === EnsEventSignatures.Register || signature === EnsEventSignatures.Register2) {
         const owner = normalizeAddress(event.owner);
-        const amount = event.cost
-          ? new BigNumber(event.cost).dividedBy(1e18).toString(10)
-          : new BigNumber(event.baseCost).dividedBy(1e18).toString(10);
+        const amount = formatFromDecimals(
+          event.cost ? event.cost.toString() : event.baseCost.toString(),
+          token.decimals
+        );
         const expired = Number(event.expires);
 
-        return {
-          protocol: this.config.protocol,
-          action: 'register',
-          addresses: [owner],
-          tokens: [Tokens.ethereum.NativeCoin],
-          tokenAmounts: [amount],
+        actions.push({
+          ...this.buildUpAction({
+            ...options,
+            action: 'register',
+            addresses: [owner],
+            tokens: [token],
+            tokenAmounts: [amount],
+          }),
           addition: {
             name: event.name,
             expired: expired,
           },
-          readableString: `${owner} register ${event.name} cost ${amount} ${
-            Tokens.ethereum.NativeCoin.symbol
-          } expired date ${new Date(expired * 1000).toISOString()} on ${this.config.protocol} chain ${chain}`,
-        };
-      } else if (signature === Signatures.ReNew) {
-        const amount = new BigNumber(event.cost).dividedBy(1e18).toString(10);
+        });
+      } else if (signature === EnsEventSignatures.ReNew) {
         const expired = Number(event.expires);
-        const sender = await this.getSenderAddress(options);
-        return {
-          protocol: this.config.protocol,
-          action: 'renew',
-          addresses: [sender],
-          tokens: [Tokens.ethereum.NativeCoin],
-          tokenAmounts: [amount],
+
+        let transaction = options.transaction;
+        if (!transaction) {
+          transaction = await this.services.blockchain.getTransaction({
+            chain: options.chain,
+            hash: options.log.transactionHash,
+          });
+        }
+        const sender = transaction.from;
+        const amount = formatFromDecimals(event.cost.toString(), token.decimals);
+        actions.push({
+          ...this.buildUpAction({
+            ...options,
+            action: 'renew',
+            addresses: [sender],
+            tokens: [token],
+            tokenAmounts: [amount],
+          }),
           addition: {
             name: event.name,
             expired: expired,
           },
-          readableString: `${sender} renew ${event.name} cost ${amount} ${
-            Tokens.ethereum.NativeCoin.symbol
-          } expired date ${new Date(expired * 1000).toISOString()} on ${this.config.protocol} chain ${chain}`,
-        };
+        });
       }
     }
 
-    return null;
+    return actions;
   }
 }

@@ -1,94 +1,99 @@
 [
   {
     "chain": "arbitrum",
+    "protocol": "gmxv2",
     "address": "0x47c031236e19d024b42f8ae6780e44a573170703",
     "indexToken": {
       "chain": "arbitrum",
-      "address": "0x47904963fc8b2340414262125af798b9655e58cd",
       "symbol": "BTC",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x47904963fc8b2340414262125af798b9655e58cd"
     },
     "longToken": {
       "chain": "arbitrum",
+      "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
       "symbol": "WBTC",
-      "decimals": 8,
-      "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f"
+      "decimals": 8
     },
     "shortToken": {
       "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
       "symbol": "USDC",
-      "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+      "decimals": 6
     }
   },
   {
     "chain": "arbitrum",
+    "protocol": "gmxv2",
     "address": "0x0ccb4faa6f1f1b30911619f1184082ab4e25813c",
     "indexToken": {
       "chain": "arbitrum",
-      "address": "0xc14e065b0067de91534e032868f5ac6ecf2c6868",
       "symbol": "XRP",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0xc14e065b0067de91534e032868f5ac6ecf2c6868"
     },
     "longToken": {
       "chain": "arbitrum",
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
-      "decimals": 18,
-      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+      "decimals": 18
     },
     "shortToken": {
       "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
       "symbol": "USDC",
-      "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+      "decimals": 6
     }
   },
   {
     "chain": "arbitrum",
+    "protocol": "gmxv2",
     "address": "0x70d95587d40a2caf56bd97485ab3eec10bee6336",
     "indexToken": {
       "chain": "arbitrum",
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
-      "decimals": 18,
-      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
-    },
-    "longToken": {
-      "chain": "arbitrum",
-      "symbol": "WETH",
-      "decimals": 18,
-      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
-    },
-    "shortToken": {
-      "chain": "arbitrum",
-      "symbol": "USDC",
-      "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
-    }
-  },
-  {
-    "chain": "arbitrum",
-    "address": "0x6853ea96ff216fab11d2d930ce3c508556a4bdc4",
-    "indexToken": {
-      "chain": "arbitrum",
-      "address": "0xc4da4c24fd591125c3f47b340b6f4f76111883d8",
-      "symbol": "DOGE",
       "decimals": 18
     },
     "longToken": {
       "chain": "arbitrum",
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
       "symbol": "WETH",
-      "decimals": 18,
-      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+      "decimals": 18
     },
     "shortToken": {
       "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
       "symbol": "USDC",
-      "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+      "decimals": 6
     }
   },
   {
     "chain": "arbitrum",
+    "protocol": "gmxv2",
+    "address": "0x6853ea96ff216fab11d2d930ce3c508556a4bdc4",
+    "indexToken": {
+      "chain": "arbitrum",
+      "symbol": "DOGE",
+      "decimals": 18,
+      "address": "0xc4da4c24fd591125c3f47b340b6f4f76111883d8"
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "gmxv2",
     "address": "0x09400d9db990d5ed3f35d7be61dfaeb900af03c9",
     "indexToken": {
       "chain": "arbitrum",
@@ -104,113 +109,118 @@
     },
     "shortToken": {
       "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
       "symbol": "USDC",
-      "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+      "decimals": 6
     }
   },
   {
     "chain": "arbitrum",
+    "protocol": "gmxv2",
     "address": "0xd9535bb5f58a1a75032416f2dfe7880c30575a41",
     "indexToken": {
       "chain": "arbitrum",
-      "address": "0xb46a094bc4b0adbd801e14b9db95e05e28962764",
       "symbol": "LTC",
+      "decimals": 18,
+      "address": "0xb46a094bc4b0adbd801e14b9db95e05e28962764"
+    },
+    "longToken": {
+      "chain": "arbitrum",
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+      "symbol": "WETH",
+      "decimals": 18
+    },
+    "shortToken": {
+      "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "gmxv2",
+    "address": "0xc7abb2c5f3bf3ceb389df0eecd6120d451170b50",
+    "indexToken": {
+      "chain": "arbitrum",
+      "address": "0xfa7f8980b0f1e64a2062791cc3b0871572f1f7f0",
+      "symbol": "UNI",
       "decimals": 18
     },
     "longToken": {
       "chain": "arbitrum",
-      "symbol": "WETH",
-      "decimals": 18,
-      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+      "address": "0xfa7f8980b0f1e64a2062791cc3b0871572f1f7f0",
+      "symbol": "UNI",
+      "decimals": 18
     },
     "shortToken": {
       "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
       "symbol": "USDC",
-      "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+      "decimals": 6
     }
   },
   {
     "chain": "arbitrum",
-    "address": "0xc7abb2c5f3bf3ceb389df0eecd6120d451170b50",
-    "indexToken": {
-      "chain": "arbitrum",
-      "symbol": "UNI",
-      "decimals": 18,
-      "address": "0xfa7f8980b0f1e64a2062791cc3b0871572f1f7f0"
-    },
-    "longToken": {
-      "chain": "arbitrum",
-      "symbol": "UNI",
-      "decimals": 18,
-      "address": "0xfa7f8980b0f1e64a2062791cc3b0871572f1f7f0"
-    },
-    "shortToken": {
-      "chain": "arbitrum",
-      "symbol": "USDC",
-      "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
-    }
-  },
-  {
-    "chain": "arbitrum",
+    "protocol": "gmxv2",
     "address": "0x7f1fa204bb700853d36994da19f830b6ad18455c",
     "indexToken": {
       "chain": "arbitrum",
+      "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4",
       "symbol": "LINK",
-      "decimals": 18,
-      "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4"
+      "decimals": 18
     },
     "longToken": {
       "chain": "arbitrum",
+      "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4",
       "symbol": "LINK",
-      "decimals": 18,
-      "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4"
+      "decimals": 18
     },
     "shortToken": {
       "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
       "symbol": "USDC",
-      "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+      "decimals": 6
     }
   },
   {
     "chain": "arbitrum",
+    "protocol": "gmxv2",
     "address": "0xc25cef6061cf5de5eb761b50e4743c1f5d7e5407",
     "indexToken": {
       "chain": "arbitrum",
+      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
       "symbol": "ARB",
-      "decimals": 18,
-      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548"
+      "decimals": 18
     },
     "longToken": {
       "chain": "arbitrum",
+      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
       "symbol": "ARB",
-      "decimals": 18,
-      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548"
+      "decimals": 18
     },
     "shortToken": {
       "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
       "symbol": "USDC",
-      "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+      "decimals": 6
     }
   },
   {
     "chain": "arbitrum",
+    "protocol": "gmxv2",
     "address": "0x9c2433dfd71096c435be9465220bb2b189375ea7",
     "indexToken": {
       "chain": "arbitrum",
+      "address": "0x0000000000000000000000000000000000000000",
       "symbol": "ETH",
-      "decimals": 18,
-      "address": "0x0000000000000000000000000000000000000000"
+      "decimals": 18
     },
     "longToken": {
       "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
       "symbol": "USDC",
-      "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+      "decimals": 6
     },
     "shortToken": {
       "chain": "arbitrum",
@@ -221,46 +231,301 @@
   },
   {
     "chain": "arbitrum",
+    "protocol": "gmxv2",
     "address": "0xb686bcb112660343e6d15bdb65297e110c8311c4",
     "indexToken": {
       "chain": "arbitrum",
+      "address": "0x0000000000000000000000000000000000000000",
       "symbol": "ETH",
-      "decimals": 18,
-      "address": "0x0000000000000000000000000000000000000000"
+      "decimals": 18
     },
     "longToken": {
       "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
       "symbol": "USDC",
-      "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+      "decimals": 6
     },
     "shortToken": {
       "chain": "arbitrum",
+      "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
       "symbol": "USDT",
-      "decimals": 6,
-      "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
+      "decimals": 6
     }
   },
   {
     "chain": "arbitrum",
+    "protocol": "gmxv2",
     "address": "0xe2fedb9e6139a182b98e7c2688ccfa3e9a53c665",
     "indexToken": {
       "chain": "arbitrum",
+      "address": "0x0000000000000000000000000000000000000000",
       "symbol": "ETH",
-      "decimals": 18,
-      "address": "0x0000000000000000000000000000000000000000"
+      "decimals": 18
     },
     "longToken": {
       "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
       "symbol": "USDC",
-      "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+      "decimals": 6
     },
     "shortToken": {
       "chain": "arbitrum",
+      "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
       "symbol": "DAI",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "avalanche",
+    "protocol": "gmxv2",
+    "address": "0xfb02132333a79c8b5bd0b64e3abcca5f7faf2937",
+    "indexToken": {
+      "chain": "avalanche",
+      "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+      "symbol": "BTC.b",
+      "decimals": 8
+    },
+    "longToken": {
+      "chain": "avalanche",
+      "address": "0x152b9d0fdc40c096757f570a51e494bd4b943e50",
+      "symbol": "BTC.b",
+      "decimals": 8
+    },
+    "shortToken": {
+      "chain": "avalanche",
+      "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "avalanche",
+    "protocol": "gmxv2",
+    "address": "0xb7e69749e3d2edd90ea59a4932efea2d41e245d7",
+    "indexToken": {
+      "chain": "avalanche",
+      "address": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+      "symbol": "WETH.e",
+      "decimals": 18
+    },
+    "longToken": {
+      "chain": "avalanche",
+      "address": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+      "symbol": "WETH.e",
+      "decimals": 18
+    },
+    "shortToken": {
+      "chain": "avalanche",
+      "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "avalanche",
+    "protocol": "gmxv2",
+    "address": "0x8970b527e84aa17a33d38b65e9a5ab5817fc0027",
+    "indexToken": {
+      "chain": "avalanche",
+      "symbol": "DOGE",
       "decimals": 18,
-      "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
+      "address": "0xc301e6fe31062c557aee806cc6a841ae989a3ac6"
+    },
+    "longToken": {
+      "chain": "avalanche",
+      "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+      "symbol": "WAVAX",
+      "decimals": 18
+    },
+    "shortToken": {
+      "chain": "avalanche",
+      "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "avalanche",
+    "protocol": "gmxv2",
+    "address": "0xd2efd1ea687cd78c41ac262b3bc9b53889ff1f70",
+    "indexToken": {
+      "chain": "avalanche",
+      "address": "0xfe6b19286885a4f7f55adad09c3cd1f906d2478f",
+      "symbol": "SOL",
+      "decimals": 9
+    },
+    "longToken": {
+      "chain": "avalanche",
+      "address": "0xfe6b19286885a4f7f55adad09c3cd1f906d2478f",
+      "symbol": "SOL",
+      "decimals": 9
+    },
+    "shortToken": {
+      "chain": "avalanche",
+      "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "avalanche",
+    "protocol": "gmxv2",
+    "address": "0xa74586743249243d3b77335e15fe768ba8e1ec5a",
+    "indexToken": {
+      "chain": "avalanche",
+      "symbol": "LTC",
+      "decimals": 18,
+      "address": "0x8e9c35235c38c44b5a53b56a41eaf6db9a430cd6"
+    },
+    "longToken": {
+      "chain": "avalanche",
+      "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+      "symbol": "WAVAX",
+      "decimals": 18
+    },
+    "shortToken": {
+      "chain": "avalanche",
+      "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "avalanche",
+    "protocol": "gmxv2",
+    "address": "0x913c1f46b48b3ed35e7dc3cf754d4ae8499f31cf",
+    "indexToken": {
+      "chain": "avalanche",
+      "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+      "symbol": "WAVAX",
+      "decimals": 18
+    },
+    "longToken": {
+      "chain": "avalanche",
+      "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+      "symbol": "WAVAX",
+      "decimals": 18
+    },
+    "shortToken": {
+      "chain": "avalanche",
+      "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "avalanche",
+    "protocol": "gmxv2",
+    "address": "0xf3652eba45dc761e7add4091627d5cda21f61613",
+    "indexToken": {
+      "chain": "avalanche",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "AVAX",
+      "decimals": 18
+    },
+    "longToken": {
+      "chain": "avalanche",
+      "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "shortToken": {
+      "chain": "avalanche",
+      "address": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+      "symbol": "USDT.e",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "avalanche",
+    "protocol": "gmxv2",
+    "address": "0x297e71a931c5825867e8fb937ae5cda9891c2e99",
+    "indexToken": {
+      "chain": "avalanche",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "AVAX",
+      "decimals": 18
+    },
+    "longToken": {
+      "chain": "avalanche",
+      "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "shortToken": {
+      "chain": "avalanche",
+      "address": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+      "symbol": "USDC.e",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "avalanche",
+    "protocol": "gmxv2",
+    "address": "0xa7b768d6a1f746fd5a513d440df2970ff099b0fc",
+    "indexToken": {
+      "chain": "avalanche",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "AVAX",
+      "decimals": 18
+    },
+    "longToken": {
+      "chain": "avalanche",
+      "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+      "symbol": "USDt",
+      "decimals": 6
+    },
+    "shortToken": {
+      "chain": "avalanche",
+      "address": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+      "symbol": "USDT.e",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "avalanche",
+    "protocol": "gmxv2",
+    "address": "0xdf8c9bd26e7c1a331902758eb013548b2d22ab3b",
+    "indexToken": {
+      "chain": "avalanche",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "AVAX",
+      "decimals": 18
+    },
+    "longToken": {
+      "chain": "avalanche",
+      "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+      "symbol": "USDC",
+      "decimals": 6
+    },
+    "shortToken": {
+      "chain": "avalanche",
+      "address": "0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
+      "symbol": "DAI.e",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "avalanche",
+    "protocol": "gmxv2",
+    "address": "0xd1cf931fa12783c1dd5abb77a0706c27cf352f25",
+    "indexToken": {
+      "chain": "avalanche",
+      "symbol": "XRP",
+      "decimals": 18,
+      "address": "0x34b2885d617ce2dded4f60ccb49809fc17bb58af"
+    },
+    "longToken": {
+      "chain": "avalanche",
+      "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+      "symbol": "WAVAX",
+      "decimals": 18
+    },
+    "shortToken": {
+      "chain": "avalanche",
+      "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+      "symbol": "USDC",
+      "decimals": 6
     }
   }
 ]

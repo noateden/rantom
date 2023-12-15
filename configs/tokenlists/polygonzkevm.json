@@ -1,0 +1,158 @@
+{
+  "A": {
+    "chain": "polygonzkevm",
+    "address": "0x47b2286a76acf9a99b30c8d8261ef6eb066dafc7",
+    "symbol": "A",
+    "decimals": 18
+  },
+  "ATF": {
+    "chain": "polygonzkevm",
+    "address": "0x40df0c3bbaae5ea3a509d8f2aa9e086776c98e6c",
+    "symbol": "ATF",
+    "decimals": 18
+  },
+  "B": {
+    "chain": "polygonzkevm",
+    "address": "0xf6024fa6cfbd03675b68befea86e49cf382bd1b2",
+    "symbol": "B",
+    "decimals": 18
+  },
+  "BBB": {
+    "chain": "polygonzkevm",
+    "address": "0x93d9500faa97692f2ec87e26083898e056e7a08d",
+    "symbol": "BBB",
+    "decimals": 18
+  },
+  "BITCOIN": {
+    "chain": "polygonzkevm",
+    "address": "0xf1779b7ac59ae14edcab1b284823bc5d1c3f7dd3",
+    "symbol": "BITCOIN",
+    "decimals": 8
+  },
+  "COP": {
+    "chain": "polygonzkevm",
+    "address": "0x3d09d99838208be578057822508fa61ce97c6f17",
+    "symbol": "COP",
+    "decimals": 18
+  },
+  "Cake": {
+    "chain": "polygonzkevm",
+    "address": "0x0d1e753a25ebda689453309112904807625befbe",
+    "symbol": "Cake",
+    "decimals": 18
+  },
+  "D2": {
+    "chain": "polygonzkevm",
+    "address": "0xcb7bbe3825f41e9d16277245515804caed9ad476",
+    "symbol": "D2",
+    "decimals": 18
+  },
+  "DAI": {
+    "chain": "polygonzkevm",
+    "address": "0xc5015b9d9161dca7e18e32f6f25c4ad850731fd4",
+    "symbol": "DAI",
+    "decimals": 18
+  },
+  "DUSD": {
+    "chain": "polygonzkevm",
+    "address": "0x819d1daa794c1c46b841981b61cc978d95a17b8e",
+    "symbol": "DUSD",
+    "decimals": 18
+  },
+  "FIGI": {
+    "chain": "polygonzkevm",
+    "address": "0x121bdffd2abf44152ed38d6d26a0744bf1ea1469",
+    "symbol": "FIGI",
+    "decimals": 18
+  },
+  "GRAI": {
+    "chain": "polygonzkevm",
+    "address": "0xca68ad4ee5c96871ec6c6dac2f714a8437a3fe66",
+    "symbol": "GRAI",
+    "decimals": 18
+  },
+  "KNC": {
+    "chain": "polygonzkevm",
+    "address": "0x6a80a465409ce8d36c513129c0feea61bed579ba",
+    "symbol": "KNC",
+    "decimals": 18
+  },
+  "MATIC": {
+    "chain": "polygonzkevm",
+    "address": "0xa2036f0538221a77a3937f1379699f44945018d0",
+    "symbol": "MATIC",
+    "decimals": 18
+  },
+  "MXP": {
+    "chain": "polygonzkevm",
+    "address": "0x784893966db1119efda6519ff246a6ef1872837f",
+    "symbol": "MXP",
+    "decimals": 18
+  },
+  "Mika": {
+    "chain": "polygonzkevm",
+    "address": "0xa83b83d641e563be3ae8ede78de15ae33b690570",
+    "symbol": "Mika",
+    "decimals": 18
+  },
+  "PEPE": {
+    "chain": "polygonzkevm",
+    "address": "0x8dad21cde82fc11094dcfecc189378f1443417a0",
+    "symbol": "PEPE",
+    "decimals": 18
+  },
+  "RAI": {
+    "chain": "polygonzkevm",
+    "address": "0xdcb8125a0fa9ad694ced4ba482a9fbef14c6c26f",
+    "symbol": "RAI",
+    "decimals": 18
+  },
+  "TT": {
+    "chain": "polygonzkevm",
+    "address": "0x744fd7d693b738b1ff9f738730c3d0344b3b10df",
+    "symbol": "TT",
+    "decimals": 18
+  },
+  "TUP": {
+    "chain": "polygonzkevm",
+    "address": "0x57685ddbc1498f7873963cee5c186c7d95d91688",
+    "symbol": "TUP",
+    "decimals": 18
+  },
+  "USDC": {
+    "chain": "polygonzkevm",
+    "address": "0xa8ce8aee21bc2a48a5ef670afcc9274c7bbbc035",
+    "symbol": "USDC",
+    "decimals": 6
+  },
+  "USDT": {
+    "chain": "polygonzkevm",
+    "address": "0x1e4a5963abfd975d8c9021ce480b42188849d41d",
+    "symbol": "USDT",
+    "decimals": 6
+  },
+  "WBTC": {
+    "chain": "polygonzkevm",
+    "address": "0xea034fb02eb1808c2cc3adbc15f447b93cbe08e1",
+    "symbol": "WBTC",
+    "decimals": 8
+  },
+  "WETH": {
+    "chain": "polygonzkevm",
+    "address": "0x4f9a0e7fd2bf6067db6994cf12e4495df938e6e9",
+    "symbol": "WETH",
+    "decimals": 18
+  },
+  "fUSDC": {
+    "chain": "polygonzkevm",
+    "address": "0x76c318b015dc6b33c0dc46e8432fce37b6095d34",
+    "symbol": "fUSDC",
+    "decimals": 8
+  },
+  "stMATIC": {
+    "chain": "polygonzkevm",
+    "address": "0x83b874c1e09d316059d929da402dcb1a98e92082",
+    "symbol": "stMATIC",
+    "decimals": 18
+  }
+}

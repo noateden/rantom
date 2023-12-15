@@ -1,171 +1,145 @@
-import { Collection } from 'mongodb';
-import { TransactionReceipt } from 'web3-core';
+import { NonFungibleToken, Token } from './configs';
 
-import { NonFungibleTokenMetadata, Token } from './configs';
+export type LiquidityPoolVersion = 'basic' | 'univ2' | 'univ3' | 'mav' | 'traderjoev2.1' | 'stableswap';
 
-export interface MongoCollections {
-  statesCollection: Collection;
-  cachingCollection: Collection;
+export interface LiquidityPoolConstant {
+  chain: string;
+  version: LiquidityPoolVersion;
+  protocol: string;
 
-  // save logs, v2 API
-  logsCollection: Collection;
+  // the factory address if any
+  factory: string;
+
+  // pool contract address
+  address: string;
+
+  // a list of tokens
+  tokens: Array<Token>;
+}
+
+export type StakingPoolVersion = 'basic' | 'masterchef' | 'booster';
+
+// staking pool present a staking info of a staking contract
+// which identify by poolId
+// for example, these pools on sushi masterchef or convex finance booster, ...
+export interface StakingPoolConstant {
+  chain: string;
+
+  protocol: string;
+
+  version: StakingPoolVersion;
+
+  // the staking contract address
+  address: string;
+
+  // pool ID
+  poolId: number;
+
+  // staking or locking token
+  token: Token;
+
+  // the reward token if any
+  rewardToken?: Token;
 }
 
 export const Actions = [
+  // define atomic token exchange actions
+  // for example, the exchange of USDC for ETH is a swap action
   'swap',
-  'collect',
-  'deposit',
-  'withdraw',
-  'borrow',
-  'repay',
-  'flashloan',
-  'liquidate',
-  'bridge',
-  'register',
-  'renew',
-  'list',
-  'buy',
-  'offer',
+
+  // define token exchange via multiple routes actions
+  // for example, the exchange of USDC -> DAI -> USDT -> ETH
+  // is a trade action (trade USDC for ETH)
   'trade',
-  'sow',
-  'createLiquidityPool',
+
+  // define token transfer from users to protocol contracts actions
+  // it could be the add liquidity, lend or stake tokens actions,
+  'deposit',
+
+  // define token transfer from protocol contracts to users actions
+  // it could be the remove liquidity, or unstake tokens actions,
+  'withdraw',
+
+  // define token borrow actions on lending protocols
+  'borrow',
+
+  // define token repaid actions on lending protocols
+  'repay',
+
+  // liquidation action
+  'liquidate',
+
+  // collect rewards, fees, ...
+  'collect',
+
+  // define lock/unlock token actions
   'lock',
   'unlock',
-  'update',
 
-  'useContract', // for calls to smart contracts: DSProxy, Instadapp account, ...
-  'executeRecipe', // execute recipe on DeFi Saver
-  'executeTask', // execute task on gelato.network
+  // define flashloan actions
+  'flashloan',
 
-  // these actions used for leveraged functional
-  'leverage',
-  'increaseShort',
+  // perpetual increase/decrease long position
   'increaseLong',
-  'decreaseShort',
   'decreaseLong',
-  'liquidateShort',
-  'liquidateLong',
 
-  'openAccount',
-  'closeAccount',
+  // perpetual increase/decrease short position
+  'increaseShort',
+  'decreaseShort',
+
+  // perpetual liquidate long/short
+  'liquidateLong',
+  'liquidateShort',
+
+  // register/renew domain name, services
+  'register',
+  'renew',
+
+  // cross-chain transfer/swap actions
+  'bridge',
 ] as const;
 export type KnownAction = (typeof Actions)[number];
 
-export interface TransactionActionBase {
+export interface TransactionAction {
   protocol: string;
-  action: KnownAction;
-  addresses: Array<string>;
-  readableString: string;
 
+  chain: string;
+
+  action: KnownAction;
+
+  transactionHash: string;
+
+  // log index format: logIndex:actionIndex
+  // some protocol have multiple actions in a single log entry
+  // so, to make a unique action, we need to combine longIndex with the actionIndex
+  logIndex: string;
+
+  blockNumber: number;
+
+  // the contract address that emitted this log
+  contract: string;
+
+  // a list of involve addresses
+  // could be users, external address, periphery contracts
+  addresses: Array<string>;
+
+  // a list of tokens
   tokens: Array<Token>;
 
-  // should match with tokens
+  // a list of token amounts
+  // should match with tokens indies
   tokenAmounts: Array<string>;
 
   // some protocol return amount in USD
   usdAmounts?: Array<string>;
-}
 
-export interface TransactionAction extends TransactionActionBase {
-  logIndex?: number;
+  // additional info
   addition?: any;
-  subActions?: Array<TransactionActionBase>;
 }
 
-// data parse from transaction input
-export interface TransactionFunction extends TransactionActionBase {
-  signature: string;
-  contract: string; // to contract
-}
-
-export interface TransactionTransfer {
-  token: Token | NonFungibleTokenMetadata;
+export interface TokenTransfer {
+  token: Token | NonFungibleToken;
   from: string;
   to: string;
   amount: string;
-  logIndex?: number;
-}
-
-export interface Transaction {
-  // blockchain
-  chain: string;
-
-  // the parser version
-  version: string;
-
-  // the transaction hash
-  hash: string;
-
-  // sender address
-  from: string;
-
-  // to address, could be contract
-  to: string;
-
-  // the transactions data input if any
-  input: string;
-
-  // timestamp from blockNumber
-  timestamp: number;
-
-  nonce: number;
-  value: string;
-  gasPrice: string;
-  maxPriorityFeePerGas?: string;
-  maxFeePerGas?: string;
-  gas: number;
-
-  // the transaction receipt
-  receipt: TransactionReceipt;
-
-  // what we got from transaction input
-  functions: Array<TransactionFunction>;
-
-  // what we got from transaction receipt logs
-  actions: Array<TransactionAction>;
-
-  // all token ERC20, ERC721, ERC1155 transfer logs
-  transfers: Array<TransactionTransfer>;
-
-  // we also try to get information and label for to addresses
-  addressesLabels: {
-    [key: string]: string;
-  };
-}
-
-export interface EventBase {
-  // write index
-  chain: string;
-  contract: string;
-  transactionHash: string;
-  logIndex: number;
-
-  protocol: string;
-  timestamp: number;
-  blockNumber: number;
-}
-
-export interface TradingEvent extends EventBase {
-  action: KnownAction;
-  tokens: Array<Token>;
-  amounts: Array<string>;
-  caller: string;
-  user: string;
-  addition?: any;
-}
-
-export interface UniLiquidityPool {
-  chain: string;
-  protocol: string;
-  version: 'univ2' | 'univ3';
-  address: string;
-  token0: Token;
-  token1: Token;
-}
-
-export interface TokenOracleResult {
-  chain: string;
-  token: Token;
-  timestamp: number;
-  spotPriceUsd: string;
 }

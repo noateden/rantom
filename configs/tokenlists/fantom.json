@@ -1,0 +1,863 @@
+{
+  "3poolV2-f": {
+    "chain": "fantom",
+    "address": "0x2dd7c9371965472e5a5fd28fbe165007c61439e1",
+    "symbol": "3poolV2-f",
+    "decimals": 18
+  },
+  "AAVE": {
+    "chain": "fantom",
+    "address": "0x6a07a792ab2965c72a5b8088d3a069a7ac3a993b",
+    "symbol": "AAVE",
+    "decimals": 18
+  },
+  "ANKR": {
+    "chain": "fantom",
+    "address": "0x0615dbba33fe61a31c7ed131bda6655ed76748b1",
+    "symbol": "ANKR",
+    "decimals": 18
+  },
+  "AQU": {
+    "chain": "fantom",
+    "address": "0x0f7adb77b6334b9b5a3c4f78aaa073ea1d915bf6",
+    "symbol": "AQU",
+    "decimals": 18
+  },
+  "ATLAS": {
+    "chain": "fantom",
+    "address": "0x92df3eabf7c1c2a6b3d5793f6d53778ea78c48b2",
+    "symbol": "ATLAS",
+    "decimals": 18
+  },
+  "ATRI": {
+    "chain": "fantom",
+    "address": "0x818ec0a7fe18ff94269904fced6ae3dae6d6dc0b",
+    "symbol": "ATRI",
+    "decimals": 0
+  },
+  "AVAX": {
+    "chain": "fantom",
+    "address": "0x511d35c52a3c244e7b8bd92c0c297755fbd89212",
+    "symbol": "AVAX",
+    "decimals": 18
+  },
+  "Arc": {
+    "chain": "fantom",
+    "address": "0x684802262d614d0cd0c9571672f03dd9e85d7824",
+    "symbol": "Arc",
+    "decimals": 18
+  },
+  "BASED": {
+    "chain": "fantom",
+    "address": "0x23654048e2ee5e8414eea67a7d1a1c02505b7e4a",
+    "symbol": "BASED",
+    "decimals": 18
+  },
+  "BIFI": {
+    "chain": "fantom",
+    "address": "0xd6070ae98b8069de6b494332d1a1a81b6179d960",
+    "symbol": "BIFI",
+    "decimals": 18
+  },
+  "BITB": {
+    "chain": "fantom",
+    "address": "0xbac5d43a56696e5d0cb631609e85798f564b513b",
+    "symbol": "BITB",
+    "decimals": 0
+  },
+  "BNB": {
+    "chain": "fantom",
+    "address": "0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454",
+    "symbol": "BNB",
+    "decimals": 18
+  },
+  "BOMB": {
+    "chain": "fantom",
+    "address": "0x8503eb4a136bdbeb323e37aa6e0fa0c772228378",
+    "symbol": "BOMB",
+    "decimals": 0
+  },
+  "BOO": {
+    "chain": "fantom",
+    "address": "0x841fad6eae12c286d1fd18d1d525dffa75c7effe",
+    "symbol": "BOO",
+    "decimals": 18
+  },
+  "BORG": {
+    "chain": "fantom",
+    "address": "0xe9828045632b32e2aac7f3a4c1511c0d8965576c",
+    "symbol": "BORG",
+    "decimals": 8
+  },
+  "BORGDAI": {
+    "chain": "fantom",
+    "address": "0x4f16b83e55b92e6f8f7da6d78dd19d5a00954864",
+    "symbol": "BORGDAI",
+    "decimals": 9
+  },
+  "BSGG": {
+    "chain": "fantom",
+    "address": "0x5a33869045db8a6a16c9f351293501cfd92cf7ed",
+    "symbol": "BSGG",
+    "decimals": 18
+  },
+  "BTC": { "chain": "fantom", "address": "0x321162cd933e2be498cd2267a90534a804051b11", "symbol": "BTC", "decimals": 8 },
+  "BTCBR": {
+    "chain": "fantom",
+    "address": "0xb355f4f4cc84a9429a59d5c2b98d77016f7ec482",
+    "symbol": "BTCBR",
+    "decimals": 18
+  },
+  "BTCTRADE": {
+    "chain": "fantom",
+    "address": "0xee8eaec73babe18568b07eab1c882d647441ddad",
+    "symbol": "BTCTRADE",
+    "decimals": 18
+  },
+  "BTD": {
+    "chain": "fantom",
+    "address": "0x4792c1ecb969b036eb51330c63bd27899a13d84e",
+    "symbol": "BTD",
+    "decimals": 18
+  },
+  "Balloon": {
+    "chain": "fantom",
+    "address": "0xf6babe47b4a7a6fa7bd0a5f8cf308c32021e3ed5",
+    "symbol": "Balloon",
+    "decimals": 18
+  },
+  "COSMOS": {
+    "chain": "fantom",
+    "address": "0x2aa27e8ce35ef0fae727d14bf188576d7bc5f827",
+    "symbol": "COSMOS",
+    "decimals": 18
+  },
+  "COVER": {
+    "chain": "fantom",
+    "address": "0xb01e8419d842beebf1b70a7b5f7142abbaf7159d",
+    "symbol": "COVER",
+    "decimals": 18
+  },
+  "CRAMER": {
+    "chain": "fantom",
+    "address": "0xa94a1b9962efa2c986f500b5a630c27424c4ea6f",
+    "symbol": "CRAMER",
+    "decimals": 18
+  },
+  "CREAM": {
+    "chain": "fantom",
+    "address": "0x657a1861c15a3ded9af0b6799a195a249ebdcbc6",
+    "symbol": "CREAM",
+    "decimals": 18
+  },
+  "CRV": {
+    "chain": "fantom",
+    "address": "0x1e4f97b9f9f913c46f1632781732927b9019c68b",
+    "symbol": "CRV",
+    "decimals": 18
+  },
+  "DADDY": {
+    "chain": "fantom",
+    "address": "0x97eac5e9ebaf751bd57617984f7005414b1ed7b2",
+    "symbol": "DADDY",
+    "decimals": 18
+  },
+  "DAI": {
+    "chain": "fantom",
+    "address": "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e",
+    "symbol": "DAI",
+    "decimals": 18
+  },
+  "DNR": {
+    "chain": "fantom",
+    "address": "0xdb9fb447a2e0dd7c1b4e78da38ea1a03d9e973b4",
+    "symbol": "DNR",
+    "decimals": 18
+  },
+  "DOA": {
+    "chain": "fantom",
+    "address": "0x744c01bb3a9cb59392e7f0d515f6b3e92b11c2ef",
+    "symbol": "DOA",
+    "decimals": 18
+  },
+  "DOLA": {
+    "chain": "fantom",
+    "address": "0x3129662808bec728a27ab6a6b9afd3cbaca8a43c",
+    "symbol": "DOLA",
+    "decimals": 18
+  },
+  "Doggi": {
+    "chain": "fantom",
+    "address": "0x94c5e4ea91b2cc1469c2b6d9c35f2a924e69e94a",
+    "symbol": "Doggi",
+    "decimals": 9
+  },
+  "ELITE": {
+    "chain": "fantom",
+    "address": "0xf43cc235e686d7bc513f53fbffb61f760c3a1882",
+    "symbol": "ELITE",
+    "decimals": 18
+  },
+  "ELK": {
+    "chain": "fantom",
+    "address": "0xeeeeeb57642040be42185f49c52f7e9b38f8eeee",
+    "symbol": "ELK",
+    "decimals": 18
+  },
+  "EQUAL": {
+    "chain": "fantom",
+    "address": "0x3fd3a0c85b70754efc07ac9ac0cbbdce664865a6",
+    "symbol": "EQUAL",
+    "decimals": 18
+  },
+  "ETH": {
+    "chain": "fantom",
+    "address": "0x74b23882a30290451a17c44f4f05243b6b58c76d",
+    "symbol": "ETH",
+    "decimals": 18
+  },
+  "ETHW": {
+    "chain": "fantom",
+    "address": "0xa03fdc5bfccab61d4f419f0df03f311c0e36d7e4",
+    "symbol": "ETHW",
+    "decimals": 18
+  },
+  "FASTMOON": {
+    "chain": "fantom",
+    "address": "0x58fb8cbab7253d988bad2e7ca9079acc77ed430c",
+    "symbol": "FASTMOON",
+    "decimals": 9
+  },
+  "FBA": {
+    "chain": "fantom",
+    "address": "0x0e249130b3545a2a287de9f27d805cab95f03db9",
+    "symbol": "FBA",
+    "decimals": 18
+  },
+  "FETH": {
+    "chain": "fantom",
+    "address": "0x658b0c7613e890ee50b8c4bc6a3f41ef411208ad",
+    "symbol": "FETH",
+    "decimals": 18
+  },
+  "FHM": { "chain": "fantom", "address": "0xfa1fbb8ef55a4855e5688c0ee13ac3f202486286", "symbol": "FHM", "decimals": 9 },
+  "FOO": {
+    "chain": "fantom",
+    "address": "0xfbc3c04845162f067a0b6f8934383e63899c3524",
+    "symbol": "FOO",
+    "decimals": 18
+  },
+  "FRAX": {
+    "chain": "fantom",
+    "address": "0xdc301622e621166bd8e82f2ca0a26c13ad0be355",
+    "symbol": "FRAX",
+    "decimals": 18
+  },
+  "FROYO": {
+    "chain": "fantom",
+    "address": "0xa92d41ab8efee617d80a829cd9f5683c5f793ada",
+    "symbol": "FROYO",
+    "decimals": 18
+  },
+  "FSTRM": {
+    "chain": "fantom",
+    "address": "0x94a7f270cd12545a277e656266aef5e27df3eb28",
+    "symbol": "FSTRM",
+    "decimals": 18
+  },
+  "FUSD": {
+    "chain": "fantom",
+    "address": "0xad84341756bf337f5a0164515b1f6f993d194e1f",
+    "symbol": "FUSD",
+    "decimals": 18
+  },
+  "FVM": {
+    "chain": "fantom",
+    "address": "0x07bb65faac502d4996532f834a1b7ba5dc32ff96",
+    "symbol": "FVM",
+    "decimals": 18
+  },
+  "FXS": {
+    "chain": "fantom",
+    "address": "0x7d016eec9c25232b01f23ef992d98ca97fc2af5a",
+    "symbol": "FXS",
+    "decimals": 18
+  },
+  "GDXen": {
+    "chain": "fantom",
+    "address": "0x78be30f2a60d63244425aa2466b90ca677d5aa77",
+    "symbol": "GDXen",
+    "decimals": 18
+  },
+  "GHOST": {
+    "chain": "fantom",
+    "address": "0x2241fabdf45c54ca330c34c783b114e6bcaae7e7",
+    "symbol": "GHOST",
+    "decimals": 18
+  },
+  "GIGADEFLATON": {
+    "chain": "fantom",
+    "address": "0xb0a3bf98516d6ce466d2f78bd6a494ef8ffb396d",
+    "symbol": "GIGADEFLATON",
+    "decimals": 9
+  },
+  "GOV": {
+    "chain": "fantom",
+    "address": "0x24af804f17d59de93367410c9befa49444150d4c",
+    "symbol": "GOV",
+    "decimals": 18
+  },
+  "GRAMZ": {
+    "chain": "fantom",
+    "address": "0x8669b2bae36561c2c8ac1e8af39a9cd34dc21b55",
+    "symbol": "GRAMZ",
+    "decimals": 18
+  },
+  "HIGH": {
+    "chain": "fantom",
+    "address": "0x33fc7706f98d804a1aac4d16a322bebc98276b24",
+    "symbol": "HIGH",
+    "decimals": 0
+  },
+  "HUNX": {
+    "chain": "fantom",
+    "address": "0xf4081524bad61e0944c38d79f752678138d3b8c6",
+    "symbol": "HUNX",
+    "decimals": 8
+  },
+  "ICE": {
+    "chain": "fantom",
+    "address": "0xf16e81dce15b08f326220742020379b855b87df9",
+    "symbol": "ICE",
+    "decimals": 18
+  },
+  "KLING": {
+    "chain": "fantom",
+    "address": "0x983235dc2a7b5e5a0820066480b19f04eef83986",
+    "symbol": "KLING",
+    "decimals": 18
+  },
+  "LASTBOSS": {
+    "chain": "fantom",
+    "address": "0xc8bc2c96cb1169a2a3f9c31cc546fa72d11db63f",
+    "symbol": "LASTBOSS",
+    "decimals": 18
+  },
+  "LCD": {
+    "chain": "fantom",
+    "address": "0xc2a45fe7d40bcac8369371b08419ddafd3131b4a",
+    "symbol": "LCD",
+    "decimals": 18
+  },
+  "LGG": { "chain": "fantom", "address": "0x9585d336248094b911397da106321bf47c858969", "symbol": "LGG", "decimals": 6 },
+  "LINK": {
+    "chain": "fantom",
+    "address": "0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8",
+    "symbol": "LINK",
+    "decimals": 18
+  },
+  "LQDR": {
+    "chain": "fantom",
+    "address": "0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9",
+    "symbol": "LQDR",
+    "decimals": 18
+  },
+  "LSHARE": {
+    "chain": "fantom",
+    "address": "0xcbe0ca46399af916784cadf5bcc3aed2052d6c45",
+    "symbol": "LSHARE",
+    "decimals": 18
+  },
+  "MAN": {
+    "chain": "fantom",
+    "address": "0x8a88b501a68cea5844b9d95f41892b05c4cd1d73",
+    "symbol": "MAN",
+    "decimals": 18
+  },
+  "MATIC": {
+    "chain": "fantom",
+    "address": "0x40df1ae6074c35047bff66675488aa2f9f6384f3",
+    "symbol": "MATIC",
+    "decimals": 18
+  },
+  "MIM": {
+    "chain": "fantom",
+    "address": "0x82f0b8b456c1a451378467398982d4834b6829c1",
+    "symbol": "MIM",
+    "decimals": 18
+  },
+  "MMY": {
+    "chain": "fantom",
+    "address": "0x01e77288b38b416f972428d562454fb329350bac",
+    "symbol": "MMY",
+    "decimals": 18
+  },
+  "MOD": {
+    "chain": "fantom",
+    "address": "0xe64b9fd040d1f9d4715c645e0d567ef69958d3d9",
+    "symbol": "MOD",
+    "decimals": 18
+  },
+  "MSF": {
+    "chain": "fantom",
+    "address": "0x121b994d5c0ba13642e5b962866ac000c6abffb7",
+    "symbol": "MSF",
+    "decimals": 18
+  },
+  "MULTI": {
+    "chain": "fantom",
+    "address": "0x9fb9a33956351cf4fa040f65a13b835a3c8764e3",
+    "symbol": "MULTI",
+    "decimals": 18
+  },
+  "NFTW": {
+    "chain": "fantom",
+    "address": "0xb5c622c8598c5f69d48dea1ea414189502e6b35d",
+    "symbol": "NFTW",
+    "decimals": 0
+  },
+  "NSFW": {
+    "chain": "fantom",
+    "address": "0xf32554c06d030035cd6ca1902b3874fdb7230c14",
+    "symbol": "NSFW",
+    "decimals": 18
+  },
+  "OATH": {
+    "chain": "fantom",
+    "address": "0x21ada0d2ac28c3a5fa3cd2ee30882da8812279b6",
+    "symbol": "OATH",
+    "decimals": 18
+  },
+  "OPE": {
+    "chain": "fantom",
+    "address": "0xc072efe93ffa09d2c0ca9c6faa477e55c5737ce8",
+    "symbol": "OPE",
+    "decimals": 18
+  },
+  "PANIC": {
+    "chain": "fantom",
+    "address": "0xa882ceac81b22fc2bef8e1a82e823e3e9603310b",
+    "symbol": "PANIC",
+    "decimals": 18
+  },
+  "PEG": { "chain": "fantom", "address": "0x567223a47789772755351a9cd8b6bf274142963e", "symbol": "PEG", "decimals": 6 },
+  "PEPE": {
+    "chain": "fantom",
+    "address": "0x0f730d43d85f722903b8aded334b32332466b207",
+    "symbol": "PEPE",
+    "decimals": 18
+  },
+  "PEPEUP": {
+    "chain": "fantom",
+    "address": "0x30ae1270aa7a817ed3002a9a04f7593f488810c1",
+    "symbol": "PEPEUP",
+    "decimals": 18
+  },
+  "PGUNK": {
+    "chain": "fantom",
+    "address": "0xf8fc059dafdce4ef2edfc72cbbaf410d7531e610",
+    "symbol": "PGUNK",
+    "decimals": 9
+  },
+  "POOCH": {
+    "chain": "fantom",
+    "address": "0x31a47b49b4dbdc54d403b8c4880ac9bb1a9ebae8",
+    "symbol": "POOCH",
+    "decimals": 18
+  },
+  "POTION": {
+    "chain": "fantom",
+    "address": "0x3eda36088b931098e8e472748840b3df78268c72",
+    "symbol": "POTION",
+    "decimals": 18
+  },
+  "PTTO": {
+    "chain": "fantom",
+    "address": "0xdd2027fca129005b6255295ceb7e281365e50b0e",
+    "symbol": "PTTO",
+    "decimals": 18
+  },
+  "QI": { "chain": "fantom", "address": "0xd3fdcb837dafdb7c9c3ebd48fe22a53f6dd3d7d7", "symbol": "QI", "decimals": 18 },
+  "SAKURA": {
+    "chain": "fantom",
+    "address": "0x6c7efc3af0e0685ee30759ba819cc456c7ad976a",
+    "symbol": "SAKURA",
+    "decimals": 9
+  },
+  "SBRW": {
+    "chain": "fantom",
+    "address": "0x3853f3839ca1655acc8c433eef8c086f9895d0bf",
+    "symbol": "SBRW",
+    "decimals": 18
+  },
+  "SCREAM": {
+    "chain": "fantom",
+    "address": "0xe0654c8e6fd4d733349ac7e09f6f23da256bf475",
+    "symbol": "SCREAM",
+    "decimals": 18
+  },
+  "SFI": {
+    "chain": "fantom",
+    "address": "0x924828a9fb17d47d0eb64b57271d10706699ff11",
+    "symbol": "SFI",
+    "decimals": 18
+  },
+  "SNX": {
+    "chain": "fantom",
+    "address": "0x56ee926bd8c72b2d5fa1af4d9e4cbb515a1e3adc",
+    "symbol": "SNX",
+    "decimals": 18
+  },
+  "SOL": {
+    "chain": "fantom",
+    "address": "0x44f7237df00e386af8e79b817d05ed9f6fe0f296",
+    "symbol": "SOL",
+    "decimals": 18
+  },
+  "SOUL": {
+    "chain": "fantom",
+    "address": "0xe2fb177009ff39f52c0134e8007fa0e4baacbd07",
+    "symbol": "SOUL",
+    "decimals": 18
+  },
+  "SPELL": {
+    "chain": "fantom",
+    "address": "0x468003b688943977e6130f4f68f23aad939a1040",
+    "symbol": "SPELL",
+    "decimals": 18
+  },
+  "SPIRIT": {
+    "chain": "fantom",
+    "address": "0x5cc61a78f164885776aa610fb0fe1257df78e59b",
+    "symbol": "SPIRIT",
+    "decimals": 18
+  },
+  "SPIRIT-LP": {
+    "chain": "fantom",
+    "address": "0xb32b31dfafbd53e310390f641c7119b5b9ea0488",
+    "symbol": "SPIRIT-LP",
+    "decimals": 18
+  },
+  "STAR-B": {
+    "chain": "fantom",
+    "address": "0x863e022bf701b107049e1220c20214080c6d8a88",
+    "symbol": "STAR-B",
+    "decimals": 18
+  },
+  "STARD": {
+    "chain": "fantom",
+    "address": "0xd7308fe1e9aaa8ae59c9b93316b8e23911c1be1e",
+    "symbol": "STARD",
+    "decimals": 18
+  },
+  "STARP": {
+    "chain": "fantom",
+    "address": "0xf083e641be17b44a6ea0bf8383c3a057876fd775",
+    "symbol": "STARP",
+    "decimals": 18
+  },
+  "STARV2": {
+    "chain": "fantom",
+    "address": "0x4b81e878736be0961080f0af619870e49d45970d",
+    "symbol": "STARV2",
+    "decimals": 18
+  },
+  "STG": {
+    "chain": "fantom",
+    "address": "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590",
+    "symbol": "STG",
+    "decimals": 18
+  },
+  "STOP": {
+    "chain": "fantom",
+    "address": "0x5930f6b5991b719a47328cce1d6ce8f637ac63c3",
+    "symbol": "STOP",
+    "decimals": 6
+  },
+  "SUSHI": {
+    "chain": "fantom",
+    "address": "0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc",
+    "symbol": "SUSHI",
+    "decimals": 18
+  },
+  "SYN": {
+    "chain": "fantom",
+    "address": "0xe55e19fb4f2d85af758950957714292dac1e25b2",
+    "symbol": "SYN",
+    "decimals": 18
+  },
+  "SafeFantom": {
+    "chain": "fantom",
+    "address": "0xf3a61c7d53442ac00a3a99761c5839f9109f2193",
+    "symbol": "SafeFantom",
+    "decimals": 9
+  },
+  "TSHARE": {
+    "chain": "fantom",
+    "address": "0x4cdf39285d7ca8eb3f090fda0c069ba5f4145b37",
+    "symbol": "TSHARE",
+    "decimals": 18
+  },
+  "TUSD": {
+    "chain": "fantom",
+    "address": "0x9879abdea01a879644185341f7af7d8343556b7a",
+    "symbol": "TUSD",
+    "decimals": 18
+  },
+  "TV": { "chain": "fantom", "address": "0x8eda53a05002440818a2d089ec293d94fda17941", "symbol": "TV", "decimals": 18 },
+  "TWVENOM": {
+    "chain": "fantom",
+    "address": "0x54447cfa919c096d095d58c2b5814669897bffcd",
+    "symbol": "TWVENOM",
+    "decimals": 9
+  },
+  "Toy": {
+    "chain": "fantom",
+    "address": "0x2c952cbbca98e2a695f78fe095ce2937f5be347b",
+    "symbol": "Toy",
+    "decimals": 18
+  },
+  "UBI": {
+    "chain": "fantom",
+    "address": "0xc908ae61b7e798a49a5876bdf0c307f02a3ebce6",
+    "symbol": "UBI",
+    "decimals": 18
+  },
+  "USDC": {
+    "chain": "fantom",
+    "address": "0x04068da6c83afcfa0e13ba15a6696662335d5b75",
+    "symbol": "USDC",
+    "decimals": 6
+  },
+  "USDM": {
+    "chain": "fantom",
+    "address": "0x35b5e032efe62ffc28674ae297690d39af615b3c",
+    "symbol": "USDM",
+    "decimals": 18
+  },
+  "USDT": {
+    "chain": "fantom",
+    "address": "0x491f2cc005f48c3a08562a9c638302ef7c8ffb9d",
+    "symbol": "USDT",
+    "decimals": 18
+  },
+  "USDx": {
+    "chain": "fantom",
+    "address": "0xc84f4ab6d5a9935354df75a27a17de418a2f8f0c",
+    "symbol": "USDx",
+    "decimals": 6
+  },
+  "UST": { "chain": "fantom", "address": "0x846e4d51d7e2043c1a87e0ab7490b93fb940357b", "symbol": "UST", "decimals": 6 },
+  "VDI": { "chain": "fantom", "address": "0xf86536d3a7d918d9a62fbd306ddd66ced9e93506", "symbol": "VDI", "decimals": 9 },
+  "WBTC": {
+    "chain": "fantom",
+    "address": "0xf1648c50d2863f780c57849d812b4b7686031a3d",
+    "symbol": "WBTC",
+    "decimals": 8
+  },
+  "WETH": {
+    "chain": "fantom",
+    "address": "0x695921034f0387eac4e11620ee91b1b15a6a09fe",
+    "symbol": "WETH",
+    "decimals": 18
+  },
+  "WFTM": {
+    "chain": "fantom",
+    "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",
+    "symbol": "WFTM",
+    "decimals": 18
+  },
+  "WIGO": {
+    "chain": "fantom",
+    "address": "0xe992beab6659bff447893641a378fbbf031c5bd6",
+    "symbol": "WIGO",
+    "decimals": 18
+  },
+  "WOO": {
+    "chain": "fantom",
+    "address": "0x6626c47c00f1d87902fc13eecfac3ed06d5e8d8a",
+    "symbol": "WOO",
+    "decimals": 18
+  },
+  "XRP": {
+    "chain": "fantom",
+    "address": "0x4d93239b7782430300c0bd398bcb6ee660723008",
+    "symbol": "XRP",
+    "decimals": 18
+  },
+  "Xec": {
+    "chain": "fantom",
+    "address": "0xf9a73755e053ebb53f59ee91881eb1e4e3cb8860",
+    "symbol": "Xec",
+    "decimals": 18
+  },
+  "YFI": {
+    "chain": "fantom",
+    "address": "0x29b0da86e484e1c0029b56e817912d778ac0ec69",
+    "symbol": "YFI",
+    "decimals": 18
+  },
+  "YOSHI": {
+    "chain": "fantom",
+    "address": "0x3dc57b391262e3aae37a08d91241f9ba9d58b570",
+    "symbol": "YOSHI",
+    "decimals": 18
+  },
+  "ZOO": { "chain": "fantom", "address": "0x09e145a1d53c0045f41aeef25d8ff982ae74dd56", "symbol": "ZOO", "decimals": 0 },
+  "aUSD": {
+    "chain": "fantom",
+    "address": "0x41e3df7f716ab5af28c1497b354d79342923196a",
+    "symbol": "aUSD",
+    "decimals": 18
+  },
+  "axlLqdr": {
+    "chain": "fantom",
+    "address": "0x4b6b3d425f82248996d77ecc3f3df1e500aac1db",
+    "symbol": "axlLqdr",
+    "decimals": 18
+  },
+  "axlUSDC": {
+    "chain": "fantom",
+    "address": "0x1b6382dbdea11d97f24495c9a90b7c88469134a4",
+    "symbol": "axlUSDC",
+    "decimals": 6
+  },
+  "axlWMAI": {
+    "chain": "fantom",
+    "address": "0x501e3d716a72e11e1e22edcf0365556b357da0c9",
+    "symbol": "axlWMAI",
+    "decimals": 18
+  },
+  "beFTM": {
+    "chain": "fantom",
+    "address": "0x7381ed41f6de418dde5e84b55590422a57917886",
+    "symbol": "beFTM",
+    "decimals": 18
+  },
+  "crv3crypto": {
+    "chain": "fantom",
+    "address": "0x58e57ca18b7a47112b877e31929798cd3d703b0f",
+    "symbol": "crv3crypto",
+    "decimals": 18
+  },
+  "fBEETS": {
+    "chain": "fantom",
+    "address": "0xfcef8a994209d6916eb2c86cdd2afd60aa6f54b1",
+    "symbol": "fBEETS",
+    "decimals": 18
+  },
+  "fSONIC": {
+    "chain": "fantom",
+    "address": "0x05e31a691405d06708a355c029599c12d5da8b28",
+    "symbol": "fSONIC",
+    "decimals": 18
+  },
+  "fUSDT": {
+    "chain": "fantom",
+    "address": "0x049d68029688eabf473097a2fc38ef61633a3c7a",
+    "symbol": "fUSDT",
+    "decimals": 6
+  },
+  "fmDXN": {
+    "chain": "fantom",
+    "address": "0xc418b123885d732ed042b16e12e259741863f723",
+    "symbol": "fmDXN",
+    "decimals": 18
+  },
+  "fmXEN": {
+    "chain": "fantom",
+    "address": "0xef4b763385838fffc708000f884026b8c0434275",
+    "symbol": "fmXEN",
+    "decimals": 18
+  },
+  "frxETH": {
+    "chain": "fantom",
+    "address": "0x9e73f99ee061c8807f69f9c6ccc44ea3d8c373ee",
+    "symbol": "frxETH",
+    "decimals": 18
+  },
+  "g3CRV": {
+    "chain": "fantom",
+    "address": "0xd02a30d33153877bc20e5721ee53dedee0422b2f",
+    "symbol": "g3CRV",
+    "decimals": 18
+  },
+  "gOHM": {
+    "chain": "fantom",
+    "address": "0x91fa20244fb509e8289ca630e5db3e9166233fdc",
+    "symbol": "gOHM",
+    "decimals": 18
+  },
+  "miMATIC": {
+    "chain": "fantom",
+    "address": "0xfb98b335551a418cd0737375a2ea0ded62ea213b",
+    "symbol": "miMATIC",
+    "decimals": 18
+  },
+  "nICE": {
+    "chain": "fantom",
+    "address": "0x7f620d7d0b3479b1655cefb1b0bc67fb0ef4e443",
+    "symbol": "nICE",
+    "decimals": 18
+  },
+  "oFVM": {
+    "chain": "fantom",
+    "address": "0xf9eddca6b1e548b0ec8cddec131464f462b8310d",
+    "symbol": "oFVM",
+    "decimals": 18
+  },
+  "sFTMX": {
+    "chain": "fantom",
+    "address": "0xd7028092c830b5c8fce061af2e593413ebbc1fc1",
+    "symbol": "sFTMX",
+    "decimals": 18
+  },
+  "spLP": {
+    "chain": "fantom",
+    "address": "0x6f86e65b255c9111109d2d2325ca2dfc82456efc",
+    "symbol": "spLP",
+    "decimals": 18
+  },
+  "tCUZ": {
+    "chain": "fantom",
+    "address": "0x8e4a2fa6e651df75f7f4e9e9ac81f8f9347a4add",
+    "symbol": "tCUZ",
+    "decimals": 18
+  },
+  "uBASED": {
+    "chain": "fantom",
+    "address": "0x21e7c8150c54df2d370511d11a70676c2ceb76c0",
+    "symbol": "uBASED",
+    "decimals": 18
+  },
+  "usdc": {
+    "chain": "fantom",
+    "address": "0x815061142787359d8f5e798175de06915208ba12",
+    "symbol": "usdc",
+    "decimals": 18
+  },
+  "wTV": {
+    "chain": "fantom",
+    "address": "0x042b1131089f4ab50fa7fd61e2d59269e529029f",
+    "symbol": "wTV",
+    "decimals": 18
+  },
+  "xBOO": {
+    "chain": "fantom",
+    "address": "0xa48d959ae2e88f1daa7d5f611e01908106de7598",
+    "symbol": "xBOO",
+    "decimals": 18
+  },
+  "yAndre": {
+    "chain": "fantom",
+    "address": "0x0bbf5349d884d135a907040187e0f4e04d05129c",
+    "symbol": "yAndre",
+    "decimals": 18
+  },
+  "yvWFTM": {
+    "chain": "fantom",
+    "address": "0x0dec85e74a92c52b7f708c4b10207d9560cefaf0",
+    "symbol": "yvWFTM",
+    "decimals": 18
+  }
+}

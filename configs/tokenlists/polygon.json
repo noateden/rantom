@@ -1,0 +1,3327 @@
+{
+  "$DG": {
+    "chain": "polygon",
+    "address": "0x2a93172c8dccbfbc60a39d56183b7279a2f647b4",
+    "symbol": "$DG",
+    "decimals": 18
+  },
+  "$JDOH": {
+    "chain": "polygon",
+    "address": "0xc942a0b775a26018b90707d5df8fd30eedb6eee8",
+    "symbol": "$JDOH",
+    "decimals": 18
+  },
+  "$JELLY": {
+    "chain": "polygon",
+    "address": "0xbb71538bb1db7c2c8c5bd78d1b443e440b697d66",
+    "symbol": "$JELLY",
+    "decimals": 18
+  },
+  "0xBTC": {
+    "chain": "polygon",
+    "address": "0x71b821aa52a49f32eed535fca6eb5aa130085978",
+    "symbol": "0xBTC",
+    "decimals": 8
+  },
+  "1INCH": {
+    "chain": "polygon",
+    "symbol": "1INCH",
+    "decimals": 18,
+    "address": "0x9c2c5fd7b07e95ee044ddeba0e97a665f142394f",
+    "logoURI": "https://assets.coingecko.com/coins/images/13469/thumb/1inch-token.png?1608803028"
+  },
+  "20WMATIC-80LUCHA": {
+    "chain": "polygon",
+    "address": "0x924ec7ed38080e40396c46f6206a6d77d0b9f72d",
+    "symbol": "20WMATIC-80LUCHA",
+    "decimals": 18
+  },
+  "20WMATIC-80SPHERE": {
+    "chain": "polygon",
+    "address": "0xf3312968c7d768c19107731100ece7d4780b47b2",
+    "symbol": "20WMATIC-80SPHERE",
+    "decimals": 18
+  },
+  "2BRL (BRZ)": {
+    "chain": "polygon",
+    "address": "0x42942cdec85078cf0e28e9cb5acd40cb53997ed6",
+    "symbol": "2BRL (BRZ)",
+    "decimals": 18
+  },
+  "2CHF (VCHF)": {
+    "chain": "polygon",
+    "address": "0x70ff0078d55ce9c1a0e668f35eb4400a4300122d",
+    "symbol": "2CHF (VCHF)",
+    "decimals": 18
+  },
+  "2eur (PAR)": {
+    "chain": "polygon",
+    "address": "0x513cdee00251f39de280d9e5f771a6eafebcc88e",
+    "symbol": "2eur (PAR)",
+    "decimals": 18
+  },
+  "50THX-50stMATIC": {
+    "chain": "polygon",
+    "address": "0xeab6455f8a99390b941a33bbdaf615abdf93455e",
+    "symbol": "50THX-50stMATIC",
+    "decimals": 18
+  },
+  "80SD-20maticX": {
+    "chain": "polygon",
+    "address": "0x577f6076e558818a5df21ce4acde9a9623ec0b4c",
+    "symbol": "80SD-20maticX",
+    "decimals": 18
+  },
+  "AAVE": {
+    "chain": "polygon",
+    "address": "0xd6df932a45c0f255f85145f286ea0b292b21c90b",
+    "symbol": "AAVE",
+    "decimals": 18
+  },
+  "ADDY": {
+    "chain": "polygon",
+    "address": "0xc3fdbadc7c795ef1d6ba111e06ff8f16a20ea539",
+    "symbol": "ADDY",
+    "decimals": 18
+  },
+  "ADF": {
+    "chain": "polygon",
+    "address": "0x6bd10299f4f1d31b3489dc369ea958712d27c81b",
+    "symbol": "ADF",
+    "decimals": 18
+  },
+  "ADX": {
+    "chain": "polygon",
+    "symbol": "ADX",
+    "decimals": 18,
+    "address": "0xdda7b23d2d72746663e7939743f929a3d85fc975",
+    "logoURI": "https://assets.coingecko.com/coins/images/847/thumb/Ambire_AdEx_Symbol_color.png?1655432540"
+  },
+  "AGA": {
+    "chain": "polygon",
+    "symbol": "AGA",
+    "decimals": 4,
+    "address": "0x033d942a6b495c4071083f4cde1f17e986fe856c",
+    "logoURI": "https://i.imgur.com/R0aQlym.png"
+  },
+  "AGAr": {
+    "chain": "polygon",
+    "symbol": "AGAr",
+    "decimals": 8,
+    "address": "0xf84bd51eab957c2e7b7d646a3427c5a50848281d",
+    "logoURI": "https://i.imgur.com/06BkcTT.png"
+  },
+  "AGLD": {
+    "chain": "polygon",
+    "symbol": "AGLD",
+    "decimals": 18,
+    "address": "0x6a6bd53d677f8632631662c48bd47b1d4d6524ee",
+    "logoURI": "https://assets.coingecko.com/coins/images/18125/thumb/lpgblc4h_400x400.jpg?1630570955"
+  },
+  "AIOZ": {
+    "chain": "polygon",
+    "symbol": "AIOZ",
+    "decimals": 18,
+    "address": "0xe2341718c6c0cbfa8e6686102dd8fbf4047a9e9b",
+    "logoURI": "https://assets.coingecko.com/coins/images/14631/thumb/aioz_logo.png?1617413126"
+  },
+  "ALCX": {
+    "chain": "polygon",
+    "symbol": "ALCX",
+    "decimals": 18,
+    "address": "0x95c300e7740d2a88a44124b424bfc1cb2f9c3b89",
+    "logoURI": "https://assets.coingecko.com/coins/images/14113/thumb/Alchemix.png?1614409874"
+  },
+  "ALEPH": {
+    "chain": "polygon",
+    "symbol": "ALEPH",
+    "decimals": 18,
+    "address": "0x82dcf1df86ada26b2dcd9ba6334cedb8c2448e9e",
+    "logoURI": "https://assets.coingecko.com/coins/images/11676/thumb/Monochram-aleph.png?1608483725"
+  },
+  "ALI": {
+    "chain": "polygon",
+    "symbol": "ALI",
+    "decimals": 18,
+    "address": "0xbfc70507384047aa74c29cdc8c5cb88d0f7213ac",
+    "logoURI": "https://assets.coingecko.com/coins/images/22062/thumb/alethea-logo-transparent-colored.png?1642748848"
+  },
+  "ALICE": {
+    "chain": "polygon",
+    "symbol": "ALICE",
+    "decimals": 6,
+    "address": "0x50858d870faf55da2fd90fb6df7c34b5648305c6",
+    "logoURI": "https://assets.coingecko.com/coins/images/14375/thumb/alice_logo.jpg?1615782968"
+  },
+  "ALPHA": {
+    "chain": "polygon",
+    "symbol": "ALPHA",
+    "decimals": 18,
+    "address": "0x3ae490db48d74b1bc626400135d4616377d0109f",
+    "logoURI": "https://assets.coingecko.com/coins/images/12738/thumb/AlphaToken_256x256.png?1617160876"
+  },
+  "AMP": {
+    "chain": "polygon",
+    "symbol": "AMP",
+    "decimals": 18,
+    "address": "0x0621d647cecbfb64b79e44302c1933cb4f27054d",
+    "logoURI": "https://assets.coingecko.com/coins/images/12409/thumb/amp-200x200.png?1599625397"
+  },
+  "ANKR": {
+    "chain": "polygon",
+    "symbol": "ANKR",
+    "decimals": 18,
+    "address": "0x101a023270368c0d50bffb62780f4afd4ea79c35",
+    "logoURI": "https://assets.coingecko.com/coins/images/4324/thumb/U85xTl2.png?1608111978"
+  },
+  "ANT": {
+    "chain": "polygon",
+    "symbol": "ANT",
+    "decimals": 18,
+    "address": "0x2b8504ab5efc246d0ec5ec7e74565683227497de",
+    "logoURI": "https://assets.coingecko.com/coins/images/681/thumb/JelZ58cv_400x400.png?1601449653"
+  },
+  "APE": {
+    "chain": "polygon",
+    "symbol": "APE",
+    "decimals": 18,
+    "address": "0xb7b31a6bc18e48888545ce79e83e06003be70930",
+    "logoURI": "https://assets.coingecko.com/coins/images/24383/small/apecoin.jpg?1647476455"
+  },
+  "API3": {
+    "chain": "polygon",
+    "symbol": "API3",
+    "decimals": 18,
+    "address": "0x45c27821e80f8789b60fd8b600c73815d34dda6c",
+    "logoURI": "https://assets.coingecko.com/coins/images/13256/thumb/api3.jpg?1606751424"
+  },
+  "ARIA20": {
+    "chain": "polygon",
+    "symbol": "ARIA20",
+    "decimals": 18,
+    "address": "0x46f48fbdedaa6f5500993bede9539ef85f4bee8e",
+    "logoURI": "https://aria.fyi/images/Aria_Logo_256.png"
+  },
+  "ARPA": {
+    "chain": "polygon",
+    "address": "0xee800b277a96b0f490a1a732e1d6395fad960a26",
+    "symbol": "ARPA",
+    "decimals": 18
+  },
+  "AST": {
+    "chain": "polygon",
+    "symbol": "AST",
+    "decimals": 4,
+    "address": "0x04bea9fce76943e90520489ccab84e84c0198e29",
+    "logoURI": "https://assets.coingecko.com/coins/images/1019/thumb/Airswap.png?1630903484"
+  },
+  "ATA": {
+    "chain": "polygon",
+    "symbol": "ATA",
+    "decimals": 18,
+    "address": "0x0df0f72ee0e5c9b7ca761ecec42754992b2da5bf",
+    "logoURI": "https://assets.coingecko.com/coins/images/15985/thumb/ATA.jpg?1622535745"
+  },
+  "AUDIO": {
+    "chain": "polygon",
+    "symbol": "AUDIO",
+    "decimals": 18,
+    "address": "0x5eb8d998371971d01954205c7afe90a7af6a95ac",
+    "logoURI": "https://assets.coingecko.com/coins/images/12913/thumb/AudiusCoinLogo_2x.png?1603425727"
+  },
+  "AURUM": {
+    "chain": "polygon",
+    "address": "0x34d4ab47bee066f361fa52d792e69ac7bd05ee23",
+    "symbol": "AURUM",
+    "decimals": 18
+  },
+  "AVAX": {
+    "chain": "polygon",
+    "address": "0x2c89bbc92bd86f8075d1decc58c7f4e0107f286b",
+    "symbol": "AVAX",
+    "decimals": 18
+  },
+  "AVAX-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x1274de0de2e9d9b1d0e06313c0e5edd01cc335ef",
+    "symbol": "AVAX-ETH SLP",
+    "decimals": 18
+  },
+  "AXELARUSDC-f": {
+    "chain": "polygon",
+    "address": "0xfba3b7bb043415035220b1c44fb4756434639392",
+    "symbol": "AXELARUSDC-f",
+    "decimals": 18
+  },
+  "AXL": {
+    "chain": "polygon",
+    "address": "0x6e4e624106cb12e168e6533f8ec7c82263358940",
+    "symbol": "AXL",
+    "decimals": 6
+  },
+  "AXS": {
+    "chain": "polygon",
+    "address": "0x61bdd9c7d4df4bf47a4508c0c8245505f2af5b7b",
+    "symbol": "AXS",
+    "decimals": 18
+  },
+  "AXS-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x7ba331a8b360f4c31e6014abdd6852f92fb21557",
+    "symbol": "AXS-ETH SLP",
+    "decimals": 18
+  },
+  "AZUKI": {
+    "chain": "polygon",
+    "symbol": "AZUKI",
+    "decimals": 18,
+    "address": "0x7cdc0421469398e0f3aa8890693d86c840ac8931",
+    "logoURI": "https://raw.githubusercontent.com/sameepsi/quickswap-default-token-list/master/assets/azuki.png"
+  },
+  "Au": { "chain": "polygon", "address": "0x584017c897326a220086b2c37d46b7e46cf9909e", "symbol": "Au", "decimals": 9 },
+  "BADGER": {
+    "chain": "polygon",
+    "symbol": "BADGER",
+    "decimals": 18,
+    "address": "0x1fcbe5937b0cc2adf69772d228fa4205acf4d9b2",
+    "logoURI": "https://assets.coingecko.com/coins/images/13287/thumb/badger_dao_logo.jpg?1607054976"
+  },
+  "BAL": {
+    "chain": "polygon",
+    "symbol": "BAL",
+    "decimals": 18,
+    "address": "0x9a71012b13ca4d3d0cdc72a177df3ef03b0e76a3"
+  },
+  "BAND": {
+    "chain": "polygon",
+    "symbol": "BAND",
+    "decimals": 18,
+    "address": "0xa8b1e0764f85f53dfe21760e8afe5446d82606ac",
+    "logoURI": "https://assets.coingecko.com/coins/images/9545/thumb/band-protocol.png?1568730326"
+  },
+  "BAT": {
+    "chain": "polygon",
+    "symbol": "BAT",
+    "decimals": 18,
+    "address": "0x3cef98bb43d732e2f285ee605a8158cde967d219",
+    "logoURI": "https://assets.coingecko.com/coins/images/677/thumb/basic-attention-token.png?1547034427"
+  },
+  "BCT": {
+    "chain": "polygon",
+    "address": "0x2f800db0fdb5223b3c3f354886d907a671414a7f",
+    "symbol": "BCT",
+    "decimals": 18
+  },
+  "BCT-KLIMA SLP": {
+    "chain": "polygon",
+    "address": "0x9803c7ae526049210a1725f7487af26fe2c24614",
+    "symbol": "BCT-KLIMA SLP",
+    "decimals": 18
+  },
+  "BICO": {
+    "chain": "polygon",
+    "symbol": "BICO",
+    "decimals": 18,
+    "address": "0x91c89a94567980f0e9723b487b0bed586ee96aa7",
+    "logoURI": "https://assets.coingecko.com/coins/images/21061/thumb/biconomy_logo.jpg?1638269749"
+  },
+  "BIFI": {
+    "chain": "polygon",
+    "address": "0xfbdd194376de19a88118e84e279b977f165d01b8",
+    "symbol": "BIFI",
+    "decimals": 18
+  },
+  "BKD": {
+    "chain": "polygon",
+    "address": "0xbe3359ac36f06311c3adc32cb6c368f41dea8b4a",
+    "symbol": "BKD",
+    "decimals": 18
+  },
+  "BLZ": {
+    "chain": "polygon",
+    "symbol": "BLZ",
+    "decimals": 18,
+    "address": "0x438b28c5aa5f00a817b7def7ce2fb3d5d1970974",
+    "logoURI": "https://assets.coingecko.com/coins/images/2848/thumb/ColorIcon_3x.png?1622516510"
+  },
+  "BNT": {
+    "chain": "polygon",
+    "symbol": "BNT",
+    "decimals": 18,
+    "address": "0xc26d47d5c33ac71ac5cf9f776d63ba292a4f7842",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C/logo.png"
+  },
+  "BOB": {
+    "chain": "polygon",
+    "address": "0xb0b195aefa3650a6908f15cdac7d92f8a5791b0b",
+    "symbol": "BOB",
+    "decimals": 18
+  },
+  "BOBA": {
+    "chain": "polygon",
+    "symbol": "BOBA",
+    "decimals": 18,
+    "address": "0xa4b2b20b2c73c7046ed19ac6bff5e5285c58f20a",
+    "logoURI": "https://assets.coingecko.com/coins/images/20285/thumb/BOBA.png?1636811576"
+  },
+  "BOBC": {
+    "chain": "polygon",
+    "address": "0x590eb2920486486c2d9bb3eb651f73b81df87bcf",
+    "symbol": "BOBC",
+    "decimals": 18
+  },
+  "BOND": {
+    "chain": "polygon",
+    "symbol": "BOND",
+    "decimals": 18,
+    "address": "0xa041544fe2be56cce31ebb69102b965e06aace80",
+    "logoURI": "https://assets.coingecko.com/coins/images/12811/thumb/barnbridge.jpg?1602728853"
+  },
+  "BONE": {
+    "chain": "polygon",
+    "address": "0x80244c2441779361f35803b8c711c6c8fc6054a3",
+    "symbol": "BONE",
+    "decimals": 18
+  },
+  "BPT": {
+    "chain": "polygon",
+    "address": "0x726e324c29a1e49309672b244bdc4ff62a270407",
+    "symbol": "BPT",
+    "decimals": 18
+  },
+  "BTB": {
+    "chain": "polygon",
+    "address": "0x3fe93409171873c45388ef80b3d0c14eee929108",
+    "symbol": "BTB",
+    "decimals": 18
+  },
+  "BTCpx": {
+    "chain": "polygon",
+    "address": "0x9c32185b81766a051e08de671207b34466dd1021",
+    "symbol": "BTCpx",
+    "decimals": 8
+  },
+  "BTU": {
+    "chain": "polygon",
+    "symbol": "BTU",
+    "decimals": 18,
+    "address": "0xfdc26cda2d2440d0e83cd1dee8e8be48405806dc",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xb683D83a532e2Cb7DFa5275eED3698436371cc9f/logo.png"
+  },
+  "BUSD": {
+    "chain": "polygon",
+    "symbol": "BUSD",
+    "decimals": 18,
+    "address": "0xdab529f40e671a1d4bf91361c21bf9f0c9712ab7",
+    "logoURI": "https://assets.coingecko.com/coins/images/9576/thumb/BUSD.png?1568947766"
+  },
+  "CC10": {
+    "chain": "polygon",
+    "symbol": "CC10",
+    "decimals": 18,
+    "address": "0x9c49ba0212bb5db371e66b59d1565b7c06e4894e",
+    "logoURI": "https://etherscan.io/token/images/indexed-cc10_32.png"
+  },
+  "CEL": {
+    "chain": "polygon",
+    "symbol": "CEL",
+    "decimals": 4,
+    "address": "0xd85d1e945766fea5eda9103f918bd915fbca63e6",
+    "logoURI": "https://assets.coingecko.com/coins/images/3263/small/CEL_logo.png?1609598753"
+  },
+  "CELR": {
+    "chain": "polygon",
+    "symbol": "CELR",
+    "decimals": 18,
+    "address": "0x91a4635f620766145c099e15889bd2766906a559",
+    "logoURI": "https://assets.coingecko.com/coins/images/4379/thumb/Celr.png?1554705437"
+  },
+  "CFI": {
+    "chain": "polygon",
+    "symbol": "CFI",
+    "decimals": 18,
+    "address": "0xecf8f2fa183b1c4d2a269bf98a54fce86c812d3e",
+    "logoURI": "https://i.imgur.com/Z8V1O7H.png"
+  },
+  "CGG": {
+    "chain": "polygon",
+    "address": "0x2ab4f9ac80f33071211729e45cfc346c1f8446d5",
+    "symbol": "CGG",
+    "decimals": 18
+  },
+  "CHR": {
+    "chain": "polygon",
+    "symbol": "CHR",
+    "decimals": 6,
+    "address": "0x594c984e3318e91313f881b021a0c4203ff5e59f",
+    "logoURI": "https://assets.coingecko.com/coins/images/5000/thumb/Chromia.png?1559038018"
+  },
+  "CHU": {
+    "chain": "polygon",
+    "address": "0x24878dfb65693f975d825e157a0685aec2300ad8",
+    "symbol": "CHU",
+    "decimals": 18
+  },
+  "CHZ": {
+    "chain": "polygon",
+    "symbol": "CHZ",
+    "decimals": 18,
+    "address": "0xf1938ce12400f9a761084e7a80d37e732a4da056",
+    "logoURI": "https://assets.coingecko.com/coins/images/8834/thumb/Chiliz.png?1561970540"
+  },
+  "COCONUT": {
+    "chain": "polygon",
+    "address": "0xf70b561cb61018c0a873dd3431ab32fcd21cd9ed",
+    "symbol": "COCONUT",
+    "decimals": 18
+  },
+  "COLLAR": {
+    "chain": "polygon",
+    "address": "0x8df26a1bd9bd98e2ec506fc9d8009954716a05dc",
+    "symbol": "COLLAR",
+    "decimals": 18
+  },
+  "COMP": {
+    "chain": "polygon",
+    "symbol": "COMP",
+    "decimals": 18,
+    "address": "0x8505b9d2254a7ae468c0e9dd10ccea3a837aef5c",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xc00e94Cb662C3520282E6f5717214004A7f26888/logo.png"
+  },
+  "CONE": {
+    "chain": "polygon",
+    "address": "0xba777ae3a3c91fcd83ef85bfe65410592bdd0f7c",
+    "symbol": "CONE",
+    "decimals": 18
+  },
+  "CPLE": {
+    "chain": "polygon",
+    "address": "0x87fcfbd3eae94524d5ef0c42d01f3dfc96142451",
+    "symbol": "CPLE",
+    "decimals": 18
+  },
+  "CQT": {
+    "chain": "polygon",
+    "symbol": "CQT",
+    "decimals": 18,
+    "address": "0x93b0ff1c8828f6eb039d345ff681ed735086d925",
+    "logoURI": "https://assets.coingecko.com/coins/images/14168/thumb/covalent-cqt.png?1624545218"
+  },
+  "CRO": {
+    "chain": "polygon",
+    "symbol": "CRO",
+    "decimals": 8,
+    "address": "0xada58df0f643d959c2a47c9d4d4c1a4defe3f11c",
+    "logoURI": "https://assets.coingecko.com/coins/images/7310/thumb/oCw2s3GI_400x400.jpeg?1645172042"
+  },
+  "CRT": {
+    "chain": "polygon",
+    "address": "0x3dec4aa8bc74fc3289a7bdaffafdb43385836a7a",
+    "symbol": "CRT",
+    "decimals": 18
+  },
+  "CRV": {
+    "chain": "polygon",
+    "address": "0x172370d5cd63279efa6d502dab29171933a610af",
+    "symbol": "CRV",
+    "decimals": 18
+  },
+  "CRV-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x396e655c309676caf0acf4607a868e0cded876db",
+    "symbol": "CRV-ETH SLP",
+    "decimals": 18
+  },
+  "CRVTRI-f": {
+    "chain": "polygon",
+    "address": "0xa73edcf18421b56d9af1ce08a34e102e23b2c4b6",
+    "symbol": "CRVTRI-f",
+    "decimals": 18
+  },
+  "CTSI": {
+    "chain": "polygon",
+    "symbol": "CTSI",
+    "decimals": 18,
+    "address": "0x2727ab1c2d22170abc9b595177b2d5c6e1ab7b7b",
+    "logoURI": "https://i.imgur.com/q3SnElh.png"
+  },
+  "CTX": {
+    "chain": "polygon",
+    "symbol": "CTX",
+    "decimals": 18,
+    "address": "0x8c208bc2a808a088a78398fed8f2640cab0b6edb",
+    "logoURI": "https://assets.coingecko.com/coins/images/14932/thumb/glossy_icon_-_C200px.png?1619073171"
+  },
+  "CUBE": {
+    "chain": "polygon",
+    "symbol": "CUBE",
+    "decimals": 8,
+    "address": "0x276c9cbaa4bdf57d7109a41e67bd09699536fa3d",
+    "logoURI": "https://assets.coingecko.com/coins/images/10687/thumb/CUBE_icon.png?1617026861"
+  },
+  "CVC": {
+    "chain": "polygon",
+    "symbol": "CVC",
+    "decimals": 8,
+    "address": "0x66dc5a08091d1968e08c16aa5b27bac8398b02be",
+    "logoURI": "https://assets.coingecko.com/coins/images/788/thumb/civic.png?1547034556"
+  },
+  "CVX": {
+    "chain": "polygon",
+    "symbol": "CVX",
+    "decimals": 18,
+    "address": "0x4257ea7637c355f81616050cbb6a9b709fd72683",
+    "logoURI": "https://assets.coingecko.com/coins/images/15585/thumb/convex.png?1621256328"
+  },
+  "Crazy": {
+    "chain": "polygon",
+    "address": "0x7ffc48db599137e7a994bb8309f124e77b392043",
+    "symbol": "Crazy",
+    "decimals": 18
+  },
+  "DAI": {
+    "chain": "polygon",
+    "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+    "symbol": "DAI",
+    "decimals": 18
+  },
+  "DARK": {
+    "chain": "polygon",
+    "address": "0x1942b8262a0683b54f4f91d0c08ddd92ed6e8fe6",
+    "symbol": "DARK",
+    "decimals": 18
+  },
+  "DATA-ETH SLP": {
+    "chain": "polygon",
+    "address": "0xf2c9650fd759f93e59d2ae8f42a97c0600150f0e",
+    "symbol": "DATA-ETH SLP",
+    "decimals": 18
+  },
+  "DB": {
+    "chain": "polygon",
+    "symbol": "DB",
+    "decimals": 18,
+    "address": "0x0e59d50add2d90f5111aca875bae0a72d95b4762",
+    "logoURI": "https://dark-build.app/logo192.png"
+  },
+  "DDX": {
+    "chain": "polygon",
+    "symbol": "DDX",
+    "decimals": 18,
+    "address": "0x26f5fb1e6c8a65b3a873ff0a213fa16eff5a7828",
+    "logoURI": "https://assets.coingecko.com/coins/images/13453/thumb/ddx_logo.png?1608741641"
+  },
+  "DECATS": {
+    "chain": "polygon",
+    "address": "0x198f1d316aad1c0bfd36a79bd1a8e9dba92daa18",
+    "symbol": "DECATS",
+    "decimals": 18
+  },
+  "DEFI5": {
+    "chain": "polygon",
+    "symbol": "DEFI5",
+    "decimals": 18,
+    "address": "0x42435f467d33e5c4146a4e8893976ef12bbce762",
+    "logoURI": "https://i.imgur.com/uVGtugL.png"
+  },
+  "DEGEN": {
+    "chain": "polygon",
+    "symbol": "DEGEN",
+    "decimals": 18,
+    "address": "0x8a2870fb69a90000d6439b7adfb01d4ba383a415",
+    "logoURI": "https://raw.githubusercontent.com/sameepsi/quickswap-default-token-list/master/assets/DEGEN_LOGO.png"
+  },
+  "DEXT": {
+    "chain": "polygon",
+    "symbol": "DEXT",
+    "decimals": 18,
+    "address": "0xff835562c761205659939b64583dd381a6aa4d92",
+    "logoURI": "https://assets.coingecko.com/coins/images/11603/thumb/dext.png?1605790188"
+  },
+  "DFX": {
+    "chain": "polygon",
+    "address": "0xe7804d91dfcde7f776c90043e03eaa6df87e6395",
+    "symbol": "DFX",
+    "decimals": 18
+  },
+  "DFYN": {
+    "chain": "polygon",
+    "symbol": "DFYN",
+    "decimals": 18,
+    "address": "0xc168e40227e4ebd8c1cae80f7a55a4f0e6d66c97"
+  },
+  "DG": { "chain": "polygon", "address": "0xef938b6da8576a896f6e0321ef80996f4890f9c4", "symbol": "DG", "decimals": 18 },
+  "DGS": {
+    "chain": "polygon",
+    "address": "0xbaa1c32efd58eceeade53cfcb4fd7f92bad6f959",
+    "symbol": "DGS",
+    "decimals": 18
+  },
+  "DIA": {
+    "chain": "polygon",
+    "symbol": "DIA",
+    "decimals": 18,
+    "address": "0x993f2cafe9dbe525243f4a78bebc69dac8d36000",
+    "logoURI": "https://assets.coingecko.com/coins/images/11955/thumb/image.png?1646041751"
+  },
+  "DINO": {
+    "chain": "polygon",
+    "address": "0xaa9654becca45b5bdfa5ac646c939c62b527d394",
+    "symbol": "DINO",
+    "decimals": 18
+  },
+  "DMT": {
+    "chain": "polygon",
+    "symbol": "DMT",
+    "decimals": 18,
+    "address": "0xd28449bb9bb659725accad52947677cce3719fd7",
+    "logoURI": "https://darkmatter.finance/i/favicon/512x512.png"
+  },
+  "DPI": {
+    "chain": "polygon",
+    "symbol": "DPI",
+    "decimals": 18,
+    "address": "0x85955046df4668e1dd369d2de9f3aeb98dd2a369"
+  },
+  "DRC": {
+    "chain": "polygon",
+    "symbol": "DRC",
+    "decimals": 0,
+    "address": "0xfed16c746cb5bfed009730f9e3e6a673006105c7",
+    "logoURI": "https://pbs.twimg.com/profile_images/1318783238291292160/R4DxXdRA_400x400.jpg"
+  },
+  "DSLA": {
+    "chain": "polygon",
+    "symbol": "DSLA",
+    "decimals": 18,
+    "address": "0xa0e390e9cea0d0e8cd40048ced9fa9ea10d71639",
+    "logoURI": "https://storage.googleapis.com/stacktical-public/dsla.png"
+  },
+  "DST": {
+    "chain": "polygon",
+    "address": "0x3b7e1ce09afe2bb3a23919afb65a38e627cfbe97",
+    "symbol": "DST",
+    "decimals": 18
+  },
+  "DUCKIES": {
+    "chain": "polygon",
+    "address": "0x18e73a5333984549484348a94f4d219f4fab7b81",
+    "symbol": "DUCKIES",
+    "decimals": 8
+  },
+  "DUSD-USDC-BPT": {
+    "chain": "polygon",
+    "address": "0x6da7f1c193ab6c4bd16eb14a6305bba8d25737ff",
+    "symbol": "DUSD-USDC-BPT",
+    "decimals": 18
+  },
+  "DUSD/bbaUSD": {
+    "chain": "polygon",
+    "address": "0x2645b13fd2c5295296e94a76280b968bdcbbdfed",
+    "symbol": "DUSD/bbaUSD",
+    "decimals": 18
+  },
+  "DYDX": {
+    "chain": "polygon",
+    "address": "0x4c3bf0a3de9524af68327d1d2558a3b70d17d42a",
+    "symbol": "DYDX",
+    "decimals": 18
+  },
+  "DfynWMATIC": {
+    "chain": "polygon",
+    "symbol": "DfynWMATIC",
+    "decimals": 18,
+    "address": "0x4c28f48448720e9000907bc2611f73022fdce1fa",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png"
+  },
+  "EAC": {
+    "chain": "polygon",
+    "address": "0xddd550b75d41a1980170a4b2e4b8c61557084af2",
+    "symbol": "EAC",
+    "decimals": 18
+  },
+  "EASY": {
+    "chain": "polygon",
+    "symbol": "EASY",
+    "decimals": 18,
+    "address": "0xdb3b3b147a030f032633f6c4bebf9a2fb5a882b5",
+    "logoURI": "https://raw.githubusercontent.com/sameepsi/quickswap-interface/master/assets/easyfi-token.png"
+  },
+  "ECLP-WMATIC-MATICX": {
+    "chain": "polygon",
+    "address": "0xee278d943584dd8640eaf4cc6c7a5c80c0073e85",
+    "symbol": "ECLP-WMATIC-MATICX",
+    "decimals": 18
+  },
+  "ECLP-WMATIC-stMATIC": {
+    "chain": "polygon",
+    "address": "0xf0ad209e2e969eaaa8c882aac71f02d8a047d5c2",
+    "symbol": "ECLP-WMATIC-stMATIC",
+    "decimals": 18
+  },
+  "ELENA": {
+    "chain": "polygon",
+    "address": "0xd1bb6c3eae9f4e33bd4f19cb564416fa6b19b88d",
+    "symbol": "ELENA",
+    "decimals": 18
+  },
+  "ELET": {
+    "chain": "polygon",
+    "symbol": "ELET",
+    "decimals": 18,
+    "address": "0x07738eb4ce8932ca961c815cb12c9d4ab5bd0da4",
+    "logoURI": "https://etherlegends.com/ELET.png"
+  },
+  "ELK": {
+    "chain": "polygon",
+    "address": "0xeeeeeb57642040be42185f49c52f7e9b38f8eeee",
+    "symbol": "ELK",
+    "decimals": 18
+  },
+  "ELON": {
+    "chain": "polygon",
+    "symbol": "ELON",
+    "decimals": 18,
+    "address": "0xe0339c80ffde91f3e20494df88d4206d86024cdf",
+    "logoURI": "https://assets.coingecko.com/coins/images/14962/thumb/6GxcPRo3_400x400.jpg?1619157413"
+  },
+  "ENJ": {
+    "chain": "polygon",
+    "symbol": "ENJ",
+    "decimals": 18,
+    "address": "0x7ec26842f195c852fa843bb9f6d8b583a274a157",
+    "logoURI": "https://assets.coingecko.com/coins/images/1102/thumb/enjin-coin-logo.png?1547035078"
+  },
+  "ENO": {
+    "chain": "polygon",
+    "address": "0x7f36c54da31b2dd355caffec0249f26da41e3fcd",
+    "symbol": "ENO",
+    "decimals": 18
+  },
+  "ENS": {
+    "chain": "polygon",
+    "symbol": "ENS",
+    "decimals": 18,
+    "address": "0xbd7a5cf51d22930b8b3df6d834f9bcef90ee7c4f",
+    "logoURI": "https://assets.coingecko.com/coins/images/19785/thumb/acatxTm8_400x400.jpg?1635850140"
+  },
+  "ERN": {
+    "chain": "polygon",
+    "symbol": "ERN",
+    "decimals": 18,
+    "address": "0x0e50bea95fe001a370a4f1c220c49aedcb982dec",
+    "logoURI": "https://assets.coingecko.com/coins/images/14238/thumb/LOGO_HIGH_QUALITY.png?1647831402"
+  },
+  "ETH": {
+    "chain": "polygon",
+    "symbol": "ETH",
+    "decimals": 18,
+    "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+  },
+  "ETH-AAVE SLP": {
+    "chain": "polygon",
+    "address": "0x2813d43463c374a680f235c428fb1d7f08de0b69",
+    "symbol": "ETH-AAVE SLP",
+    "decimals": 18
+  },
+  "ETH-ADDY SLP": {
+    "chain": "polygon",
+    "address": "0xb6d9a4649c579b8768f1cb55e9dd6ba99581e4a9",
+    "symbol": "ETH-ADDY SLP",
+    "decimals": 18
+  },
+  "ETH-ARPA SLP": {
+    "chain": "polygon",
+    "address": "0x590f5e967d73ea06dae9aed2788108dcf52da269",
+    "symbol": "ETH-ARPA SLP",
+    "decimals": 18
+  },
+  "ETH-DAI SLP": {
+    "chain": "polygon",
+    "address": "0x6ff62bfb8c12109e8000935a6de54dad83a4f39f",
+    "symbol": "ETH-DAI SLP",
+    "decimals": 18
+  },
+  "ETH-DHT SLP": {
+    "chain": "polygon",
+    "address": "0xa375d23a751124359568f3a22576528bd1c8c3e3",
+    "symbol": "ETH-DHT SLP",
+    "decimals": 18
+  },
+  "ETH-IDLE SLP": {
+    "chain": "polygon",
+    "address": "0x5518a3af961eee8771657050c5cb23d2b3e2f6ee",
+    "symbol": "ETH-IDLE SLP",
+    "decimals": 18
+  },
+  "ETH-IRON SLP": {
+    "chain": "polygon",
+    "address": "0x01cdcc99a4f9a68be18504750b219caa881841eb",
+    "symbol": "ETH-IRON SLP",
+    "decimals": 18
+  },
+  "ETH-MANA SLP": {
+    "chain": "polygon",
+    "address": "0xc48ae82ca34c63887b975f20aba91a38f2a900b8",
+    "symbol": "ETH-MANA SLP",
+    "decimals": 18
+  },
+  "ETH-MVI SLP": {
+    "chain": "polygon",
+    "address": "0x4642dafc5281ba5a8d35b2896e0d925b23c6883c",
+    "symbol": "ETH-MVI SLP",
+    "decimals": 18
+  },
+  "ETH-SAND SLP": {
+    "chain": "polygon",
+    "address": "0xcea28c2b744c0d159a070e11a0f04dc7182f155d",
+    "symbol": "ETH-SAND SLP",
+    "decimals": 18
+  },
+  "ETH-SX SLP": {
+    "chain": "polygon",
+    "address": "0x1bf9805b40a5f69c7d0f9e5d1ab718642203c652",
+    "symbol": "ETH-SX SLP",
+    "decimals": 18
+  },
+  "ETH-USDT SLP": {
+    "chain": "polygon",
+    "address": "0xc2755915a85c6f6c1c0f3a86ac8c058f11caa9c9",
+    "symbol": "ETH-USDT SLP",
+    "decimals": 18
+  },
+  "ETH-WFIL SLP": {
+    "chain": "polygon",
+    "address": "0x21ef14b5580a852477ef31e7ea9373485bf50377",
+    "symbol": "ETH-WFIL SLP",
+    "decimals": 18
+  },
+  "ETH-gOHM SLP": {
+    "chain": "polygon",
+    "address": "0x1549e0e8127d380080aab448b82d280433ce4030",
+    "symbol": "ETH-gOHM SLP",
+    "decimals": 18
+  },
+  "ETH-pZUG SLP": {
+    "chain": "polygon",
+    "address": "0x0a7f27e370168b1e1be2ef77a8ba28d66983c515",
+    "symbol": "ETH-pZUG SLP",
+    "decimals": 18
+  },
+  "ETH2x-FLI-P": {
+    "chain": "polygon",
+    "address": "0x3ad707da309f3845cd602059901e39c4dcd66473",
+    "symbol": "ETH2x-FLI-P",
+    "decimals": 18
+  },
+  "ETH2x-FLI-P-ETH SLP": {
+    "chain": "polygon",
+    "address": "0xadd053a09f95e565b25d8b9b84d0fcfaa962465e",
+    "symbol": "ETH2x-FLI-P-ETH SLP",
+    "decimals": 18
+  },
+  "ETHi": {
+    "chain": "polygon",
+    "address": "0xf4584d3067ce2f1c3c0779d91bb960678f8ff1de",
+    "symbol": "ETHi",
+    "decimals": 18
+  },
+  "EUROC": {
+    "chain": "polygon",
+    "symbol": "EUROC",
+    "decimals": 6,
+    "address": "0x8a037dbca8134ffc72c362e394e35e0cad618f85",
+    "logoURI": "https://assets.coingecko.com/coins/images/26045/thumb/euro-coin.png?1655394420"
+  },
+  "EURS": {
+    "chain": "polygon",
+    "symbol": "EURS",
+    "decimals": 2,
+    "address": "0xe111178a87a3bff0c8d18decba5798827539ae99"
+  },
+  "EVG": {
+    "chain": "polygon",
+    "address": "0xc30f68091fb72469b0e0481e2551aa5e759d6271",
+    "symbol": "EVG",
+    "decimals": 18
+  },
+  "FARM": {
+    "chain": "polygon",
+    "symbol": "FARM",
+    "decimals": 18,
+    "address": "0x176f5ab638cf4ff3b6239ba609c3fadaa46ef5b0",
+    "logoURI": "https://assets.coingecko.com/coins/images/12304/thumb/Harvest.png?1613016180"
+  },
+  "FET": {
+    "chain": "polygon",
+    "symbol": "FET",
+    "decimals": 18,
+    "address": "0x7583feddbcefa813dc18259940f76a02710a8905",
+    "logoURI": "https://assets.coingecko.com/coins/images/5681/thumb/Fetch.jpg?1572098136"
+  },
+  "FIS": {
+    "chain": "polygon",
+    "address": "0x7a7b94f18ef6ad056cda648588181cda84800f94",
+    "symbol": "FIS",
+    "decimals": 18
+  },
+  "FISH": {
+    "chain": "polygon",
+    "address": "0x3a3df212b7aa91aa0402b9035b098891d276572b",
+    "symbol": "FISH",
+    "decimals": 18
+  },
+  "FLI": {
+    "chain": "polygon",
+    "address": "0xc2395e317bf12a11ec7a17fb36b9e9d3cb742f1b",
+    "symbol": "FLI",
+    "decimals": 18
+  },
+  "FLT": {
+    "chain": "polygon",
+    "address": "0x5d461bf9caf10651a9cf2b913e4a596940bd0fef",
+    "symbol": "FLT",
+    "decimals": 18
+  },
+  "FLUX": {
+    "chain": "polygon",
+    "address": "0xa2bb7a68c46b53f6bbf6cc91c865ae247a82e99b",
+    "symbol": "FLUX",
+    "decimals": 8
+  },
+  "FORT": {
+    "chain": "polygon",
+    "symbol": "FORT",
+    "decimals": 18,
+    "address": "0x9ff62d1fc52a907b6dcba8077c2ddca6e6a9d3e1",
+    "logoURI": "https://assets.coingecko.com/coins/images/25060/thumb/Forta_lgo_%281%29.png?1655353696"
+  },
+  "FORTH": {
+    "chain": "polygon",
+    "symbol": "FORTH",
+    "decimals": 18,
+    "address": "0x5ecba59dacc1adc5bdea35f38a732823fc3de977",
+    "logoURI": "https://assets.coingecko.com/coins/images/14917/thumb/photo_2021-04-22_00.00.03.jpeg?1619020835"
+  },
+  "FOX": {
+    "chain": "polygon",
+    "symbol": "FOX",
+    "decimals": 18,
+    "address": "0x65a05db8322701724c197af82c9cae41195b0aa8",
+    "logoURI": "https://assets.coingecko.com/coins/images/9988/thumb/FOX.png?1574330622"
+  },
+  "FOX-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x93ef615f1ddd27d0e141ad7192623a5c45e8f200",
+    "symbol": "FOX-ETH SLP",
+    "decimals": 18
+  },
+  "FRAX": {
+    "chain": "polygon",
+    "address": "0x45c32fa6df82ead1e2ef74d17b76547eddfaff89",
+    "symbol": "FRAX",
+    "decimals": 18
+  },
+  "FRAX-FXS SLP": {
+    "chain": "polygon",
+    "address": "0xd53a56ae0f48c9a03660cd36c2e4ae20493a1eca",
+    "symbol": "FRAX-FXS SLP",
+    "decimals": 18
+  },
+  "FRAX-USDC SLP": {
+    "chain": "polygon",
+    "address": "0x9e20a8d3501bf96eda8e69b96dd84840058a1cb0",
+    "symbol": "FRAX-USDC SLP",
+    "decimals": 18
+  },
+  "FTM": {
+    "chain": "polygon",
+    "symbol": "FTM",
+    "decimals": 18,
+    "address": "0xc9c1c1c20b3658f8787cc2fd702267791f224ce1",
+    "logoURI": "https://assets.coingecko.com/coins/images/4001/thumb/Fantom.png?1558015016"
+  },
+  "FXS": {
+    "chain": "polygon",
+    "address": "0x3e121107f6f22da4911079845a470757af4e1a1b",
+    "symbol": "FXS",
+    "decimals": 18
+  },
+  "FXS-FRAX SLP": {
+    "chain": "polygon",
+    "address": "0xdf45b5b68d9dc84173dd963c763aea8cad3e24a6",
+    "symbol": "FXS-FRAX SLP",
+    "decimals": 18
+  },
+  "GAIA": {
+    "chain": "polygon",
+    "address": "0x723b17718289a91af252d616de2c77944962d122",
+    "symbol": "GAIA",
+    "decimals": 18
+  },
+  "GALA": {
+    "chain": "polygon",
+    "symbol": "GALA",
+    "decimals": 8,
+    "address": "0x09e1943dd2a4e82032773594f50cf54453000b97",
+    "logoURI": "https://assets.coingecko.com/coins/images/12493/thumb/GALA-COINGECKO.png?1600233435"
+  },
+  "GAME": {
+    "chain": "polygon",
+    "symbol": "GAME",
+    "decimals": 18,
+    "address": "0x8d1566569d5b695d44a9a234540f68d393cdc40d",
+    "logoURI": "https://i.imgur.com/IIUglm9.png?1"
+  },
+  "GDDY": {
+    "chain": "polygon",
+    "address": "0x67eb41a14c0fe5cd701fc9d5a3d6597a72f641a6",
+    "symbol": "GDDY",
+    "decimals": 18
+  },
+  "GHST": {
+    "chain": "polygon",
+    "address": "0x385eeac5cb85a38a9a07a70c73e0a3271cfb54a7",
+    "symbol": "GHST",
+    "decimals": 18
+  },
+  "GIDDY": {
+    "chain": "polygon",
+    "address": "0x67eb41a14c0fe5cd701fc9d5a3d6597a72f641a6",
+    "symbol": "GIDDY",
+    "decimals": 18
+  },
+  "GLM": {
+    "chain": "polygon",
+    "address": "0x0b220b82f3ea3b7f6d9a1d8ab58930c064a2b5bf",
+    "symbol": "GLM",
+    "decimals": 18
+  },
+  "GMT": {
+    "chain": "polygon",
+    "address": "0x714db550b574b3e927af3d93e26127d15721d4c2",
+    "symbol": "GMT",
+    "decimals": 8
+  },
+  "GNO": {
+    "chain": "polygon",
+    "symbol": "GNO",
+    "decimals": 18,
+    "address": "0x5ffd62d3c3ee2e81c00a7b9079fb248e7df024a8",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6810e776880C02933D47DB1b9fc05908e5386b96/logo.png"
+  },
+  "GNS": {
+    "chain": "polygon",
+    "address": "0xe5417af564e4bfda1c483642db72007871397896",
+    "symbol": "GNS",
+    "decimals": 18
+  },
+  "GODS": {
+    "chain": "polygon",
+    "symbol": "GODS",
+    "decimals": 18,
+    "address": "0xf88fc6b493eda7650e4bcf7a290e8d108f677cfe",
+    "logoURI": "https://assets.coingecko.com/coins/images/17139/thumb/10631.png?1635718182"
+  },
+  "GRT": {
+    "chain": "polygon",
+    "address": "0x5fe2b58c013d7601147dcdd68c143a77499f5531",
+    "symbol": "GRT",
+    "decimals": 18
+  },
+  "GRT-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x1ceda73c034218255f50ef8a2c282e6b4c301d60",
+    "symbol": "GRT-ETH SLP",
+    "decimals": 18
+  },
+  "GTC": {
+    "chain": "polygon",
+    "symbol": "GTC",
+    "decimals": 18,
+    "address": "0xdb95f9188479575f3f718a245eca1b3bf74567ec",
+    "logoURI": "https://assets.coingecko.com/coins/images/15810/thumb/gitcoin.png?1621992929"
+  },
+  "GTR": {
+    "chain": "polygon",
+    "address": "0x7bfce73b37ea2151843be4bdf72f37e094a4676c",
+    "symbol": "GTR",
+    "decimals": 18
+  },
+  "GUSD": {
+    "chain": "polygon",
+    "symbol": "GUSD",
+    "decimals": 2,
+    "address": "0xc8a94a3d3d2dabc3c1caffffdca6a7543c3e3e65",
+    "logoURI": "https://assets.coingecko.com/coins/images/5992/thumb/gemini-dollar-gusd.png?1536745278"
+  },
+  "GYEN": {
+    "chain": "polygon",
+    "symbol": "GYEN",
+    "decimals": 6,
+    "address": "0x482bc619ee7662759cdc0685b4e78f464da39c73",
+    "logoURI": "https://assets.coingecko.com/coins/images/14191/thumb/icon_gyen_200_200.png?1614843343"
+  },
+  "HAWK": {
+    "chain": "polygon",
+    "symbol": "HAWK",
+    "decimals": 18,
+    "address": "0x69cbc7449ee102eb792f1656744bf1a7c1bacb7e"
+  },
+  "HEX": {
+    "chain": "polygon",
+    "address": "0x23d29d30e35c5e8d321e1dc9a8a61bfd846d4c5c",
+    "symbol": "HEX",
+    "decimals": 8
+  },
+  "HH": {
+    "chain": "polygon",
+    "symbol": "HH",
+    "decimals": 18,
+    "address": "0x521cddc0cba84f14c69c1e99249f781aa73ee0bc",
+    "logoURI": "https://assets.coingecko.com/coins/images/13719/small/hh.png?1611137626"
+  },
+  "HOPR": {
+    "chain": "polygon",
+    "symbol": "HOPR",
+    "decimals": 18,
+    "address": "0x6ccbf3627b2c83afef05bf2f035e7f7b210fe30d",
+    "logoURI": "https://assets.coingecko.com/coins/images/14061/thumb/Shared_HOPR_logo_512px.png?1614073468"
+  },
+  "IDEX": {
+    "chain": "polygon",
+    "symbol": "IDEX",
+    "decimals": 18,
+    "address": "0x9cb74c8032b007466865f060ad2c46145d45553d",
+    "logoURI": "https://assets.coingecko.com/coins/images/2565/thumb/logomark-purple-286x286.png?1638362736"
+  },
+  "IGG": {
+    "chain": "polygon",
+    "symbol": "IGG",
+    "decimals": 6,
+    "address": "0xe6fc6c7cb6d2c31b359a49a33ef08ab87f4de7ce",
+    "logoURI": "https://assets.coingecko.com/coins/images/7697/small/N7aEdYrY_400x400.png?1561587437"
+  },
+  "ILV": {
+    "chain": "polygon",
+    "symbol": "ILV",
+    "decimals": 18,
+    "address": "0xfa46daf9909e116dbc40fe1cc95fc0bb1f452abe",
+    "logoURI": "https://assets.coingecko.com/coins/images/14468/large/ILV.JPG"
+  },
+  "IMX": {
+    "chain": "polygon",
+    "symbol": "IMX",
+    "decimals": 18,
+    "address": "0x183070c90b34a63292cc908ce1b263cb56d49a7f",
+    "logoURI": "https://assets.coingecko.com/coins/images/17233/thumb/imx.png?1636691817"
+  },
+  "INDEX": {
+    "chain": "polygon",
+    "symbol": "INDEX",
+    "decimals": 18,
+    "address": "0xfbd8a3b908e764dbcd51e27992464b4432a1132b",
+    "logoURI": "https://assets.coingecko.com/coins/images/12729/thumb/index.png?1634894321"
+  },
+  "INJ": {
+    "chain": "polygon",
+    "symbol": "INJ",
+    "decimals": 18,
+    "address": "0x4e8dc2149eac3f3def36b1c281ea466338249371",
+    "logoURI": "https://assets.coingecko.com/coins/images/12882/thumb/Secondary_Symbol.png?1628233237"
+  },
+  "INV": {
+    "chain": "polygon",
+    "symbol": "INV",
+    "decimals": 18,
+    "address": "0xf18ac368001b0ddc80aa6a8374deb49e868efdb8",
+    "logoURI": "https://assets.coingecko.com/coins/images/14205/thumb/inverse_finance.jpg?1614921871"
+  },
+  "IOTX": {
+    "chain": "polygon",
+    "symbol": "IOTX",
+    "decimals": 18,
+    "address": "0xf6372cdb9c1d3674e83842e3800f2a62ac9f3c66",
+    "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/2777.png"
+  },
+  "IRON": {
+    "chain": "polygon",
+    "address": "0xd86b5923f3ad7b585ed81b448170ae026c65ae9a",
+    "symbol": "IRON",
+    "decimals": 18
+  },
+  "IXT": {
+    "chain": "polygon",
+    "address": "0xe06bd4f5aac8d0aa337d13ec88db6defc6eaeefe",
+    "symbol": "IXT",
+    "decimals": 18
+  },
+  "JASMY": {
+    "chain": "polygon",
+    "symbol": "JASMY",
+    "decimals": 18,
+    "address": "0xb87f5c1e81077ffcfe821da240fd20c99c533af1",
+    "logoURI": "https://assets.coingecko.com/coins/images/13876/thumb/JASMY200x200.jpg?1612473259"
+  },
+  "JPYC": {
+    "chain": "polygon",
+    "address": "0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c",
+    "symbol": "JPYC",
+    "decimals": 18
+  },
+  "JRT-ETH SLP": {
+    "chain": "polygon",
+    "address": "0xa769c6786c3717945438d4c4feb8494a1a6ca443",
+    "symbol": "JRT-ETH SLP",
+    "decimals": 18
+  },
+  "JULIEN": {
+    "chain": "polygon",
+    "symbol": "JULIEN",
+    "decimals": 4,
+    "address": "0x268ad27c28601d28b79c792c14e95bd2b7a030f8",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xe6710e0CdA178f3D921f456902707B0d4C4A332B/logo.png"
+  },
+  "KEEP": {
+    "chain": "polygon",
+    "symbol": "KEEP",
+    "decimals": 18,
+    "address": "0x42f37a1296b2981f7c3caced84c5096b2eb0c72c",
+    "logoURI": "https://assets.coingecko.com/coins/images/3373/thumb/IuNzUb5b_400x400.jpg?1589526336"
+  },
+  "KLIMA": {
+    "chain": "polygon",
+    "address": "0x4e78011ce80ee02d2c3e649fb657e45898257815",
+    "symbol": "KLIMA",
+    "decimals": 9
+  },
+  "KNC": {
+    "chain": "polygon",
+    "address": "0x1c954e8fe737f99f68fa1ccda3e51ebdb291948c",
+    "symbol": "KNC",
+    "decimals": 18
+  },
+  "KOKO": {
+    "chain": "polygon",
+    "address": "0xfcb33a44c8b1a9434b4a7b023ae31a1eb3c11b71",
+    "symbol": "KOKO",
+    "decimals": 18
+  },
+  "KONG": {
+    "chain": "polygon",
+    "address": "0xc9fe9a2fc53c845f60f44f52b2ee8fe856f86df0",
+    "symbol": "KONG",
+    "decimals": 18
+  },
+  "KP3R": {
+    "chain": "polygon",
+    "symbol": "KP3R",
+    "decimals": 18,
+    "address": "0x53aec293212e3b792563bc16f1be26956adb12e9",
+    "logoURI": "https://assets.coingecko.com/coins/images/12966/thumb/kp3r_logo.jpg?1607057458"
+  },
+  "KPAPA": {
+    "chain": "polygon",
+    "address": "0x5abd74c7192e7688f81206d8a4f6b9c298f3d282",
+    "symbol": "KPAPA",
+    "decimals": 18
+  },
+  "Kr": { "chain": "polygon", "address": "0xc3258f224a1835101adcdc45c969517f4678c0b6", "symbol": "Kr", "decimals": 9 },
+  "Krill-USDC SLP": {
+    "chain": "polygon",
+    "address": "0x497c2cbad454952b20ab66a1a17dac0999ba228e",
+    "symbol": "Krill-USDC SLP",
+    "decimals": 18
+  },
+  "LCX": {
+    "chain": "polygon",
+    "symbol": "LCX",
+    "decimals": 18,
+    "address": "0xe8a51d0dd1b4525189dda2187f90ddf0932b5482",
+    "logoURI": "https://assets.coingecko.com/coins/images/9985/thumb/zRPSu_0o_400x400.jpg?1574327008"
+  },
+  "LDO": {
+    "chain": "polygon",
+    "address": "0xc3c7d422809852031b44ab29eec9f1eff2a58756",
+    "symbol": "LDO",
+    "decimals": 18
+  },
+  "LEND": {
+    "chain": "polygon",
+    "symbol": "LEND",
+    "decimals": 18,
+    "address": "0x313d009888329c9d1cf4f75ca3f32566335bd604",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x80fB784B7eD66730e8b1DBd9820aFD29931aab03/logo.png"
+  },
+  "LIME": {
+    "chain": "polygon",
+    "address": "0x7f67639ffc8c93dd558d452b8920b28815638c44",
+    "symbol": "LIME",
+    "decimals": 18
+  },
+  "LINK": {
+    "chain": "polygon",
+    "address": "0x53e0bca35ec356bd5dddfebbd1fc0fd03fabad39",
+    "symbol": "LINK",
+    "decimals": 18
+  },
+  "LINK-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x74d23f21f780ca26b47db16b0504f2e3832b9321",
+    "symbol": "LINK-ETH SLP",
+    "decimals": 18
+  },
+  "LOKA": {
+    "chain": "polygon",
+    "symbol": "LOKA",
+    "decimals": 18,
+    "address": "0x465b67cb20a7e8bc4c51b4c7da591c1945b41427",
+    "logoURI": "https://assets.coingecko.com/coins/images/22572/thumb/loka_64pix.png?1642643271"
+  },
+  "LOOM": {
+    "chain": "polygon",
+    "symbol": "LOOM",
+    "decimals": 18,
+    "address": "0x66efb7cc647e0efab02eba4316a2d2941193f6b3",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA4e8C3Ec456107eA67d3075bF9e3DF3A75823DB0/logo.png"
+  },
+  "LPT": {
+    "chain": "polygon",
+    "symbol": "LPT",
+    "decimals": 18,
+    "address": "0x3962f4a0a0051dcce0be73a7e09cef5756736712",
+    "logoURI": "https://assets.coingecko.com/coins/images/7137/thumb/logo-circle-green.png?1619593365"
+  },
+  "LQTY": {
+    "chain": "polygon",
+    "symbol": "LQTY",
+    "decimals": 18,
+    "address": "0x8ab2fec94d17ae69fb90e7c773f2c85ed1802c01",
+    "logoURI": "https://assets.coingecko.com/coins/images/14665/thumb/200-lqty-icon.png?1617631180"
+  },
+  "LRC": {
+    "chain": "polygon",
+    "symbol": "LRC",
+    "decimals": 18,
+    "address": "0x84e1670f61347cdaed56dcc736fb990fbb47ddc1",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xBBbbCA6A901c926F240b89EacB641d8Aec7AEafD/logo.png"
+  },
+  "LUSD": {
+    "chain": "polygon",
+    "symbol": "LUSD",
+    "decimals": 18,
+    "address": "0x23001f892c0c82b79303edc9b9033cd190bb21c7",
+    "logoURI": "https://assets.coingecko.com/coins/images/14666/thumb/Group_3.png?1617631327"
+  },
+  "LUXY": {
+    "chain": "polygon",
+    "address": "0xd4945a3d0de9923035521687d4bf18cc9b0c7c2a",
+    "symbol": "LUXY",
+    "decimals": 18
+  },
+  "MANA": {
+    "chain": "polygon",
+    "address": "0xa1c57f48f0deb89f569dfbe6e2b7f46d33606fd4",
+    "symbol": "MANA",
+    "decimals": 18
+  },
+  "MASK": {
+    "chain": "polygon",
+    "address": "0x2b9e7ccdf0f4e5b24757c1e1a80e311e34cb10c7",
+    "symbol": "MASK",
+    "decimals": 18
+  },
+  "MATH": {
+    "chain": "polygon",
+    "symbol": "MATH",
+    "decimals": 18,
+    "address": "0x347accafda7f8c5bdec57fa34a5b663cbd1aeca7",
+    "logoURI": "https://assets.coingecko.com/coins/images/11335/thumb/2020-05-19-token-200.png?1589940590"
+  },
+  "MATIC": {
+    "chain": "polygon",
+    "symbol": "MATIC",
+    "decimals": 18,
+    "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+  },
+  "MAX": {
+    "chain": "polygon",
+    "address": "0x495d21186d4ef81a9d3288cb551d55685e3bc290",
+    "symbol": "MAX",
+    "decimals": 18
+  },
+  "MCO2": {
+    "chain": "polygon",
+    "symbol": "MCO2",
+    "decimals": 18,
+    "address": "0xaa7dbd1598251f856c12f63557a4c4397c253cea",
+    "logoURI": "https://assets.coingecko.com/coins/images/14414/thumb/ENtxnThA_400x400.jpg?1615948522"
+  },
+  "MEME": {
+    "chain": "polygon",
+    "symbol": "MEME",
+    "decimals": 8,
+    "address": "0xf2b5a8c37278bcdd50727d5ca879f8e5a4642e2e"
+  },
+  "META": {
+    "chain": "polygon",
+    "address": "0xedcfb6984a3c70501baa8b7f5421ae795ecc1496",
+    "symbol": "META",
+    "decimals": 8
+  },
+  "METIS": {
+    "chain": "polygon",
+    "symbol": "METIS",
+    "decimals": 18,
+    "address": "0x1b9d40715e757bdb9bdec3215b898e46d8a3b71a",
+    "logoURI": "https://assets.coingecko.com/coins/images/15595/thumb/metis.jpeg?1660285312"
+  },
+  "MHUNT": {
+    "chain": "polygon",
+    "address": "0x61f95bd637e3034133335c1baa0148e518d438ad",
+    "symbol": "MHUNT",
+    "decimals": 18
+  },
+  "MIM": {
+    "chain": "polygon",
+    "symbol": "MIM",
+    "decimals": 18,
+    "address": "0x01288e04435bfcd4718ff203d6ed18146c17cd4b",
+    "logoURI": "https://assets.coingecko.com/coins/images/16786/thumb/mimlogopng.png?1624979612"
+  },
+  "MIR": {
+    "chain": "polygon",
+    "symbol": "MIR",
+    "decimals": 18,
+    "address": "0x1c5ccca2cb59145a4b25f452660cba6436ddce9b",
+    "logoURI": "https://assets.coingecko.com/coins/images/13295/thumb/mirror_logo_transparent.png?1611554658"
+  },
+  "MKR": {
+    "chain": "polygon",
+    "symbol": "MKR",
+    "decimals": 18,
+    "address": "0x6f7c932e7684666c9fd1d44527765433e01ff61d",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2/logo.png"
+  },
+  "MLN": {
+    "chain": "polygon",
+    "symbol": "MLN",
+    "decimals": 18,
+    "address": "0xa9f37d84c856fda3812ad0519dad44fa0a3fe207",
+    "logoURI": "https://assets.coingecko.com/coins/images/605/thumb/melon.png?1547034295"
+  },
+  "MNTC": {
+    "chain": "polygon",
+    "address": "0xd41cbd667ad10ab83198f40ec6ac97190309178b",
+    "symbol": "MNTC",
+    "decimals": 18
+  },
+  "MONA": {
+    "chain": "polygon",
+    "symbol": "MONA",
+    "decimals": 18,
+    "address": "0x6968105460f67c3bf751be7c15f92f5286fd0ce5",
+    "logoURI": "https://i.imgur.com/FR12tmm.jpg"
+  },
+  "MORI": {
+    "chain": "polygon",
+    "address": "0x7ecb5699d8e0a6572e549dc86dde5a785b8c29bc",
+    "symbol": "MORI",
+    "decimals": 18
+  },
+  "MST": {
+    "chain": "polygon",
+    "address": "0xa353deb6fb81df3844d8bd614d33d040fdbb8188",
+    "symbol": "MST",
+    "decimals": 18
+  },
+  "MSU": {
+    "chain": "polygon",
+    "address": "0xe8377a076adabb3f9838afb77bee96eac101ffb1",
+    "symbol": "MSU",
+    "decimals": 18
+  },
+  "MUST": {
+    "chain": "polygon",
+    "symbol": "MUST",
+    "decimals": 18,
+    "address": "0x9c78ee466d6cb57a4d01fd887d2b5dfb2d46288f",
+    "logoURI": "https://etherscan.io/token/images/cometh_32.png"
+  },
+  "MV": {
+    "chain": "polygon",
+    "symbol": "MV",
+    "decimals": 18,
+    "address": "0xa3c322ad15218fbfaed26ba7f616249f7705d945",
+    "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/17704.png"
+  },
+  "MVI": {
+    "chain": "polygon",
+    "address": "0xfe712251173a2cd5f5be2b46bb528328ea3565e1",
+    "symbol": "MVI",
+    "decimals": 18
+  },
+  "MVX": {
+    "chain": "polygon",
+    "address": "0x2760e46d9bb43dafcbecaad1f64b93207f9f0ed7",
+    "symbol": "MVX",
+    "decimals": 18
+  },
+  "MaticX": {
+    "chain": "polygon",
+    "address": "0xfa68fb4628dff1028cfec22b4162fccd0d45efb6",
+    "symbol": "MaticX",
+    "decimals": 18
+  },
+  "MaticX-bb-a-WMATIC-BPT": {
+    "chain": "polygon",
+    "address": "0x402cfdb7781fa85d52f425352661128250b79e12",
+    "symbol": "MaticX-bb-a-WMATIC-BPT",
+    "decimals": 18
+  },
+  "NAC": {
+    "chain": "polygon",
+    "address": "0xe2bbaaccd8ac71e31a3f8b055f5f30acd456745b",
+    "symbol": "NAC",
+    "decimals": 18
+  },
+  "NAKA": {
+    "chain": "polygon",
+    "address": "0x311434160d7537be358930def317afb606c0d737",
+    "symbol": "NAKA",
+    "decimals": 18
+  },
+  "NCT": {
+    "chain": "polygon",
+    "symbol": "NCT",
+    "decimals": 18,
+    "address": "0x4985e0b13554fb521840e893574d3848c10fcc6f",
+    "logoURI": "https://assets.coingecko.com/coins/images/2843/thumb/ImcYCVfX_400x400.jpg?1628519767"
+  },
+  "NDR": {
+    "chain": "polygon",
+    "symbol": "NDR",
+    "decimals": 18,
+    "address": "0xfb65ef42f7c8a70ff73f627db6e9ba2aff1f20fa",
+    "logoURI": "https://tokens.1inch.exchange/0x739763a258640919981f9ba610ae65492455be53.png"
+  },
+  "NFTE": {
+    "chain": "polygon",
+    "address": "0x492fa53b88614923937b7197c87e0f7f8eeb7b20",
+    "symbol": "NFTE",
+    "decimals": 18
+  },
+  "NMR": {
+    "chain": "polygon",
+    "symbol": "NMR",
+    "decimals": 18,
+    "address": "0x0bf519071b02f22c17e7ed5f4002ee1911f46729",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1776e1F26f98b1A5dF9cD347953a26dd3Cb46671/logo.png"
+  },
+  "NXD": {
+    "chain": "polygon",
+    "address": "0x228b5c21ac00155cf62c57bcc704c0da8187950b",
+    "symbol": "NXD",
+    "decimals": 18
+  },
+  "NXTT": {
+    "chain": "polygon",
+    "address": "0x0d0b8488222f7f83b23e365320a4021b12ead608",
+    "symbol": "NXTT",
+    "decimals": 18
+  },
+  "OCEAN": {
+    "chain": "polygon",
+    "symbol": "OCEAN",
+    "decimals": 18,
+    "address": "0x282d8efce846a88b159800bd4130ad77443fa1a1",
+    "logoURI": "https://assets.coingecko.com/coins/images/3687/thumb/ocean-protocol-logo.jpg?1547038686"
+  },
+  "OGN": {
+    "chain": "polygon",
+    "symbol": "OGN",
+    "decimals": 18,
+    "address": "0xa63beffd33ab3a2efd92a39a7d2361cee14ceba8",
+    "logoURI": "https://assets.coingecko.com/coins/images/3296/thumb/op.jpg?1547037878"
+  },
+  "OM": {
+    "chain": "polygon",
+    "symbol": "OM",
+    "decimals": 18,
+    "address": "0xc3ec80343d2bae2f8e680fdadde7c17e71e114ea",
+    "logoURI": "https://etherscan.io/token/images/mantradao_32.png"
+  },
+  "OMEN": {
+    "chain": "polygon",
+    "address": "0x76e63a3e7ba1e2e61d3da86a87479f983de89a7e",
+    "symbol": "OMEN",
+    "decimals": 18
+  },
+  "OMG": {
+    "chain": "polygon",
+    "symbol": "OMG",
+    "decimals": 18,
+    "address": "0x62414d03084eeb269e18c970a21f45d2967f0170",
+    "logoURI": "https://assets.coingecko.com/coins/images/776/thumb/OMG_Network.jpg?1591167168"
+  },
+  "ORN": {
+    "chain": "polygon",
+    "symbol": "ORN",
+    "decimals": 8,
+    "address": "0x0ee392ba5ef1354c9bd75a98044667d307c0e773",
+    "logoURI": "https://assets.coingecko.com/coins/images/11841/thumb/orion_logo.png?1594943318"
+  },
+  "OXT": {
+    "chain": "polygon",
+    "symbol": "OXT",
+    "decimals": 18,
+    "address": "0x9880e3dda13c8e7d4804691a45160102d31f6060",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4575f41308EC1483f3d399aa9a2826d74Da13Deb/logo.png"
+  },
+  "PAUTO": {
+    "chain": "polygon",
+    "address": "0x7f426f6dc648e50464a0392e60e1bb465a67e9cf",
+    "symbol": "PAUTO",
+    "decimals": 18
+  },
+  "PAXG": {
+    "chain": "polygon",
+    "symbol": "PAXG",
+    "decimals": 18,
+    "address": "0x553d3d295e0f695b9228246232edf400ed3560b5",
+    "logoURI": "https://assets.coingecko.com/coins/images/9519/thumb/paxg.PNG?1568542565"
+  },
+  "PBS": {
+    "chain": "polygon",
+    "address": "0x230a87f4b05173f7736cdd57cde32d191cd90854",
+    "symbol": "PBS",
+    "decimals": 8
+  },
+  "PERP": {
+    "chain": "polygon",
+    "symbol": "PERP",
+    "decimals": 18,
+    "address": "0x263534a4fe3cb249df46810718b7b612a30ebbff",
+    "logoURI": "https://assets.coingecko.com/coins/images/12381/thumb/60d18e06844a844ad75901a9_mark_only_03.png?1628674771"
+  },
+  "PGX": {
+    "chain": "polygon",
+    "address": "0xc1c93d475dc82fe72dbc7074d55f5a734f8ceeae",
+    "symbol": "PGX",
+    "decimals": 18
+  },
+  "PICKLE": {
+    "chain": "polygon",
+    "symbol": "PICKLE",
+    "decimals": 18,
+    "address": "0x2b88ad57897a8b496595925f43048301c37615da",
+    "logoURI": "https://raw.githubusercontent.com/cometh-game/default-token-list/master/img/pickle.png"
+  },
+  "PICKLE-DAI SLP": {
+    "chain": "polygon",
+    "address": "0x57602582eb5e82a197bae4e8b6b80e39abfc94eb",
+    "symbol": "PICKLE-DAI SLP",
+    "decimals": 18
+  },
+  "PKR": {
+    "chain": "polygon",
+    "address": "0x140a4e80dd8184536acc45f1c452d7540472e6e1",
+    "symbol": "PKR",
+    "decimals": 18
+  },
+  "PLA": {
+    "chain": "polygon",
+    "symbol": "PLA",
+    "decimals": 18,
+    "address": "0x8765f05adce126d70bcdf1b0a48db573316662eb",
+    "logoURI": "https://assets.coingecko.com/coins/images/14316/thumb/54023228.png?1615366911"
+  },
+  "PLU": {
+    "chain": "polygon",
+    "symbol": "PLU",
+    "decimals": 18,
+    "address": "0x7dc0cb65ec6019330a6841e9c274f2ee57a6ca6c",
+    "logoURI": "https://assets.coingecko.com/coins/images/1241/thumb/pluton.png?1548331624"
+  },
+  "POLS": {
+    "chain": "polygon",
+    "symbol": "POLS",
+    "decimals": 18,
+    "address": "0x8dc302e2141da59c934d900886dbf1518fd92cd4",
+    "logoURI": "https://assets.coingecko.com/coins/images/12648/thumb/polkastarter.png?1609813702"
+  },
+  "POLY": {
+    "chain": "polygon",
+    "symbol": "POLY",
+    "decimals": 18,
+    "address": "0xcb059c5573646047d6d88dddb87b745c18161d3b",
+    "logoURI": "https://assets.coingecko.com/coins/images/2784/thumb/inKkF01.png?1605007034"
+  },
+  "POND": {
+    "chain": "polygon",
+    "symbol": "POND",
+    "decimals": 18,
+    "address": "0x73580a2416a57f1c4b6391dba688a9e4f7dbece0",
+    "logoURI": "https://assets.coingecko.com/coins/images/8903/thumb/POND_200x200.png?1622515451"
+  },
+  "POOL-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x34908ec7f451beaa88c46c60a394cf324f86f67e",
+    "symbol": "POOL-ETH SLP",
+    "decimals": 18
+  },
+  "POWR": {
+    "chain": "polygon",
+    "symbol": "POWR",
+    "decimals": 6,
+    "address": "0x0aab8dc887d34f00d50e19aee48371a941390d14",
+    "logoURI": "https://assets.coingecko.com/coins/images/1104/thumb/power-ledger.png?1547035082"
+  },
+  "PPDEX": {
+    "chain": "polygon",
+    "symbol": "PPDEX",
+    "decimals": 18,
+    "address": "0x127984b5e6d5c59f81dacc9f1c8b3bdc8494572e",
+    "logoURI": "https://etherscan.io/token/images/pepedex_32.png?v=2"
+  },
+  "PPOK": {
+    "chain": "polygon",
+    "address": "0x5202cfd2ec670e5e133cd272011f1e0e6fa8a459",
+    "symbol": "PPOK",
+    "decimals": 18
+  },
+  "PRO": {
+    "chain": "polygon",
+    "symbol": "PRO",
+    "decimals": 8,
+    "address": "0x82ffdfd1d8699e8886a4e77cefa9dd9710a7fefd",
+    "logoURI": "https://assets.coingecko.com/coins/images/869/thumb/propy.png?1548332100"
+  },
+  "PRQ": {
+    "chain": "polygon",
+    "symbol": "PRQ",
+    "decimals": 18,
+    "address": "0x9377eeb7419486fd4d485671d50baa4bf77c2222",
+    "logoURI": "https://assets.coingecko.com/coins/images/11973/thumb/DsNgK0O.png?1596590280"
+  },
+  "PUSD": {
+    "chain": "polygon",
+    "address": "0x9af3b7dc29d3c4b1a5731408b6a9656fa7ac3b72",
+    "symbol": "PUSD",
+    "decimals": 18
+  },
+  "PYQ": {
+    "chain": "polygon",
+    "address": "0x5a3064cbdccf428ae907796cf6ad5a664cd7f3d8",
+    "symbol": "PYQ",
+    "decimals": 18
+  },
+  "PYR": {
+    "chain": "polygon",
+    "address": "0x430ef9263e76dae63c84292c3409d61c598e9682",
+    "symbol": "PYR",
+    "decimals": 18
+  },
+  "PolyDoge": {
+    "chain": "polygon",
+    "address": "0x8a953cfe442c5e8855cc6c61b1293fa648bae472",
+    "symbol": "PolyDoge",
+    "decimals": 18
+  },
+  "QNT": {
+    "chain": "polygon",
+    "symbol": "QNT",
+    "decimals": 18,
+    "address": "0x36b77a184be8ee56f5e81c56727b20647a42e28e",
+    "logoURI": "https://assets.coingecko.com/coins/images/3370/thumb/5ZOu7brX_400x400.jpg?1612437252"
+  },
+  "QUICK": {
+    "chain": "polygon",
+    "address": "0x831753dd7087cac61ab5644b308642cc1c33dc13",
+    "symbol": "QUICK",
+    "decimals": 18
+  },
+  "QUICK(old)": {
+    "chain": "polygon",
+    "symbol": "QUICK(old)",
+    "decimals": 18,
+    "address": "0x831753dd7087cac61ab5644b308642cc1c33dc13",
+    "logoURI": "https://raw.githubusercontent.com/sameepsi/quickswap-interface/master/public/favicon.jpeg"
+  },
+  "RAD": {
+    "chain": "polygon",
+    "symbol": "RAD",
+    "decimals": 18,
+    "address": "0x2f81e176471cc57fdc76f7d332fb4511bf2bebdd",
+    "logoURI": "https://assets.coingecko.com/coins/images/14013/thumb/radicle.png?1614402918"
+  },
+  "RAI": {
+    "chain": "polygon",
+    "symbol": "RAI",
+    "decimals": 18,
+    "address": "0x00e5646f60ac6fb446f621d146b6e1886f002905",
+    "logoURI": "https://assets.coingecko.com/coins/images/14004/thumb/RAI-logo-coin.png?1613592334"
+  },
+  "RAIDER": {
+    "chain": "polygon",
+    "address": "0xcd7361ac3307d1c5a46b63086a90742ff44c63b3",
+    "symbol": "RAIDER",
+    "decimals": 18
+  },
+  "RARI": {
+    "chain": "polygon",
+    "symbol": "RARI",
+    "decimals": 18,
+    "address": "0x780053837ce2ceead2a90d9151aa21fc89ed49c2",
+    "logoURI": "https://assets.coingecko.com/coins/images/11845/thumb/Rari.png?1594946953"
+  },
+  "RBAL": {
+    "chain": "polygon",
+    "symbol": "RBAL",
+    "decimals": 18,
+    "address": "0x03247a4368a280bec8133300cd930a3a61d604f6",
+    "logoURI": "http://rebalancetoken.io/images/logo/RBAL_ERC20_small_001_256.png"
+  },
+  "RBC": {
+    "chain": "polygon",
+    "symbol": "RBC",
+    "decimals": 18,
+    "address": "0xc3cffdaf8f3fdf07da6d5e3a89b8723d5e385ff8",
+    "logoURI": "https://assets.coingecko.com/coins/images/12629/thumb/200x200.png?1607952509"
+  },
+  "RBLS": {
+    "chain": "polygon",
+    "address": "0xe26cda27c13f4f87cffc2f437c5900b27ebb5bbb",
+    "symbol": "RBLS",
+    "decimals": 8
+  },
+  "RBW": {
+    "chain": "polygon",
+    "address": "0x431cd3c9ac9fc73644bf68bf5691f4b83f9e104f",
+    "symbol": "RBW",
+    "decimals": 18
+  },
+  "REN": {
+    "chain": "polygon",
+    "symbol": "REN",
+    "decimals": 18,
+    "address": "0x19782d3dc4701ceeedcd90f0993f0a9126ed89d0",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x408e41876cCCDC0F92210600ef50372656052a38/logo.png"
+  },
+  "REPv2": {
+    "chain": "polygon",
+    "symbol": "REPv2",
+    "decimals": 18,
+    "address": "0x6563c1244820cfbd6ca8820fbdf0f2847363f733",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x221657776846890989a759BA2973e427DfF5C9bB/logo.png"
+  },
+  "REQ": {
+    "chain": "polygon",
+    "symbol": "REQ",
+    "decimals": 18,
+    "address": "0xadf2f2ed91755ea3f4bcc9107a494879f633ae7c",
+    "logoURI": "https://assets.coingecko.com/coins/images/1031/thumb/Request_icon_green.png?1643250951"
+  },
+  "RETRO": {
+    "chain": "polygon",
+    "address": "0xbfa35599c7aebb0dace9b5aa3ca5f2a79624d8eb",
+    "symbol": "RETRO",
+    "decimals": 18
+  },
+  "REVV": {
+    "chain": "polygon",
+    "symbol": "REVV",
+    "decimals": 18,
+    "address": "0x70c006878a5a50ed185ac4c87d837633923de296",
+    "logoURI": "https://assets.coingecko.com/coins/images/12373/thumb/REVV_TOKEN_Refined_2021_%281%29.png?1627652390"
+  },
+  "RGT": {
+    "chain": "polygon",
+    "symbol": "RGT",
+    "decimals": 18,
+    "address": "0x3b9db434f08003a89554cdb43b3e0b1f8734bde7",
+    "logoURI": "https://assets.coingecko.com/coins/images/12900/thumb/Rari_Logo_Transparent.png?1613978014"
+  },
+  "RIA": {
+    "chain": "polygon",
+    "address": "0xf9cea445c2ac1668f50caa2c2924f93606a4a37d",
+    "symbol": "RIA",
+    "decimals": 18
+  },
+  "RLC": {
+    "chain": "polygon",
+    "symbol": "RLC",
+    "decimals": 9,
+    "address": "0xbe662058e00849c3eef2ac9664f37fefdf2cdbfe",
+    "logoURI": "https://assets.coingecko.com/coins/images/646/thumb/pL1VuXm.png?1604543202"
+  },
+  "RLY": {
+    "chain": "polygon",
+    "symbol": "RLY",
+    "decimals": 18,
+    "address": "0x76b8d57e5ac6afac5d415a054453d1dd2c3c0094",
+    "logoURI": "https://assets.coingecko.com/coins/images/12843/thumb/image.png?1611212077"
+  },
+  "RNDR": {
+    "chain": "polygon",
+    "address": "0x61299774020da444af134c82fa83e3810b309991",
+    "symbol": "RNDR",
+    "decimals": 18
+  },
+  "ROLL": {
+    "chain": "polygon",
+    "address": "0xc68e83a305b0fad69e264a1769a0a070f190d2d6",
+    "symbol": "ROLL",
+    "decimals": 18
+  },
+  "ROOK": {
+    "chain": "polygon",
+    "symbol": "ROOK",
+    "decimals": 18,
+    "address": "0xf92501c8213da1d6c74a76372ccc720dc8818407",
+    "logoURI": "https://assets.coingecko.com/coins/images/13005/thumb/keeper_dao_logo.jpg?1604316506"
+  },
+  "ROUTE (PoS)": {
+    "chain": "polygon",
+    "address": "0x16eccfdbb4ee1a85a33f3a9b21175cd7ae753db4",
+    "symbol": "ROUTE (PoS)",
+    "decimals": 18
+  },
+  "ROYA": {
+    "chain": "polygon",
+    "address": "0x0bd820ad2d7ab7305b5c9538ba824c9b9beb0561",
+    "symbol": "ROYA",
+    "decimals": 18
+  },
+  "RVF": {
+    "chain": "polygon",
+    "address": "0x2ce13e4199443fdfff531abb30c9b6594446bbc7",
+    "symbol": "RVF",
+    "decimals": 18
+  },
+  "SAND": {
+    "chain": "polygon",
+    "address": "0xbbba073c31bf03b8acf7c28ef0738decf3695683",
+    "symbol": "SAND",
+    "decimals": 18
+  },
+  "SDT": {
+    "chain": "polygon",
+    "symbol": "SDT",
+    "decimals": 18,
+    "address": "0x361a5a4993493ce00f61c32d4ecca5512b82ce90",
+    "logoURI": "https://raw.githubusercontent.com/cometh-game/default-token-list/master/img/sdt.png"
+  },
+  "SENT": {
+    "chain": "polygon",
+    "symbol": "SENT",
+    "decimals": 8,
+    "address": "0x48e3883233461c2ef4cb3fcf419d6db07fb86cea",
+    "logoURI": "https://cdn-images-1.medium.com/max/1200/1*mK1oPGsQWh4Nfupg-e0S-g.png"
+  },
+  "SFI": {
+    "chain": "polygon",
+    "address": "0x35b937583f04a24963eb685f728a542240f28dd8",
+    "symbol": "SFI",
+    "decimals": 18
+  },
+  "SHIB": {
+    "chain": "polygon",
+    "symbol": "SHIB",
+    "decimals": 18,
+    "address": "0x6f8a06447ff6fcf75d803135a7de15ce88c1d4ec",
+    "logoURI": "https://assets.coingecko.com/coins/images/11939/thumb/shiba.png?1622619446"
+  },
+  "SLP": {
+    "chain": "polygon",
+    "symbol": "SLP",
+    "decimals": 0,
+    "address": "0x0c7304fbaf2a320a1c50c46fe03752722f729946",
+    "logoURI": "https://assets.coingecko.com/coins/images/10366/thumb/SLP.png?1578640057"
+  },
+  "SLi": {
+    "chain": "polygon",
+    "address": "0xabcc2d69431f0a4ce29cd13bf4a85981aadff2e3",
+    "symbol": "SLi",
+    "decimals": 8
+  },
+  "SMT": {
+    "chain": "polygon",
+    "address": "0xe631dabef60c37a37d70d3b4f812871df663226f",
+    "symbol": "SMT",
+    "decimals": 18
+  },
+  "SNX": {
+    "chain": "polygon",
+    "address": "0x50b728d8d964fd00c2d0aad81718b71311fef68a",
+    "symbol": "SNX",
+    "decimals": 18
+  },
+  "SNX-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x116ff0d1caa91a6b94276b3471f33dbeb52073e7",
+    "symbol": "SNX-ETH SLP",
+    "decimals": 18
+  },
+  "SOL": {
+    "chain": "polygon",
+    "address": "0x7dff46370e9ea5f0bad3c4e29711ad50062ea7a4",
+    "symbol": "SOL",
+    "decimals": 18
+  },
+  "SPADE": {
+    "chain": "polygon",
+    "address": "0xf5ea626334037a2cf0155d49ea6462fddc6eff19",
+    "symbol": "SPADE",
+    "decimals": 18
+  },
+  "SPELL": {
+    "chain": "polygon",
+    "symbol": "SPELL",
+    "decimals": 18,
+    "address": "0xcdb3c70cd25fd15307d84c4f9d37d5c043b33fb2",
+    "logoURI": "https://assets.coingecko.com/coins/images/15861/thumb/abracadabra-3.png?1622544862"
+  },
+  "SROCKET": {
+    "chain": "polygon",
+    "address": "0x94788309d420ad9f9f16d79fc13ab74de83f85f7",
+    "symbol": "SROCKET",
+    "decimals": 18
+  },
+  "STAR": {
+    "chain": "polygon",
+    "address": "0x8440178087c4fd348d43d0205f4574e0348a06f0",
+    "symbol": "STAR",
+    "decimals": 18
+  },
+  "STARD": {
+    "chain": "polygon",
+    "address": "0x8f1549718b9ad2632dc426ecc89305a83c1f03c8",
+    "symbol": "STARD",
+    "decimals": 18
+  },
+  "STARV2": {
+    "chain": "polygon",
+    "address": "0xd289c01528921b5f6d5b111a50a99456d495bf78",
+    "symbol": "STARV2",
+    "decimals": 18
+  },
+  "STG": {
+    "chain": "polygon",
+    "address": "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590",
+    "symbol": "STG",
+    "decimals": 18
+  },
+  "STORJ": {
+    "chain": "polygon",
+    "symbol": "STORJ",
+    "decimals": 8,
+    "address": "0xd72357daca2cf11a5f155b9ff7880e595a3f5792",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xB64ef51C888972c908CFacf59B47C1AfBC0Ab8aC/logo.png"
+  },
+  "STX": {
+    "chain": "polygon",
+    "symbol": "STX",
+    "decimals": 18,
+    "address": "0xb36e3391b22a970d31a9b620ae1a414c6c256d2a",
+    "logoURI": "https://assets.coingecko.com/coins/images/1230/thumb/stox-token.png?1547035256"
+  },
+  "SUKU": {
+    "chain": "polygon",
+    "symbol": "SUKU",
+    "decimals": 18,
+    "address": "0x60ea918fc64360269da4efbda11d8fc6514617c6",
+    "logoURI": "https://assets.coingecko.com/coins/images/11969/thumb/UmfW5S6f_400x400.jpg?1596602238"
+  },
+  "SUPER": {
+    "chain": "polygon",
+    "symbol": "SUPER",
+    "decimals": 18,
+    "address": "0xa1428174f516f527fafdd146b883bb4428682737"
+  },
+  "SUSHI": {
+    "chain": "polygon",
+    "address": "0x0b3f868e0be5597d5db7feb59e1cadbb0fdda50a",
+    "symbol": "SUSHI",
+    "decimals": 18
+  },
+  "SWAP": {
+    "chain": "polygon",
+    "symbol": "SWAP",
+    "decimals": 18,
+    "address": "0x3809dcdd5dde24b37abe64a5a339784c3323c44f",
+    "logoURI": "https://i.imgur.com/vZnU36G.png"
+  },
+  "SWCH": {
+    "chain": "polygon",
+    "address": "0x3ce1327867077b551ae9a6987bf10c9fd08edce1",
+    "symbol": "SWCH",
+    "decimals": 18
+  },
+  "SWG": {
+    "chain": "polygon",
+    "symbol": "SWG",
+    "decimals": 18,
+    "address": "0x043a3aa319b563ac25d4e342d32bffb51298db7b",
+    "logoURI": "https://etherscan.io/token/images/swirge_32.png"
+  },
+  "SX": { "chain": "polygon", "address": "0x840195888db4d6a99ed9f73fcd3b225bb3cb1a79", "symbol": "SX", "decimals": 18 },
+  "SXP": {
+    "chain": "polygon",
+    "symbol": "SXP",
+    "decimals": 18,
+    "address": "0x6abb753c1893194de4a83c6e8b4eadfc105fd5f5",
+    "logoURI": "https://assets.coingecko.com/coins/images/9368/thumb/swipe.png?1566792311"
+  },
+  "TABI": {
+    "chain": "polygon",
+    "address": "0xedf56706f41d5c4bf66cba9f86bceb1f9646360b",
+    "symbol": "TABI",
+    "decimals": 18
+  },
+  "TBAC": {
+    "chain": "polygon",
+    "address": "0x94f98d16c6ba5c2f649d6d7efb9767b14b0f325b",
+    "symbol": "TBAC",
+    "decimals": 8
+  },
+  "TETU": {
+    "chain": "polygon",
+    "address": "0x255707b70bf90aa112006e1b07b9aea6de021424",
+    "symbol": "TETU",
+    "decimals": 18
+  },
+  "THREE": {
+    "chain": "polygon",
+    "address": "0x9b034262e0095210ab9ddec60199741a8a1fbfe7",
+    "symbol": "THREE",
+    "decimals": 18
+  },
+  "TITAN": {
+    "chain": "polygon",
+    "address": "0xaaa5b9e6c589642f98a1cda99b9d024b8407285a",
+    "symbol": "TITAN",
+    "decimals": 18
+  },
+  "TOKE": {
+    "chain": "polygon",
+    "symbol": "TOKE",
+    "decimals": 18,
+    "address": "0xe1708abde4847b4929b70547e5197f1ba1db2250",
+    "logoURI": "https://assets.coingecko.com/coins/images/17495/thumb/tokemak-avatar-200px-black.png?1628131614"
+  },
+  "TOYC": {
+    "chain": "polygon",
+    "address": "0x17cae13d5743dd92b56e6d5fc4a51d2b89fc31d1",
+    "symbol": "TOYC",
+    "decimals": 6
+  },
+  "TRA": {
+    "chain": "polygon",
+    "address": "0x6fc515ace1daf8fb5d01635bce5d361ba4e44ab1",
+    "symbol": "TRA",
+    "decimals": 18
+  },
+  "TRAC": {
+    "chain": "polygon",
+    "symbol": "TRAC",
+    "decimals": 18,
+    "address": "0xa7b98d63a137bf402b4570799ac4cad0bb1c4b1c",
+    "logoURI": "https://assets.coingecko.com/coins/images/1877/thumb/TRAC.jpg?1635134367"
+  },
+  "TRB": {
+    "chain": "polygon",
+    "symbol": "TRB",
+    "decimals": 18,
+    "address": "0xe3322702bedaaed36cddab233360b939775ae5f1",
+    "logoURI": "https://assets.coingecko.com/coins/images/9644/thumb/Blk_icon_current.png?1584980686"
+  },
+  "TRIBE": {
+    "chain": "polygon",
+    "symbol": "TRIBE",
+    "decimals": 18,
+    "address": "0x8676815789211e799a6dc86d02748adf9cf86836",
+    "logoURI": "https://assets.coingecko.com/coins/images/14575/thumb/tribe.PNG?1617487954"
+  },
+  "TRU": {
+    "chain": "polygon",
+    "symbol": "TRU",
+    "decimals": 8,
+    "address": "0x5b77bca482bd3e7958b1103d123888efccdaf803",
+    "logoURI": "https://assets.coingecko.com/coins/images/13180/thumb/truefi_glyph_color.png?1617610941"
+  },
+  "TUSDam3CRV3CRV-f": {
+    "chain": "polygon",
+    "address": "0xadf577b69eeac9df325536cf1af106372f2da263",
+    "symbol": "TUSDam3CRV3CRV-f",
+    "decimals": 18
+  },
+  "TVK": {
+    "chain": "polygon",
+    "symbol": "TVK",
+    "decimals": 18,
+    "address": "0x5667dcc0ab74d1b1355c3b2061893399331b57e2",
+    "logoURI": "https://assets.coingecko.com/coins/images/13330/thumb/virtua_original.png?1656043619"
+  },
+  "TXAG": {
+    "chain": "polygon",
+    "address": "0x57fcbd6503c8be3b1abad191bc7799ef414a5b31",
+    "symbol": "TXAG",
+    "decimals": 18
+  },
+  "TXAU": {
+    "chain": "polygon",
+    "address": "0xa6da8c8999c094432c77e7d318951d34019af24b",
+    "symbol": "TXAU",
+    "decimals": 18
+  },
+  "UAHT": {
+    "chain": "polygon",
+    "address": "0x0d9447e16072b636b4a1e8f2b8c644e58f3eaa6a",
+    "symbol": "UAHT",
+    "decimals": 2
+  },
+  "UBT": {
+    "chain": "polygon",
+    "address": "0x7fbc10850cae055b27039af31bd258430e714c62",
+    "symbol": "UBT",
+    "decimals": 8
+  },
+  "ULT": {
+    "chain": "polygon",
+    "address": "0xf0059cc2b3e980065a906940fbce5f9db7ae40a7",
+    "symbol": "ULT",
+    "decimals": 18
+  },
+  "UMA": {
+    "chain": "polygon",
+    "symbol": "UMA",
+    "decimals": 18,
+    "address": "0x3066818837c5e6ed6601bd5a91b0762877a6b731",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828/logo.png"
+  },
+  "UMA-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x6be10c5c7178af8c49997d07d6a5444c15e58170",
+    "symbol": "UMA-ETH SLP",
+    "decimals": 18
+  },
+  "UNI": {
+    "chain": "polygon",
+    "address": "0xb33eaad8d922b1083446dc23f610c2567fb5180f",
+    "symbol": "UNI",
+    "decimals": 18
+  },
+  "UNIM": {
+    "chain": "polygon",
+    "address": "0x64060ab139feaae7f06ca4e63189d86adeb51691",
+    "symbol": "UNIM",
+    "decimals": 18
+  },
+  "UPO": {
+    "chain": "polygon",
+    "address": "0x9dbfc1cbf7a1e711503a29b4b5f9130ebeccac96",
+    "symbol": "UPO",
+    "decimals": 18
+  },
+  "USD+": {
+    "chain": "polygon",
+    "address": "0x236eec6359fb44cce8f97e99387aa7f8cd5cde1f",
+    "symbol": "USD+",
+    "decimals": 6
+  },
+  "USD+-USDC SSLP": {
+    "chain": "polygon",
+    "address": "0x571102a88928d74c049849af094a289c27fb794e",
+    "symbol": "USD+-USDC SSLP",
+    "decimals": 18
+  },
+  "USDC": {
+    "chain": "polygon",
+    "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+    "symbol": "USDC",
+    "decimals": 6
+  },
+  "USDC-ADDY SLP": {
+    "chain": "polygon",
+    "address": "0x5fcb390b4422f4ff7940c23618a62bf5f69658a8",
+    "symbol": "USDC-ADDY SLP",
+    "decimals": 18
+  },
+  "USDC-BCT SLP": {
+    "chain": "polygon",
+    "address": "0x1e67124681b402064cd0abe8ed1b5c79d2e02f64",
+    "symbol": "USDC-BCT SLP",
+    "decimals": 18
+  },
+  "USDC-BIFI SLP": {
+    "chain": "polygon",
+    "address": "0x180237bd326d5245d0898336f54b3c8012c5c62f",
+    "symbol": "USDC-BIFI SLP",
+    "decimals": 18
+  },
+  "USDC-DAI SLP": {
+    "chain": "polygon",
+    "address": "0xcd578f016888b57f1b1e3f887f392f0159e26747",
+    "symbol": "USDC-DAI SLP",
+    "decimals": 18
+  },
+  "USDC-DAI SSLP": {
+    "chain": "polygon",
+    "address": "0x4440c62021c5a0d6fec1a2143914be0c5a0a00ea",
+    "symbol": "USDC-DAI SSLP",
+    "decimals": 18
+  },
+  "USDC-ETH SCPLP": {
+    "chain": "polygon",
+    "address": "0x4d3222ba7a87ce007903b0318037ce0f5ca9f15d",
+    "symbol": "USDC-ETH SCPLP",
+    "decimals": 18
+  },
+  "USDC-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x34965ba0ac2451a34a0471f04cca3f990b8dea27",
+    "symbol": "USDC-ETH SLP",
+    "decimals": 18
+  },
+  "USDC-INSUR SLP": {
+    "chain": "polygon",
+    "address": "0x6f21996181915d688c787a1ec7c987e2a31b6829",
+    "symbol": "USDC-INSUR SLP",
+    "decimals": 18
+  },
+  "USDC-NCT SLP": {
+    "chain": "polygon",
+    "address": "0xdb995f975f1bfc3b2157495c47e4efb31196b2ca",
+    "symbol": "USDC-NCT SLP",
+    "decimals": 18
+  },
+  "USDC-TUSD SLP": {
+    "chain": "polygon",
+    "address": "0x4ab66a7138f50db9b7adaf8ce8afb3f638b22f7f",
+    "symbol": "USDC-TUSD SLP",
+    "decimals": 18
+  },
+  "USDC-USDT SLP": {
+    "chain": "polygon",
+    "address": "0x4b1f1e2435a9c96f7330faea190ef6a7c8d70001",
+    "symbol": "USDC-USDT SLP",
+    "decimals": 18
+  },
+  "USDC-USDT SSLP": {
+    "chain": "polygon",
+    "address": "0x231ba46173b75e4d7cea6dce095a6c1c3e876270",
+    "symbol": "USDC-USDT SSLP",
+    "decimals": 18
+  },
+  "USDC-oAUTO SLP": {
+    "chain": "polygon",
+    "address": "0xd8d51ea2edca2c2ea15a053a5730f559d79a1570",
+    "symbol": "USDC-oAUTO SLP",
+    "decimals": 18
+  },
+  "USDC.e": {
+    "chain": "polygon",
+    "symbol": "USDC.e",
+    "decimals": 6,
+    "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+  },
+  "USDR": {
+    "chain": "polygon",
+    "address": "0x40379a439d4f6795b6fc9aa5687db461677a2dba",
+    "symbol": "USDR",
+    "decimals": 9
+  },
+  "USDR3CRV-f": {
+    "chain": "polygon",
+    "address": "0xa138341185a9d0429b0021a11fb717b225e13e1f",
+    "symbol": "USDR3CRV-f",
+    "decimals": 18
+  },
+  "USDT": {
+    "chain": "polygon",
+    "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+    "symbol": "USDT",
+    "decimals": 6
+  },
+  "USDT-MSU SLP": {
+    "chain": "polygon",
+    "address": "0xd10bb4ed281a84492343573885168027cc625bf7",
+    "symbol": "USDT-MSU SLP",
+    "decimals": 18
+  },
+  "VCHF": {
+    "chain": "polygon",
+    "address": "0xcdb3867935247049e87c38ea270edd305d84c9ae",
+    "symbol": "VCHF",
+    "decimals": 18
+  },
+  "VEUR": {
+    "chain": "polygon",
+    "address": "0xe4095d9372e68d108225c306a4491cacfb33b097",
+    "symbol": "VEUR",
+    "decimals": 18
+  },
+  "VIS": {
+    "chain": "polygon",
+    "address": "0xcc1b9517460d8ae86fe576f614d091fca65a28fc",
+    "symbol": "VIS",
+    "decimals": 18
+  },
+  "VISION": {
+    "chain": "polygon",
+    "symbol": "VISION",
+    "decimals": 18,
+    "address": "0x034b2090b579228482520c589dbd397c53fc51cc",
+    "logoURI": "https://s3-us-west-2.amazonaws.com/acf-uploads/apyvisionlogo200circle.png"
+  },
+  "VNXAU": {
+    "chain": "polygon",
+    "address": "0xc8bb8eda94931ca2f20ef43ea7dbd58e68400400",
+    "symbol": "VNXAU",
+    "decimals": 18
+  },
+  "VOXEL": {
+    "chain": "polygon",
+    "symbol": "VOXEL",
+    "decimals": 18,
+    "address": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
+    "logoURI": "https://assets.coingecko.com/coins/images/21260/large/voxies.png"
+  },
+  "W$C": {
+    "chain": "polygon",
+    "address": "0x77a6f2e9a9e44fd5d5c3f9be9e52831fc1c3c0a0",
+    "symbol": "W$C",
+    "decimals": 18
+  },
+  "WBTC": {
+    "chain": "polygon",
+    "address": "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6",
+    "symbol": "WBTC",
+    "decimals": 8
+  },
+  "WBTC-ETH SLP": {
+    "chain": "polygon",
+    "address": "0xe62ec2e799305e0d367b0cc3ee2cda135bf89816",
+    "symbol": "WBTC-ETH SLP",
+    "decimals": 18
+  },
+  "WBTC-ibBTC SLP": {
+    "chain": "polygon",
+    "address": "0x8f8e95ff4b4c5e354ccb005c6b0278492d7b5907",
+    "symbol": "WBTC-ibBTC SLP",
+    "decimals": 18
+  },
+  "WCFG": {
+    "chain": "polygon",
+    "symbol": "WCFG",
+    "decimals": 18,
+    "address": "0x90bb6feb70a9a43cfaaa615f856ba309fd759a90",
+    "logoURI": "https://assets.coingecko.com/coins/images/17106/thumb/WCFG.jpg?1626266462"
+  },
+  "WETH": {
+    "chain": "polygon",
+    "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+    "symbol": "WETH",
+    "decimals": 18
+  },
+  "WISE": {
+    "chain": "polygon",
+    "symbol": "WISE",
+    "decimals": 18,
+    "address": "0xb77e62709e39ad1cbeebe77cf493745aec0f453a",
+    "logoURI": "https://etherscan.io/token/images/wisetoken_32.png"
+  },
+  "WMATIC": {
+    "chain": "polygon",
+    "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+    "symbol": "WMATIC",
+    "decimals": 18
+  },
+  "WMATIC-$DG SLP": {
+    "chain": "polygon",
+    "address": "0xfb659315e36ae39917014da60f362b600e8cd0ca",
+    "symbol": "WMATIC-$DG SLP",
+    "decimals": 18
+  },
+  "WMATIC-COMBO SLP": {
+    "chain": "polygon",
+    "address": "0xcb60e17ea720ef331446e434be5de5f35fae8bc8",
+    "symbol": "WMATIC-COMBO SLP",
+    "decimals": 18
+  },
+  "WMATIC-ETH SLP": {
+    "chain": "polygon",
+    "address": "0xc4e595acdd7d12fec385e5da5d43160e8a0bac0e",
+    "symbol": "WMATIC-ETH SLP",
+    "decimals": 18
+  },
+  "WMATIC-GHST SLP": {
+    "chain": "polygon",
+    "address": "0xf69e93771f11aecd8e554aa165c3fe7fd811530c",
+    "symbol": "WMATIC-GHST SLP",
+    "decimals": 18
+  },
+  "WMATIC-IMRTL SLP": {
+    "chain": "polygon",
+    "address": "0xe7fed735afffba5365e80cad6c2ca157b2678b41",
+    "symbol": "WMATIC-IMRTL SLP",
+    "decimals": 18
+  },
+  "WMATIC-PIXEL SLP": {
+    "chain": "polygon",
+    "address": "0xc37899901ffdef1b6baf95fd4081d82942a0a85a",
+    "symbol": "WMATIC-PIXEL SLP",
+    "decimals": 18
+  },
+  "WMATIC-USDC SCPLP": {
+    "chain": "polygon",
+    "address": "0x846fea3d94976ef9862040d9fba9c391aa75a44b",
+    "symbol": "WMATIC-USDC SCPLP",
+    "decimals": 18
+  },
+  "WMATIC-WARU SCPLP": {
+    "chain": "polygon",
+    "address": "0x96f0ececb9d5b2cc0238712a6a987a5102d3b0f7",
+    "symbol": "WMATIC-WARU SCPLP",
+    "decimals": 18
+  },
+  "WMATIC-WOOFY SLP": {
+    "chain": "polygon",
+    "address": "0x211f8e61113edaf00cf37a804b0ba721875ef560",
+    "symbol": "WMATIC-WOOFY SLP",
+    "decimals": 18
+  },
+  "WMATICTRI-f": {
+    "chain": "polygon",
+    "address": "0xb0658482b405496c4ee9453cd0a463b134aef9d0",
+    "symbol": "WMATICTRI-f",
+    "decimals": 18
+  },
+  "WOLF": {
+    "chain": "polygon",
+    "symbol": "WOLF",
+    "decimals": 9,
+    "address": "0x8f18dc399594b451eda8c5da02d0563c0b2d0f16",
+    "logoURI": "https://i.imgur.com/UIjlQpC.png"
+  },
+  "WOO": {
+    "chain": "polygon",
+    "symbol": "WOO",
+    "decimals": 18,
+    "address": "0x1b815d120b3ef02039ee11dc2d33de7aa4a8c603",
+    "logoURI": "https://assets.coingecko.com/coins/images/12921/thumb/w2UiemF__400x400.jpg?1603670367"
+  },
+  "WRX": {
+    "chain": "polygon",
+    "symbol": "WRX",
+    "decimals": 8,
+    "address": "0x72d6066f486bd0052eefb9114b66ae40e0a6031a",
+    "logoURI": "https://etherscan.io/token/images/binance-wrx_32.png"
+  },
+  "WUSD": {
+    "chain": "polygon",
+    "address": "0xbe48e08db415cc17b9a2f12cd943558a2d5a7163",
+    "symbol": "WUSD",
+    "decimals": 9
+  },
+  "XMT": {
+    "chain": "polygon",
+    "address": "0xadbe0eac80f955363f4ff47b0f70189093908c04",
+    "symbol": "XMT",
+    "decimals": 18
+  },
+  "XSGD": {
+    "chain": "polygon",
+    "address": "0x769434dca303597c8fc4997bf3dab233e961eda2",
+    "symbol": "XSGD",
+    "decimals": 6
+  },
+  "XYO": {
+    "chain": "polygon",
+    "symbol": "XYO",
+    "decimals": 18,
+    "address": "0xd2507e7b5794179380673870d88b22f94da6abe0",
+    "logoURI": "https://assets.coingecko.com/coins/images/4519/thumb/XYO_Network-logo.png?1547039819"
+  },
+  "YELD": {
+    "chain": "polygon",
+    "address": "0xd0f3121a190d85de0ab6131f2bcecdbfcfb38891",
+    "symbol": "YELD",
+    "decimals": 18
+  },
+  "YFI": {
+    "chain": "polygon",
+    "symbol": "YFI",
+    "decimals": 18,
+    "address": "0xda537104d6a5edd53c6fbba9a898708e465260b6",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e/logo.png"
+  },
+  "YFII": {
+    "chain": "polygon",
+    "symbol": "YFII",
+    "decimals": 18,
+    "address": "0xb8cb8a7f4c2885c03e57e973c74827909fdc2032",
+    "logoURI": "https://assets.coingecko.com/coins/images/11902/thumb/YFII-logo.78631676.png?1598677348"
+  },
+  "YGG": {
+    "chain": "polygon",
+    "symbol": "YGG",
+    "decimals": 18,
+    "address": "0x82617aa52dddf5ed9bb7b370ed777b3182a30fd1",
+    "logoURI": "https://assets.coingecko.com/coins/images/17358/thumb/le1nzlO6_400x400.jpg?1632465691"
+  },
+  "ZED": {
+    "chain": "polygon",
+    "address": "0x5ec03c1f7fa7ff05ec476d19e34a22eddb48acdc",
+    "symbol": "ZED",
+    "decimals": 18
+  },
+  "ZED-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x374552804f7ca26c307c8d31f4cc0d9215c87f46",
+    "symbol": "ZED-ETH SLP",
+    "decimals": 18
+  },
+  "ZRX": {
+    "chain": "polygon",
+    "symbol": "ZRX",
+    "decimals": 18,
+    "address": "0x5559edb74751a0ede9dea4dc23aee72cca6be3d5",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xE41d2489571d322189246DaFA5ebDe1F4699F498/logo.png"
+  },
+  "ZUT": {
+    "chain": "polygon",
+    "symbol": "ZUT",
+    "decimals": 18,
+    "address": "0xe86e8beb7340659dddce61727e500e3a5ad75a90",
+    "logoURI": "https://s2.gifyu.com/images/zutlogo.jpg"
+  },
+  "ZUZ": {
+    "chain": "polygon",
+    "symbol": "ZUZ",
+    "decimals": 18,
+    "address": "0x232eab56c4fb3f84c6fb0a50c087c74b7b43c6ad",
+    "logoURI": "https://etherscan.io/token/images/zuzprotocol_32.png"
+  },
+  "aCRV-f": {
+    "chain": "polygon",
+    "address": "0xbed1d474dda97edceb7b9af13be4cbf1bb98a2d3",
+    "symbol": "aCRV-f",
+    "decimals": 18
+  },
+  "aMATICb-f": {
+    "chain": "polygon",
+    "address": "0x81c86081d533f280a8daae17f672fb84b6ed65e3",
+    "symbol": "aMATICb-f",
+    "decimals": 18
+  },
+  "aPolAAVE": {
+    "chain": "polygon",
+    "symbol": "aPolAAVE",
+    "decimals": 18,
+    "address": "0xf329e36c7bf6e5e86ce2150875a84ce77f477375"
+  },
+  "aPolAGEUR": {
+    "chain": "polygon",
+    "symbol": "aPolAGEUR",
+    "decimals": 18,
+    "address": "0x8437d7c167dfb82ed4cb79cd44b7a32a1dd95c77"
+  },
+  "aPolBAL": {
+    "chain": "polygon",
+    "symbol": "aPolBAL",
+    "decimals": 18,
+    "address": "0x8ffdf2de812095b1d19cb146e4c004587c0a0692"
+  },
+  "aPolCRV": {
+    "chain": "polygon",
+    "symbol": "aPolCRV",
+    "decimals": 18,
+    "address": "0x513c7e3a9c69ca3e22550ef58ac1c0088e918fff"
+  },
+  "aPolDAI": {
+    "chain": "polygon",
+    "symbol": "aPolDAI",
+    "decimals": 18,
+    "address": "0x82e64f49ed5ec1bc6e43dad4fc8af9bb3a2312ee"
+  },
+  "aPolDPI": {
+    "chain": "polygon",
+    "symbol": "aPolDPI",
+    "decimals": 18,
+    "address": "0x724dc807b04555b71ed48a6896b6f41593b8c637"
+  },
+  "aPolEURS": {
+    "chain": "polygon",
+    "symbol": "aPolEURS",
+    "decimals": 2,
+    "address": "0x38d693ce1df5aadf7bc62595a37d667ad57922e5"
+  },
+  "aPolGHST": {
+    "chain": "polygon",
+    "symbol": "aPolGHST",
+    "decimals": 18,
+    "address": "0x8eb270e296023e9d92081fdf967ddd7878724424"
+  },
+  "aPolJEUR": {
+    "chain": "polygon",
+    "symbol": "aPolJEUR",
+    "decimals": 18,
+    "address": "0x6533afac2e7bccb20dca161449a13a32d391fb00"
+  },
+  "aPolLINK": {
+    "chain": "polygon",
+    "symbol": "aPolLINK",
+    "decimals": 18,
+    "address": "0x191c10aa4af7c30e871e70c95db0e4eb77237530"
+  },
+  "aPolSUSHI": {
+    "chain": "polygon",
+    "symbol": "aPolSUSHI",
+    "decimals": 18,
+    "address": "0xc45a479877e1e9dfe9fcd4056c699575a1045daa"
+  },
+  "aPolUSDC": {
+    "chain": "polygon",
+    "symbol": "aPolUSDC",
+    "decimals": 6,
+    "address": "0x625e7708f30ca75bfd92586e17077590c60eb4cd"
+  },
+  "aPolUSDT": {
+    "chain": "polygon",
+    "symbol": "aPolUSDT",
+    "decimals": 6,
+    "address": "0x6ab707aca953edaefbc4fd23ba73294241490620"
+  },
+  "aPolWBTC": {
+    "chain": "polygon",
+    "symbol": "aPolWBTC",
+    "decimals": 8,
+    "address": "0x078f358208685046a11c85e8ad32895ded33a249"
+  },
+  "aPolWETH": {
+    "chain": "polygon",
+    "symbol": "aPolWETH",
+    "decimals": 18,
+    "address": "0xe50fa9b3c56ffb159cb0fca61f5c9d750e8128c8"
+  },
+  "aPolWMATIC": {
+    "chain": "polygon",
+    "symbol": "aPolWMATIC",
+    "decimals": 18,
+    "address": "0x6d80113e533a2c0fe82eabd35f1875dcea89ea97"
+  },
+  "agEUR": {
+    "chain": "polygon",
+    "address": "0xe0b52e49357fd4daf2c15e02058dce6bc0057db4",
+    "symbol": "agEUR",
+    "decimals": 18
+  },
+  "am3CRV": {
+    "chain": "polygon",
+    "address": "0xe7a24ef0c5e95ffb0f6684b813a78f2a3ad7d171",
+    "symbol": "am3CRV",
+    "decimals": 18
+  },
+  "amAAVE": {
+    "chain": "polygon",
+    "symbol": "amAAVE",
+    "decimals": 18,
+    "address": "0x1d2a0e5ec8e5bbdca5cb219e649b565d8e5c3360"
+  },
+  "amDAI": {
+    "chain": "polygon",
+    "symbol": "amDAI",
+    "decimals": 18,
+    "address": "0x27f8d03b3a2196956ed754badc28d73be8830a6e"
+  },
+  "amUSDC": {
+    "chain": "polygon",
+    "symbol": "amUSDC",
+    "decimals": 6,
+    "address": "0x1a13f4ca1d028320a707d99520abfefca3998b7f"
+  },
+  "amUSDT": {
+    "chain": "polygon",
+    "symbol": "amUSDT",
+    "decimals": 6,
+    "address": "0x60d55f02a771d515e077c9c2403a1ef324885cec"
+  },
+  "amWBTC": {
+    "chain": "polygon",
+    "symbol": "amWBTC",
+    "decimals": 8,
+    "address": "0x5c2ed810328349100a66b82b78a1791b101c9d61"
+  },
+  "amWETH": {
+    "chain": "polygon",
+    "symbol": "amWETH",
+    "decimals": 18,
+    "address": "0x28424507fefb6f7f8e9d3860f56504e4e5f5f390"
+  },
+  "amWMATIC": {
+    "chain": "polygon",
+    "symbol": "amWMATIC",
+    "decimals": 18,
+    "address": "0x8df3aad3a84da6b69a4da8aec3ea40d9091b2ac4"
+  },
+  "axl-wstETH": {
+    "chain": "polygon",
+    "address": "0xd7bb095a60d7666d4a6f236423b47ddd6ae6cfa7",
+    "symbol": "axl-wstETH",
+    "decimals": 18
+  },
+  "axlKNC": {
+    "chain": "polygon",
+    "address": "0x46371c90fcce4d7367a61cb43ea7922406bc707a",
+    "symbol": "axlKNC",
+    "decimals": 18
+  },
+  "axlUSDC": {
+    "chain": "polygon",
+    "address": "0x750e4c4984a9e0f12978ea6742bc1c5d248f40ed",
+    "symbol": "axlUSDC",
+    "decimals": 6
+  },
+  "axlWMAI": {
+    "chain": "polygon",
+    "address": "0x08ad99fb3f9f262853b54613249b4064901bd358",
+    "symbol": "axlWMAI",
+    "decimals": 18
+  },
+  "bBADGER": {
+    "chain": "polygon",
+    "symbol": "bBADGER",
+    "decimals": 18,
+    "address": "0x2628d301b161db70e3dbbac88d9d900ca426ff02",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x3472A5A71965499acd81997a54BBA8D852C6E53d/logo.png"
+  },
+  "bDIGG": {
+    "chain": "polygon",
+    "symbol": "bDIGG",
+    "decimals": 18,
+    "address": "0xfdde616084427f0a231d0664a985e1f820e34693",
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x798D1bE841a82a273720CE31c822C61a67a601C3/logo.png"
+  },
+  "btcCRV": {
+    "chain": "polygon",
+    "address": "0xf8a57c1d3b9629b77b6726a042ca48990a84fb49",
+    "symbol": "btcCRV",
+    "decimals": 18
+  },
+  "crvEURSUSD": {
+    "chain": "polygon",
+    "address": "0x7bd9757fbac089d60daff1fa6bfe3bc99b0f5735",
+    "symbol": "crvEURSUSD",
+    "decimals": 18
+  },
+  "crvEURTUSD": {
+    "chain": "polygon",
+    "address": "0x600743b1d8a96438bd46836fd34977a00293f6aa",
+    "symbol": "crvEURTUSD",
+    "decimals": 18
+  },
+  "crvUSDBTCETH": {
+    "chain": "polygon",
+    "address": "0xdad97f7713ae9437fa9249920ec8507e5fbb23d3",
+    "symbol": "crvUSDBTCETH",
+    "decimals": 18
+  },
+  "dBSGG": {
+    "chain": "polygon",
+    "address": "0x5cc8d49984834314f54211b1d872318cf766d466",
+    "symbol": "dBSGG",
+    "decimals": 6
+  },
+  "dTOP-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x25e8bbc103842f0dad2465f4e04cb8d44fb787bc",
+    "symbol": "dTOP-ETH SLP",
+    "decimals": 18
+  },
+  "eDAI": {
+    "chain": "polygon",
+    "symbol": "eDAI",
+    "decimals": 8,
+    "address": "0xa1c09c8f4f5d03fcc27b456475d53d988e98d7c5",
+    "logoURI": "https://raw.githubusercontent.com/sameepsi/quickswap-interface/master/assets/easyfi-token.png"
+  },
+  "eUSDC": {
+    "chain": "polygon",
+    "symbol": "eUSDC",
+    "decimals": 8,
+    "address": "0x4ebde54ba404be158262ede801744b92b9878c61",
+    "logoURI": "https://raw.githubusercontent.com/sameepsi/quickswap-interface/master/assets/easyfi-token.png"
+  },
+  "eUSDT": {
+    "chain": "polygon",
+    "symbol": "eUSDT",
+    "decimals": 8,
+    "address": "0xfc39742fe9420a7af23757fc7e78d1c3ae4a9474",
+    "logoURI": "https://raw.githubusercontent.com/sameepsi/quickswap-interface/master/assets/easyfi-token.png"
+  },
+  "fxT": {
+    "chain": "polygon",
+    "address": "0x1d0ab64ed0f1ee4a886462146d26effc6dd00d0b",
+    "symbol": "fxT",
+    "decimals": 18
+  },
+  "gOHM": {
+    "chain": "polygon",
+    "address": "0xd8ca34fd379d9ca3c6ee3b3905678320f5b45195",
+    "symbol": "gOHM",
+    "decimals": 18
+  },
+  "iFARM": {
+    "chain": "polygon",
+    "symbol": "iFARM",
+    "decimals": 18,
+    "address": "0xab0b2ddb9c7e440fac8e140a89c0dbcbf2d7bbff",
+    "logoURI": "https://raw.githubusercontent.com/harvestfi/assets/main/farm-logo.png"
+  },
+  "ibBTC": {
+    "chain": "polygon",
+    "address": "0x4eac4c4e9050464067d673102f8e24b2fcceb350",
+    "symbol": "ibBTC",
+    "decimals": 18
+  },
+  "jAUD": {
+    "chain": "polygon",
+    "symbol": "jAUD",
+    "decimals": 18,
+    "address": "0xcb7f1ef7246d1497b985f7fc45a1a31f04346133"
+  },
+  "jBRL": {
+    "chain": "polygon",
+    "symbol": "jBRL",
+    "decimals": 18,
+    "address": "0xf2f77fe7b8e66571e0fca7104c4d670bf1c8d722"
+  },
+  "jCAD": {
+    "chain": "polygon",
+    "symbol": "jCAD",
+    "decimals": 18,
+    "address": "0x8ca194a3b22077359b5732de53373d4afc11dee3"
+  },
+  "jCHF": {
+    "chain": "polygon",
+    "symbol": "jCHF",
+    "decimals": 18,
+    "address": "0xbd1463f02f61676d53fd183c2b19282bff93d099"
+  },
+  "jCNY": {
+    "chain": "polygon",
+    "symbol": "jCNY",
+    "decimals": 18,
+    "address": "0x84526c812d8f6c4fd6c1a5b68713aff50733e772"
+  },
+  "jCOP": {
+    "chain": "polygon",
+    "symbol": "jCOP",
+    "decimals": 18,
+    "address": "0xe6d222caaed5f5dd73a9713ac91c95782e80acbf"
+  },
+  "jEUR": {
+    "chain": "polygon",
+    "symbol": "jEUR",
+    "decimals": 18,
+    "address": "0x4e3decbb3645551b8a19f0ea1678079fcb33fb4c"
+  },
+  "jGBP": {
+    "chain": "polygon",
+    "symbol": "jGBP",
+    "decimals": 18,
+    "address": "0x767058f11800fba6a682e73a6e79ec5eb74fac8c"
+  },
+  "jJPY": {
+    "chain": "polygon",
+    "symbol": "jJPY",
+    "decimals": 18,
+    "address": "0x8343091f2499fd4b6174a46d067a920a3b851ff9"
+  },
+  "jKRW": {
+    "chain": "polygon",
+    "symbol": "jKRW",
+    "decimals": 18,
+    "address": "0xa22f6bc96f13bcc84df36109c973d3c0505a067e"
+  },
+  "jMXN": {
+    "chain": "polygon",
+    "symbol": "jMXN",
+    "decimals": 18,
+    "address": "0xbd1fe73e1f12bd2bc237de9b626f056f21f86427"
+  },
+  "jNGN": {
+    "chain": "polygon",
+    "symbol": "jNGN",
+    "decimals": 18,
+    "address": "0x182c76e977161f703bb8f111047df6c43cfacc56"
+  },
+  "jNZD": {
+    "chain": "polygon",
+    "symbol": "jNZD",
+    "decimals": 18,
+    "address": "0x6b526daf03b4c47af2bcc5860b12151823ff70e0"
+  },
+  "jPHP": {
+    "chain": "polygon",
+    "symbol": "jPHP",
+    "decimals": 18,
+    "address": "0x486880fb16408b47f928f472f57bec55ac6089d1"
+  },
+  "jPLN": {
+    "chain": "polygon",
+    "symbol": "jPLN",
+    "decimals": 18,
+    "address": "0x08e6d1f0c4877ef2993ad733fc6f1d022d0e9dbf"
+  },
+  "jSEK": {
+    "chain": "polygon",
+    "symbol": "jSEK",
+    "decimals": 18,
+    "address": "0x197e5d6ccff265ac3e303a34db360ee1429f5d1a"
+  },
+  "jSGD": {
+    "chain": "polygon",
+    "symbol": "jSGD",
+    "decimals": 18,
+    "address": "0xa926db7a4cc0cb1736d5ac60495ca8eb7214b503"
+  },
+  "mDEF": {
+    "chain": "polygon",
+    "symbol": "mDEF",
+    "decimals": 9,
+    "address": "0x82b6205002ecd05e97642d38d61e2cfeac0e18ce",
+    "logoURI": "https://etherscan.io/token/images/deflect_32.png?=v1"
+  },
+  "mOCEAN": {
+    "chain": "polygon",
+    "symbol": "mOCEAN",
+    "decimals": 18,
+    "address": "0x282d8efce846a88b159800bd4130ad77443fa1a1",
+    "logoURI": "https://oceanprotocol.com/static/4ad704a150d436a1f32d495413fc47cd/favicon-white.png"
+  },
+  "mRBAL": {
+    "chain": "polygon",
+    "symbol": "mRBAL",
+    "decimals": 18,
+    "address": "0x66768ad00746ac4d68ded9f64886d55d5243f5ec",
+    "logoURI": "https://rebalancetoken.io/images/logo/logo.png"
+  },
+  "mUSD": {
+    "chain": "polygon",
+    "symbol": "mUSD",
+    "decimals": 18,
+    "address": "0xe840b73e5287865eec17d250bfb1536704b43b21",
+    "logoURI": "https://cdn.paraswap.io/token/mUSD.png"
+  },
+  "mXEN": {
+    "chain": "polygon",
+    "address": "0x2ab0e9e4ee70fff1fb9d67031e44f6410170d00e",
+    "symbol": "mXEN",
+    "decimals": 18
+  },
+  "maAAVE": {
+    "chain": "polygon",
+    "symbol": "maAAVE",
+    "decimals": 18,
+    "address": "0x823cd4264c1b951c9209ad0deaea9988fe8429bf",
+    "logoURI": "https://aavegotchi.com/images/matokens/maAAVE.svg"
+  },
+  "maDAI": {
+    "chain": "polygon",
+    "symbol": "maDAI",
+    "decimals": 18,
+    "address": "0xe0b22e0037b130a9f56bbb537684e6fa18192341",
+    "logoURI": "https://aavegotchi.com/images/matokens/maDAI.svg"
+  },
+  "maLINK": {
+    "chain": "polygon",
+    "symbol": "maLINK",
+    "decimals": 18,
+    "address": "0x98ea609569bd25119707451ef982b90e3eb719cd",
+    "logoURI": "https://aavegotchi.com/images/matokens/maLINK.svg"
+  },
+  "maTUSD": {
+    "chain": "polygon",
+    "symbol": "maTUSD",
+    "decimals": 18,
+    "address": "0xf4b8888427b00d7caf21654408b7cba2ecf4ebd9",
+    "logoURI": "https://aavegotchi.com/images/matokens/maTUSD.svg"
+  },
+  "maUNI": {
+    "chain": "polygon",
+    "symbol": "maUNI",
+    "decimals": 18,
+    "address": "0x8c8bdbe9cee455732525086264a4bf9cf821c498",
+    "logoURI": "https://aavegotchi.com/images/matokens/maUNI.svg"
+  },
+  "maUSDC": {
+    "chain": "polygon",
+    "symbol": "maUSDC",
+    "decimals": 6,
+    "address": "0x9719d867a500ef117cc201206b8ab51e794d3f82",
+    "logoURI": "https://aavegotchi.com/images/matokens/maUSDC.svg"
+  },
+  "maUSDT": {
+    "chain": "polygon",
+    "symbol": "maUSDT",
+    "decimals": 6,
+    "address": "0xdae5f1590db13e3b40423b5b5c5fbf175515910b",
+    "logoURI": "https://aavegotchi.com/images/matokens/maUSDT.svg"
+  },
+  "maWETH": {
+    "chain": "polygon",
+    "symbol": "maWETH",
+    "decimals": 18,
+    "address": "0x20d3922b4a1a8560e1ac99fba4fade0c849e2142",
+    "logoURI": "https://aavegotchi.com/images/matokens/maWETH.svg"
+  },
+  "maYFI": {
+    "chain": "polygon",
+    "symbol": "maYFI",
+    "decimals": 18,
+    "address": "0xe20f7d1f0ec39c4d5db01f53554f2ef54c71f613",
+    "logoURI": "https://aavegotchi.com/images/matokens/maYFI.svg"
+  },
+  "maticX-WMATIC-BPT": {
+    "chain": "polygon",
+    "address": "0xcd78a20c597e367a4e478a2411ceb790604d7c8f",
+    "symbol": "maticX-WMATIC-BPT",
+    "decimals": 18
+  },
+  "miMATIC": {
+    "chain": "polygon",
+    "address": "0xa3fa99a148fa48d14ed51d610c367c61876997f1",
+    "symbol": "miMATIC",
+    "decimals": 18
+  },
+  "oRETRO": {
+    "chain": "polygon",
+    "address": "0x3a29cab2e124919d14a6f735b6033a3aad2b260f",
+    "symbol": "oRETRO",
+    "decimals": 18
+  },
+  "pTREAT-ETH SLP": {
+    "chain": "polygon",
+    "address": "0xfc1d865c455a1e84f24c95cc5a6c821d18f458ce",
+    "symbol": "pTREAT-ETH SLP",
+    "decimals": 18
+  },
+  "polyBUNNY": {
+    "chain": "polygon",
+    "address": "0x4c16f69302ccb511c5fac682c7626b9ef0dc126a",
+    "symbol": "polyBUNNY",
+    "decimals": 18
+  },
+  "polyBUNNY-ETH SLP": {
+    "chain": "polygon",
+    "address": "0xc5666d43f06c073e869bce02407569f578b2072d",
+    "symbol": "polyBUNNY-ETH SLP",
+    "decimals": 18
+  },
+  "rETH": {
+    "chain": "polygon",
+    "address": "0x5736df66b4f8401d639ffa915a46b4c548c09ac1",
+    "symbol": "rETH",
+    "decimals": 18
+  },
+  "rMATIC": {
+    "chain": "polygon",
+    "address": "0x9f28e2455f9ffcfac9ebd6084853417362bc5dbb",
+    "symbol": "rMATIC",
+    "decimals": 18
+  },
+  "renBTC": {
+    "chain": "polygon",
+    "symbol": "renBTC",
+    "decimals": 18,
+    "address": "0xdbf31df14b66535af65aac99c32e9ea844e14501"
+  },
+  "renDOGE-ETH SLP": {
+    "chain": "polygon",
+    "address": "0x3398787dca0f1bd830713ec5294ade196a198984",
+    "symbol": "renDOGE-ETH SLP",
+    "decimals": 18
+  },
+  "sUSD": {
+    "chain": "polygon",
+    "symbol": "sUSD",
+    "decimals": 18,
+    "address": "0xf81b4bec6ca8f9fe7be01ca734f55b2b6e03a7a0",
+    "logoURI": "https://assets.coingecko.com/coins/images/5013/thumb/sUSD.png?1616150765"
+  },
+  "sd3Crv": {
+    "chain": "polygon",
+    "symbol": "sd3Crv",
+    "decimals": 18,
+    "address": "0x87f0bfee4435ce2b8643b221d0c1cad21f5328b4",
+    "logoURI": "https://raw.githubusercontent.com/cometh-game/default-token-list/master/img/sdt-usd.png"
+  },
+  "sdcrvRenWSBTC": {
+    "chain": "polygon",
+    "symbol": "sdcrvRenWSBTC",
+    "decimals": 18,
+    "address": "0xe212f92e5af85268b33d2aa587b51f49c3b945be",
+    "logoURI": "https://raw.githubusercontent.com/cometh-game/default-token-list/master/img/sdt-btc.png"
+  },
+  "sdeursCRV": {
+    "chain": "polygon",
+    "symbol": "sdeursCRV",
+    "decimals": 18,
+    "address": "0xfbdb45075fb73ca4cc8b83fd6fdb4f9b696b1ba1",
+    "logoURI": "https://raw.githubusercontent.com/cometh-game/default-token-list/master/img/sdt-eur.png"
+  },
+  "stMATIC": {
+    "chain": "polygon",
+    "address": "0x3a58a54c066fdc0f2d55fc9c89f0415c92ebf3c4",
+    "symbol": "stMATIC",
+    "decimals": 18
+  },
+  "stMATIC-bb-a-WMATIC-BPT": {
+    "chain": "polygon",
+    "address": "0xac2cae8d2f78a4a8f92f20dbe74042cd0a8d5af3",
+    "symbol": "stMATIC-bb-a-WMATIC-BPT",
+    "decimals": 18
+  },
+  "tBTC": {
+    "chain": "polygon",
+    "address": "0x236aa50979d5f3de3bd1eeb40e81137f22ab794b",
+    "symbol": "tBTC",
+    "decimals": 18
+  },
+  "tetuQi": {
+    "chain": "polygon",
+    "address": "0x4cd44ced63d9a6fef595f6ad3f7ced13fceac768",
+    "symbol": "tetuQi",
+    "decimals": 18
+  },
+  "wstETH": {
+    "chain": "polygon",
+    "address": "0x03b54a6e9a984069379fae1a4fc4dbae93b3bccd",
+    "symbol": "wstETH",
+    "decimals": 18
+  },
+  "wstETH-bb-a-WETH-BPT": {
+    "chain": "polygon",
+    "address": "0x4a77ef015ddcd972fd9ba2c7d5d658689d090f1a",
+    "symbol": "wstETH-bb-a-WETH-BPT",
+    "decimals": 18
+  },
+  "xMARK": {
+    "chain": "polygon",
+    "address": "0xf153eff70dc0bf3b085134928daeea248d9b30d0",
+    "symbol": "xMARK",
+    "decimals": 9
+  },
+  "xSDT": {
+    "chain": "polygon",
+    "symbol": "xSDT",
+    "decimals": 18,
+    "address": "0xd921f8318cfd786bab1ea7492673f053c518ac04",
+    "logoURI": "https://raw.githubusercontent.com/cometh-game/default-token-list/master/img/xsdt.png"
+  }
+}

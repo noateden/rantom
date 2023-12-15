@@ -1,0 +1,1402 @@
+[
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x521aa84ab3fcc4c05cabac24dc3682339887b126",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xb1026b8e7276e7ac75410f1fcbbe21796e8f7526",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xfae2ae0a9f87fd35b5b0e24b47bac796a7eefea1",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x912ce59144191c1204e64559fe8253a0e49e6548", "symbol": "ARB", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xe51635ae8136abac44906a8f230c2d235e9c195f",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x912ce59144191c1204e64559fe8253a0e49e6548", "symbol": "ARB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xc86eb7b85807020b4548ee05b54bfc956eebbfcd",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x3ab5dd69950a948c55d1fbfb7500bf92b4bd4c48",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x7cccba38e2d959fe135e79aebb57ccb27b128358",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xe4e4aea5150f0fa2b302b7b69427ecfb2a56133a",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x8b0e6f19ee57089f7649a455d89d7bc6314d04e8", "symbol": "DMT", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x13bc35d101b646cf1f566f95077e67a9f5b301a3",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x2ac2b254bc18cd4999f64773a966e4f4869c34ee", "symbol": "PNP", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xd51f7383c906cfd995d7f24729f37933ff264fa6",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x3082cc23568ea640225c2467653db90e9250aaa0",
+        "symbol": "RDNT",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xc99be44383bc8d82357f5a1d9ae9976ee9d75bee",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a", "symbol": "GMX", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xcc4e4c18bad7e1cc63bb98915eeb3f412939955e",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x004626a008b1acdc4c74ab51644093b155e59a23",
+        "symbol": "stEUR",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x8cc8093218bcac8b1896a1eed4d925f6f6ab289f",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x3d9907f9a368ad0a51be60f7da3b97cf940982d8",
+        "symbol": "GRAIL",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x47a52b2bee1a0cc9a34bb9ee34c357c054112c3e",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x7a5d193fe4ed9098f7eadc99797087c96b002907",
+        "symbol": "plsARB",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x912ce59144191c1204e64559fe8253a0e49e6548", "symbol": "ARB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xcae4a98685fd488e8d2fc3780baabc7d472f9d01",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x004626a008b1acdc4c74ab51644093b155e59a23",
+        "symbol": "stEUR",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x912ce59144191c1204e64559fe8253a0e49e6548", "symbol": "ARB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xd845f7d4f4deb9ff5bcf09d140ef13718f6f6c71",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f", "symbol": "WBTC", "decimals": 8 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xc35aa1cec34e02a8acc3e5f79c22be364823094c",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0xd77b108d4f6cefaa0cae9506a934e825becca46e",
+        "symbol": "WINR",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xe8795cf9c2309ecfe05df028eb0f21d5d6e3a951",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xf97f4df75117a78c1a5a0dbb814af92458539fb4", "symbol": "LINK", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x60451b6ac55e3c5f0f3aee31519670ecc62dc28f",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x3d9907f9a368ad0a51be60f7da3b97cf940982d8",
+        "symbol": "GRAIL",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x22427d20480de289795ca29c3adddb57a568e285",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x3a18dcc9745edcd1ef33ecb93b0b6eba5671e7ca", "symbol": "KUJI", "decimals": 6 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xe461f84c3fe6bcdd1162eb0ef4284f3bb6e4cad3",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
+        "symbol": "PENDLE",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xd8043be1668fac205b9747e46d0c26c1eae2708f",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x3a18dcc9745edcd1ef33ecb93b0b6eba5671e7ca", "symbol": "KUJI", "decimals": 6 },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x4e635d35bb02576d0eab75ef5e7ebe61c12f3c76",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x912ce59144191c1204e64559fe8253a0e49e6548", "symbol": "ARB", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xdeb89de4bb6ecf5bfed581eb049308b52d9b2da7",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x5979d7b546e38e414f7e9822514be443a4800529",
+        "symbol": "wstETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x2d879f8a38648a05c2dba7dee2a33d00f440e04b",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x088cd8f5ef3652623c22d48b1605dcfe860cd704",
+        "symbol": "VELA",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x695eb0907cacae045d32838dc152ee7696e49b06",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xd77b108d4f6cefaa0cae9506a934e825becca46e", "symbol": "WINR", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x7770132297942f452293f4ec8fd3e0d966272b93",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 },
+      { "chain": "arbitrum", "address": "0xd3934a2e428e31ffc14b1f69b0bec79db3e0c614", "symbol": "CONE", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xc9aa2feb84f0134a38d5d1c56b1e787191327cb0",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x643b34980e635719c15a2d4ce69571a258f940e9",
+        "symbol": "EUROs",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x45fae8d0d2ace73544baab452f9020925afccc75",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 },
+      { "chain": "arbitrum", "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1", "symbol": "DAI", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x25a9ea8b6698782ecd3707bb7626e606c46d75dd",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x20547341e58fb558637fa15379c92e11f7b7f710", "symbol": "MOZ", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x3d7412e255c04239285cad57f82220d07d6874b0",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x93b346b6bc2548da6a1e7d98e9a421b42541425b",
+        "symbol": "LUSD",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x6c41a770583fc7141fbea9ac741f9015a4de6fda",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x004626a008b1acdc4c74ab51644093b155e59a23",
+        "symbol": "stEUR",
+        "decimals": 18
+      },
+      {
+        "chain": "arbitrum",
+        "address": "0x5979d7b546e38e414f7e9822514be443a4800529",
+        "symbol": "wstETH",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x70eb6e93e1f8bfb850126e23a1964fd3db789948",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 },
+      { "chain": "arbitrum", "address": "0xe9a5af50874c0ef2748b5db70104b5ccb5557f6d", "symbol": "GMBL", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x59a327d948db1810324a04d69cbe9fe9884f8f28",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x6c2c06790b3e3e3c38e12ee22f8183b37a13ee55", "symbol": "DPX", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x5dade916e66470ed5397bee7e2d1acc4d24caa94",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x32eb7902d4134bf98a28b963d26de779af92a212",
+        "symbol": "RDPX",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x59516ced04cc538330b6a38d87a706434fbbbaa7",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
+        "symbol": "PENDLE",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x912ce59144191c1204e64559fe8253a0e49e6548", "symbol": "ARB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x43994b979f67b0c51687b3d167b8dc9c6ed304f5",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xf5a27e55c748bcddbfea5477cb9ae924f0f7fd2e", "symbol": "TST", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x8280b08dfb38e6926ffbb0f76f39ddab8160d120",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xf19547f9ed24aa66b03c3a552d181ae334fbb8db", "symbol": "LODE", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xeed8f0f2fd4fec986c00635e5f01507cbaec511f",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 },
+      { "chain": "arbitrum", "address": "0xd77b108d4f6cefaa0cae9506a934e825becca46e", "symbol": "WINR", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x1106db7165a8d4a8559b441ecdee14a5d5070dbc",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x539bde0d7dbd336b79148aa742883198bbf60342",
+        "symbol": "MAGIC",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xa17afcab059f3c6751f5b64347b5a503c3291868",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 },
+      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xcf8a9a0ed558d5892d4a8a8f1d6a23e4e3dd9729",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x7c8a1a80fdd00c9cccd6ebd573e9ecb49bfa2a59",
+        "symbol": "AICODE",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xc095f4bd4ca77acbecf68302f432f9f5118f3ac2",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x4cfa50b7ce747e2d61724fcac57f24b748ff2b2a",
+        "symbol": "fUSDC",
+        "decimals": 6
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x0cc4f64f7bf5fd175919b76b0d3183f1c50e630c",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x11bf4f05eb28b802ed3ab672594decb20ffe2313", "symbol": "AURY", "decimals": 9 },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xc6e932f9107a9eb2570e39697c1becf2c9551770",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x9b6226dd0191a77d032f56a6d383044ee99944c3", "symbol": "FLR", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x1cab47198197a62cc5f627cc5135f2bea9610ae4",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x033f193b3fceb22a440e89a2867e8fee181594d9", "symbol": "RDO", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x622b5186384783bb805c12a808ccf07f41de1ff0",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x2bcc6d6cdbbdc0a4071e48bb3b969b06b3330c07", "symbol": "SOL", "decimals": 9 },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x79ad0ae418d7c4450b8e9dff2fa646de809b085d",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xd3934a2e428e31ffc14b1f69b0bec79db3e0c614", "symbol": "CONE", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x72b91fd02630a4aed640dd68c1893847bd12b593",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x6c2c06790b3e3e3c38e12ee22f8183b37a13ee55", "symbol": "DPX", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x7a35a6339d7df4fa7059549915346daebf12ef9e",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x3a33473d7990a605a88ac72a78ad4efc40a54adb", "symbol": "TIG", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x1fa5368cd1e6334d532447cb78b9090b59ecef66",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x51318b7d00db7acc4026c88c3952b66278b6a67f", "symbol": "PLS", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xc3e254e39c45c7886a12455cb8207c808486fac3",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x51fc0f6660482ea73330e414efd7808811a57fa2",
+        "symbol": "PREMIA",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xb4db1971cf593c80e79de9c1e3563393f4d7ac09",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x1a5b0aaf478bf1fda7b934c76e7692d722982a6d", "symbol": "BFR", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x9c9b3d48c813f253a8fe4d7804c127d7308c1c14",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x4e352cf164e64adcbad318c3a1e222e9eba4ce42", "symbol": "MCB", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xc7349af293747ddf3336a05e16355e6a10e35b7e",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x0341c0c0ec423328621788d4854119b97f44e391",
+        "symbol": "Silo",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x2f0bcb4a8bd714953eefd5339326ee0ff62c5b62",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x6c2c06790b3e3e3c38e12ee22f8183b37a13ee55", "symbol": "DPX", "decimals": 18 },
+      {
+        "chain": "arbitrum",
+        "address": "0xf236ea74b515ef96a9898f5a4ed4aa591f253ce1",
+        "symbol": "plsDPX",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x684773ce156147e28c3c095d00c6bc9da2444fbc",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x1622bf67e6e5747b81866fe0b85178a93c7f86e3",
+        "symbol": "UMAMI",
+        "decimals": 9
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xe726c97afcbbbfcae8dbc21877d184dbb2c11f6d",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x09e18590e8f76b6cf471b3cd75fe1a1a9d2b2c2b",
+        "symbol": "AIDOGE",
+        "decimals": 6
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x481af19b9bf9688b2e9db100206e868821a68b8b",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xfb9e5d956d889d91a82737b9bfcdac1dce3e1449", "symbol": "LQTY", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x119e0647b3decf3cc5f33d7a7f325c1864c07647",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x59a729658e9245b0cf1f8cb9fb37945d2b06ea27",
+        "symbol": "GENE",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xdb1ffe19a075f0ff73f6fe1f271f31a0c33b40fa",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x14e8687af6c94c7c68590bacf0f1d1e338f2862b",
+        "symbol": "HOTT",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xb79af3dadc07e905a148b14382fe8ed7528623f2",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a", "symbol": "GMX", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x0e878029d18cd7f630823439cf389d1601d9dbd9",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x10393c20975cf177a3513071bc110f7962cd67da",
+        "symbol": "JONES",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x5331ef7293e04ddc3711da69b80493fb8fb81542",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x643b34980e635719c15a2d4ce69571a258f940e9",
+        "symbol": "EUROs",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xf5a27e55c748bcddbfea5477cb9ae924f0f7fd2e", "symbol": "TST", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x442edf05c29d0bbfc9d29dc876e2cffed57dab7c",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
+        "symbol": "PENDLE",
+        "decimals": 18
+      },
+      {
+        "chain": "arbitrum",
+        "address": "0xb688ba096b7bb75d7841e47163cd12d18b36a5bf",
+        "symbol": "mPendle",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x7f30c49b6055e46dd3186ff1163ab0ac0d367035",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x65c936f008bc34fe819bce9fa5afd9dc2d49977f", "symbol": "Y2K", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x66a042c71d8fb550d2f048e517aaaa4f997b26d7",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x1cc128a5d977b3ba7d598f01db20a2116f59ef68",
+        "symbol": "esRDNT",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x3082cc23568ea640225c2467653db90e9250aaa0", "symbol": "RDNT", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x88db654d0863154857d2cc67f29398d5d5057385",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x3d9907f9a368ad0a51be60f7da3b97cf940982d8",
+        "symbol": "GRAIL",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xdb0c6fc9e01cd95eb1d3bbae6689962de489cd7b", "symbol": "DSQ", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x55056fff3d78917e6eb295918ff253e485f7e4e6",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 },
+      { "chain": "arbitrum", "address": "0xdb0c6fc9e01cd95eb1d3bbae6689962de489cd7b", "symbol": "DSQ", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x1b44844f479c089c75c89277961f5b1f71655c25",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xdb0c6fc9e01cd95eb1d3bbae6689962de489cd7b", "symbol": "DSQ", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xc8fdc43b8c10b4c8f716a94ccd81b53ff8681c15",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x51318b7d00db7acc4026c88c3952b66278b6a67f", "symbol": "PLS", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x96c247451a778734607bed550298a88d97ba4867",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x51318b7d00db7acc4026c88c3952b66278b6a67f", "symbol": "PLS", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x4045aa470d92fe2f2445eba8e1ad472e711e0af3",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xbfbcfe8873fe28dfa25f1099282b088d52bbad9c", "symbol": "EQB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x8920a31802453cddc4b405ef2895af49e40e1c6c",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
+        "symbol": "PENDLE",
+        "decimals": 18
+      },
+      {
+        "chain": "arbitrum",
+        "address": "0xd4848211b699503c772aa1bc7d33b433c4242ac3",
+        "symbol": "ePendle",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xf312fa43d1cc05942b508038c969c8c73520d707",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xdb0c6fc9e01cd95eb1d3bbae6689962de489cd7b", "symbol": "DSQ", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x0afbaef8c5e4916ec4a26cfcafbf8ea943cca20f",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x51a80238b5738725128d3a3e06ab41c1d4c05c74", "symbol": "USH", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xea5b743ded9d2e85c6ebebcc90a7a06031575708",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x4cfa50b7ce747e2d61724fcac57f24b748ff2b2a",
+        "symbol": "fUSDC",
+        "decimals": 6
+      },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xa34731d70173b5e7e04acea107a1b5d8f6d1c4ff",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x8b0e6f19ee57089f7649a455d89d7bc6314d04e8", "symbol": "DMT", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xc89b650e1badcc209601b4affceabc3f06f4b3e2",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a", "symbol": "GMX", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x3a75fd7e012f0d1fc387cbf06160814003c6b160",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x088cd8f5ef3652623c22d48b1605dcfe860cd704",
+        "symbol": "VELA",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xe9d113d2b13d934f82a6f556ea5f52f18a9c3ed1",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xdb0c6fc9e01cd95eb1d3bbae6689962de489cd7b", "symbol": "DSQ", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a", "symbol": "GMX", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xd344f3bcb004058f303695bf6724531dd6de2615",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x912ce59144191c1204e64559fe8253a0e49e6548", "symbol": "ARB", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xdb0c6fc9e01cd95eb1d3bbae6689962de489cd7b", "symbol": "DSQ", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x795e4907d0b1e339162548dddf08d1c4c391bc20",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x51a80238b5738725128d3a3e06ab41c1d4c05c74", "symbol": "USH", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x563d5bd3512d36d1a427405f809f4b18dc8f66cf",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      {
+        "chain": "arbitrum",
+        "address": "0xe66998533a1992ece9ea99cdf47686f4fc8458e0",
+        "symbol": "jUSDC",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x9dc5708aaf0d45b12636c7ce2960e71a8ea210c8",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f", "symbol": "WBTC", "decimals": 8 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x90ea8c74ccd6bd6565564705fea31216dd1a74c8",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1", "symbol": "DAI", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x6a75e865c33d1477056ab14316e6f8b3ceb4fc95",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x13ad51ed4f1b7e9dc168d8a00cb3f4ddd85efa60", "symbol": "LDO", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x7bfd82fd68d5655a8619d1e0d4e2488650761d8e",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x15a808ed3846d25e88ae868de79f1bcb1ac382b5", "symbol": "MVD", "decimals": 9 },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x2cfe57fb80fa7c00b0851f11a07ff173f9d990a3",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x7241bc8035b65865156ddb5edef3eb32874a3af6",
+        "symbol": "jGLP",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x25874cc60cbf7495b7cd1fa724178d251cfad5a8",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0xbad58ed9b5f26a002ea250d7a60dc6729a4a2403", "symbol": "PBX", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x7cd6fda59a95afd03848d070d33befa82a601a65",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x154388a4650d63acc823e06ef9e47c1eddd3cbb2", "symbol": "SEN", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x860f41373ebf7afe87f1961024135f2c9f74d766",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x1622bf67e6e5747b81866fe0b85178a93c7f86e3",
+        "symbol": "UMAMI",
+        "decimals": 9
+      },
+      {
+        "chain": "arbitrum",
+        "address": "0x1922c36f3bc762ca300b4a46bb2102f84b1684ab",
+        "symbol": "cmUMAMI",
+        "decimals": 9
+      }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x1ad707c336347d1ee07839a6ea9e79d17c6d0c1d",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x58e50e24d5160def294b6b6410d12c597054b79e",
+        "symbol": "FUZZ",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x64088fcdedd206d32516acdf93e03224b85ac254",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x3404149e9ee6f17fb41db1ce593ee48fbdcd9506", "symbol": "HDN", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x6ac5cc66897a57620349616e059b9c2b4d11b5d2",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x6dd963c510c2d2f09d5eddb48ede45fed063eb36",
+        "symbol": "FCTR",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x5a836a0c9c0b0ed905e3aea184ddf00c28ee3b7e",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x93b346b6bc2548da6a1e7d98e9a421b42541425b",
+        "symbol": "LUSD",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9", "symbol": "USDT", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x50988ce9f71a8e22a52e064563703d2aa1b44111",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xb9af4762c039d63e30039f1712dfab77026408c7", "symbol": "AIBB", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0x2af21aecb00e89e2003174960bdce08c42851cfd",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x0ae38f7e10a43b5b2fb064b42a2f4514cba909ef",
+        "symbol": "unshETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1", "symbol": "WETH", "decimals": 18 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xb7e3b53b2687a979627f000a638cab8972532207",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      { "chain": "arbitrum", "address": "0x4e352cf164e64adcbad318c3a1e222e9eba4ce42", "symbol": "MCB", "decimals": 18 },
+      { "chain": "arbitrum", "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8", "symbol": "USDC", "decimals": 6 }
+    ]
+  },
+  {
+    "protocol": "camelotv3",
+    "chain": "arbitrum",
+    "version": "univ3",
+    "address": "0xfe137564b1c479e9dc765086368204c54652e703",
+    "factory": "0x1a3c9b1d2f0529d97f2afc5136cc23e58f1fd35b",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      { "chain": "arbitrum", "address": "0xcac5c9c5aeb94fc0dcae4efa006ec165fea8a371", "symbol": "VKT", "decimals": 18 }
+    ]
+  }
+]

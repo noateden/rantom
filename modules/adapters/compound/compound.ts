@@ -1,151 +1,140 @@
 import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
 
-import cErc20Abi from '../../../configs/abi/compound/cErc20.json';
-import { Tokens } from '../../../configs/constants';
-import EnvConfig from '../../../configs/envConfig';
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
-import { ProtocolConfig, Token } from '../../../types/configs';
+import { TokenList } from '../../../configs';
+import CompoundCTokenAbi from '../../../configs/abi/compound/cErc20.json';
+import { CompoundConfig, CompoundMarket } from '../../../configs/protocols/compound';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
+import { formatFromDecimals } from '../../../lib/utils';
+import { ContractConfig, ProtocolConfig, Token } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { CompoundAbiMappings, CompoundEventSignatures } from './abis';
 
-const Signatures = {
-  Mint: '0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c6fef26394f4c03821c4f',
-  Redeem: '0xe5b754fb1abb7f01b499791d0b820ae3b6af3424ac1c59768edb53f4ec31a929',
-  Borrow: '0x13ed6866d4e1ee6da46f845c46d7e54120883d75c5ea9a2dacc1c4ca8984ab80',
-  Repay: '0x1a2a22cb034d26d1854bdc6666a5b91fe25efbbb5dcad3b0355478d6f5c362a1',
-  Liquidate: '0x298637f684da70674f26509b10f07ec2fbc77a335ab1e7d6215a4b2484d8bb52',
-  DistributedSupplierComp: '0x2caecd17d02f56fa897705dcc740da2d237c373f70686f4e0d9bd3bf0400ea7a',
-  DistributedBorrowerComp: '0x1fc3ecc087d8d2d15e23d0032af5a47059c3892d003d8e139fdcb6bb327c99a6',
-};
-
-export class CompoundAdapter extends Adapter {
+export default class CompoundAdapter extends Adapter {
   public readonly name: string = 'adapter.compound';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.Mint]: EventSignatureMapping[Signatures.Mint],
-      [Signatures.Redeem]: EventSignatureMapping[Signatures.Redeem],
-      [Signatures.Borrow]: EventSignatureMapping[Signatures.Borrow],
-      [Signatures.Repay]: EventSignatureMapping[Signatures.Repay],
-      [Signatures.Liquidate]: EventSignatureMapping[Signatures.Liquidate],
-      [Signatures.DistributedSupplierComp]: EventSignatureMapping[Signatures.DistributedSupplierComp],
-      [Signatures.DistributedBorrowerComp]: EventSignatureMapping[Signatures.DistributedBorrowerComp],
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, {
+      protocol: config.protocol,
+      contracts: config.contracts as Array<ContractConfig>,
     });
+
+    this.config = config;
+    this.eventMappings = {
+      [CompoundEventSignatures.Mint]: CompoundAbiMappings[CompoundEventSignatures.Mint],
+      [CompoundEventSignatures.Redeem]: CompoundAbiMappings[CompoundEventSignatures.Redeem],
+      [CompoundEventSignatures.Borrow]: CompoundAbiMappings[CompoundEventSignatures.Borrow],
+      [CompoundEventSignatures.Repay]: CompoundAbiMappings[CompoundEventSignatures.Repay],
+      [CompoundEventSignatures.Liquidate]: CompoundAbiMappings[CompoundEventSignatures.Liquidate],
+      [CompoundEventSignatures.DistributedSupplierComp]:
+        CompoundAbiMappings[CompoundEventSignatures.DistributedSupplierComp],
+      [CompoundEventSignatures.DistributedBorrowerComp]:
+        CompoundAbiMappings[CompoundEventSignatures.DistributedBorrowerComp],
+    };
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
-
-    const signature = topics[0];
-    if (
-      this.config.contracts[chain] &&
-      this.config.contracts[chain].indexOf(address) !== -1 &&
-      (EventSignatureMapping[signature] ||
-        (this.config.customEventMapping && this.config.customEventMapping[signature]))
-    ) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const rpcWrapper = this.getRpcWrapper();
-      let event;
-      if (this.config.customEventMapping && this.config.customEventMapping[signature]) {
-        event = web3.eth.abi.decodeLog(this.config.customEventMapping[signature].abi, data, topics.slice(1));
-      } else {
-        event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+  protected getUnderlyingToken(cTokenAddress: string): Token | null {
+    for (const market of (this.config as CompoundConfig).contracts) {
+      if (compareAddress(cTokenAddress, market.address)) {
+        return (market as CompoundMarket).underlying;
       }
+    }
 
-      if (signature === Signatures.DistributedSupplierComp || signature === Signatures.DistributedBorrowerComp) {
+    return null;
+  }
+
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
+
+    if (this.supportedContract(options.chain, options.log.address) && options.log.topics.length === 1) {
+      const signature = options.log.topics[0];
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
+
+      if (
+        signature === CompoundEventSignatures.DistributedSupplierComp ||
+        signature === CompoundEventSignatures.DistributedBorrowerComp
+      ) {
         const collector = event.supplier ? normalizeAddress(event.supplier) : normalizeAddress(event.borrower);
-        const amount = new BigNumber(event.compDelta).dividedBy(1e18).toString(10);
-        return {
-          protocol: this.config.protocol,
-          action: 'collect',
-          addresses: [collector],
-          tokens: [Tokens.ethereum.COMP],
-          tokenAmounts: [amount],
-          readableString: `${collector} collect ${amount} ${Tokens.ethereum.COMP.symbol} on ${this.config.protocol} chain ${chain}`,
-        };
+        const amount = formatFromDecimals(event.compDelta.toString(), 18);
+        actions.push(
+          this.buildUpAction({
+            ...options,
+            action: 'collect',
+            addresses: [collector],
+            tokens: [TokenList.ethereum.COMP],
+            tokenAmounts: [amount],
+          })
+        );
       } else {
-        let token: Token | null = null;
-        if (this.config.staticData) {
-          for (const pool of this.config.staticData.pools) {
-            if (compareAddress(pool.address, address)) {
-              token = pool.underlying;
-            }
-          }
-        } else {
-          try {
-            const underlyingAddr = await rpcWrapper.queryContract({
-              chain,
-              abi: cErc20Abi,
-              contract: address,
-              method: 'underlying',
-              params: [],
-            });
-            token = await this.getWeb3Helper().getErc20Metadata(chain, underlyingAddr);
-          } catch (e: any) {
-            token = Tokens[chain].NativeCoin;
-          }
-        }
-
+        const token = this.getUnderlyingToken(options.log.address);
         if (token) {
           switch (signature) {
-            case Signatures.Mint:
-            case Signatures.Redeem:
-            case Signatures.Borrow: {
+            case CompoundEventSignatures.Mint:
+            case CompoundEventSignatures.Redeem:
+            case CompoundEventSignatures.Borrow: {
               const user = normalizeAddress(event[0]);
-              const amount = new BigNumber(event[1].toString())
-                .dividedBy(new BigNumber(10).pow(token.decimals))
-                .toString(10);
+              const amount = formatFromDecimals(event[1].toString(), token.decimals);
 
               const action: KnownAction =
-                signature === Signatures.Mint ? 'deposit' : signature === Signatures.Redeem ? 'withdraw' : 'borrow';
+                signature === CompoundEventSignatures.Mint
+                  ? 'deposit'
+                  : signature === CompoundEventSignatures.Redeem
+                  ? 'withdraw'
+                  : 'borrow';
 
-              return {
-                protocol: this.config.protocol,
-                action: action,
-                addresses: [user],
-                tokens: [token],
-                tokenAmounts: [amount],
-                readableString: `${user} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-              };
+              actions.push(
+                this.buildUpAction({
+                  ...options,
+                  action: action,
+                  addresses: [user],
+                  tokens: [token],
+                  tokenAmounts: [amount],
+                })
+              );
+
+              break;
             }
-
-            case Signatures.Repay: {
+            case CompoundEventSignatures.Repay: {
               const payer = normalizeAddress(event.payer);
               const borrower = normalizeAddress(event.borrower);
-              const amount = new BigNumber(event.repayAmount.toString())
-                .dividedBy(new BigNumber(10).pow(token.decimals))
-                .toString(10);
+              const amount = formatFromDecimals(event.repayAmount.toString(), token.decimals);
 
-              return {
-                protocol: this.config.protocol,
-                action: 'repay',
-                addresses: [payer, borrower],
-                tokens: [token],
-                tokenAmounts: [amount],
-                readableString: `${payer} repay ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-              };
+              actions.push(
+                this.buildUpAction({
+                  ...options,
+                  action: 'repay',
+                  addresses: [payer, borrower],
+                  tokens: [token],
+                  tokenAmounts: [amount],
+                })
+              );
+
+              break;
             }
-
-            case Signatures.Liquidate: {
+            case CompoundEventSignatures.Liquidate: {
               const liquidator = normalizeAddress(event.liquidator);
               const borrower = normalizeAddress(event.borrower);
 
-              const collateralPoolContract = new web3.eth.Contract(cErc20Abi as any, event.cTokenCollateral);
-              let collateral: Token | null;
-              try {
-                const underlyingAddr = await collateralPoolContract.methods.underlying().call();
-                collateral = await this.getWeb3Helper().getErc20Metadata(chain, underlyingAddr);
-              } catch (e: any) {
-                collateral = Tokens[chain].NativeCoin;
-              }
-
-              if (collateral) {
-                const exchangeRateCurrent = await collateralPoolContract.methods.exchangeRateCurrent().call();
-                const mantissa = 18 + collateral.decimals - 8;
+              // find the matching cTokenCollateral
+              const collateralToken: Token | null = this.getUnderlyingToken(event.cTokenCollateral);
+              if (collateralToken) {
+                const exchangeRateCurrent = await this.services.blockchain.singlecall({
+                  chain: options.chain,
+                  abi: CompoundCTokenAbi,
+                  target: event.cTokenCollateral,
+                  method: 'exchangeRateCurrent',
+                  params: [],
+                  blockNumber: options.log.blockNumber,
+                });
+                const mantissa = 18 + collateralToken.decimals - 8;
                 const oneCTokenInUnderlying = new BigNumber(exchangeRateCurrent).dividedBy(
                   new BigNumber(10).pow(mantissa)
                 );
@@ -153,28 +142,25 @@ export class CompoundAdapter extends Adapter {
                   .multipliedBy(oneCTokenInUnderlying)
                   .dividedBy(1e8)
                   .toString(10);
-                return {
-                  protocol: this.config.protocol,
-                  action: 'liquidate',
-                  addresses: [liquidator, borrower],
-                  tokens: [collateral],
-                  tokenAmounts: [amount],
-                  readableString: `${liquidator} liquidate ${amount} ${collateral.symbol} on ${this.config.protocol} chain ${chain}`,
-                  addition: {
-                    debtToken: token,
-                    debtAmount: new BigNumber(event.repayAmount)
-                      .dividedBy(new BigNumber(10).pow(token.decimals))
-                      .toString(10),
-                  },
-                };
+
+                actions.push(
+                  this.buildUpAction({
+                    ...options,
+                    action: 'liquidate',
+                    addresses: [liquidator, borrower],
+                    tokens: [collateralToken],
+                    tokenAmounts: [amount],
+                  })
+                );
+
+                break;
               }
-              break;
             }
           }
         }
       }
     }
 
-    return null;
+    return actions;
   }
 }

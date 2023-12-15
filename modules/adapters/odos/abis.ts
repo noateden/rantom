@@ -1,8 +1,12 @@
 import { EventMapping } from '../../../types/configs';
 
-export const CelerbridgeMappings: { [key: string]: EventMapping } = {
-  // Swap(address,uint256,address,uint256,address,int256,uint32)
-  '0x823eaf01002d7353fbcadb2ea3305cc46fa35d799cb0914846d185ac06f8ad05': {
+export const OdosEventSignatures = {
+  Swap: '0x823eaf01002d7353fbcadb2ea3305cc46fa35d799cb0914846d185ac06f8ad05',
+  SwapMulti: '0x7d7fb03518253ae01913536628b78d6d82e63e19b943aab5f4948356021259be',
+};
+
+export const OdosAbiMappings: { [key: string]: EventMapping } = {
+  [OdosEventSignatures.Swap]: {
     abi: [
       {
         indexed: false,
@@ -48,9 +52,7 @@ export const CelerbridgeMappings: { [key: string]: EventMapping } = {
       },
     ],
   },
-
-  // SwapMulti(address,uint256[],address[],uint256[],address[],uint32)
-  '0x7d7fb03518253ae01913536628b78d6d82e63e19b943aab5f4948356021259be': {
+  [OdosEventSignatures.SwapMulti]: {
     abi: [
       {
         indexed: false,

@@ -1,113 +1,83 @@
-import { Collection } from 'mongodb';
-
-import { EventMapping, NonFungibleToken, NonFungibleTokenMetadata, ProtocolConfig, Token } from './configs';
+import { IBlockchainService } from '../services/blockchains/domains';
+import { IDatabaseService } from '../services/database/domains';
+import { IDatastoreService } from '../services/datastore/domains';
+import { ProtocolConfig } from './configs';
+import { TokenTransfer, TransactionAction } from './domains';
 import {
-  MongoCollections,
-  TokenOracleResult,
-  Transaction,
-  TransactionAction,
-  TransactionFunction,
-  TransactionTransfer,
-} from './domains';
-import {
-  AdapterParseContractInfoOptions,
-  AdapterParseFunctionCallDataOptions,
-  AdapterParseLogOptions,
-  ApiQueryLogOptions,
-  OracleGetTokenPriceOptions,
+  BlockchainIndexingRunOptions,
+  EventlogIndexingRunOptions,
+  HandleHookEventLogOptions,
+  ParseEventLogOptions,
   ParseTransactionOptions,
-  RpcWrapperQueryContractOptions,
-  TransferParseLogOptions,
-  WorkerRunOptions,
+  ProtocolIndexingRunOptions,
 } from './options';
 
-export interface IProvider {
+export interface ContextServices {
+  database: IDatabaseService;
+  blockchain: IBlockchainService;
+  datastore: IDatastoreService;
+}
+
+export interface IModule {
   name: string;
+  services: ContextServices;
 }
 
-export interface IMongodbProvider extends IProvider {
-  connect: (url: string, name: string) => Promise<void>;
-  getCollection: (name: string) => Promise<Collection>;
-  requireCollections: () => Promise<MongoCollections>;
-}
-
-export interface ISentryProvider extends IProvider {
-  capture: (e: Error) => void;
-}
-
-export interface ICachingProvider extends IProvider {
-  getCachingData: (name: string) => Promise<any>;
-  setCachingData: (name: string, data: any) => Promise<void>;
-}
-
-export interface IWeb3HelperProvider extends ICachingProvider {
-  getBlockTime: (chain: string, blockNumber: number) => Promise<number>;
-  getErc20Metadata: (chain: string, tokenAddress: string) => Promise<Token | null>;
-  getNonFungibleTokenMetadata: (chain: string, tokenAddress: string) => Promise<NonFungibleTokenMetadata | null>;
-  getNonFungibleTokenData: (chain: string, tokenAddress: string, tokenId: string) => Promise<NonFungibleToken | null>;
-}
-
-export interface IRpcWrapperProvider extends IProvider {
-  queryContract: (options: RpcWrapperQueryContractOptions) => Promise<any>;
-}
-
-export interface GlobalProviders {
-  mongodb: IMongodbProvider;
-  sentry: ISentryProvider;
-  caching: ICachingProvider;
-  web3Helper: IWeb3HelperProvider;
-  oracle: IOracleProvider;
-}
-
-export interface IAdapter extends IProvider {
+export interface IAdapter extends IModule {
   config: ProtocolConfig;
-  providers: GlobalProviders | null;
-  eventMappings: { [key: string]: EventMapping };
 
-  supportedSignature(signature: string): boolean;
+  // every adapter should support a list of log signatures
+  supportedSignature: (signature: string) => boolean;
 
-  // try parsing actions from transaction logs
-  tryParsingActions: (options: AdapterParseLogOptions) => Promise<TransactionAction | null>;
+  // every adapter should support a list of contract address
+  supportedContract: (chain: string, address: string) => boolean;
 
-  // try to get actions from function call data
-  tryParsingFunctionCallData: (options: AdapterParseFunctionCallDataOptions) => Promise<TransactionFunction | null>;
+  // when index logs from blockchain, we forward raw logs to every single adapter
+  // if the adapter recognize the log signature (topic 0)
+  // this function should handle all necessary tasks.
+  // ex, when uniswap adapter got the log with signature:
+  // 0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9
+  // this function parses the log and save liquidity pool data into database
+  handleEventLog: (options: HandleHookEventLogOptions) => Promise<void>;
 
-  // return address label or null on nothing found
-  tryParsingContractInfo: (options: AdapterParseContractInfoOptions) => Promise<string | null>;
+  // parse an event log into list of transaction actions
+  parseEventLog: (options: ParseEventLogOptions) => Promise<Array<TransactionAction>>;
+
+  // parse transaction input
+  parseInputData: (options: ParseEventLogOptions) => Promise<Array<TransactionAction>>;
 }
 
-export interface ITransferParser extends IProvider {
-  providers: GlobalProviders | null;
+export interface ITransferAdapter extends IModule {
+  // every adapter should support a list of log signatures
+  supportedSignature: (signature: string) => boolean;
 
-  tryParsingTransfers: (options: TransferParseLogOptions) => Promise<TransactionTransfer | null>;
+  // parse an event log into list of transaction token transfers
+  parseEventLog: (options: ParseEventLogOptions) => Promise<TokenTransfer | null>;
 }
 
-export interface IParserProvider extends IProvider {
-  providers: GlobalProviders | null;
-  adapters: Array<IAdapter>;
-  transferParser: ITransferParser;
-
-  parseTransaction: (options: ParseTransactionOptions) => Promise<Array<Transaction>>;
+// this indexing service query all logs from blockchain in a range
+// after that, it passes them into every single adapter hooks to handle logs
+export interface IBlockchainIndexing extends IModule {
+  run: (options: BlockchainIndexingRunOptions) => Promise<void>;
 }
 
-export interface IOracleProvider extends ICachingProvider {
-  getTokenSpotPriceUsd: (options: OracleGetTokenPriceOptions) => Promise<TokenOracleResult | null>;
+// this indexing service query all logs from blockchain in a range
+// after that, it passes them into every single adapter hooks to handle logs
+export interface IEventlogIndexing extends IModule {
+  run: (options: EventlogIndexingRunOptions) => Promise<void>;
 }
 
-export interface IWorkerProvider extends IProvider {
-  providers: GlobalProviders;
-
-  run: (options: WorkerRunOptions) => Promise<void>;
+// index historical data of a given protocol
+// it uses contracts configs from protocol config
+export interface IProtocolIndexing extends IModule {
+  run: (options: ProtocolIndexingRunOptions) => Promise<void>;
 }
 
-export interface IApiCachingProvider extends IProvider {
-  providers: GlobalProviders;
+// the entry point for parser service
+export interface ITransactionParser extends IModule {
+  // fetch raw transaction data
+  fetchTransaction: (options: ParseTransactionOptions) => Promise<Array<any>>;
 
-  queryLogs: (options: ApiQueryLogOptions) => Promise<Array<any>>;
-}
-
-export interface IContractWorker extends IProvider {
-  providers: GlobalProviders;
-
-  run: (options: WorkerRunOptions) => Promise<void>;
+  // fetch and parser transaction logs
+  parseTransaction: (options: ParseTransactionOptions) => Promise<Array<any>>;
 }

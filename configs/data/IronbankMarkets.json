@@ -1,5 +1,6 @@
 [
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0x41c84c0e2ee0b740cf0d31f63f3b6f627dc6b393",
     "etherPool": false,
@@ -11,6 +12,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0x8e595470ed749b85c6f7669de83eae304c2ec68f",
     "etherPool": false,
@@ -22,6 +24,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0xe7bff2da8a2f619c2586fb83938fa56ce803aa16",
     "etherPool": false,
@@ -33,6 +36,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0xfa3472f7319477c9bfecdd66e4b948569e7621b9",
     "etherPool": false,
@@ -44,6 +48,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0x12a9cc33a980daa74e00cc2d1a0e74c57a93d12c",
     "etherPool": false,
@@ -55,6 +60,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0x8fc8bfd80d6a9f17fb98a373023d72531792b431",
     "etherPool": false,
@@ -66,6 +72,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0x48759f220ed983db51fa7a8c0d2aab8f3ce4166a",
     "etherPool": false,
@@ -77,6 +84,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0x76eb2fe28b36b3ee97f3adae0c69606eedb2a37c",
     "etherPool": false,
@@ -88,6 +96,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0xa7c4054afd3dbbbf5bfe80f41862b89ea05c9806",
     "etherPool": false,
@@ -99,28 +108,32 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0xa8caea564811af0e92b1e044f3edd18fa9a73e4f",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0xdb25f211ab05b1c97d595516f45794528a807ad8",
       "symbol": "EURS",
-      "decimals": 2
+      "decimals": 2,
+      "address": "0xdb25f211ab05b1c97d595516f45794528a807ad8",
+      "logoURI": "https://cdn.paraswap.io/token/EURS.png"
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0xca55f9c4e77f7b8524178583b0f7c798de17fd54",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0xd71ecff9342a5ced620049e616c5035f1db98620",
       "symbol": "sEUR",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0xd71ecff9342a5ced620049e616c5035f1db98620"
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0x7736ffb07104c0c400bb0cc9a7c228452a732992",
     "etherPool": false,
@@ -132,6 +145,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0xfeeb92386a055e2ef7c2b598c872a4047a7db59f",
     "etherPool": false,
@@ -143,6 +157,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0x226f3738238932ba0db2319a8117d9555446102f",
     "etherPool": false,
@@ -154,6 +169,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0xb8c5af54bbdcc61453144cf472a9276ae36109f9",
     "etherPool": false,
@@ -165,6 +181,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0x30190a3b52b5ab1daf70d46d72536f5171f22340",
     "etherPool": false,
@@ -176,6 +193,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0x9e8e207083ffd5bdc3d99a1f32d1e6250869c1a9",
     "etherPool": false,
@@ -187,6 +205,7 @@
     }
   },
   {
+    "protocol": "ironbank",
     "chain": "ethereum",
     "address": "0xe0b57feed45e7d908f2d0dacd26f113cf26715bf",
     "etherPool": false,
@@ -195,6 +214,414 @@
       "address": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
       "symbol": "CVX",
       "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "optimism",
+    "address": "0x17533a1bde957979e3977ebbfbc31e6deeb25c7d",
+    "etherPool": false,
+    "underlying": {
+      "chain": "optimism",
+      "address": "0x4200000000000000000000000000000000000006",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "optimism",
+    "address": "0x1d073cf59ae0c169cbc58b6fdd518822ae89173a",
+    "etherPool": false,
+    "underlying": {
+      "chain": "optimism",
+      "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "optimism",
+    "address": "0x874c01c2d1767efa01fa54b2ac16be96fad5a742",
+    "etherPool": false,
+    "underlying": {
+      "chain": "optimism",
+      "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+      "symbol": "USDT",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "optimism",
+    "address": "0x049e04bee77cffb055f733a138a2f204d3750283",
+    "etherPool": false,
+    "underlying": {
+      "chain": "optimism",
+      "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+      "symbol": "DAI",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "optimism",
+    "address": "0xcdb9b4db65c913ab000b40204248c8a53185d14d",
+    "etherPool": false,
+    "underlying": {
+      "chain": "optimism",
+      "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+      "symbol": "WBTC",
+      "decimals": 8
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "optimism",
+    "address": "0x4645e0952678e9566fb529d9313f5730e4e1c412",
+    "etherPool": false,
+    "underlying": {
+      "chain": "optimism",
+      "address": "0x4200000000000000000000000000000000000042",
+      "symbol": "OP",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "optimism",
+    "address": "0xe724ffa5d30782499086682c8362cb3673bf69ae",
+    "etherPool": false,
+    "underlying": {
+      "chain": "optimism",
+      "address": "0x8700daec35af8ff88c16bdf0418774cb3d7599b4",
+      "symbol": "SNX",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "optimism",
+    "address": "0x04f0fd3cd03b17a3e5921c0170ca6dd3952841ca",
+    "etherPool": false,
+    "underlying": {
+      "chain": "optimism",
+      "symbol": "SUSD",
+      "decimals": 18,
+      "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9"
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "avalanche",
+    "address": "0xb3c68d69e95b095ab4b33b4cb67dbc0fbf3edf56",
+    "etherPool": false,
+    "underlying": {
+      "chain": "avalanche",
+      "address": "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+      "symbol": "WAVAX",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "avalanche",
+    "address": "0x02c9133627a14214879175a7a222d0a7f7404efb",
+    "etherPool": false,
+    "underlying": {
+      "chain": "avalanche",
+      "address": "0x2147efff675e4a4ee1c2f918d181cdbd7a8e208f",
+      "symbol": "ALPHA.e",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "avalanche",
+    "address": "0xbf1430d9ec170b7e97223c7f321782471c587b29",
+    "etherPool": false,
+    "underlying": {
+      "chain": "avalanche",
+      "address": "0x130966628846bfd36ff31a822705796e8cb8c18d",
+      "symbol": "MIM",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "avalanche",
+    "address": "0x18931772adb90e7f214b6cbc78ddd6e0f090d4b1",
+    "etherPool": false,
+    "underlying": {
+      "chain": "avalanche",
+      "address": "0x5947bb275c521040051d82396192181b413227a3",
+      "symbol": "LINK.e",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "avalanche",
+    "address": "0x085682716f61a72bf8c573fbaf88cca68c60e99b",
+    "etherPool": false,
+    "underlying": {
+      "chain": "avalanche",
+      "address": "0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
+      "symbol": "DAI.e",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "avalanche",
+    "address": "0xec5aa19566aa442c8c50f3c6734b6bb23ff21cd7",
+    "etherPool": false,
+    "underlying": {
+      "chain": "avalanche",
+      "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "avalanche",
+    "address": "0xe28965073c49a02923882b8329d3e8c1d805e832",
+    "etherPool": false,
+    "underlying": {
+      "chain": "avalanche",
+      "address": "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+      "symbol": "USDC.e",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "avalanche",
+    "address": "0x3af7c11d112c1c730e5cee339ca5b48f9309acbc",
+    "etherPool": false,
+    "underlying": {
+      "chain": "avalanche",
+      "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+      "symbol": "USDt",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "avalanche",
+    "address": "0xceb1ce674f38398432d20bc8f90345e91ef46fd3",
+    "etherPool": false,
+    "underlying": {
+      "chain": "avalanche",
+      "address": "0xc7198437980c041c805a1edcba50c1ce5db95118",
+      "symbol": "USDT.e",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "avalanche",
+    "address": "0x338eee1f7b89ce6272f302bdc4b952c13b221f1d",
+    "etherPool": false,
+    "underlying": {
+      "chain": "avalanche",
+      "address": "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab",
+      "symbol": "WETH.e",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "avalanche",
+    "address": "0xb09b75916c5f4097c8b5812e63e216fef97661fc",
+    "etherPool": false,
+    "underlying": {
+      "chain": "avalanche",
+      "address": "0x50b7545627a5162f82a992c33b87adc75187b218",
+      "symbol": "WBTC.e",
+      "decimals": 8
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0xd528697008ac67a21818751a5e3c58c8dae54696",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",
+      "symbol": "WFTM",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0xcc3e89fbc10e155f1164f8c9cf0703acde53f6fd",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0x74b23882a30290451a17c44f4f05243b6b58c76d",
+      "symbol": "ETH",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0x20ca53e2395fa571798623f1cfbd11fe2c114c24",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0x321162cd933e2be498cd2267a90534a804051b11",
+      "symbol": "BTC",
+      "decimals": 8
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0x04c762a5df2fa02fe868f25359e0c259fb811cfe",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e",
+      "symbol": "DAI",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0x328a7b4d538a2b3942653a9983fda3c12c571141",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0x04068da6c83afcfa0e13ba15a6696662335d5b75",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0x0980f2f0d2af35ef2c4521b2342d59db575303f7",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0x29b0da86e484e1c0029b56e817912d778ac0ec69",
+      "symbol": "YFI",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0xb1fd648d8ca4be22445963554b85abbfc210bc83",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc",
+      "symbol": "SUSHI",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0x79ea17bee0a8dcb900737e8caa247c8358a5dfa1",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0x6a07a792ab2965c72a5b8088d3a069a7ac3a993b",
+      "symbol": "AAVE",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0x4eceddf62277ed78623f9a94995c680f8fd6c00e",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8",
+      "symbol": "LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0x1cc6cf8455f7783980b1ee06ecd4ed9acd94e1c7",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0x56ee926bd8c72b2d5fa1af4d9e4cbb515a1e3adc",
+      "symbol": "SNX",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0x70fac71debfd67394d1278d98a29dea79dc6e57a",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0x049d68029688eabf473097a2fc38ef61633a3c7a",
+      "symbol": "fUSDT",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0x46f298d5bb6389ccb6c1366bb0c8a30892ca2f7c",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0x82f0b8b456c1a451378467398982d4834b6829c1",
+      "symbol": "MIM",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0x2919ec3e7b35fb0c8597a5f806fb1f59c540eab4",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0xdc301622e621166bd8e82f2ca0a26c13ad0be355",
+      "symbol": "FRAX",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0x28192abdb1d6079767ab3730051c7f9ded06fe46",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0x9879abdea01a879644185341f7af7d8343556b7a",
+      "symbol": "TUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "ironbank",
+    "chain": "fantom",
+    "address": "0xf13252c1044aa83b910c77322e67387e187f64ca",
+    "etherPool": false,
+    "underlying": {
+      "chain": "fantom",
+      "address": "0xe2d27f06f63d98b8e11b38b5b08a75d0c8dd62b9",
+      "symbol": "UST",
+      "decimals": 6
     }
   }
 ]

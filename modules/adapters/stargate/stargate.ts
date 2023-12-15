@@ -1,86 +1,129 @@
-import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
-
-import { CommonChainIdMaps, LayerZeroChainIdMaps } from '../../../configs/constants';
 import EnvConfig from '../../../configs/envConfig';
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
-import { ProtocolConfig, Token } from '../../../types/configs';
+import { LayerZeroChainIdMaps } from '../../../configs/protocols/stargate';
+import { compareAddress, formatFromDecimals, normalizeAddress } from '../../../lib/utils';
+import { ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { StargateAbiMappings, StargateEventSignatures } from './abis';
 
-const Signatures: { [key: string]: string } = {
-  Mint: '0xb4c03061fb5b7fed76389d5af8f2e0ddb09f8c70d1333abbb62582835e10accb',
-  Burn: '0x49995e5dd6158cf69ad3e9777c46755a1a826a446c6416992167462dad033b2a',
-  Swap: '0x34660fc8af304464529f48a778e03d03e4d34bcd5f9b6f0cfbf3cd238c642f7f',
-  SwapRemote: '0xfb2b592367452f1c437675bed47f5e1e6c25188c17d7ba01a12eb030bc41ccef',
-};
-
-export class StargateAdapter extends Adapter {
+export default class StargateAdapter extends Adapter {
   public readonly name: string = 'adapter.stargate';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.Mint]: EventSignatureMapping[Signatures.Mint],
-      [Signatures.Burn]: EventSignatureMapping[Signatures.Burn],
-      [Signatures.Swap]: EventSignatureMapping[Signatures.Swap],
-      [Signatures.SwapRemote]: EventSignatureMapping[Signatures.SwapRemote],
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, {
+      protocol: config.protocol,
+      contracts: config.contracts,
     });
+
+    this.config = config;
+    this.eventMappings = StargateAbiMappings;
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
 
-    const signature = topics[0];
-    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
-      let token: Token | null = null;
-      for (const pool of this.config.staticData.pools) {
-        if (compareAddress(address, pool.address) && pool.chain === chain) {
-          token = pool.token;
-        }
-      }
+    const signature = options.log.topics[0];
+    const web3 = this.services.blockchain.getProvider(options.chain);
 
-      if (token) {
-        const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-        const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+    if (
+      signature === StargateEventSignatures.Mint ||
+      signature === StargateEventSignatures.Burn ||
+      signature === StargateEventSignatures.Swap ||
+      signature === StargateEventSignatures.SwapRemote
+    ) {
+      const liquidityPool = await this.services.datastore.getLiquidityPoolConstant({
+        chain: options.chain,
+        protocol: this.config.protocol,
+        address: normalizeAddress(options.log.address),
+      });
+      if (liquidityPool) {
+        const event = web3.eth.abi.decodeLog(
+          this.eventMappings[signature].abi,
+          options.log.data,
+          options.log.topics.slice(1)
+        );
+        switch (signature) {
+          case StargateEventSignatures.Swap: {
+            const amount = formatFromDecimals(event.amountSD.toString(), liquidityPool.tokens[0].decimals);
+            const provider = normalizeAddress(event.from);
 
-        if (signature === Signatures.Mint || signature === Signatures.Burn || signature === Signatures.SwapRemote) {
-          const amount = new BigNumber(event.amountSD).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
-          const provider = event.to ? normalizeAddress(event.to) : normalizeAddress(event.from);
-          const action: KnownAction = signature === Signatures.Mint ? 'deposit' : 'withdraw';
-
-          return {
-            protocol: this.config.protocol,
-            action: action,
-            tokens: [token],
-            tokenAmounts: [amount],
-            addresses: [provider],
-            readableString: `${provider} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-          };
-        } else if (signature === Signatures.Swap) {
-          const amount = new BigNumber(event.amountSD).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
-          const provider = normalizeAddress(event.from);
-
-          return {
-            protocol: this.config.protocol,
-            action: 'bridge',
-            tokens: [token],
-            tokenAmounts: [amount],
-            addresses: [provider],
-            readableString: `${provider} bridge ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-            addition: {
-              fromChain: CommonChainIdMaps[chain].toString(),
+            const buildAction = this.buildUpAction({
+              ...options,
+              action: 'bridge',
+              addresses: [provider],
+              tokens: [liquidityPool.tokens[0]],
+              tokenAmounts: [amount],
+            });
+            buildAction.addition = {
+              fromChain: EnvConfig.blockchains[options.chain].chainId.toString(),
               toChain: LayerZeroChainIdMaps[Number(event.chainId)]
                 ? LayerZeroChainIdMaps[Number(event.chainId)].toString()
-                : event.chainId.toString(),
-            },
-          };
+                : `LayerZeroChainId:${event.chainId.toString()}`,
+            };
+
+            actions.push(buildAction);
+
+            break;
+          }
+          case StargateEventSignatures.SwapRemote: {
+            const amount = formatFromDecimals(event.amountSD.toString(), liquidityPool.tokens[0].decimals);
+            const provider = normalizeAddress(event.to);
+
+            // to determine the source chain, we look ing for CreditChainPath event in the same transaction
+            for (const log of options.allLogs) {
+              if (
+                log.topics[0] === StargateEventSignatures.CreditChainPath &&
+                compareAddress(log.address, options.log.address)
+              ) {
+                const creditChainPathEvent = web3.eth.abi.decodeLog(
+                  this.eventMappings[StargateEventSignatures.CreditChainPath].abi,
+                  log.data,
+                  log.topics.slice(1)
+                );
+                const buildAction = this.buildUpAction({
+                  ...options,
+                  action: 'bridge',
+                  addresses: [provider],
+                  tokens: [liquidityPool.tokens[0]],
+                  tokenAmounts: [amount],
+                });
+                buildAction.addition = {
+                  fromChain: LayerZeroChainIdMaps[Number(creditChainPathEvent.chainId)]
+                    ? LayerZeroChainIdMaps[Number(creditChainPathEvent.chainId)].toString()
+                    : `LayerZeroChainId:${creditChainPathEvent.chainId.toString()}`,
+                  toChain: EnvConfig.blockchains[options.chain].chainId.toString(),
+                };
+                actions.push(buildAction);
+              }
+            }
+
+            break;
+          }
+          case StargateEventSignatures.Mint:
+          case StargateEventSignatures.Burn: {
+            const amount = formatFromDecimals(event.amountSD.toString(), liquidityPool.tokens[0].decimals);
+            const provider = event.to ? normalizeAddress(event.to) : normalizeAddress(event.from);
+            const action: KnownAction = signature === StargateEventSignatures.Mint ? 'deposit' : 'withdraw';
+
+            actions.push(
+              this.buildUpAction({
+                ...options,
+                action: action,
+                addresses: [provider],
+                tokens: [liquidityPool.tokens[0]],
+                tokenAmounts: [amount],
+              })
+            );
+
+            break;
+          }
         }
       }
     }
 
-    return null;
+    return actions;
   }
 }

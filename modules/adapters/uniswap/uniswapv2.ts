@@ -1,149 +1,115 @@
 import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
 
-import EnvConfig from '../../../configs/envConfig';
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
+import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
-import { TransactionAction, UniLiquidityPool } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { UniswapAdapter } from './uniswap';
+import { KnownAction, TransactionAction } from '../../../types/domains';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import { UniswapAbiMappings, UniswapEventSignatures } from './abis';
+import UniswapLibs from './libs';
+import UniswapAdapter from './uniswap';
 
-const Signatures = {
-  Swap: '0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822',
-  Mint: '0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c6fef26394f4c03821c4f',
-  Burn: '0xdccd412f0b1252819cb1fd330b93224ca42612892bb3f4f789976e6d81936496',
-  PairCreated: '0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9',
-};
-
-export class Uniswapv2Adapter extends UniswapAdapter {
+export default class Uniswapv2Adapter extends UniswapAdapter {
   public readonly name: string = 'adapter.uniswapv2';
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers);
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, config);
 
-    this.eventMappings = {
-      [Signatures.Swap]: EventSignatureMapping[Signatures.Swap],
-      [Signatures.Mint]: EventSignatureMapping[Signatures.Mint],
-      [Signatures.Burn]: EventSignatureMapping[Signatures.Burn],
-      [Signatures.PairCreated]: EventSignatureMapping[Signatures.PairCreated],
-    };
+    this.eventMappings[UniswapEventSignatures.SwapV2] = UniswapAbiMappings[UniswapEventSignatures.SwapV2];
+    this.eventMappings[UniswapEventSignatures.MintV2] = UniswapAbiMappings[UniswapEventSignatures.MintV2];
+    this.eventMappings[UniswapEventSignatures.BurnV2] = UniswapAbiMappings[UniswapEventSignatures.BurnV2];
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
+  /**
+   * @description turns a raw event log into TransactionActions
+   *
+   * @param options include raw log entry and transaction context
+   */
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
 
-    const signature = topics[0];
-    const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
+    const signature = options.log.topics[0];
+    if (!this.eventMappings[signature]) {
+      return actions;
+    }
 
-    if (signature === Signatures.Swap || signature === Signatures.Mint || signature === Signatures.Burn) {
-      // first, we use known pools from configs
-      let poolConfig: UniLiquidityPool | null = await this.getPoolConfig(chain, address);
+    let liquidityPool = await this.getLiquidityPool(options.chain, options.log.address);
+    if (!liquidityPool && options.onchain) {
+      liquidityPool = await UniswapLibs.getLiquidityPoolOnchain({
+        chain: options.chain,
+        address: options.log.address,
+        version: 'univ2',
+        protocol: this.config.protocol,
+      });
 
-      if (poolConfig) {
-        const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
-
-        switch (signature) {
-          case Signatures.Swap: {
-            const amount0In = new BigNumber(event.amount0In.toString()).dividedBy(
-              new BigNumber(10).pow(poolConfig.token0.decimals)
-            );
-            const amount1In = new BigNumber(event.amount1In.toString()).dividedBy(
-              new BigNumber(10).pow(poolConfig.token1.decimals)
-            );
-            const amount0Out = new BigNumber(event.amount0Out.toString()).dividedBy(
-              new BigNumber(10).pow(poolConfig.token0.decimals)
-            );
-            const amount1Out = new BigNumber(event.amount1Out.toString()).dividedBy(
-              new BigNumber(10).pow(poolConfig.token1.decimals)
-            );
-
-            const amountIn = amount0In.gt(0) ? amount0In.toString(10) : amount1In.toString(10);
-            const amountOut = amount0Out.gt(0) ? amount0Out.toString(10) : amount1Out.toString(10);
-
-            const tokenIn = amount0In.gt(0) ? poolConfig.token0 : poolConfig.token1;
-            const tokenOut = amount0In.gt(0) ? poolConfig.token1 : poolConfig.token0;
-
-            const sender = await this.getSenderAddress(options);
-            const to = normalizeAddress(event.to);
-
-            return {
-              protocol: this.config.protocol,
-              action: 'swap',
-              addresses: [to, sender],
-              tokens: [tokenIn, tokenOut],
-              tokenAmounts: [amountIn, amountOut],
-              readableString: `${sender} swaps ${amountIn} ${tokenIn.symbol} for ${amountOut} ${tokenOut.symbol} on ${this.config.protocol} chain ${chain}`,
-            };
-          }
-          case Signatures.Mint: {
-            const amount0 = new BigNumber(event.amount0.toString())
-              .dividedBy(new BigNumber(10).pow(poolConfig.token0.decimals))
-              .toString(10);
-            const amount1 = new BigNumber(event.amount1.toString())
-              .dividedBy(new BigNumber(10).pow(poolConfig.token1.decimals))
-              .toString(10);
-            const sender = await this.getSenderAddress(options);
-            const caller = normalizeAddress(event.sender);
-
-            return {
-              protocol: this.config.protocol,
-              action: 'deposit',
-              addresses: [caller, sender],
-              tokens: [poolConfig.token0, poolConfig.token1],
-              tokenAmounts: [amount0, amount1],
-              readableString: `${caller} adds ${amount0} ${poolConfig.token0.symbol} and ${amount1} ${poolConfig.token1.symbol} on ${this.config.protocol} chain ${chain}`,
-            };
-          }
-          case Signatures.Burn: {
-            const amount0 = new BigNumber(event.amount0.toString())
-              .dividedBy(new BigNumber(10).pow(poolConfig.token0.decimals))
-              .toString(10);
-            const amount1 = new BigNumber(event.amount1.toString())
-              .dividedBy(new BigNumber(10).pow(poolConfig.token1.decimals))
-              .toString(10);
-            const sender = await this.getSenderAddress(options);
-            const to = normalizeAddress(event.to);
-
-            return {
-              protocol: this.config.protocol,
-              action: 'withdraw',
-              addresses: [to, sender],
-              tokens: [poolConfig.token0, poolConfig.token1],
-              tokenAmounts: [amount0, amount1],
-              readableString: `${to} removes ${amount0} ${poolConfig.token0.symbol} and ${amount1} ${poolConfig.token1.symbol} on ${this.config.protocol} chain ${chain}`,
-            };
-          }
+      if (liquidityPool) {
+        if (!this.supportedContract(options.chain, liquidityPool.factory)) {
+          liquidityPool = null;
         }
       }
-    } else if (
-      signature === Signatures.PairCreated &&
-      this.config.contracts[chain] &&
-      this.config.contracts[chain].indexOf(address) !== -1
-    ) {
-      // new pair created on factory contract
-      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
-      const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event.token0);
-      const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event.token1);
-      const factory = normalizeAddress(address);
-      const sender = await this.getSenderAddress(options);
+    }
+    if (liquidityPool && this.supportedContract(options.chain, liquidityPool.factory)) {
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event: any = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
 
-      if (token0 && token1) {
-        return {
-          protocol: this.config.protocol,
-          action: 'createLiquidityPool',
-          addresses: [factory, sender],
-          tokens: [token0, token1],
-          tokenAmounts: ['0', '0'],
-          readableString: `${sender} create liquidity pool ${token0.symbol} and ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
-          addition: {
-            pairAddress: normalizeAddress(event.pair),
-          },
-        };
+      switch (signature) {
+        case UniswapEventSignatures.SwapV2: {
+          const amount0In = new BigNumber(event.amount0In.toString());
+
+          const tokenIn = amount0In.gt(0) ? liquidityPool.tokens[0] : liquidityPool.tokens[1];
+          const tokenOut = amount0In.gt(0) ? liquidityPool.tokens[1] : liquidityPool.tokens[0];
+          const amountIn = amount0In.gt(0)
+            ? formatFromDecimals(event.amount0In.toString(), tokenIn.decimals)
+            : formatFromDecimals(event.amount1In.toString(), tokenIn.decimals);
+          const amountOut = amount0In.gt(0)
+            ? formatFromDecimals(event.amount1Out.toString(), tokenOut.decimals)
+            : formatFromDecimals(event.amount0Out.toString(), tokenOut.decimals);
+
+          const sender = normalizeAddress(event.sender);
+          const recipient = normalizeAddress(event.to);
+
+          actions.push({
+            chain: options.chain,
+            protocol: this.config.protocol,
+            action: 'swap',
+            transactionHash: options.log.transactionHash,
+            logIndex: `${options.log.logIndex}:0`,
+            blockNumber: Number(options.log.blockNumber),
+            contract: normalizeAddress(options.log.address),
+            addresses: [sender, recipient],
+            tokens: [tokenIn, tokenOut],
+            tokenAmounts: [amountIn, amountOut],
+          });
+          break;
+        }
+        case UniswapEventSignatures.MintV2:
+        case UniswapEventSignatures.BurnV2: {
+          const amount0 = formatFromDecimals(event.amount0.toString(), liquidityPool.tokens[0].decimals);
+          const amount1 = formatFromDecimals(event.amount1.toString(), liquidityPool.tokens[1].decimals);
+          const sender = normalizeAddress(event.sender);
+          const action: KnownAction = signature === UniswapEventSignatures.MintV2 ? 'deposit' : 'withdraw';
+          actions.push({
+            chain: options.chain,
+            protocol: this.config.protocol,
+            action: action,
+            transactionHash: options.log.transactionHash,
+            logIndex: `${options.log.logIndex}:0`,
+            blockNumber: Number(options.log.blockNumber),
+            contract: normalizeAddress(options.log.address),
+            addresses: [sender],
+            tokens: [liquidityPool.tokens[0], liquidityPool.tokens[1]],
+            tokenAmounts: [amount0, amount1],
+          });
+          break;
+        }
       }
     }
 
-    return null;
+    return actions;
   }
 }

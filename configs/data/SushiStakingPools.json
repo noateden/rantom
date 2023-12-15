@@ -1,0 +1,6775 @@
+[
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 0,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x06da0fd433c1a5d7a4faa01111c044910a184553",
+      "symbol": "WETH-USDT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 1,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x397ff1542f962076d0bfe58ea045ffa2d347aca0",
+      "symbol": "USDC-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 2,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc3d03e4f041fd4cd388c549ee2a29a9e5075882f",
+      "symbol": "DAI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 3,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf1f85b2c54a2bd284b1cf4141d64fd171bd85539",
+      "symbol": "sUSD-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 4,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x31503dcb60119a812fee820bb7042752019f2355",
+      "symbol": "COMP-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 5,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x5e63360e891bd60c69445970256c260b0a6a54c6",
+      "symbol": "LEND-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 6,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa1d7b2d891e3a1f9ef4bbc5be20630c2feb1c470",
+      "symbol": "SNX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 7,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x001b6450083e531a5a7bf310bd2c1af4247e23d4",
+      "symbol": "UMA-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 8,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc40d16476380e4037e6b1a2594caf6a6cc8da967",
+      "symbol": "LINK-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 9,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa75f7c2f025f470355515482bde9efa8153536a8",
+      "symbol": "BAND-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 10,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xcb2286d9471cc185281c4f763d34a962ed212962",
+      "symbol": "WETH-AMPL SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 11,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x088ee5007c98a9677165d78dd2109ae4a3d04d0c",
+      "symbol": "YFI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 12,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x795065dcc9f64b5614c407a6efdc400da6221fb0",
+      "symbol": "SUSHI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 13,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x611cde65dea90918c0078ac0400a72b0d25b9bb1",
+      "symbol": "REN-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 14,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xaad22f5543fcdaa694b68f94be177b561836ae57",
+      "symbol": "sUSD-$BASED UNI-V2",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 15,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x117d4288b3635021a3d612fe05a3cbf5c717fef2",
+      "symbol": "SRM-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 16,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x95b54c8da12bb23f7a5f6e26c38d04acc6f81820",
+      "symbol": "YAMv2-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 17,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x58dc5a51fe44589beb22e8ce67720b5bc5378009",
+      "symbol": "WETH-CRV SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 18,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xdafd66636e2561b0284edde37e42d192f2844d40",
+      "symbol": "UNI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 19,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x36e2fcccc59e5747ff63a03ea2e5c0c2c14911e7",
+      "symbol": "xSUSHI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 20,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0cfe7968e7c34a51217a7c9b9dc1690f416e027e",
+      "symbol": "cDAI-DAI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 21,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xceff51756c56ceffca006cd410b03ffc46dd3a58",
+      "symbol": "WBTC-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 22,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf169cea51eb51774cf107c88309717dda20be167",
+      "symbol": "CREAM-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 23,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x17b3c19bd640a59e832ab73eccf716cb47419846",
+      "symbol": "WETH-MEME SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 24,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfcff3b04c499a57778ae2cf05584ab24278a7fcb",
+      "symbol": "wNXM-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 25,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x382c4a5147fd4090f7be3a9ff398f95638f5d39e",
+      "symbol": "yUSD-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 26,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x2024324a99231509a3715172d4f4f4e751b38d4d",
+      "symbol": "WBTC-yUSD SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 27,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0be88ac4b5c81700acf3a606a52a31c261a24a35",
+      "symbol": "CRO-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 28,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x518d6ce2d7a689a591bf46433443c31615b206c5",
+      "symbol": "WBTC-renBTC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 29,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe954c2d9ff2a4d260dcd32386b1f9fc8135d2522",
+      "symbol": "DUMMY",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 31,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x6463bd6026a2e7bfab5851b62969a92f7cca0eb6",
+      "symbol": "HEGIC-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 32,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x2dbc7dd86c6cd87b525bd54ea73ebeebbc307f68",
+      "symbol": "WBTC-tBTCv1 SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 33,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xba13afecda9beb75de5c56bbaf696b880a5a50dd",
+      "symbol": "MKR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 34,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x68c6d02d44e16f1c20088731ab032f849100d70f",
+      "symbol": "CORE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 35,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x269db91fc3c7fcc275c2e6f22e5552504512811c",
+      "symbol": "PICKLE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 36,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x742c15d71ea7444964bc39b0ed729b3729adc361",
+      "symbol": "WETH-OMG SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 37,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd75ea151a61d06868e31f8988d28dfe5e9df57b4",
+      "symbol": "AAVE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 38,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x15e86e6f65ef7ea1dbb72a5e51a07926fb1c82e3",
+      "symbol": "WETH-AMP SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 39,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd597924b16cc1904d808285bc9044fd51ceeead7",
+      "symbol": "xSUSHI-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 40,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x5a2943b25ce0678dc0b351928d2db331a55d94ea",
+      "symbol": "GHST-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 41,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x53aabccae8c1713a6a150d9981d2ee867d0720e8",
+      "symbol": "WETH-RARI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 42,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x34b13f8cd184f55d0bd4dd1fe6c07d46f245c7ed",
+      "symbol": "DPI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 43,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xbcedc25cbb0ea44e03e41dc2d00d54fe6d4646db",
+      "symbol": "tBTCv1-vBTC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 44,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0f82e57804d0b1f6fab2370a43dcfad3c7cb239c",
+      "symbol": "YAMv3-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 45,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfb736dad22b879f055c7aebf3a2e8a197f923ea1",
+      "symbol": "REDUCE",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 46,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x69b39b89f9274a16e8a19b78e5eb47a4d91dac9e",
+      "symbol": "FARM-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 47,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0289b9cd5859476ce325aca04309d36addcebdaa",
+      "symbol": "WETH-renBTC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 48,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x97f34c8e5992eb985c5f740e7ee8c7e48a1de76a",
+      "symbol": "DOUGH-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 49,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9fc5b87b74b9bd239879491056752eb90188106d",
+      "symbol": "STAKE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 50,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x6f58a1aa0248a9f794d13dc78e74fc75140956d7",
+      "symbol": "RSR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 51,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xee6d78755e06c31ae7a5ea2b29b35c073dfc00a9",
+      "symbol": "tBTCv1-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 52,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x4f871f310ad0e8a170db0021c0ce066859d37469",
+      "symbol": "AUDIO-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 53,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x364248b2f1f57c5402d244b2d469a35b4c0e9dab",
+      "symbol": "AKRO-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 54,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd7c2a4aa31e1bf08dc7ff44c9980fa8573e10c1b",
+      "symbol": "WETH-HEZ SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 55,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x033ecd066376afec5e6383bc9f1f15be4c62dc89",
+      "symbol": "YAX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 56,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe4455fdec181561e9ffe909dde46aaeaedc55283",
+      "symbol": "OUSD-USDT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 57,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0bff31d8179da718a7ee3669853cf9978c90a24a",
+      "symbol": "WETH-SURF SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 58,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xaf988aff99d3d0cb870812c325c588d8d8cb7de8",
+      "symbol": "KP3R-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 59,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc5fa164247d2f8d68804139457146efbde8370f6",
+      "symbol": "WETH-SEEN SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 60,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x35a0d9579b1e886702375364fe9c540f97e4517b",
+      "symbol": "WETH-AXS SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 61,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x5e94cb9c309775763edbd4abf248a229880e68c6",
+      "symbol": "COVERCHEF",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 62,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xdc549b8199ec396fd9ff7e431cfc3cf9b40f2163",
+      "symbol": "AMPLIQTEST",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 63,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xdff71165a646be71fcfbaa6206342faa503aed5d",
+      "symbol": "ESD-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 64,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x378b4c5f2a8a0796a8d4c798ef737cf00ae8e667",
+      "symbol": "ANTv1-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 65,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xef4f1d5007b4ff88c1a56261fec00264af6001fb",
+      "symbol": "PNK-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 66,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x1c580cc549d03171b13b55074dc1658f60641c73",
+      "symbol": "CVP-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 67,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf45d97f9d457661783146d63dd13da20ce9bf847",
+      "symbol": "YETI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 68,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x4441eb3076f828d5176f4fe74d7c775542dae106",
+      "symbol": "ARCH-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 69,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfb3cd0b8a5371fe93ef92e3988d30df7931e2820",
+      "symbol": "WETH-INJ SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 70,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x44d34985826578e5ba24ec78c93be968549bb918",
+      "symbol": "BOR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 71,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x23a9292830fc80db7f563edb28d2fe6fb47f8624",
+      "symbol": "SFI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 72,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb12aa722a3a4566645f079b6f10c89a3205b6c2c",
+      "symbol": "DFD-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 73,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x110492b31c59716ac47337e616804e3e3adc0b4a",
+      "symbol": "WBTC-BADGER SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 74,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9360b76f8f5f932ac33d46a3ce82ad6c52a713e5",
+      "symbol": "ZLOT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 75,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa73df646512c82550c2b3c0324c4eedee53b400c",
+      "symbol": "INDEX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 76,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xadeaa96a81ebba4e3a5525a008ee107385d588c3",
+      "symbol": "SWAG-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 77,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf1360c4ae1cead17b588ec1111983d2791b760d3",
+      "symbol": "JRT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 78,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0040a2cebc65894bc2cfb57565f9acfa33fab137",
+      "symbol": "WETH-UWL SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 79,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9cd028b1287803250b1e226f0180eb725428d069",
+      "symbol": "ICHI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 80,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x67e475577b4036ee4f0f12fa2d538ed18cef48e3",
+      "symbol": "ROPE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 81,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x53e9fb796b2feb4b3184afdf601c2a2797548d88",
+      "symbol": "oBTC-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 82,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe5f06db4f3473e7e35490f1f98017728496fe81e",
+      "symbol": "mbBASED-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 83,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x26d8151e631608570f3c28bec769c3afee0d73a3",
+      "symbol": "USDC-DSD SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 84,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xab3f8e0214d862bf7965d3cec7431d7c1a85cb34",
+      "symbol": "nTrump-DAI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 85,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x8b00ee8606cc70c2dce68dea0cefe632cca0fb7b",
+      "symbol": "UST-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 86,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xaa500101c73065f755ba9b902d643705ef2523e3",
+      "symbol": "WETH-FNX SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 87,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xeb1b57d4f7d4557b032b66c422bc94a8e4af859e",
+      "symbol": "WETH-BCP SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 88,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x5f30aac9a472f6c33d5284f9d340c0d57ef33697",
+      "symbol": "YPIE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 89,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x83e5e791f4ab29d1b0941bc4d00f3d6027d1dae5",
+      "symbol": "DEFI+L-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 90,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd8b8b575c943f3d63638c9563b464d204ed8b710",
+      "symbol": "BASE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 91,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc2b0f2a7f736d3b908bdde8608177c8fc28c1690",
+      "symbol": "DDX-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 92,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb2c29e311916a346304f83aa44527092d5bd4f0f",
+      "symbol": "MPH-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 93,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x98c2f9d752e044dc2e1f1743bf0b76a7096eceb2",
+      "symbol": "USDT-FRONT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 94,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x8c2e6a4af15c94cf4a86cd3c067159f08571d780",
+      "symbol": "WETH-UOP SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 95,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfceaaf9792139bf714a694f868a215493461446d",
+      "symbol": "TRU-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 96,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf55c33d94150d93c2cfb833bcca30be388b14964",
+      "symbol": "ALPHA-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 97,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xca658217ce94dfb2156a49a8fad0ff752cac39c2",
+      "symbol": "ALPA-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 98,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x71817445d11f42506f2d7f54417c935be90ca731",
+      "symbol": "WETH-CRETH2 SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 99,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb1d38026062ac10feda072ca0e9b7e35f1f5795a",
+      "symbol": "DUSD-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 100,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x201e6a9e75df132a8598720433af35fe8d73e94d",
+      "symbol": "ANT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 101,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x66ae32178640813f3c32a9929520bfe4fef5d167",
+      "symbol": "COVER-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 102,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x049a1df43ca577c1db44a79cf673b443beed9f89",
+      "symbol": "SAFFRONCHEF",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 103,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9a13867048e01c663ce8ce2fe0cdae69ff9f35e3",
+      "symbol": "WBTC-DIGG SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 104,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x31d64f9403e82243e71c2af9d8f56c7dbe10c178",
+      "symbol": "NFTX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 105,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa8aec03d5cf2824fd984ee249493d6d4d6740e61",
+      "symbol": "API3-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 106,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x8cd7dadc8e11c8706763e0de7332f5ea91e04e35",
+      "symbol": "WETH-COMBO SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 107,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x51f5953659e7d63cf0ef60b8674ef819c225169e",
+      "symbol": "HBTC-CREAM SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 108,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x54bcf4948e32a8706c286416e3ced37284f17fc9",
+      "symbol": "Mars-USDT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 109,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc558f600b34a5f69dd2f0d06cb8a88d829b7420a",
+      "symbol": "LDO-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 110,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x87bf6386f7611afa452c642c2835a305a692607d",
+      "symbol": "BAC-BAB SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 111,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xbe1e98685fb293144325440c16f69954ffcb790c",
+      "symbol": "WETH-pWING SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 112,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x760166fa4f227da29ecac3bec348f5fa853a1f3c",
+      "symbol": "TUSD-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 113,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x7b98e476de2c50b6fa284dbd410dd516f9a72b30",
+      "symbol": "ALEPH-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 114,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x02c6260ce42ea5cd055911ed0d4857ecd4583740",
+      "symbol": "SPANK-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 115,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x663242d053057f317a773d7c262b700616d0b9a0",
+      "symbol": "MTA-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 116,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0eee7f7319013df1f24f5eaf83004fcf9cf49245",
+      "symbol": "BAO-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 117,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x18a797c7c70c1bf22fdee1c09062aba709cacf04",
+      "symbol": "WETH-RGT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 118,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa7f11e026a0af768d285360a855f2bded3047530",
+      "symbol": "IDLE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 119,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x2ee59d346e41478b9dc2762527facf2082022a29",
+      "symbol": "USDT-ankrETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 120,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x22def8cf4e481417cb014d9dc64975ba12e3a184",
+      "symbol": "SDT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 121,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x41328fdba556c8c969418ccccb077b7b8d932aa5",
+      "symbol": "GNO-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 122,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfa8c3f98debf3d0a192e2edf9182352332def35c",
+      "symbol": "BAC-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 123,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfa5bc40c3bd5afa8bc2fe6b84562fee16fb2df5f",
+      "symbol": "WETH-ankrETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 124,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xac63290a9d32cc01c7e2f5d02fc4225f843168a4",
+      "symbol": "LONCHEF",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 125,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9386d6ebbbb9f8002c5238dbd72b2e61ad7d9011",
+      "symbol": "MITHCHEF",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 126,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xed4290b3c49df20319b3132f7007dcb3b0522e34",
+      "symbol": "FRAXCHEF",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 127,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x17a2194d55f52fd0c711e0e42b41975494bb109b",
+      "symbol": "ARMOR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 128,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x46acb1187a6d83e26c0bb46a57ffeaf23ad7851e",
+      "symbol": "WETH-ASSY SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 129,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf79a07cd3488bbafb86df1bad09a6168d935c017",
+      "symbol": "ALPHA-ibETHv2 SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 130,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb46736888247c68c995b156ca86426ff32e27cc9",
+      "symbol": "renDOGE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 131,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0c48ae092a7d35be0e8ad0e122a02351ba51fedd",
+      "symbol": "NCT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 132,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x10b47177e92ef9d5c6059055d92ddf6290848991",
+      "symbol": "WETH-yveCRV SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 133,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb270176ba6075196df88b855c3ec7776871fdb33",
+      "symbol": "TORN-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 134,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf5a434fbaa1c00b33ea141122603c43de86cc9fe",
+      "symbol": "mBTC-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 135,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x132eeb05d5cb6829bd34f552cde0b6b708ef5014",
+      "symbol": "VSP-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 136,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xbbfd9b37ec6ea1ca612ab4adef6d8c6ece1a4134",
+      "symbol": "WETH-YLD SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 137,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x1c615074c281c5d88acc6914d408d7e71eb894ee",
+      "symbol": "WETH-STETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 138,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x96f5b7c2be10dc7de02fa8858a8f1bd19c2fa72a",
+      "symbol": "DAO-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 139,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x7b504a15ef05f4eed1c07208c5815c49022a0c19",
+      "symbol": "WETH-GRT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 140,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0e26a21013f2f8c0362cfae608b4e69a249d5efc",
+      "symbol": "FTM-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 141,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xec78bd3b23ac867fcc028f2db405a1d9a0a2f712",
+      "symbol": "WETH-ANY SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 142,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x092493a22375de1b17583d924abf9e8bf884491c",
+      "symbol": "PUNK-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 143,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfd38565ef22299d491055f0c508f62dd9a669f0f",
+      "symbol": "MASK-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 144,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0267bd35789a5ce247fff6cb1d597597e003cc43",
+      "symbol": "PUNK-BASIC-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 145,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xca2ae9c5c491f497dc5625feaef4572076c946c5",
+      "symbol": "PUNK-FEMALE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 146,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x608f8af5fd49b5a5421f53f79920c45b96bda83f",
+      "symbol": "PUNK-ATTR-4-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 147,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd54a895623552853f8d673981cc32eb8f3929dfb",
+      "symbol": "PUNK-ATTR-5-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 148,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0e7e8dde18e4016ccc15f12301a47ef7b87bdafa",
+      "symbol": "WETH-PUNK-ZOMBIE SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 149,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf39ff863730268c9bb867b3a69d031d1c1614b31",
+      "symbol": "XFT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 150,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0bc5ae46c32d99c434b7383183aca16dd6e9bdc8",
+      "symbol": "WETH-ZRX SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 151,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x3cf1cf47bc87c23cd9410549bd8a75e82c1c73cf",
+      "symbol": "USDN-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 152,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa3dfbf2933ff3d96177bde4928d0f5840ee55600",
+      "symbol": "DERI-USDT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 153,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x93e2f3a8277e0360081547d711446e4a1f83546d",
+      "symbol": "PREMIA-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 154,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x938625591adb4e865b882377e2c965f9f9b85e34",
+      "symbol": "BANK-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 155,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x38a0469520534fc70c9c0b9de4b8649e36a2ae3e",
+      "symbol": "LINA-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 156,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x8486c538dcbd6a707c5b3f730b6413286fe8c854",
+      "symbol": "PERP-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 157,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9c86bc3c72ab97c2234cba8c6c7069009465ae86",
+      "symbol": "WSCRT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 158,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb0484fb3ac155aaf7d024b20f1a569ddd6332c32",
+      "symbol": "USDP-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 159,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfe308fe2eb938f772807aec2e87fc762d47c40e0",
+      "symbol": "USDP-DUCK SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 160,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd3c41c080a73181e108e0526475a690f3616a859",
+      "symbol": "DEXTF-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 161,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x28d70b2d5ada1d8de7f24711b812fd7ab3c0fbc5",
+      "symbol": "ONXCHEF",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 162,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x1803a3386d44f65746403060ab0137682f554484",
+      "symbol": "oneVBTC-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 163,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x05cc2e064e0b48e46015ead9961f1391d74e5f83",
+      "symbol": "TRDL-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 164,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x75382c52b6f90b3f8014bfcadac2386513f1e3bc",
+      "symbol": "RLC-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 165,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf9440fedc72a0b8030861dcdac39a75b544e7a3c",
+      "symbol": "BDIGG-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 166,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0a54d4b378c8dbfc7bc93be50c85debafdb87439",
+      "symbol": "BBADGER-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 167,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x87b6f3a2dc6e541a9ce40e58f517953782ae614e",
+      "symbol": "YLA-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 168,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x90825add1ad30d7dcefea12c6704a192be6ee94e",
+      "symbol": "PUNK-BASIC-NFTX SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 169,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x31fa985bb0c282a814e7f3f0dce88b2a44197f60",
+      "symbol": "MASK-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 170,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf13eef1c6485348b9c9fa0d5df2d89accc5b0147",
+      "symbol": "WETH-ROOK SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 171,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x5e496b7d72362add1eea7d4903ee2732cd00587d",
+      "symbol": "SX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 172,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xbe71372995e8e920e4e72a29a51463677a302e8d",
+      "symbol": "DFX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 173,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x328dfd0139e26cb0fef7b0742b49b0fe4325f821",
+      "symbol": "INV-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 174,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb5c40e038c997c2946b24dc179f7cdcd279d8847",
+      "symbol": "STFIRO-STETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 175,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xee35e548c7457fcdd51ae95ed09108be660ea374",
+      "symbol": "OCEAN-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 176,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf5ca27927ffb16bd8c870dcb49750146cce8217c",
+      "symbol": "WOO-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 177,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x91a48c69ec3f3ce855fe5054f82d2bef8fd66c43",
+      "symbol": "pONT-pWING SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 178,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa1f967f25ae32bd3435e45ea8657de16ce5a4ae6",
+      "symbol": "DNT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 179,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9e48fadf799e0513d2ef4631478ea186741fa617",
+      "symbol": "AERGO-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 180,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x7835cb043e8d53a5b361d489956d6c30808349da",
+      "symbol": "WBTC-POLY SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 181,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc7ff546c6cbc87ad9f6f557db5a0df5c742ca440",
+      "symbol": "EGT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 182,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x033f4a33823595a6dd9df0672fd94de32c65c415",
+      "symbol": "stZEN-STETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 183,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa872d244b8948dfd6cb7bd19f79e7c1bfb7db4a0",
+      "symbol": "MUST-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 184,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x750d711277fd27d1ec5256f13f5110e097713a95",
+      "symbol": "MARK-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 185,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x34d7d7aaf50ad4944b70b320acb24c95fa2def7c",
+      "symbol": "OHMv1-DAI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 186,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x577959c519c24ee6add28ad96d3531bc6878ba34",
+      "symbol": "POOL-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 187,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x662511a91734aea8b06ef770d6ed51cc539772d0",
+      "symbol": "WETH-YLD/YieldApp SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 188,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa30911e072a0c88d55b5d0a0984b66b0d04569d0",
+      "symbol": "BZRX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 189,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x08af656295e0ea970fc4e35a75e62e5aade3f9af",
+      "symbol": "MASTERCHEFDUMMY",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 190,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xff7d29c7277d8a8850c473f0b71d7e5c4af45a50",
+      "symbol": "kmWETH/USDT-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 191,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb7b45754167d65347c93f3b28797887b4b6cd2f3",
+      "symbol": "kmWETH/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 192,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x5f92e4300024c447a103c161614e6918e794c764",
+      "symbol": "kmWETH/DAI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 193,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf678b4a096bb49309b81b2a1c8a966ef5f9756ba",
+      "symbol": "kmWBTC/USDT-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 194,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x418bc3ff0ba33ad64931160a91c92fa26b35acb0",
+      "symbol": "kmWBTC/DAI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 195,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x668edab8a38a962d30602d6fa7ca489484ee3224",
+      "symbol": "kmWBTC/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 196,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc84fb1f76cbdd3b3491e81fe3ff811248d0407e9",
+      "symbol": "kmLINK/USDT-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 197,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x561770b93d0530390eb70e17acbbd6e5d2f52a31",
+      "symbol": "kmLINK/DAI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 198,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x4f68e70e3a5308d759961643afcadfc6f74b30f4",
+      "symbol": "kmLINK/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 199,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0a8d9241998c91747ce1672a0c31af2b33bd87bd",
+      "symbol": "kmUSDC/1INCH-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 200,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0a7cc061f0ccd2a1b6f07762663a9ec10720fcc5",
+      "symbol": "kmUSDC/AAVE-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 201,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x002469ed116e8e2764f2e0869bd95317ee634334",
+      "symbol": "kmUSDC/BADGER-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 202,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0ee6f615d982cc1ad4bb9ae3e9bf02ed5b68858e",
+      "symbol": "kmUSDC/ALPHA-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 203,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf71e398b5cbb473a3378bf4335256295a8ed713d",
+      "symbol": "kmUSDC/BZRX-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 204,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x2bb55aad93dee6217bb7887fe563718e5b5976cb",
+      "symbol": "kmUSDC/COMP-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 205,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x45da3a59850525aab0aca23f0b11f442d4b74c85",
+      "symbol": "kmUSDC/COVER-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 206,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xcd769f48151ca671f8545e40efe03ff7ffa157fb",
+      "symbol": "kmUSDC/CREAM-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 207,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x795feb1c35dc07991bfd23ab74378885ec86c233",
+      "symbol": "kmUSDC/GRT-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 208,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x51d24429a72fa5be5b588a0de83a45f12fd57e57",
+      "symbol": "kmUSDC/HEGIC-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 209,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa62d2e74d41d3477f7726e8f6a845269799df573",
+      "symbol": "kmUSDC/LINK-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 210,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc2a0254dfe1ac6d39fe17f11ef1af0a3faf87448",
+      "symbol": "kmUSDC/REN-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 211,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb5a98cd1030a7bb28716217e97d18cfa2aac4fc7",
+      "symbol": "kmUSDC/SRM-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 212,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x659b4642ff3d0719f71eae903ce9f46b20767642",
+      "symbol": "kmUSDC/SUSHI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 213,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x81f535db4df20271be8ab5caff29ba70b3709f90",
+      "symbol": "kmUSDC/UNI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 214,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x891535966bec70d447882c3eb1ab3926ddc5f788",
+      "symbol": "kmUSDC/wNXM-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 215,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x82e9c2c3236de403509de0472f2f3e16077bc42d",
+      "symbol": "kmUSDC/YFI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 216,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x663045d8ce1c61b9e0af2c3469f17d3c152a66ba",
+      "symbol": "kmSUSHI/UNI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 217,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb89313816cc3b2f9ec885860274c266355f2306d",
+      "symbol": "kmUNI/SUSHI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 218,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x263716dee5b74c5baed665cb19c6017e51296fa2",
+      "symbol": "kmSUSHI/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 219,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf9a4e1e117818fc98f9808f3df4d7b72c0df4160",
+      "symbol": "kmSUSHI/USDT-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 220,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x05ad6d7db640f4382184e2d82dd76b4581f8f8f4",
+      "symbol": "kmSUSHI/DAI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 221,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xbe9081e742d9e24aa0584a4f77382062f033752f",
+      "symbol": "kmWETH/1INCH-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 222,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x65089e337109ca4caff78b97d40453d37f9d23f8",
+      "symbol": "kmYFI/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 223,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x40a12179260997c55619de3290c5b9918588e791",
+      "symbol": "kmAAVE/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 224,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa01f36655fc3ae0f618b29943c4ac242d71f6f50",
+      "symbol": "kmALPHA/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 225,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa898974410f7e7689bb626b41bc2292c6a0f5694",
+      "symbol": "kmBADGER/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 226,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xdf55bd0a205ec067ab1cacfaeef708cf1d93ecfd",
+      "symbol": "kmRUNE/USDT-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 227,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x809f2b68f59272740508333898d4e9432a839c75",
+      "symbol": "kmUMA/DAI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 228,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x15785398cf9fb677ddcbdb1133585a4d0c65c2d9",
+      "symbol": "kmDAI/CRV-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 229,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa16c84206a6b69c01833101133cc78a47602349d",
+      "symbol": "kmDPI/sUSD-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 230,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9461173740d27311b176476fa27e94c681b1ea6b",
+      "symbol": "YVBOOST-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 231,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0c365789dbbb94a29f8720dc465554c587e897db",
+      "symbol": "AXS-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 232,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x8d782c5806607e9aafb2ac38c1da3838edf8bd03",
+      "symbol": "BDI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 233,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x34d25a4749867ef8b62a0cd1e2d7b4f7af167e01",
+      "symbol": "BASK-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 234,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x164fe0239d703379bddde3c80e4d4800a1cd452b",
+      "symbol": "BTC2x-FLI-WBTC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 235,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x18d98d452072ac2eb7b74ce3db723374360539f1",
+      "symbol": "WBTC-IBBTC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 236,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x4fb3cae84a1264b8bb1911e8915f56660ec8178e",
+      "symbol": "ZIG-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 237,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x41848373dec2867ef3924e47b2ebd0ee645a54f9",
+      "symbol": "MM1-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 238,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x37922c69b08babcceae735a31235c81f1d1e8e43",
+      "symbol": "PENDLE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 239,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x69ab811953499eb253c5a69ae06275a42b97c9ae",
+      "symbol": "PMON-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 240,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x1bec4db6c3bc499f3dbf289f5499c30d541fec97",
+      "symbol": "MANA-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 241,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x8f9ef75cd6e610dd8acf8611c344573032fb9c3d",
+      "symbol": "WASABI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 242,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc79faeed130816b38e5996b79b1b3b6568cc599f",
+      "symbol": "DRC2-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 243,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd3da6236aecb6b55f571249c011b8eec340a418e",
+      "symbol": "WETH-$DG SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 244,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x6a091a3406e0073c3cd6340122143009adac0eda",
+      "symbol": "ILV-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 245,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x67adc7432ce278486cc84fbc705bf70b5ab33a95",
+      "symbol": "kmxSUSHI/UST-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 246,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x77f3a4fa35bac0ea6cfac69037ac4d3a757240a1",
+      "symbol": "kmxSUSHI/DAI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 247,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x6eafe077df3ad19ade1ce1abdf8bdf2133704f89",
+      "symbol": "kmxSUSHI/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 248,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x3485a7c8913d640245e38564ddc05bfb40104635",
+      "symbol": "kmxSUSHI/TUSD-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 249,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x17fb5f39c55903de60e63543067031ce2b2659ee",
+      "symbol": "kmxSUSHI/USDT-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 250,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa5e3142b7a5d59f778483a7e0fd3fe4e263388e9",
+      "symbol": "MASTERCHEFDUMMY",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 251,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x804be24f625c7e23edd9fa68e4582590c57ad2b3",
+      "symbol": "BLO-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 252,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x3bfca4fb8054fa42da3e77749b21450a1290beed",
+      "symbol": "LDN-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 253,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9ac60b8b33092c2c0b4ca5af0dec2bcb84657e12",
+      "symbol": "WETH-WOOFY SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 254,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0780b42b3c4caf41933cfc0040d2853363de20a7",
+      "symbol": "YFI-WOOFY SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 255,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x82ebcd936c9e938704b65027850e42393f8bc4d4",
+      "symbol": "NAOS-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 256,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x7229d526d5fd693720b88eb7129058db5d497bce",
+      "symbol": "UMB-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 257,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x87b918e76c92818db0c76a4e174447aee6e6d23f",
+      "symbol": "HH-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 258,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe73ad09925201f21b607ccada9a371c12a2f49c3",
+      "symbol": "LEV-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 259,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x2f8ac927aa94293461c75406e90ec0ccfb2748d9",
+      "symbol": "WETH-MLN SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 260,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb1eecfea192907fc4bf9c4ce99ac07186075fc51",
+      "symbol": "RULER-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 261,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0d2606158fa76b38c5d58db94b223c3bdcbbf57c",
+      "symbol": "kmCOMP/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 262,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x6d6542b07241107b16c71c20f035f190cda75237",
+      "symbol": "kmFTM/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 263,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x2bfd753982ff94f4d2503d6280a68fca5da114a7",
+      "symbol": "kmSNX/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 264,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x94a5a6d050b030e3a6d5211a70ae502afab98d73",
+      "symbol": "kmRUNE/sUSD-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 265,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x51c8796563d9cf2b3d938362a9522f21db2c690d",
+      "symbol": "kmREN/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 266,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0ea032decbfbea581d77d4a9b9c5e9db7c102a7c",
+      "symbol": "kmAAVE/DAI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 267,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x651c7e8fa0add8c4531440650369533105113282",
+      "symbol": "kmUNI/DAI-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 268,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x57024267e8272618f9c5037d373043a8646507e5",
+      "symbol": "BPT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 269,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x6469b34a2a4723163c4902dbbdea728d20693c12",
+      "symbol": "NEAR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 270,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x2c51eaa1bcc7b013c3f1d5985cdcb3c56dc3fbc1",
+      "symbol": "BANK/Bankless-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 271,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0589e281d35ee1acf6d4fd32f1fba60effb5281b",
+      "symbol": "alUSD-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 272,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd45afa3649e57a961c001b935ded1c79d81a9d23",
+      "symbol": "USDC-SAK3 SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 273,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x613c836df6695c10f0f4900528b6931441ac5d5a",
+      "symbol": "BOND-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 274,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0bb6e2a9858a089437ec678da05e559ffe0af5b2",
+      "symbol": "bb_cDAI-DAI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 275,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa914a9b9e03b6af84f9c6bd2e0e8d27d405695db",
+      "symbol": "WETH-FOLD SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 276,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x8911fce375a8414b1b578be66ee691a8d2d4dbf7",
+      "symbol": "NDX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 277,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe8eb0f7b866a85da49401d04fffcfc1abbf24dfd",
+      "symbol": "DEGEN-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 278,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x986627db5e4aae987f580feb63d475992e5ac0ae",
+      "symbol": "WETH-1ONE SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 279,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x17890deb188f2de6c3e966e053da1c9a111ed4a5",
+      "symbol": "USDC-CQT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 280,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe93b1b5e1dadce8152a69470c1b31463af260296",
+      "symbol": "USDT-DVF SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 281,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x1241f4a348162d99379a23e73926cf0bfcbf131e",
+      "symbol": "ANKR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 282,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0652687e87a4b8b5370b05bc298ff00d205d9b5f",
+      "symbol": "WETH-ONX SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 283,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa2d81bedf22201a77044cdf3ab4d9dc1ffbc391b",
+      "symbol": "IBEUR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 284,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x82dbc2673e9640343d263a3c55de49021ad39ae2",
+      "symbol": "EDEN-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 285,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xdbaa04796cb5c05d02b8a41b702d9b67c13c9fa9",
+      "symbol": "TOWER-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 286,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x8775ae5e83bc5d926b6277579c2b0d40c7d9b528",
+      "symbol": "DPI-FEI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 287,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xbbbdb106a806173d1eea1640961533ff3114d69a",
+      "symbol": "XYZ-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 288,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb90047676cc13e68632c55cb5b7cbd8a4c5a0a8e",
+      "symbol": "VUSD-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 289,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xada8b1613ce6fe75f3549fa4eb2a993ca1220a7c",
+      "symbol": "Pixel-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 290,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x8597fa0773888107e2867d36dd87fe5bafeab328",
+      "symbol": "WETH-SLP SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 291,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb124c4e18a282143d362a066736fd60d22393ef4",
+      "symbol": "PENDLE-OT-PE-29DEC2022 SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 292,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc96f20099d96b37d7ede66ff9e4de59b9b1065b1",
+      "symbol": "DOG-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 293,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x77337ff10206480739a768124a18f3aa8c089153",
+      "symbol": "WETH-ID SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 294,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xeefa3b448768dd561af4f743c9e925987a1f8d09",
+      "symbol": "WETH-NFD SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 295,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x279ca79d5fb2490721512c8ae4767e249d75f41b",
+      "symbol": "LUSD-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 296,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0d15e893cf50724382368cafed222cf131b55307",
+      "symbol": "AGLD-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 297,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x1cb9e12b35199bee15d9ee13696b87bb777776dd",
+      "symbol": "BGLD-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 298,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb5de0c3753b6e1b4dba616db82767f17513e6d4e",
+      "symbol": "SPELL-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 299,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x208226200b45b82212b814f49efa643980a7bdd1",
+      "symbol": "DATA/Index-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 300,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9cee2ad771b57555c93f55d8babc3c8a221e3b74",
+      "symbol": "WETH-RENFIL SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 301,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x53813285cc60b13fcd2105c6472a47af01f8ac84",
+      "symbol": "BMI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 302,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc926990039045611eb1de520c1e249fd0d20a8ea",
+      "symbol": "REVV-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 303,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x400043e27415773e4a509c53ac5d7d3c036f6d92",
+      "symbol": "KAE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 304,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0bec54c89a7d9f15c4e7faa8d47adedf374462ed",
+      "symbol": "BIFI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 305,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x4a86c01d67965f8cb3d0aaa2c655705e64097c31",
+      "symbol": "SYN-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 306,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0d9f9c919f1b66a8587a5637b8d1a6a6c5854380",
+      "symbol": "WETH-GLYPH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 307,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf3d4206b8f2b7c63290661c99a2b494aef3b8c30",
+      "symbol": "WETH-AVASTR SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 308,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc8a6189bb16331b37c7a903b8904201b4ca7accb",
+      "symbol": "WETH-PURR SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 309,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x5d472c9edece12a75ed7c0584dd02407cb5b47da",
+      "symbol": "PUDGY-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 310,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x698abbbc986c59d02941e18bc96fe2396493339b",
+      "symbol": "SQGL-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 311,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x38e03a5fb1b1a18d47b364cdd7cdce606397c72c",
+      "symbol": "WETH-MASK SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 312,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0463a06fbc8bf28b3f120cd1bfc59483f099d332",
+      "symbol": "PUNK-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 313,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xef4fa701fa5df88ef0d5707d6144e446a1a2238b",
+      "symbol": "TOADZ-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 314,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0225e940deecc32a8d7c003cfb7dae22af18460c",
+      "symbol": "COOL-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 315,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0a2f9b5360b5c7b6d3ce826971425b3b8b766519",
+      "symbol": "WIZARD-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 316,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfd52305d58f612aad5f7e5e331c7a0d77e352ec3",
+      "symbol": "UWU-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 317,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xec87cb93ecd0fe2f80dbd0d85431eacf1de09d50",
+      "symbol": "VITE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 318,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe339c1d0a744053cbceb0d2dc2d13967c8a69586",
+      "symbol": "MEEB-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 319,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd829de54877e0b66a2c3890b702fa5df2245203e",
+      "symbol": "WETH-BAYC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 320,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x854b54c39c4d8c6c781ad6f7b036338d47f163f8",
+      "symbol": "OH-GEEZ-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 321,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xafa5767374ba12c59a79182e8e4e27d27f1d9aa6",
+      "symbol": "WETH-PAD SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 322,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x5ba61c0a8c4dcccc200cd0ccc40a5725a426d002",
+      "symbol": "INV-DOLA SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 323,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfdf12d1f85b5082877a6e070524f50f6c84faa6b",
+      "symbol": "OHMv1-LUSD SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 324,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x195b2ed7dfb2bb19c63b8b06677d46934c0c4eea",
+      "symbol": "stkATOM-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 325,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x07d5695a24904cc1b6e3bd57cc7780b90618e3c4",
+      "symbol": "MIM-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 326,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xec3bdd98f0461a7966510d2f26bafc6680aab2c5",
+      "symbol": "CELO-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 327,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfffae4a0f4ac251f4705717cd24cadccc9f33e06",
+      "symbol": "OHMv1-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 328,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc83ce8612164ef7a13d17ddea4271dd8e8eebe5d",
+      "symbol": "YEL-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 329,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xec8c342bc3e07f05b9a782bc34e7f04fb9b44502",
+      "symbol": "FRAX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 330,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe55c3e83852429334a986b265d03b879a3d188ac",
+      "symbol": "TCR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 331,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x24e2adf50c49633039757ab08bff489b7c5bd6b2",
+      "symbol": "RARE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 332,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa5c475167f03b1556c054e0da78192cd2779087f",
+      "symbol": "FODL-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 333,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xce7e98d4da6ebda6af474ea618c6b175729cd366",
+      "symbol": "FODL-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 334,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x62ccb80f72cc5c975c5bc7fb4433d3c336ce5ceb",
+      "symbol": "WETH-SUPER SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 335,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xeaadde1e14c587a7fb4ba78ea78109bb32975f1e",
+      "symbol": "OOKI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 336,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x95cfa1f48fad82232772d3b1415ad4393517f3b5",
+      "symbol": "XRUNE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 337,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9ebc2a125b1daf3b8a56cb52fa81f89a199e2b38",
+      "symbol": "INSUR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 338,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x481ddaf90c59d91f3e480e6793122e62612ca5a9",
+      "symbol": "FLOAT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 339,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x1365707157a1ec841064a18d2a1771c677df9a1c",
+      "symbol": "TXL-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 340,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x2734f4a846d1127f4b5d3bab261facfe51df1d9a",
+      "symbol": "OHMv1-LOBI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 341,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x1f4c763bde1d4832b3ea0640e66da00b98831355",
+      "symbol": "agEUR-ANGLE SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 342,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9d45081706102e7aaddd0973268457527722e274",
+      "symbol": "IQ-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 343,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa55b28c07bc43feb42119e83f5b56de89eb54712",
+      "symbol": "DIVINE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 344,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x47a307e3167820daf22a377d777371753758f59c",
+      "symbol": "POLYGONDUMMYTOKEN",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 345,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd90a819577186870b8693b67ffb21750ecddc528",
+      "symbol": "CELODUMMYTOKEN",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 346,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x3685d09b7bfbf1e02dcccb6f7f546979c05610e3",
+      "symbol": "XDAIDUMMYTOKEN",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 347,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x055475920a8c93cffb64d039a8205f7acc7722d3",
+      "symbol": "OHM-DAI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 348,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x6e6fe8711f2109e330a193dde347945ad6a6bdd8",
+      "symbol": "HARMONYDUMMYTOKEN",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 349,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xdf4395818bb8b1a45d4ca6ac9c685646c517f274",
+      "symbol": "FANTOMDUMMYTOKEN",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 350,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x393b6dc9b00e18314888678721ec0e923fc5f49d",
+      "symbol": "ARBITRUMDUMMYTOKEN",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 351,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x193008eaade86658df8237a436261e23e3bcbbaa",
+      "symbol": "OHM-LOBI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 352,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfb55af0ef0dcdec92bd3752e7a9237dfefb8acc0",
+      "symbol": "ANGLE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 353,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe9ab8038ee6dd4fcc7612997fe28d4e22019c4b4",
+      "symbol": "OHM-BTRFLY SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 354,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x82917fb0dd65b0e5c85eea66e4f5c1ed484bc629",
+      "symbol": "MULTI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 355,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x8f7a3ca0c676cee87c34d5d9c9cab5a51e929984",
+      "symbol": "KAVADUMMY",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 356,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x69cb9f3d42cf6e3706d62db661c30d048220637a",
+      "symbol": "NOVADUMMY",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 357,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x2377e68f0f909e208884e707db4a7cd493911280",
+      "symbol": "METISDUMMY",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 358,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x65550c7f7280579f34999358b5234f45cfadf50f",
+      "symbol": "BOBADUMMY",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 359,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe7e656893030187f1073e5b2d768e3c1e8861f26",
+      "symbol": "BSCDUMMY",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 360,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xcb277e48526f30f625e24850cf293d89301ea470",
+      "symbol": "BTTCDUMMY",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd",
+    "poolId": 361,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x11b66abb675b955bd6f066fde849442865c60e29",
+      "symbol": "OPDUMMY",
+      "decimals": 0
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 0,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc3f279090a47e80990fe3a9c30d24cb117ef91a8",
+      "symbol": "WETH-ALCX SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 1,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x05767d9ef41dc40689678ffca0608878fb3de906",
+      "symbol": "CVX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 2,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x33f6ddaea2a8a54062e021873bcaee006cdf4007",
+      "symbol": "CVXCRV-CRV SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 3,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x269db91fc3c7fcc275c2e6f22e5552504512811c",
+      "symbol": "PICKLE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 4,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb2c29e311916a346304f83aa44527092d5bd4f0f",
+      "symbol": "MPH-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 5,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa730d4679de7b1fd554dbb4258780eb821979250",
+      "symbol": "alRECOVER",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 6,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x99b42f2b49c395d2a77d973f6009abb5d67da343",
+      "symbol": "YGG-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 7,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb1eecfea192907fc4bf9c4ce99ac07186075fc51",
+      "symbol": "RULER-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 8,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfceaaf9792139bf714a694f868a215493461446d",
+      "symbol": "TRU-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 9,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x17890deb188f2de6c3e966e053da1c9a111ed4a5",
+      "symbol": "USDC-CQT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 10,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x30045ad74f4475e82dcdc269952581ecb7cd2bad",
+      "symbol": "WETH-SI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 11,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x15e86e6f65ef7ea1dbb72a5e51a07926fb1c82e3",
+      "symbol": "WETH-AMP SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 12,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe9a889e6963f122a98f8083d951c71329c726c0a",
+      "symbol": "BIOS-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 13,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x6469b34a2a4723163c4902dbbdea728d20693c12",
+      "symbol": "NEAR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 14,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd4e7a6e2d03e4e48dfc27dd3f46df1c176647e38",
+      "symbol": "TOKE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 15,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc5578194d457dcce3f272538d1ad52c68d1ce849",
+      "symbol": "DAI-wstETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 16,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x877d9c970b8b5501e95967fe845b7293f63e72f7",
+      "symbol": "WETH-WNCG SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 17,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe12af1218b4e9272e9628d7c7dc6354d137d024e",
+      "symbol": "BIT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 18,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe4ebd836832f1a8a81641111a5b081a2f90b9430",
+      "symbol": "DYDX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 19,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xcfa9a297a406a48d1137172c18de04c944b47ba9",
+      "symbol": "WETH-BANANA SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 20,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x53162d78dca413d9e28cf62799d17a9e278b60e8",
+      "symbol": "APW-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 21,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb50580b0d81d9fe860746387cef9a8fc36d48d49",
+      "symbol": "MARS4-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 22,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xf79321e80acd5fa590936f09acb90ec6471fcbc4",
+      "symbol": "NFTL-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 23,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x1e888882d0f291dd88c5605108c72d414f29d460",
+      "symbol": "USDC-QUARTZ SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 24,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xa1181481beb2dc5de0daf2c85392d81c704bf75d",
+      "symbol": "WETH-ENS SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 25,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x53813285cc60b13fcd2105c6472a47af01f8ac84",
+      "symbol": "BMI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 26,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x295685c8fe08d8192981d21ea1fe856a07443920",
+      "symbol": "WETH-GODS SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 27,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x18cd890f4e23422dc4aa8c2d6e0bd3f3bd8873d8",
+      "symbol": "WETH-IMX SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 28,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x37fc088cfd67349be00f5504d00ddb7f2274b3f6",
+      "symbol": "XDEFI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 29,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb2aef5dbec896830b7391c3d7dee130ad36b8e9f",
+      "symbol": "ATTR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 30,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x6e939360196c7f044871b17770268e8a04556121",
+      "symbol": "NIL-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 31,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x458ae80894a0924ac763c034977e330c565f1687",
+      "symbol": "WETH-PSP SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 32,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfe9a776154f30281517d4f06578591911906f4e1",
+      "symbol": "USDC-DIVER SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 33,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x7c03cf21483fa45006e81669b991af3a16733a44",
+      "symbol": "CRE8-USDT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 34,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x1b803af96f37ae51fa753e13e1d2e372dfa17791",
+      "symbol": "SPS-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 35,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x55d8ec728ea72477c6db12ca497a803c8db361e9",
+      "symbol": "WETH-BICO SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 36,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xea9b00b169dda4cbc9fa0a64b0d1e4a6a23a3f34",
+      "symbol": "WXRP-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 37,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xdd487b90450e90029b107d1c9ad9955cebd2c7e5",
+      "symbol": "WKDA-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 38,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0e05e398b979720504bcb9b15c43719cde84e530",
+      "symbol": "WLTC-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 39,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x29c827ce49accf68a1a278c67c9d30c52fbbc348",
+      "symbol": "WETH-VEGA SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 40,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xec87cb93ecd0fe2f80dbd0d85431eacf1de09d50",
+      "symbol": "VITE-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 41,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x4e726311e7036d7be9a9b2a1e9e00c48aeec28ae",
+      "symbol": "gm-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 42,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x559ebe4e206e6b4d50e9bd3008cda7ce640c52cb",
+      "symbol": "RADAR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 43,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb264dc9d22ece51aaa6028c5cbf2738b684560d6",
+      "symbol": "NEWO-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 44,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xbb19141e045b133169d7c7160c5e54a54cc821b2",
+      "symbol": "GET-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 45,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb84c45174bfc6b8f3eaecbae11dee63114f5c1b2",
+      "symbol": "SOS-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 46,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x52dac05fc0000e9f01ce9a1e91592bfbfce87350",
+      "symbol": "LYRA-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 47,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x7f7d686b05ce0b9b7b7b0b4d56207ace4b13a87a",
+      "symbol": "GAS-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 48,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x75507bab932fc47531bf1654f243c088a3fa1f69",
+      "symbol": "NST-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 49,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc2ce29af8930fc32ca24ccb76c2866fb2bf692fe",
+      "symbol": "X-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 50,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xeaadde1e14c587a7fb4ba78ea78109bb32975f1e",
+      "symbol": "OOKI-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 51,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x5c596c6a65f628fc1090853d8eb1927651e9d9b2",
+      "symbol": "GOG-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 52,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xc08ed9a9abeabcc53875787573dc32eee5e43513",
+      "symbol": "NEWO-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 53,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xfed8e81bd0fba2664e9bd9abfaffb77828f959b7",
+      "symbol": "WETH-SAK3 SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 54,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xdb06a76733528761eda47d356647297bc35a98bd",
+      "symbol": "WETH-JPEG SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 55,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xb27c7b131cf4915bec6c4bc1ce2f33f9ee434b9f",
+      "symbol": "APE-USDT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 56,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xe93527d1f8c586353b13826c501fa5a69bce2b0e",
+      "symbol": "BLOCK-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 57,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xdbb69ea87507525fffbd1c4f1ad6f7d30a9a402e",
+      "symbol": "PRIMATE-APE SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 58,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xed92bfe08de542bbb40fdbe0a27ca66313c0c457",
+      "symbol": "WETH-HOP SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 59,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x3d3f13f2529ec3c84b2940155effbf9b39a8f3ec",
+      "symbol": "THOR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 60,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x9b880dd096ef74ef7e4b771526bd9584e0b8f7b5",
+      "symbol": "RMRK-USDT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 61,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x0c6f06b32e6ae0c110861b8607e67da594781961",
+      "symbol": "WETH-SDL SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 62,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x90a70993d2a02f4d4769008c255873dfc9d308ff",
+      "symbol": "BLUR-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 63,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0x203b7c6e588532ae04b95509f2ff7c6926de1806",
+      "symbol": "USDT-FLEX SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "ethereum",
+    "protocol": "sushi",
+    "address": "0xef0881ec094552b2e128cf945ef17a6752b4ec5d",
+    "poolId": 64,
+    "version": "masterchef",
+    "token": {
+      "chain": "ethereum",
+      "address": "0xd27b7d42d24d8f7c1cf5c46ccd3b986c396fde17",
+      "symbol": "LINK-SDL SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 0,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x905dfcd5649217c42684f23958568e533c711aa3",
+      "symbol": "WETH-USDC.e SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 1,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x7050a8908e2a60899d8788015148241f0993a3fd",
+      "symbol": "WETH-LINK SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 2,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x3221022e37029923ace4235d812273c5a42c322d",
+      "symbol": "WETH-SUSHI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 3,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x515e252b2b5c22b4b2b6df66c2ebeea871aa4d69",
+      "symbol": "WBTC-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 4,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0xcb0e5bfa72bbb4d16ab5aa0c60601c438f04b4ad",
+      "symbol": "WETH-USDT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 5,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x4e8df9c66f055940190eb6593d919bb5ba6558a9",
+      "symbol": "kmWETH/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 6,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x5fa33fe1663ddfd4aa2e51736531b7ab1ffb4703",
+      "symbol": "kmWBTC/USDT-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 7,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0xf3b87e78dcaa42ebfd309ab458df055f3776b045",
+      "symbol": "kmUSDT/LINK-LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 8,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x9416d2018d42c62f8e545c23d7483ec8cb377dfa",
+      "symbol": "kmLINK/USDC-LINK",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 9,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0xb6dd51d5425861c808fd60827ab6cfbffe604959",
+      "symbol": "WETH-MIM SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 10,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0xb6dd51d5425861c808fd60827ab6cfbffe604959",
+      "symbol": "WETH-MIM SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 11,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x8f93eaae544e8f5eb077a1e09c1554067d9e2ca8",
+      "symbol": "SPELL-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 12,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0xaa5bd49f2162ffdc15634c87a77ac67bd51c6a6d",
+      "symbol": "WETH-gOHM SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 13,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0xb7e50106a5bd3cf21af210a755f9c8740890a8c9",
+      "symbol": "MAGIC-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 14,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x692a0b300366d1042679397e40f3d2cb4b8f7d30",
+      "symbol": "WETH-DAI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 15,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x42e9dc3f1a7dd582e81d2edf7e5c4869007ce14a",
+      "symbol": "PREMIA-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 16,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x863eed6056918258626b653065588105c54ff2ac",
+      "symbol": "axlUSDC-USDC.e SSLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 17,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x0c1cf6883efa1b496b01f654e247b9b419873054",
+      "symbol": "DPX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 18,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0xccc2084bf31c53868871e416547140abf9c3fd39",
+      "symbol": "Silo-WETH SCPLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 19,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x32ef0f8af29f7b67be6b48a12ca0e09f1f302035",
+      "symbol": "NISHIB-USDC.e SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 20,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x24704aff49645d32655a76df6d407e02d146dafc",
+      "symbol": "RDNT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 21,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x79bf7147ebcd0d55e83cb42ed3ba1bb2bb23ef20",
+      "symbol": "USDT-USDC.e SSLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 22,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x6dbe389142e40b01aa10fb069ae448fc4460dae4",
+      "symbol": "DAI-USDC.e SSLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 23,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x7418f5a2621e13c05d1efbd71ec922070794b90a",
+      "symbol": "RDPX-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 24,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x9d134c24191183ef5ac53780a643ae81dcec9b89",
+      "symbol": "NUON-USDC.e SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 25,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x3fec70f319a4145eba17765ae0c64b2232fe5bae",
+      "symbol": "WETH-FRM SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 26,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x480ecf204f510404a720ae9715713a6e682117f9",
+      "symbol": "NUON-USDT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 27,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0xf3f54a80cf28d44a0d097c4a67c4c04eb30da0b5",
+      "symbol": "WETH-ARB SCPLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 28,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0xbf6cbb1f40a542af50839cad01b0dc1747f11e18",
+      "symbol": "WETH-ARB SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 29,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x3bfb1ac033ff0ae278be0583fccc900fbd9382c6",
+      "symbol": "RDNT-WETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "sushi",
+    "address": "0xf4d73326c13a4fc5fd7a064217e12780e9bd62c3",
+    "poolId": 30,
+    "version": "masterchef",
+    "token": {
+      "chain": "arbitrum",
+      "address": "0xf5bf7843955ebd86edcc9f6c82427f71f05fd823",
+      "symbol": "WETH-PEPE SCPLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 0,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xc4e595acdd7d12fec385e5da5d43160e8a0bac0e",
+      "symbol": "WMATIC-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 1,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x34965ba0ac2451a34a0471f04cca3f990b8dea27",
+      "symbol": "USDC-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 2,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xc2755915a85c6f6c1c0f3a86ac8c058f11caa9c9",
+      "symbol": "ETH-USDT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 3,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xe62ec2e799305e0d367b0cc3ee2cda135bf89816",
+      "symbol": "WBTC-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 4,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x497c2cbad454952b20ab66a1a17dac0999ba228e",
+      "symbol": "Krill-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 5,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x6ff62bfb8c12109e8000935a6de54dad83a4f39f",
+      "symbol": "ETH-DAI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 6,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x2813d43463c374a680f235c428fb1d7f08de0b69",
+      "symbol": "ETH-AAVE SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 7,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x74d23f21f780ca26b47db16b0504f2e3832b9321",
+      "symbol": "LINK-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 8,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x4b1f1e2435a9c96f7330faea190ef6a7c8d70001",
+      "symbol": "USDC-USDT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 9,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x396e655c309676caf0acf4607a868e0cded876db",
+      "symbol": "CRV-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 10,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x116ff0d1caa91a6b94276b3471f33dbeb52073e7",
+      "symbol": "SNX-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 11,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xcd578f016888b57f1b1e3f887f392f0159e26747",
+      "symbol": "USDC-DAI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 12,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x3398787dca0f1bd830713ec5294ade196a198984",
+      "symbol": "renDOGE-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 13,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x211f8e61113edaf00cf37a804b0ba721875ef560",
+      "symbol": "WMATIC-WOOFY SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 14,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x9e20a8d3501bf96eda8e69b96dd84840058a1cb0",
+      "symbol": "FRAX-USDC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 15,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xd53a56ae0f48c9a03660cd36c2e4ae20493a1eca",
+      "symbol": "FRAX-FXS SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 16,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x1ceda73c034218255f50ef8a2c282e6b4c301d60",
+      "symbol": "GRT-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 17,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xb6d9a4649c579b8768f1cb55e9dd6ba99581e4a9",
+      "symbol": "ETH-ADDY SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 18,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x21ef14b5580a852477ef31e7ea9373485bf50377",
+      "symbol": "ETH-WFIL SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 19,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xa375d23a751124359568f3a22576528bd1c8c3e3",
+      "symbol": "ETH-DHT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 20,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x01cdcc99a4f9a68be18504750b219caa881841eb",
+      "symbol": "ETH-IRON SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 21,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xd8d51ea2edca2c2ea15a053a5730f559d79a1570",
+      "symbol": "USDC-oAUTO SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 22,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x25e8bbc103842f0dad2465f4e04cb8d44fb787bc",
+      "symbol": "dTOP-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 23,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x180237bd326d5245d0898336f54b3c8012c5c62f",
+      "symbol": "USDC-BIFI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 24,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x8f8e95ff4b4c5e354ccb005c6b0278492d7b5907",
+      "symbol": "WBTC-ibBTC SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 25,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xc37899901ffdef1b6baf95fd4081d82942a0a85a",
+      "symbol": "WMATIC-PIXEL SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 26,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x34908ec7f451beaa88c46c60a394cf324f86f67e",
+      "symbol": "POOL-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 27,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x5fcb390b4422f4ff7940c23618a62bf5f69658a8",
+      "symbol": "USDC-ADDY SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 28,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xc5666d43f06c073e869bce02407569f578b2072d",
+      "symbol": "polyBUNNY-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 29,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x590f5e967d73ea06dae9aed2788108dcf52da269",
+      "symbol": "ETH-ARPA SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 30,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x4642dafc5281ba5a8d35b2896e0d925b23c6883c",
+      "symbol": "ETH-MVI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 31,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xfb659315e36ae39917014da60f362b600e8cd0ca",
+      "symbol": "WMATIC-$DG SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 32,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xcea28c2b744c0d159a070e11a0f04dc7182f155d",
+      "symbol": "ETH-SAND SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 33,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x7ba331a8b360f4c31e6014abdd6852f92fb21557",
+      "symbol": "AXS-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 34,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xc48ae82ca34c63887b975f20aba91a38f2a900b8",
+      "symbol": "ETH-MANA SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 35,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x6be10c5c7178af8c49997d07d6a5444c15e58170",
+      "symbol": "UMA-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 36,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xcb60e17ea720ef331446e434be5de5f35fae8bc8",
+      "symbol": "WMATIC-COMBO SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 37,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x57602582eb5e82a197bae4e8b6b80e39abfc94eb",
+      "symbol": "PICKLE-DAI SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 38,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x1274de0de2e9d9b1d0e06313c0e5edd01cc335ef",
+      "symbol": "AVAX-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 39,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xf69e93771f11aecd8e554aa165c3fe7fd811530c",
+      "symbol": "WMATIC-GHST SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 40,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x93ef615f1ddd27d0e141ad7192623a5c45e8f200",
+      "symbol": "FOX-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 41,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x6f21996181915d688c787a1ec7c987e2a31b6829",
+      "symbol": "USDC-INSUR SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 42,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x4ab66a7138f50db9b7adaf8ce8afb3f638b22f7f",
+      "symbol": "USDC-TUSD SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 43,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xa769c6786c3717945438d4c4feb8494a1a6ca443",
+      "symbol": "JRT-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 44,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x5518a3af961eee8771657050c5cb23d2b3e2f6ee",
+      "symbol": "ETH-IDLE SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 45,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xdf45b5b68d9dc84173dd963c763aea8cad3e24a6",
+      "symbol": "FXS-FRAX SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 46,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xf2c9650fd759f93e59d2ae8f42a97c0600150f0e",
+      "symbol": "DATA-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 47,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x1549e0e8127d380080aab448b82d280433ce4030",
+      "symbol": "ETH-gOHM SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 48,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xadd053a09f95e565b25d8b9b84d0fcfaa962465e",
+      "symbol": "ETH2x-FLI-P-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 49,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x9803c7ae526049210a1725f7487af26fe2c24614",
+      "symbol": "BCT-KLIMA SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 50,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x1e67124681b402064cd0abe8ed1b5c79d2e02f64",
+      "symbol": "USDC-BCT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 51,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x0a7f27e370168b1e1be2ef77a8ba28d66983c515",
+      "symbol": "ETH-pZUG SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 52,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x1bf9805b40a5f69c7d0f9e5d1ab718642203c652",
+      "symbol": "ETH-SX SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 53,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xd10bb4ed281a84492343573885168027cc625bf7",
+      "symbol": "USDT-MSU SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 54,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xfc1d865c455a1e84f24c95cc5a6c821d18f458ce",
+      "symbol": "pTREAT-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 55,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xdb995f975f1bfc3b2157495c47e4efb31196b2ca",
+      "symbol": "USDC-NCT SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 56,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0xe7fed735afffba5365e80cad6c2ca157b2678b41",
+      "symbol": "WMATIC-IMRTL SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 57,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x374552804f7ca26c307c8d31f4cc0d9215c87f46",
+      "symbol": "ZED-ETH SLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 58,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x571102a88928d74c049849af094a289c27fb794e",
+      "symbol": "USD+-USDC SSLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 59,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x96f0ececb9d5b2cc0238712a6a987a5102d3b0f7",
+      "symbol": "WMATIC-WARU SCPLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 60,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x846fea3d94976ef9862040d9fba9c391aa75a44b",
+      "symbol": "WMATIC-USDC SCPLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 61,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x4d3222ba7a87ce007903b0318037ce0f5ca9f15d",
+      "symbol": "USDC-ETH SCPLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 62,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x231ba46173b75e4d7cea6dce095a6c1c3e876270",
+      "symbol": "USDC-USDT SSLP",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "polygon",
+    "protocol": "sushi",
+    "address": "0x0769fd68dfb93167989c6f7254cd0d766fb2841f",
+    "poolId": 63,
+    "version": "masterchef",
+    "token": {
+      "chain": "polygon",
+      "address": "0x4440c62021c5a0d6fec1a2143914be0c5a0a00ea",
+      "symbol": "USDC-DAI SSLP",
+      "decimals": 18
+    }
+  }
+]

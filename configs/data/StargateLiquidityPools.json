@@ -1,0 +1,1011 @@
+[
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "ethereum",
+    "address": "0x101816545f6bd2b1076434b54383a1e633390a2e",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0x0000000000000000000000000000000000000000",
+        "symbol": "ETH",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "ethereum",
+    "address": "0xdf0770df86a8034b3efef0a1bb3c889b8332ff56",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "symbol": "USDC",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "ethereum",
+    "address": "0x38ea452219524bb87e18de1c24d3bb59510bd783",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "symbol": "USDT",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "ethereum",
+    "address": "0x692953e758c3669290cb1677180c64183cee374e",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "symbol": "USDD",
+        "decimals": 18,
+        "address": "0x0c10bf8fcb7bf5412187a595ab97a3609160b5c6"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "ethereum",
+    "address": "0x0faf1d2d3ced330824de3b8200fc8dc6e397850d",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+        "symbol": "DAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "ethereum",
+    "address": "0xfa0f307783ac21c39e939acff795e27b650f6e68",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+        "symbol": "FRAX",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "ethereum",
+    "address": "0x590d4f8a68583639f215f675f3a259ed84790580",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0x57ab1ec28d129707052df4df418d58a2d46d5f51",
+        "symbol": "sUSD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "ethereum",
+    "address": "0xe8f55368c82d38bbbbdb5533e7f56afc2e978cc2",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "symbol": "LUSD",
+        "decimals": 18,
+        "address": "0x5f98805a4e8be255a32880fdec7f6728c6568ba0"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "ethereum",
+    "address": "0x9cef9a0b1be0d289ac9f4a98ff317c33eaa84eb8",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0x8d6cebd76f18e1558d4db88138e2defb3909fad6",
+        "symbol": "MAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "ethereum",
+    "address": "0xd8772edbf88bba2667ed011542343b0eddacda47",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "symbol": "METIS",
+        "decimals": 18,
+        "address": "0x9e32b13ce7f2e80a01932b42553652e053d6ed8e",
+        "logoURI": "https://assets.coingecko.com/coins/images/15595/thumb/metis.jpeg?1660285312"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "ethereum",
+    "address": "0x430ebff5e3e80a6c58e7e6ada1d90f5c28aa116d",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "symbol": "USDT",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "arbitrum",
+    "address": "0x915a55e36a01285a14f05de6e81ed9ce89772f8e",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x0000000000000000000000000000000000000000",
+        "symbol": "ETH",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "arbitrum",
+    "address": "0x892785f33cdee22a30aef750f285e18c18040c3e",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "symbol": "USDC.e",
+        "decimals": 6,
+        "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "arbitrum",
+    "address": "0xb6cfcf89a7b22988bfc96632ac2a9d6dab60d641",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+        "symbol": "USDT",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "arbitrum",
+    "address": "0xaa4bf442f024820b2c28cd0fd72b82c63e66f56c",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x17fc002b466eec40dae837fc4be5c67993ddbd6f",
+        "symbol": "FRAX",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "arbitrum",
+    "address": "0xf39b7be294cb36de8c510e267b82bb588705d977",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+        "symbol": "MAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "arbitrum",
+    "address": "0x600e576f9d853c95d58029093a16ee49646f3ca5",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "arbitrum",
+        "address": "0x93b346b6bc2548da6a1e7d98e9a421b42541425b",
+        "symbol": "LUSD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "base",
+    "address": "0x28fc411f9e1c480ad312b3d9c60c22b965015c6b",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "base",
+        "address": "0x0000000000000000000000000000000000000000",
+        "symbol": "ETH",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "base",
+    "address": "0x4c80e24119cfb836cdf0a6b53dc23f04f7e652ca",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "base",
+        "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca",
+        "symbol": "USDbC",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x9aa83081aa06af7208dcc7a4cb72c94d057d2cda",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x98a5737749490856b401db5dc27f522fc314a4e1",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "symbol": "BUSD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x4e145a589e4c03cbe3d28520e4bf3089834289df",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xd17479997f34dd9156deef8f95a52d81d265be9c",
+        "symbol": "USDD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x7bfd7f2498c4796f10b6c611d9db393d3052510c",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+        "symbol": "MAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0xd4cec732b3b135ec52a3c0bc8ce4b8cfb9dace46",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "symbol": "METIS",
+        "decimals": 18,
+        "address": "0xe552fb52a4f19e44ef5a967632dbc320b0820639",
+        "logoURI": "https://assets.coingecko.com/coins/images/15595/thumb/metis.jpeg?1660285312"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x68c6c27fb0e02285829e69240be16f32c5f8befe",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "polygon",
+    "address": "0x1205f31718499dbf1fca446663b532ef87481fe1",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+        "symbol": "USDC",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "polygon",
+    "address": "0x29e38769f23701a2e4a8ef0492e19da4604be62c",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+        "symbol": "USDT",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "polygon",
+    "address": "0x1c272232df0bb6225da87f4decd9d37c32f63eea",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+        "symbol": "DAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "polygon",
+    "address": "0x8736f92646b2542b3e5f3c63590ca7fe313e283b",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0xa3fa99a148fa48d14ed51d610c367c61876997f1",
+        "symbol": "miMATIC",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "optimism",
+    "address": "0xd22363e3762ca7339569f3d33eade20127d5f98c",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "address": "0x0000000000000000000000000000000000000000",
+        "symbol": "ETH",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "optimism",
+    "address": "0xdecc0c09c3b5f6e92ef4184125d5648a66e35298",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+        "symbol": "USDC",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "optimism",
+    "address": "0x165137624f1f692e69659f944bf69de02874ee27",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+        "symbol": "DAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "optimism",
+    "address": "0x368605d9c6243a80903b9e326f1cddde088b8924",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "address": "0x2e3d870790dc77a83dd1d18184acc7439a53f475",
+        "symbol": "FRAX",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "optimism",
+    "address": "0x2f8bc9081c7fcfec25b9f41a50d97eaa592058ae",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "symbol": "SUSD",
+        "decimals": 18,
+        "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x9aa83081aa06af7208dcc7a4cb72c94d057d2cda",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x98a5737749490856b401db5dc27f522fc314a4e1",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "symbol": "BUSD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x4e145a589e4c03cbe3d28520e4bf3089834289df",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xd17479997f34dd9156deef8f95a52d81d265be9c",
+        "symbol": "USDD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x7bfd7f2498c4796f10b6c611d9db393d3052510c",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+        "symbol": "MAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0xd4cec732b3b135ec52a3c0bc8ce4b8cfb9dace46",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "symbol": "METIS",
+        "decimals": 18,
+        "address": "0xe552fb52a4f19e44ef5a967632dbc320b0820639",
+        "logoURI": "https://assets.coingecko.com/coins/images/15595/thumb/metis.jpeg?1660285312"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x68c6c27fb0e02285829e69240be16f32c5f8befe",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "polygon",
+    "address": "0x1205f31718499dbf1fca446663b532ef87481fe1",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+        "symbol": "USDC",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "polygon",
+    "address": "0x29e38769f23701a2e4a8ef0492e19da4604be62c",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+        "symbol": "USDT",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "polygon",
+    "address": "0x1c272232df0bb6225da87f4decd9d37c32f63eea",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+        "symbol": "DAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "polygon",
+    "address": "0x8736f92646b2542b3e5f3c63590ca7fe313e283b",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0xa3fa99a148fa48d14ed51d610c367c61876997f1",
+        "symbol": "miMATIC",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x9aa83081aa06af7208dcc7a4cb72c94d057d2cda",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x98a5737749490856b401db5dc27f522fc314a4e1",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "symbol": "BUSD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x4e145a589e4c03cbe3d28520e4bf3089834289df",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xd17479997f34dd9156deef8f95a52d81d265be9c",
+        "symbol": "USDD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x7bfd7f2498c4796f10b6c611d9db393d3052510c",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x3f56e0c36d275367b8c502090edf38289b3dea0d",
+        "symbol": "MAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0xd4cec732b3b135ec52a3c0bc8ce4b8cfb9dace46",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "symbol": "METIS",
+        "decimals": 18,
+        "address": "0xe552fb52a4f19e44ef5a967632dbc320b0820639",
+        "logoURI": "https://assets.coingecko.com/coins/images/15595/thumb/metis.jpeg?1660285312"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "bnbchain",
+    "address": "0x68c6c27fb0e02285829e69240be16f32c5f8befe",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "polygon",
+    "address": "0x1205f31718499dbf1fca446663b532ef87481fe1",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+        "symbol": "USDC",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "polygon",
+    "address": "0x29e38769f23701a2e4a8ef0492e19da4604be62c",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+        "symbol": "USDT",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "polygon",
+    "address": "0x1c272232df0bb6225da87f4decd9d37c32f63eea",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+        "symbol": "DAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "polygon",
+    "address": "0x8736f92646b2542b3e5f3c63590ca7fe313e283b",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "polygon",
+        "address": "0xa3fa99a148fa48d14ed51d610c367c61876997f1",
+        "symbol": "miMATIC",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "optimism",
+    "address": "0xd22363e3762ca7339569f3d33eade20127d5f98c",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "address": "0x0000000000000000000000000000000000000000",
+        "symbol": "ETH",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "optimism",
+    "address": "0xdecc0c09c3b5f6e92ef4184125d5648a66e35298",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+        "symbol": "USDC",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "optimism",
+    "address": "0x165137624f1f692e69659f944bf69de02874ee27",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+        "symbol": "DAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "optimism",
+    "address": "0x368605d9c6243a80903b9e326f1cddde088b8924",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "address": "0x2e3d870790dc77a83dd1d18184acc7439a53f475",
+        "symbol": "FRAX",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "optimism",
+    "address": "0x2f8bc9081c7fcfec25b9f41a50d97eaa592058ae",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "symbol": "SUSD",
+        "decimals": 18,
+        "address": "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9"
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "optimism",
+    "address": "0x3533f5e279bdbf550272a199a223da798d9eff78",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "address": "0xc40f949f8a4e094d1b49a23ea9241d289b7b2819",
+        "symbol": "LUSD",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "optimism",
+    "address": "0x5421fa1a48f9ff81e4580557e86c7c0d24c18036",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "optimism",
+        "address": "0xdfa46478f9e5ea86d57387849598dbfb2e964b02",
+        "symbol": "MAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "avalanche",
+    "address": "0x1205f31718499dbf1fca446663b532ef87481fe1",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "avalanche",
+        "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
+        "symbol": "USDC",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "avalanche",
+    "address": "0x29e38769f23701a2e4a8ef0492e19da4604be62c",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "avalanche",
+        "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+        "symbol": "USDt",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "avalanche",
+    "address": "0x1c272232df0bb6225da87f4decd9d37c32f63eea",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "avalanche",
+        "address": "0xd24c2ad096400b6fbcd2ad8b24e7acbc21a1da64",
+        "symbol": "FRAX",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "avalanche",
+    "address": "0x8736f92646b2542b3e5f3c63590ca7fe313e283b",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "avalanche",
+        "address": "0x5c49b268c9841aff1cc3b0a418ff5c3442ee3f3b",
+        "symbol": "MAI",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "avalanche",
+    "address": "0xeae5c2f6b25933deb62f754f239111413a0a25ef",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "avalanche",
+        "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
+        "symbol": "USDt",
+        "decimals": 6
+      }
+    ]
+  },
+  {
+    "version": "basic",
+    "protocol": "stargate",
+    "chain": "fantom",
+    "address": "0xc647ce76ec30033aa319d472ae9f4462068f2ad7",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "tokens": [
+      {
+        "chain": "fantom",
+        "address": "0x28a92dde19d9989f39a49905d7c9c2fac7799bdf",
+        "symbol": "USDC",
+        "decimals": 6
+      }
+    ]
+  }
+]

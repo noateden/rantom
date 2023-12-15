@@ -1,65 +1,74 @@
-import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
-
-import { CommonChainIdMaps } from '../../../configs/constants';
 import EnvConfig from '../../../configs/envConfig';
-import { normalizeAddress } from '../../../lib/helper';
+import { formatFromDecimals, normalizeAddress } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
-import { CelerbridgeMappings } from './abis';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { CelerbridgeAbiMappings, CelerbridgeEventSignatures } from './abis';
 
-const Signatures = {
-  Send: '0x89d8051e597ab4178a863a5190407b98abfeff406aa8db90c59af76612e58f01',
-  Replay: '0x79fa08de5149d912dce8e5e8da7a7c17ccdf23dd5d3bfe196802e6eb86347c7c',
-};
-
-export class CelerbridgeAdapter extends Adapter {
+export default class CelerbridgeAdapter extends Adapter {
   public readonly name: string = 'adapter.celerbridge';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.Send]: CelerbridgeMappings[Signatures.Send],
-      [Signatures.Replay]: CelerbridgeMappings[Signatures.Replay],
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, {
+      protocol: config.protocol,
+      contracts: config.contracts,
     });
+
+    this.config = config;
+    this.eventMappings = CelerbridgeAbiMappings;
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
 
-    const signature = topics[0];
-    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
+    const signature = options.log.topics[0];
+    const web3 = this.services.blockchain.getProvider(options.chain);
 
-      const token = await this.getWeb3Helper().getErc20Metadata(chain, event.token);
+    if (this.supportedContract(options.chain, options.log.address)) {
+      const event = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
+
+      const token = await this.services.blockchain.getTokenInfo({
+        chain: options.chain,
+        address: event.token,
+      });
       if (token) {
         const sender = normalizeAddress(event.sender);
         const receiver = normalizeAddress(event.receiver);
-        const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
+        const amount = formatFromDecimals(event.amount.toString(), token.decimals);
 
         const fromChain =
-          signature === Signatures.Send ? CommonChainIdMaps[chain].toString() : event.srcChainId.toString();
+          signature === CelerbridgeEventSignatures.Send
+            ? EnvConfig.blockchains[options.chain].chainId.toString()
+            : event.srcChainId.toString();
         const toChain =
-          signature === Signatures.Send ? event.dstChainId.toString() : CommonChainIdMaps[chain].toString();
+          signature === CelerbridgeEventSignatures.Send
+            ? event.dstChainId.toString()
+            : EnvConfig.blockchains[options.chain].chainId.toString();
 
-        return {
-          protocol: this.config.protocol,
+        const buildAction = this.buildUpAction({
+          ...options,
           action: 'bridge',
+          addresses: [sender, receiver],
           tokens: [token],
           tokenAmounts: [amount],
-          addresses: [sender, receiver],
-          readableString: `${sender} bridge ${amount} ${token.symbol} from ${fromChain} to ${toChain} on ${this.config.protocol}`,
-          addition: {
-            fromChain: fromChain,
-            toChain: toChain,
-          },
+        });
+
+        buildAction.addition = {
+          fromChain,
+          toChain,
         };
+
+        actions.push(buildAction);
       }
     }
 
-    return null;
+    return actions;
   }
 }

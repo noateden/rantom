@@ -1,0 +1,48 @@
+[
+  {
+    "protocol": "yearnyeth",
+    "chain": "ethereum",
+    "version": "stableswap",
+    "factory": "0x0000000000000000000000000000000000000000",
+    "address": "0x2cced4ffa804adbe1269cdfc22d7904471abde63",
+    "tokens": [
+      {
+        "chain": "ethereum",
+        "address": "0xac3e018457b222d93114458476f3e3416abbe38f",
+        "symbol": "sfrxETH",
+        "decimals": 18
+      },
+      {
+        "chain": "ethereum",
+        "address": "0xf951e335afb289353dc249e82926178eac7ded78",
+        "symbol": "swETH",
+        "decimals": 18
+      },
+      {
+        "chain": "ethereum",
+        "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+        "symbol": "wstETH",
+        "decimals": 18
+      },
+      {
+        "chain": "ethereum",
+        "address": "0xa35b1b31ce002fbf2058d22f30f95d405200a15b",
+        "symbol": "ETHx",
+        "decimals": 18
+      },
+      {
+        "chain": "ethereum",
+        "address": "0xbe9895146f7af43049ca1c1ae358b0541ea49704",
+        "symbol": "cbETH",
+        "decimals": 18
+      },
+      {
+        "chain": "ethereum",
+        "address": "0x24ae2da0f361aa4be46b48eb19c91e02c5e4f27e",
+        "symbol": "mevETH",
+        "decimals": 18
+      },
+      { "chain": "ethereum", "address": "0xae78736cd615f374d3085123a210448e74fc6393", "symbol": "rETH", "decimals": 18 }
+    ]
+  }
+]

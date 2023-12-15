@@ -1,127 +1,148 @@
 [
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x777777c9898d384f785ee44acfe945efdff5f3e0",
     "market": "0x028171bca77440897b824ca71d1c56cac55b68a3",
     "token": {
       "chain": "ethereum",
-      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
       "symbol": "DAI",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "logoURI": "https://cdn.paraswap.io/token/DAI.png"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x777777c9898d384f785ee44acfe945efdff5f3e0",
     "market": "0x030ba81f1c18d280636f32af80b9aad02cf0854e",
     "token": {
       "chain": "ethereum",
-      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
       "symbol": "WETH",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "logoURI": "https://cdn.paraswap.io/token/WETH.png"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x777777c9898d384f785ee44acfe945efdff5f3e0",
     "market": "0xbcca60bb61934080951369a648fb03df4f96263c",
     "token": {
       "chain": "ethereum",
-      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "symbol": "USDC",
-      "decimals": 6
+      "decimals": 6,
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "logoURI": "https://cdn.paraswap.io/token/USDC.png"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x777777c9898d384f785ee44acfe945efdff5f3e0",
     "market": "0x3ed3b47dd13ec9a98b44e6204a523e766b225811",
     "token": {
       "chain": "ethereum",
-      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
       "symbol": "USDT",
-      "decimals": 6
+      "decimals": 6,
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "logoURI": "https://cdn.paraswap.io/token/USDT.png"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x777777c9898d384f785ee44acfe945efdff5f3e0",
     "market": "0x9ff58f4ffb29fa2266ab25e75e2a8b3503311656",
     "token": {
       "chain": "ethereum",
-      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
       "symbol": "WBTC",
-      "decimals": 8
+      "decimals": 8,
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "logoURI": "https://cdn.paraswap.io/token/WBTC.png"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x777777c9898d384f785ee44acfe945efdff5f3e0",
     "market": "0x1982b2f5814301d4e9a8b0201555376e62f82428",
     "token": {
       "chain": "ethereum",
-      "address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
       "symbol": "stETH",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
+      "logoURI": "https://cdn.paraswap.io/token/stETH.png"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x777777c9898d384f785ee44acfe945efdff5f3e0",
     "market": "0x8dae6cb04688c62d939ed9b68d32bc62e49970b1",
     "token": {
       "chain": "ethereum",
-      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
       "symbol": "CRV",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+      "logoURI": "https://cdn.paraswap.io/token/CRV.png"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x8888882f8f843896699869179fb6e4f7e3b58888",
     "market": "0x4ddc2d193948926d02f9b1fe9e1daa0718270ed5",
     "token": {
-      "chain": "ethereum",
       "symbol": "ETH",
       "decimals": 18,
+      "chain": "ethereum",
       "address": "0x0000000000000000000000000000000000000000"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x8888882f8f843896699869179fb6e4f7e3b58888",
     "market": "0x5d3a536e4d6dbd6114cc1ead35777bab948e3643",
     "token": {
       "chain": "ethereum",
-      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
       "symbol": "DAI",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "logoURI": "https://cdn.paraswap.io/token/DAI.png"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x8888882f8f843896699869179fb6e4f7e3b58888",
     "market": "0x70e36f6bf80a52b3b46b3af8e106cc0ed743e8e4",
     "token": {
       "chain": "ethereum",
       "symbol": "COMP",
       "decimals": 18,
-      "address": "0xc00e94cb662c3520282e6f5717214004a7f26888"
+      "address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+      "logoURI": "https://cdn.paraswap.io/token/COMP.png"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x8888882f8f843896699869179fb6e4f7e3b58888",
     "market": "0x7713dd9ca933848f6819f38b8352d9a15ea73f67",
     "token": {
       "chain": "ethereum",
-      "address": "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
       "symbol": "FEI",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x956f47f50a910163d8bf957cf5846d573e7f87ca"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x8888882f8f843896699869179fb6e4f7e3b58888",
     "market": "0x35a18000230da775cac24873d00ff85bccded550",
     "token": {
@@ -133,35 +154,41 @@
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x8888882f8f843896699869179fb6e4f7e3b58888",
     "market": "0x39aa39c021dfbae8fac545936693ac917d5e7563",
     "token": {
       "chain": "ethereum",
-      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "symbol": "USDC",
-      "decimals": 6
+      "decimals": 6,
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "logoURI": "https://cdn.paraswap.io/token/USDC.png"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x8888882f8f843896699869179fb6e4f7e3b58888",
     "market": "0xf650c3d88d12db855b8bf7d11be6c55a4e07dcc9",
     "token": {
       "chain": "ethereum",
-      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
       "symbol": "USDT",
-      "decimals": 6
+      "decimals": 6,
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "logoURI": "https://cdn.paraswap.io/token/USDT.png"
     }
   },
   {
     "chain": "ethereum",
+    "protocol": "morpho",
     "address": "0x8888882f8f843896699869179fb6e4f7e3b58888",
     "market": "0xccf4429db6322d5c611ee964527d42e5d685dd6a",
     "token": {
       "chain": "ethereum",
-      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
       "symbol": "WBTC",
-      "decimals": 8
+      "decimals": 8,
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "logoURI": "https://cdn.paraswap.io/token/WBTC.png"
     }
   }
 ]

@@ -1463,7 +1463,8 @@
         "name": "",
         "type": "address"
       }
-    ]
+    ],
+    "gas": 2558
   },
   {
     "stateMutability": "view",

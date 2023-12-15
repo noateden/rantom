@@ -1,59 +1,63 @@
-import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
-
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
+import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { ParaswapAbiMappings } from './abis';
 
-const Signatures = {
-  BoughtV3: '0x4cc7e95e48af62690313a0733e93308ac9a73326bc3c29f1788b1191c376d5b6',
-  SwappedV3: '0xe00361d207b252a464323eb23d45d42583e391f2031acdd2e9fa36efddd43cb0',
-};
-
-export class ParaswapAdapter extends Adapter {
+export default class ParaswapAdapter extends Adapter {
   public readonly name: string = 'adapter.paraswap';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.BoughtV3]: EventSignatureMapping[Signatures.BoughtV3],
-      [Signatures.SwappedV3]: EventSignatureMapping[Signatures.SwappedV3],
-    });
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, config);
+
+    this.config = config;
+    this.eventMappings = ParaswapAbiMappings;
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
 
-    const signature = topics[0];
-    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
-      const web3 = new Web3();
-      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
+    if (this.supportedContract(options.chain, options.log.address)) {
+      const signature = options.log.topics[0];
 
-      const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event.srcToken);
-      const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event.destToken);
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
 
-      if (token0 && token1) {
+      const tokenIn = await this.services.blockchain.getTokenInfo({
+        chain: options.chain,
+        address: event.srcToken,
+      });
+      const tokenOut = await this.services.blockchain.getTokenInfo({
+        chain: options.chain,
+        address: event.destToken,
+      });
+
+      if (tokenIn && tokenOut) {
+        const amountIn = formatFromDecimals(event.srcAmount.toString(), tokenIn.decimals);
+        const amountOut = formatFromDecimals(event.receivedAmount.toString(), tokenOut.decimals);
         const initiator = normalizeAddress(event.initiator);
         const beneficiary = normalizeAddress(event.beneficiary);
-        const amount0 = new BigNumber(event.srcAmount).dividedBy(new BigNumber(10).pow(token0.decimals)).toString(10);
-        const amount1 = new BigNumber(event.receivedAmount)
-          .dividedBy(new BigNumber(10).pow(token1.decimals))
-          .toString(10);
 
-        return {
-          protocol: this.config.protocol,
-          action: 'trade',
-          addresses: [initiator, beneficiary],
-          tokens: [token0, token1],
-          tokenAmounts: [amount0, amount1],
-          readableString: `${initiator} trade ${amount0} ${token0.symbol} for ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
-        };
+        actions.push(
+          this.buildUpAction({
+            ...options,
+            action: 'trade',
+            addresses: [initiator, beneficiary],
+            tokens: [tokenIn, tokenOut],
+            tokenAmounts: [amountIn, amountOut],
+          })
+        );
       }
     }
 
-    return null;
+    return actions;
   }
 }

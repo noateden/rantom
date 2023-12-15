@@ -1,79 +1,67 @@
-import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
-
-import cErc20Abi from '../../../configs/abi/compound/cErc20.json';
-import { Tokens } from '../../../configs/constants';
-import EnvConfig from '../../../configs/envConfig';
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
+import { CompoundConfig, CompoundMarket } from '../../../configs/protocols/compound';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
+import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig, Token } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { CompoundAdapter } from '../compound/compound';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import CompoundAdapter from '../compound/compound';
+import { IronbankAbiMappings, IronbankEventSignatures } from './abis';
 
-const Signatures = {
-  Flashloan: '0x33c8e097c526683cbdb29adf782fac95e9d0fbe0ed635c13d8c75fdf726557d9',
-};
-
-export class IronbankAdapter extends CompoundAdapter {
+export default class IronbankAdapter extends CompoundAdapter {
   public readonly name: string = 'adapter.ironbank';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers);
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, config);
 
-    this.eventMappings[Signatures.Flashloan] = EventSignatureMapping[Signatures.Flashloan];
+    this.config = config;
+    this.eventMappings[IronbankEventSignatures.Flashloan] = IronbankAbiMappings[IronbankEventSignatures.Flashloan];
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const action: TransactionAction | null = await super.tryParsingActions(options);
-
-    if (action) {
-      return action;
-    }
-
-    // expect flashloan transaction
-    const { chain, address, topics, data } = options;
-    const signature = topics[0];
-    if (
-      this.config.contracts[chain] &&
-      this.config.contracts[chain].indexOf(address) !== -1 &&
-      EventSignatureMapping[signature] &&
-      signature === Signatures.Flashloan
-    ) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
-
-      let token: Token | null;
-      try {
-        const underlyingAddr = await this.getRpcWrapper().queryContract({
-          chain,
-          abi: cErc20Abi,
-          contract: address,
-          method: 'underlying',
-          params: [],
-        });
-        token = await this.getWeb3Helper().getErc20Metadata(chain, underlyingAddr);
-      } catch (e: any) {
-        token = Tokens[chain].NativeCoin;
-      }
-
-      if (token) {
-        const receiver = normalizeAddress(event.receiver);
-        const sender = await this.getSenderAddress(options);
-        const amount = new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
-
-        return {
-          protocol: this.config.protocol,
-          action: 'flashloan',
-          addresses: [sender, receiver],
-          tokens: [token],
-          tokenAmounts: [amount],
-          readableString: `${sender} flashloan ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-        };
+  protected getUnderlyingToken(cTokenAddress: string): Token | null {
+    for (const market of (this.config as CompoundConfig).contracts) {
+      if (compareAddress(cTokenAddress, market.address)) {
+        return (market as CompoundMarket).underlying;
       }
     }
 
     return null;
+  }
+
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = await super.parseEventLog(options);
+
+    if (actions.length > 0) {
+      return actions;
+    }
+
+    const signature = options.log.topics[0];
+    if (signature === IronbankEventSignatures.Flashloan && this.supportedContract(options.chain, options.log.address)) {
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
+
+      const token = this.getUnderlyingToken(options.log.address);
+      if (token) {
+        const receiver = normalizeAddress(event.receiver);
+        const amount = formatFromDecimals(event.amount, token.decimals);
+
+        actions.push(
+          this.buildUpAction({
+            ...options,
+            action: 'flashloan',
+            addresses: [receiver],
+            tokens: [token],
+            tokenAmounts: [amount],
+          })
+        );
+      }
+    }
+
+    return actions;
   }
 }

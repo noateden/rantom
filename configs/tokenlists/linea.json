@@ -1,0 +1,188 @@
+{
+  "$MENDI": {
+    "chain": "linea",
+    "address": "0x2314342912d9968fd3b40a542bdb1fc6b918f35e",
+    "symbol": "$MENDI",
+    "decimals": 18
+  },
+  "5pct": {
+    "chain": "linea",
+    "address": "0x10f14fe82bf985d63d49152d2edd1a1a4d078d22",
+    "symbol": "5pct",
+    "decimals": 18
+  },
+  "A": { "chain": "linea", "address": "0x32226588378236fd0c7c4053999f88ac0e5cac77", "symbol": "A", "decimals": 18 },
+  "AVAX": {
+    "chain": "linea",
+    "address": "0x5471ea8f739dd37e9b81be9c5c77754d8aa953e4",
+    "symbol": "AVAX",
+    "decimals": 18
+  },
+  "AXL": { "chain": "linea", "address": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f", "symbol": "AXL", "decimals": 6 },
+  "B": { "chain": "linea", "address": "0x3652fc6edcbd76161b8554388867d3dab65eca93", "symbol": "B", "decimals": 18 },
+  "BNB": { "chain": "linea", "address": "0xf5c6825015280cdfd0b56903f9f8b5a2233476f5", "symbol": "BNB", "decimals": 18 },
+  "BUSD": {
+    "chain": "linea",
+    "address": "0x7d43aabc515c356145049227cee54b608342c0ad",
+    "symbol": "BUSD",
+    "decimals": 18
+  },
+  "Cake": {
+    "chain": "linea",
+    "address": "0x0d1e753a25ebda689453309112904807625befbe",
+    "symbol": "Cake",
+    "decimals": 18
+  },
+  "DAI": { "chain": "linea", "address": "0x4af15ec2a0bd43db75dd04e62faa3b8ef36b00d5", "symbol": "DAI", "decimals": 18 },
+  "Doge🐶": {
+    "chain": "linea",
+    "address": "0xf2b2bd9747e3181a787612a4ca0fdb2522de9486",
+    "symbol": "Doge🐶",
+    "decimals": 18
+  },
+  "ESVN": {
+    "chain": "linea",
+    "address": "0x759104b484d4ef5defb98146b026956e94ad8eac",
+    "symbol": "ESVN",
+    "decimals": 18
+  },
+  "GDX": { "chain": "linea", "address": "0x91c415fecd651f11d24ac4b72ed08dbeb9868d43", "symbol": "GDX", "decimals": 18 },
+  "GRAI": {
+    "chain": "linea",
+    "address": "0x894134a25a5fac1c2c26f1d8fbf05111a3cb9487",
+    "symbol": "GRAI",
+    "decimals": 18
+  },
+  "HAPI": {
+    "chain": "linea",
+    "address": "0x0e5f2ee8c29e7ebc14e45da7ff90566d8c407db7",
+    "symbol": "HAPI",
+    "decimals": 18
+  },
+  "KNC": { "chain": "linea", "address": "0x3b2f62d42db19b30588648bf1c184865d4c3b1d6", "symbol": "KNC", "decimals": 18 },
+  "LAB": { "chain": "linea", "address": "0xb97f21d1f2508ff5c73e7b5af02847640b1ff75d", "symbol": "LAB", "decimals": 18 },
+  "LEDG": {
+    "chain": "linea",
+    "address": "0xf1e11408b29611c03e242244a3f37acf66c2e3fe",
+    "symbol": "LEDG",
+    "decimals": 18
+  },
+  "LNU": { "chain": "linea", "address": "0xc935b31c345d59a2396f7feac277fc1c981abc38", "symbol": "LNU", "decimals": 18 },
+  "LUSD": {
+    "chain": "linea",
+    "address": "0xb44dd7b34591de89414aa01d291a9e624682f1cc",
+    "symbol": "LUSD",
+    "decimals": 18
+  },
+  "LVC": { "chain": "linea", "address": "0xcc22f6aa610d1b2a0e89ef228079cb3e1831b1d1", "symbol": "LVC", "decimals": 18 },
+  "LYU": { "chain": "linea", "address": "0xb20116ee399f15647bb1eef9a74f6ef3b58bc951", "symbol": "LYU", "decimals": 18 },
+  "MAI": { "chain": "linea", "address": "0xf3b001d64c656e30a62fbaaca003b1336b4ce12a", "symbol": "MAI", "decimals": 18 },
+  "MATIC": {
+    "chain": "linea",
+    "address": "0x265b25e22bcd7f10a5bd6e6410f10537cc7567e8",
+    "symbol": "MATIC",
+    "decimals": 18
+  },
+  "PEPEL": {
+    "chain": "linea",
+    "address": "0x5b070422c9e1a6051b117c3a373e6e1324de4191",
+    "symbol": "PEPEL",
+    "decimals": 18
+  },
+  "P三P三": {
+    "chain": "linea",
+    "address": "0xb96f4f46b315ae50dfa3d985292709ae11b8ef34",
+    "symbol": "P三P三",
+    "decimals": 18
+  },
+  "S": { "chain": "linea", "address": "0xb3307c50f6047d5351c40ec1a04283b7e2daac9d", "symbol": "S", "decimals": 18 },
+  "STG": { "chain": "linea", "address": "0x808d7c71ad2ba3fa531b068a2417c63106bc0949", "symbol": "STG", "decimals": 18 },
+  "STONE": {
+    "chain": "linea",
+    "address": "0x93f4d0ab6a8b4271f4a28db399b5e30612d21116",
+    "symbol": "STONE",
+    "decimals": 18
+  },
+  "TM": { "chain": "linea", "address": "0x246c82fd3798af4cc38973c429c18e807016a4bd", "symbol": "TM", "decimals": 18 },
+  "TOMO": {
+    "chain": "linea",
+    "address": "0x07973112df30e2dd0f5df9936b4150ef284c2b4f",
+    "symbol": "TOMO",
+    "decimals": 18
+  },
+  "TTO": { "chain": "linea", "address": "0x7631a58260de942f3e3b8a2b331fefb8af204eb9", "symbol": "TTO", "decimals": 18 },
+  "TV": { "chain": "linea", "address": "0x02e47d464c3bb564964fce162e6c8f38ea744f5a", "symbol": "TV", "decimals": 18 },
+  "USDC": {
+    "chain": "linea",
+    "address": "0x176211869ca2b568f2a7d4ee941e073a821ee1ff",
+    "symbol": "USDC",
+    "decimals": 6
+  },
+  "USDT": {
+    "chain": "linea",
+    "address": "0xa219439258ca9da29e9cc4ce5596924745e12b93",
+    "symbol": "USDT",
+    "decimals": 6
+  },
+  "WBTC": {
+    "chain": "linea",
+    "address": "0x3aab2285ddcddad8edf438c1bab47e1a9d05a9b4",
+    "symbol": "WBTC",
+    "decimals": 8
+  },
+  "WEFI": {
+    "chain": "linea",
+    "address": "0x60892e742d91d16be2cb0ffe847e85445989e30b",
+    "symbol": "WEFI",
+    "decimals": 18
+  },
+  "WETH": {
+    "chain": "linea",
+    "address": "0xe5d7c2a44ffddf6b295a15c148167daaaf5cf34f",
+    "symbol": "WETH",
+    "decimals": 18
+  },
+  "axlKNC": {
+    "chain": "linea",
+    "address": "0xb448ec505c924944ca8b2c55ef05c299ee0781df",
+    "symbol": "axlKNC",
+    "decimals": 18
+  },
+  "axlTIA": {
+    "chain": "linea",
+    "address": "0x41b94c5867f7f6217c9a30520cb3e793b1ee1b97",
+    "symbol": "axlTIA",
+    "decimals": 6
+  },
+  "axlUSDC": {
+    "chain": "linea",
+    "address": "0xeb466342c4d449bc9f53a865d5cb90586f405215",
+    "symbol": "axlUSDC",
+    "decimals": 6
+  },
+  "axlWMAI": {
+    "chain": "linea",
+    "address": "0x88dfaaabaf06f3a41d2606ea98bc8eda109abebb",
+    "symbol": "axlWMAI",
+    "decimals": 18
+  },
+  "f": { "chain": "linea", "address": "0x5070282949e2e79b6945dec3d962142d233cd031", "symbol": "f", "decimals": 18 },
+  "stETH": {
+    "chain": "linea",
+    "address": "0x8ce74e606481bbc7078af4781f9eb67afc85a0ce",
+    "symbol": "stETH",
+    "decimals": 18
+  },
+  "suremoon": {
+    "chain": "linea",
+    "address": "0x25cb2a4c0b3d4b84c439e446d7d80678f84bd0da",
+    "symbol": "suremoon",
+    "decimals": 18
+  },
+  "wUSK": {
+    "chain": "linea",
+    "address": "0x2f0b4300074afc01726262d4cc9c1d2619d7297a",
+    "symbol": "wUSK",
+    "decimals": 18
+  }
+}

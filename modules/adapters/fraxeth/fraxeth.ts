@@ -1,68 +1,78 @@
-import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
-
-import { Tokens } from '../../../configs/constants';
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
-import { ProtocolConfig } from '../../../types/configs';
+import { AddressZero } from '../../../configs/constants/addresses';
+import { normalizeAddress } from '../../../lib/utils';
+import { formatFromDecimals } from '../../../lib/utils';
+import { ProtocolConfig, Token } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { FraxethAbiMappings, FraxethEventSignatures } from './abis';
 
-const Signatures: { [key: string]: string } = {
-  ETHSubmitted: '0x29b3e86ecfd94a32218997c40b051e650e4fd8c97fc7a4d266be3f7c61c5205b',
-  Deposit: '0xdcbc1c05240f31ff3ad067ef1ee35ce4997762752e3a095284754544f4c709d7',
-  Withdraw: '0xfbde797d201c681b91056529119e0b02407c7bb96a4a2c75c01fc9667232c8db',
-};
-
-export class FraxethAdapter extends Adapter {
+export default class FraxethAdapter extends Adapter {
   public readonly name: string = 'adapter.fraxeth';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.ETHSubmitted]: EventSignatureMapping[Signatures.ETHSubmitted],
-      [Signatures.Deposit]: EventSignatureMapping[Signatures.Deposit],
-      [Signatures.Withdraw]: EventSignatureMapping[Signatures.Withdraw],
-    });
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, config);
+
+    this.config = config;
+    this.eventMappings = FraxethAbiMappings;
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
 
-    const signature = topics[0];
-    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
-      const web3 = new Web3();
-      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
+    if (this.supportedContract(options.chain, options.log.address)) {
+      const signature = options.log.topics[0];
 
-      if (signature === Signatures.ETHSubmitted) {
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
+
+      if (signature === FraxethEventSignatures.ETHSubmitted) {
+        const token: Token = {
+          chain: 'ethereum',
+          symbol: 'ETH',
+          decimals: 18,
+          address: AddressZero,
+        };
         const sender = normalizeAddress(event.sender);
-        const amount = new BigNumber(event.sent_amount.toString()).dividedBy(1e18).toString(10);
-
-        return {
-          protocol: this.config.protocol,
-          action: 'deposit',
-          tokens: [Tokens.ethereum.ETH],
-          tokenAmounts: [amount],
-          addresses: [sender],
-          readableString: `${sender} deposit ${amount} ETH on ${this.config.protocol} chain ${chain}`,
+        const recipient = normalizeAddress(event.recipient);
+        const amount = formatFromDecimals(event.sent_amount.toString(), token.decimals);
+        actions.push(
+          this.buildUpAction({
+            ...options,
+            action: 'deposit',
+            addresses: [sender, recipient],
+            tokens: [token],
+            tokenAmounts: [amount],
+          })
+        );
+      } else if (signature === FraxethEventSignatures.Deposit || signature === FraxethEventSignatures.Withdraw) {
+        const token: Token = {
+          chain: 'ethereum',
+          address: '0x5e8422345238f34275888049021821e8e08caa1f',
+          symbol: 'frxETH',
+          decimals: 18,
         };
-      } else {
         const sender = normalizeAddress(event.caller);
-        const amount = new BigNumber(event.assets.toString()).dividedBy(1e18).toString(10);
-        return {
-          protocol: this.config.protocol,
-          action: signature === Signatures.Deposit ? 'deposit' : 'withdraw',
-          tokens: [Tokens.ethereum.frxETH],
-          tokenAmounts: [amount],
-          addresses: [sender],
-          readableString: `${sender} ${signature === Signatures.Deposit ? 'deposit' : 'withdraw'} ${amount} ${
-            Tokens.ethereum.frxETH
-          } on ${this.config.protocol} chain ${chain}`,
-        };
+        const owner = normalizeAddress(event.owner);
+        const amount = formatFromDecimals(event.assets.toString(), token.decimals);
+        actions.push(
+          this.buildUpAction({
+            ...options,
+            action: signature === FraxethEventSignatures.Deposit ? 'deposit' : 'withdraw',
+            addresses: [sender, owner],
+            tokens: [token],
+            tokenAmounts: [amount],
+          })
+        );
       }
     }
 
-    return null;
+    return actions;
   }
 }

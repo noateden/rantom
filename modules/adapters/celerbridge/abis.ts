@@ -1,8 +1,12 @@
 import { EventMapping } from '../../../types/configs';
 
-export const CelerbridgeMappings: { [key: string]: EventMapping } = {
-  // Send(bytes32,address,address,address,uint256,uint64,uint64,uint32)
-  '0x89d8051e597ab4178a863a5190407b98abfeff406aa8db90c59af76612e58f01': {
+export const CelerbridgeEventSignatures = {
+  Send: '0x89d8051e597ab4178a863a5190407b98abfeff406aa8db90c59af76612e58f01',
+  Replay: '0x79fa08de5149d912dce8e5e8da7a7c17ccdf23dd5d3bfe196802e6eb86347c7c',
+};
+
+export const CelerbridgeAbiMappings: { [key: string]: EventMapping } = {
+  [CelerbridgeEventSignatures.Send]: {
     abi: [
       {
         indexed: false,
@@ -54,9 +58,7 @@ export const CelerbridgeMappings: { [key: string]: EventMapping } = {
       },
     ],
   },
-
-  // Relay(bytes32,address,address,address,uint256,uint64,bytes32)
-  '0x79fa08de5149d912dce8e5e8da7a7c17ccdf23dd5d3bfe196802e6eb86347c7c': {
+  [CelerbridgeEventSignatures.Replay]: {
     abi: [
       {
         indexed: false,

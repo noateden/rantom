@@ -1,16 +1,19 @@
 [
   {
     "chain": "arbitrum",
+    "protocol": "mux",
     "assetId": 0,
     "token": {
       "chain": "arbitrum",
       "symbol": "USDC.e",
       "decimals": 6,
-      "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+      "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+      "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0xff970a61a04b1ca14834a43f5de4533ebddb5cc8/logo.png"
     }
   },
   {
     "chain": "arbitrum",
+    "protocol": "mux",
     "assetId": 1,
     "token": {
       "chain": "arbitrum",
@@ -21,6 +24,7 @@
   },
   {
     "chain": "arbitrum",
+    "protocol": "mux",
     "assetId": 2,
     "token": {
       "chain": "arbitrum",
@@ -31,6 +35,7 @@
   },
   {
     "chain": "arbitrum",
+    "protocol": "mux",
     "assetId": 3,
     "token": {
       "chain": "arbitrum",
@@ -41,6 +46,7 @@
   },
   {
     "chain": "arbitrum",
+    "protocol": "mux",
     "assetId": 4,
     "token": {
       "chain": "arbitrum",
@@ -51,26 +57,64 @@
   },
   {
     "chain": "arbitrum",
+    "protocol": "mux",
+    "assetId": 5,
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "ETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "mux",
+    "assetId": 6,
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "ETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "mux",
     "assetId": 7,
     "token": {
       "chain": "arbitrum",
       "symbol": "FTM",
       "decimals": 18,
-      "address": "0xd42785d323e608b9e99fa542bd8b1000d4c2df37"
+      "address": "0xd42785d323e608b9e99fa542bd8b1000d4c2df37",
+      "logoURI": "https://assets.coingecko.com/coins/images/4001/thumb/Fantom.png?1558015016"
     }
   },
   {
     "chain": "arbitrum",
+    "protocol": "mux",
     "assetId": 8,
     "token": {
       "chain": "arbitrum",
       "symbol": "BUSD",
       "decimals": 18,
-      "address": "0x31190254504622cefdfa55a7d3d272e6462629a2"
+      "address": "0x31190254504622cefdfa55a7d3d272e6462629a2",
+      "logoURI": "https://assets.coingecko.com/coins/images/9576/thumb/BUSD.png?1568947766"
     }
   },
   {
     "chain": "arbitrum",
+    "protocol": "mux",
+    "assetId": 9,
+    "token": {
+      "chain": "arbitrum",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "ETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "arbitrum",
+    "protocol": "mux",
     "assetId": 10,
     "token": {
       "chain": "arbitrum",
@@ -81,12 +125,230 @@
   },
   {
     "chain": "arbitrum",
+    "protocol": "mux",
     "assetId": 11,
     "token": {
       "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "mux",
+    "assetId": 0,
+    "token": {
+      "chain": "bnbchain",
+      "symbol": "USDC",
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d.png"
+    }
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "mux",
+    "assetId": 1,
+    "token": {
+      "chain": "bnbchain",
+      "symbol": "USDT",
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x55d398326f99059fF775485246999027B3197955.png"
+    }
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "mux",
+    "assetId": 2,
+    "token": {
+      "chain": "bnbchain",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+      "logoURI": "https://cdn.paraswap.io/token/DAI.png"
+    }
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "mux",
+    "assetId": 3,
+    "token": {
+      "chain": "bnbchain",
+      "symbol": "ETH",
+      "decimals": 18,
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png"
+    }
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "mux",
+    "assetId": 4,
+    "token": {
+      "chain": "bnbchain",
+      "symbol": "BTCB",
+      "decimals": 18,
+      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c.png"
+    }
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "mux",
+    "assetId": 5,
+    "token": {
+      "chain": "bnbchain",
+      "address": "0x1ce0c2827e2ef14d5c4f29a091d735a204794041",
+      "symbol": "AVAX",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "mux",
+    "assetId": 6,
+    "token": {
+      "chain": "bnbchain",
+      "symbol": "WBNB",
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+    }
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "mux",
+    "assetId": 7,
+    "token": {
+      "chain": "bnbchain",
+      "symbol": "FTM",
+      "decimals": 18,
+      "address": "0xad29abb318791d579433d831ed122afeaf29dcfe",
+      "logoURI": "https://assets.coingecko.com/coins/images/4001/thumb/Fantom.png?1558015016"
+    }
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "mux",
+    "assetId": 8,
+    "token": {
+      "chain": "bnbchain",
+      "symbol": "BUSD",
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+    }
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "mux",
+    "assetId": 9,
+    "token": {
+      "chain": "bnbchain",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "BNB",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "optimism",
+    "protocol": "mux",
+    "assetId": 0,
+    "token": {
+      "chain": "optimism",
       "symbol": "USDC",
       "decimals": 6,
-      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+      "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607"
+    }
+  },
+  {
+    "chain": "optimism",
+    "protocol": "mux",
+    "assetId": 1,
+    "token": {
+      "chain": "optimism",
+      "symbol": "USDT",
+      "decimals": 6,
+      "address": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58"
+    }
+  },
+  {
+    "chain": "optimism",
+    "protocol": "mux",
+    "assetId": 2,
+    "token": {
+      "chain": "optimism",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
+    }
+  },
+  {
+    "chain": "optimism",
+    "protocol": "mux",
+    "assetId": 3,
+    "token": {
+      "chain": "optimism",
+      "symbol": "WETH",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000006"
+    }
+  },
+  {
+    "chain": "optimism",
+    "protocol": "mux",
+    "assetId": 4,
+    "token": {
+      "chain": "optimism",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "address": "0x68f180fcce6836688e9084f035309e29bf0a2095"
+    }
+  },
+  {
+    "chain": "optimism",
+    "protocol": "mux",
+    "assetId": 5,
+    "token": {
+      "chain": "optimism",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "ETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "optimism",
+    "protocol": "mux",
+    "assetId": 6,
+    "token": {
+      "chain": "optimism",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "ETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "optimism",
+    "protocol": "mux",
+    "assetId": 7,
+    "token": {
+      "chain": "optimism",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "ETH",
+      "decimals": 18
+    }
+  },
+  {
+    "chain": "optimism",
+    "protocol": "mux",
+    "assetId": 8,
+    "token": {
+      "chain": "optimism",
+      "symbol": "OP",
+      "decimals": 18,
+      "address": "0x4200000000000000000000000000000000000042"
     }
   }
 ]

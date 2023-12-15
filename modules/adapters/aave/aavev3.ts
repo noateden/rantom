@@ -1,134 +1,141 @@
-import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
-
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
+import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { AaveAbiMappings, AaveV3EventSignatures } from './abis';
 
-const Signatures = {
-  Supply: '0x2b627736bca15cd5381dcf80b0bf11fd197d01a037c52b927a881a10fb73ba61',
-  Withdraw: '0x3115d1449a7b732c986cba18244e897a450f61e1bb8d589cd2e69e6c8924f9f7',
-  Borrow: '0xb3d084820fb1a9decffb176436bd02558d15fac9b0ddfed8c465bc7359d7dce0',
-  Repay: '0xa534c8dbe71f871f9f3530e97a74601fea17b426cae02e1c5aee42c96c784051',
-  FlashLoan: '0xefefaba5e921573100900a3ad9cf29f222d995fb3b6045797eaea7521bd8d6f0',
-  Liquidate: '0xe413a321e8681d831f4dbccbca790d2952b56f977908e45be37335533e005286',
-};
-
-export class Aavev3Adapter extends Adapter {
+export default class Aavev3Adapter extends Adapter {
   public readonly name: string = 'adapter.aavev3';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.Supply]: EventSignatureMapping[Signatures.Supply],
-      [Signatures.Withdraw]: EventSignatureMapping[Signatures.Withdraw],
-      [Signatures.Borrow]: EventSignatureMapping[Signatures.Borrow],
-      [Signatures.Repay]: EventSignatureMapping[Signatures.Repay],
-      [Signatures.FlashLoan]: EventSignatureMapping[Signatures.FlashLoan],
-      [Signatures.Liquidate]: EventSignatureMapping[Signatures.Liquidate],
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, {
+      protocol: config.protocol,
+      contracts: config.contracts,
     });
+
+    this.config = config;
+    this.eventMappings = {
+      [AaveV3EventSignatures.Deposit]: AaveAbiMappings[AaveV3EventSignatures.Deposit],
+      [AaveV3EventSignatures.Withdraw]: AaveAbiMappings[AaveV3EventSignatures.Withdraw],
+      [AaveV3EventSignatures.Borrow]: AaveAbiMappings[AaveV3EventSignatures.Borrow],
+      [AaveV3EventSignatures.Repay]: AaveAbiMappings[AaveV3EventSignatures.Repay],
+      [AaveV3EventSignatures.Flashloan]: AaveAbiMappings[AaveV3EventSignatures.Flashloan],
+      [AaveV3EventSignatures.Liquidate]: AaveAbiMappings[AaveV3EventSignatures.Liquidate],
+    };
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
 
-    const signature = topics[0];
-    if (
-      this.config.contracts[chain] &&
-      this.config.contracts[chain].indexOf(address) !== -1 &&
-      EventSignatureMapping[signature]
-    ) {
-      const web3 = new Web3();
-      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+    const signature = options.log.topics[0];
+    if (!this.eventMappings[signature] || !this.supportedContract(options.chain, options.log.address)) {
+      return actions;
+    }
 
-      switch (signature) {
-        case Signatures.Supply:
-        case Signatures.Withdraw:
-        case Signatures.Repay:
-        case Signatures.Borrow: {
-          const reserve = await this.getWeb3Helper().getErc20Metadata(chain, event.reserve);
-          if (reserve) {
-            const user = normalizeAddress(event.user);
-            const onBehalfOf = event.onBehalfOf
-              ? normalizeAddress(event.onBehalfOf)
-              : event.to
-              ? normalizeAddress(event.to)
-              : normalizeAddress(event.repayer);
-            const amount = new BigNumber(event.amount.toString())
-              .dividedBy(new BigNumber(10).pow(reserve.decimals))
-              .toString(10);
+    const web3 = this.services.blockchain.getProvider(options.chain);
+    const event = web3.eth.abi.decodeLog(
+      this.eventMappings[signature].abi,
+      options.log.data,
+      options.log.topics.slice(1)
+    );
 
-            let action: KnownAction = 'deposit';
-            if (signature === Signatures.Supply) {
-              action = 'deposit';
-            }
-            if (signature === Signatures.Withdraw) {
-              action = 'withdraw';
-            }
-            if (signature === Signatures.Borrow) {
-              action = 'borrow';
-            }
-            if (signature === Signatures.Repay) {
-              action = 'repay';
-            }
+    switch (signature) {
+      case AaveV3EventSignatures.Deposit:
+      case AaveV3EventSignatures.Withdraw:
+      case AaveV3EventSignatures.Borrow:
+      case AaveV3EventSignatures.Repay: {
+        const token = await this.services.blockchain.getTokenInfo({
+          chain: options.chain,
+          address: event.reserve,
+        });
 
-            return {
-              protocol: this.config.protocol,
+        if (token) {
+          const user = normalizeAddress(event.user);
+          const onBehalfOf = event.onBehalfOf
+            ? normalizeAddress(event.onBehalfOf)
+            : event.to
+            ? normalizeAddress(event.to)
+            : normalizeAddress(event.repayer);
+
+          const amount = formatFromDecimals(event.amount.toString(), token.decimals);
+
+          let action: KnownAction = 'deposit';
+          if (signature === AaveV3EventSignatures.Withdraw) {
+            action = 'withdraw';
+          }
+          if (signature === AaveV3EventSignatures.Borrow) {
+            action = 'borrow';
+          }
+          if (signature === AaveV3EventSignatures.Repay) {
+            action = 'repay';
+          }
+
+          actions.push(
+            this.buildUpAction({
+              ...options,
               action: action,
               addresses: [user, onBehalfOf],
-              tokens: [reserve],
+              tokens: [token],
               tokenAmounts: [amount],
-              readableString: `${user} ${action} ${amount} ${reserve.symbol} on ${this.config.protocol} chain ${chain}`,
-            };
-          }
-          break;
+            })
+          );
         }
-        case Signatures.FlashLoan: {
-          const reserve = await this.getWeb3Helper().getErc20Metadata(chain, event.asset);
-          if (reserve) {
-            const initiator = normalizeAddress(event.initiator);
-            const target = normalizeAddress(event.target);
+        break;
+      }
+      case AaveV3EventSignatures.Flashloan: {
+        const token = await this.services.blockchain.getTokenInfo({
+          chain: options.chain,
+          address: event.asset,
+        });
+        if (token) {
+          const initiator = normalizeAddress(event.initiator);
+          const target = normalizeAddress(event.target);
 
-            const amount = new BigNumber(event.amount.toString())
-              .dividedBy(new BigNumber(10).pow(reserve.decimals))
-              .toString(10);
-            return {
-              protocol: this.config.protocol,
+          const amount = formatFromDecimals(event.amount.toString(), token.decimals);
+
+          actions.push(
+            this.buildUpAction({
+              ...options,
               action: 'flashloan',
-              addresses: [initiator, target],
-              tokens: [reserve],
+              addresses: [target, initiator],
+              tokens: [token],
               tokenAmounts: [amount],
-              readableString: `${initiator} flashloan ${amount} ${reserve.symbol} on ${this.config.protocol} chain ${chain}`,
-            };
-          }
-          break;
+            })
+          );
         }
-        case Signatures.Liquidate: {
-          const collateral = await this.getWeb3Helper().getErc20Metadata(chain, event.collateralAsset);
-          if (collateral) {
-            const user = normalizeAddress(event.user);
-            const liquidator = normalizeAddress(event.liquidator);
 
-            const amount = new BigNumber(event.liquidatedCollateralAmount.toString())
-              .dividedBy(new BigNumber(10).pow(collateral.decimals))
-              .toString(10);
+        break;
+      }
+      case AaveV3EventSignatures.Liquidate: {
+        const collateral = await this.services.blockchain.getTokenInfo({
+          chain: options.chain,
+          address: event.collateralAsset,
+        });
+        if (collateral) {
+          const user = normalizeAddress(event.user);
+          const liquidator = normalizeAddress(event.liquidator);
 
-            return {
-              protocol: this.config.protocol,
+          const amount = formatFromDecimals(event.liquidatedCollateralAmount.toString(), collateral.decimals);
+
+          actions.push(
+            this.buildUpAction({
+              ...options,
               action: 'liquidate',
               addresses: [liquidator, user],
               tokens: [collateral],
               tokenAmounts: [amount],
-              readableString: `${liquidator} liquidate ${amount} ${collateral.symbol} on ${this.config.protocol} chain ${chain}`,
-            };
-          }
+            })
+          );
         }
+
+        break;
       }
     }
 
-    return null;
+    return actions;
   }
 }

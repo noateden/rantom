@@ -1,0 +1,104 @@
+[
+  {
+    "protocol": "crvusd",
+    "chain": "ethereum",
+    "address": "0x8472a9a7632b173c8cf3a86d3afec50c35548e76",
+    "debtToken": {
+      "chain": "ethereum",
+      "symbol": "crvUSD",
+      "decimals": 18,
+      "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e"
+    },
+    "collateralToken": {
+      "chain": "ethereum",
+      "address": "0xac3e018457b222d93114458476f3e3416abbe38f",
+      "symbol": "sfrxETH",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "crvusd",
+    "chain": "ethereum",
+    "address": "0xec0820efafc41d8943ee8de495fc9ba8495b15cf",
+    "debtToken": {
+      "chain": "ethereum",
+      "symbol": "crvUSD",
+      "decimals": 18,
+      "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e"
+    },
+    "collateralToken": {
+      "chain": "ethereum",
+      "address": "0xac3e018457b222d93114458476f3e3416abbe38f",
+      "symbol": "sfrxETH",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "crvusd",
+    "chain": "ethereum",
+    "address": "0x100daa78fc509db39ef7d04de0c1abd299f4c6ce",
+    "debtToken": {
+      "chain": "ethereum",
+      "symbol": "crvUSD",
+      "decimals": 18,
+      "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e"
+    },
+    "collateralToken": {
+      "chain": "ethereum",
+      "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+      "symbol": "wstETH",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "crvusd",
+    "chain": "ethereum",
+    "address": "0x4e59541306910ad6dc1dac0ac9dfb29bd9f15c67",
+    "debtToken": {
+      "chain": "ethereum",
+      "symbol": "crvUSD",
+      "decimals": 18,
+      "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e"
+    },
+    "collateralToken": {
+      "chain": "ethereum",
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "symbol": "WBTC",
+      "decimals": 8
+    }
+  },
+  {
+    "protocol": "crvusd",
+    "chain": "ethereum",
+    "address": "0xa920de414ea4ab66b97da1bfe9e6eca7d4219635",
+    "debtToken": {
+      "chain": "ethereum",
+      "symbol": "crvUSD",
+      "decimals": 18,
+      "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e"
+    },
+    "collateralToken": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "crvusd",
+    "chain": "ethereum",
+    "address": "0x1c91da0223c763d2e0173243eadaa0a2ea47e704",
+    "debtToken": {
+      "chain": "ethereum",
+      "symbol": "crvUSD",
+      "decimals": 18,
+      "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e"
+    },
+    "collateralToken": {
+      "chain": "ethereum",
+      "address": "0x18084fba666a33d37592fa2633fd49a74dd93a88",
+      "symbol": "tBTC",
+      "decimals": 18
+    }
+  }
+]

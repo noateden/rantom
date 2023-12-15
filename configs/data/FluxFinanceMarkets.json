@@ -1,0 +1,65 @@
+[
+  {
+    "protocol": "fluxfinance",
+    "chain": "ethereum",
+    "address": "0x465a5a630482f3abd6d3b84b39b29b07214d19e5",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "symbol": "USDC",
+      "decimals": 6,
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "logoURI": "https://cdn.paraswap.io/token/USDC.png"
+    }
+  },
+  {
+    "protocol": "fluxfinance",
+    "chain": "ethereum",
+    "address": "0xe2ba8693ce7474900a045757fe0efca900f6530b",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "logoURI": "https://cdn.paraswap.io/token/DAI.png"
+    }
+  },
+  {
+    "protocol": "fluxfinance",
+    "chain": "ethereum",
+    "address": "0x81994b9607e06ab3d5cf3afff9a67374f05f27d7",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "symbol": "USDT",
+      "decimals": 6,
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "logoURI": "https://cdn.paraswap.io/token/USDT.png"
+    }
+  },
+  {
+    "protocol": "fluxfinance",
+    "chain": "ethereum",
+    "address": "0x1c9a2d6b33b4826757273d47ebee0e2dddcd978b",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "symbol": "FRAX",
+      "decimals": 18,
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e"
+    }
+  },
+  {
+    "protocol": "fluxfinance",
+    "chain": "ethereum",
+    "address": "0x1dd7950c266fb1be96180a8fdb0591f70200e018",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "address": "0x1b19c19393e2d034d8ff31ff34c81252fcbbee92",
+      "symbol": "OUSG",
+      "decimals": 18
+    }
+  }
+]

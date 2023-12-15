@@ -1,60 +1,68 @@
-import Web3 from 'web3';
-
-import { Tokens } from '../../../configs/constants';
-import EnvConfig from '../../../configs/envConfig';
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { fromLittleEndian64, normalizeAddress } from '../../../lib/helper';
+import { AddressZero } from '../../../configs/constants/addresses';
+import { NativeTokens } from '../../../configs/constants/nativeTokens';
+import { normalizeAddress } from '../../../lib/utils';
+import { fromLittleEndian64 } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { Eth2AbiMappings } from './abis';
 
-const Signatures: { [key: string]: string } = {
-  Deposit: '0x649bbc62d0e31342afea4e5cd82d4049e7e1ee912fc0889aa790803be39038c5',
-};
-
-export class Eth2Adapter extends Adapter {
+export default class Eth2Adapter extends Adapter {
   public readonly name: string = 'adapter.eth2';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.Deposit]: EventSignatureMapping[Signatures.Deposit],
-    });
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, config);
+
+    this.config = config;
+    this.eventMappings = Eth2AbiMappings;
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
 
-    const signature = topics[0];
-    if (
-      this.config.contracts[chain] &&
-      this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1 &&
-      EventSignatureMapping[signature]
-    ) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const event = web3.eth.abi.decodeLog(EventSignatureMapping[signature].abi, data, topics.slice(1));
+    if (this.supportedContract(options.chain, options.log.address)) {
+      const signature = options.log.topics[0];
+
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
 
       const amount = fromLittleEndian64(event.amount);
-      const sender = await this.getSenderAddress(options);
-      const target = await this.getTargetAddress(options);
-      return {
-        protocol: this.config.protocol,
-        action: 'deposit',
-        tokens: [Tokens.ethereum.ETH],
-        tokenAmounts: [amount],
-        addresses: [sender, target],
-        readableString: `${sender} deposit ${amount} ETH on ${this.config.protocol} chain ${options.chain}`,
-        addition: {
-          // identify which protocol is depositing by contract address
-          contract: target,
+      let transaction = options.transaction;
+      if (!transaction) {
+        transaction = await this.services.blockchain.getTransaction({
+          chain: options.chain,
+          hash: options.log.transactionHash,
+        });
+      }
 
+      actions.push({
+        ...this.buildUpAction({
+          ...options,
+          action: 'deposit',
+          addresses: [normalizeAddress(transaction.from)],
+          tokens: [
+            {
+              ...NativeTokens.ethereum,
+              chain: options.chain,
+              address: AddressZero,
+            },
+          ],
+          tokenAmounts: [amount],
+        }),
+        addition: {
           pubkey: event.pubkey,
           withdrawalCredentials: event.withdrawal_credentials,
         },
-      };
+      });
     }
 
-    return null;
+    return actions;
   }
 }

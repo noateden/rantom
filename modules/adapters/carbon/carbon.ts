@@ -1,88 +1,88 @@
-import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
-
-import EnvConfig from '../../../configs/envConfig';
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
+import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
-import { KnownAction, TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
+import { TransactionAction } from '../../../types/domains';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { CarbonAbiMappings, CarbonEventSignatures } from './abis';
 
-const Signatures = {
-  TokensTraded: '0x95f3b01351225fea0e69a46f68b164c9dea10284f12cd4a907ce66510ab7af6a',
-  StrategyCreated: '0xff24554f8ccfe540435cfc8854831f8dcf1cf2068708cfaf46e8b52a4ccc4c8d',
-  StrategyDeleted: '0x4d5b6e0627ea711d8e9312b6ba56f50e0b51d41816fd6fd38643495ac81d38b6',
-};
-
-export class CarbonAdapter extends Adapter {
+export default class CarbonAdapter extends Adapter {
   public readonly name: string = 'adapter.carbon';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.TokensTraded]: EventSignatureMapping[Signatures.TokensTraded],
-      [Signatures.StrategyCreated]: EventSignatureMapping[Signatures.StrategyCreated],
-      [Signatures.StrategyDeleted]: EventSignatureMapping[Signatures.StrategyDeleted],
-    });
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, config);
+
+    this.config = config;
+    this.eventMappings = CarbonAbiMappings;
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
 
-    const signature = topics[0];
-    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(normalizeAddress(address)) !== -1) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
+    if (this.supportedContract(options.chain, options.log.address)) {
+      const signature = options.log.topics[0];
 
-      if (signature === Signatures.TokensTraded) {
-        const sourceToken = await this.getWeb3Helper().getErc20Metadata(chain, event.sourceToken);
-        const targetToken = await this.getWeb3Helper().getErc20Metadata(chain, event.targetToken);
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
 
-        if (sourceToken && targetToken) {
+      if (signature === CarbonEventSignatures.TokensTraded) {
+        const tokenIn = await this.services.blockchain.getTokenInfo({
+          chain: options.chain,
+          address: event.sourceToken,
+        });
+        const tokenOut = await this.services.blockchain.getTokenInfo({
+          chain: options.chain,
+          address: event.targetToken,
+        });
+
+        if (tokenIn && tokenOut) {
           const trader = normalizeAddress(event.trader);
-          const sourceAmount = new BigNumber(event.sourceAmount)
-            .dividedBy(new BigNumber(10).pow(sourceToken.decimals))
-            .toString(10);
-          const targetAmount = new BigNumber(event.targetAmount)
-            .dividedBy(new BigNumber(10).pow(targetToken.decimals))
-            .toString(10);
+          const amountIn = formatFromDecimals(event.sourceAmount.toString(), tokenIn.decimals);
+          const amountOut = formatFromDecimals(event.targetAmount.toString(), tokenOut.decimals);
 
-          return {
-            protocol: this.config.protocol,
-            action: 'swap',
-            addresses: [trader],
-            tokens: [sourceToken, targetToken],
-            tokenAmounts: [sourceAmount, targetAmount],
-            readableString: `${trader} swap ${sourceAmount} ${sourceToken.symbol} for ${targetAmount} ${targetToken.symbol} on ${this.config.protocol} chain ${chain}`,
-          };
+          actions.push(
+            this.buildUpAction({
+              ...options,
+              action: 'swap',
+              addresses: [trader],
+              tokens: [tokenIn, tokenOut],
+              tokenAmounts: [amountIn, amountOut],
+            })
+          );
         }
-      } else if (signature === Signatures.StrategyCreated || signature === Signatures.StrategyDeleted) {
-        const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event.token0);
-        const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event.token1);
-
+      } else {
+        const token0 = await this.services.blockchain.getTokenInfo({
+          chain: options.chain,
+          address: event.token0,
+        });
+        const token1 = await this.services.blockchain.getTokenInfo({
+          chain: options.chain,
+          address: event.token1,
+        });
         if (token0 && token1) {
-          const amount0 = new BigNumber((event.order0 as any).y.toString())
-            .dividedBy(new BigNumber(10).pow(token0.decimals))
-            .toString(10);
-          const amount1 = new BigNumber((event.order1 as any).y.toString())
-            .dividedBy(new BigNumber(10).pow(token1.decimals))
-            .toString(10);
+          const amount0 = formatFromDecimals((event.order0 as any).y.toString(), token0.decimals);
+          const amount1 = formatFromDecimals((event.order1 as any).y.toString(), token1.decimals);
           const user = normalizeAddress(event.owner);
-          const action: KnownAction = signature === Signatures.StrategyCreated ? 'deposit' : 'withdraw';
 
-          return {
-            protocol: this.config.protocol,
-            action: action,
-            addresses: [user],
-            tokens: [token0, token1],
-            tokenAmounts: [amount0, amount1],
-            readableString: `${user} ${action} ${amount0} ${token0.symbol} and ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
-          };
+          actions.push(
+            this.buildUpAction({
+              ...options,
+              action: signature === CarbonEventSignatures.StrategyCreated ? 'deposit' : 'withdraw',
+              addresses: [user],
+              tokens: [token0, token1],
+              tokenAmounts: [amount0, amount1],
+            })
+          );
         }
       }
     }
 
-    return null;
+    return actions;
   }
 }

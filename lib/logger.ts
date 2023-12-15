@@ -1,75 +1,25 @@
 import winston from 'winston';
 
-export interface LogEntry {
-  message: string;
-  props: any;
+const customFormat = winston.format.printf((entry: any) => {
+  let propsLine = '';
 
-  service?: string;
-  error?: any;
-}
-
-class LogProvider {
-  private readonly logger: any;
-
-  constructor() {
-    const customFormat = winston.format.printf(({ timestamp, level, service, message, props }) => {
-      let propsLine = '';
-
-      if (props) {
-        for (const [key, value] of Object.entries(props)) {
-          propsLine += `${key}=${value} `;
-        }
-      }
-
-      return `${timestamp} [${service}] ${level}: ${message.padEnd(40)} ${propsLine.slice(0, -1)}`;
-    });
-
-    this.logger = winston.createLogger({
-      level: 'debug',
-      format: winston.format.combine(winston.format.colorize(), winston.format.timestamp(), customFormat),
-      transports: [new winston.transports.Console({})],
-    });
-  }
-
-  public onInfo(entry: LogEntry): void {
-    if (!Boolean(process.env.SILENT_MODE)) {
-      this.logger.info(entry.message, {
-        service: entry.service,
-        props: entry.props,
-      });
+  for (const [key, value] of Object.entries(entry)) {
+    if (['timestamp', 'service', 'level', 'message'].indexOf(key) === -1) {
+      propsLine += `${key}=${value} `;
     }
   }
 
-  public onDebug(entry: LogEntry): void {
-    if (!Boolean(process.env.SILENT_MODE)) {
-      this.logger.debug(entry.message, {
-        service: entry.service,
-        props: entry.props,
-      });
-    }
-  }
+  const service = entry.service ? entry.service : 'unknown';
 
-  public onWarn(entry: LogEntry): void {
-    if (!Boolean(process.env.SILENT_MODE)) {
-      this.logger.warn(entry.message, {
-        service: entry.service,
-        props: entry.props,
-      });
-    }
-  }
+  return `${entry.timestamp} ${entry.level.padEnd(5)}: ${('[' + service + ']').padEnd(24)} ${entry.message}, ${
+    propsLine.length > 0 ? propsLine.slice(0, -1) : ''
+  }`;
+});
 
-  public onError(entry: LogEntry): void {
-    if (!Boolean(process.env.SILENT_MODE)) {
-      this.logger.error(entry.message, {
-        service: entry.service,
-        props: entry.props,
-      });
+const logger = winston.createLogger({
+  level: 'debug',
+  format: winston.format.combine(winston.format.colorize(), winston.format.timestamp(), customFormat),
+  transports: [new winston.transports.Console({})],
+});
 
-      if (entry.error) {
-        console.error(entry.error);
-      }
-    }
-  }
-}
-
-export default new LogProvider();
+export default logger;

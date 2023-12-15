@@ -1,185 +1,152 @@
-import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
-
-import CometAbi from '../../../configs/abi/compound/Comet.json';
-import { Tokens } from '../../../configs/constants';
-import EnvConfig from '../../../configs/envConfig';
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { compareAddress, normalizeAddress } from '../../../lib/helper';
-import { ProtocolConfig } from '../../../types/configs';
+import { TokenList } from '../../../configs';
+import { Compoundv3Market } from '../../../configs/protocols/compound';
+import { compareAddress, normalizeAddress } from '../../../lib/utils';
+import { formatFromDecimals } from '../../../lib/utils';
+import { ContractConfig, ProtocolConfig } from '../../../types/configs';
 import { KnownAction, TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
-import { CompoundMarketInfoV3 } from './helper';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { TransferEventSignatures } from '../transfer/abis';
+import { CompoundAbiMappings, Compoundv3EventSignatures } from './abis';
 
-const Signatures = {
-  Transfer: '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
-  SupplyV3: '0xd1cf3d156d5f8f0d50f6c122ed609cec09d35c9b9fb3fff6ea0959134dae424e',
-  WithdrawV3: '0x9b1bfa7fa9ee420a16e124f794c35ac9f90472acc99140eb2f6447c714cad8eb',
-  SupplyCollateralV3: '0xfa56f7b24f17183d81894d3ac2ee654e3c26388d17a28dbd9549b8114304e1f4',
-  WithdrawCollateralV3: '0xd6d480d5b3068db003533b170d67561494d72e3bf9fa40a266471351ebba9e16',
-  AbsorbCollateral: '0x9850ab1af75177e4a9201c65a2cf7976d5d28e40ef63494b44366f86b2f9412e',
-  RewardClaimed: '0x2422cac5e23c46c890fdcf42d0c64757409df6832174df639337558f09d99c68',
-};
+export default class Compoundv3Adapter extends Adapter {
+  public readonly name: string = 'adapter.compoundv3';
+  public readonly config: ProtocolConfig;
 
-export class Compoundv3Adapter extends Adapter {
-  public readonly name: string = 'adapter.compound3';
-
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.SupplyV3]: EventSignatureMapping[Signatures.SupplyV3],
-      [Signatures.WithdrawV3]: EventSignatureMapping[Signatures.WithdrawV3],
-      [Signatures.SupplyCollateralV3]: EventSignatureMapping[Signatures.SupplyCollateralV3],
-      [Signatures.WithdrawCollateralV3]: EventSignatureMapping[Signatures.WithdrawCollateralV3],
-      [Signatures.AbsorbCollateral]: EventSignatureMapping[Signatures.AbsorbCollateral],
-      [Signatures.RewardClaimed]: EventSignatureMapping[Signatures.RewardClaimed],
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, {
+      protocol: config.protocol,
+      contracts: config.contracts as Array<ContractConfig>,
     });
+
+    this.config = config;
+    this.eventMappings = {
+      [Compoundv3EventSignatures.Supply]: CompoundAbiMappings[Compoundv3EventSignatures.Supply],
+      [Compoundv3EventSignatures.Withdraw]: CompoundAbiMappings[Compoundv3EventSignatures.Withdraw],
+      [Compoundv3EventSignatures.SupplyCollateral]: CompoundAbiMappings[Compoundv3EventSignatures.SupplyCollateral],
+      [Compoundv3EventSignatures.WithdrawCollateral]: CompoundAbiMappings[Compoundv3EventSignatures.WithdrawCollateral],
+      [Compoundv3EventSignatures.AbsorbCollateral]: CompoundAbiMappings[Compoundv3EventSignatures.AbsorbCollateral],
+      [Compoundv3EventSignatures.RewardClaimed]: CompoundAbiMappings[Compoundv3EventSignatures.RewardClaimed],
+    };
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
-
-    const signature = topics[0];
-    if (this.config.contracts[chain] && this.config.contracts[chain].indexOf(address) !== -1) {
-      const web3 = new Web3(EnvConfig.blockchains[chain].nodeRpc);
-      const rpcWrapper = this.getRpcWrapper();
-      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
-
-      if (signature === Signatures.RewardClaimed) {
-        const claimer = normalizeAddress(event.src);
-        const recipient = normalizeAddress(event.recipient);
-        const amount = new BigNumber(event.amount.toString()).dividedBy(1e18).toString(10);
-
-        return {
-          protocol: this.config.protocol,
-          action: 'collect',
-          addresses: [claimer, recipient],
-          tokens: [Tokens.ethereum.COMP],
-          tokenAmounts: [amount],
-          readableString: `${claimer} collect ${amount} COMP on ${this.config.protocol} chain ${chain}`,
-        };
-      }
-
-      const context = await web3.eth.getTransactionReceipt(options.hash as string);
-      let poolConfig: CompoundMarketInfoV3 | null = null;
-      if (this.config.staticData.pools) {
-        for (const pool of this.config.staticData.pools) {
-          if (compareAddress(address, pool.address) && chain === pool.chain) {
-            poolConfig = pool as CompoundMarketInfoV3;
-          }
-        }
-      }
-
-      // v3 processing
-      let token = null;
-      let action: KnownAction = 'deposit';
-      switch (signature) {
-        case Signatures.SupplyV3:
-        case Signatures.WithdrawV3: {
-          if (poolConfig) {
-            token = poolConfig.baseToken;
-          } else {
-            const baseTokenAddr = await rpcWrapper.queryContract({
-              chain,
-              abi: CometAbi,
-              contract: address,
-              method: 'baseToken',
-              params: [],
-            });
-            token = await this.getWeb3Helper().getErc20Metadata(chain, baseTokenAddr);
-          }
-
-          if (signature === Signatures.SupplyV3) {
-            action = 'repay';
-
-            // on compound v3, we detect supply transaction by looking Transfer event from the same transaction
-            // when user deposit base asset, if there is a Transfer event emitted on transaction,
-            // the transaction action is deposit, otherwise, the transaction action is repay.
-            if (context) {
-              for (const log of context.logs) {
-                if (
-                  log.topics[0] === Signatures.Transfer &&
-                  this.config.contracts[chain].indexOf(normalizeAddress(log.address)) !== -1
-                ) {
-                  // supply transaction
-                  action = 'deposit';
-                }
-              }
-            }
-          } else {
-            action = 'borrow';
-
-            // we detect a withdrawal transaction by looking for Transfer to zero address event
-            if (context) {
-              for (const log of context.logs) {
-                if (
-                  log.topics[0] === Signatures.Transfer &&
-                  this.config.contracts[chain].indexOf(normalizeAddress(log.address)) !== -1
-                ) {
-                  // withdraw transaction
-                  action = 'withdraw';
-                }
-              }
-            }
-          }
-          break;
-        }
-        case Signatures.SupplyCollateralV3:
-        case Signatures.WithdrawCollateralV3: {
-          if (poolConfig) {
-            for (const collateral of poolConfig.collaterals) {
-              if (compareAddress(collateral.address, event.asset)) {
-                token = collateral;
-              }
-            }
-          } else {
-            token = await this.getWeb3Helper().getErc20Metadata(chain, event.asset);
-          }
-
-          action = signature === Signatures.SupplyCollateralV3 ? 'deposit' : 'withdraw';
-
-          break;
-        }
-
-        case Signatures.AbsorbCollateral: {
-          if (poolConfig) {
-            for (const collateral of poolConfig.collaterals) {
-              if (compareAddress(collateral.address, event.asset)) {
-                token = collateral;
-              }
-            }
-          } else {
-            token = await this.getWeb3Helper().getErc20Metadata(chain, event.asset);
-          }
-
-          action = 'liquidate';
-
-          break;
-        }
-      }
-
-      if (token) {
-        let user = event.from ? normalizeAddress(event.from) : normalizeAddress(event.src);
-        if (signature === Signatures.AbsorbCollateral) {
-          user = normalizeAddress(event.absorber);
-        }
-
-        const amount = event.amount
-          ? new BigNumber(event.amount).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10)
-          : new BigNumber(event.collateralAbsorbed).dividedBy(new BigNumber(10).pow(token.decimals)).toString(10);
-
-        return {
-          protocol: this.config.protocol,
-          action: action as KnownAction,
-          addresses: [user],
-          tokens: [token],
-          tokenAmounts: [amount],
-          readableString: `${user} ${action} ${amount} ${token.symbol} on ${this.config.protocol} chain ${chain}`,
-        };
+  protected getMarketConfig(marketAddress: string): Compoundv3Market | null {
+    for (const market of this.config.contracts) {
+      if (compareAddress(marketAddress, market.address)) {
+        return market as Compoundv3Market;
       }
     }
 
     return null;
+  }
+
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
+
+    if (this.supportedContract(options.chain, options.log.address)) {
+      const signature = options.log.topics[0];
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
+
+      if (signature === Compoundv3EventSignatures.RewardClaimed) {
+        const claimer = normalizeAddress(event.src);
+        const recipient = normalizeAddress(event.recipient);
+        const amount = formatFromDecimals(event.amount.toString(), 18);
+
+        actions.push(
+          this.buildUpAction({
+            ...options,
+            action: 'collect',
+            addresses: [claimer, recipient],
+            tokens: [TokenList.ethereum.COMP],
+            tokenAmounts: [amount],
+          })
+        );
+      } else {
+        const marketConfig = this.getMarketConfig(options.log.address);
+        if (marketConfig) {
+          let token = null;
+          let action: KnownAction = 'deposit';
+          switch (signature) {
+            case Compoundv3EventSignatures.Supply:
+            case Compoundv3EventSignatures.Withdraw: {
+              token = marketConfig.baseToken;
+
+              if (signature === Compoundv3EventSignatures.Supply) {
+                action = 'repay';
+
+                // on compound v3, we detect supply transaction by looking Transfer event from the same transaction
+                // when user deposit base asset, if there is a Transfer event emitted on transaction,
+                // the transaction action is deposit, otherwise, the transaction action is repay.
+                for (const log of options.allLogs) {
+                  if (
+                    log.topics[0] === TransferEventSignatures.Transfer &&
+                    this.supportedContract(options.chain, log.address)
+                  ) {
+                    // supply transaction
+                    action = 'deposit';
+                  }
+                }
+              } else {
+                action = 'borrow';
+
+                // we detect a withdrawal transaction by looking for Transfer to zero address event
+                for (const log of options.allLogs) {
+                  if (
+                    log.topics[0] === TransferEventSignatures.Transfer &&
+                    this.supportedContract(options.chain, log.address)
+                  ) {
+                    // withdraw transaction
+                    action = 'withdraw';
+                  }
+                }
+              }
+              break;
+            }
+            case Compoundv3EventSignatures.SupplyCollateral: {
+              action = 'deposit';
+              break;
+            }
+            case Compoundv3EventSignatures.WithdrawCollateral: {
+              action = 'withdraw';
+              break;
+            }
+            case Compoundv3EventSignatures.AbsorbCollateral: {
+              action = 'liquidate';
+              break;
+            }
+          }
+
+          if (token) {
+            let user = event.from ? normalizeAddress(event.from) : normalizeAddress(event.src);
+            if (signature === Compoundv3EventSignatures.AbsorbCollateral) {
+              user = normalizeAddress(event.absorber);
+            }
+
+            const amount = formatFromDecimals(
+              event.amount ? event.amount.toString() : event.collateralAbsorbed.toString(),
+              token.decimals
+            );
+
+            actions.push(
+              this.buildUpAction({
+                ...options,
+                action: action,
+                addresses: [user],
+                tokens: [token],
+                tokenAmounts: [amount],
+              })
+            );
+          }
+        }
+      }
+    }
+
+    return actions;
   }
 }

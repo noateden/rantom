@@ -1,0 +1,664 @@
+[
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xa07c5b74c9b40447a954e1466938b865b6bbea36",
+    "etherPool": true,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "BNB",
+      "decimals": 18,
+      "address": "0x0000000000000000000000000000000000000000"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x26da28954763b92139ed49283625cecaf52c6f94",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xfb6115445bff7b52feb98650c87f44907e58f802",
+      "symbol": "AAVE",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x9a0af7fdb2065ce470d72664de73cae409da28ec",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
+      "symbol": "ADA",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x5f0388ebc2b94fa8e123f404b79ccf5f40b29176",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x8ff795a6f4d97e7887c79bea79aba5cc76444adf",
+      "symbol": "BCH",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x972207a639cc1b374b893cc33fa251b55ceb7c07",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "BETH",
+      "decimals": 18,
+      "address": "0x250632378e573c6be1ac2f97fcdf00515d0aa91b"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x882c173bc7ff3b7786ca16dfed3dfffb9ee7847b",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "BTCB",
+      "decimals": 18,
+      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x95c78222b3d6e262426483d42cfa53685a67ab9d",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "BUSD",
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x86ac3974e2bd0d60825230fa6f355ff11409df5c",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "CAKE",
+      "decimals": 18,
+      "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x334b3ecb4dca3593bccc3c7ebd1a1c1d1780fbf1",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "DAI",
+      "decimals": 18,
+      "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xec3422ef92b2fb59e84c8b02ba73f1fe84ed8d71",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "DOGE",
+      "decimals": 8,
+      "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x1610bc33319e9398de5f57b33a5b184c806ad217",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "DOT",
+      "decimals": 18,
+      "address": "0x7083609fce4d1d8dc0c979aab8c869ea2c873402"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xf508fcd89b8bd15579dc79a6827cb4686a3592c8",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "ETH",
+      "decimals": 18,
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xf91d58b5ae142dacc749f58a49fcbac340cb0343",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x0d8ce2a99bb6e3b7db580ed848240e4a0f9ae153",
+      "symbol": "FIL",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x650b940a1033b8a1b1873f78730fcfc73ec11f1f",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd",
+      "symbol": "LINK",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x57a5297f2cb2c0aac9d554660acd6d385ab50c6b",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x4338665cbb7b2485a8855a139b75d5e34ab0db94",
+      "symbol": "LTC",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xb91a659e88b51474767cd97ef3196a3e7cedd2c8",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x156ab3346823b651294766e23e6cf87254d68962",
+      "symbol": "LUNA",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x5c9476fcd6a4f9a3654139721c949c2233bbbbc8",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xcc42724c6683b7e57334c4e856f4c9965ed682bd",
+      "symbol": "MATIC",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x2ff3d0f6990a40261c66e1ff2017acbc282eb6d0",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x47bead2563dcbf3bf2c9407fea4dc236faba485a",
+      "symbol": "SXP",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xc5d3466aa484b040ee977073fcf337f2c00071c1",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xce7de646e7208a4ef112cb6ed5038fa6cc6b12e3",
+      "symbol": "TRX",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x61edcfe8dd6ba3c891cb9bec2dc7657b3b422e93",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x85eac5ac2f758618dfa09bdbe0cf174e7d574d5b",
+      "symbol": "TRX",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xbf762cd5991ca1dcddac9ae5c638f5b5dc3bee6e",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x40af3827f39d0eacbf4a168f8d4ee67c121d11c9",
+      "symbol": "TUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x08ceb3f4a7ed3500ca0982bcd0fc7816688084c3",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+      "symbol": "TUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x27ff564707786720c71a2e5c1490a63266683612",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xbf5140a22578168fd562dccf235e5d43a02ce9b1",
+      "symbol": "UNI",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xeca88125a5adbe82614ffc12d0db554e2e2867c8",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "USDC",
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xfd5840cd36d94d7229439859c0112a4185bc0255",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "USDT",
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x78366446547d062f45b4c0f320cdaa6d710d87bb",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x3d4350cd54aef9f9b2c29435e0fa809957b3f30a",
+      "symbol": "UST",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x6cfdec747f37daf3b87a35a1d9c8ad3063a1a8a0",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
+      "symbol": "wBETH",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xb248a295732e0225acd3337607cc01068e3b9c10",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe",
+      "symbol": "XRP",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x151b1e2635a717bcdc836ecd6fbb62b674fe3e1d",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "XVS",
+      "decimals": 18,
+      "address": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xca2d81aa7c09a1a025de797600a7081146dceed9",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x0782b6d8c4551b9760e74c0545a9bcd90bdc41e5",
+      "symbol": "HAY",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xc3a45ad8812189cab659ad99e64b1376f6acd035",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xd17479997f34dd9156deef8f95a52d81d265be9c",
+      "symbol": "USDD",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x5e3072305f9cae1c7a82f6fe9e38811c74922c3b",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "USDT",
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x795de779be00ea46ea97a28bdd38d9ed570bcf0f",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x12f31b73d812c6bb0d735a218c086d44d5fe5f89",
+      "symbol": "agEUR",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x8f657dfd3a1354deb4545765fe6840cc54afd379",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x965f527d9159dce6288a2219db51fc6eef120dd1",
+      "symbol": "BSW",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x02c5fb0f26761093d297165e902e96d08576d344",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "ALPACA",
+      "decimals": 18,
+      "address": "0x8f0528ce5ef7b51152a59745befdd91d97091d2f"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x1d8bbde12b6b34140604e18e9f9c6e14dec16854",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "USDT",
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xa615467cae6b9e0bb98bc04b4411d9296fd1dfa0",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xd17479997f34dd9156deef8f95a52d81d265be9c",
+      "symbol": "USDD",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x19ce11c8817a1828d1d357dfbf62dcf5b0b2a362",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xf307910a4c7bbc79691fd374889b36d8531b08e3",
+      "symbol": "ANKR",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x53728fd51060a85ac41974c6c3eb1dae42776723",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x52f24a5e03aee338da5fd9df68d2b6fae1178827",
+      "symbol": "ankrBNB",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x736bf1d21a28b5dc19a1ac8ca71fc2856c23c03f",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x4b0f1812e5df2a09796481ff14017e6005508003",
+      "symbol": "TWT",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xff1112ba7f88a53d4d23ed4e14a117a2ae17c6be",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xca6d678e74f553f0e59cccc03ae644a3c2c5ee7d",
+      "symbol": "PLANET",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xe5fe5527a5b76c75eede77fdfa6b80d52444a465",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x12bb890508c125661e03b09ec06e404bc9289040",
+      "symbol": "RACA",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xc353b7a1e13ddba393b5e120d4169da7185aa2cb",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xfb5b838b6cfeedc2873ab27866079ac55363d37e",
+      "symbol": "FLOKI",
+      "decimals": 9
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xc353b7a1e13ddba393b5e120d4169da7185aa2cb",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xfb5b838b6cfeedc2873ab27866079ac55363d37e",
+      "symbol": "FLOKI",
+      "decimals": 9
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x4978591f17670a846137d9d613e333c38dc68a37",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "USDT",
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xbfe25459ba784e70e2d7a718be99a1f3521ca17f",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x52f24a5e03aee338da5fd9df68d2b6fae1178827",
+      "symbol": "ankrBNB",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x5e21bf67a6af41c74c1773e4b473ca5ce8fd3791",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x1bdd3cf7f79cfb8edbb955f20ad99211551ba275",
+      "symbol": "BNBx",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xcc5d9e502574cda17215e70bc0b4546663785227",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xc2e9d07f66a89c44062459a47a0d2dc038e4fb16",
+      "symbol": "stkBNB",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xd3cc9d8f3689b83c91b7b59cab4946b063eb894a",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
+      "symbol": "SnBNB",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xe10e80b7fd3a29fe46e16c30cc8f4dd938b742e2",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "WBNB",
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x49c26e12959345472e2fd95e5f79f8381058d3ee",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0x352cb5e19b12fc216548a2677bd0fce83bae434b",
+      "symbol": "BTT",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x836beb2cb723c498136e1119248436a645845f4e",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xce7de646e7208a4ef112cb6ed5038fa6cc6b12e3",
+      "symbol": "TRX",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xb114cfa615c828d88021a41bfc524b800e64a9d5",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "WIN",
+      "decimals": 18,
+      "address": "0xaef0d72a118ce24fee3cd1d43d383897d05b4e99",
+      "logoURI": "https://tokens.pancakeswap.finance/images/0xaeF0d72a118ce24feE3cD1d43d383897D05B4e99.png"
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0xf1da185cce5bed1bebbb3007ef738ea4224025f7",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "address": "0xd17479997f34dd9156deef8f95a52d81d265be9c",
+      "symbol": "USDD",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "bnbchain",
+    "address": "0x281e5378f99a4bc55b295abc0a3e7ed32deba059",
+    "etherPool": false,
+    "underlying": {
+      "chain": "bnbchain",
+      "symbol": "USDT",
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955"
+    }
+  }
+]

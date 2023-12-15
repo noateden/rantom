@@ -1,0 +1,147 @@
+[
+  {
+    "chain": "bnbchain",
+    "protocol": "pancakeswap",
+    "version": "stableswap",
+    "address": "0x49079d07ef47449af808a4f36c2a8dec975594ec",
+    "factory": "0x25a55f9f2279a54951133d503490342b50e5cd15",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x0782b6d8c4551b9760e74c0545a9bcd90bdc41e5", "symbol": "HAY", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56", "symbol": "BUSD", "decimals": 18 }
+    ]
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "pancakeswap",
+    "version": "stableswap",
+    "address": "0x3efebc418efb585248a0d2140cfb87afcc2c63dd",
+    "factory": "0x25a55f9f2279a54951133d503490342b50e5cd15",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d", "symbol": "USDC", "decimals": 18 }
+    ]
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "pancakeswap",
+    "version": "stableswap",
+    "address": "0xc2f5b9a3d9138ab2b74d581fc11346219ebf43fe",
+    "factory": "0x25a55f9f2279a54951133d503490342b50e5cd15",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "symbol": "USDC",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56", "symbol": "BUSD", "decimals": 18 }
+    ]
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "pancakeswap",
+    "version": "stableswap",
+    "address": "0x169f653a54acd441ab34b73da9946e2c451787ef",
+    "factory": "0x25a55f9f2279a54951133d503490342b50e5cd15",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "symbol": "USDT",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56", "symbol": "BUSD", "decimals": 18 }
+    ]
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "pancakeswap",
+    "version": "stableswap",
+    "address": "0x6d8fba276ec6f1eda2344da48565adbca7e4ffa5",
+    "factory": "0x25a55f9f2279a54951133d503490342b50e5cd15",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x4268b8f0b87b6eae5d897996e6b845ddbd99adf3",
+        "symbol": "axlUSDC",
+        "decimals": 6
+      },
+      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
+    ]
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "pancakeswap",
+    "version": "stableswap",
+    "address": "0x0b03e3d6ec0c5e5bbf993ded8d947c6fb6eec18d",
+    "factory": "0x25a55f9f2279a54951133d503490342b50e5cd15",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+        "symbol": "WBNB",
+        "decimals": 18
+      },
+      {
+        "chain": "bnbchain",
+        "address": "0xc2e9d07f66a89c44062459a47a0d2dc038e4fb16",
+        "symbol": "stkBNB",
+        "decimals": 18
+      }
+    ]
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "pancakeswap",
+    "version": "stableswap",
+    "address": "0x9c138be1d76ee4c5162e0fe9d4eea5542a23d1bd",
+    "factory": "0x25a55f9f2279a54951133d503490342b50e5cd15",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "address": "0x1bdd3cf7f79cfb8edbb955f20ad99211551ba275",
+        "symbol": "BNBx",
+        "decimals": 18
+      },
+      { "chain": "bnbchain", "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "symbol": "WBNB", "decimals": 18 }
+    ]
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "pancakeswap",
+    "version": "stableswap",
+    "address": "0xb1da7d2c257c5700612bde35c8d7187dc80d79f1",
+    "factory": "0x25a55f9f2279a54951133d503490342b50e5cd15",
+    "tokens": [
+      { "chain": "bnbchain", "address": "0x0782b6d8c4551b9760e74c0545a9bcd90bdc41e5", "symbol": "HAY", "decimals": 18 },
+      { "chain": "bnbchain", "address": "0x55d398326f99059ff775485246999027b3197955", "symbol": "USDT", "decimals": 18 }
+    ]
+  },
+  {
+    "chain": "bnbchain",
+    "protocol": "pancakeswap",
+    "version": "stableswap",
+    "address": "0xfc17919098e9f0a0d72093e25ad052a359ae3e43",
+    "factory": "0x25a55f9f2279a54951133d503490342b50e5cd15",
+    "tokens": [
+      {
+        "chain": "bnbchain",
+        "symbol": "CAKE",
+        "decimals": 18,
+        "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+        "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png"
+      },
+      {
+        "chain": "bnbchain",
+        "address": "0xf79b275e0b602d82b822895074552e487412a41a",
+        "symbol": "sdCAKE",
+        "decimals": 18
+      }
+    ]
+  }
+]

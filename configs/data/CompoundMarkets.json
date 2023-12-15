@@ -1,5 +1,6 @@
 [
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x4ddc2d193948926d02f9b1fe9e1daa0718270ed5",
     "etherPool": true,
@@ -11,28 +12,33 @@
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0xe65cdb6479bac1e22340e4e755fae7e509ecd06c",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
       "symbol": "AAVE",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+      "logoURI": "https://cdn.paraswap.io/token/AAVE.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x6c8c6b02e7b2be14d4fa6022dfd6d75921d90e4e",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
       "symbol": "BAT",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
+      "logoURI": "https://cdn.paraswap.io/token/BAT.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x70e36f6bf80a52b3b46b3af8e106cc0ed743e8e4",
     "etherPool": false,
@@ -40,43 +46,50 @@
       "chain": "ethereum",
       "symbol": "COMP",
       "decimals": 18,
-      "address": "0xc00e94cb662c3520282e6f5717214004a7f26888"
+      "address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+      "logoURI": "https://cdn.paraswap.io/token/COMP.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x5d3a536e4d6dbd6114cc1ead35777bab948e3643",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
       "symbol": "DAI",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "logoURI": "https://cdn.paraswap.io/token/DAI.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x7713dd9ca933848f6819f38b8352d9a15ea73f67",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0x956f47f50a910163d8bf957cf5846d573e7f87ca",
       "symbol": "FEI",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x956f47f50a910163d8bf957cf5846d573e7f87ca"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0xface851a4921ce59e912d19329929ce6da6eb0c7",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
       "symbol": "LINK",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x514910771af9ca656af840dff83e8264ecf986ca",
+      "logoURI": "https://cdn.paraswap.io/token/LINK.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x95b4ef2869ebd94beb4eee400a99824bf5dc325b",
     "etherPool": false,
@@ -88,17 +101,20 @@
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x158079ee67fce2f58472a96584a73c7ab9ac95c1",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0x1985365e9f78359a9b6ad760e32412f4a445e862",
       "symbol": "REP",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x1985365e9f78359a9b6ad760e32412f4a445e862",
+      "logoURI": "https://cdn.paraswap.io/token/REP.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0xf5dce57282a584d2746faf1593d3121fcac444dc",
     "etherPool": false,
@@ -110,28 +126,33 @@
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x4b0181102a0112a2ef11abee5563bb4a3176c9d7",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
       "symbol": "SUSHI",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
+      "logoURI": "https://cdn.paraswap.io/token/SUSHI.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x12392f67bdf24fae0af363c24ac620a2f67dad86",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0x0000000000085d4780b73119b644ae5ecd22b376",
       "symbol": "TUSD",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x0000000000085d4780b73119b644ae5ecd22b376",
+      "logoURI": "https://cdn.paraswap.io/token/TUSD.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x35a18000230da775cac24873d00ff85bccded550",
     "etherPool": false,
@@ -143,80 +164,94 @@
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x39aa39c021dfbae8fac545936693ac917d5e7563",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
       "symbol": "USDC",
-      "decimals": 6
+      "decimals": 6,
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "logoURI": "https://cdn.paraswap.io/token/USDC.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x041171993284df560249b57358f931d9eb7b925d",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
+      "symbol": "PAX",
+      "decimals": 18,
       "address": "0x8e870d67f660d95d5be530380d0ec0bd388289e1",
-      "symbol": "USDP",
-      "decimals": 18
+      "logoURI": "https://cdn.paraswap.io/token/PAX.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0xf650c3d88d12db855b8bf7d11be6c55a4e07dcc9",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
       "symbol": "USDT",
-      "decimals": 6
+      "decimals": 6,
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "logoURI": "https://cdn.paraswap.io/token/USDT.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0xc11b1268c1a384e55c48c2391d8d480264a3a7f4",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
       "symbol": "WBTC",
-      "decimals": 8
+      "decimals": 8,
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "logoURI": "https://cdn.paraswap.io/token/WBTC.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0xccf4429db6322d5c611ee964527d42e5d685dd6a",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
       "symbol": "WBTC",
-      "decimals": 8
+      "decimals": 8,
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "logoURI": "https://cdn.paraswap.io/token/WBTC.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0x80a2ae356fc9ef4305676f7a3e2ed04e12c33946",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
       "symbol": "YFI",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+      "logoURI": "https://cdn.paraswap.io/token/YFI.png"
     }
   },
   {
+    "protocol": "compound",
     "chain": "ethereum",
     "address": "0xb3319f5d18bc0d84dd1b4825dcde5d5f7266d407",
     "etherPool": false,
     "underlying": {
       "chain": "ethereum",
-      "address": "0xe41d2489571d322189246dafa5ebde1f4699f498",
       "symbol": "ZRX",
-      "decimals": 18
+      "decimals": 18,
+      "address": "0xe41d2489571d322189246dafa5ebde1f4699f498",
+      "logoURI": "https://cdn.paraswap.io/token/ZRX.png"
     }
   }
 ]

@@ -1,99 +1,69 @@
-import Web3 from 'web3';
+import { compareAddress, normalizeAddress } from '../../lib/utils';
+import { EventMapping, ProtocolConfig, Token } from '../../types/configs';
+import { KnownAction, TransactionAction } from '../../types/domains';
+import { ContextServices, IAdapter } from '../../types/namespaces';
+import { HandleHookEventLogOptions, ParseEventLogOptions } from '../../types/options';
 
-import EnvConfig from '../../configs/envConfig';
-import { normalizeAddress } from '../../lib/helper';
-import { RpcWrapperProvider } from '../../services/rpc';
-import SentryProvider from '../../services/sentry';
-import { Web3HelperProvider } from '../../services/web3';
-import { EventMapping, ProtocolConfig } from '../../types/configs';
-import { TransactionAction, TransactionFunction } from '../../types/domains';
-import { GlobalProviders, IAdapter, IRpcWrapperProvider, IWeb3HelperProvider } from '../../types/namespaces';
-import {
-  AdapterParseContractInfoOptions,
-  AdapterParseFunctionCallDataOptions,
-  AdapterParseLogOptions,
-} from '../../types/options';
+export interface BuildUpActionOptions extends ParseEventLogOptions {
+  action: KnownAction;
+  addresses: Array<string>;
+  tokens: Array<Token>;
+  tokenAmounts: Array<string>;
+}
 
-export class Adapter implements IAdapter {
+export default class Adapter implements IAdapter {
   public readonly name: string = 'adapter';
+  public readonly services: ContextServices;
+  public readonly config: ProtocolConfig;
 
-  public config: ProtocolConfig;
-  public providers: GlobalProviders | null;
-  public eventMappings: { [key: string]: EventMapping };
+  protected eventMappings: { [key: string]: EventMapping } = {};
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null, mappings: { [key: string]: EventMapping }) {
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    this.services = services;
     this.config = config;
-    this.providers = providers;
-    this.eventMappings = mappings;
   }
 
-  public getWeb3Helper(): IWeb3HelperProvider {
-    if (this.providers) {
-      return this.providers.web3Helper;
-    } else {
-      return new Web3HelperProvider(null);
-    }
+  protected buildUpAction(options: BuildUpActionOptions): TransactionAction {
+    return {
+      chain: options.chain,
+      protocol: this.config.protocol,
+      action: options.action,
+      transactionHash: options.log.transactionHash,
+      logIndex: `${options.log.logIndex}:0`,
+      blockNumber: Number(options.log.blockNumber),
+      contract: normalizeAddress(options.log.address),
+      addresses: options.addresses,
+      tokens: options.tokens,
+      tokenAmounts: options.tokenAmounts,
+    };
   }
 
-  public getRpcWrapper(): IRpcWrapperProvider {
-    if (this.providers) {
-      return new RpcWrapperProvider(this.providers.sentry);
-    } else {
-      return new RpcWrapperProvider(new SentryProvider(EnvConfig.sentry.dns));
+  public supportedContract(chain: string, address: string): boolean {
+    for (const contract of this.config.contracts) {
+      if (contract.chain === chain && compareAddress(contract.address, address)) {
+        return true;
+      }
     }
+
+    return false;
   }
 
   public supportedSignature(signature: string): boolean {
     return !!this.eventMappings[signature];
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    return null;
+  // must be implemented in children
+  public async handleEventLog(options: HandleHookEventLogOptions): Promise<void> {
+    return Promise.resolve(undefined);
   }
 
-  public async tryParsingFunctionCallData(
-    options: AdapterParseFunctionCallDataOptions
-  ): Promise<TransactionFunction | null> {
-    return null;
+  // must be implemented in children
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    return [];
   }
 
-  public async tryParsingContractInfo(options: AdapterParseContractInfoOptions): Promise<string | null> {
-    return null;
-  }
-
-  public async getSenderAddress(options: AdapterParseLogOptions): Promise<string> {
-    if (options.sender && options.sender !== '') {
-      return options.sender;
-    } else if (options.hash) {
-      const web3 = new Web3(EnvConfig.blockchains[options.chain].nodeRpc);
-      const tx = await web3.eth.getTransaction(options.hash);
-      return normalizeAddress(tx.from);
-    } else {
-      return '';
-    }
-  }
-
-  public async getTargetAddress(options: AdapterParseLogOptions): Promise<string> {
-    if (options.to && options.to !== '') {
-      return options.to;
-    } else if (options.hash) {
-      const web3 = new Web3(EnvConfig.blockchains[options.chain].nodeRpc);
-      const tx = await web3.eth.getTransaction(options.hash);
-      return tx.to ? normalizeAddress(tx.to) : '';
-    } else {
-      return '';
-    }
-  }
-
-  public async getTransactionInput(options: AdapterParseLogOptions): Promise<string> {
-    if (options.input) {
-      return options.input;
-    } else if (options.hash) {
-      const web3 = new Web3(EnvConfig.blockchains[options.chain].nodeRpc);
-      const tx = await web3.eth.getTransaction(options.hash);
-      return tx.input;
-    } else {
-      return '';
-    }
+  // must be implemented in children
+  public async parseInputData(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    return [];
   }
 }

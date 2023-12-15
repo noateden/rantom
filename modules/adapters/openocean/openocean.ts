@@ -1,61 +1,64 @@
-import BigNumber from 'bignumber.js';
-import Web3 from 'web3';
-
-import { EventSignatureMapping } from '../../../configs/mappings';
-import { normalizeAddress } from '../../../lib/helper';
+import { normalizeAddress } from '../../../lib/utils';
+import { formatFromDecimals } from '../../../lib/utils';
 import { ProtocolConfig } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
-import { GlobalProviders } from '../../../types/namespaces';
-import { AdapterParseLogOptions } from '../../../types/options';
-import { Adapter } from '../adapter';
+import { ContextServices } from '../../../types/namespaces';
+import { ParseEventLogOptions } from '../../../types/options';
+import Adapter from '../adapter';
+import { OpenoceanAbiMappings } from './abis';
 
-const Signatures = {
-  Swapped: '0x76af224a143865a50b41496e1a73622698692c565c1214bc862f18e22d829c5e',
-};
-
-export class OpenoceanAdapter extends Adapter {
+export default class OpenoceanAdapter extends Adapter {
   public readonly name: string = 'adapter.openocean';
+  public readonly config: ProtocolConfig;
 
-  constructor(config: ProtocolConfig, providers: GlobalProviders | null) {
-    super(config, providers, {
-      [Signatures.Swapped]: EventSignatureMapping[Signatures.Swapped],
-    });
+  constructor(services: ContextServices, config: ProtocolConfig) {
+    super(services, config);
+
+    this.config = config;
+    this.eventMappings = OpenoceanAbiMappings;
   }
 
-  public async tryParsingActions(options: AdapterParseLogOptions): Promise<TransactionAction | null> {
-    const { chain, address, topics, data } = options;
+  public async parseEventLog(options: ParseEventLogOptions): Promise<Array<TransactionAction>> {
+    const actions: Array<TransactionAction> = [];
 
-    const signature = topics[0];
-    if (
-      signature === Signatures.Swapped &&
-      this.config.contracts[chain] &&
-      this.config.contracts[chain].indexOf(address) !== -1
-    ) {
-      const web3 = new Web3();
-      const event = web3.eth.abi.decodeLog(this.eventMappings[signature].abi, data, topics.slice(1));
+    if (this.supportedContract(options.chain, options.log.address)) {
+      const signature = options.log.topics[0];
 
-      const token0 = await this.getWeb3Helper().getErc20Metadata(chain, event.srcToken);
-      const token1 = await this.getWeb3Helper().getErc20Metadata(chain, event.dstToken);
+      const web3 = this.services.blockchain.getProvider(options.chain);
+      const event = web3.eth.abi.decodeLog(
+        this.eventMappings[signature].abi,
+        options.log.data,
+        options.log.topics.slice(1)
+      );
 
-      if (token0 && token1) {
+      const tokenIn = await this.services.blockchain.getTokenInfo({
+        chain: options.chain,
+        address: event.srcToken,
+      });
+      const tokenOut = await this.services.blockchain.getTokenInfo({
+        chain: options.chain,
+        address: event.dstToken,
+      });
+
+      if (tokenIn && tokenOut) {
+        const amountIn = formatFromDecimals(event.spentAmount.toString(), tokenIn.decimals);
+        const amountOut = formatFromDecimals(event.returnAmount.toString(), tokenOut.decimals);
         const sender = normalizeAddress(event.sender);
-        const receiver = normalizeAddress(event.receiver);
-        const amount0 = new BigNumber(event.spentAmount).dividedBy(new BigNumber(10).pow(token0.decimals)).toString(10);
-        const amount1 = new BigNumber(event.returnAmount)
-          .dividedBy(new BigNumber(10).pow(token1.decimals))
-          .toString(10);
+        const dstReceiver = normalizeAddress(event.dstReceiver);
+        const referrer = normalizeAddress(event.referrer);
 
-        return {
-          protocol: this.config.protocol,
-          action: 'trade',
-          addresses: [sender, receiver],
-          tokens: [token0, token1],
-          tokenAmounts: [amount0, amount1],
-          readableString: `${sender} trade ${amount0} ${token0.symbol} for ${amount1} ${token1.symbol} on ${this.config.protocol} chain ${chain}`,
-        };
+        actions.push(
+          this.buildUpAction({
+            ...options,
+            action: 'trade',
+            addresses: [sender, dstReceiver, referrer],
+            tokens: [tokenIn, tokenOut],
+            tokenAmounts: [amountIn, amountOut],
+          })
+        );
       }
     }
 
-    return null;
+    return actions;
   }
 }
