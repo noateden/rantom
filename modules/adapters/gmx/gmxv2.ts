@@ -56,9 +56,8 @@ export default class Gmxv2Adapter extends Adapter {
           if (tokenIn && tokenOut) {
             const userAddress: string = normalizeAddress(eventData.addressItems[0][1].value);
 
-            // always 18 decimals
-            const amountIn = formatFromDecimals(eventData.uintItems[0][2].value.toString(), 18);
-            const amountOut = formatFromDecimals(eventData.uintItems[0][4].value.toString(), 18);
+            const amountIn = formatFromDecimals(eventData.uintItems[0][4].value.toString(), tokenIn.decimals);
+            const amountOut = formatFromDecimals(eventData.uintItems[0][2].value.toString(), tokenOut.decimals);
 
             actions.push(
               this.buildUpAction({
