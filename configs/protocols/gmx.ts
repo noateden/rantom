@@ -33,6 +33,11 @@ export const Gmxv2Configs: Gmxv2Config = {
     {
       chain: 'arbitrum',
       protocol: 'gmxv2',
+      address: '0xc8ee91a54287db53897056e12d9819156d3822fb', // Event Emitter
+    },
+    {
+      chain: 'avalanche',
+      protocol: 'gmxv2',
       address: '0xdb17b211c34240b014ab6d61d4a31fa0c0e20c26', // Event Emitter
     },
   ],
