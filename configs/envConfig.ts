@@ -126,6 +126,22 @@ const envConfig: EnvConfig = {
       nodeRpc: String(process.env.RANTOM_CELO_NODE),
       blockSubgraph: BlockSubGraphEndpoints.celo,
     },
+    metis: {
+      name: 'metis',
+      family: 'evm',
+      chainId: 1088,
+      nativeToken: NativeTokens.ethereum,
+      nodeRpc: String(process.env.RANTOM_METIS_NODE),
+      blockSubgraph: BlockSubGraphEndpoints.metis,
+    },
+    gnosis: {
+      name: 'gnosis',
+      family: 'evm',
+      chainId: 100,
+      nativeToken: NativeTokens.gnosis,
+      nodeRpc: String(process.env.RANTOM_GNOSIS_NODE),
+      blockSubgraph: BlockSubGraphEndpoints.gnosis,
+    },
   },
 };
 

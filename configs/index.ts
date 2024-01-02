@@ -6,7 +6,9 @@ import TokenListBnbchain from './tokenlists/bnbchain.json';
 import TokenListCelo from './tokenlists/celo.json';
 import TokenListEthereum from './tokenlists/ethereum.json';
 import TokenListFantom from './tokenlists/fantom.json';
+import TokenListGnosis from './tokenlists/gnosis.json';
 import TokenListLinea from './tokenlists/linea.json';
+import TokenListMetis from './tokenlists/metis.json';
 import TokenListOptimism from './tokenlists/optimism.json';
 import TokenListPolygon from './tokenlists/polygon.json';
 import TokenListPolygonzkevm from './tokenlists/polygonzkevm.json';
@@ -29,6 +31,8 @@ export const TokenList: {
   zksyncera: TokenListZksyncera,
   polygonzkevm: TokenListPolygonzkevm,
   celo: TokenListCelo,
+  metis: TokenListMetis,
+  gnosis: TokenListGnosis,
 };
 
 export const DefaultQueryLogsBlockRange = 50;

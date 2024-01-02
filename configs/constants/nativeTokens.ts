@@ -41,4 +41,8 @@ export const NativeTokens: { [key: string]: NativeToken } = {
     symbol: 'CELO',
     decimals: 18,
   },
+  gnosis: {
+    symbol: 'xDAI',
+    decimals: 18,
+  },
 };

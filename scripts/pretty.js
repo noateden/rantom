@@ -14,6 +14,8 @@ const chains = [
   'zksyncera',
   'polygonzkevm',
   'celo',
+  'metis',
+  'gnosis',
 ];
 
 for (const chain of chains) {

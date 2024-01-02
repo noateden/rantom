@@ -1,0 +1,1322 @@
+{
+  "$DG": {
+    "chain": "gnosis",
+    "symbol": "$DG",
+    "decimals": 18,
+    "address": "0x915742cb77124761015f63e079089ad0eff1b57c"
+  },
+  "0xMR": {
+    "chain": "gnosis",
+    "symbol": "0xMR",
+    "decimals": 18,
+    "address": "0x8c88ea1fd60462ef7004b9e288afcb4680a3c50c"
+  },
+  "1INCH": {
+    "chain": "gnosis",
+    "symbol": "1INCH",
+    "decimals": 18,
+    "address": "0x7f7440c5098462f833e123b44b8a03e1d9785bab"
+  },
+  "AAVE": {
+    "chain": "gnosis",
+    "symbol": "AAVE",
+    "decimals": 18,
+    "address": "0xdf613af6b44a31299e48131e9347f034347e2f00"
+  },
+  "ADAI": {
+    "chain": "gnosis",
+    "symbol": "ADAI",
+    "decimals": 18,
+    "address": "0xbcfb2b889f7baa29dd7a7b447b6c87aca572f4f4"
+  },
+  "AFI": {
+    "chain": "gnosis",
+    "symbol": "AFI",
+    "decimals": 18,
+    "address": "0xc81c785653d97766b995d867cf91f56367742eac"
+  },
+  "AGVE": {
+    "chain": "gnosis",
+    "symbol": "AGVE",
+    "decimals": 18,
+    "address": "0x3a97704a1b25f08aa230ae53b352e2e72ef52843"
+  },
+  "AKRO": {
+    "chain": "gnosis",
+    "symbol": "AKRO",
+    "decimals": 18,
+    "address": "0xd27e1ecc4748f42e052331bea917d89beb883fc3"
+  },
+  "ALBC": {
+    "chain": "gnosis",
+    "symbol": "ALBC",
+    "decimals": 18,
+    "address": "0xfb23cfd35046466fdba7f73dc2fccb5b17abf1aa"
+  },
+  "ALBT": {
+    "chain": "gnosis",
+    "symbol": "ALBT",
+    "decimals": 18,
+    "address": "0x3581cc6a09de85e9b91ef93f2a5ef837706b84a5"
+  },
+  "ALEPH": {
+    "chain": "gnosis",
+    "symbol": "ALEPH",
+    "decimals": 18,
+    "address": "0x4bc97997883c0397f556bd0f9da6fb71da22f9a2"
+  },
+  "ALVIN": {
+    "chain": "gnosis",
+    "symbol": "ALVIN",
+    "decimals": 18,
+    "address": "0x59715d8d206b3d4748cec55e7c2de26f23af45d5"
+  },
+  "AMIS": {
+    "chain": "gnosis",
+    "symbol": "AMIS",
+    "decimals": 9,
+    "address": "0xd51e1ddd116fff9a71c1b8feeb58113afa2b4d93"
+  },
+  "AMPL": {
+    "chain": "gnosis",
+    "symbol": "AMPL",
+    "decimals": 9,
+    "address": "0xc84dd5b971521b6c9fa5e10d25e6428b19710e05"
+  },
+  "ANTv1": {
+    "chain": "gnosis",
+    "symbol": "ANTv1",
+    "decimals": 18,
+    "address": "0x437a044fb4693890e61d2c1c88e3718e928b8e90"
+  },
+  "ANTv2": {
+    "chain": "gnosis",
+    "symbol": "ANTv2",
+    "decimals": 18,
+    "address": "0x6eeceab954efdbd7a8a8d9387bc719959b04b9ca"
+  },
+  "API3": {
+    "chain": "gnosis",
+    "symbol": "API3",
+    "decimals": 18,
+    "address": "0x44b6bba599f100006143e82a60462d71ac1331da"
+  },
+  "AST": { "chain": "gnosis", "symbol": "AST", "decimals": 4, "address": "0x743a991365ba94bfc90ad0002cad433c7a33cb4a" },
+  "AUDIO": {
+    "chain": "gnosis",
+    "symbol": "AUDIO",
+    "decimals": 18,
+    "address": "0x8a95ea379e1fa4c749dd0a7a21377162028c479e"
+  },
+  "AURA": {
+    "chain": "gnosis",
+    "symbol": "AURA",
+    "decimals": 18,
+    "address": "0x1509706a6c66ca549ff0cb464de88231ddbe213b"
+  },
+  "AXS": {
+    "chain": "gnosis",
+    "symbol": "AXS",
+    "decimals": 18,
+    "address": "0xbde011911128f6bd4abb1d18f39fdc3614ca2cfe"
+  },
+  "BADGER": {
+    "chain": "gnosis",
+    "symbol": "BADGER",
+    "decimals": 18,
+    "address": "0xdfc20ae04ed70bd9c7d720f449eedae19f659d65"
+  },
+  "BAL": {
+    "chain": "gnosis",
+    "symbol": "BAL",
+    "decimals": 18,
+    "address": "0x7ef541e2a22058048904fe5744f9c7e4c57af717"
+  },
+  "BAND": {
+    "chain": "gnosis",
+    "symbol": "BAND",
+    "decimals": 18,
+    "address": "0xe154a435408211ac89757b76c4fbe4dc9ed2ef27"
+  },
+  "BAO": {
+    "chain": "gnosis",
+    "symbol": "BAO",
+    "decimals": 18,
+    "address": "0x82dfe19164729949fd66da1a37bc70dd6c4746ce"
+  },
+  "BAOcx": {
+    "chain": "gnosis",
+    "symbol": "BAOcx",
+    "decimals": 18,
+    "address": "0xe0d0b1dbbcf3dd5cac67edaf9243863fd70745da"
+  },
+  "BASE": {
+    "chain": "gnosis",
+    "symbol": "BASE",
+    "decimals": 9,
+    "address": "0x699d001ef13b15335193bc5fad6cfc6747eee8be"
+  },
+  "BAT": {
+    "chain": "gnosis",
+    "symbol": "BAT",
+    "decimals": 18,
+    "address": "0xc6cc63f4aa25bbd4453eb5f3a0dfe546fef9b2f3"
+  },
+  "BCNT": {
+    "chain": "gnosis",
+    "symbol": "BCNT",
+    "decimals": 18,
+    "address": "0xe746a0476b833f2fa658e2b549dcfa5abbb9c3c9"
+  },
+  "BDT": {
+    "chain": "gnosis",
+    "symbol": "BDT",
+    "decimals": 18,
+    "address": "0x778aa03021b0cd2b798b0b506403e070125d81c9"
+  },
+  "BID": {
+    "chain": "gnosis",
+    "symbol": "BID",
+    "decimals": 18,
+    "address": "0x2977893f4c04bfbd6efc68d0e46598d27810d3db"
+  },
+  "BNS": {
+    "chain": "gnosis",
+    "symbol": "BNS",
+    "decimals": 18,
+    "address": "0xec84a3bb48d70553c2599ac2d0db07b2dfdf6364"
+  },
+  "BNSD": {
+    "chain": "gnosis",
+    "symbol": "BNSD",
+    "decimals": 18,
+    "address": "0xbdb90bdadae84af0b07abf4cefcc7989f909f9bd"
+  },
+  "BNT": {
+    "chain": "gnosis",
+    "symbol": "BNT",
+    "decimals": 18,
+    "address": "0x9a495a281d959192343b0e007284bf130bd05f86"
+  },
+  "BOND": {
+    "chain": "gnosis",
+    "symbol": "BOND",
+    "decimals": 18,
+    "address": "0xb31a2595e4cf66efbc1fe348b1429e5730891382"
+  },
+  "BRIGHT": {
+    "chain": "gnosis",
+    "symbol": "BRIGHT",
+    "decimals": 18,
+    "address": "0x83ff60e2f93f8edd0637ef669c69d5fb4f64ca8e"
+  },
+  "BTCCB": {
+    "chain": "gnosis",
+    "symbol": "BTCCB",
+    "decimals": 18,
+    "address": "0xb2ae7983a8142401d45546aab981e5fbff520991"
+  },
+  "BUSD": {
+    "chain": "gnosis",
+    "symbol": "BUSD",
+    "decimals": 18,
+    "address": "0xdd96b45877d0e8361a4ddb732da741e97f3191ff"
+  },
+  "BUSDC": {
+    "chain": "gnosis",
+    "symbol": "BUSDC",
+    "decimals": 18,
+    "address": "0xd10cc63531a514bba7789682e487add1f15a51e2"
+  },
+  "BZRX": {
+    "chain": "gnosis",
+    "symbol": "BZRX",
+    "decimals": 18,
+    "address": "0xe6a1f98b0f4368559bd16639c844510f5db6fe48"
+  },
+  "BZZ": {
+    "chain": "gnosis",
+    "symbol": "BZZ",
+    "decimals": 16,
+    "address": "0xdbf3ea6f5bee45c02255b2c26a16f300502f68da"
+  },
+  "CEL": { "chain": "gnosis", "symbol": "CEL", "decimals": 4, "address": "0x0acd91f92fe07606ab51ea97d8521e29d110fd09" },
+  "CELR": {
+    "chain": "gnosis",
+    "symbol": "CELR",
+    "decimals": 18,
+    "address": "0x248c54b3fc3bc8b20d0cdee059e17c67e4a3299d"
+  },
+  "CFXQ": {
+    "chain": "gnosis",
+    "symbol": "CFXQ",
+    "decimals": 6,
+    "address": "0x64b17a95e6c45306fb23bc526eb2dc9e1331a1b1"
+  },
+  "CHSB": {
+    "chain": "gnosis",
+    "symbol": "CHSB",
+    "decimals": 8,
+    "address": "0x76eafffa1873a8acd43864b66a728bd873c5e08a"
+  },
+  "CLNY": {
+    "chain": "gnosis",
+    "symbol": "CLNY",
+    "decimals": 18,
+    "address": "0xc9b6218affe8aba68a13899cbf7cf7f14ddd304c"
+  },
+  "COIN": {
+    "chain": "gnosis",
+    "symbol": "COIN",
+    "decimals": 18,
+    "address": "0x14411aeca652f5131834bf0c8ff581b5ddf3bc03"
+  },
+  "COLD": {
+    "chain": "gnosis",
+    "symbol": "COLD",
+    "decimals": 18,
+    "address": "0xdbcade285846131a5e7384685eaddbdfd9625557"
+  },
+  "COMP": {
+    "chain": "gnosis",
+    "symbol": "COMP",
+    "decimals": 18,
+    "address": "0xdf6ff92bfdc1e8be45177dc1f4845d391d3ad8fd"
+  },
+  "COW": {
+    "chain": "gnosis",
+    "symbol": "COW",
+    "decimals": 18,
+    "address": "0x177127622c4a00f3d409b75571e12cb3c8973d3c"
+  },
+  "CREAM": {
+    "chain": "gnosis",
+    "symbol": "CREAM",
+    "decimals": 18,
+    "address": "0x1939d3431cf0e44b1d63b86e2ce489e5a341b1bf"
+  },
+  "CRV": {
+    "chain": "gnosis",
+    "symbol": "CRV",
+    "decimals": 18,
+    "address": "0x712b3d230f3c1c19db860d80619288b1f0bdd0bd"
+  },
+  "CVP": {
+    "chain": "gnosis",
+    "symbol": "CVP",
+    "decimals": 18,
+    "address": "0x7da0bfe9d26c5b64c7580c04bb1425364273e4b0"
+  },
+  "D2D": {
+    "chain": "gnosis",
+    "symbol": "D2D",
+    "decimals": 18,
+    "address": "0x921557ac88f770aab08eef6ac32106f00c7a5e72"
+  },
+  "DAI": {
+    "chain": "gnosis",
+    "symbol": "DAI",
+    "decimals": 18,
+    "address": "0x44fa8e6f47987339850636f88629646662444217"
+  },
+  "DAIX": {
+    "chain": "gnosis",
+    "symbol": "DAIX",
+    "decimals": 18,
+    "address": "0x4ef1d9a329a0cb0658156aff55c406cc4393a987"
+  },
+  "DATA": {
+    "chain": "gnosis",
+    "symbol": "DATA",
+    "decimals": 18,
+    "address": "0x256eb8a51f382650b2a1e946b8811953640ee47d"
+  },
+  "DDAI": {
+    "chain": "gnosis",
+    "symbol": "DDAI",
+    "decimals": 18,
+    "address": "0x1319067e82f0b9981f19191e1c08bb6e6e055dd3"
+  },
+  "DHV": {
+    "chain": "gnosis",
+    "symbol": "DHV",
+    "decimals": 18,
+    "address": "0xfbdd194376de19a88118e84e279b977f165d01b8"
+  },
+  "DIP": {
+    "chain": "gnosis",
+    "symbol": "DIP",
+    "decimals": 18,
+    "address": "0x48b1b0d077b4919b65b4e4114806dd803901e1d9"
+  },
+  "DJ15": {
+    "chain": "gnosis",
+    "symbol": "DJ15",
+    "decimals": 9,
+    "address": "0x7c16c63684d86bacc52e8793b08a5a1a3cb1ba1e"
+  },
+  "DONUT": {
+    "chain": "gnosis",
+    "symbol": "DONUT",
+    "decimals": 18,
+    "address": "0x524b969793a64a602342d89bc2789d43a016b13a"
+  },
+  "DOUGH": {
+    "chain": "gnosis",
+    "symbol": "DOUGH",
+    "decimals": 18,
+    "address": "0x6d237bb2248d3b40b1a54f3417667b2f39984fc8"
+  },
+  "DPI": {
+    "chain": "gnosis",
+    "symbol": "DPI",
+    "decimals": 18,
+    "address": "0xd3d47d5578e55c880505dc40648f7f9307c3e7a8"
+  },
+  "DUCK": {
+    "chain": "gnosis",
+    "symbol": "DUCK",
+    "decimals": 18,
+    "address": "0x8e7ab03ca7d17996b097d5866bfaa1e251c35c6a"
+  },
+  "DXD": {
+    "chain": "gnosis",
+    "symbol": "DXD",
+    "decimals": 18,
+    "address": "0xb90d6bec20993be5d72a5ab353343f7a0281f158"
+  },
+  "ENG": { "chain": "gnosis", "symbol": "ENG", "decimals": 8, "address": "0x7a7d81657a1a66b38a6ca2565433a9873c6913b2" },
+  "ENJ": {
+    "chain": "gnosis",
+    "symbol": "ENJ",
+    "decimals": 18,
+    "address": "0x5a757f0bcadfdb78651b7bdbe67e44e8fd7f7f6b"
+  },
+  "ETHIX": {
+    "chain": "gnosis",
+    "symbol": "ETHIX",
+    "decimals": 18,
+    "address": "0xec3f3e6d7907acda3a7431abd230196cda3fbb19"
+  },
+  "ETHM": {
+    "chain": "gnosis",
+    "symbol": "ETHM",
+    "decimals": 18,
+    "address": "0x9bd5e0ce813d5172859b0b70ff7bb3c325cee913"
+  },
+  "ETHO": {
+    "chain": "gnosis",
+    "symbol": "ETHO",
+    "decimals": 18,
+    "address": "0xb17d999e840e0c1b157ca5ab8039bd958b5fa317"
+  },
+  "EURe": {
+    "chain": "gnosis",
+    "symbol": "EURe",
+    "decimals": 18,
+    "address": "0xcb444e90d8198415266c6a2724b7900fb12fc56e"
+  },
+  "EWTB": {
+    "chain": "gnosis",
+    "symbol": "EWTB",
+    "decimals": 18,
+    "address": "0x6a8cb6714b1ee5b471a7d2ec4302cb4f5ff25ec2"
+  },
+  "FLX": {
+    "chain": "gnosis",
+    "symbol": "FLX",
+    "decimals": 18,
+    "address": "0xd87eaa26dcfb0c0a6160ccf8c8a01beb1c15fb00"
+  },
+  "FOUR": {
+    "chain": "gnosis",
+    "symbol": "FOUR",
+    "decimals": 18,
+    "address": "0xe6ff35dc3227a0c46e92b640bcb5c5895ad8c687"
+  },
+  "FOX": {
+    "chain": "gnosis",
+    "symbol": "FOX",
+    "decimals": 18,
+    "address": "0x21a42669643f45bc0e086b8fc2ed70c23d67509d"
+  },
+  "FR": { "chain": "gnosis", "symbol": "FR", "decimals": 18, "address": "0x270de58f54649608d316faa795a9941b355a2bd0" },
+  "FRACTION": {
+    "chain": "gnosis",
+    "symbol": "FRACTION",
+    "decimals": 18,
+    "address": "0x2bf2ba13735160624a0feae98f6ac8f70885ea61"
+  },
+  "FREE": {
+    "chain": "gnosis",
+    "symbol": "FREE",
+    "decimals": 18,
+    "address": "0xa106739de31fa7a9df4a93c9bea3e1bade0924e2"
+  },
+  "FRONT": {
+    "chain": "gnosis",
+    "symbol": "FRONT",
+    "decimals": 18,
+    "address": "0x1bbca7491f14b46788ff9c834d97a668c4886523"
+  },
+  "FSW": {
+    "chain": "gnosis",
+    "symbol": "FSW",
+    "decimals": 18,
+    "address": "0xde1e70ed71936e4c249a7d43e550f0b99fccddfc"
+  },
+  "FTT": {
+    "chain": "gnosis",
+    "symbol": "FTT",
+    "decimals": 18,
+    "address": "0x75886f00c1a20ec1511111fb4ec3c51de65b1fe7"
+  },
+  "GEAR": {
+    "chain": "gnosis",
+    "symbol": "GEAR",
+    "decimals": 18,
+    "address": "0x6f09cf96558d44584db07f8477dd3490599aa63e"
+  },
+  "GEN": {
+    "chain": "gnosis",
+    "symbol": "GEN",
+    "decimals": 18,
+    "address": "0x12dabe79cffc1fde82fcd3b96dbe09fa4d8cd599"
+  },
+  "GIV": {
+    "chain": "gnosis",
+    "symbol": "GIV",
+    "decimals": 18,
+    "address": "0x4f4f9b8d5b4d0dc10506e5551b0513b61fd59e75"
+  },
+  "GLDB": {
+    "chain": "gnosis",
+    "symbol": "GLDB",
+    "decimals": 18,
+    "address": "0x30610f98b61593de963b2303aeeaee69823f561f"
+  },
+  "GNO": {
+    "chain": "gnosis",
+    "symbol": "GNO",
+    "decimals": 18,
+    "address": "0x9c58bacc331c9aa871afd802db6379a98e80cedb"
+  },
+  "GRT": {
+    "chain": "gnosis",
+    "symbol": "GRT",
+    "decimals": 18,
+    "address": "0xfadc59d012ba3c110b08a15b7755a5cb7cbe77d7"
+  },
+  "HAKKA": {
+    "chain": "gnosis",
+    "symbol": "HAKKA",
+    "decimals": 18,
+    "address": "0xad601530859513371fa107ae6a7e18e08d69f155"
+  },
+  "HAUS": {
+    "chain": "gnosis",
+    "symbol": "HAUS",
+    "decimals": 18,
+    "address": "0xb0c5f3100a4d9d9532a4cfd68c55f1ae8da987eb"
+  },
+  "HEX": { "chain": "gnosis", "symbol": "HEX", "decimals": 8, "address": "0xd9fa47e33d4ff7a1aca489de1865ac36c042b07a" },
+  "HIVEWATER": {
+    "chain": "gnosis",
+    "symbol": "HIVEWATER",
+    "decimals": 18,
+    "address": "0x3a3e9715018d80916740e8ac300713fdf6614d19"
+  },
+  "HNY": {
+    "chain": "gnosis",
+    "symbol": "HNY",
+    "decimals": 18,
+    "address": "0x71850b7e9ee3f13ab46d67167341e4bdc905eef9"
+  },
+  "HOP": {
+    "chain": "gnosis",
+    "symbol": "HOP",
+    "decimals": 18,
+    "address": "0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc"
+  },
+  "HOPR": {
+    "chain": "gnosis",
+    "symbol": "HOPR",
+    "decimals": 18,
+    "address": "0xd057604a14982fe8d88c5fc25aac3267ea142a08"
+  },
+  "HOT": {
+    "chain": "gnosis",
+    "symbol": "HOT",
+    "decimals": 18,
+    "address": "0x346b2968508d32f0192cd7a60ef3d9c39a3cf549"
+  },
+  "HUSD": {
+    "chain": "gnosis",
+    "symbol": "HUSD",
+    "decimals": 8,
+    "address": "0x1e37e5b504f7773460d6eb0e24d2e7c223b66ec7"
+  },
+  "JOON": {
+    "chain": "gnosis",
+    "symbol": "JOON",
+    "decimals": 4,
+    "address": "0x5fe9885226677f3eb5c9ad8ab6c421b4ea38535d"
+  },
+  "JPYC": {
+    "chain": "gnosis",
+    "symbol": "JPYC",
+    "decimals": 18,
+    "address": "0x417602f4fbdd471a431ae29fb5fe0a681964c11b"
+  },
+  "KNC": {
+    "chain": "gnosis",
+    "symbol": "KNC",
+    "decimals": 18,
+    "address": "0x1534fb3e82849314360c267fe20df3901a2ed3f9"
+  },
+  "LAYER": {
+    "chain": "gnosis",
+    "symbol": "LAYER",
+    "decimals": 18,
+    "address": "0x8fbedd16904b561e30ea402f459900e9d90614af"
+  },
+  "LEND": {
+    "chain": "gnosis",
+    "symbol": "LEND",
+    "decimals": 18,
+    "address": "0xc1b42bdb485deb24c74f58399288d7915a726c1d"
+  },
+  "LIEN": {
+    "chain": "gnosis",
+    "symbol": "LIEN",
+    "decimals": 8,
+    "address": "0x6062ec2a1ecfcd0026d9bd67aa5ad743adc03995"
+  },
+  "LINK": {
+    "chain": "gnosis",
+    "symbol": "LINK",
+    "decimals": 18,
+    "address": "0xe2e73a1c69ecf83f464efce6a5be353a37ca09b2"
+  },
+  "LOCK": {
+    "chain": "gnosis",
+    "symbol": "LOCK",
+    "decimals": 18,
+    "address": "0xf99efeb34aff6d3099c41605e9ee778caec39317"
+  },
+  "LPT": {
+    "chain": "gnosis",
+    "symbol": "LPT",
+    "decimals": 18,
+    "address": "0x7db0be7a41b5395268e065776e800e27181c81ab"
+  },
+  "LRC": {
+    "chain": "gnosis",
+    "symbol": "LRC",
+    "decimals": 18,
+    "address": "0x2be73bfeec620aa9b67535a4d3827bb1e29436d1"
+  },
+  "LTI": {
+    "chain": "gnosis",
+    "symbol": "LTI",
+    "decimals": 18,
+    "address": "0xcf9dc2de2a67d7db1a7171e3b8456d2171e4da75"
+  },
+  "LYXe": {
+    "chain": "gnosis",
+    "symbol": "LYXe",
+    "decimals": 18,
+    "address": "0x79cf2029717e2e78c8927f65f079ab8da21781ee"
+  },
+  "MAI": {
+    "chain": "gnosis",
+    "symbol": "MAI",
+    "decimals": 18,
+    "address": "0xe959db3c04376b017b37c95618bbaeb59f51abba"
+  },
+  "MANA": {
+    "chain": "gnosis",
+    "symbol": "MANA",
+    "decimals": 18,
+    "address": "0x7838796b6802b18d7ef58fc8b757705d6c9d12b3"
+  },
+  "MASK": {
+    "chain": "gnosis",
+    "symbol": "MASK",
+    "decimals": 18,
+    "address": "0x4e1a2bffe81000f7be4807faf0315173c817d6f4"
+  },
+  "MATIC": {
+    "chain": "gnosis",
+    "symbol": "MATIC",
+    "decimals": 18,
+    "address": "0x7122d7661c4564b7c6cd4878b06766489a6028a2"
+  },
+  "MCB": {
+    "chain": "gnosis",
+    "symbol": "MCB",
+    "decimals": 18,
+    "address": "0xd361c1fd663d8f2dc36ae07ff6f3623532cabdd3"
+  },
+  "MCDC": {
+    "chain": "gnosis",
+    "symbol": "MCDC",
+    "decimals": 2,
+    "address": "0xc577cddabb7893cc2ca15ef4b5d5e5e13c3feed3"
+  },
+  "MDZA": {
+    "chain": "gnosis",
+    "symbol": "MDZA",
+    "decimals": 18,
+    "address": "0xbab3cbdcbcc578445480a79ed80269c50bb5b718"
+  },
+  "MEME": {
+    "chain": "gnosis",
+    "symbol": "MEME",
+    "decimals": 8,
+    "address": "0x512a2eb0277573ae9be0d48c782590b624048fdf"
+  },
+  "MESH": {
+    "chain": "gnosis",
+    "symbol": "MESH",
+    "decimals": 18,
+    "address": "0xe7ef58d8180cc269c6620ded3e6cc536a52e2ebd"
+  },
+  "MET": {
+    "chain": "gnosis",
+    "symbol": "MET",
+    "decimals": 18,
+    "address": "0xb4b6f80d8e573e9867c90163bfdb00e29d92716a"
+  },
+  "MIVA": {
+    "chain": "gnosis",
+    "symbol": "MIVA",
+    "decimals": 18,
+    "address": "0x63e62989d9eb2d37dfdb1f93a22f063635b07d51"
+  },
+  "MKR": {
+    "chain": "gnosis",
+    "symbol": "MKR",
+    "decimals": 18,
+    "address": "0x5fd896d248fbfa54d26855c267859eb1b4daee72"
+  },
+  "MOON": {
+    "chain": "gnosis",
+    "symbol": "MOON",
+    "decimals": 18,
+    "address": "0x5b917d4fb9b27591353211c32f1552a527987afc"
+  },
+  "MPS": { "chain": "gnosis", "symbol": "MPS", "decimals": 0, "address": "0xfa57aa7beed63d03aaf85ffd1753f5f6242588fb" },
+  "MRP": {
+    "chain": "gnosis",
+    "symbol": "MRP",
+    "decimals": 18,
+    "address": "0xcc043d8820a6dc3e74ef6fb4772fae00c1563489"
+  },
+  "NEXO": {
+    "chain": "gnosis",
+    "symbol": "NEXO",
+    "decimals": 18,
+    "address": "0x26dc03e492763068ccfe7c39b93a22442807c360"
+  },
+  "NFTX": {
+    "chain": "gnosis",
+    "symbol": "NFTX",
+    "decimals": 18,
+    "address": "0x8e1a12da00bbf9db10d48bd66ff818be933964d5"
+  },
+  "NMR": {
+    "chain": "gnosis",
+    "symbol": "NMR",
+    "decimals": 18,
+    "address": "0x0b7a1c1a3d314dcc271ea576da400b24e9ad3094"
+  },
+  "NODE": {
+    "chain": "gnosis",
+    "symbol": "NODE",
+    "decimals": 18,
+    "address": "0xc60e38c6352875c051b481cbe79dd0383adb7817"
+  },
+  "NPXS": {
+    "chain": "gnosis",
+    "symbol": "NPXS",
+    "decimals": 18,
+    "address": "0x26dd64bdcb2faf4f7e49a73145752e8d9cb34c94"
+  },
+  "NRGE": {
+    "chain": "gnosis",
+    "symbol": "NRGE",
+    "decimals": 18,
+    "address": "0x0dcfed2c3041e66b2d8c4ea39782c60355716316"
+  },
+  "OCEAN": {
+    "chain": "gnosis",
+    "symbol": "OCEAN",
+    "decimals": 18,
+    "address": "0x51732a6fc4673d1acca4c047f5465922716508ad"
+  },
+  "OKB": {
+    "chain": "gnosis",
+    "symbol": "OKB",
+    "decimals": 18,
+    "address": "0x4efdfbb7cca540a79a7e4dcad1cb6ed14f21c43e"
+  },
+  "OM": { "chain": "gnosis", "symbol": "OM", "decimals": 18, "address": "0x309bc6dbcbfb9c84d26fdf65e8924367efccbdb9" },
+  "OMG": {
+    "chain": "gnosis",
+    "symbol": "OMG",
+    "decimals": 18,
+    "address": "0x8395f7123ba3ffad52e7414433d825931c81c879"
+  },
+  "OWL": {
+    "chain": "gnosis",
+    "symbol": "OWL",
+    "decimals": 18,
+    "address": "0x0905ab807f8fd040255f0cf8fa14756c1d824931"
+  },
+  "PAN": {
+    "chain": "gnosis",
+    "symbol": "PAN",
+    "decimals": 18,
+    "address": "0x981fb9ba94078a2275a8fc906898ea107b9462a8"
+  },
+  "PANTS": {
+    "chain": "gnosis",
+    "symbol": "PANTS",
+    "decimals": 18,
+    "address": "0x0dae13fae64180d3cadcad22329a4abcaef15ca6"
+  },
+  "PERP": {
+    "chain": "gnosis",
+    "symbol": "PERP",
+    "decimals": 18,
+    "address": "0x7ecf26cd9a36990b8ea477853663092333f59979"
+  },
+  "PGT": {
+    "chain": "gnosis",
+    "symbol": "PGT",
+    "decimals": 18,
+    "address": "0x6099280dc5fc97cbb61b456246316a1b8f79534b"
+  },
+  "PHA": {
+    "chain": "gnosis",
+    "symbol": "PHA",
+    "decimals": 18,
+    "address": "0x7ea8af7301b763451b7fb25f8fc2406819a7e36f"
+  },
+  "PIE": {
+    "chain": "gnosis",
+    "symbol": "PIE",
+    "decimals": 18,
+    "address": "0x317eab07380d670ea814025cba40f5624354a32f"
+  },
+  "PLR": {
+    "chain": "gnosis",
+    "symbol": "PLR",
+    "decimals": 18,
+    "address": "0x10beea85519a704a63765d396415f9ea5aa30a17"
+  },
+  "PNK": {
+    "chain": "gnosis",
+    "symbol": "PNK",
+    "decimals": 18,
+    "address": "0x37b60f4e9a31a64ccc0024dce7d0fd07eaa0f7b3"
+  },
+  "POA20": {
+    "chain": "gnosis",
+    "symbol": "POA20",
+    "decimals": 18,
+    "address": "0x985e144eb355273c4b4d51e448b68b657f482e26"
+  },
+  "POLS": {
+    "chain": "gnosis",
+    "symbol": "POLS",
+    "decimals": 18,
+    "address": "0x75481a953a4bba6b3c445907db403e4b5d222174"
+  },
+  "PROPHET": {
+    "chain": "gnosis",
+    "symbol": "PROPHET",
+    "decimals": 9,
+    "address": "0xa9e5cd4efc86c01fae9a9fcd6e8669b97c92a937"
+  },
+  "PRTCLE": {
+    "chain": "gnosis",
+    "symbol": "PRTCLE",
+    "decimals": 18,
+    "address": "0xb5d592f85ab2d955c25720ebe6ff8d4d1e1be300"
+  },
+  "PTF": {
+    "chain": "gnosis",
+    "symbol": "PTF",
+    "decimals": 18,
+    "address": "0x53ef00be819a062533a0e699077c621a28eaded1"
+  },
+  "RAID": {
+    "chain": "gnosis",
+    "symbol": "RAID",
+    "decimals": 18,
+    "address": "0x18e9262e68cc6c6004db93105cc7c001bb103e49"
+  },
+  "RAREv2": {
+    "chain": "gnosis",
+    "symbol": "RAREv2",
+    "decimals": 18,
+    "address": "0x57e93bb58268de818b42e3795c97bad58afcd3fe"
+  },
+  "RARI": {
+    "chain": "gnosis",
+    "symbol": "RARI",
+    "decimals": 18,
+    "address": "0x4be85acc1cd711f403dc7bde9e6cadfc5a94744b"
+  },
+  "REN": {
+    "chain": "gnosis",
+    "symbol": "REN",
+    "decimals": 18,
+    "address": "0x0da1a02cdf84c44021671d183d616925164e08aa"
+  },
+  "RGT": {
+    "chain": "gnosis",
+    "symbol": "RGT",
+    "decimals": 18,
+    "address": "0x417ae38b3053a736b4274aed8dbd1a8a6fdbc974"
+  },
+  "RICE": {
+    "chain": "gnosis",
+    "symbol": "RICE",
+    "decimals": 18,
+    "address": "0x97edc0e345fbbbd8460847fcfa3bc2a13bf8641f"
+  },
+  "RING": {
+    "chain": "gnosis",
+    "symbol": "RING",
+    "decimals": 18,
+    "address": "0x1479ebfe327b62bff255c0749a242748d3e7347a"
+  },
+  "RLC": { "chain": "gnosis", "symbol": "RLC", "decimals": 9, "address": "0x60e668f54106222adc1da80c169281b3355b8e5d" },
+  "ROBOT": {
+    "chain": "gnosis",
+    "symbol": "ROBOT",
+    "decimals": 18,
+    "address": "0x8d02b73904856de6998ffdf6e7ee18cc21137a79"
+  },
+  "RPL": {
+    "chain": "gnosis",
+    "symbol": "RPL",
+    "decimals": 18,
+    "address": "0x2f0e755efe6b58238a67db420ff3513ec1fb31ef"
+  },
+  "RSR": {
+    "chain": "gnosis",
+    "symbol": "RSR",
+    "decimals": 18,
+    "address": "0x5a87eac5642bfed4e354ee8738dacd298e07d1af"
+  },
+  "RXDAI": {
+    "chain": "gnosis",
+    "symbol": "RXDAI",
+    "decimals": 18,
+    "address": "0x6b0f8a3fb7cb257ad7c72ada469ba1d3c19c5094"
+  },
+  "SAI": {
+    "chain": "gnosis",
+    "symbol": "SAI",
+    "decimals": 18,
+    "address": "0xc439e5b1dee4f866b681e7c5e5df140aa47fbf19"
+  },
+  "SETH": {
+    "chain": "gnosis",
+    "symbol": "SETH",
+    "decimals": 18,
+    "address": "0x8f365b41b98fe84acb287540b4b4ab633e07edb2"
+  },
+  "SHIB": {
+    "chain": "gnosis",
+    "symbol": "SHIB",
+    "decimals": 18,
+    "address": "0x4ea1172f4c4e8e8d3c9e1be4269b696bf19d24fe"
+  },
+  "SNAFU": {
+    "chain": "gnosis",
+    "symbol": "SNAFU",
+    "decimals": 18,
+    "address": "0x27b9c2bd4baea18abdf49169054c1c1c12af9862"
+  },
+  "SNT": {
+    "chain": "gnosis",
+    "symbol": "SNT",
+    "decimals": 18,
+    "address": "0x044f6ae3aef34fdb8fddc7c05f9cc17f19acd516"
+  },
+  "SNX": {
+    "chain": "gnosis",
+    "symbol": "SNX",
+    "decimals": 18,
+    "address": "0x3a00e08544d589e19a8e7d97d0294331341cdbf6"
+  },
+  "SOCKS": {
+    "chain": "gnosis",
+    "symbol": "SOCKS",
+    "decimals": 18,
+    "address": "0x35f346cb4149746272974a92d719fd48ae2f72fa"
+  },
+  "SORA": {
+    "chain": "gnosis",
+    "symbol": "SORA",
+    "decimals": 18,
+    "address": "0x5bbfbfb123b72a255504be985bd2b474e481e866"
+  },
+  "SRM": { "chain": "gnosis", "symbol": "SRM", "decimals": 6, "address": "0x3ae8c08cd61d05ad6e22973e4b675a92d412ee3c" },
+  "STAKE": {
+    "chain": "gnosis",
+    "symbol": "STAKE",
+    "decimals": 18,
+    "address": "0xb7d311e2eb55f2f68a9440da38e7989210b9a05e"
+  },
+  "STORJ": {
+    "chain": "gnosis",
+    "symbol": "STORJ",
+    "decimals": 8,
+    "address": "0xbc650b9cc12db4da14b2417c60ccd6f4d77c3998"
+  },
+  "SURF": {
+    "chain": "gnosis",
+    "symbol": "SURF",
+    "decimals": 18,
+    "address": "0xc12956b840b403b600014a3092f6ebd9259738fe"
+  },
+  "SUSHI": {
+    "chain": "gnosis",
+    "symbol": "SUSHI",
+    "decimals": 18,
+    "address": "0x2995d1317dcd4f0ab89f4ae60f3f020a4f17c7ce"
+  },
+  "SWAP": {
+    "chain": "gnosis",
+    "symbol": "SWAP",
+    "decimals": 18,
+    "address": "0xeaacce3e5bcc10fb32c2553f8d6fc4c3888ffdad"
+  },
+  "SWPR": {
+    "chain": "gnosis",
+    "symbol": "SWPR",
+    "decimals": 18,
+    "address": "0x532801ed6f82fffd2dab70a19fc2d7b2772c4f4b"
+  },
+  "SYMM": {
+    "chain": "gnosis",
+    "symbol": "SYMM",
+    "decimals": 18,
+    "address": "0xc45b3c1c24d5f54e7a2cf288ac668c74dd507a84"
+  },
+  "TBTC": {
+    "chain": "gnosis",
+    "symbol": "TBTC",
+    "decimals": 18,
+    "address": "0x0811e451447d5819976a95a02f130c3b00d59346"
+  },
+  "TEC": {
+    "chain": "gnosis",
+    "symbol": "TEC",
+    "decimals": 18,
+    "address": "0x5df8339c5e282ee48c0c7ce8a7d01a73d38b3b27"
+  },
+  "TESTA": {
+    "chain": "gnosis",
+    "symbol": "TESTA",
+    "decimals": 18,
+    "address": "0x16afe6e6754fa3694afd0ce48f4bea102efacc17"
+  },
+  "TRAC": {
+    "chain": "gnosis",
+    "symbol": "TRAC",
+    "decimals": 18,
+    "address": "0xeddd81e0792e764501aae206eb432399a0268db5"
+  },
+  "TRADE": {
+    "chain": "gnosis",
+    "symbol": "TRADE",
+    "decimals": 18,
+    "address": "0x860182180e146300df38aab8d328c6e80bec9547"
+  },
+  "TRB": {
+    "chain": "gnosis",
+    "symbol": "TRB",
+    "decimals": 18,
+    "address": "0xaad66432d27737ecf6ed183160adc5ef36ab99f2"
+  },
+  "TRIB": {
+    "chain": "gnosis",
+    "symbol": "TRIB",
+    "decimals": 18,
+    "address": "0xff0ce179a303f26017019acf78b951cb743b8d9b"
+  },
+  "TRIPS": {
+    "chain": "gnosis",
+    "symbol": "TRIPS",
+    "decimals": 18,
+    "address": "0x479e32cdff5f216f93060700c711d1cc8e811a6b"
+  },
+  "TRU": { "chain": "gnosis", "symbol": "TRU", "decimals": 8, "address": "0x4384a7c9498f905e433ee06b6552a18e1d7cd3a4" },
+  "TUSD": {
+    "chain": "gnosis",
+    "symbol": "TUSD",
+    "decimals": 18,
+    "address": "0xb714654e905edad1ca1940b7790a8239ece5a9ff"
+  },
+  "TVK": {
+    "chain": "gnosis",
+    "symbol": "TVK",
+    "decimals": 18,
+    "address": "0xeb2bcabb0cdc099978a74cfe4ab4d45e7e677a45"
+  },
+  "UBT": { "chain": "gnosis", "symbol": "UBT", "decimals": 8, "address": "0xd3b93ff74e43ba9568e5019b38addb804fef719b" },
+  "UNCL": {
+    "chain": "gnosis",
+    "symbol": "UNCL",
+    "decimals": 18,
+    "address": "0x703120f2f2011a0d03a03a531ac0e84e81f15989"
+  },
+  "UNCX": {
+    "chain": "gnosis",
+    "symbol": "UNCX",
+    "decimals": 18,
+    "address": "0x0116e28b43a358162b96f70b4de14c98a4465f25"
+  },
+  "UNI": {
+    "chain": "gnosis",
+    "symbol": "UNI",
+    "decimals": 18,
+    "address": "0x4537e328bf7e4efa29d05caea260d7fe26af9d74"
+  },
+  "USDC": {
+    "chain": "gnosis",
+    "symbol": "USDC",
+    "decimals": 6,
+    "address": "0xddafbb505ad214d7b80b1f830fccc89b60fb7a83"
+  },
+  "USDP": {
+    "chain": "gnosis",
+    "symbol": "USDP",
+    "decimals": 18,
+    "address": "0xfe7ed09c4956f7cdb54ec4ffcb9818db2d7025b8"
+  },
+  "USDT": {
+    "chain": "gnosis",
+    "symbol": "USDT",
+    "decimals": 6,
+    "address": "0x4ecaba5870353805a9f068101a40e0f32ed605c6"
+  },
+  "VITA": {
+    "chain": "gnosis",
+    "symbol": "VITA",
+    "decimals": 18,
+    "address": "0x0939a7c3f8d37c1ce67fada4963ae7e0bd112ff3"
+  },
+  "VXV": {
+    "chain": "gnosis",
+    "symbol": "VXV",
+    "decimals": 18,
+    "address": "0x020ae8fc1c19f4d1312cf6a72291f52849791e7c"
+  },
+  "WATER": {
+    "chain": "gnosis",
+    "symbol": "WATER",
+    "decimals": 18,
+    "address": "0x4291f029b9e7acb02d49428458cf6fceac545f81"
+  },
+  "WBNB": {
+    "chain": "gnosis",
+    "symbol": "WBNB",
+    "decimals": 18,
+    "address": "0xca8d20f3e0144a72c6b5d576e9bd3fd8557e2b04"
+  },
+  "WBTC": {
+    "chain": "gnosis",
+    "symbol": "WBTC",
+    "decimals": 8,
+    "address": "0x8e5bbbb09ed1ebde8674cda39a0c169401db4252"
+  },
+  "WETH": {
+    "chain": "gnosis",
+    "symbol": "WETH",
+    "decimals": 18,
+    "address": "0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1"
+  },
+  "WXDAI": {
+    "chain": "gnosis",
+    "symbol": "WXDAI",
+    "decimals": 18,
+    "address": "0xe91d153e0b41518a2ce8dd3d7944fa863463a97d"
+  },
+  "WXRP": {
+    "chain": "gnosis",
+    "symbol": "WXRP",
+    "decimals": 18,
+    "address": "0x10a82313a4daef47c1ab9ef2bb00b22b3b0cc14c"
+  },
+  "XGT": {
+    "chain": "gnosis",
+    "symbol": "XGT",
+    "decimals": 18,
+    "address": "0xc25af3123d2420054c8fcd144c21113aa2853f39"
+  },
+  "XMOON": {
+    "chain": "gnosis",
+    "symbol": "XMOON",
+    "decimals": 18,
+    "address": "0x1e16aa4df73d29c029d94ceda3e3114ec191e25a"
+  },
+  "XRT": { "chain": "gnosis", "symbol": "XRT", "decimals": 9, "address": "0xf54b47b00b6916974c73b81b7d9929a4f443db49" },
+  "XYO": {
+    "chain": "gnosis",
+    "symbol": "XYO",
+    "decimals": 18,
+    "address": "0xfd4e5f45ea24ec50c4db4367380b014875caf219"
+  },
+  "YFI": {
+    "chain": "gnosis",
+    "symbol": "YFI",
+    "decimals": 18,
+    "address": "0xbf65bfcb5da067446cee6a706ba3fe2fb1a9fdfd"
+  },
+  "YLD": {
+    "chain": "gnosis",
+    "symbol": "YLD",
+    "decimals": 18,
+    "address": "0xa2fec95b3d3fecb39098e81f108533e1abf22ccf"
+  },
+  "ZRX": {
+    "chain": "gnosis",
+    "symbol": "ZRX",
+    "decimals": 18,
+    "address": "0x226bcf0e417428a25012d0fa2183d37f92bcedf6"
+  },
+  "agEUR": {
+    "chain": "gnosis",
+    "symbol": "agEUR",
+    "decimals": 18,
+    "address": "0x4b1e2c2762667331bc91648052f646d1b0d35984"
+  },
+  "bDAI": {
+    "chain": "gnosis",
+    "symbol": "bDAI",
+    "decimals": 18,
+    "address": "0xfc8b2690f66b46fec8b3ceeb95ff4ac35a0054bc"
+  },
+  "cbETH": {
+    "chain": "gnosis",
+    "symbol": "cbETH",
+    "decimals": 18,
+    "address": "0xe0cf6c7ed5ca334bd39f86366defbc3fc6dbbcab"
+  },
+  "crvUSD": {
+    "chain": "gnosis",
+    "symbol": "crvUSD",
+    "decimals": 18,
+    "address": "0xabef652195f98a91e490f047a5006b71c85f058d"
+  },
+  "rGNO": {
+    "chain": "gnosis",
+    "symbol": "rGNO",
+    "decimals": 18,
+    "address": "0x6ac78efae880282396a335ca2f79863a1e6831d4"
+  },
+  "rSURF": {
+    "chain": "gnosis",
+    "symbol": "rSURF",
+    "decimals": 9,
+    "address": "0x5c8c83e5d5f7be815863b810d45d7bc706d7b15b"
+  },
+  "renBTC": {
+    "chain": "gnosis",
+    "symbol": "renBTC",
+    "decimals": 8,
+    "address": "0x4a88248baa5b39bb4a9caa697fb7f8ae0c3f0ddb"
+  },
+  "renZEC": {
+    "chain": "gnosis",
+    "symbol": "renZEC",
+    "decimals": 8,
+    "address": "0x5f2852afd20c39849f6f56f4102b8c29ee141add"
+  },
+  "sDAI": {
+    "chain": "gnosis",
+    "symbol": "sDAI",
+    "decimals": 18,
+    "address": "0xaf204776c7245bf4147c2612bf6e5972ee483701"
+  },
+  "sGNO": {
+    "chain": "gnosis",
+    "symbol": "sGNO",
+    "decimals": 18,
+    "address": "0xa4ef9da5ba71cc0d2e5e877a910a37ec43420445"
+  },
+  "sUSD": {
+    "chain": "gnosis",
+    "symbol": "sUSD",
+    "decimals": 18,
+    "address": "0xb1950fb2c9c0cbc8553578c67db52aa110a93393"
+  },
+  "stETH": {
+    "chain": "gnosis",
+    "symbol": "stETH",
+    "decimals": 18,
+    "address": "0x3c037849a8ffcf19886e2f5b04f293b7847d0377"
+  },
+  "wNXM": {
+    "chain": "gnosis",
+    "symbol": "wNXM",
+    "decimals": 18,
+    "address": "0x01e92e3791f8c1d6599b2f80a4bff9b43949ac7c"
+  },
+  "wstETH": {
+    "chain": "gnosis",
+    "symbol": "wstETH",
+    "decimals": 18,
+    "address": "0x6c76971f98945ae98dd7d4dfca8711ebea946ea6"
+  },
+  "wxHOPR": {
+    "chain": "gnosis",
+    "symbol": "wxHOPR",
+    "decimals": 18,
+    "address": "0xd4fdec44db9d44b8f2b6d529620f9c0c7066a2c1"
+  },
+  "xBRICK": {
+    "chain": "gnosis",
+    "symbol": "xBRICK",
+    "decimals": 18,
+    "address": "0x2f9cebf5de3bc25e0643d0e66134e5bf5c48e191"
+  },
+  "xCOMB": {
+    "chain": "gnosis",
+    "symbol": "xCOMB",
+    "decimals": 18,
+    "address": "0x38fb649ad3d6ba1113be5f57b927053e97fc5bf7"
+  },
+  "xMARK": {
+    "chain": "gnosis",
+    "symbol": "xMARK",
+    "decimals": 9,
+    "address": "0x3e33cf23073fd8d5ad1d48d1860a96c0d8e56193"
+  },
+  "xREAP": {
+    "chain": "gnosis",
+    "symbol": "xREAP",
+    "decimals": 18,
+    "address": "0x42c6b3ac30ae82d754498f56d9372f0070349409"
+  },
+  "xSEED": {
+    "chain": "gnosis",
+    "symbol": "xSEED",
+    "decimals": 18,
+    "address": "0x2fd0c73ad006407f0a96c984f06a9ce8415b094e"
+  },
+  "yCRV": {
+    "chain": "gnosis",
+    "symbol": "yCRV",
+    "decimals": 18,
+    "address": "0x22bd2a732b39dace37ae7e8f50a186f3d9702e87"
+  }
+}

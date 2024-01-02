@@ -70,5 +70,15 @@ export const Aavev3Configs: ProtocolConfig = {
       protocol: 'aavev3',
       address: '0x794a61358d6845594f94dc1db02a252b5b4814ad',
     },
+    {
+      chain: 'metis',
+      protocol: 'aavev3',
+      address: '0x90df02551bb792286e8d4f13e0e357b4bf1d6a57',
+    },
+    {
+      chain: 'gnosis',
+      protocol: 'aavev3',
+      address: '0xb50201558b00496a145fe76f7424749556e326d8',
+    },
   ],
 };

@@ -86,4 +86,6 @@ export const BlockSubGraphEndpoints: { [key: string]: string } = {
   polygonzkevm: 'https://api.studio.thegraph.com/query/45376/polygon-zkevm-block/version/latest',
   linea: 'https://graph-query.linea.build/subgraphs/name/kybernetwork/linea-blocks',
   celo: 'https://api.thegraph.com/subgraphs/name/jesse-sawa/celo-blocks',
+  metis: 'https://andromeda.thegraph.metis.io/subgraphs/name/netswap/blocks',
+  gnosis: 'https://api.thegraph.com/subgraphs/name/1hive/xdai-blocks',
 };
