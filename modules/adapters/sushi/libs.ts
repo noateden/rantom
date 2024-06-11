@@ -20,7 +20,7 @@ export default class SushiLibs {
   public static async getMasterchefPoolInfo(
     options: GetMasterchefPoolInfoOptions
   ): Promise<StakingPoolConstant | null> {
-    const blockchain = options.services ? options.services.blockchain : new BlockchainService(null);
+    const blockchain = options.services ? options.services.blockchain : new BlockchainService();
     let lpToken = null;
 
     if (options.version === 'masterchef') {

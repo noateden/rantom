@@ -34,7 +34,7 @@ const YearnyethLiquidityPool = '0x2cced4ffa804adbe1269cdfc22d7904471abde63';
 // ];
 
 (async function () {
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   const yearnyethLiquidityPool: LiquidityPoolConstant = {
     protocol: 'yearnyeth',

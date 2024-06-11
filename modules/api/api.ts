@@ -2,7 +2,6 @@ import { Router } from 'express';
 
 import { ContextServices } from '../../types/namespaces';
 import { middleware } from './middleware';
-import * as actionRouter from './routes/action';
 import * as parserRouter from './routes/parser';
 
 export function getRouter(services: ContextServices): Router {
@@ -12,7 +11,6 @@ export function getRouter(services: ContextServices): Router {
 
   // public
   router.use('/parser', parserRouter.getRouter(services));
-  router.use('/action', actionRouter.getRouter(services));
 
   return router;
 }

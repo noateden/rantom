@@ -34,7 +34,7 @@ const ConvexBoosters: Array<any> = [
 const stakingPoolFilePath = './configs/data/ConvexStakingPools.json';
 
 (async function () {
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   for (const config of ConvexBoosters) {
     let existedPools: Array<ConvexStakingPoolConstant> = [];

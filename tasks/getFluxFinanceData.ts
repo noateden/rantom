@@ -16,7 +16,7 @@ const Markets: Array<string> = [
 ];
 
 (async function () {
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   const protocol = 'fluxfinance';
   const allMarkets: Array<CompoundMarket> = [];

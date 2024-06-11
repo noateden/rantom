@@ -135,7 +135,7 @@ async function getMasterchefPools(options: GetMasterChefPoolsOptions): Promise<v
 
   const allPools: Array<StakingPoolConstant> = existedPools;
 
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   const poolLength = await blockchain.singlecall({
     chain: options.chain,
@@ -230,7 +230,7 @@ async function getMasterchefPools(options: GetMasterChefPoolsOptions): Promise<v
   }
 
   const stableswapPools: Array<LiquidityPoolConstant> = [];
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
   for (const config of StableswapPools) {
     const [chain, address] = config.split(':');
     const pool: LiquidityPoolConstant = {

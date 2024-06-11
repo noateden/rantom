@@ -42,7 +42,7 @@ const CompoundMarketsV3 = [
 ];
 
 (async function () {
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   const protocol = 'compound';
   const allMarkets: Array<CompoundMarket> = [

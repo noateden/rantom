@@ -30,7 +30,7 @@ export default class UniswapLibs {
     options: GetUniswapLiquidityPoolOptions
   ): Promise<LiquidityPoolConstant | null> {
     const { chain, address, version, protocol } = options;
-    const blockchain = new BlockchainService(null);
+    const blockchain = new BlockchainService();
     try {
       const [token0Address, token1Address, factoryAddress] = await Promise.all([
         blockchain.singlecall({

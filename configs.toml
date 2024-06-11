@@ -1,0 +1,13 @@
+title = "rantom config"
+
+[caching]
+enabled = true
+path = ".rantom.caching.db"
+
+[blockchains]
+
+[blockchains.ethereum]
+name = "ethereum"
+family = "evm" # evm
+chainId = 1
+nodeRpc = "https://eth.llamarpc.com"

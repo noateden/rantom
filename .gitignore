@@ -4,6 +4,12 @@
 /node_modules
 /.pnp
 .pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # testing
 /coverage
@@ -21,6 +27,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+configs.toml
 
 npm-debug.log*
 yarn-debug.log*

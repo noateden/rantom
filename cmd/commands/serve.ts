@@ -18,7 +18,6 @@ export class ServeCommand extends BasicCommand {
   public async execute(argv: any) {
     // connect database
     const services: ContextServices = await super.getServices();
-    await super.preHook(services);
 
     const router = getRouter(services);
 

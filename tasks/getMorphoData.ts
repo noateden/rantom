@@ -18,7 +18,7 @@ const MorphoCompound = '0x8888882f8f843896699869179fB6E4f7e3B58888';
   const chain = 'ethereum';
   const protocol = 'morpho';
 
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   const allMarkets: Array<MorphoMarketConfig> = [];
 

@@ -23,7 +23,7 @@ const Markets: Array<string> = [
   const allMarkets: Array<ExactlyMarket> = [];
 
   const protocol = 'exactly';
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   for (const config of Markets) {
     const [chain, address] = config.split(':');

@@ -19,7 +19,7 @@ const RANGE = 2000;
 
 (async function () {
   const protocol = 'silo';
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   const allMarkets: Array<SiloMarket> = [];
 

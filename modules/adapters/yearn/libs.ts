@@ -14,7 +14,7 @@ export interface GetYearnVaultInfoOptions {
 
 export default class YearnLibs {
   public static async getVaultInfo(options: GetYearnVaultInfoOptions): Promise<StakingPoolConstant | null> {
-    const blockchain = new BlockchainService(options.services ? options.services.database : null);
+    const blockchain = new BlockchainService();
     try {
       const tokenAddress = await blockchain.singlecall({
         chain: options.chain,

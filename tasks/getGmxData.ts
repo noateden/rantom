@@ -38,7 +38,7 @@ const Transactions: Array<string> = [
   const protocol = 'gmxv2';
   const markets: Array<Gmxv2MarketConfig> = [];
 
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
   for (const transaction of Transactions) {
     const [chain, hash] = transaction.split(':');
     const web3 = blockchain.getProvider(chain);

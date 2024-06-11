@@ -14,7 +14,7 @@ const LiquidityPools = [
 
 (async function () {
   const protocol = 'mux';
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
   const assets: Array<MuxAssetConfig> = [];
 
   for (const config of LiquidityPools) {

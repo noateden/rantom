@@ -1,4 +1,4 @@
-# Rantom - Blockchain Data Explorer and Analytic for Human
+# Rantom - Blockchain Transaction Reader for Human
 
 ![Node Shield](https://img.shields.io/badge/Node-%5E18.0.0-339933?style=flat-square&logo=Node.js)
 ![Typescript Shield](https://img.shields.io/badge/Typescript-%5E4.6.3-3178C6?style=flat-square&logo=TypeScript)

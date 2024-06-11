@@ -46,7 +46,7 @@ const Boosters: Array<any> = [
 const stakingPoolFilePath = './configs/data/AurafinanceStakingPools.json';
 
 (async function () {
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   for (const config of Boosters) {
     let existedPools: Array<ConvexStakingPoolConstant> = [];

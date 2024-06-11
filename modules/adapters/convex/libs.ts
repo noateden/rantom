@@ -20,7 +20,7 @@ export default class ConvexLibs {
   public static async getBoosterPoolInfo(
     options: GetBoosterPoolInfoOptions
   ): Promise<ConvexStakingPoolConstant | null> {
-    const blockchain = options.services ? options.services.blockchain : new BlockchainService(null);
+    const blockchain = options.services ? options.services.blockchain : new BlockchainService();
 
     if (options.version === 'convexBooster') {
       const poolInfo = await blockchain.singlecall({

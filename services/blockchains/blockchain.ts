@@ -8,12 +8,11 @@ import ERC1155Abi from '../../configs/abi/ERC1155.json';
 import { AddressE, AddressF, AddressZero } from '../../configs/constants/addresses';
 import { InterfaceIdErc721, InterfaceIdErc1155 } from '../../configs/constants/eips';
 import { HardcodeNfts, HardcodeTokens, MockingTokens } from '../../configs/constants/hardcodeTokens';
+import { NativeTokens } from '../../configs/constants/nativeTokens';
 import EnvConfig from '../../configs/envConfig';
 import logger from '../../lib/logger';
 import { compareAddress, normalizeAddress } from '../../lib/utils';
 import { NonFungibleToken, Token } from '../../types/configs';
-import { CachingService } from '../caching/caching';
-import { IDatabaseService } from '../database/domains';
 import {
   ContractCall,
   GetNonFungibleTokenOptions,
@@ -22,13 +21,11 @@ import {
   IBlockchainService,
 } from './domains';
 
-export default class BlockchainService extends CachingService implements IBlockchainService {
+export default class BlockchainService implements IBlockchainService {
   public readonly name: string = 'blockchain';
   public readonly providers: { [key: string]: Web3 } = {};
 
-  constructor(database: IDatabaseService | null) {
-    super(database);
-  }
+  constructor() {}
 
   public getProvider(chain: string): Web3 {
     if (!this.providers[chain]) {
@@ -55,17 +52,9 @@ export default class BlockchainService extends CachingService implements IBlockc
   }
 
   public async getBlockTimestamp(chain: string, blockNumber: number): Promise<number> {
-    const cachingKey = `block-timestamp-${chain}-${blockNumber}`;
-    const caching = await this.getCachingData(cachingKey);
-    if (caching) {
-      return caching.timestamp;
-    }
-
     try {
       const block = await this.getProvider(chain).eth.getBlock(blockNumber);
-      const timestamp = Number(block.timestamp);
-      await this.setCachingData(cachingKey, { timestamp });
-      return timestamp;
+      return Number(block.timestamp);
     } catch (e: any) {
       logger.error('failed to get block from blockchain', {
         service: this.name,
@@ -92,7 +81,7 @@ export default class BlockchainService extends CachingService implements IBlockc
         return {
           chain: chain,
           address: normalizeAddress(address),
-          ...EnvConfig.blockchains[chain].nativeToken,
+          ...NativeTokens[chain],
         };
       }
 
@@ -123,26 +112,6 @@ export default class BlockchainService extends CachingService implements IBlockc
           }
         }
       }
-
-      if (this._database) {
-        // get from database
-        const tokenFromDatabase = await this._database.find({
-          collection: EnvConfig.mongodb.collections.tokens,
-          query: {
-            chain: chain,
-            address: normalizeAddress(address),
-          },
-        });
-        if (tokenFromDatabase) {
-          return {
-            chain,
-            address: normalizeAddress(address),
-            symbol: tokenFromDatabase.symbol,
-            decimals: tokenFromDatabase.decimals,
-            logoURI: tokenFromDatabase.logoURI,
-          };
-        }
-      }
     }
 
     // query on-chain data
@@ -162,29 +131,12 @@ export default class BlockchainService extends CachingService implements IBlockc
         params: [],
       });
 
-      const token: Token = {
+      return {
         chain,
         address: normalizeAddress(address),
         symbol,
         decimals: new BigNumber(decimals.toString()).toNumber(),
       };
-
-      if (this._database) {
-        // save to database
-        await this._database.update({
-          collection: EnvConfig.mongodb.collections.tokens,
-          keys: {
-            chain: chain,
-            address: token.address,
-          },
-          updates: {
-            ...token,
-          },
-          upsert: true,
-        });
-      }
-
-      return token;
     } catch (e: any) {
       logger.warn('failed to get token info', {
         service: this.name,
@@ -198,7 +150,7 @@ export default class BlockchainService extends CachingService implements IBlockc
   }
 
   public async getNonFungibleTokenInfo(options: GetNonFungibleTokenOptions): Promise<NonFungibleToken | null> {
-    const { chain, onchain } = options;
+    const { chain } = options;
     const address = normalizeAddress(options.address);
 
     if (HardcodeNfts[`${options.chain}-${normalizeAddress(options.address)}`]) {
@@ -209,31 +161,6 @@ export default class BlockchainService extends CachingService implements IBlockc
         eip: HardcodeNfts[`${options.chain}-${normalizeAddress(options.address)}`].eip,
         tokenId: options.tokenId,
       };
-    }
-
-    if (!onchain) {
-      if (this._database) {
-        // get from database
-        const tokenFromDatabase = await this._database.find({
-          collection: EnvConfig.mongodb.collections.nonFungibleTokens,
-          query: {
-            chain: chain,
-            address: normalizeAddress(address),
-            tokenId: options.tokenId,
-          },
-        });
-        if (tokenFromDatabase) {
-          return {
-            chain,
-            address: normalizeAddress(address),
-            name: tokenFromDatabase.name,
-            eip: tokenFromDatabase.eip,
-            tokenId: tokenFromDatabase.tokenId,
-            logoURI: tokenFromDatabase.logoURI,
-            imageURI: tokenFromDatabase.imageURI,
-          };
-        }
-      }
     }
 
     // get EIP standard by query supportsInterface
@@ -283,37 +210,12 @@ export default class BlockchainService extends CachingService implements IBlockc
       }
     } catch (e: any) {}
 
-    if (token && this._database) {
-      await this._database.update({
-        collection: EnvConfig.mongodb.collections.nonFungibleTokens,
-        keys: {
-          chain: token.chain,
-          address: token.address,
-          tokenId: token.tokenId,
-        },
-        updates: {
-          ...token,
-        },
-        upsert: true,
-      });
-    }
-
     return token;
   }
 
   public async getTransaction(options: GetTransactionOptions): Promise<any | null> {
-    const transactionKey = `${options.chain}:${options.hash}`;
-    const cache = await this.getCachingData(transactionKey);
-    if (cache) {
-      return cache.transaction;
-    }
-
     try {
-      const tx = await this.getProvider(options.chain).eth.getTransaction(options.hash);
-      await this.setCachingData(transactionKey, {
-        transaction: tx,
-      });
-      return tx;
+      return await this.getProvider(options.chain).eth.getTransaction(options.hash);
     } catch (e: any) {
       return null;
     }

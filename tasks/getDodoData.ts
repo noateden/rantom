@@ -45,7 +45,7 @@ const TopPairs = [
 (async function () {
   const protocol = 'dodo';
 
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   const allPairs: Array<LiquidityPoolConstant> = [];
 

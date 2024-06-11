@@ -16,7 +16,7 @@ const CrvusdMarkets: Array<string> = [
 ];
 
 (async function () {
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   const crvusdMarkets: Array<CrvusdMarket> = [];
 

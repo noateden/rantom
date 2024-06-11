@@ -37,53 +37,16 @@ export interface Blockchain {
 
   // default node RPC endpoint
   nodeRpc: string;
-
-  // the native token on chain
-  nativeToken: NativeToken;
-
-  // some time we need to get multiple block timestamp
-  // subgraph helps us query them in a single API call
-  blockSubgraph?: string;
 }
 
 export interface EnvConfig {
-  mongodb: {
-    databaseName: string;
-    connectionUri: string;
-    collections: {
-      // states collection is used to save any states of any services
-      // for example, when we sync logs from a contract,
-      // we need to save the latest block where logs were sync
-      states: string;
-
-      // caching collection used to save any cache data at database level
-      // make sure these data can be safety deleted without any issues on services
-      caching: string;
-
-      // we save all known tokens into this collections
-      tokens: string;
-      nonFungibleTokens: string;
-
-      // save transaction actions
-      actions: string;
-
-      // save raw transactions
-      transactions: string;
-    };
-  };
-
-  // some sentry config for monitoring purposes
-  sentry: {
-    dns: string;
+  caching: {
+    path: string;
   };
 
   // we pre-define supported blockchains here
   blockchains: {
     [key: string]: Blockchain;
-  };
-
-  policies: {
-    enableParserCaching: boolean;
   };
 }
 

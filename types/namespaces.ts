@@ -1,19 +1,10 @@
 import { IBlockchainService } from '../services/blockchains/domains';
-import { IDatabaseService } from '../services/database/domains';
 import { IDatastoreService } from '../services/datastore/domains';
 import { ProtocolConfig } from './configs';
 import { TokenTransfer, TransactionAction } from './domains';
-import {
-  BlockchainIndexingRunOptions,
-  EventlogIndexingRunOptions,
-  HandleHookEventLogOptions,
-  ParseEventLogOptions,
-  ParseTransactionOptions,
-  ProtocolIndexingRunOptions,
-} from './options';
+import { HandleHookEventLogOptions, ParseEventLogOptions, ParseTransactionOptions } from './options';
 
 export interface ContextServices {
-  database: IDatabaseService;
   blockchain: IBlockchainService;
   datastore: IDatastoreService;
 }
@@ -53,24 +44,6 @@ export interface ITransferAdapter extends IModule {
 
   // parse an event log into list of transaction token transfers
   parseEventLog: (options: ParseEventLogOptions) => Promise<TokenTransfer | null>;
-}
-
-// this indexing service query all logs from blockchain in a range
-// after that, it passes them into every single adapter hooks to handle logs
-export interface IBlockchainIndexing extends IModule {
-  run: (options: BlockchainIndexingRunOptions) => Promise<void>;
-}
-
-// this indexing service query all logs from blockchain in a range
-// after that, it passes them into every single adapter hooks to handle logs
-export interface IEventlogIndexing extends IModule {
-  run: (options: EventlogIndexingRunOptions) => Promise<void>;
-}
-
-// index historical data of a given protocol
-// it uses contracts configs from protocol config
-export interface IProtocolIndexing extends IModule {
-  run: (options: ProtocolIndexingRunOptions) => Promise<void>;
 }
 
 // the entry point for parser service

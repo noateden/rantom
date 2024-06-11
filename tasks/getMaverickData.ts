@@ -38,7 +38,7 @@ const Factories: Array<any> = [
 const poolFilePath = './configs/data/MaverickPools.json';
 
 (async function () {
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   for (const config of Factories) {
     console.log(`Getting top liquidity pool ${config.chain} ${config.protocol} ${config.address}`);

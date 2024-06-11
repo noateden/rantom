@@ -23,21 +23,6 @@ export default class TransactionParser implements ITransactionParser {
   public async fetchTransaction(options: ParseTransactionOptions): Promise<Array<any>> {
     const transactions: Array<any> = [];
 
-    const documents = await this.services.database.query({
-      collection: EnvConfig.mongodb.collections.transactions,
-      query: {
-        hash: options.hash,
-      },
-    });
-    if (documents.length > 0) {
-      for (const document of documents) {
-        delete document._id;
-        transactions.push(document);
-      }
-
-      return transactions;
-    }
-
     for (const [chain] of Object.entries(EnvConfig.blockchains)) {
       if (!options.chain || options.chain === chain) {
         let transaction = await this.services.blockchain.getTransaction({
@@ -62,20 +47,6 @@ export default class TransactionParser implements ITransactionParser {
           transactions.push(transaction);
         }
       }
-    }
-
-    for (const transaction of transactions) {
-      await this.services.database.update({
-        collection: EnvConfig.mongodb.collections.transactions,
-        keys: {
-          chain: transaction.chain,
-          hash: transaction.hash,
-        },
-        updates: {
-          ...transaction,
-        },
-        upsert: true,
-      });
     }
 
     return transactions;

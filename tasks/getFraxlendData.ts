@@ -27,7 +27,7 @@ const PairConfigs: Array<string> = [
   const allPairs: Array<FraxlendPair> = [];
 
   const protocol = 'fraxlend';
-  const blockchain = new BlockchainService(null);
+  const blockchain = new BlockchainService();
 
   for (const config of PairConfigs) {
     const [chain, address] = config.split(':');
