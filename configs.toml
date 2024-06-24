@@ -1,9 +1,0 @@
-title = "rantom config"
-
-[blockchains]
-
-[blockchains.ethereum]
-name = "ethereum"
-family = "evm" # evm
-chainId = 1
-nodeRpc = "https://eth.llamarpc.com"

@@ -1,5 +1,9 @@
 title = "rantom config"
 
+[caching]
+enabled = true
+path = ".rantom.caching.db"
+
 [blockchains]
 
 [blockchains.ethereum]

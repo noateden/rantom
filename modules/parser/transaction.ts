@@ -20,9 +20,7 @@ export default class TransactionParser implements ITransactionParser {
     this.transferAdapter = new TransferAdapter(services);
   }
 
-  public async fetchTransaction(options: ParseTransactionOptions): Promise<Array<any>> {
-    const transactions: Array<any> = [];
-
+  public async fetchTransaction(options: ParseTransactionOptions): Promise<any> {
     for (const [chain] of Object.entries(EnvConfig.blockchains)) {
       if (!options.chain || options.chain === chain) {
         let transaction = await this.services.blockchain.getTransaction({
@@ -44,19 +42,19 @@ export default class TransactionParser implements ITransactionParser {
               transaction.block = block;
             }
           }
-          transactions.push(transaction);
+
+          return transaction;
         }
       }
     }
 
-    return transactions;
+    return null;
   }
 
-  public async parseTransaction(options: ParseTransactionOptions): Promise<Array<any>> {
-    const parsedTransactions: Array<any> = [];
+  public async parseTransaction(options: ParseTransactionOptions): Promise<any> {
+    const transaction = await this.fetchTransaction(options);
 
-    const transactions = await this.fetchTransaction(options);
-    for (const transaction of transactions) {
+    if (transaction) {
       const parsedTransaction = {
         ...transaction,
         actions: [],
@@ -119,9 +117,9 @@ export default class TransactionParser implements ITransactionParser {
         }
       }
 
-      parsedTransactions.push(parsedTransaction);
+      return parsedTransaction;
     }
 
-    return parsedTransactions;
+    return null;
   }
 }
