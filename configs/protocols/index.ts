@@ -23,6 +23,7 @@ import { CrvusdConfigs } from './curve';
 import { DodoConfigs, DodoexConfigs } from './dodo';
 import { EnsConfigs } from './ens';
 import { Eth2Configs } from './eth2';
+import { EtherfiConfigs } from './etherfi';
 import { ExactlyConfigs } from './exactly';
 import { FluxfinanceConfigs } from './fluxfinance';
 import { FraxethConfigs } from './fraxeth';
@@ -149,4 +150,5 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   venus: VenusConfigs,
   native: NativeConfigs,
   renzo: RenzoConfigs,
+  etherfi: EtherfiConfigs,
 };

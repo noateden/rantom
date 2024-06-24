@@ -25,6 +25,7 @@ import DodoAdapter from './dodo/dodo';
 import DodoexAdapter from './dodo/dodoex';
 import EnsAdapter from './ens/ens';
 import Eth2Adapter from './eth2/eth2';
+import EtherfiAdapter from './etherfi/etherfi';
 import ExactlyAdapter from './exactly/exactly';
 import FraxethAdapter from './fraxeth/fraxeth';
 import FraxlendAdapter from './fraxlend/fraxlend';
@@ -146,5 +147,6 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     venus: new VenusAdapter(services, ProtocolConfigs.venus),
     native: new NativeAdapter(services, ProtocolConfigs.native),
     renzo: new RenzoAdapter(services, ProtocolConfigs.renzo),
+    etherfi: new EtherfiAdapter(services, ProtocolConfigs.etherfi),
   };
 }
