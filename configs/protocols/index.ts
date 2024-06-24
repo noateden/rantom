@@ -50,6 +50,7 @@ import { ParaswapConfigs } from './paraswap';
 import { PrismaConfigs } from './prisma';
 import { RadiantConfigs } from './radiant';
 import { ReflexerConfigs } from './reflexer';
+import { RenzoConfigs } from './renzo';
 import { RocketpoolConfigs } from './rocketpool';
 import { SeamlessConfigs } from './seamless';
 import { ShibaswapConfigs } from './shibaswap';
@@ -147,4 +148,5 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   gearbox: GearboxConfigs,
   venus: VenusConfigs,
   native: NativeConfigs,
+  renzo: RenzoConfigs,
 };

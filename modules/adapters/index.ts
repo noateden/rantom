@@ -51,6 +51,7 @@ import Pancakev3Adapter from './pancake/pancakev3';
 import ParaswapAdapter from './paraswap/paraswap';
 import PrismaAdapter from './prisma/prisma';
 import ReflexerAdapter from './reflexer/reflexer';
+import RenzoAdapter from './renzo/renzo';
 import RocketpoolAdapter from './rocketpool/rocketpool';
 import StakewiseAdapter from './stakewise/stakewise';
 import StargateAdapter from './stargate/stargate';
@@ -144,5 +145,6 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     gearbox: new GearboxAdapter(services, ProtocolConfigs.gearbox),
     venus: new VenusAdapter(services, ProtocolConfigs.venus),
     native: new NativeAdapter(services, ProtocolConfigs.native),
+    renzo: new RenzoAdapter(services, ProtocolConfigs.renzo),
   };
 }
