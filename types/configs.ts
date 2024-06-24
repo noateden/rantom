@@ -40,11 +40,6 @@ export interface Blockchain {
 }
 
 export interface EnvConfig {
-  caching: {
-    path: string;
-  };
-
-  // we pre-define supported blockchains here
   blockchains: {
     [key: string]: Blockchain;
   };
