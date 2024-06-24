@@ -1,4 +1,4 @@
-import { ProtocolConfigs } from '../../configs/protocols';
+import { ProtocolConfigs } from '../../configs';
 import { ContextServices, IAdapter } from '../../types/namespaces';
 import Aavev1Adapter from './aave/aavev1';
 import Aavev2Adapter from './aave/aavev2';
@@ -34,6 +34,7 @@ import GmxAdapter from './gmx/gmx';
 import Gmxv2Adapter from './gmx/gmxv2';
 import GravitaAdapter from './gravita/gravita';
 import IronbankAdapter from './ironbank/ironbank';
+import KelpdaoAdapter from './kelpdao/kelpdao';
 import KyberswapAdapter from './kyberswap/kyberswap';
 import LevelfinanceAdapter from './levelfinance/levelfinance';
 import LidoAdapter from './lido/lido';
@@ -51,6 +52,7 @@ import PancakeAdapter from './pancake/pancake';
 import Pancakev3Adapter from './pancake/pancakev3';
 import ParaswapAdapter from './paraswap/paraswap';
 import PrismaAdapter from './prisma/prisma';
+import PufferAdapter from './puffer/puffer';
 import ReflexerAdapter from './reflexer/reflexer';
 import RenzoAdapter from './renzo/renzo';
 import RocketpoolAdapter from './rocketpool/rocketpool';
@@ -148,5 +150,7 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     native: new NativeAdapter(services, ProtocolConfigs.native),
     renzo: new RenzoAdapter(services, ProtocolConfigs.renzo),
     etherfi: new EtherfiAdapter(services, ProtocolConfigs.etherfi),
+    puffer: new PufferAdapter(services, ProtocolConfigs.puffer),
+    kelpdao: new KelpdaoAdapter(services, ProtocolConfigs.kelpdao),
   };
 }
