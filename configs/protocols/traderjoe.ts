@@ -34,6 +34,11 @@ const Traderjoev2Contracts: { [key: string]: ContractConfig } = {
     protocol: 'traderjoev2',
     address: '0x8e42f2f4101563bf679975178e880fd87d3efd4e',
   },
+  factoryArbitrumV22: {
+    chain: 'arbitrum',
+    protocol: 'traderjoev2',
+    address: '0xb43120c4745967fa9b93e79c149e66b0f2d6fe0c',
+  },
   factoryBnbchain: {
     chain: 'bnbchain',
     protocol: 'traderjoev2',
@@ -44,6 +49,11 @@ const Traderjoev2Contracts: { [key: string]: ContractConfig } = {
     protocol: 'traderjoev2',
     address: '0x8e42f2f4101563bf679975178e880fd87d3efd4e',
   },
+  factoryAvalancheV22: {
+    chain: 'avalanche',
+    protocol: 'traderjoev2',
+    address: '0xb43120c4745967fa9b93e79c149e66b0f2d6fe0c',
+  },
 };
 
 export const Traderjoev2Configs: ProtocolConfig = {
@@ -53,5 +63,7 @@ export const Traderjoev2Configs: ProtocolConfig = {
     Traderjoev2Contracts.factoryArbitrum,
     Traderjoev2Contracts.factoryBnbchain,
     Traderjoev2Contracts.factoryAvalanche,
+    Traderjoev2Contracts.factoryArbitrumV22,
+    Traderjoev2Contracts.factoryAvalancheV22,
   ],
 };
