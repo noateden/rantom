@@ -68,7 +68,7 @@ import { SwellConfigs } from './protocols/swell';
 import { TraderjoeConfigs, Traderjoev2Configs } from './protocols/traderjoe';
 import { Uniswapv2Configs, Uniswapv3Configs } from './protocols/uniswap';
 import { VenusConfigs } from './protocols/venus';
-import { YearnConfigs, YearnyethConfig } from './protocols/yearn';
+import { YearnConfigs, YearnV3VaultConfigs, YearnyethConfig } from './protocols/yearn';
 import { ZeroxConfigs } from './protocols/zerox';
 import TokenListArbitrum from './tokenlists/arbitrum.json';
 import TokenListAvalanche from './tokenlists/avalanche.json';
@@ -208,4 +208,5 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   puffer: PufferConfigs,
   kelpdao: KelpdaoConfigs,
   curve: CurveConfigs,
+  yearnV3Vault: YearnV3VaultConfigs,
 };

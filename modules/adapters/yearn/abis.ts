@@ -15,6 +15,11 @@ export const YearnEventSignatures = {
   veYFIWithdraw: '0xf279e6a1f5e320cca91135676d9cb6e44ca8a08c0b88342bcdb1144f6511b568',
 };
 
+export const YearnV3VaultEvents = {
+  Deposit: '0xdcbc1c05240f31ff3ad067ef1ee35ce4997762752e3a095284754544f4c709d7',
+  Withdraw: '0xfbde797d201c681b91056529119e0b02407c7bb96a4a2c75c01fc9667232c8db',
+};
+
 export const YearnAbiMappings: { [key: string]: EventMapping } = {
   [YearnEventSignatures.veYFIModifyLock]: {
     abi: [

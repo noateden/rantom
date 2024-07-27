@@ -66,6 +66,7 @@ import Uniswapv2Adapter from './uniswap/uniswapv2';
 import Uniswapv3Adapter from './uniswap/uniswapv3';
 import VenusAdapter from './venus/venus';
 import YearnAdapter from './yearn/yearn';
+import YearnV3VaultAdapter from './yearn/yearnV3Vault';
 import YearnyethAdapter from './yearn/yearnyeth';
 import ZeroxAdapter from './zerox/zerox';
 
@@ -154,5 +155,6 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     puffer: new PufferAdapter(services, ProtocolConfigs.puffer),
     kelpdao: new KelpdaoAdapter(services, ProtocolConfigs.kelpdao),
     curve: new CurveAdapter(services, ProtocolConfigs.curve),
+    yearnV3Vault: new YearnV3VaultAdapter(services, ProtocolConfigs.yearnV3Vault),
   };
 }

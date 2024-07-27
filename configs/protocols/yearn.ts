@@ -26,3 +26,39 @@ export const YearnyethConfig: ProtocolConfig = {
     },
   ],
 };
+
+export const YearnV3VaultConfigs: ProtocolConfig = {
+  protocol: 'yearn',
+  contracts: [
+    {
+      chain: 'ethereum',
+      protocol: 'yearn',
+      address: '0x444045c5c13c246e117ed36437303cac8e250ab0', // v3 vaults factory
+    },
+    {
+      chain: 'ethereum',
+      protocol: 'yearn',
+      address: '0xe9e8c89c8fc7e8b8f23425688eb68987231178e5', // v3 vaults factory
+    },
+    {
+      chain: 'arbitrum',
+      protocol: 'yearn',
+      address: '0x444045c5c13c246e117ed36437303cac8e250ab0', // v3 vaults factory
+    },
+    {
+      chain: 'arbitrum',
+      protocol: 'yearn',
+      address: '0xe9e8c89c8fc7e8b8f23425688eb68987231178e5', // v3 vaults factory
+    },
+    {
+      chain: 'polygon',
+      protocol: 'yearn',
+      address: '0x444045c5c13c246e117ed36437303cac8e250ab0', // v3 vaults factory
+    },
+    {
+      chain: 'polygon ',
+      protocol: 'yearn',
+      address: '0xe9e8c89c8fc7e8b8f23425688eb68987231178e5', // v3 vaults factory
+    },
+  ],
+};

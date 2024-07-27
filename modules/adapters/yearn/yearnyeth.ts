@@ -1,5 +1,6 @@
 import BigNumber from 'bignumber.js';
 
+import YearnStableswapPoolAbi from '../../../configs/abi/yearn/YearnStableswapPool.json';
 import { compareAddress, formatFromDecimals, normalizeAddress } from '../../../lib/utils';
 import { ProtocolConfig, Token } from '../../../types/configs';
 import { TransactionAction } from '../../../types/domains';
@@ -37,31 +38,43 @@ export default class YearnyethAdapter extends Adapter {
 
       switch (signature) {
         case YearnEventSignatures.Swap: {
-          const poolIn = await this.services.datastore.getStakingPoolConstant({
+          const [fromAddress, toAddress] = await this.services.blockchain.multicall({
             chain: options.chain,
-            address: normalizeAddress(options.log.address),
-            protocol: this.config.protocol,
-            poolId: Number(event.asset_in),
+            calls: [
+              {
+                abi: YearnStableswapPoolAbi,
+                target: options.log.address,
+                method: 'assets',
+                params: [event.asset_in],
+              },
+              {
+                abi: YearnStableswapPoolAbi,
+                target: options.log.address,
+                method: 'assets',
+                params: [event.asset_out],
+              },
+            ],
           });
-          const poolOut = await this.services.datastore.getStakingPoolConstant({
+          const tokenIn = await this.services.blockchain.getTokenInfo({
             chain: options.chain,
-            address: normalizeAddress(options.log.address),
-            protocol: this.config.protocol,
-            poolId: Number(event.asset_out),
+            address: fromAddress,
           });
-
-          if (poolIn && poolOut) {
+          const tokenOut = await this.services.blockchain.getTokenInfo({
+            chain: options.chain,
+            address: toAddress,
+          });
+          if (tokenIn && tokenOut) {
             const account = normalizeAddress(event.account);
             const receiver = normalizeAddress(event.receiver);
-            const amountIn = formatFromDecimals(event.amount_in.toString(), poolIn.token.decimals);
-            const amountOut = formatFromDecimals(event.amount_out.toString(), poolOut.token.decimals);
+            const amountIn = formatFromDecimals(event.amount_in.toString(), tokenIn.decimals);
+            const amountOut = formatFromDecimals(event.amount_out.toString(), tokenOut.decimals);
 
             actions.push(
               this.buildUpAction({
                 ...options,
                 action: 'swap',
                 addresses: [account, receiver],
-                tokens: [poolIn.token, poolOut.token],
+                tokens: [tokenIn, tokenOut],
                 tokenAmounts: [amountIn, amountOut],
               })
             );
@@ -75,17 +88,22 @@ export default class YearnyethAdapter extends Adapter {
           const account = normalizeAddress(event.account);
           const receiver = normalizeAddress(event.receiver);
           for (let i = 0; i < event.amounts_in.length; i++) {
-            const stakingPool = await this.services.datastore.getStakingPoolConstant({
+            const asset = await this.services.blockchain.readContract({
               chain: options.chain,
-              protocol: this.config.protocol,
-              address: options.log.address,
-              poolId: i,
+              abi: YearnStableswapPoolAbi,
+              target: options.log.address,
+              method: 'assets',
+              params: [i],
             });
-            if (stakingPool) {
-              tokens.push(stakingPool.token);
+            const token = await this.services.blockchain.getTokenInfo({
+              chain: options.chain,
+              address: asset,
+            });
+            if (token) {
+              tokens.push(token);
               tokenAmounts.push(
                 new BigNumber(event.amounts_in[i].toString())
-                  .dividedBy(new BigNumber(10).pow(stakingPool.token.decimals))
+                  .dividedBy(new BigNumber(10).pow(token.decimals))
                   .toString(10)
               );
             }
@@ -107,28 +125,43 @@ export default class YearnyethAdapter extends Adapter {
           const tokens: Array<Token> = [];
           const tokenAmounts: Array<string> = [];
 
-          const pools = await this.services.datastore.getStakingPoolConstants({
+          const num_assets = await this.services.blockchain.readContract({
             chain: options.chain,
-            protocol: this.config.protocol,
-            address: options.log.address,
+            abi: YearnStableswapPoolAbi,
+            target: options.log.address,
+            method: 'num_assets',
+            params: [],
           });
-          for (const pool of pools) {
-            for (const log of options.allLogs) {
-              if (
-                log.topics[0] === '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef' &&
-                compareAddress(log.address, pool.token.address)
-              ) {
-                const transferEvent = web3.eth.abi.decodeLog(
-                  TransferAbiMappings[log.topics[0]].abi,
-                  log.data,
-                  log.topics.slice(1)
-                );
+          for (let i = 0; i < Number(num_assets); i++) {
+            const asset = await this.services.blockchain.readContract({
+              chain: options.chain,
+              abi: YearnStableswapPoolAbi,
+              target: options.log.address,
+              method: 'assets',
+              params: [i],
+            });
+            const token = await this.services.blockchain.getTokenInfo({
+              chain: options.chain,
+              address: asset,
+            });
+            if (token) {
+              for (const log of options.allLogs) {
                 if (
-                  compareAddress(transferEvent.from, options.log.address) &&
-                  compareAddress(transferEvent.to, receiver)
+                  log.topics[0] === '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef' &&
+                  compareAddress(log.address, token.address)
                 ) {
-                  tokens.push(pool.token);
-                  tokenAmounts.push(formatFromDecimals(transferEvent.value.toString(), pool.token.decimals));
+                  const transferEvent = web3.eth.abi.decodeLog(
+                    TransferAbiMappings[log.topics[0]].abi,
+                    log.data,
+                    log.topics.slice(1)
+                  );
+                  if (
+                    compareAddress(transferEvent.from, options.log.address) &&
+                    compareAddress(transferEvent.to, receiver)
+                  ) {
+                    tokens.push(token);
+                    tokenAmounts.push(formatFromDecimals(transferEvent.value.toString(), token.decimals));
+                  }
                 }
               }
             }
@@ -149,20 +182,27 @@ export default class YearnyethAdapter extends Adapter {
         case YearnEventSignatures.RemoveLiquiditySingle: {
           const account = normalizeAddress(event.account);
           const receiver = normalizeAddress(event.receiver);
-          const pool = await this.services.datastore.getStakingPoolConstant({
+
+          const asset = await this.services.blockchain.readContract({
             chain: options.chain,
-            protocol: this.config.protocol,
-            address: options.log.address,
-            poolId: Number(event.asset),
+            abi: YearnStableswapPoolAbi,
+            target: options.log.address,
+            method: 'assets',
+            params: [event.asset],
           });
-          if (pool) {
+          const token = await this.services.blockchain.getTokenInfo({
+            chain: options.chain,
+            address: asset,
+          });
+
+          if (token) {
             actions.push(
               this.buildUpAction({
                 ...options,
                 action: 'withdraw',
                 addresses: [account, receiver],
-                tokens: [pool.token],
-                tokenAmounts: [formatFromDecimals(event.amount_out.toString(), pool.token.decimals)],
+                tokens: [token],
+                tokenAmounts: [formatFromDecimals(event.amount_out.toString(), token.decimals)],
               })
             );
           }
