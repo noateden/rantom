@@ -1,11 +1,12 @@
 import BigNumber from 'bignumber.js';
+import { Address, PublicClient, createPublicClient, http } from 'viem';
 import Web3 from 'web3';
 
 import { TokenList } from '../../configs';
 import ERC20Abi from '../../configs/abi/ERC20.json';
 import ERC721Abi from '../../configs/abi/ERC721.json';
 import ERC1155Abi from '../../configs/abi/ERC1155.json';
-import { AddressE, AddressF, AddressZero } from '../../configs/constants/addresses';
+import { AddressE, AddressF, AddressMulticall3, AddressZero } from '../../configs/constants/addresses';
 import { InterfaceIdErc721, InterfaceIdErc1155 } from '../../configs/constants/eips';
 import { HardcodeNfts, HardcodeTokens, MockingTokens } from '../../configs/constants/hardcodeTokens';
 import { NativeTokens } from '../../configs/constants/nativeTokens';
@@ -19,6 +20,8 @@ import {
   GetTokenOptions,
   GetTransactionOptions,
   IBlockchainService,
+  MulticallOptions,
+  ReadContractOptions,
 } from './domains';
 
 export default class BlockchainService implements IBlockchainService {
@@ -27,6 +30,7 @@ export default class BlockchainService implements IBlockchainService {
 
   constructor() {}
 
+  // web provider
   public getProvider(chain: string): Web3 {
     if (!this.providers[chain]) {
       // get config and initialize a new provider
@@ -34,6 +38,20 @@ export default class BlockchainService implements IBlockchainService {
     }
 
     return this.providers[chain];
+  }
+
+  // viem
+  public getPublicClient(chain: string): PublicClient {
+    return createPublicClient({
+      batch: {
+        multicall: true,
+      },
+      transport: http(EnvConfig.blockchains[chain].nodeRpc, {
+        timeout: 10000, // 10 secs
+        retryCount: 2,
+        retryDelay: 5000, // 5 secs
+      }),
+    });
   }
 
   public async getBlock(chain: string, blockNumber: number): Promise<any> {
@@ -256,5 +274,91 @@ export default class BlockchainService implements IBlockchainService {
     }
 
     return result;
+  }
+
+  public async readContract(options: ReadContractOptions): Promise<any> {
+    const client = this.getPublicClient(options.chain);
+
+    try {
+      if (options.blockNumber && options.blockNumber > 0) {
+        return await client.readContract({
+          address: options.target as Address,
+          abi: options.abi,
+          functionName: options.method,
+          args: options.params,
+          blockNumber: BigInt(Number(options.blockNumber)),
+        });
+      } else {
+        return await client.readContract({
+          address: options.target as Address,
+          abi: options.abi,
+          functionName: options.method,
+          args: options.params,
+          blockTag: 'latest',
+        });
+      }
+    } catch (e: any) {
+      if (options.blockNumber) {
+        try {
+          return await client.readContract({
+            address: options.target as Address,
+            abi: options.abi,
+            functionName: options.method,
+            args: options.params,
+            blockNumber: BigInt(Number(options.blockNumber) + 1),
+          });
+        } catch (e: any) {}
+      }
+    }
+
+    return null;
+  }
+
+  public async multicall(options: MulticallOptions): Promise<any> {
+    // first try with multicall3
+    try {
+      const multicall3Response: any = await this.multicall3(options);
+      if (multicall3Response) {
+        return multicall3Response;
+      }
+    } catch (e: any) {}
+
+    try {
+      const responses: Array<any> = [];
+      for (const call of options.calls) {
+        const response = await this.readContract({
+          chain: options.chain,
+          blockNumber: options.blockNumber,
+
+          ...call,
+        });
+        responses.push(response);
+      }
+      return responses;
+    } catch (e: any) {}
+
+    return null;
+  }
+
+  public async multicall3(options: MulticallOptions): Promise<any> {
+    const { chain, blockNumber, calls } = options;
+
+    const client = this.getPublicClient(chain);
+
+    const contracts = calls.map((call) => {
+      return {
+        address: call.target as Address,
+        abi: call.abi,
+        functionName: call.method,
+        args: call.params,
+      } as const;
+    });
+
+    return await client.multicall({
+      multicallAddress: AddressMulticall3,
+      contracts: contracts,
+      blockNumber: blockNumber ? BigInt(blockNumber) : undefined,
+      allowFailure: false,
+    });
   }
 }

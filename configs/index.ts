@@ -19,7 +19,7 @@ import { ClipperConfigs } from './protocols/clipper';
 import { CompoundConfigs, Compoundv3Configs } from './protocols/compound';
 import { ConvexConfigs } from './protocols/convex';
 import { CowswapConfigs } from './protocols/cowswap';
-import { CrvusdConfigs } from './protocols/curve';
+import { CrvusdConfigs, CurveConfigs } from './protocols/curve';
 import { DodoConfigs, DodoexConfigs } from './protocols/dodo';
 import { EnsConfigs } from './protocols/ens';
 import { Eth2Configs } from './protocols/eth2';
@@ -207,4 +207,5 @@ export const ProtocolConfigs: { [key: string]: ProtocolConfig } = {
   etherfi: EtherfiConfigs,
   puffer: PufferConfigs,
   kelpdao: KelpdaoConfigs,
+  curve: CurveConfigs,
 };

@@ -21,6 +21,7 @@ import Compoundv3Adapter from './compound/compoundv3';
 import ConvexAdapter from './convex/convex';
 import CowswapAdapter from './cowswap/cowswap';
 import CrvusdAdapter from './curve/crvusd';
+import CurveAdapter from './curve/curve';
 import DodoAdapter from './dodo/dodo';
 import DodoexAdapter from './dodo/dodoex';
 import EnsAdapter from './ens/ens';
@@ -152,5 +153,6 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     etherfi: new EtherfiAdapter(services, ProtocolConfigs.etherfi),
     puffer: new PufferAdapter(services, ProtocolConfigs.puffer),
     kelpdao: new KelpdaoAdapter(services, ProtocolConfigs.kelpdao),
+    curve: new CurveAdapter(services, ProtocolConfigs.curve),
   };
 }

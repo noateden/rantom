@@ -36,6 +36,31 @@ export interface GetTransactionOptions {
   hash: string;
 }
 
+export interface ReadContractOptions {
+  chain: string;
+  target: string;
+  abi: Array<any>;
+  method: string;
+  params: Array<any>;
+
+  // sometime, we need query data at a given block
+  // this call requires RPC is an archived node
+  blockNumber?: number;
+}
+
+export interface MulticallCall {
+  target: string; // target/contract address
+  abi: any; // target ABI
+  method: string;
+  params: Array<any>;
+}
+
+export interface MulticallOptions {
+  chain: string;
+  blockNumber?: number;
+  calls: Array<MulticallCall>;
+}
+
 export interface IBlockchainService {
   // should be labeled as blockchain
   name: string;
@@ -66,4 +91,15 @@ export interface IBlockchainService {
 
   // query single
   singlecall: (call: ContractCall) => Promise<any>;
+
+  // read contract public method
+  readContract: (call: ReadContractOptions) => Promise<any>;
+
+  // multicall3
+  multicall3: (options: MulticallOptions) => Promise<any>;
+
+  // this is a custom multicall
+  // first, we try query data with multicall3
+  // if it failed, we do read contract one by one
+  multicall: (options: MulticallOptions) => Promise<any>;
 }

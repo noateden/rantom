@@ -90,3 +90,15 @@ export const CurveAbiMappings: { [key: string]: EventMapping } = {
     ],
   },
 };
+
+export const CurveSwapEvents = {
+  VersionCurveStableSwapNG: {
+    TokenExchange: '0x8b3e96f2b889fa771c53c981b40daf005f63f637f1869f707052d15a3dd97140',
+    TokenExchangeUnderlying: '0xd013ca23e77a65003c2c659c5442c00c805371b7fc1ebd4c206c41d1536bd90b',
+    AddLiquidity: '0x189c623b666b1b45b83d7178f39b8c087cb09774317ca2f53c2d3c3726f222a2',
+    RemoveLiquidity: '0x347ad828e58cbe534d8f6b67985d791360756b18f0d95fd9f197a66cc46480ea',
+  },
+  VersionCurveUsdAmm: {
+    TokenExchange: '0xb2e76ae99761dc136e598d4a629bb347eccb9532a5f8bbd72e18467c3c34cc98',
+  },
+};
