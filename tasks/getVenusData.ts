@@ -8,7 +8,7 @@ import { normalizeAddress } from '../lib/utils';
 import BlockchainService from '../services/blockchains/blockchain';
 import updateToken from './helpers/updateToken';
 
-const IronbankMarkets: Array<string> = [
+const VenusMarkets: Array<string> = [
   'bnbchain:0x26DA28954763B92139ED49283625ceCAf52C6f94', // AAVE
   'bnbchain:0x9A0AF7FDb2065Ce470D72664DE73cAE409dA28Ec', // ADA
   'bnbchain:0x5F0388EBc2B94FA8E123F404b79cCF5f40b29176', // BCH
@@ -69,6 +69,22 @@ const IronbankMarkets: Array<string> = [
   'bnbchain:0xb114cfA615c828D88021a41bFc524B800E64a9D5', // WIN
   'bnbchain:0xf1da185CCe5BeD1BeBbb3007Ef738Ea4224025F7', // USDD
   'bnbchain:0x281E5378f99A4bc55b295ABc0A3E7eD32Deba059', // USDT
+
+  'arbitrum:0xaDa57840B372D4c28623E87FC175dE8490792811',
+  'arbitrum:0x68a34332983f4Bf866768DD6D6E638b02eF5e1f0',
+  'arbitrum:0xB9F9117d4200dC296F9AcD1e8bE1937df834a2fD',
+  'arbitrum:0x7D8609f8da70fF9027E9bc5229Af4F6727662707',
+  'arbitrum:0xAeB0FEd69354f34831fe1D16475D9A83ddaCaDA6',
+
+  'ethereum:0x672208C10aaAA2F9A6719F449C4C8227bc0BC202',
+  'ethereum:0xd8AdD9B41D4E1cd64Edad8722AB0bA8D35536657',
+  'ethereum:0x4fAfbDc4F2a9876Bd1764827b26fb8dc4FD1dB95',
+  'ethereum:0x17142a05fe678e9584FA1d88EfAC1bF181bF7ABe',
+  'ethereum:0x13eB80FDBe5C5f4a7039728E258A6f05fb3B912b',
+  'ethereum:0x17C07e0c232f2f80DfDbd7a95b942D893A4C5ACb',
+  'ethereum:0x8C3e3821259B82fFb32B2450A95d2dcbf161C24E',
+  'ethereum:0x8716554364f20BCA783cb2BAA744d39361fd1D8d',
+  'ethereum:0x7c8ff7d2A1372433726f879BD945fFb250B94c65',
 ];
 
 (async function () {
@@ -90,7 +106,7 @@ const IronbankMarkets: Array<string> = [
     },
   ];
 
-  for (const config of IronbankMarkets) {
+  for (const config of VenusMarkets) {
     const [chain, address] = config.split(':');
     const underlying = await blockchain.singlecall({
       chain: chain,

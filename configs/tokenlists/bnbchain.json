@@ -4736,7 +4736,7 @@
   },
   "TUSD": {
     "chain": "bnbchain",
-    "address": "0x40af3827f39d0eacbf4a168f8d4ee67c121d11c9",
+    "address": "0x14016e85a25aeb13065688cafb43044c2ef86784",
     "symbol": "TUSD",
     "decimals": 18
   },
@@ -4901,9 +4901,9 @@
   },
   "UST": {
     "chain": "bnbchain",
-    "address": "0x23396cf899ca06c4472205fc903bdb4de249d6fc",
+    "address": "0x3d4350cd54aef9f9b2c29435e0fa809957b3f30a",
     "symbol": "UST",
-    "decimals": 18
+    "decimals": 6
   },
   "USX": {
     "chain": "bnbchain",

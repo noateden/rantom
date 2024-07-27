@@ -65,6 +65,7 @@ import Traderjoev2Adapter from './traderjoe/traderjoev2';
 import Uniswapv2Adapter from './uniswap/uniswapv2';
 import Uniswapv3Adapter from './uniswap/uniswapv3';
 import VenusAdapter from './venus/venus';
+import VenusV2Adapter from './venus/venusV2';
 import YearnAdapter from './yearn/yearn';
 import YearnV3VaultAdapter from './yearn/yearnV3Vault';
 import YearnyethAdapter from './yearn/yearnyeth';
@@ -149,6 +150,7 @@ export function getAdapters(services: ContextServices): { [key: string]: IAdapte
     metamask: new MetamaskAdapter(services, ProtocolConfigs.metamask),
     gearbox: new GearboxAdapter(services, ProtocolConfigs.gearbox),
     venus: new VenusAdapter(services, ProtocolConfigs.venus),
+    venusV2: new VenusV2Adapter(services, ProtocolConfigs.venus),
     native: new NativeAdapter(services, ProtocolConfigs.native),
     renzo: new RenzoAdapter(services, ProtocolConfigs.renzo),
     etherfi: new EtherfiAdapter(services, ProtocolConfigs.etherfi),

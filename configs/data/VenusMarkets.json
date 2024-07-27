@@ -66,9 +66,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
       "symbol": "BTCB",
-      "decimals": 18,
-      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c"
+      "decimals": 18
     }
   },
   {
@@ -78,9 +78,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
       "symbol": "BUSD",
-      "decimals": 18,
-      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56"
+      "decimals": 18
     }
   },
   {
@@ -103,9 +103,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
       "symbol": "DAI",
-      "decimals": 18,
-      "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3"
+      "decimals": 18
     }
   },
   {
@@ -115,9 +115,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43",
       "symbol": "DOGE",
-      "decimals": 8,
-      "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43"
+      "decimals": 8
     }
   },
   {
@@ -127,9 +127,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0x7083609fce4d1d8dc0c979aab8c869ea2c873402",
       "symbol": "DOT",
-      "decimals": 18,
-      "address": "0x7083609fce4d1d8dc0c979aab8c869ea2c873402"
+      "decimals": 18
     }
   },
   {
@@ -139,9 +139,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
       "symbol": "ETH",
-      "decimals": 18,
-      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8"
+      "decimals": 18
     }
   },
   {
@@ -283,9 +283,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
       "symbol": "USDC",
-      "decimals": 18,
-      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
+      "decimals": 18
     }
   },
   {
@@ -295,9 +295,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0x55d398326f99059ff775485246999027b3197955",
       "symbol": "USDT",
-      "decimals": 18,
-      "address": "0x55d398326f99059ff775485246999027b3197955"
+      "decimals": 18
     }
   },
   {
@@ -343,9 +343,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
       "symbol": "XVS",
-      "decimals": 18,
-      "address": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63"
+      "decimals": 18
     }
   },
   {
@@ -379,9 +379,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0x55d398326f99059ff775485246999027b3197955",
       "symbol": "USDT",
-      "decimals": 18,
-      "address": "0x55d398326f99059ff775485246999027b3197955"
+      "decimals": 18
     }
   },
   {
@@ -427,9 +427,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0x55d398326f99059ff775485246999027b3197955",
       "symbol": "USDT",
-      "decimals": 18,
-      "address": "0x55d398326f99059ff775485246999027b3197955"
+      "decimals": 18
     }
   },
   {
@@ -535,9 +535,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0x55d398326f99059ff775485246999027b3197955",
       "symbol": "USDT",
-      "decimals": 18,
-      "address": "0x55d398326f99059ff775485246999027b3197955"
+      "decimals": 18
     }
   },
   {
@@ -595,9 +595,9 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
       "symbol": "WBNB",
-      "decimals": 18,
-      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
+      "decimals": 18
     }
   },
   {
@@ -656,9 +656,177 @@
     "etherPool": false,
     "underlying": {
       "chain": "bnbchain",
+      "address": "0x55d398326f99059ff775485246999027b3197955",
       "symbol": "USDT",
-      "decimals": 18,
-      "address": "0x55d398326f99059ff775485246999027b3197955"
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "arbitrum",
+    "address": "0xada57840b372d4c28623e87fc175de8490792811",
+    "etherPool": false,
+    "underlying": {
+      "chain": "arbitrum",
+      "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+      "symbol": "WBTC",
+      "decimals": 8
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "arbitrum",
+    "address": "0x68a34332983f4bf866768dd6d6e638b02ef5e1f0",
+    "etherPool": false,
+    "underlying": {
+      "chain": "arbitrum",
+      "address": "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+      "symbol": "WETH",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "arbitrum",
+    "address": "0xb9f9117d4200dc296f9acd1e8be1937df834a2fd",
+    "etherPool": false,
+    "underlying": {
+      "chain": "arbitrum",
+      "address": "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+      "symbol": "USDT",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "arbitrum",
+    "address": "0x7d8609f8da70ff9027e9bc5229af4f6727662707",
+    "etherPool": false,
+    "underlying": {
+      "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "arbitrum",
+    "address": "0xaeb0fed69354f34831fe1d16475d9a83ddacada6",
+    "etherPool": false,
+    "underlying": {
+      "chain": "arbitrum",
+      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+      "symbol": "ARB",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "ethereum",
+    "address": "0x672208c10aaaa2f9a6719f449c4c8227bc0bc202",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "address": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
+      "symbol": "crvUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "ethereum",
+    "address": "0xd8add9b41d4e1cd64edad8722ab0ba8d35536657",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+      "symbol": "DAI",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "ethereum",
+    "address": "0x4fafbdc4f2a9876bd1764827b26fb8dc4fd1db95",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "address": "0x853d955acef822db058eb8505911ed77f175b99e",
+      "symbol": "FRAX",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "ethereum",
+    "address": "0x17142a05fe678e9584fa1d88efac1bf181bf7abe",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "address": "0xa663b02cf0a4b149d2ad41910cb81e23e1c41c32",
+      "symbol": "sFRAX",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "ethereum",
+    "address": "0x13eb80fdbe5c5f4a7039728e258a6f05fb3b912b",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "address": "0x0000000000085d4780b73119b644ae5ecd22b376",
+      "symbol": "TUSD",
+      "decimals": 18
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "ethereum",
+    "address": "0x17c07e0c232f2f80dfdbd7a95b942d893a4c5acb",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "ethereum",
+    "address": "0x8c3e3821259b82ffb32b2450a95d2dcbf161c24e",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "symbol": "USDT",
+      "decimals": 6
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "ethereum",
+    "address": "0x8716554364f20bca783cb2baa744d39361fd1d8d",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "symbol": "WBTC",
+      "decimals": 8
+    }
+  },
+  {
+    "protocol": "venus",
+    "chain": "ethereum",
+    "address": "0x7c8ff7d2a1372433726f879bd945ffb250b94c65",
+    "etherPool": false,
+    "underlying": {
+      "chain": "ethereum",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "symbol": "WETH",
+      "decimals": 18
     }
   }
 ]
